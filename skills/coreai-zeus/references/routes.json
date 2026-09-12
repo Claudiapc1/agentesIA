@@ -1,0 +1,177 @@
+{
+  "path_base": "skill directory coreai-zeus",
+  "routes": [
+    {
+      "domain": "carousel-creator",
+      "skill": "coreai-carousel-creator",
+      "path": "../coreai-carousel-creator/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "content-chief",
+      "skill": "coreai-content-chief",
+      "path": "../coreai-content-chief/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "contexto",
+      "skill": "coreai-contexto",
+      "path": "../coreai-contexto/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-ads",
+      "skill": "coreai-copy-ads",
+      "path": "../coreai-copy-ads/SKILL.md",
+      "status": "ready_structural_selected_writing_channels_runtime_unverified"
+    },
+    {
+      "domain": "copy-capture-page",
+      "skill": "coreai-copy-capture-page",
+      "path": "../coreai-copy-capture-page/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-carta-vendas",
+      "skill": "coreai-copy-carta-vendas",
+      "path": "../coreai-copy-carta-vendas/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-chief",
+      "skill": "coreai-copy-chief",
+      "path": "../coreai-copy-chief/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-funil-story-unico",
+      "skill": "coreai-copy-funil-story-unico",
+      "path": "../coreai-copy-funil-story-unico/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-headlines",
+      "skill": "coreai-copy-headlines",
+      "path": "../coreai-copy-headlines/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-operacao-completa",
+      "skill": "coreai-copy-operacao-completa",
+      "path": "../coreai-copy-operacao-completa/SKILL.md",
+      "status": "ready_structural_selected_writing_channels_runtime_unverified"
+    },
+    {
+      "domain": "copy-operacao-tatica",
+      "skill": "coreai-copy-operacao-tatica",
+      "path": "../coreai-copy-operacao-tatica/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-oraculo",
+      "skill": "coreai-copy-oraculo",
+      "path": "../coreai-copy-oraculo/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-organic-content",
+      "skill": "coreai-copy-organic-content",
+      "path": "../coreai-copy-organic-content/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-sales-page",
+      "skill": "coreai-copy-sales-page",
+      "path": "../coreai-copy-sales-page/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-stories-captacao",
+      "skill": "coreai-copy-stories-captacao",
+      "path": "../coreai-copy-stories-captacao/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-vsl",
+      "skill": "coreai-copy-vsl",
+      "path": "../coreai-copy-vsl/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "copy-whatsapp",
+      "skill": "coreai-copy-whatsapp",
+      "path": "../coreai-copy-whatsapp/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "criativos",
+      "skill": "coreai-criativos",
+      "path": "../coreai-criativos/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "funnel-perfect-webinar",
+      "skill": "coreai-funnel-perfect-webinar",
+      "path": "../coreai-funnel-perfect-webinar/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "setup",
+      "skill": "coreai-setup",
+      "path": "../coreai-setup/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "slide-creator",
+      "skill": "coreai-slide-creator",
+      "path": "../coreai-slide-creator/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "stories-recompensa",
+      "skill": "coreai-stories-recompensa",
+      "path": "../coreai-stories-recompensa/SKILL.md",
+      "status": "file_present_runtime_unverified"
+    },
+    {
+      "domain": "design",
+      "skill": "coreai-design-chief",
+      "path": "../coreai-design-chief/SKILL.md",
+      "status": "ready_structural_runtime_unverified"
+    },
+    {
+      "domain": "design",
+      "skill": "coreai-design-artifact-cycle",
+      "path": "../coreai-design-artifact-cycle/SKILL.md",
+      "status": "ready_structural_runtime_unverified"
+    },
+    {
+      "domain": "design",
+      "skill": "coreai-design-critical-eye",
+      "path": "../coreai-design-critical-eye/SKILL.md",
+      "status": "ready_structural_runtime_unverified"
+    },
+    {
+      "domain": "design",
+      "skill": "coreai-design-compose-page",
+      "path": "../coreai-design-compose-page/SKILL.md",
+      "status": "ready_structural_runtime_unverified"
+    },
+    {
+      "domain": "trafego",
+      "skill": "coreai-traffic-chief",
+      "path": "../coreai-traffic-chief/SKILL.md",
+      "status": "ready_structural_runtime_unverified"
+    },
+    {
+      "domain": "oferta",
+      "skill": "coreai-grand-slam-offer",
+      "path": "../coreai-grand-slam-offer/SKILL.md",
+      "status": "installed_both_structural_only_runtime_unverified"
+    }
+  ],
+  "pending": [
+    "CoreAI:Design Chief",
+    "Publicação Instagram validada"
+  ]
+}

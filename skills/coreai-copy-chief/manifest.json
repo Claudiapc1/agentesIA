@@ -1,0 +1,119 @@
+[
+  {
+    "id": "coreai-copy-chief",
+    "source": "copy",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-operacao-completa",
+    "source": "copy-operacao-completa",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-operacao-tatica",
+    "source": "copy-operacao-tatica",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-vsl",
+    "source": "copy-vsl",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-sales-page",
+    "source": "copy-sales-page",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-ads",
+    "source": "copy-ads",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-funil-story-unico",
+    "source": "copy-funil-story-unico",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-stories-captacao",
+    "source": "copy-stories-captacao",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-headlines",
+    "source": "copy-headlines",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-capture-page",
+    "source": "copy-capture-page",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-carta-vendas",
+    "source": "copy-carta-vendas",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-organic-content",
+    "source": "copy-organic-content",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  },
+  {
+    "id": "coreai-copy-oraculo",
+    "source": "copy-oraculo",
+    "dependencies": [
+      "coreai-shared",
+      "coreai-copy-shared"
+    ],
+    "status": "ported-review-pending"
+  }
+]

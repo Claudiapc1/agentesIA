@@ -1,0 +1,155 @@
+{
+  "files": [
+    {
+      "source_relative": "workflows/wf-perfect-webinar.yaml",
+      "destination": "references/workflows/wf-perfect-webinar.yaml",
+      "sha256_source": "e0e37e2360609310b31fbb31329bec6ea51dd14575a8947f5456fff7b5074ea6"
+    },
+    {
+      "source_relative": "templates/perfect-webinar-output.yaml",
+      "destination": "references/templates/perfect-webinar-output.yaml",
+      "sha256_source": "2aa446ec4506724d9a683b9877078dafea86aadb0cf457661297aaa27d723b83"
+    },
+    {
+      "source_relative": "data/minds/brunson-voice-dna.yaml",
+      "destination": "references/data/minds/brunson-voice-dna.yaml",
+      "sha256_source": "de516ee9e74a9e7795d957caf757e8b9265c413a8ca69ea348a4822a4763b9ef"
+    },
+    {
+      "source_relative": "data/minds/brunson-thinking-dna.yaml",
+      "destination": "references/data/minds/brunson-thinking-dna.yaml",
+      "sha256_source": "e62952af70165b31b6521a9061ae7e213963c070d75ba46c079b4ae19962bfdf"
+    },
+    {
+      "source_relative": "data/minds/brunson-webinar_dna.yaml",
+      "destination": "references/data/minds/brunson-webinar_dna.yaml",
+      "sha256_source": "756e31218b1e331797965e0479caadbfb092007d153fecfb899e51c03e1b4c3f"
+    },
+    {
+      "source_relative": "data/minds/brunson-stories_dna.yaml",
+      "destination": "references/data/minds/brunson-stories_dna.yaml",
+      "sha256_source": "b31408e540f701546494014e4fa13df82755176ccad82fecfe5d448da406d3eb"
+    },
+    {
+      "source_relative": "data/minds/brunson-offers_dna.yaml",
+      "destination": "references/data/minds/brunson-offers_dna.yaml",
+      "sha256_source": "610d0c2f7f0b88ec58f17ee4eaf8b4689179723561b684a07414a39cc40fcfd3"
+    },
+    {
+      "source_relative": "checklists/perfect-webinar-checklist.md",
+      "destination": "references/checklists/perfect-webinar-checklist.md",
+      "sha256_source": "ab265f273eb2b54f4cd69088f970bbcd012d3d939911d25f482d475a284b460b"
+    },
+    {
+      "source_relative": "checklists/webinar-funnel-checklist.md",
+      "destination": "references/checklists/webinar-funnel-checklist.md",
+      "sha256_source": "d3a7a9fba613eedce6c226278647d34db7804e656a9265299ce752ce1da88add"
+    },
+    {
+      "source_relative": "checklists/three-secrets-checklist.md",
+      "destination": "references/checklists/three-secrets-checklist.md",
+      "sha256_source": "a795a9ff4353fd696bf93f3cd576a377568a9877ec9e70c298391cc9d77bc59a"
+    },
+    {
+      "source_relative": "checklists/presentation-flow-checklist.md",
+      "destination": "references/checklists/presentation-flow-checklist.md",
+      "sha256_source": "9ab6c1f1fc71a3dabe125371e0ffd2380077bf769bcdfe4ff417e6099ef51718"
+    },
+    {
+      "source_relative": "checklists/stack-slide-checklist.md",
+      "destination": "references/checklists/stack-slide-checklist.md",
+      "sha256_source": "f1a71f8bc236bdf42dcb01e565aeb0ae92bdfe951972958a5e1b7dcfd6981ee5"
+    },
+    {
+      "source_relative": "checklists/epiphany-bridge-checklist.md",
+      "destination": "references/checklists/epiphany-bridge-checklist.md",
+      "sha256_source": "be5313be9ae25f8b273c4627e1c337078f575b388a6be99f9bd4e6dc506a3087"
+    },
+    {
+      "source_relative": "checklists/attractive-character-checklist.md",
+      "destination": "references/checklists/attractive-character-checklist.md",
+      "sha256_source": "d21d92dc87bbc7df864f31e803d717494c59d257a852c66c20952104d10427b8"
+    },
+    {
+      "source_relative": "checklists/story-inventory-checklist.md",
+      "destination": "references/checklists/story-inventory-checklist.md",
+      "sha256_source": "bf0ab64004f07c2be48641663eb9fe0e171aca6d7653ac434068e61732ebf605"
+    },
+    {
+      "source_relative": "checklists/irresistible-offer-checklist.md",
+      "destination": "references/checklists/irresistible-offer-checklist.md",
+      "sha256_source": "27a3374b632bf23d7e9c696a00808c9f5073a4280bcf80b2008e77d0cfdbe31b"
+    },
+    {
+      "source_relative": "checklists/value-stack-checklist.md",
+      "destination": "references/checklists/value-stack-checklist.md",
+      "sha256_source": "27b6946ff60e4d648fed9456b5078a2f1e7b351fb0c36ba8f46f8ae8275000bc"
+    },
+    {
+      "source_relative": "checklists/guarantee-checklist.md",
+      "destination": "references/checklists/guarantee-checklist.md",
+      "sha256_source": "40adb46f5080aa653af09b836580e8b19c7ae2febd9108259f9787164ea3c869"
+    },
+    {
+      "source_relative": "checklists/scarcity-urgency-checklist.md",
+      "destination": "references/checklists/scarcity-urgency-checklist.md",
+      "sha256_source": "efd772b8adeccdc14aeebfaaf531ef68341c8bed719d277b3e321389578989bd"
+    },
+    {
+      "source_relative": "checklists/big-domino-checklist.md",
+      "destination": "references/checklists/big-domino-checklist.md",
+      "sha256_source": "056da9027bcfc14a3f239ef2eae5eb6cf70a07f6fdce4c15b14197fbc581cc1a"
+    },
+    {
+      "source_relative": "docs/frameworks/perfect-webinar.md",
+      "destination": "references/docs/frameworks/perfect-webinar.md",
+      "sha256_source": "165a8a50f7a9a64be83d18b52b9a60ea333600f6a4e4231ad7c339e9215628c9"
+    },
+    {
+      "source_relative": "docs/frameworks/perfect-webinar-framework.md",
+      "destination": "references/docs/frameworks/perfect-webinar-framework.md",
+      "sha256_source": "c6a2ac80eec34a0c2d98c8fd8cec264a82193603e3339648f68170d66fcde858"
+    },
+    {
+      "source_relative": "docs/frameworks/epiphany-bridge.md",
+      "destination": "references/docs/frameworks/epiphany-bridge.md",
+      "sha256_source": "b2af224df0bfac427386864e398e4099e3194bf5bebadfe12ab957071b1c13fb"
+    },
+    {
+      "source_relative": "docs/frameworks/epiphany-bridge-framework.md",
+      "destination": "references/docs/frameworks/epiphany-bridge-framework.md",
+      "sha256_source": "3ebcc4c37cc3b313ad8a02c5e82c380321724c84f3a40a843da59b5e7032c262"
+    },
+    {
+      "source_relative": "docs/frameworks/stack-slide.md",
+      "destination": "references/docs/frameworks/stack-slide.md",
+      "sha256_source": "f40ff0f9a21c05a701add4efd1849a117d196c240eeac486c2abcbd4c3960ef2"
+    },
+    {
+      "source_relative": "agents/brunson-chief.md",
+      "destination": "references/agents/brunson-chief.md",
+      "sha256_source": "e617bd9ac84db028db3bc4a4b8e612081924b0a07f7f41f20c27909493807ef1",
+      "adaptation": "selected writing sections, activation/routing removed"
+    },
+    {
+      "source_relative": "agents/brunson-webinar.md",
+      "destination": "references/agents/brunson-webinar.md",
+      "sha256_source": "03b16b08661afc0b02484b17eb7467eb52fd049fbf8a8212824507f8e4716eea",
+      "adaptation": "selected writing sections, activation/routing removed"
+    },
+    {
+      "source_relative": "agents/brunson-stories.md",
+      "destination": "references/agents/brunson-stories.md",
+      "sha256_source": "a7dae6489bfa5348ca3d259bacd80e73c51bd35633bf2328281c25893fa237e3",
+      "adaptation": "selected writing sections, activation/routing removed"
+    },
+    {
+      "source_relative": "agents/brunson-offers.md",
+      "destination": "references/agents/brunson-offers.md",
+      "sha256_source": "7665fd301f70808ec8134ca22e2d0214f2b3cbb915f7d24d2297d05202413cee",
+      "adaptation": "selected writing sections, activation/routing removed"
+    }
+  ],
+  "excluded_references": [],
+  "scope": "writing only; no deployment, clients, campaigns or external secrets"
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "name": "-DESIGN.md",
+    "classification": "dynamic-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "CONTEXT-OS-PROTOCOL.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "Component.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "DESIGN.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "EP-07-ds-components.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "a11y-audit.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "accessibility-wcag-checklist.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "ai-DESIGN.md",
+    "classification": "dynamic-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "app-DESIGN.md",
+    "classification": "dynamic-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "archetype.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "aria-audit.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "atomic-refactor-checklist.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "atomic-refactor-rules.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "audit-reading-experience.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "briefing.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "company-profile.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "completeness.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "component.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "config.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "contrast-matrix.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "credentials.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "design-tokens-spec.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "design.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "dops-component-quality.yaml",
+    "classification": "resolved-real-source",
+    "blocking_selected_routes": false,
+    "reason": "Materializado da fonte design real."
+  },
+  {
+    "name": "ds-parallelization-gate.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "focus-order-audit.md",
+    "classification": "output-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "icp.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "page-section-contract.md",
+    "classification": "resolved-real-source",
+    "blocking_selected_routes": false,
+    "reason": "Materializado da fonte design real."
+  },
+  {
+    "name": "positioning.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "pricing.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "prompt-templates-library.md",
+    "classification": "resolved-real-source",
+    "blocking_selected_routes": false,
+    "reason": "Materializado da fonte design real."
+  },
+  {
+    "name": "reading-accessibility-checklist.md",
+    "classification": "outside-selected-workflows",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "rounded.md",
+    "classification": "dynamic-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "spacing.md",
+    "classification": "dynamic-example",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "state.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "values.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "visual-identity.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  },
+  {
+    "name": "voice.yaml",
+    "classification": "client-input",
+    "blocking_selected_routes": false,
+    "reason": "Contexto/resultado ou referência de comando não portado; não requisito geral das três rotas."
+  }
+]

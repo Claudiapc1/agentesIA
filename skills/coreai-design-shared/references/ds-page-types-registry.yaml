@@ -1,0 +1,702 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# DS Page Types Registry
+# ═══════════════════════════════════════════════════════════════════════════════
+# Define quais elementos cada tipo de pagina de um design system precisa ter.
+# A IA usa este registry para saber QUAIS paginas criar e COM QUE elementos,
+# gerando design systems variados sem ficar presa ao mesmo template.
+#
+# Princípio: descreve O QUE (seções, elementos, comportamentos),
+#            nunca COMO (isso é papel dos tokens e componentes).
+#
+# Consumido por: @brad-frost, @design-chief, create-greeting-script, workflows
+# Referência visual: apps/aiox-design-starter/src/app/(brandbook)/brandbook/
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+created: "2026-03-20"
+purpose: "Registry de tipos de pagina para design systems. Permite gerar brandbooks variados a partir de specs declarativas."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIERS — Prioridade de construcao
+# ═══════════════════════════════════════════════════════════════════════════════
+# Tier 0: Obrigatório para qualquer DS. Sem isso, não é design system.
+# Tier 1: Esperado em DS maduros. Agrega qualidade significativa.
+# Tier 2: Avançado. Diferenciador para DS premium.
+# Tier 3: Opcional. Showcase e experiência.
+
+tiers:
+  0: "Foundations (obrigatório)"
+  1: "Core Components (esperado)"
+  2: "Advanced Patterns (diferenciador)"
+  3: "Showcase & Experience (opcional)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PAGE TYPES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+page_types:
+
+  # ─── TIER 0: FOUNDATIONS ────────────────────────────────────────────────────
+
+  foundations-index:
+    tier: 0
+    label: "Foundations"
+    purpose: "Index de todas as fundações do design system"
+    route: "/brandbook/foundations"
+    sections:
+      - id: overview
+        required: true
+        description: "Grid de cards linkando para cada foundation page"
+        elements:
+          - "Card por foundation (typography, color, spacing, surfaces, motion, semantic)"
+          - "Numero sequencial (01, 02, 03...)"
+          - "Nome e descrição curta"
+          - "Link para pagina detalhada"
+      - id: status-summary
+        required: false
+        description: "Resumo de completude do DS"
+        elements:
+          - "Tokens definidos: N"
+          - "Componentes: N"
+          - "Cobertura: N%"
+    variations:
+      minimal: "Lista simples de links"
+      standard: "Grid de cards com descrição"
+      premium: "Grid com preview visual de cada foundation"
+
+  typography:
+    tier: 0
+    label: "Typography"
+    purpose: "Demonstrar escala tipografica, familias, pesos e hierarquia"
+    route: "/brandbook/typography"
+    sections:
+      - id: font-families
+        required: true
+        description: "Exibir cada familia de fonte usada"
+        elements:
+          - "Specimen de cada fonte (sans, mono, display se houver)"
+          - "Nome da fonte + fallback stack"
+          - "Pangrama ou frase representativa"
+      - id: type-scale
+        required: true
+        description: "Escala tipografica completa"
+        elements:
+          - "Cada step da escala com nome do token"
+          - "Tamanho em px/rem"
+          - "Line-height"
+          - "Letter-spacing"
+          - "Preview renderizado"
+      - id: weight-system
+        required: true
+        description: "Pesos disponíveis por familia"
+        elements:
+          - "Tabela: peso numerico + nome semantico + preview"
+      - id: heading-hierarchy
+        required: true
+        description: "H1 a H6 com contexto de uso"
+        elements:
+          - "Cada heading renderizado com metadados"
+          - "Contexto de uso: onde cada heading aparece"
+      - id: body-text
+        required: false
+        description: "Corpo de texto com variações"
+        elements:
+          - "Paragrafo padrao, small, caption"
+          - "Line-length recommendations"
+      - id: code-text
+        required: false
+        description: "Tipografia para codigo"
+        elements:
+          - "Inline code, code blocks"
+          - "Fonte mono specimen"
+    variations:
+      minimal: "Font families + type scale"
+      standard: "Todas as seções required"
+      editorial: "Adiciona dropcap, pull quote styles, reading metrics"
+
+  color-tokens:
+    tier: 0
+    label: "Color Tokens"
+    purpose: "Paleta completa de cores com tokens semanticos"
+    route: "/brandbook/color-tokens"
+    sections:
+      - id: accent-palette
+        required: true
+        description: "Cor(es) accent com variações"
+        elements:
+          - "Swatch grande da cor accent"
+          - "Hex, RGB, HSL, OKLCH values"
+          - "Variações: light, default, dark"
+      - id: neutral-scale
+        required: true
+        description: "Escala de cinzas/neutros"
+        elements:
+          - "Cada step do neutral com nome do token"
+          - "Valores (hex + oklch)"
+          - "Preview de foreground sobre background"
+      - id: semantic-colors
+        required: true
+        description: "Cores semanticas (success, warning, error, info)"
+        elements:
+          - "Swatch por semantica"
+          - "Contexto de uso"
+          - "Foreground + background pairing"
+      - id: surface-colors
+        required: true
+        description: "Cores de superficie (background, card, panel)"
+        elements:
+          - "Cada superficie com token name"
+          - "Preview empilhado mostrando hierarquia"
+      - id: contrast-checker
+        required: false
+        description: "Validacao de contraste WCAG"
+        elements:
+          - "Combinacoes text/bg com ratio calculado"
+          - "PASS/FAIL badge por combinacao"
+      - id: opacity-ladder
+        required: false
+        description: "Tokens de opacidade"
+        elements:
+          - "Steps de opacidade com preview"
+    variations:
+      minimal: "Accent + neutral + semantic"
+      standard: "Todas required + contrast checker"
+      premium: "Adiciona paleta expandida, gradients, blend modes"
+
+  spacing-layout:
+    tier: 0
+    label: "Spacing & Layout"
+    purpose: "Sistema de espacamento, grid e breakpoints"
+    route: "/brandbook/spacing-layout"
+    sections:
+      - id: spacing-scale
+        required: true
+        description: "Escala de espacamento com tokens"
+        elements:
+          - "Cada step com nome do token"
+          - "Valor em px/rem"
+          - "Barra visual proporcional"
+      - id: named-tokens
+        required: true
+        description: "Tokens semanticos de spacing (gutter, inset, stack)"
+        elements:
+          - "Token name + valor + uso"
+      - id: breakpoints
+        required: true
+        description: "Breakpoints responsivos"
+        elements:
+          - "Nome, valor em px, uso"
+      - id: z-index
+        required: false
+        description: "Stack de z-index"
+        elements:
+          - "Camadas nomeadas com valores"
+      - id: grid-system
+        required: false
+        description: "Grid columns, gap, max-width"
+        elements:
+          - "Exemplos visuais de grid"
+    variations:
+      minimal: "Spacing scale + breakpoints"
+      standard: "Todas required + z-index"
+      premium: "Adiciona container queries, aspect ratios, layout primitives"
+
+  surfaces:
+    tier: 0
+    label: "Surfaces & Borders"
+    purpose: "Elevacao, bordas, radius e efeitos de superficie"
+    route: "/brandbook/surfaces"
+    sections:
+      - id: elevation
+        required: true
+        description: "Niveis de elevacao/sombra"
+        elements:
+          - "Cards empilhados com shadow crescente"
+          - "Token name + CSS value"
+      - id: borders
+        required: true
+        description: "Tokens de borda"
+        elements:
+          - "Cores de borda (default, subtle, strong)"
+          - "Espessuras disponíveis"
+      - id: radius
+        required: true
+        description: "Escala de border-radius"
+        elements:
+          - "Cada step com preview e token"
+      - id: glass-effects
+        required: false
+        description: "Efeitos de backdrop-blur/glass"
+        elements:
+          - "Preview com diferentes intensidades"
+    variations:
+      minimal: "Elevation + borders + radius"
+      standard: "Todas required"
+      premium: "Adiciona glassmorphism, grain textures, patterns"
+
+  motion:
+    tier: 0
+    label: "Motion & Easing"
+    purpose: "Curvas de easing, duracoes e animacoes base"
+    route: "/brandbook/motion"
+    sections:
+      - id: easing-curves
+        required: true
+        description: "Curvas de easing disponiveis"
+        elements:
+          - "Preview animado de cada curva"
+          - "Nome do token + CSS value"
+          - "Uso recomendado"
+      - id: duration-tokens
+        required: true
+        description: "Tokens de duracao"
+        elements:
+          - "Fast, normal, slow com valores em ms"
+      - id: animation-primitives
+        required: false
+        description: "Animacoes base reusaveis"
+        elements:
+          - "fadeIn, slideUp, scaleIn, etc."
+          - "Preview interativo"
+    variations:
+      minimal: "Easing + durations"
+      standard: "Todas required + primitives"
+      premium: "Adiciona spring physics, orchestration patterns, reduced-motion"
+
+  # ─── TIER 1: CORE COMPONENTS ───────────────────────────────────────────────
+
+  buttons:
+    tier: 1
+    label: "Buttons"
+    purpose: "Biblioteca de botoes com variantes, estados e guidance"
+    route: "/brandbook/buttons"
+    sections:
+      - id: production-roles
+        required: true
+        description: "Botoes em uso no produto"
+        elements:
+          - "Grid de botoes reais do app"
+          - "Nome + status (stable, deprecated)"
+      - id: variants
+        required: true
+        description: "Todas as variantes do botao base"
+        elements:
+          - "Primary, Secondary, Ghost, Destructive"
+          - "Preview renderizado"
+      - id: sizes
+        required: true
+        description: "Tamanhos disponiveis"
+        elements:
+          - "sm, md, lg com preview lado a lado"
+      - id: states
+        required: true
+        description: "Estados interativos"
+        elements:
+          - "Default, hover, active, focus, disabled, loading"
+      - id: usage-guidance
+        required: false
+        description: "Quando usar cada variante"
+        elements:
+          - "Card por variante com contexto"
+    variations:
+      minimal: "Variants + sizes"
+      standard: "Todas required"
+      premium: "Adiciona icon buttons, button groups, animated CTAs"
+
+  forms:
+    tier: 1
+    label: "Forms"
+    purpose: "Inputs, selects, checkboxes e padrao de formulario"
+    route: "/brandbook/forms"
+    sections:
+      - id: text-inputs
+        required: true
+        elements:
+          - "Input, Textarea com variantes"
+          - "Estados: default, focus, error, disabled"
+          - "Com label, hint, error message"
+      - id: selection
+        required: true
+        elements:
+          - "Select, Checkbox, Radio, Switch"
+          - "Single e group variations"
+      - id: form-layout
+        required: false
+        elements:
+          - "Form completo com validacao"
+          - "Inline vs stacked patterns"
+    variations:
+      minimal: "Text inputs + selection"
+      standard: "Todas required + form layout"
+      premium: "Adiciona multi-step forms, conditional fields, file upload"
+
+  cards:
+    tier: 1
+    label: "Cards"
+    purpose: "Variantes de cards para diferentes contextos"
+    route: "/brandbook/cards"
+    sections:
+      - id: base-card
+        required: true
+        elements:
+          - "Card padrao com header, body, footer"
+          - "Variantes: default, elevated, bordered, accent"
+      - id: content-cards
+        required: true
+        elements:
+          - "Card com imagem, card com icon, card com stats"
+      - id: interactive-cards
+        required: false
+        elements:
+          - "Hoverable, clickable, expandable"
+    variations:
+      minimal: "Base card only"
+      standard: "Base + content"
+      premium: "Adiciona card groups, masonry, bento layouts"
+
+  feedback:
+    tier: 1
+    label: "Feedback"
+    purpose: "Alerts, toasts, badges e estados de comunicacao"
+    route: "/brandbook/feedback"
+    sections:
+      - id: alerts
+        required: true
+        elements:
+          - "Info, success, warning, error"
+          - "Com icon, titulo, descricao, action"
+      - id: toasts
+        required: true
+        elements:
+          - "Toast com variantes semanticas"
+      - id: badges
+        required: true
+        elements:
+          - "Status badges, count badges, dot badges"
+      - id: empty-states
+        required: false
+        elements:
+          - "Empty state com icon + mensagem + CTA"
+    variations:
+      minimal: "Alerts + badges"
+      standard: "Todas required"
+      premium: "Adiciona progress indicators, skeleton loaders, inline validation"
+
+  navigation:
+    tier: 1
+    label: "Navigation"
+    purpose: "Navbar, sidebar, breadcrumb, tabs, pagination"
+    route: "/brandbook/navigation"
+    sections:
+      - id: navbar
+        required: true
+        elements:
+          - "Top navigation bar com logo + links + actions"
+      - id: breadcrumb
+        required: true
+        elements:
+          - "Breadcrumb com separadores"
+      - id: tabs
+        required: true
+        elements:
+          - "Horizontal tabs, vertical tabs"
+      - id: pagination
+        required: false
+        elements:
+          - "Numerada, load more, infinite scroll indicator"
+      - id: sidebar
+        required: false
+        elements:
+          - "Sidebar colapsavel com items e submenus"
+    variations:
+      minimal: "Navbar + breadcrumb"
+      standard: "Todas required + tabs"
+      premium: "Adiciona command palette, mega menu, mobile drawer"
+
+  # ─── TIER 2: ADVANCED PATTERNS ─────────────────────────────────────────────
+
+  charts:
+    tier: 2
+    label: "Charts"
+    purpose: "Visualizacao de dados com componentes de chart"
+    route: "/brandbook/charts"
+    sections:
+      - id: bar-charts
+        required: true
+        elements:
+          - "Vertical bar, horizontal bar, stacked"
+      - id: line-charts
+        required: true
+        elements:
+          - "Line chart, area chart"
+      - id: pie-donut
+        required: true
+        elements:
+          - "Pie chart, donut chart, rings"
+      - id: kpi-cards
+        required: true
+        elements:
+          - "Numero grande + trend + sparkline"
+      - id: advanced
+        required: false
+        elements:
+          - "Radar, composed, world map"
+      - id: chart-tooltip
+        required: false
+        elements:
+          - "Tooltip customizado para charts"
+    variations:
+      minimal: "Bar + line + KPI"
+      standard: "Todas required"
+      premium: "Adiciona real-time, animated transitions, drill-down"
+
+  tables:
+    tier: 2
+    label: "Tables"
+    purpose: "Tabelas de dados com sorting, filtering e pagination"
+    route: "/brandbook/tables"
+    sections:
+      - id: basic-table
+        required: true
+        elements:
+          - "Tabela com header, rows, cells"
+          - "Zebra striping, hover state"
+      - id: sortable
+        required: true
+        elements:
+          - "Headers clicaveis com indicator"
+      - id: responsive
+        required: false
+        elements:
+          - "Card view em mobile, scroll horizontal"
+    variations:
+      minimal: "Basic table"
+      standard: "Basic + sortable"
+      premium: "Adiciona virtual scroll, column resize, row selection, export"
+
+  lists:
+    tier: 2
+    label: "Lists"
+    purpose: "Lista de items com variantes"
+    route: "/brandbook/lists"
+    sections:
+      - id: basic-list
+        required: true
+        elements:
+          - "List item com avatar, titulo, descricao, action"
+      - id: grouped-list
+        required: false
+        elements:
+          - "Lista agrupada com headers"
+    variations:
+      minimal: "Basic list"
+      standard: "Basic + grouped"
+      premium: "Adiciona drag-and-drop, virtualized, checklist"
+
+  # ─── TIER 3: SHOWCASE & EXPERIENCE ─────────────────────────────────────────
+
+  slides:
+    tier: 3
+    label: "Slide Deck"
+    purpose: "Templates de apresentacao usando tokens do DS"
+    route: "/brandbook/showcase/slides"
+    sections:
+      - id: slide-registry
+        required: true
+        description: "Catalogo visual de todos os slides"
+        elements:
+          - "Preview thumbnail de cada slide"
+          - "Label + category"
+          - "Click para fullscreen 1920x1080"
+      - id: categories
+        required: true
+        elements:
+          - "Filter por categoria (abertura, conteudo, dados, visual, social, brand, fechamento)"
+      - id: present-mode
+        required: false
+        elements:
+          - "Fullscreen navigation com setas"
+    variations:
+      minimal: "Grid de previews"
+      standard: "Grid + categories + present mode"
+      premium: "Adiciona export PDF, custom deck builder"
+
+  editorial:
+    tier: 3
+    label: "Editorial"
+    purpose: "Paginas de conteudo longo: blog, docs, about"
+    route: "/brandbook/editorial"
+    sections:
+      - id: prose-styles
+        required: true
+        elements:
+          - "Headings, paragraphs, lists, blockquotes"
+          - "Code blocks, tables inline"
+      - id: media
+        required: false
+        elements:
+          - "Image with caption, video embed, gallery"
+    variations:
+      minimal: "Prose styles"
+      standard: "Prose + media"
+      premium: "Adiciona side notes, table of contents, footnotes"
+
+  lp-sections:
+    tier: 3
+    label: "LP Sections"
+    purpose: "Secoes reutilizaveis para landing pages"
+    route: "/brandbook/lp-sections"
+    sections:
+      - id: hero
+        required: true
+        elements:
+          - "Hero com headline, subheadline, CTA, background"
+      - id: features
+        required: true
+        elements:
+          - "Grid de features com icon + titulo + descricao"
+      - id: social-proof
+        required: false
+        elements:
+          - "Testimonials, logos, stats row"
+      - id: pricing
+        required: false
+        elements:
+          - "Pricing cards com tiers"
+      - id: faq
+        required: false
+        elements:
+          - "Accordion de perguntas frequentes"
+      - id: final-cta
+        required: false
+        elements:
+          - "CTA section com urgencia/escassez"
+    variations:
+      minimal: "Hero + features"
+      standard: "Hero + features + social proof + CTA"
+      premium: "Todas as secoes + animated transitions"
+
+  moodboard:
+    tier: 3
+    label: "Moodboard"
+    purpose: "Painel visual de inspiracao e tom do DS"
+    route: "/brandbook/moodboard"
+    sections:
+      - id: visual-references
+        required: true
+        elements:
+          - "Grid assimetrico de imagens de referencia"
+          - "Paleta de cores extraida"
+      - id: tone-keywords
+        required: false
+        elements:
+          - "Tags visuais: premium, bold, minimal, etc."
+    variations:
+      minimal: "Grid de imagens"
+      standard: "Grid + keywords"
+      premium: "Adiciona video mood, interactive collage"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# COMPOSITION PRESETS
+# ═══════════════════════════════════════════════════════════════════════════════
+# Presets pre-definidos que determinam quais page_types incluir.
+# A IA usa o preset como ponto de partida e pode ajustar por brief.
+
+presets:
+  mvp:
+    label: "MVP Design System"
+    description: "Minimo viavel: foundations + botoes + forms"
+    include_tiers: [0]
+    extra_pages: ["buttons"]
+    estimated_pages: 7-8
+
+  standard:
+    label: "Standard Design System"
+    description: "DS completo para produto em producao"
+    include_tiers: [0, 1]
+    extra_pages: []
+    estimated_pages: 12-14
+
+  premium:
+    label: "Premium Brandbook"
+    description: "Brandbook completo com showcase para apresentacao"
+    include_tiers: [0, 1, 2]
+    extra_pages: ["slides", "lp-sections"]
+    estimated_pages: 16-20
+
+  full:
+    label: "Full Design System"
+    description: "Todas as paginas, todos os tiers"
+    include_tiers: [0, 1, 2, 3]
+    extra_pages: []
+    estimated_pages: 20-25
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VARIATION MATRIX
+# ═══════════════════════════════════════════════════════════════════════════════
+# Como variar o VISUAL sem mudar a ESTRUTURA.
+# A IA escolhe uma combinacao de axes para gerar DS unicos.
+
+variation_axes:
+  tone:
+    description: "Tom visual geral"
+    options:
+      - minimal
+      - premium
+      - bold
+      - cinematic
+      - editorial
+      - developer-focused
+      - playful
+      - corporate
+    reference: "../coreai-design-shared/references/page-type-patterns.md (Section 0)"
+
+  layout_density:
+    description: "Quao compacto ou aereo"
+    options:
+      - compact
+      - balanced
+      - generous
+
+  color_mode:
+    description: "Modo de cor predominante"
+    options:
+      - light
+      - dark
+      - auto
+
+  component_style:
+    description: "Estilo dos componentes"
+    options:
+      - flat
+      - elevated
+      - bordered
+      - glass
+
+  section_variation:
+    description: "Qual variacao usar por page_type"
+    options:
+      - minimal
+      - standard
+      - premium
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# USAGE
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# 1. A IA recebe um brief (marca, tokens, tom)
+# 2. Seleciona preset (mvp, standard, premium, full)
+# 3. Escolhe variation axes (tone, density, color_mode, component_style)
+# 4. Para cada page_type incluida:
+#    a. Le sections[] e elements[] deste registry
+#    b. Gera componentes TSX usando tokens da marca
+#    c. Aplica variation do axis escolhido (minimal, standard, premium)
+# 5. Resultado: design system unico com MESMA estrutura mas VISUAL diferente
+#
+# Exemplo:
+#   Brief: "DS premium para SaaS B2B, dark mode, generous spacing"
+#   Preset: standard
+#   Axes: tone=premium, density=generous, color_mode=dark, component_style=elevated
+#   Pages: foundations, typography, color-tokens, spacing, surfaces, motion,
+#          buttons, forms, cards, feedback, navigation (11 pages)
+#   Variation: standard (todas sections required)
