@@ -32,15 +32,9 @@ O arsenal de copy (agents, validators, frameworks, templates) fica em
 `../coreai-copy-shared/` — pasta **irmã** desta skill, não
 subpasta dela.
 
-Se o arquivo não existir, orientar o aluno:
-
-```bash
-cd ~/claude/coreai-mentoria && git pull
-/ativa-skill copy
-```
-
-Isso cria symlink `~/.claude/skills/copy-shared` apontando pro repo. Caminho
-alternativo equivalente: `../coreai-copy-shared/`.
+Se o arquivo não existir, a instalação está incompleta: oriente o aluno a
+reinstalar via `coreai-setup` (o instalador sempre traz `coreai-copy-shared`
+junto de qualquer skill `coreai-copy-*`, por ser dependência obrigatória).
 
 ## PASSO 1 — ContextOS
 

@@ -34,7 +34,7 @@ Antes de escrever, ler em ordem:
   análise de padrões, rankings, benchmarks de referências do nicho).
 
 Se o cliente não tiver banco de inteligência montado, seguir com o briefing e a voz
-do cliente (passo 3). Os swipe files em `~/claude/coreai-mentoria/skills/copy-shared/swipe/` também servem de referência.
+do cliente (passo 3). Os swipe files em `../coreai-copy-shared/swipe/` também servem de referência.
 
 **O que extrair de cada post viral relevante ao tema atual:**
 - Estrutura do hook (1a linha)

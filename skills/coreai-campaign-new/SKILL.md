@@ -1,21 +1,24 @@
 ---
 name: campaign-new
 description: >
-  Cria nova campanha de marketing dentro do business ativo. Pergunta nome,
-  slugifica como YYYY-MM-slug, cria pasta em marketing/campaigns/ e copia
-  templates brief.md, execution.md, results.yaml. Acionar quando o usuário
-  disser "nova campanha", "criar campanha", "registrar campanha", ou
-  /coreaios:campaign-new.
+  Cria nova campanha de marketing dentro do business ativo do ContextOS
+  deste pacote. Pergunta nome, slugifica como YYYY-MM-slug, cria pasta em
+  marketing/campaigns/ e copia os templates brief.md, execution.md,
+  results.yaml embutidos nesta skill. Acionar quando o usuário disser
+  "nova campanha", "criar campanha", "registrar campanha", ou
+  /coreai:campaign-new.
 ---
 
 # Campaign New
 
-Cria pasta de campanha com templates iniciais.
+Cria pasta de campanha com templates iniciais, dentro do ContextOS já resolvido.
 
 ## Pré-requisitos
 
-- Business ativo em `~/coreaios/.config/config.yaml`.
-- Templates de campanha em `~/coreaios/templates/business/campaigns/`.
+- Leia `../coreai-shared/contextos-contract.md` e resolva o negócio ativo antes
+  de qualquer escrita. Sem READY, bloqueie e ofereça `coreai-contexto`.
+- Templates desta skill: `templates/brief.md`, `templates/execution.md`,
+  `templates/results.yaml` (embutidos, sem dependência externa).
 
 ## Passos
 
@@ -31,24 +34,25 @@ Exemplo: `2026-04-black-friday-2026`
 
 ### 2. Criar pasta
 
+Use `business_root` retornado pelo gate como raiz do negócio ativo:
+
 ```bash
-ACTIVE=$(grep '^active_business:' ~/coreaios/.config/config.yaml | awk '{print $2}')
-DEST="$HOME/coreaios/businesses/$ACTIVE/marketing/campaigns/<slug>"
+DEST="$BUSINESS_ROOT/marketing/campaigns/<slug>"
 mkdir -p "$DEST/assets"
 ```
 
 ### 3. Copiar templates
 
 ```bash
-TPL="$HOME/coreaios/templates/business/campaigns"
-cp "$TPL/brief.md" "$DEST/"
-cp "$TPL/execution.md" "$DEST/"
-cp "$TPL/results.yaml" "$DEST/"
+TPL="$(dirname "$0")/../templates"  # resolvido relativo a esta skill
+cp "templates/brief.md" "$DEST/"
+cp "templates/execution.md" "$DEST/"
+cp "templates/results.yaml" "$DEST/"
 ```
 
 ### 4. Atualizar índice
 
-Adicionar entry em `$BIZ/marketing/campaigns/_index.yaml`:
+Adicionar entry em `$BUSINESS_ROOT/marketing/campaigns/_index.yaml`:
 
 ```yaml
 campaigns:
@@ -61,16 +65,16 @@ campaigns:
 ### 5. Confirmar
 
 ```
-✅ Campanha criada: <slug>
-Local: ~/coreaios/businesses/<active>/marketing/campaigns/<slug>/
+Campanha criada: <slug>
+Local: <business_root>/marketing/campaigns/<slug>/
 
 Próximos passos:
   - Edite brief.md com objetivo, público, oferta, canais.
   - Edite execution.md com plano de execução e cronograma.
-  - Após executar, rode /coreaios:campaign-results pra registrar números.
+  - Após executar, rode coreai-campaign-results pra registrar números.
 ```
 
 ## Edge cases
 
 - Pasta já existe → adicione sufixo `-2`, `-3`, etc.
-- Sem `active_business` → orientar `/coreaios:setup`.
+- Sem contexto de negócio válido → orientar `coreai-contexto`.

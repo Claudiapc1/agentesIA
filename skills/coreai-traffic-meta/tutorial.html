@@ -881,42 +881,13 @@ source ~/.zshrc</span></code></pre>
 <!-- 7. INSTALAR SKILL -->
 <section id="instalar-skill">
   <h2><span class="num">07</span>Instalar a skill traffic-meta</h2>
-  <p>Você recebeu o arquivo <code>traffic-meta.zip</code>. Agora vamos instalar.</p>
+  <p>Esta skill já vem junto do pacote <code>agentesIA</code>. Siga o <code>README.md</code> da raiz do pacote (a mensagem que você manda pro Claude ou Codex executar o setup) — nunca extraia à mão nem crie link manual: a instalação sempre grava uma cópia própria em <code>~/.claude/skills/</code> e/ou <code>~/.agents/skills/</code>.</p>
 
   <div class="step">
     <span class="step-num">1</span>
     <div class="step-body">
-      <h4>Extrair o ZIP</h4>
-<pre><code><span class="cmd">mkdir -p ~/claude/coreaios/skills
-unzip ~/Downloads/traffic-meta.zip -d ~/claude/coreaios/skills/</span></code></pre>
-      <p>Resultado: pasta criada em <code>~/claude/coreaios/skills/traffic-meta/</code></p>
-    </div>
-  </div>
-
-  <div class="step">
-    <span class="step-num">2</span>
-    <div class="step-body">
-      <h4>Conectar com Claude Code</h4>
-      <p>Garante que <code>~/.claude/skills</code> aponta para sua pasta de skills:</p>
-<pre><code><span class="cmd">mkdir -p ~/.claude
-ln -sfn ~/claude/coreaios/skills ~/.claude/skills</span></code></pre>
-      <p>Isso cria um symlink. A partir daí, qualquer skill que você colocar em <code>~/claude/coreaios/skills/</code> aparece automaticamente no Claude Code.</p>
-    </div>
-  </div>
-
-  <div class="step">
-    <span class="step-num">3</span>
-    <div class="step-body">
-      <h4>Reinicie o Claude Code</h4>
-      <p>Feche todas as instâncias abertas do Claude Code e abra novamente. A skill <code>traffic-meta</code> aparece automaticamente.</p>
-    </div>
-  </div>
-
-  <div class="step">
-    <span class="step-num">4</span>
-    <div class="step-body">
       <h4>Teste</h4>
-      <p>Dentro do Claude Code, digite:</p>
+      <p>Depois de instalada, dentro do Claude Code ou Codex, digite:</p>
 <pre><code><span class="cmd">/traffic-meta status</span></code></pre>
       <p>Deve mostrar o diagnóstico:</p>
 <pre><code><span class="comment">📊 traffic-meta status
@@ -1000,13 +971,9 @@ source ~/.zshrc</span></code></pre>
 
   <h3>🔴 Skill não aparece no Claude Code</h3>
   <div class="card">
-    <p><strong>Causa:</strong> Symlink não criado ou skill em pasta errada.</p>
-    <p><strong>Fix:</strong></p>
-<pre><code><span class="cmd">ls -la ~/.claude/skills</span></code></pre>
-    <p>Deve mostrar <code>skills -&gt; /Users/seu-usuario/claude/coreaios/skills</code>. Se não:</p>
-<pre><code><span class="cmd">rm -rf ~/.claude/skills
-ln -sfn ~/claude/coreaios/skills ~/.claude/skills</span></code></pre>
-    <p>Reinicie o Claude Code.</p>
+    <p><strong>Causa:</strong> a instalação não copiou a skill para <code>~/.claude/skills/coreai-traffic-meta</code>.</p>
+    <p><strong>Fix:</strong> peça pro Claude/Codex reler o README do pacote <code>agentesIA</code> e rodar o inventário do catálogo de skills de novo, instalando só o que estiver faltando. Nunca crie link manual nem apague a pasta <code>~/.claude/skills</code> inteira: ela guarda as outras skills já instaladas.</p>
+    <p>Reinicie o Claude Code depois.</p>
   </div>
 
   <h3>🔴 MCP não conecta no Claude Desktop</h3>

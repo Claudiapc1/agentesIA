@@ -10,7 +10,7 @@
 
 Localização (self-contained, dentro da skill):
 ```
-~/claude/coreai-mentoria/skills/copy-shared/validators/filtro-anti-ia.md (v3.7)
+../coreai-copy-shared/validators/filtro-anti-ia.md (v3.7)
 ```
 
 Aplicar o filtro anti-ia lendo esse arquivo e validando as 5 dimensões manualmente

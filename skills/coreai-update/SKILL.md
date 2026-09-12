@@ -1,35 +1,36 @@
 ---
 name: update
 description: >
-  Atualiza o Core AIOS rodando git pull no repo clonado. Mostra changelog
-  dos últimos commits. Acionar quando o usuário disser "atualizar coreaios",
-  "update", "git pull", ou /coreaios:update.
+  Atualiza o pacote agentesIA rodando git pull na pasta clonada. Mostra
+  changelog dos últimos commits. Acionar quando o usuário disser "atualizar
+  agentesIA", "update", "git pull", ou /coreai:update.
 ---
 
-# Update Core AIOS
+# Update agentesIA
 
-Atualiza o plugin via `git pull`.
+Atualiza o pacote via `git pull`.
 
 ## Passos
 
-### 1. Localizar o repo
+### 1. Localizar a pasta do pacote
 
-Padrão: `~/coreaios`. Confirmar com:
+Peça ou confirme o path da pasta `agentesIA` já clonada pelo usuário (nunca assumir
+path fixo de máquina). Confirmar com:
 
 ```bash
-[ -d "$HOME/coreaios/.git" ] && echo "ok" || echo "missing"
+[ -d "$PACOTE/.git" ] && echo "ok" || echo "missing"
 ```
 
 Se não existir, instruir o aluno a fazer:
 
 ```bash
-git clone https://github.com/torriani/coreaios.git ~/coreaios
+git clone https://github.com/torriani/agentesIA.git
 ```
 
 ### 2. Pull
 
 ```bash
-cd "$HOME/coreaios"
+cd "$PACOTE"
 git fetch origin
 BEFORE=$(git rev-parse HEAD)
 git pull --ff-only
@@ -44,21 +45,24 @@ Se `BEFORE != AFTER`:
 git log --oneline "$BEFORE..$AFTER"
 ```
 
-Liste skills/squads/templates novos ou alterados:
+Liste skills novas ou alteradas:
 
 ```bash
-git diff --name-only "$BEFORE..$AFTER" | grep -E '^(skills|squads|templates)/' | head -30
+git diff --name-only "$BEFORE..$AFTER" | grep -E '^skills/' | head -30
 ```
 
-### 4. Confirmar
+### 4. Confirmar e reinstalar
 
 ```
-✅ Core AIOS atualizado.
+Pacote agentesIA atualizado.
 Commits novos: <N>
-Skills/squads/templates alterados: <ver lista>
-
-Reinicie o Claude Code pra que skills novas apareçam no autocomplete.
+Skills alteradas: <ver lista>
 ```
+
+Baixar arquivo novo não instala nada sozinho: rode `coreai-setup` (ou
+`skills/coreai-setup/scripts/install.py --list`) para instalar as skills novas
+ou atualizadas no seu ambiente. A instalação sempre grava cópia própria, nunca
+link — atualizar o pacote não muda skill já instalada até você rodar o instalador.
 
 ## Edge cases
 

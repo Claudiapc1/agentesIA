@@ -53,11 +53,17 @@ Skill que dá ao Claude Code **memória de curto prazo automática**. Cada turno
 
 ## Instalação
 
+Sem script de instalação externo: copie os arquivos desta própria skill.
+
 ```bash
-bash ~/coreaios/skills/session-memory/scripts/install.sh
+mkdir -p ~/.claude/hooks ~/.claude/commands
+cp hooks/session-append.sh hooks/session-load.sh ~/.claude/hooks/
+cp commands/*.md ~/.claude/commands/
 ```
 
-Faz: copia hooks → `~/.claude/hooks/`, mergeia `~/.claude/settings.json`, linka slash commands, adiciona `.claude/session.md` ao `~/.gitignore_global`.
+Depois, mergeie manualmente os hooks em `~/.claude/settings.json` (chamando
+`session-append.sh` ao fim de cada resposta e `session-load.sh` no início da
+sessão) e adicione `.claude/session.md` ao `~/.gitignore_global`.
 
 ## Privacidade
 

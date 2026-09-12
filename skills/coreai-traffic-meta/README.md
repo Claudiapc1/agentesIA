@@ -10,19 +10,10 @@ Skill criada por **[Juliano Torriani](https://torriani.com.br)** para alunos que
 
 📖 **Tutorial completo passo a passo:** abra o arquivo `tutorial.html` neste pacote no seu navegador. Ele tem screenshots, vídeos e troubleshooting.
 
-### Versão resumida (3 passos)
-
-```bash
-# 1. Extrair a skill
-mkdir -p ~/claude/coreaios/skills
-unzip ~/Downloads/traffic-meta.zip -d ~/claude/coreaios/skills/
-
-# 2. Garantir que ~/.claude/skills aponta pra ~/claude/coreaios/skills
-mkdir -p ~/.claude
-ln -sfn ~/claude/coreaios/skills ~/.claude/skills
-
-# 3. Reiniciar Claude Code → /traffic-meta status
-```
+Esta skill é instalada junto com o pacote `agentesIA`: siga o `README.md` da raiz
+do pacote (instrução para o Claude/Codex executar o setup). Não extraia nem crie
+link manual — a instalação sempre grava uma cópia própria em `~/.claude/skills/`
+e/ou `~/.agents/skills/`. Depois: `/traffic-meta status`.
 
 ---
 

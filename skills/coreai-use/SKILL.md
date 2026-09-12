@@ -1,60 +1,49 @@
 ---
 name: use
 description: >
-  Troca o business ativo do Core AIOS. Lista businesses em
-  ~/coreaios/businesses/, deixa escolher e atualiza
-  ~/coreaios/.config/config.yaml. Acionar quando o usuário disser
-  "trocar empresa", "use empresa X", "ativar business", ou /coreaios:use.
+  Troca o business ativo do ContextOS deste pacote. Pergunta a raiz de
+  contexto (não assume path fixo), lista businesses dentro dela e atualiza
+  a seleção ativa via ../coreai-contexto/scripts/contextos.py. Acionar
+  quando o usuário disser "trocar empresa", "use empresa X", "ativar
+  business", ou /coreai:use.
 ---
 
 # Use Business
 
-Troca a empresa ativa.
+Troca a empresa ativa dentro do ContextOS já existente. Não cria contexto novo:
+se não houver nenhum, encaminhe para `coreai-contexto`.
 
 ## Passos
 
-### 1. Listar businesses
+### 1. Resolver a raiz de contexto
+
+Pergunte a raiz de contexto (`--root`) se não vier de uma sessão anterior. Nunca
+assumir path fixo de máquina.
+
+### 2. Listar businesses
 
 ```bash
-ls "$HOME/coreaios/businesses/" | grep -v '^\.'
+python3 ../coreai-contexto/scripts/contextos.py --root "$ROOT" status
 ```
 
-### 2. Apresentar e pedir escolha
+### 3. Apresentar e pedir escolha
 
 Mostre numerado. Aceite número ou nome direto.
 
-### 3. Atualizar config
+### 4. Atualizar a seleção ativa
 
 ```bash
-CONF="$HOME/coreaios/.config/config.yaml"
-mkdir -p "$(dirname $CONF)"
-
-# Se já existe, atualizar a chave; se não, criar
-if [ -f "$CONF" ]; then
-  python3 -c "
-import yaml
-fp='$CONF'
-with open(fp) as f: d=yaml.safe_load(f) or {}
-d['active_business']='<slug>'
-with open(fp,'w') as f: yaml.safe_dump(d,f,allow_unicode=True,sort_keys=False)
-"
-else
-  cat > "$CONF" <<EOF
-active_business: <slug>
-language: pt-BR
-version: 1.0.0
-EOF
-fi
+python3 ../coreai-contexto/scripts/contextos.py --root "$ROOT" set-active --business "<slug>"
 ```
 
-### 4. Confirmar
+### 5. Confirmar
 
 ```
-✅ Business ativo: <slug>
-Local: ~/coreaios/businesses/<slug>/
+Business ativo: <slug>
+Raiz: <ROOT>/businesses/<slug>/
 ```
 
 ## Edge cases
 
-- Nenhum business → sugerir `/coreaios:setup`.
+- Nenhuma raiz de contexto existente → sugerir `coreai-contexto`.
 - Nome inválido → re-perguntar.
