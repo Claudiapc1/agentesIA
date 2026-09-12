@@ -1,0 +1,288 @@
+{
+  "id": "70e63d4a-4f8d-46f8-aeae-38e9ec0de5d8",
+  "titulo": "Bônus · Bot Telegram dedicado pro agente de atendimento",
+  "lesson_payload": {
+    "id": "encontro-03-02",
+    "tag": "Bônus · 12 de Maio",
+    "title": "Bônus · Bot Telegram dedicado pro agente de atendimento",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta aula bônus existe"
+      },
+      {
+        "type": "text",
+        "content": "Na aula principal, você liga o agente atendente direto no **WhatsApp**. Mas e se você quiser também ter ele rodando no **Telegram**, num bot dedicado, separado do seu ROI/Alfred pessoal? Esta aula bônus mostra como."
+      },
+      {
+        "type": "callout",
+        "title": "A pergunta que essa aula responde",
+        "content": "\"Posso usar o mesmo bot Telegram do meu ROI/agente pessoal pro atendimento dos alunos?\"\n\n**Tecnicamente sim. Operacionalmente não.** Esta aula explica por quê e como criar um segundo bot dedicado em ~25min.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que separar · 6 razões"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Identidade clara",
+            "accent": "cyan",
+            "description": "Seu ROI é \"founder mode, sem filtro\". Atendente é \"fala como mentor, controlado\". Misturar = aluno recebendo tom errado.",
+            "numberLabel": "1"
+          },
+          {
+            "title": "Allowlist isolada",
+            "accent": "violet",
+            "description": "ROI = só você. Atendente = alunos pagantes. Lists separadas, segurança maior.",
+            "numberLabel": "2"
+          },
+          {
+            "title": "Workspace dedicado",
+            "accent": "lime",
+            "description": "Atendente lê dos .md do atendente. ROI lê do dele. Zero cross-talk.",
+            "numberLabel": "3"
+          },
+          {
+            "title": "Botão de pânico granular",
+            "accent": "magenta",
+            "description": "Desliga só o atendente quando ele falhar · seu ROI continua funcionando.",
+            "numberLabel": "4"
+          },
+          {
+            "title": "Branding",
+            "accent": "coral",
+            "description": "Aluno fala com `@atendente_mentoria_bot`, não com `@torriani_bot`. Profissional.",
+            "numberLabel": "5"
+          },
+          {
+            "title": "Logs separados",
+            "accent": "cyan",
+            "description": "Você analisa atendimento sem misturar com sua operação pessoal.",
+            "numberLabel": "6"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 1 · Criar o segundo bot no BotFather"
+      },
+      {
+        "type": "text",
+        "content": "Mesmo fluxo do Encontro 2, mas você vai criar um bot **dedicado ao atendente**. O `@BotFather` permite vários bots na mesma conta · não tem limite até uns 20."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Abre o BotFather",
+            "accent": "cyan",
+            "description": "Clica em [t.me/BotFather](https://t.me/BotFather) · já vai no chat dele. Manda /start se for sua primeira vez."
+          },
+          {
+            "title": "Manda /newbot",
+            "accent": "violet",
+            "description": "BotFather pede o nome e o username. Não cria o bot antigo de novo · cria um novo."
+          },
+          {
+            "title": "Define o NOME visível",
+            "accent": "lime",
+            "description": "Ex: `Atendente da Mentoria`. É o que aparece no header da conversa. Pode ter espaço, acento, etc."
+          },
+          {
+            "title": "Define o USERNAME do bot",
+            "accent": "magenta",
+            "description": "Ex: `atendente_mentoria_bot`. Tem que terminar em `_bot`, sem espaço, minúsculas. Se já existir, ele pede outro."
+          },
+          {
+            "title": "Captura o TOKEN",
+            "accent": "coral",
+            "description": "BotFather devolve uma mensagem com o TOKEN do novo bot. Algo tipo `7891234567:ABC-defGHIjklMNOpqr_stuVWXyz0123456`. **Guarda separado do token do primeiro bot.**"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Não confunda os tokens",
+        "content": "Você agora tem **2 tokens Telegram**: um do seu bot pessoal (E2) e um do bot do atendente (esta aula). Salva os dois no seu cofre de senhas (1Password, Bitwarden) com nomes claros: `OpenClaw · Telegram · ROI` e `OpenClaw · Telegram · Atendente`.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 2 · Adicionar como segundo provider Telegram no OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "O OpenClaw suporta **múltiplos providers Telegram simultâneos** · cada um com seu account name. Conecta SSH na VPS e roda:"
+      },
+      {
+        "type": "command-line",
+        "label": "Adicionar segundo bot Telegram · account \"atendente\"",
+        "command": "openclaw provider add telegram --account atendente"
+      },
+      {
+        "type": "callout",
+        "title": "O que vai pedir",
+        "content": "O wizard pergunta o **token** · cola o TOKEN do novo bot (passo 1). Pode pedir o **handle** do bot · cola `@atendente_mentoria_bot` (com `@`).\n\nO `--account atendente` dá um nome lógico interno · não tem relação com o username Telegram. Pode ser qualquer slug, mas mantenha consistente com o agent ID.",
+        "variant": "info"
+      },
+      {
+        "type": "command-line",
+        "label": "Validar que agora você tem 2 providers Telegram",
+        "command": "openclaw provider list"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "Aparece algo como:\n```\ntelegram:default      → @seu_bot_pessoal      [running]\ntelegram:atendente    → @atendente_mentoria_bot [running]\n```",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 3 · Allowlist específica do segundo bot · via Claude Code"
+      },
+      {
+        "type": "text",
+        "content": "Mesma lógica do Passo 10 do E2, mas você precisa adicionar a allowlist **só para o novo provider**, sem mexer no allowlist do bot principal. Vamos delegar isso pro Claude Code rodando no seu Mac."
+      },
+      {
+        "type": "callout",
+        "title": "Antes de rodar · pega o Telegram ID dos alunos",
+        "content": "Pra cada aluno que vai conversar com o atendente, peça que ele clique em [t.me/userinfobot](https://t.me/userinfobot) → Start → copia o ID numérico (ex: `123456789`).\n\nNo começo, coloca só o seu próprio ID pra testar.",
+        "variant": "info"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Claude Code · configurar allowlist do bot do atendente",
+        "target": "telegram",
+        "content": "Vou te dar o IP da minha VPS, o nome do segundo provider Telegram e os IDs autorizados. Quero que você:\n\n1. Conecta via SSH no IP da VPS (`ssh root@<IP>`)\n2. Abre o arquivo `~/.openclaw/openclaw.json`\n3. **NÃO MEXE** no provider `telegram:default` · só no provider `telegram:atendente`\n4. No provider `telegram:atendente`, configura:\n   - `dmPolicy`: `\"allowlist\"`\n   - `allowedChatIds`: lista com os IDs abaixo\n5. Salva o arquivo\n6. Reinicia só o provider afetado: `openclaw provider restart telegram:atendente`\n7. Confirma que ficou tudo certo lendo o arquivo de novo e mostrando só o trecho do provider `telegram:atendente`\n\n**IP da VPS:** [cola aqui]\n**IDs autorizados (separados por vírgula):** [cola aqui, ex: 123456789, 987654321]\n\nReporta cada passo enquanto executa. Se o provider `telegram:atendente` não existir no arquivo, **PARA** e me avisa · não improvisa."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 4 · Bindar o agente atendente ao novo canal Telegram"
+      },
+      {
+        "type": "text",
+        "content": "Agora amarra agente ↔ canal. Mesmo comando que você usaria pro WhatsApp, mas com canal `telegram` e account `atendente`."
+      },
+      {
+        "type": "command-line",
+        "label": "Bind · agente atendente-mentoria ↔ telegram:atendente",
+        "command": "openclaw agents bind --agent atendente-mentoria --bind telegram:atendente"
+      },
+      {
+        "type": "command-line",
+        "label": "Validar",
+        "command": "openclaw agents list --bindings"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "Você deve ver `atendente-mentoria` com bindings:\n- `telegram:atendente` (se você fez essa aula bônus)\n- `whatsapp:atendente-mentoria` (se já fez a Parte 4 da aula principal)\n\nUm agente, dois canais.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Teste · manda /start no novo bot"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "No seu Telegram · busca pelo username do novo bot e manda",
+          "content": "/start"
+        },
+        "output": {
+          "label": "Bot responde (em até 5s, com a voz do SOUL.md do atendente)",
+          "content": "[Sai a apresentação do IDENTITY.md do atendente · não a do ROI]"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Se a resposta veio com o tom errado",
+        "content": "Aconteceu cross-talk. Confere:\n1. `openclaw agents list --bindings` · garante que `telegram:atendente` está bindado em `atendente-mentoria`, não em `roi`\n2. `ls /root/.openclaw/workspace/atendente-mentoria/` · garante que os .md estão lá\n3. Se ainda errado, roda `openclaw provider restart telegram:atendente` e testa de novo",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint da aula bônus"
+      },
+      {
+        "id": "encontro-03-02-checkpoint",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Segundo bot Telegram criado no BotFather",
+            "description": "TOKEN guardado em cofre · username confirmado."
+          },
+          {
+            "title": "Provider telegram:atendente adicionado no OpenClaw",
+            "description": "`openclaw provider list` mostra 2 providers Telegram."
+          },
+          {
+            "title": "Allowlist específica do segundo bot configurada",
+            "description": "Via Claude Code · não mexeu no allowlist do bot principal."
+          },
+          {
+            "title": "Agente atendente-mentoria bindado em telegram:atendente",
+            "description": "`openclaw agents list --bindings` confirma."
+          },
+          {
+            "title": "/start respondido com o tom certo do atendente",
+            "description": "Não saiu com voz do ROI · saiu com voz do atendente."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Você acabou com 2 canais no mesmo agente",
+        "content": "Mesmo agente (`atendente-mentoria`), dois canais ativos:\n- **WhatsApp** · pra alunos que preferem WhatsApp\n- **Telegram** · pra alunos que vivem no Telegram\n\nTexto chega num canal, vai pro mesmo cérebro (10 .md), responde no mesmo tom. Isso é OpenClaw mostrando o que sabe fazer.",
+        "variant": "success"
+      }
+    ],
+    "number": 2,
+    "status": "live",
+    "duration": "~25min",
+    "schedule": [
+      {
+        "label": "Por que um segundo bot · não complica, separa",
+        "duration": "5min"
+      },
+      {
+        "label": "Passo 1 · criar no BotFather (igual E2, mas dedicado)",
+        "duration": "5min"
+      },
+      {
+        "label": "Passo 2 · adicionar como provider no OpenClaw",
+        "duration": "5min"
+      },
+      {
+        "label": "Passo 3 · allowlist específica via Claude Code",
+        "duration": "5min"
+      },
+      {
+        "label": "Passo 4 · bind do agente atendente + teste",
+        "duration": "5min"
+      }
+    ],
+    "subtitle": "Por que e como criar um SEGUNDO bot Telegram só pro atendente · ~25min",
+    "shortTitle": "Bônus · Telegram do atendente",
+    "learningGoals": [
+      "Entender por que separar o bot pessoal (ROI) do bot de atendimento",
+      "Criar um segundo bot no BotFather sem conflitar com o primeiro",
+      "Adicionar o novo bot como segundo provider Telegram no OpenClaw",
+      "Configurar allowlist específica do segundo bot via Claude Code",
+      "Bindar o agente atendente ao novo canal Telegram"
+    ]
+  }
+}

@@ -1,0 +1,883 @@
+{
+  "id": "394d066d-a5c2-4974-be45-defcc6ffeca4",
+  "titulo": "Construindo o Agente de Atendimento 24x7",
+  "lesson_payload": {
+    "id": "encontro-03-01",
+    "tag": "Ao vivo · 12 de Maio",
+    "title": "Construindo o Agente de Atendimento 24x7",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta aula existe"
+      },
+      {
+        "type": "text",
+        "content": "Segunda-feira de manhã. Você abre o grupo da mentoria. **47 mensagens.** 12 perguntas iguais. 8 que estão respondidas em aulas anteriores. 4 que vão precisar você responder pessoalmente. Você passa 2 horas respondendo o que poderia ser respondido sozinho."
+      },
+      {
+        "type": "text",
+        "content": "Atendimento de grupo come ~30% do tempo operacional de quem tem mentoria. **E esse é o tempo que você não está criando.** A aula de hoje resolve isso: você vai sair com um agente IA treinado com a SUA metodologia, atendendo no seu grupo (ou DM) 24/7."
+      },
+      {
+        "type": "callout",
+        "title": "O que vamos construir hoje",
+        "content": "Um agente OpenClaw treinado com a sua metodologia, conectado via WhatsApp (em modo seguro), que responde dúvidas dos seus alunos quando você não está disponível. Reduz ~30% do atendimento. Não substitui você · libera você pra fazer o que só você faz.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A frase central da aula"
+      },
+      {
+        "type": "callout",
+        "title": "🎯 Mantra de hoje",
+        "content": "Você não cria um atendente 24/7 escolhendo um modelo. Você cria um atendente 24/7 organizando conhecimento, regras, tom e limites · e só depois liga o WhatsApp.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O fluxo dos 3 atos"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Terminal · cria a estrutura técnica",
+            "accent": "violet",
+            "description": "6 comandos no OpenClaw que registram o agente, criam o workspace e preparam o canal. Nada de WhatsApp ainda.",
+            "numberLabel": "ATO 1"
+          },
+          {
+            "title": "Claude Code · gera o cérebro do agente",
+            "accent": "cyan",
+            "description": "Você cola seus materiais (transcrições, metodologia, FAQ) e o Claude Code monta os 10 arquivos .md no seu Mac. Sobe pra VPS via rsync.",
+            "numberLabel": "ATO 2"
+          },
+          {
+            "title": "WhatsApp · só depois do agente testado",
+            "accent": "lime",
+            "description": "Modo seguro primeiro (allowlist). Bind agente ↔ canal. Botão de pânico configurado antes de abrir pra produção.",
+            "numberLabel": "ATO 3"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 2 modos de operação que você escolhe"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Menção · agente só responde se for arrobado",
+            "accent": "cyan",
+            "description": "Aluno escreve `@AgenteNome qual a aula 3?` · agente responde. Sem menção, fica em silêncio. Recomendado pra começar.",
+            "numberLabel": "MODO A"
+          },
+          {
+            "title": "Ativo · agente lê tudo e decide quando responder",
+            "accent": "magenta",
+            "description": "Agente lê toda mensagem do grupo. Responde quando entende que é pergunta dentro do escopo dele. Fica `NO_REPLY` em conversa paralela. Mais potente, mais arriscado.",
+            "numberLabel": "MODO B"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que você já tem (recall do E1 e E2)"
+      },
+      {
+        "type": "callout",
+        "title": "Você não começa do zero",
+        "content": "No **Encontro 1** instalamos o Claude Code · sua chave de fenda mestra. No **Encontro 2** criamos o seu primeiro agente (Telegram, conversando com você). Hoje é o terceiro nível: o agente que conversa com QUEM PAGA · seus alunos. Outro nível de cuidado, outro nível de regras.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parte 1 · Criar o agente no OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "Aqui você cria a **estrutura técnica** do agente. Sem treinamento ainda. Sem WhatsApp ainda. Só os trilhos."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "As 4 peças que formam um agente"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "O identificador técnico",
+            "accent": "violet",
+            "description": "Slug único do agente. Ex: `atendente-mentoria`. Minúsculas, sem espaço, sem acento, hífen pra separar.",
+            "numberLabel": "AGENT ID"
+          },
+          {
+            "title": "A pasta onde mora o cérebro",
+            "accent": "cyan",
+            "description": "Pasta na VPS com os arquivos .md que treinam o agente. Ex: `/root/.openclaw/workspace/atendente-mentoria/`",
+            "numberLabel": "WORKSPACE"
+          },
+          {
+            "title": "O modelo que vai responder",
+            "accent": "lime",
+            "description": "Quem vai gerar as respostas. Padrão recomendado: `openai-codex/gpt-5.5`.",
+            "numberLabel": "MODEL"
+          },
+          {
+            "title": "A ponte canal ↔ agente",
+            "accent": "coral",
+            "description": "Conecta uma conta de canal (WhatsApp/Telegram) ao agente. É o último passo · só depois do agente testado.",
+            "numberLabel": "BINDING"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 1 · Definir o agente no papel (antes de digitar qualquer comando)"
+      },
+      {
+        "type": "text",
+        "content": "Antes de qualquer terminal, preenche essa ficha. Decisão tomada antes da execução evita refazer."
+      },
+      {
+        "type": "callout",
+        "title": "Ficha do seu agente",
+        "content": "**Nome visível:** Atendente da Mentoria\n**Agent ID:** atendente-mentoria\n**Objetivo:** atender dúvidas dos alunos da mentoria 24/7\n**Público:** alunos pagantes\n**Canal futuro:** WhatsApp (grupo + DM)\n**Modelo:** openai-codex/gpt-5.5\n**Workspace:** /root/.openclaw/workspace/atendente-mentoria",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Regra de naming · não pule",
+        "content": "Use **minúsculas, sem espaço, sem acento, hífen pra separar**.\n\n✅ Bom: `atendimento`, `suporte-premium`, `agente-vendas`\n❌ Ruim: `Atendimento Premium 24/7!!!`, `agente do João`, `Atendente Mentoria` (com espaço)",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 2 · Criar o agente no terminal"
+      },
+      {
+        "type": "text",
+        "content": "Conecta na sua VPS via SSH (mesmo IP do Encontro 2) e roda:"
+      },
+      {
+        "type": "command-line",
+        "label": "Criar o agente · registra no OpenClaw + prepara workspace",
+        "command": "openclaw agents add atendente-mentoria --workspace /root/.openclaw/workspace/atendente-mentoria --model openai-codex/gpt-5.5 --non-interactive"
+      },
+      {
+        "type": "callout",
+        "title": "O que esse comando faz",
+        "content": "Registra o agente no OpenClaw, cria a pasta `/root/.openclaw/workspace/atendente-mentoria/` na VPS e amarra o modelo. Não cria os arquivos de treinamento · isso é a Parte 2.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 3 · Confirmar que o agente foi criado"
+      },
+      {
+        "type": "command-line",
+        "label": "Listar agentes registrados (com bindings)",
+        "command": "openclaw agents list --bindings"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "Aparece `atendente-mentoria` na lista, com workspace correto, modelo `openai-codex/gpt-5.5`, e binding **vazio** (sem canal ainda · isso é normal).",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 4 · Criar a conta WhatsApp dentro do OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "Atenção · isso **NÃO conecta** o WhatsApp ainda. Só cria a conta lógica dentro do OpenClaw que vai ser usada mais tarde."
+      },
+      {
+        "type": "command-line",
+        "label": "Criar a conta whatsapp · ainda sem login",
+        "command": "openclaw channels add --channel whatsapp --account atendente-mentoria --name \"Atendente da Mentoria\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 5 · Login do WhatsApp (QR Code)"
+      },
+      {
+        "type": "callout",
+        "title": "Antes de rodar · qual número você vai usar",
+        "content": "Você precisa de um **WhatsApp dedicado** pro agente. Não use seu pessoal. Recomendado: chip novo, conta criada nesse chip, número que você comunica como \"Atendimento [Mentoria]\".",
+        "variant": "warning"
+      },
+      {
+        "type": "command-line",
+        "label": "Iniciar pareamento · vai gerar QR code",
+        "command": "openclaw channels login --channel whatsapp --account atendente-mentoria"
+      },
+      {
+        "type": "callout",
+        "title": "O que vai acontecer",
+        "content": "O terminal mostra um QR code em ASCII. Abre o WhatsApp do número do agente → Aparelhos conectados → escaneia o QR. Aparece `linked` no terminal.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "🚨 Se o WhatsApp desconectar · como reconectar",
+        "content": "Acontece de o WhatsApp desconectar (você fechou o app, trocou de aparelho, etc). Quando isso rolar, você precisa **deslogar primeiro e logar de novo** pra gerar um QR code novo.\n\n**1.** Roda esse comando pra fazer logout:",
+        "variant": "warning"
+      },
+      {
+        "type": "command-line",
+        "label": "Desconectar a sessão atual antes de reconectar",
+        "command": "openclaw channels logout --channel whatsapp --account atendente-mentoria"
+      },
+      {
+        "type": "callout",
+        "title": "2. Depois roda o mesmo comando do Passo 5 (login)",
+        "content": "Volta lá em cima e roda de novo o comando `openclaw channels login --channel whatsapp --account atendente-mentoria`. Ele vai gerar um QR code novo · você escaneia com o WhatsApp do agente e tudo volta ao normal.\n\n**Macete:** os comandos são exatamente iguais · só troca `login` por `logout` pra desconectar, e `logout` por `login` pra reconectar.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 6 · Validar status da conexão"
+      },
+      {
+        "type": "command-line",
+        "label": "Status detalhado do canal",
+        "command": "openclaw channels status --deep"
+      },
+      {
+        "type": "callout",
+        "title": "Critério de OK",
+        "content": "Tem que aparecer `linked`, `running` e `connected`. Se faltar qualquer um, **não avança**. Roda `openclaw channels login` de novo.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 7 · Modo seguro antes de qualquer treinamento"
+      },
+      {
+        "type": "text",
+        "content": "Trava o WhatsApp em modo seguro · DM só pra allowlist (vazia), grupo bloqueado. Assim mesmo que algo dispare o agente por engano, ele não responde ninguém ainda."
+      },
+      {
+        "type": "callout",
+        "title": "📋 Antes de copiar · troca 2 valores no prompt",
+        "content": "O prompt abaixo já está pronto. Antes de colar no Telegram (ou no Claude Code), substitua 2 coisas:\n\n**1. `+SEU_NUMERO_AQUI`** · troca pelo seu WhatsApp em formato internacional. Ex: `+5511999999999` (55 = Brasil, 11 = DDD, sem espaço). Aparece em 2 lugares no JSON · troca os dois.\n\n**2. `ID_DO_GRUPO_AQUI@g.us`** · troca pelo ID do grupo da sua mentoria. Pra pegar o ID: abre o grupo no WhatsApp, vai em **Dados do grupo → Convidar via link**, copia o link (ex: `https://chat.whatsapp.com/ABC123XYZ`). O ID que vai no JSON tem outro formato (`120363xxxxxxxxxxx@g.us`) · seu agente vai descobrir o ID a partir do link · só passa o link convidando o agente pra entrar no grupo, ou cola o link aqui no prompt antes de mandar e pede pro agente extrair o ID.\n\nDepois de trocar os 2 valores, copia o prompt todo e manda pro agente no Telegram.",
+        "variant": "info"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · pra mandar pro seu agente (ROI/Alfred) no Telegram",
+        "target": "telegram",
+        "content": "Edita o arquivo `/root/.openclaw/openclaw.json` e deixa a seção `channels.whatsapp` exatamente assim (mantém o resto do arquivo intacto):\n\n```json\n{\n  \"channels\": {\n    \"whatsapp\": {\n      \"enabled\": true,\n      \"dmPolicy\": \"allowlist\",\n      \"allowFrom\": [\n        \"+SEU_NUMERO_AQUI\"\n      ],\n      \"accounts\": {\n        \"atendente-mentoria\": {\n          \"name\": \"Atendente da Mentoria\",\n          \"enabled\": true,\n          \"dmPolicy\": \"allowlist\",\n          \"allowFrom\": [\n            \"+SEU_NUMERO_AQUI\"\n          ],\n          \"groupPolicy\": \"allowlist\",\n          \"groupAllowFrom\": [\n            \"*\"\n          ],\n          \"groups\": {\n            \"ID_DO_GRUPO_AQUI@g.us\": {\n              \"requireMention\": true\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```\n\nMeu número WhatsApp: +SEU_NUMERO_AQUI\nID do grupo da mentoria: ID_DO_GRUPO_AQUI@g.us\n\nDepois confirma rodando: `openclaw config show --account atendente-mentoria`. Se algo der erro, **PARA** e me reporta."
+      },
+      {
+        "type": "callout",
+        "title": "✅ Resultado esperado · Modo seguro",
+        "content": "Depois de aplicar:\n\n- `dmPolicy: \"allowlist\"` em 2 níveis · só seu número manda DM\n- `groupPolicy: \"allowlist\"` + `groupAllowFrom: [\"*\"]` · agente pode estar em grupos · controle por bloco `groups`\n- `requireMention: true` no grupo da mentoria · só responde quando arrobado (`@AtendenteDaMentoria`)\n- `enabled: true` · canal ativo\n\nResultado: só você consegue testar o agente, e no grupo ele fica em silêncio até alguém mencionar.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "📁 Como deve ficar o arquivo `/root/.openclaw/openclaw.json`"
+      },
+      {
+        "code": "{\n  \"channels\": {\n    \"whatsapp\": {\n      \"enabled\": true,\n      \"dmPolicy\": \"allowlist\",\n      \"allowFrom\": [\n        \"+5511999999999\",\n        \"+5511988888888\"\n      ],\n      \"accounts\": {\n        \"atendente-mentoria\": {\n          \"name\": \"Atendente da Mentoria (0237)\",\n          \"enabled\": true,\n          \"dmPolicy\": \"allowlist\",\n          \"allowFrom\": [\n            \"+5511999999999\",\n            \"+5511988888888\"\n          ],\n          \"groupPolicy\": \"allowlist\",\n          \"groupAllowFrom\": [\n            \"*\"\n          ],\n          \"groups\": {\n            \"120363999999999999@g.us\": {\n              \"requireMention\": true\n            }\n          }\n        }\n      }\n    }\n  }\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "callout",
+        "title": "🛑 PARA AQUI. Não bindar ainda.",
+        "content": "O agente existe, o WhatsApp está conectado, MAS o binding agente ↔ WhatsApp **não foi feito**. Isso é proposital. Se você bindar agora, o agente vai responder seus alunos com a base vazia · alucinando · errando · queimando reputação.\n\n**Próxima parada: treinar o agente.** Só depois de treinado + testado a gente liga os fios.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parte 2 · Treinar o agente (o coração da aula)"
+      },
+      {
+        "type": "text",
+        "content": "Treinar agente no OpenClaw **não é fine-tuning**. É montar contexto estruturado: arquivos `.md` no workspace do agente. Esses arquivos viram o cérebro operacional · o que ele lê antes de responder qualquer mensagem."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 10 arquivos do cérebro do agente"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Índice do pacote",
+            "accent": "violet",
+            "description": "Explica o que cada arquivo faz. Útil pra você lembrar a função de cada um.",
+            "numberLabel": "README"
+          },
+          {
+            "title": "Quem é o agente",
+            "accent": "cyan",
+            "description": "Nome, apresentação, contexto da marca, o que sabe e o que NÃO sabe.",
+            "numberLabel": "IDENTITY"
+          },
+          {
+            "title": "Tom · personalidade · vocabulário",
+            "accent": "lime",
+            "description": "Jeito de falar, expressões naturais, regras de tom, exemplos bons e ruins. **Crítico pra não soar IA genérica.**",
+            "numberLabel": "SOUL"
+          },
+          {
+            "title": "Regras operacionais",
+            "accent": "magenta",
+            "description": "Fonte de verdade, ordem de consulta, quando responder, quando ficar em silêncio, quando escalar.",
+            "numberLabel": "AGENTS"
+          },
+          {
+            "title": "Base de conhecimento principal",
+            "accent": "coral",
+            "description": "Produto, público, metodologia, aulas, FAQ, objeções. O maior arquivo · geralmente 20-50KB.",
+            "numberLabel": "USER"
+          },
+          {
+            "title": "Metodologia core",
+            "accent": "violet",
+            "description": "Frameworks proprietários, etapas, fluxos de decisão. **A espinha da sua metodologia em formato consultável.**",
+            "numberLabel": "PROTOCOLO"
+          },
+          {
+            "title": "Táticas e estratégias",
+            "accent": "cyan",
+            "description": "Aplicações práticas, casos de uso, exemplos de execução.",
+            "numberLabel": "ESTRATEGIAS"
+          },
+          {
+            "title": "Registry de agentes",
+            "accent": "lime",
+            "description": "Se você tem mais de um agente, define papéis, autonomia, modelos. Isolamento entre eles.",
+            "numberLabel": "TEAM"
+          },
+          {
+            "title": "Regras de memória",
+            "accent": "magenta",
+            "description": "Onde ficam logs, decisões, lições. Importante quando o agente cresce.",
+            "numberLabel": "MEMORY"
+          },
+          {
+            "title": "Ferramentas e setup",
+            "accent": "coral",
+            "description": "Notas de ferramentas conectadas (SSH, cameras, TTS, etc).",
+            "numberLabel": "TOOLS"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "📥 Baixe os 10 templates do Alfred (agente real do Torriani)"
+      },
+      {
+        "type": "callout",
+        "title": "Atalho · use estes como ponto de partida",
+        "content": "Esses são os arquivos REAIS do Alfred · agente que atende a mentoria do Torriani em produção. Use a **estrutura** como base e substitua o **conteúdo** pelo seu contexto. Não copie cego · cada arquivo tem header explicando o que adaptar.",
+        "variant": "success"
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar README.template.md · índice do pacote](/downloads/agente-atendimento/README.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar IDENTITY.template.md · quem é o agente](/downloads/agente-atendimento/IDENTITY.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar SOUL.template.md · tom e personalidade](/downloads/agente-atendimento/SOUL.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar AGENTS.template.md · regras operacionais](/downloads/agente-atendimento/AGENTS.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar USER.template.md · base de conhecimento](/downloads/agente-atendimento/USER.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar PROTOCOLO.template.md · metodologia core](/downloads/agente-atendimento/PROTOCOLO.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar ESTRATEGIAS.template.md · táticas](/downloads/agente-atendimento/ESTRATEGIAS.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar TEAM.template.md · registry de agentes](/downloads/agente-atendimento/TEAM.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar MEMORY.template.md · regras de memória](/downloads/agente-atendimento/MEMORY.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "text",
+        "content": "📥 **[Baixar TOOLS.template.md · ferramentas](/downloads/agente-atendimento/TOOLS.template.md)**, clique pra abrir o arquivo e salvar no seu Mac."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "A regra de ouro · Alfred vs ROI (dois agentes, treinos diferentes)"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Atendente dos alunos · controlado",
+            "accent": "violet",
+            "description": "Função: atender alunos. Autonomia controlada. Base: metodologia + aulas + FAQ. Risco principal: reputação. Tom: fala como o Torriani.",
+            "numberLabel": "ALFRED"
+          },
+          {
+            "title": "Assistente operacional do Juliano · autônomo",
+            "accent": "cyan",
+            "description": "Função: executar tarefas do dono. Autonomia alta. Base: contexto amplo do dono. Risco: operacional. Tom: founder mode, direto sem filtro.",
+            "numberLabel": "ROI"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "callout",
+        "title": "Insight central",
+        "content": "Mesma estrutura de 10 arquivos, treinos completamente diferentes. **Quem você quer que ele seja, define o que vai dentro dos arquivos.** A estrutura é universal · o conteúdo é seu.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 3 passos do treinamento real (como você vai fazer)"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Transcrever todas as aulas da mentoria",
+            "accent": "cyan",
+            "description": "Joga as gravações no Whisper / Fathom / qualquer transcritor. Saída: 1 arquivo .txt por aula."
+          },
+          {
+            "title": "Baixar as transcrições + materiais",
+            "accent": "violet",
+            "description": "Junta numa pasta local: transcrições, FAQ, scripts, áudios da metodologia, qualquer coisa que vire base de conhecimento."
+          },
+          {
+            "title": "Criar o arquivo de METODOLOGIA estruturada",
+            "accent": "lime",
+            "description": "É o passo que muda tudo. Escreve sua metodologia em etapas, vincula cada aula a uma etapa, e grava áudios explicando aplicação (como tomar decisões com base nela)."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que esse passo 3 é o jogo todo",
+        "content": "Aulas soltas **não treinam o agente direito**. Ele não sabe relacionar uma pergunta com a etapa certa do método. Sem o mapa metodologia → aulas, ele responde por similaridade superficial · e erra.\n\nO arquivo de metodologia é o **mapa** que faz o agente tomar decisões boas: \"se aluno está na etapa X, indica aula Y, aplica framework Z\".",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Construir os arquivos via Claude Code (no seu Mac, não na VPS)"
+      },
+      {
+        "type": "text",
+        "content": "Aqui que vira mágica. Você **não escreve os 10 arquivos à mão**. Abre o Claude Code no seu Mac (instalado no Encontro 1), aponta pra pasta dos materiais transcritos, e usa os 3 prompts mestres abaixo. Ele gera os arquivos pra você."
+      },
+      {
+        "type": "callout",
+        "title": "Fluxo · 4 etapas",
+        "content": "1. Crie uma pasta local no Mac: `~/agente-atendente/`\n2. Joga lá: as transcrições .txt, sua metodologia escrita, FAQ, materiais brutos\n3. Roda Claude Code dentro dessa pasta: `cd ~/agente-atendente && claude`\n4. Cola os 3 prompts em sequência (estrutura → metodologia → testes)",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "Prompt 1 · Criar a estrutura inicial dos 10 arquivos"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 1 · Claude Code · gerar a estrutura",
+        "target": "telegram",
+        "content": "Quero criar a estrutura completa de um agente de atendimento OpenClaw nesta pasta.\n\nDados do agente:\n- Nome visível: Atendente da Mentoria\n- Agent ID: atendente-mentoria\n- Objetivo: atender dúvidas dos alunos da minha mentoria 24/7\n- Público: meus alunos pagantes\n- Canal futuro: WhatsApp\n- Tom desejado: [DESCREVA EM 3 LINHAS COMO VOCÊ FALA]\n\nCria os 10 arquivos baseados nos templates do Alfred (use a estrutura, troca o conteúdo pelo meu contexto):\n- README.md, IDENTITY.md, SOUL.md, AGENTS.md, USER.md, PROTOCOLO.md, ESTRATEGIAS.md, TEAM.md, MEMORY.md, TOOLS.md\n\nVou colar nesta conversa, em seguida:\n1. Minha apresentação pessoal (quem eu sou, o que vendo, pra quem)\n2. Minha metodologia em texto\n3. Lista das aulas da mentoria\n4. FAQ atual dos alunos\n5. Exemplos reais de como eu respondo (3-5 prints/textos)\n\nUse isso como base de verdade. Não invente nada além do que eu mandar.\nQuando faltar informação, deixe [PREENCHER: ...] como marcador.\nReporta cada arquivo conforme criar."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "Prompt 2 · Vincular metodologia ↔ aulas (o mapa que faz o agente decidir)"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 2 · Claude Code · construir o mapa metodologia → aulas",
+        "target": "telegram",
+        "content": "Agora preciso que você construa o arquivo PROTOCOLO.md que liga minha metodologia a cada aula da mentoria.\n\nEstrutura esperada do PROTOCOLO.md:\n1. Visão geral da metodologia (1 parágrafo)\n2. Para cada ETAPA do método:\n   - Nome da etapa\n   - O que ela resolve\n   - Quando aplicar (sinais que indicam que aluno está nessa etapa)\n   - Aulas vinculadas (lista com link/título)\n   - Framework principal usado\n   - Erro mais comum dos alunos nessa etapa\n3. Tabela final: matriz \"Sintoma do aluno\" → \"Etapa\" → \"Aula a indicar\"\n\nVou colar abaixo:\n- Minha metodologia em prosa (ou áudios transcritos)\n- Lista das aulas com título + resumo\n\nSaída: PROTOCOLO.md pronto pra o agente consultar antes de responder. Sem invenção. Se faltar vínculo, marca [VÍNCULO FALTANTE: aula X parece encaixar na etapa Y, confirme]."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "Prompt 3 · Gerar as 20 perguntas de teste"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 3 · Claude Code · bateria de teste antes de produção",
+        "target": "telegram",
+        "content": "Antes de eu conectar esse agente no WhatsApp, preciso testar. Gere uma bateria de 20 perguntas baseadas nos arquivos que acabamos de criar (IDENTITY.md, SOUL.md, AGENTS.md, USER.md, PROTOCOLO.md).\n\nEstrutura:\n- 10 perguntas NORMAIS (dúvidas comuns que aluno faria)\n- 5 perguntas DIFÍCEIS (cruzam aulas, ambíguas, exigem aplicação de método)\n- 3 perguntas FORA DO ESCOPO (testar se vai responder NO_REPLY)\n- 2 perguntas QUE EXIGEM HUMANO (testar escalação)\n\nPara cada pergunta, anote:\n- Categoria (normal/difícil/fora/humano)\n- Resposta esperada (curta · o que o agente DEVE responder)\n- Critério de falha (o que seria considerado erro grave)\n\nSalva como TESTE.md na pasta."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Subir os arquivos do Mac pra VPS"
+      },
+      {
+        "type": "text",
+        "content": "Depois que Claude Code gerou os 10 arquivos na sua pasta local, sobe tudo pra VPS de uma vez. Vamos usar `rsync` · ele só sobe o que mudou e mostra progresso."
+      },
+      {
+        "type": "command-with-input",
+        "label": "Subir todos os arquivos do agente pra VPS · usa `rsync`",
+        "command": "rsync -avz --progress ~/agente-atendente/ root@{{ip}}:/root/.openclaw/workspace/atendente-mentoria/",
+        "inputLabel": "IP da sua VPS (mesmo do E2)",
+        "storageKey": "core-ai:vps-ip",
+        "placeholder": "1.2.3.4",
+        "extractPattern": "ip"
+      },
+      {
+        "type": "callout",
+        "title": "O que cada flag faz",
+        "content": "`-a` arquiva preservando permissões. `-v` verbose. `-z` compacta na transferência. `--progress` mostra barra. A barra `/` no final do caminho local é importante · diz pra subir o **conteúdo** da pasta, não a pasta inteira.",
+        "variant": "info"
+      },
+      {
+        "type": "command-with-input",
+        "label": "Confirma que os arquivos chegaram na VPS",
+        "command": "ssh root@{{ip}} \"ls -la /root/.openclaw/workspace/atendente-mentoria/\"",
+        "inputLabel": "IP da sua VPS",
+        "storageKey": "core-ai:vps-ip",
+        "placeholder": "1.2.3.4",
+        "extractPattern": "ip"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parte 3 · Testar antes de produção (não pule)"
+      },
+      {
+        "type": "text",
+        "content": "Aqui que muito mentor estraga o lançamento do agente. Liga direto no WhatsApp sem testar, agente alucina pro primeiro aluno, queima confiança. **Faça as 20 perguntas antes.**"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Como testar sem expor pro WhatsApp"
+      },
+      {
+        "type": "text",
+        "content": "Vamos testar via terminal direto, sem canal nenhum. O OpenClaw tem comando pra simular conversa com o agente."
+      },
+      {
+        "type": "command-line",
+        "label": "Conversar com o agente direto no terminal · sem canal",
+        "command": "openclaw agents chat atendente-mentoria"
+      },
+      {
+        "type": "callout",
+        "title": "O que vai acontecer",
+        "content": "Abre um REPL · você digita pergunta, agente responde. Cola as 20 perguntas do `TESTE.md` uma por uma. Anota o que falhou.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Critério de aprovação · checklist"
+      },
+      {
+        "id": "encontro-03-01-teste",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Acertou as 10 normais sem inventar",
+            "description": "Nenhuma resposta menciona aula/preço/prazo que não está em USER.md ou PROTOCOLO.md."
+          },
+          {
+            "title": "Escalou as 2 humanas corretamente",
+            "description": "Resposta: \"vou passar pro [seu nome] te responder pessoalmente\" (ou seu equivalente)."
+          },
+          {
+            "title": "Silenciou as 3 fora de escopo",
+            "description": "Não respondeu sobre time, receita, política, etc. Usou frase de bloqueio padrão."
+          },
+          {
+            "title": "Tom bateu com o SOUL.md",
+            "description": "Sem floreio, sem \"prezado\", sem motivacional vazio. Falou do seu jeito."
+          },
+          {
+            "title": "As 5 difíceis · pelo menos 3 boas",
+            "description": "As difíceis são pra calibrar. Se errou 3+, volta nos arquivos antes de produção."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Se falhou em mais de 3 perguntas no total",
+        "content": "Não vai pra produção. Volta pro Claude Code, refina o arquivo que falhou (geralmente AGENTS.md ou USER.md), sobe de novo via rsync, testa de novo.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parte 4 · Ligar no WhatsApp em modo seguro"
+      },
+      {
+        "type": "text",
+        "content": "Passou nos testes? Agora liga. Mas em **modo seguro primeiro** · só você manda mensagem. Confirma que tá tudo certo no canal real. Depois libera pra produção."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 1 · Adicionar seu número no allowlist"
+      },
+      {
+        "type": "callout",
+        "title": "Como pegar seu número no formato certo",
+        "content": "WhatsApp identifica por número internacional sem `+` e sem espaço. Ex: `5511999999999` (55 = Brasil, 11 = DDD, depois o número).",
+        "variant": "info"
+      },
+      {
+        "code": "openclaw config patch --stdin <<'JSON'\n{\n  \"channels\": {\n    \"whatsapp\": {\n      \"accounts\": {\n        \"atendente-mentoria\": {\n          \"enabled\": true,\n          \"dmPolicy\": \"allowlist\",\n          \"allowFrom\": [\n            \"SEU_NUMERO_AQUI\"\n          ],\n          \"groupPolicy\": \"disabled\"\n        }\n      }\n    }\n  }\n}\nJSON",
+        "type": "code",
+        "language": "bash"
+      },
+      {
+        "type": "callout",
+        "title": "Parte 4 · Passo 1 · Só você no allowlist",
+        "content": "O que cada parte faz:\n- `allowFrom: [\"SEU_NUMERO_AQUI\"]` · troca pelo seu número internacional sem `+` (ex: `5511999999999`)\n- `groupPolicy: \"disabled\"` · grupo ainda bloqueado · você testa só por DM\n- Quando passar nos testes, troca pra Opção A ou Opção B abaixo",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 2 · Bindar o agente ao canal WhatsApp"
+      },
+      {
+        "type": "command-line",
+        "label": "🔗 Conectar agente ↔ canal · este é o último passo técnico",
+        "command": "openclaw agents bind --agent atendente-mentoria --bind whatsapp:atendente-mentoria"
+      },
+      {
+        "type": "command-line",
+        "label": "Validar binding ativo",
+        "command": "openclaw agents list --bindings"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 3 · Teste no WhatsApp real (só com seu número)"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Você manda pro número do agente",
+          "content": "Oi! Quem é você?"
+        },
+        "output": {
+          "label": "Agente responde (em até 5s)",
+          "content": "[Resposta do IDENTITY.md · ex: \"Sou o assistente do [seu nome]. To aqui pra te ajudar com dúvidas das aulas. Se precisar falar direto com ele, me avisa que eu passo.\"]"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 4 · Escolher modo de produção · os 2 caminhos"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "Opção A · DM aberta + grupo bloqueado"
+      },
+      {
+        "type": "text",
+        "content": "Qualquer pessoa que tem o número pode mandar DM. Grupo bloqueado. Recomendado pra começar."
+      },
+      {
+        "code": "openclaw config patch --stdin <<'JSON'\n{\n  \"channels\": {\n    \"whatsapp\": {\n      \"accounts\": {\n        \"atendente-mentoria\": {\n          \"enabled\": true,\n          \"dmPolicy\": \"open\",\n          \"allowFrom\": [\n            \"*\"\n          ],\n          \"groupPolicy\": \"disabled\"\n        }\n      }\n    }\n  }\n}\nJSON",
+        "type": "code",
+        "language": "bash"
+      },
+      {
+        "type": "callout",
+        "title": "Opção A · DM aberta · qualquer um manda",
+        "content": "O que cada parte faz:\n- `dmPolicy: \"open\"` · qualquer número que tem o WhatsApp do agente pode mandar DM\n- `allowFrom: [\"*\"]` · curinga · libera todos\n- `groupPolicy: \"disabled\"` · grupos continuam bloqueados\n- **Use quando:** atendimento via DM individual, sem grupo da mentoria envolvido",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "Opção B · Grupo com menção obrigatória"
+      },
+      {
+        "type": "text",
+        "content": "Liga o agente no grupo da mentoria, mas só responde quando arrobado. Conversas paralelas ficam intocadas."
+      },
+      {
+        "code": "openclaw config patch --stdin <<'JSON'\n{\n  \"channels\": {\n    \"whatsapp\": {\n      \"accounts\": {\n        \"atendente-mentoria\": {\n          \"enabled\": true,\n          \"dmPolicy\": \"allowlist\",\n          \"allowFrom\": [],\n          \"groupPolicy\": \"open\",\n          \"groups\": {\n            \"*\": {\n              \"requireMention\": true\n            }\n          }\n        }\n      }\n    }\n  }\n}\nJSON",
+        "type": "code",
+        "language": "bash"
+      },
+      {
+        "type": "callout",
+        "title": "Opção B · Grupo com menção · DM bloqueada",
+        "content": "O que cada parte faz:\n- `dmPolicy: \"allowlist\"` + `allowFrom: []` · DM fechada · agente só atua em grupo\n- `groupPolicy: \"open\"` · grupos ativos\n- `groups: {\"*\": {\"requireMention\": true}}` · em QUALQUER grupo, só responde quando arrobado (`@AgenteNome`)\n- **Use quando:** você quer o agente no grupo da mentoria respondendo só quando os alunos mencionarem ele",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "🚨 Botão de pânico · como desligar se der ruim"
+      },
+      {
+        "type": "callout",
+        "title": "Decora isso · pode salvar sua mentoria",
+        "content": "Se o agente começar a responder errado em produção, use ISSO IMEDIATAMENTE:",
+        "variant": "warning"
+      },
+      {
+        "type": "command-line",
+        "label": "PARAR · desbindar o agente do WhatsApp",
+        "command": "openclaw agents unbind --agent atendente-mentoria --bind whatsapp:atendente-mentoria"
+      },
+      {
+        "type": "callout",
+        "title": "O que esse comando faz",
+        "content": "Desconecta o agente do canal **instantaneamente**. WhatsApp continua linkado, mas ninguém recebe mais resposta. Você troca o que precisa nos .md, sobe via rsync, faz o teste, e binda de novo.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint final · o que você precisa ter ao final desta aula"
+      },
+      {
+        "id": "encontro-03-01-checkpoint",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Agente criado no OpenClaw",
+            "description": "openclaw agents list mostra `atendente-mentoria` rodando."
+          },
+          {
+            "title": "Workspace populado com 10 arquivos .md",
+            "description": "IDENTITY, SOUL, AGENTS, USER, PROTOCOLO, ESTRATEGIAS, TEAM, MEMORY, TOOLS, README."
+          },
+          {
+            "title": "WhatsApp da conta atendente-mentoria linkado",
+            "description": "channels status --deep retorna linked/running/connected."
+          },
+          {
+            "title": "Modo seguro aplicado · allowlist com seu número",
+            "description": "Só você consegue mandar mensagem agora."
+          },
+          {
+            "title": "Os 20 testes rodados via openclaw agents chat",
+            "description": "Aprovação mínima: 10 normais OK, 2 humanas escaladas, 3 fora silenciadas."
+          },
+          {
+            "title": "Botão de pânico decorado",
+            "description": "Sabe rodar `openclaw agents unbind` de memória."
+          },
+          {
+            "title": "Opcional · bot Telegram dedicado pro atendente",
+            "description": "Ver aula bônus encontro-03-02 (segundo bot Telegram)."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Tarefa entre encontros (até terça que vem)"
+      },
+      {
+        "type": "callout",
+        "title": "Sua entrega até dia 19/Mai",
+        "content": "1. Subir o agente em modo allowlist (só você)\n2. Conversar com ele por 3 dias direto · usar como teste real\n3. Anotar 5 falhas (resposta errada, alucinação, tom errado)\n4. Refinar os .md, subir via rsync, testar de novo\n5. Mandar print no grupo da mentoria com 1 conversa real · provar que tá funcionando",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Bridge pra E4 · CORE AIOS (terça 19/Mai)"
+      },
+      {
+        "type": "callout",
+        "title": "O que vem semana que vem",
+        "content": "Hoje você construiu **UM agente.** Mas um agente sozinho não é um sistema · é uma ilha. Semana que vem entramos no **CORE AIOS · as 5 camadas do sistema operacional de IA**. Você vai entender como múltiplos agentes (Atendente + ROI + futuros) trabalham juntos, dividem memória, se delegam tarefas. É quando o jogo vira sistema.",
+        "variant": "info"
+      }
+    ],
+    "number": 1,
+    "status": "live",
+    "duration": "~3h",
+    "schedule": [
+      {
+        "label": "Abertura · por que e quanto isso economiza",
+        "duration": "15min"
+      },
+      {
+        "label": "Parte 1 · criar o agente no OpenClaw (sem WhatsApp ainda)",
+        "duration": "40min"
+      },
+      {
+        "label": "Parte 2 · treinar o agente via Claude Code",
+        "duration": "1h30min"
+      },
+      {
+        "label": "Parte 3 · testar antes de produção (20 perguntas)",
+        "duration": "30min"
+      },
+      {
+        "label": "Parte 4 · ligar no WhatsApp em modo seguro",
+        "duration": "20min"
+      },
+      {
+        "label": "Fechamento · tarefa entre encontros + bridge E4",
+        "duration": "5min"
+      }
+    ],
+    "subtitle": "Da estrutura no OpenClaw ao treinamento via Claude Code · prontíssimo pra WhatsApp",
+    "shortTitle": "Atendente 24x7",
+    "learningGoals": [
+      "Criar um agente novo dentro do OpenClaw com workspace dedicado",
+      "Montar os 10 arquivos do cérebro operacional do agente (IDENTITY, SOUL, AGENTS, USER, etc.)",
+      "Treinar o agente via Claude Code rodando no seu Mac (sem editar nada à mão)",
+      "Testar com as 20 perguntas obrigatórias antes de qualquer conexão real",
+      "Ligar no WhatsApp em modo seguro com botão de pânico configurado"
+    ]
+  }
+}

@@ -1,0 +1,668 @@
+{
+  "id": "546e289a-9e8e-423d-8f34-2e49ef22157c",
+  "titulo": "Pré-Mentoria 01: Instalando o Claude Code e Entendendo Como Tudo Funciona",
+  "lesson_payload": {
+    "id": "bonus-01",
+    "qa": [
+      {
+        "answer": "Compartilha a tela. Não baixa pelo WhatsApp Web · vai pelo e-mail mesmo. Cria a pasta `cloud` dentro do seu user (Bárbara Bernardini), salva o zip lá dentro, dois cliques pra descompactar. Se não souber descompactar, pergunta pro Cloud: 'como descompacto um zip no Mac?' Ele te explica.",
+        "askedBy": "Bárbara Sakarella",
+        "question": "Não consegui baixar e descompactar a pasta da skill, tô perdida.",
+        "seekSeconds": 3724
+      },
+      {
+        "answer": "Saia do terminal com `exit`, reabra. Se persistir, copia o `export PATH=...` que apareceu no final do install (a linha grande com várias pastas) e cola. Aperta Enter. Tenta `claude` de novo. Se ainda não der, roda `npm install -g @anthropic-ai/claude-code` (precisa ter Node instalado).",
+        "askedBy": "Bárbara Sakarella",
+        "question": "Quando digitei `claude` no terminal, deu erro \"comando não existe\".",
+        "seekSeconds": 4631
+      },
+      {
+        "answer": "Vai no Settings do Claude Code (digita `/config` dentro do terminal, ou no app desktop tem um menu de tema). Tem opções Dark, Light, Solarized. Eu uso Dark. Você escolhe.",
+        "askedBy": "Bárbara Sakarella",
+        "question": "Como eu deixo a tela preta? Branca tá me agoniando.",
+        "seekSeconds": 6702
+      },
+      {
+        "answer": "Quase tudo é gratuito: Git, Node, npm, GitHub CLI, CodeRabbit, Docker. O único que cobra é o Supabase quando você quiser ter múltiplos bancos · começa free e fica em ~US$10/mês. Pra começar, o tier gratuito do Supabase atende perfeitamente.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Algum dos itens da Stack Setup precisa de assinatura paga?",
+        "seekSeconds": 7529
+      },
+      {
+        "answer": "Aprendi num grupo avançado onde o lema é \"te viram nos 30\" · sem passo-a-passo, é cada um com a sua. Apanhei muito sozinho. Por isso esta mentoria é diferente: é guiada, com instalação ao vivo, com Stack Setup pronta. Vou mostrar o caminho que eu queria ter quando comecei. Tem um framework pago que uso mas não tenho autorização para ensinar · vou fazer uma live aberta, gratuita, depois pra quem quiser aprofundar.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Como você aprendeu tudo isso, Torriani? Tem algum mestre?",
+        "seekSeconds": 9274
+      },
+      {
+        "answer": "Sim · vou mostrar agora. (Abre Desktop 2.) 30+ terminais em paralelo. Cada um rodando uma tarefa diferente: Dominos, SmartZap, agentes pessoais. Você abre um, ele trabalha, você vai pra outra tela. Volta depois, revê. Não trava nada.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Você consegue abrir muitas telas com o Cloud Code rodando ao mesmo tempo?",
+        "seekSeconds": 9665
+      },
+      {
+        "answer": "Pra criar a página em si, sim · a skill faz tudo. Subir no domínio é outro jogo: depende do stack atual da sua agência (onde estão hospedadas as outras páginas?). Eu uso subdomínios: playbook.torriani.com.br, criativos.torriani.com.br, lp.torriani.com.br. Cada um vira uma aplicação separada. Vamos ver deploy nos próximos encontros.",
+        "askedBy": "Rodrigo Severo",
+        "question": "A skill ux-ui-design já é suficiente pra criar uma página? E como subo no domínio depois?",
+        "seekSeconds": 10022
+      },
+      {
+        "answer": "Exatamente, e com vantagens. O ponto da Manus é o crédito que acaba rápido. Aqui você não tem essa limitação · paga US$100-200/mês fixo e roda. Manus, Lovable, N8n: tudo isso você consegue substituir com Cloud Code.",
+        "askedBy": "Bárbara Sakarella",
+        "question": "Tudo que eu fazia no Manus dá pra fazer aqui no Cloud Code?",
+        "seekSeconds": 10568
+      }
+    ],
+    "tag": "Pré-Mentoria 01",
+    "title": "Pré-Mentoria 01: Instalando o Claude Code e Entendendo Como Tudo Funciona",
+    "video": {
+      "title": "01 Pré-Mentoria 01 · Instalando o Claude",
+      "embedSrc": "https://player.scaleup.com.br/embed/49eb36348f0be9546c0227215a24b2b8ea7f9e0d",
+      "provider": "scaleup",
+      "sourceUrl": "",
+      "recordedAt": "2026-04-14",
+      "durationSeconds": 10740
+    },
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta é a aula em formato de leitura",
+        "content": "Esta foi a **primeira Pré-Mentoria do dia 14/Abr**, com Bárbara Sakarella e Rodrigo Severo. 3 horas de instalação ao vivo, troubleshooting real, e o tour completo pelas aplicações que o Juliano construiu com Claude Code.\n\nVocê pode **assistir o vídeo completo** no player acima ou **ler tudo aqui embaixo** · toda a aula está sintetizada com diagramas, citações e demos clicáveis. Quando aparecer **▶ ASSISTIR**, é porque tem uma demonstração ao vivo que vale ver no vídeo.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Chatbot vs Claude Code · a diferença fundamental"
+      },
+      {
+        "type": "text",
+        "content": "Antes de instalar qualquer coisa, você precisa entender uma coisa: **Claude Code não é mais um chatbot.**\n\nChatbot é o que você já usa: ChatGPT, Cloud (Anthropic), Gemini, Manus. Você entra, fala com uma tela, ele responde · fim. Toda vez que você abre, tem que explicar tudo de novo. Tem pouca memória. Sabe pouca coisa sobre você. **Você precisa ensinar tudo, do zero, em cada sessão.**\n\nO Cloud Code é diferente. Ele rodando no seu computador, lê seus arquivos, conecta no banco de dados, abre o navegador, faz cadastros sozinho, constrói sistemas inteiros. Não é só conversa · é **execução**."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Lê arquivos do seu computador",
+            "Conecta com banco de dados, APIs externas",
+            "Abre navegador, faz cadastros sozinho",
+            "Constrói sistemas inteiros (CRM, dashboards, automação)",
+            "Substitui N8n, Lovable, Manus em muitos casos",
+            "Você abstrai e escala"
+          ],
+          "title": "Cloud Code",
+          "result": "De \"converso com IA\" para \"IA executa por mim\"",
+          "variant": "after",
+          "subtitle": "O que vamos instalar agora"
+        },
+        "before": {
+          "items": [
+            "Toda vez que abre, ensina tudo de novo",
+            "Sem memória entre sessões",
+            "Não acessa seus arquivos locais",
+            "Não conecta com seus sistemas",
+            "Limitado ao que ele decide fazer",
+            "Você fica numa caixinha fechada"
+          ],
+          "title": "Chatbot (ChatGPT, Cloud, Gemini)",
+          "variant": "before",
+          "subtitle": "O que você usa hoje"
+        }
+      },
+      {
+        "text": "Se você não souber como estruturar isso, é só mais uma IA que você vai usar que nem chatbot.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Tour pelas aplicações reais do Juliano"
+      },
+      {
+        "type": "text",
+        "content": "Antes de mostrar como instalar, o Juliano abriu **as aplicações reais** que construiu com Claude Code nos últimos 29 dias. Isso é importante: você precisa ver o que **é possível** antes de aceitar gastar 1 hora instalando."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "App 1",
+            "title": "Sistema de Mentorados (CRM próprio)",
+            "description": "Gestão completa: time de CS acompanhando, atividades, reuniões, atendimentos, gestão de entregas. Construído inteiro no Claude Code, partindo de uma versão inicial bagunçada do Lovable."
+          },
+          {
+            "badge": "App 2",
+            "title": "Marketing · Leads em tempo real",
+            "description": "Lead scoring automático: imperador, quente, frio, gelado. Pessoa com R$40k/mês de faturamento ganha multiplicador 3x. Análise de campanhas com UTMs, dashboards de funil. Tudo construído sem programador externo."
+          },
+          {
+            "badge": "App 3",
+            "title": "Portal de campanhas + página de vendas",
+            "description": "Cada campanha tem sua page, copy gerada por agente, visualização e revisão antes de publicar. Para a Core AI Mentoria, ele construiu a sales page completa só conversando com o sistema."
+          },
+          {
+            "badge": "App 4",
+            "title": "Gerador de carrossel e criativos",
+            "description": "Skills configuradas para gerar carrosséis prontos seguindo padrão visual. Transcrição automática de vídeos em inglês com plano de ação. Tudo num portal pessoal acessível em localhost."
+          },
+          {
+            "badge": "App 5",
+            "title": "Squad de copywriters lendários",
+            "description": "Course Builder, Material Builder, Visual Writer · agentes que criam aulas completas. Squad de copy com Gary Halbert, John Benson como especialistas: você diz \"preciso de uma VSL\" e o Copy Chief chama o John Benson sozinho com briefing pronto."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Tour pelo CRM e sistema de mentorados (ao vivo)",
+        "description": "Juliano navegando ao vivo: gestão de mentorados, leads classificados como Imperador, dashboard de CRM com atendimento WhatsApp.",
+        "seekSeconds": 314
+      },
+      {
+        "type": "video-cue",
+        "label": "Squad de copywriters Gary Halbert + John Benson",
+        "description": "Demo do Copy Chief: usuário pede VSL, Copy Chief identifica John Benson como especialista certo, pede briefing antes de acionar. Tudo automático.",
+        "seekSeconds": 750
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "As métricas que provam o ponto"
+      },
+      {
+        "type": "text",
+        "content": "29 dias usando Cloud Code intensamente. Os números que ele mostrou ao vivo:"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "11k",
+            "title": "Sessões",
+            "description": "Conversas iniciadas com o Cloud Code em 29 dias."
+          },
+          {
+            "badge": "25M",
+            "title": "Tokens consumidos",
+            "description": "Equivale a milhares de páginas de texto processadas."
+          },
+          {
+            "badge": "US$ 77k",
+            "title": "Valor de API gerado",
+            "description": "Se ele estivesse pagando API direto, seria US$ 77 mil. Pagou ~US$ 200 do plano Max."
+          },
+          {
+            "badge": "10 pessoas × 6 meses",
+            "title": "Equivalente em time humano",
+            "description": "É o que uma startup com 10 pessoas trabalhando 6 meses entregaria."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que NUNCA usar API direta",
+        "content": "Tem aluno que vai querer ligar a API direto pensando que é mais barato. **NÃO.** Os 25 milhões de tokens dele custariam US$ 77.000 na API. No plano Max custou US$ 200.\n\n**Regra:** sempre o plano Max (assinatura). API só pra casos muito específicos onde precisa de scale extremo e você sabe exatamente o que está fazendo.",
+        "variant": "warning"
+      },
+      {
+        "text": "Não usem API nunca, porque bota muito dinheiro fora. Muito assim, é muito mesmo, muito, muito.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Planos e modelos · o que escolher"
+      },
+      {
+        "type": "text",
+        "content": "Anthropic vende três planos. Diferença real de uso:"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Max US$100: 5x mais que Pro · para começar",
+            "Max US$200: 20x mais · para profissional intenso",
+            "Reset diário e semanal generosos",
+            "Aguenta semanas de uso pesado"
+          ],
+          "title": "Max US$100 ou US$200/mês",
+          "result": "Comece no Max US$100. Quando estourar, sobe pra US$200.",
+          "variant": "after",
+          "subtitle": "O necessário"
+        },
+        "before": {
+          "items": [
+            "Quando você se mexe, já acabou",
+            "Insuficiente pra qualquer uso real",
+            "Bom só pra testar 1 hora e desistir",
+            "Reset diário/semanal apertado"
+          ],
+          "title": "Pro (US$ 20/mês)",
+          "variant": "before",
+          "subtitle": "NÃO compre"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 3 modelos: Opus, Sonnet, Haiku"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Modelo",
+          "content": "Opus · sênior caro"
+        },
+        "output": {
+          "label": "Quando usar",
+          "content": "Tarefas complexas: escrever copy, decisões arquiteturais, análise difícil. Padrão do Cloud Code 4.7."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Modelo",
+          "content": "Sonnet · pleno equilibrado"
+        },
+        "output": {
+          "label": "Quando usar",
+          "content": "Tarefas médias: rotinas, análises diretas. O Sonnet 4.6 tem janela de 1 milhão de tokens · útil para projetos grandes."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Modelo",
+          "content": "Haiku · estagiário rápido"
+        },
+        "output": {
+          "label": "Quando usar",
+          "content": "SDR, traduções, tarefas simples. Rápido e barato · não tente fazer copy nele."
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Como saber qual usar",
+        "content": "Pergunta para o próprio Cloud: \"qual modelo é melhor para essa tarefa?\" Ele te responde. `/model` mostra os disponíveis. Truque do Juliano: tem 2 contas Max simultâneas porque usa muito · o reset de uma cobre o outro.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A pasta de trabalho e a skill Stack Setup"
+      },
+      {
+        "type": "text",
+        "content": "Antes de instalar o Cloud Code, você precisa decidir **onde** ele vai morar. Crie uma pasta-mãe no seu user · é a pasta onde TODOS os projetos viverão a partir de agora."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "01",
+            "title": "Abra Finder (Mac) ou Explorer (Windows)",
+            "description": "Vá até a pasta do seu usuário (Macintosh HD → Users → seu_nome no Mac · C:\\Users\\seu_nome no Windows)."
+          },
+          {
+            "badge": "02",
+            "title": "Crie uma pasta nova chamada `cloud`",
+            "description": "Tudo minúsculo. Pode ser `code` se preferir · só seja consistente. Esta é a pasta-mãe."
+          },
+          {
+            "badge": "03",
+            "title": "Baixe a skill Stack Setup",
+            "description": "Logo abaixo desta seção tem o card de download. Salve o zip dentro da pasta `cloud` que você acabou de criar."
+          },
+          {
+            "badge": "04",
+            "title": "Descompacte o zip",
+            "description": "2 cliques no arquivo .zip → vira uma pasta `stack-setup`. No final, mova a pasta `stack-setup` para `~/.claude/skills/`."
+          }
+        ]
+      },
+      {
+        "name": "Stack Setup",
+        "type": "skill-download",
+        "sizeKb": 17,
+        "version": "1.0.0",
+        "commands": [
+          "cd ~/Downloads && unzip stack-setup-v1.0.0.zip -d ~/.claude/skills/",
+          "claude",
+          "/stack-setup"
+        ],
+        "description": "A skill que rodou ao vivo no encontro. Configura ambiente completo (CLIs, GitHub, Supabase, CLAUDE.md, settings.json) em modo guiado, rápido ou planejamento. Detecta SO automaticamente. Foi com ela que a Bárbara e o Rodrigo conseguiram configurar tudo após travar com o setup manual.",
+        "downloadUrl": "/downloads/skills/stack-setup-v1.0.0.zip",
+        "installPath": "~/.claude/skills/"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Instalação ao vivo (Mac e Windows)"
+      },
+      {
+        "type": "text",
+        "content": "Esse trecho da aula virou o **pronto-socorro real**. Bárbara e Rodrigo compartilharam a tela, instalaram do zero, e cada erro foi resolvido **perguntando pro próprio Claude na hora**. Esse é o método: tudo o que você não sabe, pergunta pro Claude · ele te guia até funcionar."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "curl -fsSL https://claude.ai/install.sh | sh",
+            "type": "command"
+          },
+          {
+            "text": "✓ Baixando Claude Code...",
+            "type": "output"
+          },
+          {
+            "text": "✓ Claude Code instalado com sucesso!",
+            "type": "output"
+          },
+          {
+            "text": "claude --version",
+            "type": "command"
+          },
+          {
+            "text": "1.0.12",
+            "type": "output"
+          },
+          {
+            "text": "Se claude --version não responder, próximo passo.",
+            "type": "comment"
+          }
+        ],
+        "title": "Mac (recomendada)"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "irm https://claude.ai/install.ps1 | iex",
+            "type": "command"
+          },
+          {
+            "text": "✓ Claude Code instalado com sucesso!",
+            "type": "output"
+          },
+          {
+            "text": "claude --version",
+            "type": "command"
+          },
+          {
+            "text": "1.0.12",
+            "type": "output"
+          },
+          {
+            "text": "Se 'token && is not a valid statement separator' → você está no CMD. Feche e abra PowerShell.",
+            "type": "comment"
+          }
+        ],
+        "title": "Windows (PowerShell · NÃO o CMD)"
+      },
+      {
+        "type": "callout",
+        "title": "Erro \"command not found\" · caso da Bárbara",
+        "content": "Ao digitar `claude`, deu erro \"comando não existe\". O Cloud sugeriu, no final do install, um `export PATH=...`. **Solução:** copia esse `export PATH=...` que apareceu no terminal, cola e dá Enter. Sai do terminal (`exit`), abre de novo, digita `claude`. Funcionou.\n\nAlternativa: rodar de novo o comando de instalação. Em último caso: `npm install -g @anthropic-ai/claude-code` (precisa do Node já instalado).",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Bárbara instalando ao vivo (Mac)",
+        "description": "30+ minutos de install real · comando curl, login no browser, troubleshooting de PATH. Cada erro resolvido conversando com o Claude.",
+        "seekSeconds": 4485
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Configurando o bypass de permissões"
+      },
+      {
+        "type": "text",
+        "content": "Por padrão, o Cloud Code pede permissão a cada ação (ler arquivo, escrever arquivo, rodar comando). Para fluxo profissional, ative o bypass: as ações acontecem direto, sem perguntar."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Toda vez que abrir, use:",
+            "type": "comment"
+          },
+          {
+            "text": "claude --dangerously-skip-permissions",
+            "type": "command"
+          },
+          {
+            "text": "# Atalho: criar alias no .zshrc / .bashrc:",
+            "type": "comment"
+          },
+          {
+            "text": "alias claude='claude --dangerously-skip-permissions'",
+            "type": "command"
+          },
+          {
+            "text": "# Cuidado: revisa as ações antes de aceitar · ele AINDA pode errar.",
+            "type": "comment"
+          }
+        ],
+        "title": "Bypass de permissões"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Stack Setup rodando ao vivo"
+      },
+      {
+        "type": "text",
+        "content": "Cloud Code instalado, login feito. Agora roda a skill que faz o resto:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/stack-setup",
+            "type": "command"
+          },
+          {
+            "text": "Como você quer configurar seu ambiente?",
+            "type": "output"
+          },
+          {
+            "text": "[1] Guiado (recomendado iniciantes)",
+            "type": "output"
+          },
+          {
+            "text": "[2] Rápido (defaults inteligentes) ← USAR ESTE",
+            "type": "output"
+          },
+          {
+            "text": "[3] Planejamento Completo",
+            "type": "output"
+          },
+          {
+            "text": "2",
+            "type": "command"
+          }
+        ],
+        "title": "Executar Stack Setup"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Fase 1",
+            "title": "Detecta SO + package managers",
+            "description": "Mac/Windows/Linux, x64/ARM, brew/apt/winget/choco."
+          },
+          {
+            "badge": "Fase 2",
+            "title": "Auditoria de CLIs",
+            "description": "Tabela visual: ✅ instalado · ❌ falta · ⚠️ desatualizado. Categorias: essencial (git, gh, node), infra (supabase, railway, docker), qualidade (coderabbit), opcional."
+          },
+          {
+            "badge": "Fase 3",
+            "title": "Instalação interativa",
+            "description": "Modo Rápido instala tudo de essencial + recomendado automaticamente."
+          },
+          {
+            "badge": "Fase 4",
+            "title": "Autenticação",
+            "description": "GitHub via browser code, Supabase via token, Railway se quiser."
+          },
+          {
+            "badge": "Fase 5",
+            "title": "CLAUDE.md + settings.json globais",
+            "description": "Cria os dois arquivos com defaults Torriani. Pergunta perfil: 🟢 Assistido (iniciante) ou 🔵 Avançado."
+          },
+          {
+            "badge": "Fase 6",
+            "title": "Tipo de projeto",
+            "description": "Novo (cria estrutura) ou existente (preserva). Cria .gitignore e README.md."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "O caso da Bárbara · falta de espaço em disco",
+        "content": "No meio da Stack Setup, o instalador do Xcode Command Line Tools precisava de **20 GB livres**. A Bárbara tinha **18 GB**. Travou. **Solução:** liberar espaço (limpar Downloads, esvaziar lixeira) e re-rodar `/stack-setup`. A skill é idempotente · pode rodar de novo sem problemas, ela detecta o que já está instalado e continua de onde parou.",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Stack Setup completo + GitHub auth no browser",
+        "description": "47 min de demo: Bárbara e Rodrigo executando ao vivo. Instalação de Homebrew, Xcode CLT, Node, Git, GitHub CLI, Supabase, Docker, CodeRabbit. Captcha estranho do GitHub no meio · Juliano resolve.",
+        "seekSeconds": 7207
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pergunte tudo pro Claude · esse é o segredo"
+      },
+      {
+        "type": "text",
+        "content": "Foi a regra do dia. Toda vez que apareceu erro, dúvida, configuração estranha · Bárbara ou Rodrigo copiaram o erro, colaram no chat do Claude e perguntaram **\"o que faço?\"**. O Claude respondeu, eles aplicaram, próximo erro, próxima pergunta. Sem manual. Sem documentação. Só conversa."
+      },
+      {
+        "text": "Tudo que você não sabe fazer, o que você tem que fazer? Pergunta para o CloudCode. Usa isso como padrão. Literalmente teu assistente.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "Importante: não acredite cegamente",
+        "content": "O Cloud às vezes te diz coisas com **convicção total** e está errado. Vira e mexe ele afirma com certeza algo que não é verdade. **Sempre revise antes de aceitar mudanças críticas.** Especialmente em código que toca dados ou autenticação.",
+        "variant": "warning"
+      },
+      {
+        "text": "Não acredite 100% no cloud, porque vira e mexe ele te diz coisas com uma convicção, como se ele tivesse a certeza do mundo, e na real não é nada disso.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Visão de futuro · 30 terminais em paralelo"
+      },
+      {
+        "type": "text",
+        "content": "Pra fechar a aula, o Juliano mostrou o **Desktop 2** dele: 30+ terminais abertos, cada um rodando uma tarefa diferente. Sistemas Dominos, SmartZap, agentes pessoais · todos trabalhando enquanto ele troca pra outro desktop. **\"Você abre um agente, ele trabalha, você vai pra outra tela. O agente termina, você volta, revê, e segue.\"**"
+      },
+      {
+        "type": "video-cue",
+        "label": "Desktop 2 com 30+ terminais (multi-tela)",
+        "description": "Juliano mostrando a vida real com Cloud Code: vários sistemas trabalhando em paralelo. Não é exagero · é o fluxo dele todo dia.",
+        "seekSeconds": 9665
+      },
+      {
+        "type": "video-cue",
+        "label": "Demo do Playbook próprio (porta 3027)",
+        "description": "Sistema dele de gestão de cursos · exatamente este playbook que você está vendo. Construído inteiro com Cloud Code.",
+        "seekSeconds": 10380
+      },
+      {
+        "type": "callout",
+        "title": "Skill bônus: ux-ui-design",
+        "content": "No final da aula, o Rodrigo perguntou se a skill `ux-ui-design` já permite criar uma landing page. **Sim** · pra criar a página em si. Subir no domínio próprio é \"outro jogo\" e depende do seu stack atual. O Juliano usa subdomínios: `playbook.torriani.com.br`, `criativos.torriani.com.br`, etc. Vamos ver isso nos próximos encontros.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Tema de casa antes da próxima aula"
+      },
+      {
+        "type": "callout",
+        "title": "Sem isso, você fica pra trás",
+        "content": "**4 coisas pra fazer essa semana:**\n\n1. **Assinar plano Max** (US$100 mínimo, US$200 ideal pra uso intenso). NÃO compra Pro · vai estourar na primeira semana.\n\n2. **Criar pasta `cloud` ou `code`** dentro do seu user (Macintosh HD → Users → seu_nome no Mac · C:\\Users\\seu_nome no Windows).\n\n3. **Rodar a skill Stack Setup** no modo 2 (Rápido) · está disponível pra download nesta página.\n\n4. **Brincar com o Claude Code** essa semana **como se fosse ChatGPT**. Pergunta tudo. Pede pra resolver tudo. Familiarize-se com a tela preta. \"Tudo que você não sabe, pergunta pro Claude.\"",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Para levar com você",
+        "content": "Hoje é o **Dia 0**. O dia 0 é sempre o mais difícil · instalação, conceitos novos, terminal. **Não tem mistério.** Quem instalou hoje (Bárbara, Rodrigo) saiu com o sistema rodando. Você vai sair também.\n\n- ✓ Cloud Code instalado e logado\n- ✓ Stack Setup rodada (GitHub, Supabase, CLAUDE.md, settings.json configurados)\n- ✓ Diferença entre chatbot e Cloud Code clara na cabeça\n- ✓ Plano Max ativo (não Pro)\n- ✓ Pasta de trabalho criada\n\nNa próxima aula a gente entra em CLAUDE.md, settings.json, e começa a construir os primeiros agentes. **\"Sem Cloud Code não trabalha mais comigo.\"**",
+        "variant": "success"
+      },
+      {
+        "text": "Lembrem que hoje é o dia 0. O dia 0 é sempre o dia mais difícil.",
+        "type": "quote"
+      }
+    ],
+    "status": "available",
+    "duration": 179,
+    "schedule": [
+      {
+        "title": "Chatbot vs Cloud Code",
+        "duration": "10 min",
+        "description": "A diferença fundamental · por que sair do ChatGPT importa"
+      },
+      {
+        "title": "Tour pelas aplicações reais",
+        "duration": "14 min",
+        "description": "CRM, mentorados, leads, carrossel, squad de copywriters Gary Halbert"
+      },
+      {
+        "title": "Métricas que provam o ponto",
+        "duration": "16 min",
+        "description": "29 dias · 11k sessões · 25M tokens · US$77k de valor gerado"
+      },
+      {
+        "title": "Planos e modelos",
+        "duration": "10 min",
+        "description": "Pro × Max × Max US$200 + Opus/Sonnet/Haiku como sênior/pleno/estagiário"
+      },
+      {
+        "title": "Pasta de trabalho + Stack Setup",
+        "duration": "8 min",
+        "description": "Criar pasta `cloud` no user + baixar a skill"
+      },
+      {
+        "title": "Instalação ao vivo (Mac + Windows)",
+        "duration": "30 min",
+        "description": "Curl/PowerShell, login, bypass permissions, troubleshooting"
+      },
+      {
+        "title": "Stack Setup rodando ao vivo",
+        "duration": "47 min",
+        "description": "Auditoria de CLIs, instalação automática, autenticação GitHub no browser"
+      },
+      {
+        "title": "Multi-telas + skill UX/UI + próximos passos",
+        "duration": "29 min",
+        "description": "30+ terminais em paralelo, demo do Playbook, brincar com Claude até a próxima aula"
+      }
+    ],
+    "subtitle": "A primeira aula ao vivo (14/Abr · 3h) · instalação na unha + tour pelas aplicações reais + a diferença entre chatbot e Cloud Code",
+    "shortTitle": "Pré-Mentoria 01 · 14/Abr",
+    "transcript": "transcripts/core-ia-mentoria/bonus-01.md",
+    "deliverable": "Cloud Code instalado · Plano Max ativo · Stack Setup rodada · Pasta `cloud` criada · Familiarizado com a tela preta",
+    "learningGoals": [
+      "Entender por que Claude Code não é chatbot · comparação direta com ChatGPT, Cloud, Gemini, Lovable",
+      "Ver ao vivo aplicações reais construídas com Claude Code: CRM próprio, sistema de mentorados, gerador de carrossel, squads de copywriters",
+      "Decidir entre planos Pro (US$20) / Max (US$100) / Max (US$200) · e por que o Pro acaba na 1ª semana",
+      "Diferenciar os 3 modelos do Claude (Opus / Sonnet / Haiku) como sênior / pleno / estagiário",
+      "Criar a pasta de trabalho `cloud` ou `code` no diretório do usuário e rodar a skill Stack Setup",
+      "Instalar o Claude Code via terminal no Mac e Windows com troubleshooting real (command not found, PATH, espaço em disco)",
+      "Ativar o bypass de permissões `--dangerously-skip-permissions` para fluxo profissional",
+      "Sair com a skill Stack Setup configurando GitHub, Supabase, Docker, Homebrew e CLAUDE.md automaticamente",
+      "Abrir o Claude Code e começar a conversar como assistente · \"tudo que você não sabe, pergunta pra ele\""
+    ]
+  }
+}

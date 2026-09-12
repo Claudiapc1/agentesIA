@@ -1,0 +1,15 @@
+# Contrato ContextOS agentesIA v2
+
+1. Peça ou use a raiz ContextOS explicitamente informada nesta sessão. Não varra home, Workspace, COO ou operações privadas. Dados vivem fora de skills e diretórios globais.
+2. Para descoberta, rode `scripts/resolve_context.py --root <raiz>`. Antes de produção, obrigatoriamente execute `scripts/gate.py --root <raiz> --business <slug> --output <destino-absoluto>` (Python 3.9+), relativo a ESTA pasta. O gate deve retornar READY antes de gerar, gravar ou chamar transporte. Saída obrigatoriamente abaixo de `businesses/<slug>/outputs/`. Revalide imediatamente antes da escrita. Nunca trate path de exemplo como existente.
+3. Configuração preferencial: `config.json` com `{"active_business": null}`. `businesses/<slug>/contexto.md` é o resumo consolidado aprovado pelo usuário. Compatibilidade: config.yaml admite leitura de active_business simples; não é parser YAML completo. Fontes estruturadas adicionais podem ser passadas por `--require caminho/relativo` repetido.
+4. Uma empresa: resolver automaticamente. Várias sem seleção ativa válida: SELECT_BUSINESS, perguntar qual. Nenhuma, seleção inválida ou fonte ausente: BLOCKED_CONTEXT, oferecer coreai-contexto. Bloquear produção; não bloquear ajuda ou coleta.
+5. READY apenas prova existência/legibilidade. Ler integralmente `sources`, verificar identidade, produto, ICP, oferta e voz conforme tarefa. Dado ausente vira pergunta/lacuna, nunca invenção. Oferta comercial exige produto/preço/condições/provas aplicáveis validados.
+6. Passar `context_root`, `business_slug`, `sources`, produto e pedido a cada especialista. Ao mudar negócio descartar o contexto anterior. Nunca usar Torriani como fallback.
+7. Saídas e memória ficam no negócio selecionado, jamais junto às skills globais. Não persistir seleção/memória sem autorização do usuário. Não salvar tokens no contexto.
+8. Publicação, gastos e acesso Meta requerem seus próprios ativos e autorizações; READY não autoriza escrita externa.
+9. Sequência: resolver contexto → chief tria → especialista nomeado e tarefa existente → executar → revisar. Sem rota não inventar agente/resultado. Cada revisão informa fontes e limitações reais.
+
+Não importa templates nem serviços de Workspace/COO. Método adaptado de context-create e context-quick; a consolidação reduz atrito, preservando fontes, lacunas e validação humana.
+
+`contexto.md` é sempre obrigatório: --require adiciona fontes e nunca substitui o resumo principal. Symlinks de clientes, fontes e saída são bloqueados. Preserve business_slug e context_sha256 no despacho; a revisão factual é humana/assistida, não algo provado pelo hash. Setup e coleta de contexto podem funcionar sem uma base existente; produção de domínio não pode.

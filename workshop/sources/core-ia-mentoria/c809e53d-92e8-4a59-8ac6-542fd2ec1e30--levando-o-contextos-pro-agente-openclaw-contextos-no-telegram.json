@@ -1,0 +1,1123 @@
+{
+  "id": "c809e53d-92e8-4a59-8ac6-542fd2ec1e30",
+  "titulo": "Levando o ContextOS pro Agente OpenClaw · ContextOS no Telegram",
+  "lesson_payload": {
+    "id": "encontro-04-03",
+    "title": "Levando o ContextOS pro Agente OpenClaw · ContextOS no Telegram",
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Pré-requisito desta aula",
+        "content": "Você precisa ter concluído a **Etapa 4 (Memória) do OpenClaw** e rodado pelo menos `/coreaios:context-create *init` + `*add-business` + `/coreaios:context-quick` (Aulas 1 e 2 deste encontro). Sem os 5 YAMLs essenciais populados, não tem o que enviar pra VPS.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O problema · agente amnésico sobre o business"
+      },
+      {
+        "type": "text",
+        "content": "Depois da Etapa 4 do OpenClaw, o agente lembra de decisões, lições e sessões anteriores. Mas tem um buraco: **o agente não sabe quem é o business do aluno.**"
+      },
+      {
+        "type": "text",
+        "content": "Toda vez que o aluno pede copy, post, análise, estratégia, o agente **chuta** ou pede pro aluno explicar de novo:"
+      },
+      {
+        "text": "Qual o tom da sua marca? Quem é seu ICP? Qual seu pricing?",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "Isso é **trabalho repetido**. Pior: cada vez que o aluno explica, ele explica **diferente**, e o output sai inconsistente. A solução é fazer o agente ler os YAMLs do ContextOS na abertura, junto com a memória."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Recap · como funciona a memória do OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "A Etapa 4 (Memória) configura o agente pra carregar isso na abertura toda vez que abre sessão nova:"
+      },
+      {
+        "type": "mermaid",
+        "diagram": "flowchart TD\n    Boot[BOOT.md · sessão nova] --> Mem[MEMÓRIA · carregado sempre]\n    Mem --> M1[memory/MEMORY.md · index]\n    Mem --> M2[memory/sessions/HOJE.md · diário]\n    Mem --> M3[memory/sessions/ONTEM.md · diário]\n    Mem --> M4[memory/pending.md · aguardando]\n\n    Boot --> Search[BUSCA sob demanda]\n    Search --> S1[memory_search · decisions/lessons/people]\n    Search --> S2[projects/nome · específico]\n\n    style Boot fill:#0f172a,stroke:#3b82f6,color:#fff\n    style Mem fill:#1e293b,stroke:#06b6d4,color:#fff\n    style Search fill:#1e293b,stroke:#8b5cf6,color:#fff"
+      },
+      {
+        "type": "callout",
+        "title": "Por que isso funciona",
+        "content": "Memória em camadas. O que é pequeno e essencial fica sempre carregado (custa pouco contexto). O que é grande e situacional fica buscável (custa zero até precisar). É exatamente o mesmo princípio que vamos aplicar ao ContextOS.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que muda · ContextOS como nova camada do BOOT"
+      },
+      {
+        "type": "text",
+        "content": "Vamos **adicionar uma camada NOVA** no boot do agente. Não substitui nada: convive lado a lado com a memória de sessões."
+      },
+      {
+        "type": "mermaid",
+        "diagram": "flowchart TD\n    Boot[BOOT.md · sessão nova] --> Mem[MEMÓRIA · existente]\n    Boot --> Ctx[CONTEXTO · NOVO]\n\n    Mem --> M1[MEMORY.md + sessions + pending]\n\n    Ctx --> C1[company-profile · quem é]\n    Ctx --> C2[founder-dna · autoridade]\n    Ctx --> C3[brand · voz/tom]\n    Ctx --> C4[icp · cliente]\n    Ctx --> C5[pricing · oferta]\n\n    Boot --> Search[BUSCA sob demanda]\n    Search --> M2[memory_search]\n    Search --> CS[context_get · context_search]\n\n    style Boot fill:#0f172a,stroke:#3b82f6,color:#fff\n    style Mem fill:#1e293b,stroke:#06b6d4,color:#fff\n    style Ctx fill:#1e293b,stroke:#10b981,color:#fff\n    style Search fill:#1e293b,stroke:#8b5cf6,color:#fff"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Por que apenas 5 YAMLs no boot"
+      },
+      {
+        "type": "text",
+        "content": "Pra não estourar o contexto, o boot carrega só os 5 essenciais. Os outros 23 YAMLs ficam disponíveis via busca sob demanda (`context_get()` e `context_search()`)."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "company-profile.yaml",
+            "description": "Nome, site, ano de fundação, sede, missão. Identidade da empresa."
+          },
+          {
+            "title": "founder-dna.yaml",
+            "description": "Origem, autoridade, voz do fundador. Define O TOM da empresa."
+          },
+          {
+            "title": "brand.yaml",
+            "description": "Voice, personalidade, tagline. Define COMO o agente fala."
+          },
+          {
+            "title": "icp.yaml",
+            "description": "Quem é o cliente, dor principal, trigger de compra. Define PRA QUEM falar."
+          },
+          {
+            "title": "pricing.yaml",
+            "description": "Oferta atual, ticket, faixas. Define a ECONOMIA do negócio."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 5 passos pra adicionar ContextOS no agente"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 1 · Levar os YAMLs pro VPS"
+      },
+      {
+        "type": "text",
+        "content": "Cria a pasta destino na VPS via SSH, depois envia os YAMLs locais via `scp`. Substitui `{seu-business}` pelo slug da sua empresa (ex: torriani)."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Terminal 1 · SSH na VPS do agente",
+            "type": "comment"
+          },
+          {
+            "text": "cd /agent",
+            "type": "command"
+          },
+          {
+            "text": "mkdir -p businesses/active",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Terminal 2 · no seu Mac, copia os YAMLs",
+            "type": "comment"
+          },
+          {
+            "text": "scp -r ~/coreaios/businesses/{seu-business}/context/ \\",
+            "type": "command"
+          },
+          {
+            "text": "    usuario@ip-vps:/agent/businesses/active/",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Terminal 1 · confere o que chegou",
+            "type": "comment"
+          },
+          {
+            "text": "ls /agent/businesses/active/context/",
+            "type": "command"
+          },
+          {
+            "text": "  → company-profile.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  → founder-dna.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  → brand.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  → icp.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  → pricing.yaml",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Validação do Passo 1",
+        "content": "A pasta `/agent/businesses/active/context/` na VPS contém os 5 YAMLs essenciais. Se faltar algum, é porque você não rodou `/coreaios:context-quick` ainda.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 2 · Atualizar o BOOT pra carregar o contexto"
+      },
+      {
+        "type": "text",
+        "content": "No Telegram do agente, cola o prompt abaixo. Ele instrui o agente a adicionar 5 passos novos no BOOT.md (depois dos 4 de memória que já existem)."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Cola no chat do Telegram com seu agente",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Atualiza meu BOOT.md pra ler o contexto do business.",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Adiciona estes passos APÓS os passos de memória que já existem:",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "  5. Lê businesses/active/context/company-profile.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  6. Lê businesses/active/context/founder-dna.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  7. Lê businesses/active/context/brand.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  8. Lê businesses/active/context/icp.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  9. Lê businesses/active/context/pricing.yaml",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Esses 5 YAMLs definem QUEM É o business. Toda resposta sua",
+            "type": "command"
+          },
+          {
+            "text": "deve refletir a voz, o ICP, o pricing e a autoridade descritos",
+            "type": "command"
+          },
+          {
+            "text": "nesses arquivos.",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Se algum YAML não existir, registra em memory/pending.md:",
+            "type": "command"
+          },
+          {
+            "text": "  \"Contexto incompleto: rodar /coreaios:context-quick\"",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Me confirma que o BOOT agora carrega o contexto toda vez",
+            "type": "command"
+          },
+          {
+            "text": "que abre sessão.",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Validação do Passo 2",
+        "content": "Agente confirma que BOOT.md agora tem 9 passos (4 de memória + 5 de contexto). Você pode validar via SSH: `cat /agent/BOOT.md | grep -A 10 businesses`.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 3 · Definir busca sob demanda nos YAMLs ricos"
+      },
+      {
+        "type": "text",
+        "content": "Os 5 do boot cobrem o essencial. Mas o aluno vai pedir coisas como brand voice detalhado, KPIs, research, decisões. Pra esses, configuramos 2 funções de busca."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Cola no Telegram",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Configura duas funções de contexto pra mim, parecidas com memory_search:",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "  context_get(arquivo)",
+            "type": "output"
+          },
+          {
+            "text": "    → lê um YAML específico de businesses/active/",
+            "type": "output"
+          },
+          {
+            "text": "    → ex: context_get(\"brand-dna/voice.yaml\")",
+            "type": "output"
+          },
+          {
+            "text": "          context_get(\"operations/kpis.yaml\")",
+            "type": "output"
+          },
+          {
+            "text": "          context_get(\"intelligence/research.md\")",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "  context_search(termo)",
+            "type": "output"
+          },
+          {
+            "text": "    → busca em TODOS os YAMLs de businesses/active/ por palavra-chave",
+            "type": "output"
+          },
+          {
+            "text": "    → retorna onde apareceu + valor",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Use isto quando eu te pedir algo que precisa de detalhe",
+            "type": "command"
+          },
+          {
+            "text": "profundo (ex: \"como é meu tom de voz?\", \"qual meu CAC?\",",
+            "type": "command"
+          },
+          {
+            "text": "\"quem entrevistou o fundador?\"). Em vez de chutar, busca",
+            "type": "command"
+          },
+          {
+            "text": "primeiro nos YAMLs.",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Me confirma que está configurado.",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Validação do Passo 3",
+        "content": "Agente confirma `context_get()` e `context_search()` configurados. Agora ele tem acesso aos 23 YAMLs ricos sob demanda, além dos 5 sempre-carregados.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 4 · Regra inviolável · zero invenção"
+      },
+      {
+        "type": "text",
+        "content": "Este passo é **crítico**. Sem ele, o agente pode inventar credenciais, ICP, podcasts inexistentes. A regra anti-invenção transforma o agente em fact-checker automático."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Cola no Telegram · CRÍTICO",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Adiciona uma regra inviolável no AGENTS.md:",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "REGRA: ZERO INVENÇÃO SOBRE O BUSINESS:",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Toda afirmação sobre o business (nome, ICP, pricing,",
+            "type": "command"
+          },
+          {
+            "text": "autoridade, diferenciais, credenciais, voz) DEVE vir do",
+            "type": "command"
+          },
+          {
+            "text": "contexto carregado em businesses/active/ ou de busca via",
+            "type": "command"
+          },
+          {
+            "text": "context_get()/context_search().",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "PROIBIDO:",
+            "type": "command"
+          },
+          {
+            "text": "  - Inventar credenciais que não estão em credentials.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  - Chutar ICP ou pain points que não estão em icp.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  - Imaginar tom de voz que não está em brand.yaml ou voice.yaml",
+            "type": "output"
+          },
+          {
+            "text": "  - Citar prêmios/entrevistas sem URL em credentials.yaml",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Se o usuário pedir algo e o YAML correspondente estiver vazio",
+            "type": "command"
+          },
+          {
+            "text": "ou ausente, responda:",
+            "type": "command"
+          },
+          {
+            "text": "  \"Esse dado não está no contexto. Quer rodar",
+            "type": "output"
+          },
+          {
+            "text": "   /coreaios:context-deep ou /coreaios:context-enrich",
+            "type": "command"
+          },
+          {
+            "text": "   pra preencher?\"",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Inventar = falha grave.",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Me confirma que adicionou no AGENTS.md.",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que essa regra é inviolável",
+        "content": "Sem ela, o agente parece útil mas mente. Vai citar podcasts que não existem, inventar pain points genéricos, imaginar um pricing diferente do real. Cada uma dessas mentiras quebra a confiança do aluno no agente · e quebra a do cliente final quando vai pra produção.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 5 · Apontar a memória pro contexto"
+      },
+      {
+        "type": "text",
+        "content": "A Etapa 4 já criou um arquivo `memory/context/business-context.md` vazio. Vamos transformá-lo num INDEX que aponta pros YAMLs reais. Isso garante que mesmo se a memória for buscada sem ler o BOOT, o agente saiba onde estão os dados."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Cola no Telegram",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Reescreve o memory/context/business-context.md com este conteúdo:",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Business Context: Index",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Este arquivo é um INDEX. Os dados reais ficam em",
+            "type": "command"
+          },
+          {
+            "text": "businesses/active/.",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "## Carregado no BOOT",
+            "type": "comment"
+          },
+          {
+            "text": "- businesses/active/context/company-profile.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/context/founder-dna.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/context/brand.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/context/icp.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/context/pricing.yaml",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "## Buscado via context_get()",
+            "type": "comment"
+          },
+          {
+            "text": "- businesses/active/brand-dna/voice.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/brand-dna/visual-identity.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/brand-dna/archetype.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/brand-dna/positioning.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/design-system/tokens.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/operations/kpis.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/operations/processes.yaml",
+            "type": "command"
+          },
+          {
+            "text": "- businesses/active/intelligence/research.md",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "## Como atualizar",
+            "type": "comment"
+          },
+          {
+            "text": "- Quick fill: /coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "- Deep fill: /coreaios:context-deep",
+            "type": "command"
+          },
+          {
+            "text": "- Enrich (web): /coreaios:context-enrich",
+            "type": "command"
+          },
+          {
+            "text": "- Re-upload: scp -r ~/coreaios/businesses/{slug}/ vps:/agent/businesses/active/",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Salva esse arquivo.",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Validação do Passo 5",
+        "content": "Via SSH: `cat /agent/memory/context/business-context.md` mostra o index com os 5 caminhos do boot + caminhos do search. Os 5 passos estão completos.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Teste real · o agente sabe quem é o business?"
+      },
+      {
+        "type": "text",
+        "content": "Depois dos 5 passos, faz o teste de fogo. Fecha o app do Telegram (sai e abre de novo) pra forçar nova sessão e mande as 3 perguntas abaixo."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Pergunta 1 · Quem é meu cliente ideal?",
+            "description": "Manda: \"Quem é meu cliente ideal? Me responde em 3 frases.\" Resposta esperada: específica, com pain points reais do icp.yaml. Errada: genérica tipo \"alguém que precisa resolver X\"."
+          },
+          {
+            "title": "Pergunta 2 · Qual meu pricing?",
+            "description": "Resposta esperada: valor real do pricing.yaml. Errada: \"depende do seu serviço\"."
+          },
+          {
+            "title": "Pergunta 3 · Em que podcast o fundador foi entrevistado?",
+            "description": "Resposta esperada: URL real do credentials.yaml OU \"esse dado não está no contexto\". Errada: inventar nome de podcast."
+          }
+        ]
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "ICP: genérico, sem detalhes específicos",
+            "Pricing: 'depende', 'varia'",
+            "Podcast: inventa um nome",
+            "Pergunta de volta o que devia saber",
+            "Mistura informação inventada com real"
+          ],
+          "title": "✗ Resposta ERRADA · algum passo falhou",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "ICP: específico, com pain points do YAML",
+            "Pricing: valor exato do pricing.yaml",
+            "Podcast: URL real ou 'não está no contexto'",
+            "Sem perguntar de volta",
+            "Sem chutar"
+          ],
+          "title": "✓ Resposta CORRETA · contexto funcionando",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Se passou nos 3 testes",
+        "content": "**Contexto operacional.** O agente está com BOOT carregando, busca configurada, e regra anti-invenção ativa. Você acabou de transformar um agente genérico num agente que conhece seu negócio.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como manter atualizado"
+      },
+      {
+        "type": "text",
+        "content": "O ContextOS evolui. Empresa muda, fundador ganha prêmio novo, ICP se refina. O agente precisa receber as atualizações. Rotina recomendada: mensal."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fluxo mensal de atualização"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# 1 · Atualiza local (no seu Mac)",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *set-active {slug}",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-deep     # se quer revisar respostas",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-enrich   # captura novidades públicas",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# 2 · Re-envia pro VPS",
+            "type": "comment"
+          },
+          {
+            "text": "scp -r ~/coreaios/businesses/{slug}/ usuario@vps:/agent/businesses/active/",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# 3 · Avisa o agente (no Telegram)",
+            "type": "comment"
+          },
+          {
+            "text": "# \"Atualizei o contexto do business. Recarrega o BOOT.\"",
+            "type": "comment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Alternativa pra alunos avançados · cron na VPS"
+      },
+      {
+        "type": "text",
+        "content": "Em vez de fazer manual, configura cron na VPS pra puxar contexto atualizado todo domingo às 3h. (Cobrir cron está fora do escopo desta aula, vira tema avançado.)"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Crontab da VPS · sync semanal",
+            "type": "comment"
+          },
+          {
+            "text": "0 3 * * 0 rsync -avz aluno@maquina-local:~/coreaios/businesses/{slug}/ \\",
+            "type": "command"
+          },
+          {
+            "text": "                /agent/businesses/active/",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Troubleshooting · 5 problemas comuns"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Problema 1 · Agente continua perguntando ICP/pricing/tom"
+      },
+      {
+        "type": "text",
+        "content": "Significa que o BOOT não está lendo os YAMLs. Diagnóstico via SSH:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# No SSH da VPS",
+            "type": "comment"
+          },
+          {
+            "text": "cat /agent/BOOT.md | grep -A 10 businesses",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Se NÃO aparecer os 5 passos do contexto:",
+            "type": "comment"
+          },
+          {
+            "text": "# → Re-executa o prompt do Passo 2",
+            "type": "comment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Problema 2 · Agente inventa dados"
+      },
+      {
+        "type": "text",
+        "content": "A regra anti-invenção do Passo 4 não está ativa. Diagnóstico:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "cat /agent/AGENTS.md | grep -A 15 \"ZERO INVENÇÃO\"",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Se vazio, re-executa o prompt do Passo 4",
+            "type": "comment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Problema 3 · Erro · businesses/active não encontrado"
+      },
+      {
+        "type": "text",
+        "content": "Os YAMLs não foram enviados pra VPS, ou foram pra path errado. Solução:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Re-executa o scp do Passo 1",
+            "type": "comment"
+          },
+          {
+            "text": "scp -r ~/coreaios/businesses/{slug}/context/ \\",
+            "type": "command"
+          },
+          {
+            "text": "    usuario@ip-vps:/agent/businesses/active/",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Problema 4 · company-profile.yaml vazio"
+      },
+      {
+        "type": "text",
+        "content": "O aluno não rodou `/coreaios:context-quick` ainda. Solução:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# No Mac",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "  # preenche os campos essenciais",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Re-envia pro VPS",
+            "type": "comment"
+          },
+          {
+            "text": "scp -r ~/coreaios/businesses/{slug}/ vps:/agent/businesses/active/",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Problema 5 · Quero múltiplos businesses com switch"
+      },
+      {
+        "type": "text",
+        "content": "Hoje o caminho é `businesses/active/`. Pra suportar múltiplos clientes, use symlink:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Na VPS · renomeia o atual",
+            "type": "comment"
+          },
+          {
+            "text": "mv /agent/businesses/active /agent/businesses/torriani",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Envia o cliente novo",
+            "type": "comment"
+          },
+          {
+            "text": "scp -r ~/coreaios/businesses/cliente-novo/ vps:/agent/businesses/cliente-novo/",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Cria symlink pro ativo",
+            "type": "comment"
+          },
+          {
+            "text": "ln -s /agent/businesses/cliente-novo /agent/businesses/active",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Quando trocar de cliente:",
+            "type": "comment"
+          },
+          {
+            "text": "rm /agent/businesses/active",
+            "type": "command"
+          },
+          {
+            "text": "ln -s /agent/businesses/{outro-slug} /agent/businesses/active",
+            "type": "command"
+          },
+          {
+            "text": "# E avisa o agente no Telegram: \"Recarrega o BOOT\"",
+            "type": "comment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Arquitetura final · memória + contexto"
+      },
+      {
+        "type": "mermaid",
+        "diagram": "flowchart TD\n    Agent[AGENTE OPENCLAW] --> Boot[BOOT.md]\n    Agent --> Rules[AGENTS.md · regras invioláveis]\n\n    Boot --> BootMem[Passos 1-4 · MEMÓRIA]\n    Boot --> BootCtx[Passos 5-9 · CONTEXTO]\n\n    Rules --> R1[Extrair antes de compactar]\n    Rules --> R2[ZERO invenção sobre business]\n\n    Agent --> Funcs[Funções de busca]\n    Funcs --> F1[memory_search · memory/]\n    Funcs --> F2[memory_get · memory/]\n    Funcs --> F3[context_search · businesses/active/]\n    Funcs --> F4[context_get · businesses/active/]\n\n    style Agent fill:#0f172a,stroke:#3b82f6,color:#fff\n    style Boot fill:#1e293b,stroke:#06b6d4,color:#fff\n    style Rules fill:#1e293b,stroke:#ef4444,color:#fff\n    style Funcs fill:#1e293b,stroke:#8b5cf6,color:#fff"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Quem é o business",
+            "Qual a voz",
+            "Pra quem falar (ICP)",
+            "Qual o pricing",
+            "Qual a autoridade do fundador"
+          ],
+          "title": "CONTEXTO · esta aula",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "O que aconteceu",
+            "O que decidimos",
+            "Lições aprendidas",
+            "Projetos em andamento",
+            "Diário do dia"
+          ],
+          "title": "MEMÓRIA · Etapa 4 OpenClaw",
+          "variant": "before"
+        }
+      },
+      {
+        "text": "Memória + Contexto = agente que parece que trabalha aqui há anos.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint · você terminou esta aula sabendo"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "scp dos 5 YAMLs essenciais pra VPS",
+            "Prompts dos 5 passos no Telegram",
+            "Fluxo mensal de atualização",
+            "5 problemas comuns e como resolver",
+            "Symlink pra múltiplos businesses"
+          ],
+          "title": "Execução prática",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Diferença entre memória e contexto",
+            "Por que apenas 5 YAMLs no BOOT",
+            "Como context_get e context_search complementam",
+            "Regra inviolável de zero invenção",
+            "3 perguntas do teste de fogo"
+          ],
+          "title": "Conceitos dominados",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Próximos passos · alunos avançados",
+        "content": "1) Automatizar re-upload toda vez que rodar /coreaios:context-deep localmente · 2) Switch rápido entre clientes via symlink · 3) Diff de contexto que alerta quando YAML mudou · 4) Validação automática no BOOT que avisa se completude < 70%. Tudo isso vira aulas futuras do curso.",
+        "variant": "success"
+      }
+    ],
+    "status": "published",
+    "schedule": [
+      {
+        "label": "0 a 10",
+        "topic": "Problema · agente sabe lembrar mas não sabe o business"
+      },
+      {
+        "label": "10 a 20",
+        "topic": "Recap memória OpenClaw + nova camada de contexto"
+      },
+      {
+        "label": "20 a 30",
+        "topic": "Passo 1 · scp dos 5 YAMLs pra VPS"
+      },
+      {
+        "label": "30 a 40",
+        "topic": "Passo 2 · BOOT.md carregando contexto"
+      },
+      {
+        "label": "40 a 50",
+        "topic": "Passo 3 · context_get + context_search"
+      },
+      {
+        "label": "50 a 60",
+        "topic": "Passo 4 · regra anti-invenção no AGENTS.md"
+      },
+      {
+        "label": "60 a 65",
+        "topic": "Passo 5 · business-context.md como index"
+      },
+      {
+        "label": "65 a 75",
+        "topic": "Teste real + manutenção mensal + troubleshooting"
+      }
+    ],
+    "subtitle": "Como dar contexto da empresa ao agente que roda na VPS · 5 passos",
+    "learningGoals": [
+      "Entender o problema: agente lembra de decisões mas não sabe quem é o business.",
+      "Mapear a nova arquitetura: ContextOS como camada nova do BOOT (não substitui memória).",
+      "Executar os 5 passos para levar o contexto pro VPS e ativar leitura no BOOT.",
+      "Configurar context_get() e context_search() pra busca on-demand nos YAMLs ricos.",
+      "Aplicar a regra inviolável de zero invenção e testar com perguntas reais."
+    ],
+    "durationMinutes": 75
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "id": "faccc307-e771-45e6-b1fd-5b0f0db11480",
+  "titulo": "Backup: Snapshot Diário no GitHub Privado",
+  "lesson_payload": {
+    "id": "encontro-02-11",
+    "tag": "Etapa 10",
+    "title": "Backup: Snapshot Diário no GitHub Privado",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Seu agente tem 3 coisas que você NÃO pode perder: a **memória** (decisions, lessons, projects, sessions · meses de aprendizado), a **identidade** (SOUL, USER, AGENTS, IDENTITY · personalidade que você modelou) e os **scripts** (health-check, backup, doctor · automações que você configurou). Tudo isso está numa única pasta no servidor."
+      },
+      {
+        "type": "text",
+        "content": "Se o VPS explodir amanhã (provedor com problema, ataque, deleção acidental), você perde tudo. **Esta etapa garante que isso nunca acontece**: snapshot diário às 4h da manhã pro GitHub privado. Histórico completo, restaura em qualquer máquina, gratuito."
+      },
+      {
+        "type": "callout",
+        "title": "GitHub privado vs snapshot do provider",
+        "content": "Snapshot do Hostinger/DigitalOcean é bom mas SÓ restaura no MESMO servidor. GitHub privado restaura em qualquer máquina, em 5 minutos, com histórico completo de tudo que mudou desde o dia 1. Se você sai do Hostinger e vai pro DO, leva o agente junto.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 1 · criar repo privado no GitHub"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um repositório git no GitHub que vai armazenar o conteúdo da sua pasta `~/openclaw` versionado por commit."
+      },
+      {
+        "type": "text",
+        "content": "**Por que privado:** sua memória, .env, tokens vão pra esse repo. Público = vazamento de credenciais. **Marcar PRIVATE é crítico.**"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Vai em github.com/new",
+            "accent": "cyan",
+            "description": "Logado na sua conta, clica em **New repository**."
+          },
+          {
+            "title": "Nome: openclaw-backup-{seu-nome}",
+            "accent": "violet",
+            "description": "Sugestão: `openclaw-backup-juliano` ou similar · só pra você identificar."
+          },
+          {
+            "title": "Marca PRIVATE",
+            "accent": "coral",
+            "description": "Crítico · sua memória e tokens vão pra esse repo. Público vaza credenciais."
+          },
+          {
+            "title": "NÃO inicializa com README",
+            "accent": "lime",
+            "description": "Deixa todas as opções de inicialização desmarcadas. Você vai inicializar pelo terminal no Passo 3."
+          },
+          {
+            "title": "Copia a URL SSH",
+            "accent": "magenta",
+            "description": "Após criar, copia a URL no formato `git@github.com:seu-user/openclaw-backup.git`. Vai precisar no Passo 3."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 2 · gerar deploy key SSH"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** uma chave SSH especial que dá acesso de push **só pra esse repo específico**. Mais seguro que usar sua chave SSH pessoal · se vazar, só compromete o repo de backup, não sua conta GitHub inteira."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** o servidor precisa autenticar no GitHub pra fazer push diário sem você digitar senha. Deploy key é a forma certa de fazer isso · escopo limitado, fácil de revogar."
+      },
+      {
+        "type": "callout",
+        "content": "Os 3 comandos abaixo rodam no terminal SSH da sua VPS. Cola um por vez.",
+        "variant": "info"
+      },
+      {
+        "type": "command-line",
+        "command": "ssh-keygen -t ed25519 -f ~/.ssh/openclaw-backup -N '' -C 'openclaw-backup-vps'"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · pegar a chave pública",
+        "target": "telegram",
+        "content": "Roda `cat ~/.ssh/openclaw-backup.pub` e me **cola o output completo** no Telegram (começa com `ssh-ed25519 AAAA...`). Vou copiar essa string e adicionar como Deploy Key no GitHub no próximo passo."
+      },
+      {
+        "type": "text",
+        "content": "Copia o output da chave pública (começa com `ssh-ed25519 AAAA...`). Agora vai no GitHub:"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Abre seu repo no GitHub",
+            "accent": "cyan",
+            "description": "Vai em **Settings** (do repo, não da conta) · **Deploy keys** · **Add deploy key**."
+          },
+          {
+            "title": "Cola a chave pública",
+            "accent": "violet",
+            "description": "Title: `vps-openclaw`. Key: cola o output do `cat` do comando anterior."
+          },
+          {
+            "title": "MARCA Allow write access",
+            "accent": "coral",
+            "description": "Crítico · sem isso o servidor não consegue fazer push. Só pode ler."
+          },
+          {
+            "title": "Add key",
+            "accent": "lime",
+            "description": "Confirma. A chave aparece na lista de Deploy keys."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 3 · configurar SSH + git init + primeiro push"
+      },
+      {
+        "type": "text",
+        "content": "Vamos criar um **alias SSH** pra esse repo (em `~/.ssh/config`), inicializar o git na pasta do agente, e fazer o primeiro push pra validar tudo."
+      },
+      {
+        "type": "callout",
+        "content": "Ao invés de editar o `~/.ssh/config` manualmente com nano, vamos usar um prompt no Telegram que faz tudo de uma vez · cria o config, inicializa git, configura .gitignore, faz remote, commit e push.",
+        "variant": "info"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · setup git + primeiro push",
+        "target": "telegram",
+        "content": "Quero que você configure o backup git no servidor. Substitua `SEU-USER` pelo seu username do GitHub no comando 4 abaixo.\n\n**Sua URL SSH do repo:** [cola aqui · formato `git@github.com:SEU-USER/openclaw-backup.git`]\n\nFaz na ordem:\n\n1. **Cria alias SSH** · adiciona ao `~/.ssh/config` o bloco:\n   ```\n   Host github-openclaw\n     Hostname github.com\n     User git\n     IdentityFile ~/.ssh/openclaw-backup\n     IdentitiesOnly yes\n   ```\n   Aplica `chmod 600 ~/.ssh/config`.\n\n2. **Testa autenticação** · roda `ssh -T github-openclaw` e confirma resposta esperada:\n   `Hi seu-user/openclaw-backup! You've successfully authenticated...`\n   (Ignora o warning de shell access · normal.)\n\n3. **Inicializa git** na pasta `~/openclaw`:\n   · `git init`\n   · `git config user.email backup@openclaw`\n   · `git config user.name \"OpenClaw Backup\"`\n\n4. **Cria .gitignore** com:\n   ```\n   logs/*.log\n   node_modules/\n   *.tmp\n   ```\n\n5. **Adiciona remote** · `git remote add origin github-openclaw:SEU-USER/openclaw-backup.git`\n   (substitui SEU-USER pelo nome correto · usa o alias `github-openclaw`, NÃO `github.com`)\n\n6. **Primeiro commit + push:**\n   · `git add -A`\n   · `git commit -m \"backup inicial · setup\"`\n   · `git branch -M main`\n   · `git push -u origin main`\n\n7. **Reporta no formato:**\n\n```\n💾 Backup git configurado\n\n· SSH config: ✅ alias github-openclaw\n· Autenticação: ✅ Hi seu-user/openclaw-backup\n· Git init: ✅ user.email + user.name\n· .gitignore: ✅ logs, node_modules, tmp\n· Remote: ✅ github-openclaw:user/repo\n· Primeiro push: ✅ [hash do commit]\n· Status: pronto pra cron diário\n```\n\nSe algum passo falhar, para e me reporta o erro · não executa o seguinte."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 4 · ativar cron 04:00"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um cron job que executa o script de backup todo dia às 4h da manhã. Você já criou esse script na **Etapa 7 (Manutenção)** quando ativou o pilar 4. Aqui só confirma que ele está agendado."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · validar cron de backup",
+        "target": "telegram",
+        "content": "Quero que você **apenas valide** se o cron de backup está agendado · não execute mudanças.\n\nFaz na ordem:\n\n1. **Lista cron** · roda `crontab -l | grep backup-daily`.\n\n2. **Reporta:**\n   · Se aparecer `0 4 * * * ~/openclaw/scripts/backup-daily.sh` · ✅ está agendado\n   · Se não aparecer · ❌ falta agendar · me avisa pra eu voltar na **Etapa 7 · Pilar 4 · Backup automático** e rodar o prompt de ativação\n\nFormato da resposta:\n\n```\n💾 Cron de backup\n\n· Status: ✅ agendado · próxima execução: 04:00\n   OU\n· Status: ❌ não agendado · ação: voltar pra Etapa 7\n```"
+      },
+      {
+        "type": "text",
+        "content": "Se aparecer a linha `0 4 * * * ~/openclaw/scripts/backup-daily.sh`, está tudo certo. Se não aparecer, volta na **Etapa 7 · Pilar 4 · Backup automático** e roda o prompt de ativação."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Teste de restore · simulação"
+      },
+      {
+        "type": "text",
+        "content": "**Por que testar:** backup que você nunca tentou restaurar não é backup, é esperança. Vamos simular o restore numa pasta temporária pra confirmar que tudo volta."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · simular restore do backup",
+        "target": "telegram",
+        "content": "Quero que você **simule um restore** do backup git pra confirmar que tudo volta certinho.\n\n**Substitui SEU-USER pelo seu username do GitHub.**\n\nFaz na ordem:\n\n1. **Clone em pasta temporária** · `cd /tmp && git clone github-openclaw:SEU-USER/openclaw-backup.git teste-restore`\n\n2. **Lista conteúdo** · roda `ls -la /tmp/teste-restore/memory` e me mostra os arquivos.\n\n3. **Conta arquivos** · roda `find /tmp/teste-restore -type f | wc -l` e me reporta o total.\n\n4. **Limpa** · `rm -rf /tmp/teste-restore`\n\n5. **Reporta no formato:**\n\n```\n🔄 Teste de restore\n\n· Clone: ✅ sucesso\n· Memory dir: ✅ N arquivos visíveis\n· Total de arquivos no backup: X\n· Limpeza: ✅\n· Veredito: backup funciona · restore real é o mesmo comando em outro servidor\n```\n\nSe o clone falhar (deploy key errada, repo inexistente, etc), me reporta o erro exato."
+      },
+      {
+        "type": "callout",
+        "content": "Se o `ls -la` listou os arquivos da pasta `memory/` · backup funciona, restore real é o mesmo comando em outro servidor. Pode dormir tranquilo.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Auditoria do backup"
+      },
+      {
+        "type": "text",
+        "content": "Antes de fechar a etapa, peça pro agente confirmar que tudo está vivo."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Etapa 10 · Auditoria do backup",
+        "target": "telegram",
+        "content": "Quero que você **apenas analise** o sistema de backup git · não execute mudanças. Só valida e me reporta status.\n\nFaz a análise item por item:\n\n1. **Repo remoto** · roda `cd ~/openclaw && git remote -v` e me mostra o remote configurado.\n\n2. **Último commit** · roda `git log -1 --format='%cr · %s'` e me mostra quando foi e qual a mensagem.\n\n3. **Cron agendado** · roda `crontab -l | grep backup` e confirma que `0 4 * * *` está agendado.\n\n4. **Deploy key funciona** · roda `ssh -T github-openclaw 2>&1` e confirma autenticação.\n\n5. **.gitignore protegendo** · roda `cat .gitignore` e confirma que `logs/*.log` está lá (senão tokens podem vazar).\n\nMe responde no formato:\n\n```\n💾 Auditoria do backup · Etapa 10\n\n1. Remote · ✅ github-openclaw:user/repo\n2. Último commit · ✅ há X horas · mensagem\n3. Cron · ✅ 0 4 * * * agendado\n4. Deploy key · ✅ Hi user/repo\n5. .gitignore · ✅ logs protegidos\n\nScore final: 5/5 · backup blindado.\nPode seguir pro Bônus SSH.\n```\n\nSe algo falhar, baixa o score e lista o que precisa corrigir. Não executa mudanças · só análise."
+      },
+      {
+        "type": "callout",
+        "title": "Checkpoint",
+        "content": "Backup ativo · todo dia 4h da manhã sua memória, scripts, configs vão pro GitHub privado. Se VPS explodir, novo servidor + git clone + 5min · você está rodando de novo. Tranquilidade pra crescer sem medo.",
+        "variant": "success"
+      }
+    ],
+    "number": "10",
+    "status": "available",
+    "summary": "Por que GitHub bate snapshot do provider · criar repo privado, gerar deploy key, configurar SSH config, ativar cron 04h. Se VPS sumir, restaura tudo em 5min.",
+    "schedule": [
+      {
+        "label": "0·4",
+        "topic": "Por que GitHub e não snapshot do provider"
+      },
+      {
+        "label": "4·10",
+        "topic": "Passo 1 · criar repo privado"
+      },
+      {
+        "label": "10·17",
+        "topic": "Passo 2 · gerar deploy key SSH"
+      },
+      {
+        "label": "17·22",
+        "topic": "Passo 3 · git init + primeiro push"
+      },
+      {
+        "label": "22·26",
+        "topic": "Passo 4 · ativar cron 04:00"
+      },
+      {
+        "label": "26·28",
+        "topic": "Teste de restore"
+      },
+      {
+        "label": "28·30",
+        "topic": "Auditoria"
+      }
+    ],
+    "shortTitle": "Backup GitHub",
+    "learningGoals": [
+      "Configurar repositório GitHub privado pra backup do agente",
+      "Gerar deploy key SSH com escopo limitado ao repo",
+      "Ativar cron diário 04h pra snapshot automático",
+      "Validar backup com teste de restore em pasta temporária"
+    ],
+    "durationMinutes": 30
+  }
+}

@@ -1,0 +1,37 @@
+# ContextOS - Brand Positioning
+# Propagado de: context/brand.yaml + context/company-profile.yaml
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+positioning_statement:
+  for: null           # Para [publico]
+  who: null           # Que [necessidade]
+  brand_is: null      # [Marca] e
+  that: null          # Que [diferencial]
+  unlike: null        # Diferente de [concorrentes]
+  because: null       # Porque [razao para crer]
+
+value_proposition:
+  headline: null
+  subheadline: null
+  proof_points: []
+  cta: null
+
+competitive_differentiation:
+  category: null      # Em que categoria compete
+  unique_mechanism: null  # O mecanismo unico
+  proprietary_framework: null  # Metodo/framework proprietario
+  unfair_advantage: null  # Vantagem injusta
+
+market_position:
+  price_position: null   # Budget | Mid | Premium | Ultra-premium
+  quality_position: null # Como se posiciona em qualidade
+  perception_goal: null  # Como quer ser percebida
+
+metadata:
+  source_files:
+    - context/brand.yaml
+    - context/company-profile.yaml
+  status: INCOMPLETE

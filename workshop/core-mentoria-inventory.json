@@ -1,0 +1,342 @@
+[
+  {
+    "module": {
+      "id": "1ff95068-5efd-4d0b-8973-f0c1e5418c0a",
+      "titulo": "Pré-Mentoria 01 · Instalação e Visão Geral",
+      "ordem": 0,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "546e289a-9e8e-423d-8f34-2e49ef22157c",
+        "title": "Pré-Mentoria 01: Instalando o Claude Code e Entendendo Como Tudo Funciona",
+        "payload_id": "bonus-01",
+        "blocks": 56
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "7cb375d5-4933-44b5-a22d-4b29b0d13cd5",
+      "titulo": "Aulas Extras",
+      "ordem": 0,
+      "parent_id": "74dfc393-9bbe-4bd2-9461-4e21a07ecbb2"
+    },
+    "lessons": [
+      {
+        "id": "8ac0bf1e-79fb-419d-9688-7ca563111e50",
+        "title": "Use Cases: O Que Dá Pra Fazer Com Isso",
+        "payload_id": "encontro-02-09",
+        "blocks": 37
+      },
+      {
+        "id": "2c138a60-d121-4a8f-8abf-2f3ef27f78a7",
+        "title": "Resolvendo Problemas: Quando Algo Quebra",
+        "payload_id": "encontro-02-10",
+        "blocks": 65
+      },
+      {
+        "id": "faccc307-e771-45e6-b1fd-5b0f0db11480",
+        "title": "Backup: Snapshot Diário no GitHub Privado",
+        "payload_id": "encontro-02-11",
+        "blocks": 32
+      },
+      {
+        "id": "65835743-3637-4c5d-aee2-9713a85694ae",
+        "title": "Bônus · SSH Avançado: Chaves, Hardening, Multi-Servidor",
+        "payload_id": "encontro-02-12",
+        "blocks": 28
+      },
+      {
+        "id": "7002a371-7569-4fb6-93cf-faa9f89f1184",
+        "title": "Comandos OpenClaw · Referencia Completa",
+        "payload_id": "encontro-02-13",
+        "blocks": 94
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "9d03094f-3882-4611-a9a1-46fb2164f1f9",
+      "titulo": "Como Usar o Claude Code Como um Profissional",
+      "ordem": 1,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "6890de26-d019-434b-86d8-a75bc50611c9",
+        "title": "Pré-Encontro: Instalando o Claude Code e Entendendo Como Tudo Funciona",
+        "payload_id": "extra-claude-code-pro-01",
+        "blocks": 45
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "a0787ba1-8480-476f-8e4c-0a5d90692583",
+      "titulo": "Encontro 1 · Abertura, Setup e Visão Profissional",
+      "ordem": 2,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "a6606424-a769-4810-abd1-b13ad8435024",
+        "title": "Gravação Completa do Encontro 1 (Ao Vivo · 3h35min)",
+        "payload_id": "encontro-01-00",
+        "blocks": 55
+      },
+      {
+        "id": "5697edec-4c50-4ecb-abad-0117d34518ab",
+        "title": "Introdução da Mentoria · O Que Vamos Construir nos Próximos 60 Dias",
+        "payload_id": "encontro-01-01",
+        "blocks": 26
+      },
+      {
+        "id": "ee7c43ce-d8ff-4843-8e25-7ddd07c061da",
+        "title": "Claude Code: Instalando e Configurando a Sua Estrutura Completa",
+        "payload_id": "encontro-01-02",
+        "blocks": 41
+      },
+      {
+        "id": "888096b2-dbfa-43a9-820a-a1420c5b7b50",
+        "title": "Como Usar o Claude Code Como um Profissional",
+        "payload_id": "encontro-01-03",
+        "blocks": 144
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "74dfc393-9bbe-4bd2-9461-4e21a07ecbb2",
+      "titulo": "Encontro 2: Construindo seu Primeiro Agente",
+      "ordem": 3,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "882d0254-50f3-4327-9153-687dc5d37d39",
+        "title": "Abertura: O Que É um Agente de Verdade",
+        "payload_id": "encontro-02-01",
+        "blocks": 22
+      },
+      {
+        "id": "4f3fe119-7cc5-466c-af43-698e4b7cb5cf",
+        "title": "Setup: Do Zero ao Primeiro \"Oi\" no Telegram",
+        "payload_id": "encontro-02-02",
+        "blocks": 114
+      },
+      {
+        "id": "726a6e39-f5a3-4046-93c6-dfaaf8dbdcee",
+        "title": "Segurança: Blindando Seu Agente",
+        "payload_id": "encontro-02-03",
+        "blocks": 55
+      },
+      {
+        "id": "a957a51f-4e84-45fc-8a4a-f71befb6e90b",
+        "title": "Identidade: Dando Personalidade ao Seu Agente",
+        "payload_id": "encontro-02-04",
+        "blocks": 55
+      },
+      {
+        "id": "84213880-0615-4e28-a67c-64ce4db29689",
+        "title": "Arquitetura de Memória: Resolvendo o Problema do Alzheimer Digital",
+        "payload_id": "encontro-02-05",
+        "blocks": 60
+      },
+      {
+        "id": "8366b75a-2fe7-4386-a32f-2e2f5bd03bda",
+        "title": "Integrações & Crons: Conectando ao Mundo Real",
+        "payload_id": "encontro-02-06",
+        "blocks": 49
+      },
+      {
+        "id": "6a4fd882-3b41-41de-864e-164093ca792f",
+        "title": "Proatividade: Heartbeats e Automações",
+        "payload_id": "encontro-02-07",
+        "blocks": 47
+      },
+      {
+        "id": "25bbbed0-fbbe-490a-9998-ea86403006fc",
+        "title": "Manutenção: Mantendo o Agente Vivo e Saudável",
+        "payload_id": "encontro-02-08",
+        "blocks": 59
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "d5818017-4c11-4769-9c8f-61a65e08cf8f",
+      "titulo": "Construindo o Agente de Atendimento 24x7",
+      "ordem": 4,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "a6048878-e74f-4ef0-9bee-132ff80019ab",
+        "title": "Gravação Completa do Encontro 3 (Ao Vivo · 4h28min)",
+        "payload_id": "encontro-03-00",
+        "blocks": 156
+      },
+      {
+        "id": "394d066d-a5c2-4974-be45-defcc6ffeca4",
+        "title": "Construindo o Agente de Atendimento 24x7",
+        "payload_id": "encontro-03-01",
+        "blocks": 123
+      },
+      {
+        "id": "70e63d4a-4f8d-46f8-aeae-38e9ec0de5d8",
+        "title": "Bônus · Bot Telegram dedicado pro agente de atendimento",
+        "payload_id": "encontro-03-02",
+        "blocks": 30
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "4301da11-1ea4-45f1-a820-36caee7fe6c8",
+      "titulo": "CORE AIOS: As 5 Camadas do Sistema Operacional de IA",
+      "ordem": 5,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "a06b29c5-15c8-47af-9d26-7fab2669b8ec",
+        "title": "ContextOS · A Camada de Contexto do CORE AIOS",
+        "payload_id": "encontro-04-01",
+        "blocks": 100
+      },
+      {
+        "id": "c809e53d-92e8-4a59-8ac6-542fd2ec1e30",
+        "title": "Levando o ContextOS pro Agente OpenClaw · ContextOS no Telegram",
+        "payload_id": "encontro-04-03",
+        "blocks": 72
+      },
+      {
+        "id": "323461e5-06be-40b3-885c-b62d5c437e30",
+        "title": "GitHub como Cérebro Compartilhado · Sync Bidirecional Local ↔ Agente",
+        "payload_id": "encontro-04-04",
+        "blocks": 45
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "bf08f481-1e9b-4bf8-b3c7-4a4d007a38b1",
+      "titulo": "Content Skill: Criando Seu Agente de Conteúdo",
+      "ordem": 6,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "ed8aa7a4-a720-477a-a8d6-9cafbefc620b",
+        "title": "Content Skill: Criando Seu Agente de Conteúdo",
+        "payload_id": "encontro-05-01",
+        "blocks": 0
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "ca30e1e7-4322-4a28-b8d0-000639024611",
+      "titulo": "Copy Skill: Criando Seu Agente de Copy",
+      "ordem": 7,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "298e4d66-7df4-4bde-8976-851a35cd284a",
+        "title": "Copy Skill: Criando Seu Agente de Copy",
+        "payload_id": "encontro-06-01",
+        "blocks": 0
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "b684bc62-b6fc-41ab-85fc-4492e97af898",
+      "titulo": "Criando os Agentes que Escrevem Seu Conteúdo",
+      "ordem": 8,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "9fd06471-47de-45f6-9d0c-e828da2d48d7",
+        "title": "Parte 1 · Feedback e Hotseats",
+        "payload_id": "encontro-07-01",
+        "blocks": 29
+      },
+      {
+        "id": "c3b6b682-92f3-40ea-bb7a-1eb6a71d0e92",
+        "title": "Parte 2 · Construindo a Skill de Conteúdo",
+        "payload_id": "encontro-07-02",
+        "blocks": 39
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "8ef6bd69-afd0-4976-8b99-fba7f5033757",
+      "titulo": "Skill de Copy + Claude Code Profissional",
+      "ordem": 9,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "d3c3d09c-2b63-4965-b28b-9be5791e3600",
+        "title": "Parte 1 · A Skill de Copy: Fábrica de Copy High Ticket",
+        "payload_id": "encontro-08-01",
+        "blocks": 38
+      },
+      {
+        "id": "c6f8288b-807d-4f7c-991c-df1c8ec8f3b0",
+        "title": "Superpowers: A Metodologia que Disciplina o Claude Code",
+        "payload_id": "encontro-08-02",
+        "blocks": 38
+      },
+      {
+        "id": "1bb1824b-d945-4c68-aca7-93fab13b7876",
+        "title": "/goal: Trabalhar Sozinho Até Cumprir a Condição",
+        "payload_id": "encontro-08-03",
+        "blocks": 16
+      },
+      {
+        "id": "b24349fc-b0e2-4ccf-b0aa-b373facb77ac",
+        "title": "/loop: Repetir um Prompt em Intervalos",
+        "payload_id": "encontro-08-04",
+        "blocks": 26
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "a2acbcf8-4ee6-4201-b285-df5e58a5feda",
+      "titulo": "Dashboard: Construindo o Painel de Inteligência da Sua Empresa",
+      "ordem": 10,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "bb16b6a6-d7cf-45ed-b989-733b996d77c2",
+        "title": "Dashboard: Construindo o Painel de Inteligência da Sua Empresa",
+        "payload_id": "encontro-09-01",
+        "blocks": 0
+      }
+    ]
+  },
+  {
+    "module": {
+      "id": "105c5c4f-f5f6-4f15-8863-0aa9318e973a",
+      "titulo": "Como Monetizar o Que Você Construiu",
+      "ordem": 11,
+      "parent_id": null
+    },
+    "lessons": [
+      {
+        "id": "ddbf3c54-bb79-49c9-846f-ed61d68d944a",
+        "title": "Como Monetizar o Que Você Construiu",
+        "payload_id": "encontro-10-01",
+        "blocks": 0
+      }
+    ]
+  }
+]

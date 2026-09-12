@@ -1,0 +1,208 @@
+{
+  "id": "9fd06471-47de-45f6-9d0c-e828da2d48d7",
+  "titulo": "Parte 1 · Feedback e Hotseats",
+  "lesson_payload": {
+    "id": "encontro-07-01",
+    "qa": [
+      {
+        "answer": "Tenho uma teoria, e posso estar errado: manter alguém aquecido por muito tempo só com conteúdo é muito difícil. Eu mantenho com oferta. Newsletter mais conteúdo no Instagram já aquecem. É muito mais fácil fazer uma oferta nova pra quem já fez reunião e não fechou. Pega todo mundo que não fechou e manda uma proposta diferente.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Como mantenho meus leads aquecidos no médio e longo prazo? Estou tentando classificar a base com IA lendo reuniões e WhatsApp.",
+        "seekSeconds": 1891
+      },
+      {
+        "answer": "Você chega nos 15 tirando algo que vale 15 mil, não dando desconto. Faz uma oferta diferente: o plano completo é tudo por 30 mil; o plano essencial entrega o núcleo por 15 mil com menos itens. E a pergunta real é: foi preço ou foi medo de arriscar? Talvez o ticket pra esse perfil de cliente deva ser menor desde o início.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Ofertei 30 mil, o cara deu pra trás, quero voltar com 15. Como chego de volta?",
+        "seekSeconds": 2127
+      },
+      {
+        "answer": "Esse é exatamente o ponto: fazer as perguntas certas. A maior pergunta pra IA é 'o que eu não estou vendo?'. Quando você dá pra ela tudo o que está aprendendo mais o contexto da empresa, ela entende o todo e te ajuda a montar um plano pro seu objetivo, em vez de só executar a tarefa que você pediu.",
+        "askedBy": "Fabio Moro",
+        "question": "Eu estava perdido, com tanta coisa pra fazer. Pedi pra IA ler meu doc de anotações mais o contexto da empresa e montar um dashboard estratégico de prioridades. Ficou incrível, esse é o caminho?",
+        "seekSeconds": 2599
+      }
+    ],
+    "title": "Parte 1 · Feedback e Hotseats",
+    "video": {
+      "title": "Encontro 7 — Feedback e Hotseats (09/06/2026)",
+      "embedSrc": "https://fathom.video/share/6TYd2MH17ARUBNyn8F6doYJpwwTDhZXB",
+      "provider": "raw",
+      "sourceUrl": "https://fathom.video/share/6TYd2MH17ARUBNyn8F6doYJpwwTDhZXB",
+      "recordedAt": "2026-06-09"
+    },
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta é a aula em formato de leitura",
+        "content": "Você pode assistir a gravação completa OU ler tudo aqui embaixo. O texto não é um resumo do vídeo, é a aula inteira escrita. Esta é a Parte 1 do Encontro 7: o bloco de feedback e dúvidas da turma. A Parte 2 cobre a construção da Skill de Conteúdo.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "O que rolou neste bloco",
+        "content": "Antes de colocar a mão na massa na Skill de Conteúdo, Torriani abriu a sessão respondendo às dúvidas reais da turma. Rodrigo trouxe o problema de leads e oferta; Fabio mostrou um dashboard estratégico que a IA montou pra ele. No meio, vieram as teses de negócio que sustentam o curso inteiro.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Aquecer lead: oferta vence conteúdo"
+      },
+      {
+        "type": "text",
+        "content": "Rodrigo trouxe a dor mais comum de quem trabalha com vendas: tem uma base de leads que não fechou e quer mantê-los aquecidos por meses, idealmente lendo reuniões e conversas de WhatsApp com IA pra classificar cada um. A pergunta dele era como sustentar esse aquecimento no médio e longo prazo."
+      },
+      {
+        "type": "text",
+        "content": "A resposta do Torriani inverteu a lógica. Manter alguém aquecido por muito tempo só com conteúdo é difícil e caro. O que mantém o lead quente de verdade é oferta. Newsletter mais conteúdo no Instagram já fazem o trabalho de presença. O ativo real está em quem já sentou numa reunião e não fechou: pra essa pessoa, uma oferta nova é muito mais fácil de converter do que qualquer sequência de nutrição."
+      },
+      {
+        "text": "É muito mais fácil fazer uma oferta nova pra quem já fez reunião e não fechou do que qualquer outra coisa. Pega todo mundo que não fechou e manda uma proposta diferente.",
+        "type": "quote"
+      },
+      {
+        "type": "video-cue",
+        "label": "Hotseat do Rodrigo: leads e aquecimento",
+        "description": "Rodrigo explica o problema da base de leads e Torriani apresenta a tese de aquecer com oferta, não com conteúdo.",
+        "seekSeconds": 1891
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como reabrir uma negociação perdida"
+      },
+      {
+        "type": "text",
+        "content": "Rodrigo tinha ofertado 30 mil, o cliente recuou, e ele queria voltar com 15 mil. A armadilha aqui é simplesmente dar desconto: isso desvaloriza o que você vende e ensina o cliente a esperar você baixar. A saída é fazer uma oferta diferente, não a mesma mais barata."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Plano completo (30 mil): tudo incluso, mais opções e garantias",
+            "Plano essencial (15 mil): o núcleo que resolve, com menos itens",
+            "O cliente escolhe escopo, não desconto",
+            "Você protege o valor do produto cheio"
+          ],
+          "title": "Voltar com oferta diferente",
+          "result": "Tira algo que vale 15 mil e entrega o essencial por 15 mil.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Mesma entrega por menos dinheiro",
+            "Sinaliza que o preço inicial era inflado",
+            "Treina o cliente a sempre pedir abatimento",
+            "Você perde margem sem ganhar percepção de valor"
+          ],
+          "title": "Voltar com desconto",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "A pergunta antes da oferta",
+        "content": "Antes de remontar a proposta, descubra se a objeção foi preço ou medo. Preço se resolve com escopo. Medo de arriscar e não ver retorno se resolve com prova e garantia. Pode ser também que o ticket certo pra esse perfil de cliente seja menor desde o começo.",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Reabrindo a oferta de 30k pra 15k",
+        "description": "Torriani mostra como chegar de volta no cliente com uma oferta de escopo reduzido em vez de desconto puro.",
+        "seekSeconds": 2127
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A melhor pergunta pra IA: o que eu não estou vendo?"
+      },
+      {
+        "type": "text",
+        "content": "Fabio chegou perdido, com tanta coisa pra fazer que não sabia por onde começar. Em vez de pedir pra IA executar uma tarefa, ele fez algo diferente: mandou a IA ler o documento de anotações dele somado ao contexto da empresa e montar um dashboard estratégico de prioridades por departamento. O resultado, segundo ele, ficou incrível, e trouxe prioridades que ele não tinha enxergado sozinho."
+      },
+      {
+        "type": "text",
+        "content": "Pra Torriani, esse é o ponto central de como usar IA em negócio. A maioria pergunta 'preciso fazer X, me ajuda a fazer X'. A pergunta de maior alavancagem é outra: o que eu não estou vendo? Quando você dá à IA tudo o que está aprendendo mais o contexto real da empresa, ela passa a enxergar o todo e te devolve um plano que mira o seu objetivo, não só a tarefa da vez."
+      },
+      {
+        "text": "A maior pergunta que você tem que fazer pra IA é: o que eu não estou vendo.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "Por que isso depende de contexto",
+        "content": "O diagnóstico do Fabio só foi bom porque a IA tinha o contexto da empresa pra ler. Sem contexto, a resposta seria genérica. Guarde esse fio: ele é o tema central da Parte 2 desta aula.",
+        "variant": "success"
+      },
+      {
+        "type": "video-cue",
+        "label": "Dashboard estratégico do Fabio",
+        "description": "Fabio compartilha a tela mostrando o diagnóstico por fases e departamentos que a IA montou lendo o contexto da empresa.",
+        "seekSeconds": 2599
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Resolva o problema de quem tem dinheiro"
+      },
+      {
+        "type": "text",
+        "content": "No meio dos hotseats, Torriani puxou a tese de negócio que sustenta o resto. A máxima, na linha de Hormozi e Dan Kennedy, é direta: se você quer ser rico, resolva problema de rico. Quem ganha dinheiro de verdade resolve o problema de quem tem dinheiro pra pagar. Isso muda quem você prospecta e o tamanho do ticket que você pratica."
+      },
+      {
+        "text": "Se você quer ganhar dinheiro de verdade, você tem que resolver o problema de quem tem dinheiro pra pagar.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "Antes de olhar pra fora, porém, a ordem é cuidar da casa. A primeira coisa é resolver o seu negócio internamente, antes de tentar vender solução pra fora. É o mesmo princípio do diagnóstico do Fabio: organizar o próprio contexto primeiro."
+      },
+      {
+        "text": "A primeira coisa que você tem que fazer é cuidar do seu negócio internamente, antes de pensar em fazer alguma coisa externa.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Entrega de graça, cobra a implementação"
+      },
+      {
+        "type": "text",
+        "content": "O modelo de monetização que Torriani disse estar adotando, e que segundo ele é o que mais pega na era da IA: entregue de graça o que você sabe, e cobre pela implementação. O conhecimento virou commodity, o repertório e a execução é que viraram o diferencial. O dinheiro está em assumir a operação do cliente, não em vender o passo a passo."
+      },
+      {
+        "text": "Entrega de graça o que você sabe, mas cobra a implementação. Nessa era de IA, é o que mais está pegando.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "Como exemplo concreto de oferta nova, ele citou assumir a operação de geração de leads de um cliente por 5 mil por mês mais 10% das vendas. O conteúdo e o método ficam abertos; o que se cobra é fazer acontecer dentro do negócio do cliente."
+      },
+      {
+        "type": "callout",
+        "title": "Fecho da Parte 1",
+        "content": "Os hotseats deram o porquê: oferta aquece, contexto revela o que você não vê, e a implementação é o que se cobra. A Parte 2 dá o como: construir o squad de agentes que produz seu conteúdo, plugado ao seu contexto.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Perguntas da turma"
+      }
+    ],
+    "status": "available",
+    "eyebrow": "ENCONTRO 7 · PARTE 1 DE 2",
+    "duration": 60,
+    "schedule": [],
+    "subtitle": "Tirando dúvidas reais da turma sobre leads, ofertas e diagnóstico estratégico com IA",
+    "transcript": "transcripts/core-ia-mentoria/encontro-zoom-09-06.md",
+    "learningGoals": [
+      "Entender por que aquecer lead com oferta funciona melhor que aquecer só com conteúdo",
+      "Saber como reabrir uma negociação perdida com uma oferta diferente (não com desconto puro)",
+      "Usar a IA pra responder 'o que eu não estou vendo no meu negócio?' em vez de só executar tarefas",
+      "Aplicar a lógica de resolver o problema de quem tem dinheiro pra pagar",
+      "Reconhecer o modelo 'entrega de graça o que você sabe, cobra a implementação'"
+    ]
+  }
+}

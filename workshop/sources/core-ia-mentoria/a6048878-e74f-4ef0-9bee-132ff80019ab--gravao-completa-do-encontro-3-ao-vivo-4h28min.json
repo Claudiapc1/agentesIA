@@ -1,0 +1,1587 @@
+{
+  "id": "a6048878-e74f-4ef0-9bee-132ff80019ab",
+  "titulo": "Gravação Completa do Encontro 3 (Ao Vivo · 4h28min)",
+  "lesson_payload": {
+    "id": "encontro-03-00",
+    "qa": [
+      {
+        "answer": "Recomendo que tenha outro número, mas não necessariamente precisa. Tem uma coisa chamada allowlist · você coloca só o seu número (ou o outro), então ele só responde aquele número. Nos outros, não responde. Se você não quer deixar o agente respondendo aleatório, configura o allowlist e fica seguro.",
+        "askedBy": "Júlio Peraça",
+        "question": "Pra conectar o agente no WhatsApp, eu tenho que ter um número separado?",
+        "seekSeconds": 4080
+      },
+      {
+        "answer": "É possível, mas você vai ter que ver qual delas é. Lá na Skill OpenClaw OS tem a parte específica de cada uma (Identity, Sessions, etc). Cada uma tem sua especificidade · você vai seguindo ela. Pergunta pro agente direto: \"cara, eu fiz isso, parei na etapa tal e quero refazer, como faço? Qual o comando?\" Ele vai te guiar.",
+        "askedBy": "Fábio (Le Pera)",
+        "question": "Caso eu queira refazer alguma etapa das 12 do setup inicial, é possível?",
+        "seekSeconds": 3270
+      },
+      {
+        "answer": "Acontece de desconectar (fechou app, trocou aparelho, sessão expirou). Faz logout primeiro · `openclaw channels logout --channel whatsapp --account NOME` · e depois login de novo · `openclaw channels login --channel whatsapp --account NOME`. Os comandos são iguais, só troca login por logout. Vai gerar QR code novo.",
+        "askedBy": "turma",
+        "question": "Como faço se o WhatsApp desconectar do agente?",
+        "seekSeconds": 5400
+      },
+      {
+        "answer": "O Terminal nativo do Mac não renderiza QR Code em ASCII direito · cada caractere fica com tamanho errado. Solução: baixa o **CMUX** (procura no Google). É um terminal alternativo que renderiza certinho. Abre o CMUX, conecta SSH na VPS de novo, roda o mesmo comando · QR aparece perfeito.",
+        "askedBy": "turma",
+        "question": "O meu QR code aparece quebrado no Terminal do Mac · não consigo escanear. O que fazer?",
+        "seekSeconds": 4800
+      },
+      {
+        "answer": "Esse atendente é pra estar fora, não é só pra você. O objetivo é que ele substitua o Fábio, não que ele ajude o Fábio internamente. Pra interno, você usa o que criou no Encontro 2 (Leia, no seu caso). Pra externo, esse novo. Pense: o que só o Fábio sabe hoje, e que depende do Fábio pra responder qualquer coisa? Tudo isso vai pro agente externo.",
+        "askedBy": "Fábio (Le Pera)",
+        "question": "Eu crio um atendente pra minha empresa ou um atendente pra mim?",
+        "seekSeconds": 11820
+      },
+      {
+        "answer": "O Hurley É a equipe Peraça (o WhatsApp da empresa). Você não vai abrir uma janela \"Hurley\" separada · você vai abrir a janela da equipe Peraça e o Hurley responde lá. Se você liberou seu número no allowlist do Hurley, quando você mandar mensagem pro número da empresa, o Hurley responde. Outras pessoas que mandarem, ele ignora. É um \"modo Hurley\" do WhatsApp da empresa.",
+        "askedBy": "Júlio Peraça",
+        "question": "Como o Hurley vai me responder se ele não tem um número diferente do da empresa?",
+        "seekSeconds": 9900
+      },
+      {
+        "answer": "Você não está fazendo IA First. Você tá fazendo na força bruta. Investe 1 dia construindo o agente de conteúdo. Depois ele entrega os 28 conteúdos em horas. Engenharia reversa dos seus posts que deram certo + 3 perfis virais do nicho → padrão extraído + sua metodologia → conteúdos gerados. Já fiz isso ontem em 2-3h e tenho 30 conteúdos novos prontos. A barreira é mental, não técnica.",
+        "askedBy": "Júlio Peraça",
+        "question": "A curva de aprendizagem disso tudo me preocupa · eu tenho que entregar conteúdos atrasados pros alunos. Como dedicar tempo pra construir os agentes?",
+        "seekSeconds": 13800
+      },
+      {
+        "answer": "Duas formas principais: (1) substituir um agente de atendimento que você já tem em outra plataforma (você tem o Isadora no N8N · pode migrar pro OpenClaw se quiser unificar); (2) usar como **inteligência operacional** · agente lê todas as suas conversas de WhatsApp, identifica leads quentes, sinaliza quem está sem resposta, monta dashboards, conecta com dados de campanha da Meta. Não precisa ser o que responde · pode ser o que processa.",
+        "askedBy": "Rodrigo",
+        "question": "No meu negócio (consultoria, não mentoria), como posso usar esse agente?",
+        "seekSeconds": 14760
+      },
+      {
+        "answer": "Clica no link · ele abre o arquivo no navegador. Aí: `Cmd+S` no Mac (ou `Ctrl+S` no Windows) → salva como `.md`. Ou: botão direito no link da aula → \"Salvar link como\" → escolhe a pasta. Os arquivos ficam em `/downloads/agente-atendimento/`.",
+        "askedBy": "Sérgio / Júlio",
+        "question": "Como faço pra baixar os 10 templates do Alfred? Quando clico, abre no navegador.",
+        "seekSeconds": 16140
+      },
+      {
+        "answer": "Sim, mas eu confesso que ainda não cheguei nessa parte. O caminho seria: pergunta pro Claude · \"qual a melhor metodologia pra tratar X fotos com Y critérios?\". Procura projetos open source de tratamento de foto que você possa rodar local. Aí cria um agente que orquestra isso. Eu fui pra criação de imagens (criativos) e não pra tratamento, mas o princípio é igual: define a metodologia primeiro, depois automatiza.",
+        "askedBy": "turma",
+        "question": "Edição de fotos me toma muito tempo · existe alguma forma de criar um agente pra isso?",
+        "seekSeconds": 15960
+      }
+    ],
+    "tag": "Gravação · 12/Mai",
+    "title": "Gravação Completa do Encontro 3 (Ao Vivo · 4h28min)",
+    "video": {
+      "title": "CORE IA · Encontro 3 · Criando o Agente de Atendimento 24/7",
+      "embedSrc": "https://player.scaleup.com.br/embed/16eb2fe1621d6340933fc4cf1df93a9d5a1387d4",
+      "provider": "scaleup",
+      "sourceUrl": "https://fathom.video/share/w13sfRUy5vqqfYfWaH2wgZkzMyhwNyZA",
+      "recordedAt": "2026-05-12",
+      "durationSeconds": 16080
+    },
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta é a aula em formato de leitura",
+        "content": "Você pode **assistir o vídeo completo** (4h28min) no player acima ou **ler tudo aqui embaixo** · a aula está sintetizada em texto com diagramas, comandos reais e citações exatas. Quando aparecer um botão **▶ ASSISTIR** dentro do conteúdo, é porque ali tem uma demonstração ao vivo, um erro real sendo resolvido, ou uma conversa estratégica que vale ver no vídeo.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Antes de começar · onde a turma chegou"
+      },
+      {
+        "type": "text",
+        "content": "No **Encontro 1**, instalamos o Claude Code e entendemos como usar ele como ferramenta principal · não só pra programar, mas pra qualquer coisa do dia a dia (classificar leads por modelo de celular, criar relatórios, automatizar entrega de tarefas).\n\nNo **Encontro 2**, criamos o primeiro agente · cada aluno levantou uma VPS Hostinger, instalou o OpenClaw e conectou um bot Telegram. No final da aula, todo mundo estava conversando com o próprio agente (o Júlio criou o Jacob, o Fábio criou a Leia, o Rodrigo criou a Sena, o Sérgio começou no Senna).\n\nHoje, o objetivo é diferente: **criar um SEGUNDO agente** · um atendente 24x7 que não fala com o dono, fala com **quem paga**. Mentorados, alunos, pacientes. Outro nível de cuidado, outro nível de regras."
+      },
+      {
+        "type": "callout",
+        "title": "O recado que abre a aula",
+        "content": "Vocês têm que começar a treinar o agente de vocês. **Bah, o que vai acontecer?** Eu vou te chamar numa conversa, vou te ajudar a configurar a VPS, vou te ajudar com tudo. Tem aqui todo o processo passo a passo no playbook. Se você quiser ir fazendo agora e me perguntando ao longo do tempo, eu vou te ajudando e respondendo. Mas você precisa começar.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Demo do Alfred respondendo · e o problema da regra ampla demais"
+      },
+      {
+        "type": "text",
+        "content": "O Torriani abre a aula mostrando o **Alfred** (o agente real dele, em produção) respondendo perguntas no grupo da mentoria. Pergunta clara, resposta certa. Mas aí ele faz um teste arriscado:"
+      },
+      {
+        "text": "Roy, como está o tempo em Florianópolis? Vamos ver se ele vai me responder. A resposta que eu espero dele é, cara, não posso responder isso.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "O Roy responde sobre o tempo. **Errado.** Esse era exatamente o comportamento que o Torriani queria bloquear. O agente está respondendo **fora da alçada dele**.\n\nE aí vem o ajuste em tempo real:"
+      },
+      {
+        "text": "Eu vi que você está respondendo tudo, qualquer coisa que se pergunte. Eu preciso ajustar isso, pra que ele só responda o que ele foi treinado pra responder, e qualquer assunto fora não é pra ser respondido.",
+        "type": "quote"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a correção do Alfred ao vivo",
+        "description": "Torriani conversa com o ROI/Alfred no Telegram, pede pra criar a regra de bloqueio, ele reescreve o AGENTS.md adicionando \"gate absoluto de escopo\" e remove os gatilhos amplos do tipo \"pedido de ajuda\".",
+        "seekSeconds": 600
+      },
+      {
+        "type": "callout",
+        "title": "O insight central desse momento",
+        "content": "Quando o agente alucina, **não dá pra culpar a LLM**. A LLM faz o que a regra deixa fazer. Se você escreveu \"responda quando houver pedido de ajuda\", ela vai responder tudo · porque tudo parece pedido de ajuda. A regra precisa ser **negativa e específica**: \"se não estiver sustentado por PROTOCOLO.md, ESTRATEGIAS.md ou USER.md → NO_REPLY\".",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fábio entra na conversa"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Fábio (Le Pera)",
+          "content": "Não sei se eu estou nesse estágio, mas pra mim acontece muito isso. Ele se perde, às vezes não consulta, ou traz um dado, depois traz outro."
+        },
+        "output": {
+          "label": "Torriani",
+          "content": "Isso é a LLM. É o ponto onde a gente vai começar a configurar ele pra que fique mais inteligente. Por isso o treinamento é o jogo todo."
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que vamos fazer no Encontro 3"
+      },
+      {
+        "type": "text",
+        "content": "O Torriani abre o playbook na aula do dia (a `encontro-03-01` que vocês estão lendo agora como complemento) e mostra a estrutura:"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Parte 1",
+            "title": "Criar o agente no OpenClaw (terminal)",
+            "description": "A estrutura técnica. 6 comandos. Sem treinamento ainda. Sem WhatsApp ativo ainda."
+          },
+          {
+            "badge": "Parte 2",
+            "title": "Treinar o agente (10 arquivos .md)",
+            "description": "O coração da aula. Templates do Alfred baixáveis. Construção via Claude Code no Mac."
+          },
+          {
+            "badge": "Parte 3",
+            "title": "Testar antes de produção",
+            "description": "20 perguntas (10 normais + 5 difíceis + 3 fora + 2 que exigem humano)."
+          },
+          {
+            "badge": "Parte 4",
+            "title": "Ligar no WhatsApp em modo seguro",
+            "description": "Allowlist primeiro. Bind. Botão de pânico."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "🎯 A frase central da aula",
+        "content": "Você não cria um atendente 24/7 escolhendo um modelo. Você cria um atendente 24/7 organizando conhecimento, regras, tom e limites · e só depois liga o WhatsApp.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 2 modos de operação que cada um vai escolher"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Agente lê tudo do grupo e decide quando responder. Fica `NO_REPLY` em conversa paralela. Mais potente, mais arriscado."
+          ],
+          "title": "Modo B · Ativo",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Agente só responde se for arrobado (`@agente`). Sem menção, fica em silêncio. **Recomendado pra começar.**"
+          ],
+          "title": "Modo A · Menção",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a explicação do \"agente que conversa com quem paga\"",
+        "description": "Torriani explica por que esse agente é diferente do que foi criado no E2 (que conversa com o dono) · agora o agente conversa com alunos pagantes, alto risco reputacional.",
+        "seekSeconds": 1500
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parte 1 · Criar o agente no OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "Antes de qualquer terminal, **definir o agente no papel**. Esse é o passo que muita gente pula e depois precisa refazer."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "As 4 peças que formam um agente"
+      },
+      {
+        "type": "mermaid",
+        "diagram": "graph LR\n  A[agent id<br/>identificador técnico] --> B[workspace<br/>pasta dos .md]\n  B --> C[model<br/>quem responde]\n  C --> D[binding<br/>ponte canal ↔ agente]\n  style A fill:#7c3aed,stroke:#fff,color:#fff\n  style B fill:#06b6d4,stroke:#fff,color:#fff\n  style C fill:#84cc16,stroke:#fff,color:#fff\n  style D fill:#f87171,stroke:#fff,color:#fff"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Ficha do agente · preenchimento no papel"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Ficha (antes de rodar comando)",
+            "type": "comment"
+          },
+          {
+            "text": "Nome visível: Atendente da Mentoria",
+            "type": "output"
+          },
+          {
+            "text": "Agent ID: atendente-mentoria  (no exemplo da aula: Alfred)",
+            "type": "output"
+          },
+          {
+            "text": "Objetivo: atender dúvidas dos alunos da mentoria 24/7",
+            "type": "output"
+          },
+          {
+            "text": "Público: alunos pagantes",
+            "type": "output"
+          },
+          {
+            "text": "Canal futuro: WhatsApp (grupo + DM)",
+            "type": "output"
+          },
+          {
+            "text": "Modelo: openai-codex/gpt-5.5",
+            "type": "output"
+          },
+          {
+            "text": "Workspace: /root/.openclaw/workspace/atendente-mentoria",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Regra de naming · case sensitive",
+        "content": "Use **minúsculas, sem espaço, sem acento, hífen pra separar**. Exemplos válidos: `atendimento`, `suporte-premium`, `agente-vendas`. Inválidos: `Atendimento Premium 24/7!!!`, `agente do João`, `Atendente Mentoria`. Fábio perguntou ao vivo se é case sensitive · sim, é.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Comando 1 · criar o agente"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "openclaw agents add alfred --workspace /root/.openclaw/workspace/alfred --model openai-codex/gpt-5.5 --non-interactive",
+            "type": "command"
+          },
+          {
+            "text": "Config updated",
+            "type": "output"
+          },
+          {
+            "text": "Workspace OK",
+            "type": "output"
+          },
+          {
+            "text": "Session OK",
+            "type": "output"
+          },
+          {
+            "text": "Agent: alfred",
+            "type": "output"
+          },
+          {
+            "text": "Workspace: /root/.openclaw/workspace/alfred",
+            "type": "output"
+          },
+          {
+            "text": "Model: openai-codex/gpt-5.5",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "O que esse comando faz",
+        "content": "Registra o agente no OpenClaw, cria a pasta `/root/.openclaw/workspace/{nome}/` e amarra o modelo. **Não cria os arquivos de treinamento** · isso é a Parte 2.",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o Torriani criando o agente ao vivo · troca de nome no Antigravity",
+        "description": "Torriani abre o Antigravity (editor da Microsoft que ele recomenda) pra trocar \"atendente-mentoria\" pra \"Alfred\" antes de colar no terminal. Júlio pergunta se precisa ser tudo minúsculo · resposta: sim, case sensitive.",
+        "seekSeconds": 3300
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Comando 2 · listar agentes"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "openclaw agents list --bindings",
+            "type": "command"
+          },
+          {
+            "text": "main      → default route",
+            "type": "output"
+          },
+          {
+            "text": "alfred    → workspace: /root/.openclaw/workspace/alfred",
+            "type": "output"
+          },
+          {
+            "text": "                model: openai-codex/gpt-5.5",
+            "type": "output"
+          },
+          {
+            "text": "                binding: (none)",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "O agente aparece com workspace correto, modelo certo, e binding **vazio** · isso é proposital. Só vai bindar lá na Parte 4, depois do agente treinado e testado.",
+        "variant": "success"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o time completo de agentes do Torriani",
+        "description": "Na VPS de produção, o Torriani mostra todos os agentes que ele já criou: Alfred, Maestro, Pulse, Sentinel, Venom, Prisma, Dragon, Narrator, Chrome, Legend. Cada um com uma função específica que ele vai destrinchar nas próximas semanas.",
+        "seekSeconds": 3780
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Comando 3 · Criar a conta WhatsApp dentro do OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "Atenção: **isso NÃO conecta o WhatsApp ainda**. Só cria a conta lógica dentro do OpenClaw que vai ser usada mais tarde."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "openclaw channels add --channel whatsapp --account alfred --name \"Alfred (0237)\"",
+            "type": "command"
+          },
+          {
+            "text": "Channel account created: whatsapp:alfred",
+            "type": "output"
+          },
+          {
+            "text": "Ready for login.",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que o \"0237\" no nome",
+        "content": "É um padrão pessoal do Torriani: ele bota o **final do número de telefone** no nome do account pra facilitar identificação visual depois. Você não precisa fazer isso · é só convenção dele. Se você não tem o telefone definido ainda, só usa o nome simples (\"Alfred\", \"Hurley\", etc).",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Júlio: \"preciso de um número separado?\""
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Júlio Peraça",
+          "content": "Pra conectar ele ao WhatsApp, eu tenho que ter um outro número, então?"
+        },
+        "output": {
+          "label": "Torriani",
+          "content": "Eu recomendo que você tenha outro número, mas não necessariamente precisa. A gente vai ver hoje sobre isso. Tem uma coisa chamada allowlist · você coloca só o seu número (ou o outro), então ele só responde aquele número. Nos outros, não responde."
+        }
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a decisão de número e a configuração da conta",
+        "description": "Torriani discute com a turma o critério pra escolher o número. Fábio decide usar o WhatsApp da empresa, Rodrigo pergunta sobre conectar em segundo número, Júlio decide não conectar WhatsApp por enquanto.",
+        "seekSeconds": 4080
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Comando 4 · Login do WhatsApp · QR Code"
+      },
+      {
+        "type": "callout",
+        "title": "Antes de rodar · qual número você vai usar",
+        "content": "Você precisa de um **WhatsApp dedicado** pro agente · não use seu pessoal. Recomendado: chip novo, conta criada nesse chip, número que você comunica como \"Atendimento [Mentoria]\" ou \"Suporte [Marca]\".",
+        "variant": "warning"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "openclaw channels login --channel whatsapp --account alfred",
+            "type": "command"
+          },
+          {
+            "text": "[QR CODE em ASCII aparece no terminal]",
+            "type": "output"
+          },
+          {
+            "text": "Aguardando escaneamento...",
+            "type": "output"
+          },
+          {
+            "text": "✓ Linked",
+            "type": "output"
+          },
+          {
+            "text": "✓ Running",
+            "type": "output"
+          },
+          {
+            "text": "✓ Connected",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Troubleshooting · Terminal Mac vs CMUX"
+      },
+      {
+        "type": "text",
+        "content": "Esse foi o primeiro grande tropeço da aula. O Torriani roda o comando e o QR Code aparece **quebrado** · cada caractere com tamanho errado, impossível escanear. A causa? **O Terminal nativo do Mac não renderiza QR Code em ASCII direito.**\n\nA solução:"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "1",
+            "title": "Sai do Terminal Mac",
+            "description": "Não dá pra ler QR Code ali."
+          },
+          {
+            "badge": "2",
+            "title": "Instala o CMUX",
+            "description": "Baixa em https://cmux.io (procura no Google \"CMUX terminal\"). É um terminal alternativo que renderiza ASCII corretamente."
+          },
+          {
+            "badge": "3",
+            "title": "Abre o CMUX, conecta SSH na VPS de novo",
+            "description": "Roda o mesmo `openclaw channels login` lá dentro · agora o QR Code aparece perfeito."
+          },
+          {
+            "badge": "4",
+            "title": "Escaneia com o WhatsApp do agente",
+            "description": "Aparelhos conectados → escanear → aparece \"linked\" no terminal."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o troubleshooting em tempo real · 17 minutos de aula",
+        "description": "Esse momento é puro **erro real sendo resolvido**. Júlio não tem o \"+\" no terminal, Rodrigão pergunta como entrar na VPS, Sérgio precisa configurar SSH. Vale ver pra entender que não é só você que erra · todo mundo passa por isso.",
+        "seekSeconds": 4800
+      },
+      {
+        "type": "callout",
+        "title": "Macete · alias SSH no Mac",
+        "content": "O Torriani mostra na hora um truque: no Mac dele, ele digita só \"VPS\" no terminal e já loga direto. É um **alias SSH** que ele configurou no `~/.ssh/config`. Tem aula bônus sobre isso no Encontro 2 (\"Bônus SSH com chave\"). Vale assistir depois.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Comando 5 · Validar status da conexão"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "openclaw channels status --deep",
+            "type": "command"
+          },
+          {
+            "text": "whatsapp:alfred",
+            "type": "output"
+          },
+          {
+            "text": "  state: linked",
+            "type": "output"
+          },
+          {
+            "text": "  daemon: running",
+            "type": "output"
+          },
+          {
+            "text": "  network: connected",
+            "type": "output"
+          },
+          {
+            "text": "  last_heartbeat: 2s ago",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Critério de OK · 3 verdes",
+        "content": "Tem que aparecer `linked`, `running` e `connected`. Se faltar qualquer um, **não avança**. Roda `openclaw channels logout` e `openclaw channels login` de novo (esse é o macete: os comandos são iguais, só troca login por logout e vice-versa).",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Comando 6 · Modo seguro (o jogo todo)"
+      },
+      {
+        "type": "text",
+        "content": "Esse é o momento mais delicado da aula. **O agente está conectado no WhatsApp da empresa do aluno**, mas ainda sem treinamento nenhum. Se alguém mandar mensagem nesse número agora, o agente vai responder qualquer coisa · vai inventar, vai alucinar, vai queimar reputação com cliente real.\n\n**Bloqueio total primeiro. Liberação seletiva depois.**"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Primeira tentativa · pelo Telegram (falhou)"
+      },
+      {
+        "type": "text",
+        "content": "A primeira ideia foi mandar o pedido pro próprio agente Telegram (ROI/Alfred/Jacob do aluno) executar a configuração. Não funcionou."
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Torriani envia pro ROI",
+          "content": "Acabei de configurar um agente no OpenClaw num canal de WhatsApp. Nome: Alfred. Preciso bloquear ele pra responder no DM e também nos grupos, deixando somente nos grupos que eu permitir. Você pode fazer essa configuração?"
+        },
+        "output": {
+          "label": "ROI responde (alucinando)",
+          "content": "Entendi, mas continuo ativo. No entanto, não tem uma ferramenta direta pra configurar essa restrição."
+        }
+      },
+      {
+        "type": "callout",
+        "title": "A regra que nasceu aqui",
+        "content": "**Nunca aceite a primeira resposta do agente.** Se ele disser \"não dá pra fazer\", insiste · ele provavelmente está alucinando ou não procurou direito. O Torriani aplica essa regra ao vivo: refaz a pergunta, dá mais contexto, manda pelo Claude Code direto, e funciona.",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a alucinação acontecendo em tempo real",
+        "description": "O agente diz \"não tem como\" e o Torriani insiste · \"diz pra ele te virar, faça o que tem que fazer\". Conversa real de alguns minutos até o agente finalmente encontrar o caminho certo (editar o openclaw.json direto).",
+        "seekSeconds": 5820
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Segunda tentativa · Claude Code direto na VPS (funcionou)"
+      },
+      {
+        "type": "text",
+        "content": "O caminho que **realmente funciona**: abrir o Claude Code dentro da pasta `~/.openclaw/` na VPS e pedir pra ele editar o arquivo de configuração."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "cd ~/.openclaw && claude",
+            "type": "command"
+          },
+          {
+            "text": "Claude Code iniciado em /root/.openclaw",
+            "type": "output"
+          },
+          {
+            "text": "Pronto pra receber instruções.",
+            "type": "output"
+          },
+          {
+            "text": "# (no chat do Claude Code)",
+            "type": "comment"
+          },
+          {
+            "text": "Você pode ler toda a configuração do OpenClaw, entender a pasta que a gente está, porque eu vou precisar fazer algumas alterações.",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que esse caminho funciona",
+        "content": "O Claude Code rodando localmente na VPS tem **acesso direto ao filesystem**. Ele lê o `openclaw.json`, entende a estrutura, aplica a mudança e valida · sem precisar passar por shell que o agente Telegram não tem.",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o pivot · do Telegram pro Claude Code direto",
+        "description": "Momento de decisão · o Torriani percebe que vai mais rápido se ele rodar Claude Code direto na VPS. Mostra também que dá pra usar o `openclaw config` (wizard interativo) como alternativa.",
+        "seekSeconds": 6180
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A estrutura real do openclaw.json · seção channels.whatsapp"
+      },
+      {
+        "type": "text",
+        "content": "Aqui está o **arquivo real** que o Torriani configurou ao vivo, com números fictícios pra exemplo. Esse JSON é o cérebro operacional do canal WhatsApp."
+      },
+      {
+        "type": "mermaid",
+        "diagram": "graph TB\n  A[openclaw.json] --> B[channels]\n  B --> C[whatsapp]\n  C --> D[enabled: true]\n  C --> E[dmPolicy<br/>controla DMs]\n  C --> F[groupPolicy<br/>controla grupos]\n  C --> G[allowFrom<br/>lista de números]\n  C --> H[accounts]\n  H --> I[alfred]\n  I --> J[name]\n  I --> K[dmPolicy específico]\n  I --> L[groupPolicy específico]\n  I --> M[groups<br/>ID@g.us : requireMention]\n  style A fill:#1e293b,stroke:#fff,color:#fff\n  style E fill:#f87171,stroke:#fff,color:#fff\n  style F fill:#06b6d4,stroke:#fff,color:#fff\n  style M fill:#84cc16,stroke:#fff,color:#fff"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 3 valores possíveis de cada policy"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "disabled",
+            "title": "Bloqueio total",
+            "description": "Ninguém manda mensagem nesse canal/contexto. Mesmo que mande, agente não responde nem lê."
+          },
+          {
+            "badge": "allowlist",
+            "title": "Lista de permissão",
+            "description": "Só números (ou IDs de grupo) listados em `allowFrom` (ou `groups`) conseguem disparar resposta. Resto, silêncio."
+          },
+          {
+            "badge": "open",
+            "title": "Aberto total",
+            "description": "Qualquer um manda, agente responde. Geralmente combinado com `allowFrom: [\"*\"]`. **Modo produção quando o agente já foi testado.**"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "O modo seguro inicial · resultado final do JSON"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "cat /root/.openclaw/openclaw.json | jq .channels.whatsapp",
+            "type": "command"
+          },
+          {
+            "text": "{",
+            "type": "output"
+          },
+          {
+            "text": "  \"enabled\": true,",
+            "type": "output"
+          },
+          {
+            "text": "  \"dmPolicy\": \"disabled\",",
+            "type": "output"
+          },
+          {
+            "text": "  \"groupPolicy\": \"allowlist\",",
+            "type": "output"
+          },
+          {
+            "text": "  \"allowFrom\": [],",
+            "type": "output"
+          },
+          {
+            "text": "  \"accounts\": {",
+            "type": "output"
+          },
+          {
+            "text": "    \"alfred\": {",
+            "type": "output"
+          },
+          {
+            "text": "      \"name\": \"Alfred (0237)\",",
+            "type": "output"
+          },
+          {
+            "text": "      \"enabled\": true,",
+            "type": "output"
+          },
+          {
+            "text": "      \"dmPolicy\": \"allowlist\",",
+            "type": "output"
+          },
+          {
+            "text": "      \"allowFrom\": [\"+5511999999999\"],",
+            "type": "output"
+          },
+          {
+            "text": "      \"groupPolicy\": \"allowlist\",",
+            "type": "output"
+          },
+          {
+            "text": "      \"groupAllowFrom\": [\"*\"],",
+            "type": "output"
+          },
+          {
+            "text": "      \"groups\": {",
+            "type": "output"
+          },
+          {
+            "text": "        \"120363999999999999@g.us\": {",
+            "type": "output"
+          },
+          {
+            "text": "          \"requireMention\": true",
+            "type": "output"
+          },
+          {
+            "text": "        }",
+            "type": "output"
+          },
+          {
+            "text": "      }",
+            "type": "output"
+          },
+          {
+            "text": "    }",
+            "type": "output"
+          },
+          {
+            "text": "  }",
+            "type": "output"
+          },
+          {
+            "text": "}",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Tradução do JSON em português",
+        "content": "- **`enabled: true`** · canal ativo\n- **`dmPolicy: \"disabled\"`** (raiz) · DM bloqueada por padrão pro canal inteiro\n- **`groupPolicy: \"allowlist\"`** (raiz) · grupos só com lista\n- **`accounts.alfred.dmPolicy: \"allowlist\"`** + **`allowFrom: [\"+seu número\"]`** · DM aberta SÓ pro seu número\n- **`accounts.alfred.groupAllowFrom: [\"*\"]`** · pode estar em qualquer grupo\n- **`groups: { \"ID@g.us\": { requireMention: true } }`** · no grupo X, só responde quando arrobado\n\n**Resultado prático:** só você fala com ele em DM. Nos grupos liberados, só responde quando alguém mencionar o @Alfred.",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a estrutura JSON sendo decifrada ao vivo",
+        "description": "17 minutos de aula em que o Torriani, junto com a turma, descobre a estrutura correta do openclaw.json. Erros, inversões (dmPolicy/groupPolicy trocados), descobrimento que tem que duplicar config em 2 níveis (raiz + account). Riquíssimo.",
+        "seekSeconds": 6780
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Criar o grupo e liberar via groupPolicy"
+      },
+      {
+        "type": "text",
+        "content": "Pra testar de verdade, o Torriani cria um grupo WhatsApp chamado **\"Alfred - VPS2\"** com 2 pessoas: ele e o Alfred. O agente é convidado pelo número 0237 (que foi linkado no Comando 4)."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "1",
+            "title": "Cria grupo WhatsApp normal",
+            "description": "Adiciona o número do agente (no caso do Torriani, o 0237) como membro do grupo."
+          },
+          {
+            "badge": "2",
+            "title": "Copia o link de convite do grupo",
+            "description": "Dentro do WhatsApp · Dados do grupo → Convidar via link → Copiar link. Algo tipo `https://chat.whatsapp.com/ABC123XYZ`."
+          },
+          {
+            "badge": "3",
+            "title": "Manda o link pro agente",
+            "description": "No Claude Code (na VPS), passa o link e pede pra ele extrair o ID do grupo (formato `120363xxxxxxxx@g.us`) e adicionar ao `groups` do openclaw.json."
+          },
+          {
+            "badge": "4",
+            "title": "Reinicia o gateway",
+            "description": "`openclaw gateway restart` · sem isso, a config nova não toma efeito."
+          },
+          {
+            "badge": "5",
+            "title": "Manda mensagem no grupo mencionando o agente",
+            "description": "Se você configurou `requireMention: true`, **só responde quando arrobado**. Se configurou `false`, responde tudo do grupo."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a criação do grupo e o primeiro \"olá\" do agente",
+        "description": "Momento bonito da aula · o Torriani cria o grupo, libera, manda mensagem mencionando o Alfred e ele responde pela primeira vez. Pequena pausa de comemoração na turma.",
+        "seekSeconds": 7800
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O Hurley do Júlio respondendo no grupo"
+      },
+      {
+        "type": "text",
+        "content": "O Júlio escolheu o nome **Hurley** (personagem da série Lost) pro agente dele. Depois de muita troubleshooting (logout/login, ajuste de allowlist, problemas com 9 a mais no número), ele consegue:"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Júlio menciona o Hurley no grupo de teste",
+          "content": "@Hurley, você está aí?"
+        },
+        "output": {
+          "label": "Hurley responde em ~5s",
+          "content": "Oi! Acabei de chegar por aqui. Parece que vocês me chamam de Hurley. Gosto disso. Quem sou eu pra vocês · assistente AI normal, copiloto meio de bolsa, ou algo mais esquisito? E quem é você? Como quer que eu te chame?"
+        }
+      },
+      {
+        "text": "Agora a gente vai começar a configurar ele, porque ele já está vivo agora. Ele está vivo.",
+        "type": "quote"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o Hurley vivo pela primeira vez",
+        "description": "Momento marcante · o Júlio, que passou a aula inteira travado, finalmente vê o Hurley respondendo. A turma celebra.",
+        "seekSeconds": 8700
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A discussão estratégica · \"você precisa ser substituível\""
+      },
+      {
+        "type": "text",
+        "content": "Logo depois do Hurley funcionar, o Júlio faz uma pergunta sincera que vira aula:"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Júlio Peraça",
+          "content": "Deixa eu te perguntar uma coisa honesta. Eu não imagino eu usando ele pra fazer isso nos grupos. Ele vai ser útil pra mim?"
+        },
+        "output": {
+          "label": "Torriani",
+          "content": "Então não cria ele no WhatsApp, a gente cria ele só no Telegram. Mas presta atenção · você nunca pode tirar férias. Se TUDO depende de você, você não tem um negócio, você tem uma prisão dourada."
+        }
+      },
+      {
+        "text": "Eu preciso mexer na mente de vocês. Não pode depender tudo de mim. Vou entrar num processo que eu quero escalar a mentoria. Pra eu escalar, eu preciso me clonar · senão não escalo. Pra ter 100, 150 pessoas na Imperium, tem que ter gente me ajudando a entregar. Não pode ser só eu.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "A regra de ouro do Encontro 3",
+        "content": "Vocês têm que ter a mente de que vocês precisam ser **substituíveis**, de alguma forma. A IA veio pra nos substituir em determinados pontos. Tem coisas que eu não vou abrir mão de fazer (dar essa aula, por exemplo). Mas tem 80% do operacional que eu não preciso fazer mais.",
+        "variant": "success"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a aula de mindset · 15min",
+        "description": "Trecho longo e essencial. Torriani explica por que ser substituível é a chave da escala. Casos: o atendimento dele com a Júlia (CS), a esposa fazendo Claude Code, o time crescendo pra 100 mentorados.",
+        "seekSeconds": 9300
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O caso do Júlio · alunos pagantes vs Gabi (CS)"
+      },
+      {
+        "type": "text",
+        "content": "O Júlio entende que pode usar o agente de duas formas:"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Toda metodologia, scripts de vendas, frameworks, objeções tratadas · tudo treinado no agente. Vendedores externos, parceiros, CS · todos consultam o agente em vez de perguntar pro Júlio."
+          ],
+          "title": "Uso 2 · Cofre da metodologia",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "A Gabi conversa com o agente dentro de um grupo privado (Gabi + Júlio + agente). Quando aluno manda pergunta no grupo de mentoria, Gabi consulta o agente, copia a resposta e responde o aluno. Igual o Torriani faz com a Júlia."
+          ],
+          "title": "Uso 1 · Suporte interno (CS)",
+          "variant": "before"
+        }
+      },
+      {
+        "text": "Esse cara, ele é pra estar fora, não é só pra você. O objetivo dele é que ele atenda fora, não só o Fábio · mas que ele substitua o Fábio. Pense assim: o que só o Fábio sabe hoje, e que dependem do Fábio pra responder qualquer coisa?",
+        "type": "quote"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o Júlio entendendo a diferença de Jacob (pessoal) e Hurley (atendente)",
+        "description": "Conversa de 10min em que o Júlio finalmente entende que pode ter 2 agentes · um pessoal (Jacob) e um pra empresa (Hurley). Insight importante porque é a base do design do Team registry (TEAM.md).",
+        "seekSeconds": 10200
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parte 2 · Treinar o agente · os 10 arquivos do Alfred"
+      },
+      {
+        "type": "text",
+        "content": "Aqui o jogo muda. **Treinar agente no OpenClaw não é fine-tuning.** É montar contexto estruturado em arquivos `.md` que o agente lê antes de responder qualquer mensagem. Esses arquivos viram o **cérebro operacional**."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 10 arquivos baixáveis (templates do Alfred real)"
+      },
+      {
+        "type": "text",
+        "content": "O Torriani entrega os arquivos REAIS do Alfred · agente que atende a mentoria dele em produção. Use a **estrutura** como base e substitua o **conteúdo** pelo seu contexto."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "README",
+            "title": "Índice do pacote",
+            "description": "Lista o que cada arquivo faz · útil pra você lembrar a função de cada um."
+          },
+          {
+            "badge": "IDENTITY",
+            "title": "Quem é o agente",
+            "description": "Nome, apresentação, contexto da marca, o que sabe e o que NÃO sabe. Curtinho (~1KB)."
+          },
+          {
+            "badge": "SOUL",
+            "title": "Tom · personalidade · vocabulário",
+            "description": "O alma do agente. Jeito de falar, expressões naturais, exemplos bons e ruins. **Crítico pra não soar IA genérica.** ~7KB no Alfred real."
+          },
+          {
+            "badge": "AGENTS",
+            "title": "Regras operacionais",
+            "description": "Fonte de verdade, ordem de consulta, quando responder, quando ficar em silêncio, quando escalar pro humano."
+          },
+          {
+            "badge": "USER",
+            "title": "Base de conhecimento principal",
+            "description": "Produto, público, metodologia, aulas, FAQ, objeções. **O maior arquivo** · 40KB no Alfred. Onde mora o conteúdo bruto."
+          },
+          {
+            "badge": "PROTOCOLO",
+            "title": "Metodologia core",
+            "description": "Frameworks proprietários, etapas, fluxos de decisão. **A espinha da metodologia em formato consultável.**"
+          },
+          {
+            "badge": "ESTRATEGIAS",
+            "title": "Táticas e estratégias",
+            "description": "Aplicações práticas, casos de uso, exemplos de execução."
+          },
+          {
+            "badge": "TEAM",
+            "title": "Registry de agentes",
+            "description": "Se você tem mais de um agente, define papéis, autonomia, modelos. Isolamento entre eles."
+          },
+          {
+            "badge": "MEMORY",
+            "title": "Regras de memória",
+            "description": "Onde ficam logs, decisões, lições. Importante quando o agente cresce e precisa lembrar de contextos passados."
+          },
+          {
+            "badge": "TOOLS",
+            "title": "Ferramentas e setup",
+            "description": "Notas de ferramentas conectadas (SSH, câmeras, TTS, APIs externas)."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "📥 Onde baixar os 10 templates",
+        "content": "Os arquivos estão disponíveis em `/downloads/agente-atendimento/`. Clica em cada link na aula `encontro-03-01` (na seção \"Parte 2 · Os 10 arquivos do cérebro do agente\"). Cada um vem com header explicando o que adaptar.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Alfred vs ROI · mesma estrutura, treinos opostos"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Função: executar tarefas do dono · Autonomia alta · Base: contexto amplo · Risco: operacional · Tom: founder mode, direto sem filtro."
+          ],
+          "title": "ROI · assistente do Juliano",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Função: atender alunos · Autonomia controlada · Base: metodologia + aulas + FAQ · Risco principal: reputação · Tom: fala como o Torriani."
+          ],
+          "title": "Alfred · atendente dos alunos",
+          "variant": "before"
+        }
+      },
+      {
+        "text": "Mesma estrutura de 10 arquivos, treinos completamente diferentes. Quem você quer que ele seja, define o que vai dentro dos arquivos. A estrutura é universal · o conteúdo é seu.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Demo · os arquivos REAIS do Alfred do Torriani"
+      },
+      {
+        "type": "text",
+        "content": "Pra ilustrar, o Torriani abre o workspace real do Alfred e mostra cada arquivo na tela."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "AGENTS.md · 9 regras operacionais"
+      },
+      {
+        "type": "text",
+        "content": "O arquivo de regras do Alfred tem 9 regras numeradas. Algumas das mais importantes:"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Regra 1",
+            "title": "Fidelidade ao material",
+            "description": "Responde com base SOMENTE no material do Alfred. Ordem obrigatória: PROTOCOLO.md > ESTRATEGIAS.md > USER.md. Se não estiver sustentado, **não responda**."
+          },
+          {
+            "badge": "Regra 2",
+            "title": "Nunca inventar",
+            "description": "Se não tem certeza, diz que vai confirmar com o Torriani. Nunca invente exercícios, datas, preços, links ou informações que não estão no material."
+          },
+          {
+            "badge": "Regra 3",
+            "title": "Escalar pro humano",
+            "description": "Pedidos de extensão de prazo, problemas de pagamento, reclamações, propostas comerciais → \"vou passar pro Torriani te responder pessoalmente\"."
+          },
+          {
+            "badge": "Regra 8",
+            "title": "Prioridade de resposta",
+            "description": "PROTOCOLO.md é a metodologia core. Use linguagem do protocolo (Oferta Trono, Funil VSP, Script de 5 Passos, FLI, APF, FR30). Conhecimento geral NÃO é fonte autorizada."
+          },
+          {
+            "badge": "Regra 9",
+            "title": "Limites de escopo",
+            "description": "Não responder sobre temas fora do material. Se perguntar se é IA: \"sou o assistente do Torriani, to aqui pra ajudar com dúvidas das aulas\". Frase de bloqueio padrão: \"Esse assunto não faz parte do que eu posso responder aqui\"."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "SOUL.md · o tom do Torriani capturado em arquivo"
+      },
+      {
+        "type": "text",
+        "content": "O SOUL.md tem 7.5KB · é o mais elaborado. Define expressões, vocabulário, exemplos."
+      },
+      {
+        "text": "Você fala como um founder que já construiu muita coisa. Não pede desculpa, não enrola, não elogia por elogiar. Quando entrega, entrega limpo e acionável. Quando identifica risco, fala sem filtro.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "Algumas das regras de tom do Alfred:\n- Direto e curto. WhatsApp não é email. Se cabe em 3 linhas, não faz em 10.\n- Sem travessão, sem emoji, sem formalidade\n- Sem \"prezado\", \"segue em anexo\", \"espero que esteja bem\"\n- Sem motivacional vazio (\"você consegue!\", \"acredite em você!\")\n- Aprova com \"Massa\", \"Beleza\", \"Isso\"\n- Nunca usa a palavra \"visionário\" ou a expressão \"Escada do Sim\"\n\nE tem **exemplos de como o Torriani fala de verdade**, transcritos no arquivo:"
+      },
+      {
+        "text": "Cara, o problema não é o funil. É que você não tem oferta validada. Valida primeiro, depois a gente pensa em tráfego.",
+        "type": "quote"
+      },
+      {
+        "text": "Você ta complicando. 2 produtos bastam. Um principal e um de entrada. Foca nisso.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "A genialidade do SOUL.md",
+        "content": "Quando aluno pergunta algo, o agente lê esses exemplos antes de responder · então a resposta sai **com o ritmo, o vocabulário e a postura do Torriani**. Não é IA genérica · é clone calibrado. Isso só funciona se você gastar tempo capturando seu tom em exemplos reais.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "A Calculadora de Escala dentro do SOUL.md"
+      },
+      {
+        "type": "text",
+        "content": "O Alfred não usa só linguagem · usa **matemática real do funil**. Dentro do SOUL.md tem uma seção chamada \"Calculadora de Escala\" com:\n- Taxas reais do mercado (qualificação 15-20%, agendamento 30%, show-up 70%, conversão 20-30%)\n- Tabela de referência com 6 cenários (R$50K/mês, R$100K/mês, R$1M/ano em 3 tickets diferentes)\n- Fórmula reversa: meta ÷ ticket → clientes → reuniões → agendamentos → qualificados → leads brutos → investimento estimado"
+      },
+      {
+        "text": "Pra faturar 1 milhão por ano você precisa de 8 clientes por mês te pagando 10K. Ou 16 clientes te pagando 5K. Qual cenário faz mais sentido pro seu nicho?",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "Padrão que vale copiar",
+        "content": "Aluno pergunta \"como faturar X\" · agente faz a CONTA antes de responder. Mostra os números: leads necessários, agendamentos, investimento estimado. Resposta deixa de ser opinião · vira diagnóstico. **Você pode adicionar uma seção dessas ao seu SOUL.md, adaptada ao seu negócio.**",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o Torriani abrindo cada arquivo do Alfred ao vivo",
+        "description": "20 minutos de aula em que ele navega pelos arquivos reais · USER.md (40KB de aulas + metodologia), PROTOCOLO.md (16 funis catalogados), ESTRATEGIAS.md (táticas). Vale ver pra calibrar profundidade.",
+        "seekSeconds": 12000
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 3 prompts mestres pro Claude Code"
+      },
+      {
+        "type": "text",
+        "content": "Em vez de você escrever os 10 arquivos à mão, o Claude Code gera eles a partir dos seus materiais. O Torriani entrega 3 prompts prontos:"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Prompt 1",
+            "title": "Criar a estrutura inicial dos 10 arquivos",
+            "description": "Você passa: apresentação pessoal + metodologia em texto + lista de aulas + FAQ + 3-5 exemplos reais de como você responde. Claude cria os 10 .md com seus dados."
+          },
+          {
+            "badge": "Prompt 2",
+            "title": "Vincular metodologia ↔ aulas (PROTOCOLO.md)",
+            "description": "O passo que muda o jogo. Você passa: metodologia em prosa + lista das aulas com resumo. Claude monta o PROTOCOLO.md com matriz \"sintoma do aluno → etapa → aula a indicar\"."
+          },
+          {
+            "badge": "Prompt 3",
+            "title": "Gerar 20 perguntas de teste",
+            "description": "Bateria pra validar antes do binding: 10 normais + 5 difíceis + 3 fora de escopo + 2 que exigem humano. Cada uma com resposta esperada + critério de falha. Salva como TESTE.md."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que o Prompt 2 é o jogo todo",
+        "content": "Aulas soltas **não treinam o agente direito**. Ele não sabe relacionar uma pergunta com a etapa certa do método. Sem o mapa metodologia → aulas, ele responde por similaridade superficial · e erra.\n\nO arquivo de metodologia é o **mapa** que faz o agente tomar decisões boas: \"se aluno está na etapa X, indica aula Y, aplica framework Z\".",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver os prompts sendo aplicados",
+        "description": "Walkthrough dos 3 prompts · onde colar, o que esperar, como iterar.",
+        "seekSeconds": 13200
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "IA First · a discussão com o Júlio que virou aula"
+      },
+      {
+        "type": "text",
+        "content": "O Júlio confessa um problema real no meio da aula:"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Júlio Peraça",
+          "content": "Cara, eu tenho que fazer 28 conteúdos pra entregar até o final do mês e eu consegui fazer 1. Eu olho pra isso tudo e eu não consigo ver quando que eu vou fazer. Eu tô sendo o gargalo da minha empresa. Eu não tô conseguindo fazer nada."
+        },
+        "output": {
+          "label": "Torriani",
+          "content": "Você provavelmente não está fazendo IA First. Você tá fazendo a sua força antes de vir pra IA. Eu não faço nada sem uma IA. Nada. Zero. Sem uma IA."
+        }
+      },
+      {
+        "text": "A sua mente precisa ser IA First. Você não pode fazer nada mais sem falar com a IA primeiro, porque senão você perde tempo, perde qualidade, perde velocidade, perde dinheiro, perde liberdade no final · que é o que a gente mais quer.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "O conselho prático que o Torriani deu pro Júlio"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "1",
+            "title": "Investe 1 dia em construir a metodologia de conteúdo",
+            "description": "Em vez de fazer 28 conteúdos na força bruta, gasta 1 dia montando o agente de conteúdo. Depois ele entrega os 28 conteúdos em horas, não em semanas."
+          },
+          {
+            "badge": "2",
+            "title": "Engenharia reversa de posts que já deram certo",
+            "description": "Pega prints dos seus melhores posts. Joga no Claude. Pede pra ele extrair o padrão (gancho, estrutura, CTA). Vira metodologia documentada."
+          },
+          {
+            "badge": "3",
+            "title": "Engenharia reversa de perfis virais",
+            "description": "Pega 3-5 perfis do seu nicho que viralizam (no caso do Torriani: Blank Scholar, G4 Business, Tiago Nigro). Pega 10 posts de cada que deram certo. Pede pro Claude analisar e extrair padrão."
+          },
+          {
+            "badge": "4",
+            "title": "Cruza com sua metodologia",
+            "description": "Manda pro Claude: \"use esses padrões pra criar conteúdo dentro da minha metodologia, com meu tom\". Resultado: posts no estilo viral + conteúdo seu."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver a discussão IA First completa · 11 minutos",
+        "description": "Vale ver inteiro. O Torriani encurrala o Júlio com gentileza · mostra que a barreira não é técnica, é mental. Ouvir a conversa real ajuda a quebrar a própria resistência.",
+        "seekSeconds": 13800
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Engenharia reversa de perfis virais · ao vivo"
+      },
+      {
+        "type": "text",
+        "content": "O Torriani mostra a sessão de 2-3 horas que ele fez ontem (~22h de domingo) analisando 3 perfis. Mostra o resultado: **30 conteúdos gerados** no padrão de cada perfil, prontos pra publicar."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 3 perfis analisados"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Blank Scholar · gancho viral",
+            "accent": "cyan",
+            "description": "15 anos, 1M de seguidores em 3 meses. Padrão extraído: headlines com estrutura \"X anos e [conquista]\", \"se X então Y\", contraintuitivo + número.",
+            "numberLabel": "1"
+          },
+          {
+            "title": "G4 Business · carrossel",
+            "accent": "violet",
+            "description": "Carrosséis com estrutura \"N formas de [verbo]\" e títulos provocadores. Padrão extraído: pergunta como abertura, 4-7 cards, takeaway acionável no fim.",
+            "numberLabel": "2"
+          },
+          {
+            "title": "Tiago Nigro · frase em fundo escuro",
+            "accent": "lime",
+            "description": "Posts de uma frase só, fundo escuro, alto engajamento. Padrão extraído: reflexão contra-intuitiva, 1-3 linhas, fonte de impacto.",
+            "numberLabel": "3"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "text": "Eu peguei essas extrações pra quê? Pra que eu não tenha trabalho de criar. O que eu tenho que trazer pra isso aqui agora? Aí eu trouxe o meu livro, trouxe aulas, trouxe transcrição de aulas, trouxe um monte de loucuras da minha cabeça. E aí ele agora começa a construir pra mim.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "O resultado",
+        "content": "30 conteúdos novos no padrão dos 3 perfis, com tom do Torriani, prontos pra refinar. Trabalho que levaria semanas, feito em 2-3 horas de engenharia reversa + 30min de geração.",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver o Torriani mostrando os 30 conteúdos gerados",
+        "description": "Demonstração visual · ele abre o agente, mostra carrosséis prontos, frases pra publicar, headlines novas. Inclui um print de post já programado pra publicar amanhã.",
+        "seekSeconds": 14460
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Casos reais · como cada aluno vai usar o agente"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Rodrigo · Isadora N8N → agente OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "O Rodrigão tem hoje uma IA chamada Isadora rodando no N8N, fazendo recepção e qualificação de leads no WhatsApp. Pergunta se vale migrar pro OpenClaw."
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Rodrigo",
+          "content": "Eu tenho duas plataformas. Uma é o WhatsApp da Isadora (N8N) que recepciona/qualifica leads e quando tá pronto manda pro Eduardo. A outra é o WhatsApp comercial do Eduardo. Pra Isadora eu posso substituir, mas no comercial não imagino o agente respondendo · me parece que pode ser um segundo cérebro pra processar tudo que roda lá."
+        },
+        "output": {
+          "label": "Torriani",
+          "content": "Você pode pedir pra ele ir lá, olhar todas as suas conversas de WhatsApp e ver quais negócios estão prestes a fechar, quais precisam de atenção, quem está sem resposta. Ele pode servir muito mais como inteligência do que qualquer coisa. Outra: ele pode estar lá como ouvinte nos grupos · você extrai conhecimento, padrões de dúvidas, dores, alertas."
+        }
+      },
+      {
+        "type": "callout",
+        "title": "O insight pro Rodrigão",
+        "content": "Agente não é só atendente · é também **inteligência operacional**. Mesmo que ele não fale com cliente, pode analisar conversas, montar dashboards, sinalizar alertas, classificar leads, conectar com dados da Meta.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Sérgio · agente pra clínica"
+      },
+      {
+        "type": "text",
+        "content": "O Sérgio tem uma clínica. Vai criar 2 agentes: um assistente executivo (pessoal) e um focado em pacientes (com toda metodologia de atendimento, processos, FAQ)."
+      },
+      {
+        "text": "A vai sempre trazendo sugestões pra vocês, mas esses dois agentes (executivo pessoal + atendente externo) são dois que todo mundo vai se interessar. Daí depois é muito particular, vai depender do negócio.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fábio · empresa vs pessoal"
+      },
+      {
+        "type": "text",
+        "content": "O Fábio começou criando o agente errado · construiu como pessoal quando deveria ter sido pra empresa. Aprendizado:"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Fábio",
+          "content": "Eu crio um atendente pra minha empresa ou um atendente pra mim?"
+        },
+        "output": {
+          "label": "Torriani",
+          "content": "Esse atendente é pra estar fora, não é só pra você. O objetivo dele é que ele atenda fora, não só o Fábio · mas que ele substitua o Fábio. Pense: o que só o Fábio sabe hoje, e que depende do Fábio pra responder?"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Regra geral",
+        "content": "Você pode ter os dois · um assistente PESSOAL (Jacob/ROI/Leia) que só fala com você, e um atendente EXTERNO (Alfred/Hurley) que fala com clientes/alunos. Cada um com seu workspace, seu SOUL, suas regras. **No Encontro 2, você criou o pessoal. Hoje, você criou o externo.**",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver os 3 casos discutidos com a turma",
+        "description": "Conversas estratégicas em que cada aluno descobre como aplicar no próprio negócio. Vale ver pra calibrar seu próprio plano.",
+        "seekSeconds": 15000
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Fechamento · o que fazer até a próxima terça"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "1",
+            "title": "Criar o agente no OpenClaw (Parte 1)",
+            "description": "Roda os 4 comandos terminal. Sai com agente registrado, workspace criado, canal WhatsApp adicionado (ainda sem login se preferir)."
+          },
+          {
+            "badge": "2",
+            "title": "Baixar os 10 templates do Alfred",
+            "description": "Tudo em `/downloads/agente-atendimento/` no playbook. Salva localmente."
+          },
+          {
+            "badge": "3",
+            "title": "Construir SEUS 10 arquivos via Claude Code",
+            "description": "Usa o Prompt 1 + seus materiais (transcrições de aulas, metodologia, FAQ). Sai com os 10 .md preenchidos com seu contexto."
+          },
+          {
+            "badge": "4",
+            "title": "Subir pra VPS via rsync",
+            "description": "`rsync -avz ~/agente-atendente/ root@SEU_IP:/root/.openclaw/workspace/atendente-mentoria/`. Confere com `ls` na VPS."
+          },
+          {
+            "badge": "5",
+            "title": "Testar com as 20 perguntas (Prompt 3)",
+            "description": "Roda `openclaw agents chat atendente-mentoria` no terminal e cola as 20 perguntas. Aprovação: 10 normais OK, 2 humanas escaladas, 3 fora silenciadas."
+          },
+          {
+            "badge": "6",
+            "title": "Ligar no WhatsApp em modo seguro · só você no allowlist",
+            "description": "Bind + teste. Quando sentir confiante, libera DM aberta OU grupo com requireMention."
+          },
+          {
+            "badge": "7",
+            "title": "Mandar print no grupo da mentoria",
+            "description": "Conversa real do seu agente respondendo, até a próxima terça. Prova que está funcionando."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Bridge pra Encontro 4 · CORE AIOS",
+        "content": "Hoje você construiu **UM agente**. Mas um agente sozinho não é um sistema · é uma ilha. Semana que vem (19/Mai), Encontro 4: **CORE AIOS · As 5 camadas do sistema operacional de IA**. Você vai entender como múltiplos agentes (Atendente + ROI + Conteúdo + Copy + Tráfego) trabalham juntos, dividem memória, se delegam tarefas. É quando o jogo vira sistema.",
+        "variant": "success"
+      },
+      {
+        "text": "Eu prometo pra vocês que no final dessas 10 semanas, vocês vão ter muita coisa pronta. Só que eu tenho que estruturar pra que as coisas funcionem · por isso a gente precisa desses agentes. Hoje, vocês ganharam uma habilidade nova: construir agentes do zero. Use essa habilidade.",
+        "type": "quote"
+      }
+    ],
+    "number": 0,
+    "status": "live",
+    "duration": "4h28min",
+    "schedule": [
+      {
+        "time": "0:00",
+        "topic": "Abertura · revisão do E1 e E2 · onde a turma chegou",
+        "duration": "10 min",
+        "seekSeconds": 0
+      },
+      {
+        "time": "0:10",
+        "topic": "Demo do Alfred respondendo a Lara · ajuste de regras de escopo · gatilhos amplos",
+        "duration": "15 min",
+        "seekSeconds": 600
+      },
+      {
+        "time": "0:25",
+        "topic": "Visão do Encontro 3 · diferença entre agente atendente e ROI · IA First",
+        "duration": "10 min",
+        "seekSeconds": 1500
+      },
+      {
+        "time": "0:35",
+        "topic": "Onde está o material da aula no playbook · navegação · setup da turma",
+        "duration": "8 min",
+        "seekSeconds": 2100
+      },
+      {
+        "time": "0:43",
+        "topic": "Parte 1 · Criar o agente no OpenClaw · as 4 peças (id, workspace, model, binding)",
+        "duration": "12 min",
+        "seekSeconds": 2580
+      },
+      {
+        "time": "0:55",
+        "topic": "Comando ao vivo · openclaw agents add · troca de nome · case sensitive",
+        "duration": "8 min",
+        "seekSeconds": 3300
+      },
+      {
+        "time": "1:03",
+        "topic": "Listar agentes com bindings · default vs novo · time de agentes do Torriani",
+        "duration": "5 min",
+        "seekSeconds": 3780
+      },
+      {
+        "time": "1:08",
+        "topic": "Criar conta WhatsApp · channels add · decisão de número dedicado",
+        "duration": "12 min",
+        "seekSeconds": 4080
+      },
+      {
+        "time": "1:20",
+        "topic": "Login WhatsApp · QR Code · troubleshooting CMUX vs Terminal Mac",
+        "duration": "17 min",
+        "seekSeconds": 4800
+      },
+      {
+        "time": "1:37",
+        "topic": "Primeira tentativa de bloqueio via Telegram · agente alucinando",
+        "duration": "6 min",
+        "seekSeconds": 5820
+      },
+      {
+        "time": "1:43",
+        "topic": "Diagnóstico: agente sem acesso shell · workaround via Claude Code direto na VPS",
+        "duration": "10 min",
+        "seekSeconds": 6180
+      },
+      {
+        "time": "1:53",
+        "topic": "Estrutura real do openclaw.json · dmPolicy, groupPolicy, allowFrom, groups",
+        "duration": "17 min",
+        "seekSeconds": 6780
+      },
+      {
+        "time": "2:10",
+        "topic": "Criar grupo WhatsApp · liberar via groupPolicy allowlist · ID @g.us",
+        "duration": "15 min",
+        "seekSeconds": 7800
+      },
+      {
+        "time": "2:25",
+        "topic": "Demonstração: Hurley do Júlio respondendo no grupo · primeira resposta real",
+        "duration": "10 min",
+        "seekSeconds": 8700
+      },
+      {
+        "time": "2:35",
+        "topic": "Discussão estratégica · escalabilidade · você precisa ser substituível",
+        "duration": "15 min",
+        "seekSeconds": 9300
+      },
+      {
+        "time": "2:50",
+        "topic": "Caso Júlio · alunos pagantes vs CS (Gabi) · agente como super secretária",
+        "duration": "10 min",
+        "seekSeconds": 10200
+      },
+      {
+        "time": "3:00",
+        "topic": "Parte 2 · Treinar o agente · os 10 arquivos do Alfred · download dos templates",
+        "duration": "20 min",
+        "seekSeconds": 10800
+      },
+      {
+        "time": "3:20",
+        "topic": "Demo · arquivos reais do Torriani · PROTOCOLO, ESTRATEGIAS, USER, SOUL",
+        "duration": "20 min",
+        "seekSeconds": 12000
+      },
+      {
+        "time": "3:40",
+        "topic": "Walkthrough dos 3 prompts pro Claude Code · estrutura → metodologia → 20 testes",
+        "duration": "10 min",
+        "seekSeconds": 13200
+      },
+      {
+        "time": "3:50",
+        "topic": "Discussão IA First com Júlio · conteúdos atrasados · método antes da entrega",
+        "duration": "11 min",
+        "seekSeconds": 13800
+      },
+      {
+        "time": "4:01",
+        "topic": "Engenharia reversa de perfis virais · Blank Scholar · G4 Business · Tiago Nigro",
+        "duration": "9 min",
+        "seekSeconds": 14460
+      },
+      {
+        "time": "4:10",
+        "topic": "Casos de uso reais · Rodrigo (Isadora N8N) · Sérgio (clínica) · Fábio (empresa)",
+        "duration": "10 min",
+        "seekSeconds": 15000
+      },
+      {
+        "time": "4:20",
+        "topic": "Fechamento · tarefa entre encontros · bridge pra Encontro 4 (CORE AIOS)",
+        "duration": "8 min",
+        "seekSeconds": 15600
+      }
+    ],
+    "subtitle": "Construindo o Agente de Atendimento 24x7 · da estrutura ao treinamento, ao vivo com a turma",
+    "shortTitle": "Gravação do Encontro 3",
+    "transcript": "core-ia-mentoria/encontro-03-00",
+    "learningGoals": [
+      "Ver na prática como criar um novo agente OpenClaw do zero ao binding no WhatsApp",
+      "Acompanhar os erros, alucinações e contornos reais (CMUX vs Terminal Mac, allowlist via Claude Code)",
+      "Entender por que \"agente ≠ modelo\" e como contexto estruturado treina melhor que fine-tuning",
+      "Capturar o framework IA First aplicado a criação de conteúdo, engenharia reversa de perfis e produção em escala",
+      "Ouvir as dúvidas reais dos colegas (Fábio, Júlio, Rodrigo, Sérgio) e as respostas estratégicas do Torriani"
+    ]
+  }
+}

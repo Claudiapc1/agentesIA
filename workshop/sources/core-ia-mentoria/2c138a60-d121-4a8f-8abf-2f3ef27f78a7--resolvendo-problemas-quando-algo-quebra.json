@@ -1,0 +1,560 @@
+{
+  "id": "2c138a60-d121-4a8f-8abf-2f3ef27f78a7",
+  "titulo": "Resolvendo Problemas: Quando Algo Quebra",
+  "lesson_payload": {
+    "id": "encontro-02-10",
+    "tag": "Etapa 9",
+    "title": "Resolvendo Problemas: Quando Algo Quebra",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Você instalou OpenClaw, configurou segurança, deu identidade, plugou memória, ativou integrações e proatividade. **Tudo está no ar.** Mas em algum momento, algo vai quebrar · esse é o jogo de manter sistema rodando 24/7. O bot vai parar de responder. O cron não vai disparar. A integração vai expirar. Disco vai encher."
+      },
+      {
+        "type": "text",
+        "content": "**Esta etapa é seu manual de bombeiro.** Pra cada sintoma comum, você sabe a causa mais provável e o fix em 1 comando. Em vez de gastar 2 horas catando log, você abre esta página, identifica o sintoma, roda o comando e está de volta em 5 minutos."
+      },
+      {
+        "type": "callout",
+        "title": "Como usar esta etapa",
+        "content": "Não leia tudo de uma vez. Marque essa página nos favoritos. Quando algo quebrar, vem aqui, identifica o sintoma (1 das 5 categorias), segue o fix. A primeira seção (Bot sem acesso ao shell · V2 3.2) cobre 60% dos problemas reais que aluno reporta.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Método: sintoma · causa · fix",
+        "content": "Antes de mexer em qualquer coisa, roda openclaw-doctor e identifica o sintoma exato. Pula direto pra fix sem entender a causa = quebra mais coisa.",
+        "variant": "info"
+      },
+      {
+        "type": "command-line",
+        "command": "openclaw-doctor"
+      },
+      {
+        "type": "text",
+        "content": "Diagnóstico geral. Se você não sabe o que está quebrado, começa por aqui."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · analisar output do doctor",
+        "target": "telegram",
+        "content": "Vou colar o output do `openclaw-doctor` abaixo. Quero que você **apenas analise** e me diga onde está o problema · não execute mudanças.\n\n**Output do doctor:** [cola aqui o output completo]\n\nFaz na ordem:\n\n1. **Identifica anomalias** · disco >85% · RAM >90% · serviço inativo · cron sem job · backup há mais de 3 dias.\n\n2. **Prioriza** · classifica por severidade:\n   · 🔴 crítico · serviço caído, disco cheio, sem backup há semanas\n   · 🟡 atenção · disco 70-85%, cron com erro recente\n   · 🟢 ok · tudo dentro do normal\n\n3. **Recomenda fix** · pra cada anomalia, sugere o sintoma da Etapa 9 que cobre o problema (Sintoma 1, 2, 3, 4 ou 5).\n\n4. **Reporta no formato:**\n\n```\n🩺 Análise do doctor\n\n🔴 Crítico:\n· [item] · vai pro Sintoma X\n\n🟡 Atenção:\n· [item] · monitora\n\n🟢 OK:\n· [resumo do que está saudável]\n\nPróximo passo: [sintoma sugerido]\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintoma 1 · Bot sem acesso ao shell"
+      },
+      {
+        "type": "callout",
+        "title": "Sintomas clássicos",
+        "content": "O agente diz \"Não consigo executar comandos\" · responde texto fluentemente mas qualquer tarefa de sistema falha · erros como exec: not in allowlist, Permission denied, Sandbox restriction · bot adicionado ao grupo não responde nada (nem erros).",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Teste rápido"
+      },
+      {
+        "type": "text",
+        "content": "Pede pro agente executar:"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · teste shell",
+        "target": "telegram",
+        "content": "Roda agora `echo \"SHELL_TEST_OK\"` e me responde apenas com a string `SHELL_TEST_OK` se conseguiu executar. Se der erro, me reporta a mensagem exata · vai indicar qual das 6 causas é."
+      },
+      {
+        "type": "text",
+        "content": "Se receber o texto de volta · shell OK. Se der erro · você tem um dos 6 problemas abaixo."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Atalho · diagnóstico master automatizado"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt MASTER · Telegram · diagnóstico + fix do bot sem shell",
+        "target": "telegram",
+        "content": "Quero que você faça **diagnóstico completo e interativo** do problema \"bot não executa comandos\" seguindo a ordem das 6 causas conhecidas (probabilidade decrescente).\n\n**Não execute mudanças sem minha aprovação explícita.** Você diagnostica · propõe fix · aguarda meu OK · aplica · valida.\n\nFaz na ordem:\n\n1. **CAUSA 0 · tools.profile = messaging**\n   · Lê `/etc/openclaw/openclaw.json` em `agents.main.tools.profile`\n   · Se for `\"messaging\"` · me reporta como causa provável e propõe trocar pra `\"default\"`\n   · Aguarda meu OK · aplica · reinicia gateway · testa `echo \"SHELL_TEST_OK\"` · se voltar OK, **PARA**, problema resolvido\n\n2. **CAUSA 1 · exec fora do allowlist** (só se CAUSA 0 não resolveu)\n   · Lê `agents.main.tools.allowlist`\n   · Se não tiver `\"exec\"` · propõe adicionar\n   · Aguarda OK · aplica · restart · testa · se OK, **PARA**\n\n3. **CAUSA 2 · Sandbox = all**\n   · Lê `agents.main.tools.sandbox`\n   · Se for `\"all\"` · propõe trocar pra `\"non-main\"`\n   · OK · aplica · restart · testa · se OK, **PARA**\n\n4. **CAUSA 3 · Security = deny**\n   · Lê `agents.main.security`\n   · Se for `\"deny\"` · propõe trocar pra `\"allowlist\"`\n   · OK · aplica · restart · testa · se OK, **PARA**\n\n5. **CAUSA 4 · BotFather Group Privacy** (só se bot está em grupo)\n   · Pergunta: \"o bot está num grupo do Telegram ou só em DM?\"\n   · Se grupo · me orienta passo a passo no BotFather pra desativar Group Privacy + re-adicionar bot\n   · Aguarda eu confirmar que fiz · testa · se OK, **PARA**\n\n6. **CAUSA 5 · Shell path errado**\n   · Lê `agents.main.shell`\n   · Roda `which bash || which sh` no servidor pra confirmar path\n   · Se diferente do config · propõe ajustar\n   · OK · aplica · restart · testa · se OK, **PARA**\n\n**Antes de cada mudança:**\n· Faz backup `cp /etc/openclaw/openclaw.json /etc/openclaw/openclaw.json.bak.$(date +%Y%m%d-%H%M%S)`\n· Me mostra exatamente o que vai mudar (linha antes vs linha depois)\n· Aguarda meu OK explícito\n\n**Reporta ao final no formato:**\n\n```\n🩺 Diagnóstico completo\n\nCausa identificada: CAUSA X · [nome]\n\nMudança aplicada:\n· antes: [linha original]\n· depois: [linha nova]\n\nBackup salvo em: /etc/openclaw/openclaw.json.bak.YYYYMMDD-HHMMSS\nRestart do gateway: ✅\nTeste SHELL_TEST_OK: ✅\nStatus: bot voltou a executar comandos\n```\n\n**Se nenhuma das 6 causas resolver:**\n· Roda `openclaw gateway logs --tail 50`\n· Me cola o output\n· Sugere abrir issue ou pedir ajuda no grupo da mentoria\n\nSempre aguarda meu OK antes de aplicar mudanças."
+      },
+      {
+        "type": "callout",
+        "title": "Atalho · 1 prompt resolve tudo",
+        "content": "Em vez de ler as 6 causas e tentar uma por vez, use o **prompt master abaixo**. Você cola no Telegram, o agente faz o diagnóstico completo na ordem certa, identifica em qual causa o problema está e te propõe o fix. Você só aprova ou rejeita.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fluxograma de diagnóstico"
+      },
+      {
+        "type": "text",
+        "content": "Segue esta ordem · resolve 95% dos casos:"
+      },
+      {
+        "code": "Bot não executa comandos?\n         │\n         ▼\ntools.profile = \"messaging\"? ──SIM──▶ Remover ou trocar para \"default\"\n         │ NÃO\n         ▼\nBot em grupo e não responde? ──SIM──▶ BotFather → desativar Group Privacy\n         │ NÃO\n         ▼\nsandbox = \"all\" ?           ──SIM──▶ Mudar para \"off\" ou \"non-main\"\n         │ NÃO\n         ▼\nsecurity = \"deny\" ?         ──SIM──▶ Mudar para \"allowlist\"\n         │ NÃO\n         ▼\n\"exec\" no allowlist?        ──NÃO──▶ Adicionar \"exec\" ao allowlist\n         │ SIM\n         ▼\n    openclaw gateway restart\n         │\n    echo \"SHELL_TEST_OK\" → OK? ✅ Resolvido  ❌ Ver logs",
+        "type": "code",
+        "language": "text"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CAUSA 0 · MAIS COMUM · tools.profile = \"messaging\""
+      },
+      {
+        "type": "text",
+        "content": "Desde a 3.2, a causa #1 de \"bot não faz nada\" é o tools.profile configurado como messaging. Esse perfil otimiza o agente pra responder texto no Telegram/WhatsApp · mas bloqueia exec e acesso ao sistema."
+      },
+      {
+        "code": "{\n  \"agents\": { \"main\": { \"tools\": {\n    \"profile\": \"messaging\"  // ← PROBLEMA\n  }}}\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "text",
+        "content": "Correção · trocar pra default ou remover a chave:"
+      },
+      {
+        "code": "{\n  \"agents\": { \"main\": { \"tools\": {\n    \"profile\": \"default\"  // ← CORREÇÃO\n  }}}\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · aplicar fix de causa",
+        "target": "telegram",
+        "content": "Quero que você aplique o fix da causa que identificamos. **Antes de mudar qualquer coisa, faz backup do config.**\n\n**Causa identificada:** [eu informo qual das 6 causas é · ex: \"CAUSA 0 · tools.profile = messaging\"]\n\nFaz na ordem:\n\n1. **Backup** · `cp /etc/openclaw/openclaw.json /etc/openclaw/openclaw.json.bak.$(date +%Y%m%d)`\n\n2. **Aplica o fix** específico da causa:\n   · CAUSA 0 · troca `tools.profile` de `\"messaging\"` pra `\"default\"`\n   · CAUSA 1 · adiciona `\"exec\"` em `tools.allowlist`\n   · CAUSA 2 · troca `tools.sandbox` de `\"all\"` pra `\"off\"` ou `\"non-main\"`\n   · CAUSA 3 · troca `security` de `\"deny\"` pra `\"allowlist\"`\n   · CAUSA 5 · ajusta `shell` pro path correto (`/bin/bash` ou `/bin/sh`)\n\n3. **Reinicia gateway** · `systemctl restart openclaw`.\n\n4. **Valida** · roda `echo \"SHELL_TEST_OK\"` via mim e me confirma resposta.\n\n5. **Reporta no formato:**\n\n```\n🔧 Fix aplicado · Causa X\n\n· Backup: ✅ openclaw.json.bak.YYYYMMDD\n· Mudança: [descrição da mudança]\n· Restart: ✅\n· Teste shell: ✅ SHELL_TEST_OK retornou\n· Status: bot voltou a executar comandos\n```\n\nSe o teste falhar, **reverte** com `cp openclaw.json.bak* openclaw.json` e me reporta o erro."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CAUSA 1 · exec não está no allowlist"
+      },
+      {
+        "type": "text",
+        "content": "O agente tem uma lista de ferramentas permitidas. Se exec não estiver nela, nenhum comando roda."
+      },
+      {
+        "code": "{\n  \"agents\": { \"main\": { \"tools\": {\n    \"allowlist\": [\"exec\", \"read\", \"write\", \"edit\", \"web_search\"]\n  }}}\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CAUSA 2 · Sandbox \"all\" sem permissão correta"
+      },
+      {
+        "type": "text",
+        "content": "Com sandbox: \"all\", até o agente principal fica isolado. Use off pro principal ou non-main pra sandbox só em sub-agentes."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "shield-check",
+            "title": "off",
+            "accent": "lime",
+            "description": "Sem sandbox · acesso total ao sistema. Use no agente principal."
+          },
+          {
+            "icon": "shield-check",
+            "title": "non-main",
+            "accent": "cyan",
+            "description": "Sandbox só em sub-agentes. Recomendado em produção."
+          },
+          {
+            "icon": "shield-check",
+            "title": "all",
+            "accent": "coral",
+            "description": "Sandbox em todos · inclui agente principal. ⚠️ Bloqueia exec."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CAUSA 3 · Security mode \"deny\""
+      },
+      {
+        "type": "text",
+        "content": "Com security: \"deny\", o agente bloqueia qualquer execução. Mude pra allowlist."
+      },
+      {
+        "code": "{\n  \"agents\": { \"main\": {\n    \"security\": \"allowlist\"  // era \"deny\"\n  }}\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CAUSA 4 · BotFather Group Privacy Mode"
+      },
+      {
+        "type": "text",
+        "content": "Bot funciona em DM mas ignora mensagens no grupo? É o Group Privacy Mode do BotFather · ativo por padrão. Com privacy ON, o bot só recebe mensagens que começam com /comando."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Abre @BotFather no Telegram",
+            "accent": "cyan",
+            "description": "Procura BotFather na busca e abre o chat oficial."
+          },
+          {
+            "title": "Envia /mybots e seleciona seu bot",
+            "accent": "violet",
+            "description": "BotFather lista todos os bots que você criou."
+          },
+          {
+            "title": "Bot Settings → Group Privacy",
+            "accent": "lime",
+            "description": "Vai em configurações e abre Group Privacy."
+          },
+          {
+            "title": "Turn off",
+            "accent": "coral",
+            "description": "Confirmação esperada: Privacy mode is disabled."
+          },
+          {
+            "title": "Remove e re-adiciona o bot ao grupo",
+            "accent": "magenta",
+            "description": "Crítico · sem isso, o bot não pega a mudança no grupo existente."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CAUSA 5 · Path do shell não encontrado"
+      },
+      {
+        "type": "text",
+        "content": "Mais comum em VPS, containers Docker e distribuições minimalistas. O OpenClaw não acha o shell."
+      },
+      {
+        "code": "{\n  \"agents\": { \"main\": {\n    \"shell\": \"/bin/bash\"  // ou \"/bin/sh\" em Alpine\n  }}\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "text",
+        "content": "Confirma o path do shell no servidor:"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · descobrir path do shell",
+        "target": "telegram",
+        "content": "Roda `which bash || which sh` e me reporta o path retornado. Se voltou `/bin/bash` ou `/bin/sh`, ótimo · esse é o valor que vai em `agents.main.shell` no openclaw.json. Se não retornou nada, me avisa · pode estar em distro Alpine ou similar."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Resumo das 6 causas"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "alert-triangle",
+            "title": "0 · tools.profile = messaging",
+            "accent": "coral",
+            "description": "Trocar pra default ou remover a chave. Causa #1 mais comum."
+          },
+          {
+            "icon": "alert-triangle",
+            "title": "1 · exec não no allowlist",
+            "accent": "violet",
+            "description": "Adicionar exec ao allowlist em tools.allowlist."
+          },
+          {
+            "icon": "alert-triangle",
+            "title": "2 · Sandbox all",
+            "accent": "cyan",
+            "description": "Mudar pra off (principal) ou non-main (só sub-agentes)."
+          },
+          {
+            "icon": "alert-triangle",
+            "title": "3 · Security deny",
+            "accent": "lime",
+            "description": "Mudar pra allowlist."
+          },
+          {
+            "icon": "alert-triangle",
+            "title": "4 · BotFather Privacy (grupo)",
+            "accent": "magenta",
+            "description": "Desativar Group Privacy no BotFather + re-adicionar bot."
+          },
+          {
+            "icon": "alert-triangle",
+            "title": "5 · Shell path errado",
+            "accent": "coral",
+            "description": "Configurar shell: /bin/bash (ou /bin/sh em Alpine)."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Checklist pós-correção"
+      },
+      {
+        "id": "checklist-encontro-02-10-5113",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Reiniciar gateway",
+            "description": "openclaw gateway restart"
+          },
+          {
+            "title": "Verificar status",
+            "description": "openclaw gateway status (esperar Running)"
+          },
+          {
+            "title": "Teste básico",
+            "description": "pedir ao agente: echo SHELL_TEST_OK"
+          },
+          {
+            "title": "Teste de arquivo",
+            "description": "touch /tmp/teste-openclaw && echo OK"
+          },
+          {
+            "title": "Verificar logs",
+            "description": "openclaw gateway logs --tail 20"
+          },
+          {
+            "title": "Testar tarefa real",
+            "description": "liste os arquivos do diretório atual"
+          },
+          {
+            "title": "Se bot de grupo",
+            "description": "testar mensagem no grupo após re-adicionar"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Se nenhuma das 6 causas resolveu, manda esse prompt no Telegram pra diagnóstico interativo:"
+      },
+      {
+        "type": "prompt",
+        "title": "Diagnóstico de shell · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você faça **diagnóstico interativo do bot sem acesso ao shell**.\n\n**Sintoma:** o bot responde mensagens mas não executa comandos no servidor.\n\nFaz a análise nas **6 causas conhecidas** (na ordem de probabilidade):\n\n1. **CAUSA 0 · tools.profile = messaging** (V2 3.2)\n   · Lê `/etc/openclaw/openclaw.json`\n   · Se `agents.main.tools.profile` for `\"messaging\"`, propõe trocar pra `\"default\"`\n\n2. **CAUSA 1 · exec não está no allowlist**\n   · Verifica `agents.main.tools.allowlist`\n   · Se não tiver `\"exec\"`, propõe adicionar\n\n3. **CAUSA 2 · Sandbox \"all\"**\n   · Verifica `agents.main.tools.sandbox`\n   · Se for `\"all\"`, propõe trocar pra `\"off\"` ou `\"non-main\"`\n\n4. **CAUSA 3 · Security mode \"deny\"**\n   · Verifica `agents.main.security`\n   · Se for `\"deny\"`, propõe trocar pra `\"allowlist\"`\n\n5. **CAUSA 4 · BotFather Group Privacy** (só se bot está em grupo)\n   · Me orienta a desativar Group Privacy no BotFather + re-adicionar bot\n\n6. **CAUSA 5 · Shell path errado**\n   · Verifica `agents.main.shell`\n   · Confirma que existe (`which bash`)\n\n**Pra cada causa:**\n· Me mostra o estado atual da config\n· Propõe o fix\n· Aguarda meu OK antes de aplicar\n\nSe nenhuma das 6 resolver, sugere ler logs com `openclaw gateway logs --tail 50` e me chama de volta."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintoma 2 · cron não rodou no horário"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "alert-circle",
+            "title": "Sintoma",
+            "accent": "coral",
+            "description": "Briefing matinal não chegou às 7h. Health check sem log nas últimas horas."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Causa provável",
+            "accent": "violet",
+            "description": "Cron daemon caiu · sintaxe errada no crontab · timezone errado (causa #1)."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Fix",
+            "accent": "lime",
+            "description": "1) systemctl is-active cron · 2) crontab -l (validar) · 3) date (timezone) · 4) tail /var/log/syslog | grep CRON"
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · diagnóstico do cron",
+        "target": "telegram",
+        "content": "Quero que você faça **diagnóstico completo do cron** · não execute mudanças, só análise.\n\nFaz na ordem:\n\n1. **Status do daemon** · roda `systemctl status cron` e me mostra `active (running)` ou `inactive`.\n\n2. **Lista jobs** · roda `crontab -l` e me mostra os jobs configurados.\n\n3. **Timezone do sistema** · roda `date` e confirma timezone.\n\n4. **Logs recentes** · roda `grep CRON /var/log/syslog | tail -20` e me mostra as últimas execuções.\n\n5. **Reporta no formato:**\n\n```\n⏰ Diagnóstico do cron\n\n· Daemon · ✅ active OU ❌ inactive\n· Timezone · America/Sao_Paulo (ou UTC se errado)\n· Jobs configurados · N\n· Últimas execuções · ✅ rodando OU ❌ sem registros recentes\n\nDiagnóstico: [resumo do que está OK e do que está errado]\nPróximo passo recomendado: [se algo estiver errado]\n```\n\nNão executa mudanças · só análise."
+      },
+      {
+        "type": "callout",
+        "content": "Timezone errado é a causa #1. Pra ajustar: sudo timedatectl set-timezone America/Sao_Paulo",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintoma 3 · memória sumida ou inconsistente"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "alert-circle",
+            "title": "Sintoma",
+            "accent": "coral",
+            "description": "Agente \"esquece\" decisão que você salvou ontem. Ou mistura projetos."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Causa provável",
+            "accent": "violet",
+            "description": "Arquivo não foi salvo · MEMORY.md desatualizado · agente não buscou (sob demanda)."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Fix",
+            "accent": "lime",
+            "description": "1) cat memory/MEMORY.md · 2) ls -la memory/context/ · 3) pedir pro agente: \"busca em memory/ tudo sobre X e me mostra\""
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Diagnóstico de memória · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você **apenas analise** o estado da minha memória · não execute mudanças.\n\nFaz a auditoria item por item:\n\n1. **Inventário** · lista todos os arquivos em `~/openclaw/memory/` com:\n   · Caminho\n   · Número de linhas\n   · Última modificação\n\n2. **Identifica os crescendo demais** · arquivos com **>500 linhas** (precisam ser consolidados ou arquivados).\n\n3. **Identifica os vazios há tempo** · arquivos não modificados há **>7 dias** (podem ser arquivados).\n\n4. **Sugere ação pra cada problema:**\n   · Crescendo demais · \"consolida X em Y\" ou \"arquiva metade em `memory/archive/`\"\n   · Vazio · \"arquiva pra liberar busca semântica\"\n\n5. **Salva relatório** em `memory/sessions/HOJE.md`.\n\n6. **Reporta no formato:**\n\n```\n🧠 Auditoria de memória\n\n· Total de arquivos: N\n· Tamanho da pasta: X MB\n\n⚠️ Crescendo demais (>500 linhas):\n  · arquivo1 · 720 linhas · consolidar\n  · arquivo2 · 612 linhas · arquivar metade\n\n⚠️ Vazios há >7 dias:\n  · arquivo3 · 12 dias sem mod\n  · arquivo4 · 9 dias sem mod\n\n✅ OK: N arquivos saudáveis\n\nRelatório completo: memory/sessions/HOJE.md\n```\n\nNão executa mudanças · só análise."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintoma 4 · integração quebrada (token expirado)"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "alert-circle",
+            "title": "Sintoma",
+            "accent": "coral",
+            "description": "Skill que usava Gmail/Calendar/Drive parou de funcionar. Erro 401 no log."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Causa provável",
+            "accent": "violet",
+            "description": "OAuth token expirou · refresh token revogado · senha mudou."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Fix",
+            "accent": "lime",
+            "description": "1) cat memory/integrations/{servico}.md · 2) refazer auth · 3) atualizar .env com novo token"
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "callout",
+        "content": "Tokens OAuth do Google duram 7 dias em modo testing · deploy em produção pra durar até revogação manual.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintoma 5 · disco ou RAM cheios"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "alert-circle",
+            "title": "Sintoma",
+            "accent": "coral",
+            "description": "openclaw-doctor mostra disco >85% ou RAM >90%. Sistema lento."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Causa provável",
+            "accent": "violet",
+            "description": "Logs gigantes · backups locais antigos · screenshots/áudios acumulados."
+          },
+          {
+            "icon": "alert-circle",
+            "title": "Fix",
+            "accent": "lime",
+            "description": "1) du -sh ~/openclaw/* · 2) limpar logs >30 dias · 3) reiniciar serviços"
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · análise + limpeza de disco",
+        "target": "telegram",
+        "content": "Quero que você analise o uso de disco da pasta `~/openclaw` e faça limpeza segura.\n\nFaz na ordem:\n\n1. **Análise** · roda `du -sh ~/openclaw/* | sort -h` e me mostra o ranking de pastas/arquivos por tamanho.\n\n2. **Identifica candidatos a limpar** · logs antigos (>30 dias), backups locais redundantes, arquivos `*.tmp`, screenshots/áudios acumulados.\n\n3. **Pergunta antes de apagar** · me lista os candidatos e pede confirmação. NÃO apaga nada sem meu OK.\n\n4. **Após confirmação** · roda `find ~/openclaw/logs -name '*.log' -mtime +30 -delete` e me reporta quantos arquivos foram removidos e quanto espaço foi liberado.\n\n5. **Reporta no formato:**\n\n```\n🧹 Limpeza de disco\n\nAntes:\n· ~/openclaw · X MB\n· top 5 maiores: [lista]\n\nCandidatos a limpar:\n· logs/*.log (>30 dias) · N arquivos · Y MB\n· backups/*.bak · N arquivos · Z MB\n\nAguardando confirmação pra executar...\n```\n\nNão apaga nada antes do meu OK."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Quando pedir socorro"
+      },
+      {
+        "type": "callout",
+        "content": "Se você seguiu as 6 causas + os 4 sintomas e o problema persiste · NÃO mexe mais. Roda openclaw-doctor, copia o output, manda no grupo da mentoria com: o que estava fazendo, o que esperava, o que aconteceu.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Checkpoint",
+        "content": "Tabela de troubleshoot na cabeça. Maioria dos problemas resolve em 1 comando · openclaw-doctor + restart do serviço certo. As 6 causas de \"bot sem shell\" cobrem 95% dos casos da V2 3.2.",
+        "variant": "success"
+      }
+    ],
+    "number": "09",
+    "status": "available",
+    "summary": "Bot sem acesso ao shell (6 causas), cron que não rodou, memória inconsistente, integração quebrada, disco/RAM cheios. Cada sintoma com causa, fix e teste de validação.",
+    "schedule": [
+      {
+        "label": "0·3",
+        "topic": "Método: sintoma · causa · fix"
+      },
+      {
+        "label": "3·14",
+        "topic": "Bot sem acesso ao shell · 6 causas"
+      },
+      {
+        "label": "14·18",
+        "topic": "Cron não rodou"
+      },
+      {
+        "label": "18·22",
+        "topic": "Memória sumida ou inconsistente"
+      },
+      {
+        "label": "22·26",
+        "topic": "Integração quebrada (token expirado)"
+      },
+      {
+        "label": "26·30",
+        "topic": "Disco/RAM cheios"
+      },
+      {
+        "label": "30·33",
+        "topic": "Checklist pós-correção"
+      },
+      {
+        "label": "33·35",
+        "topic": "Quando pedir socorro"
+      }
+    ],
+    "shortTitle": "Resolvendo Problemas",
+    "learningGoals": [],
+    "durationMinutes": 35
+  }
+}

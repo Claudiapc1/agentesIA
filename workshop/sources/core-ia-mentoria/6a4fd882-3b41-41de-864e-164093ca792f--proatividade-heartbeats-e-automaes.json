@@ -1,0 +1,401 @@
+{
+  "id": "6a4fd882-3b41-41de-864e-164093ca792f",
+  "titulo": "Proatividade: Heartbeats e Automações",
+  "lesson_payload": {
+    "id": "encontro-02-07",
+    "tag": "Etapa 6",
+    "title": "Proatividade: Heartbeats e Automações",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Até agora seu agente é **reativo**: você manda mensagem, ele responde. Útil, mas limitado. Você ainda precisa lembrar de pedir as coisas. Se você esquece de perguntar sobre uma pendência, ela fica esquecida."
+      },
+      {
+        "type": "text",
+        "content": "**Proatividade vira a chave do agente.** Em vez de esperar você falar, ele vira um **secretário digital** que checa pendências em ritmos definidos (4h em 4h, semanal, diário) e te avisa só quando algo importante acontece. Tarefa parada há 3 dias? Te avisa. Email VIP esperando há 4h? Te avisa. Cron quebrou? Te avisa. Resto fica em silêncio."
+      },
+      {
+        "type": "callout",
+        "title": "Heartbeat · não é spam",
+        "content": "A regra crítica desta etapa é: **só fala se for relevante e acionável**. Se ele alertar tudo toda hora, vira spam · você ignora e perde o valor. Aqui você define o que checar e quais são as regras de quando falar vs quando ficar calado.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Reativo vs Proativo",
+        "content": "Até aqui o agente é **reativo** · responde quando você fala. Aqui muda · ele passa a **agir sem você pedir**. Heartbeat é o pulso periódico que checa o que importa pra você e te alerta quando precisa.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que é Heartbeat"
+      },
+      {
+        "type": "text",
+        "content": "Diferente de um cron tradicional que faz **uma** tarefa em horário fixo (ex: \"backup diário 23h\"), o Heartbeat é **multi-signal** · roda em ritmos definidos e checa **N coisas** ao mesmo tempo. Cada uma com sua regra de quando alertar e quando ficar calado."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "timer",
+            "title": "Cron tradicional",
+            "description": "Single-task · faz 1 tarefa fixa, sempre alerta no fim. \"Roda backup às 23h\". Útil mas burro."
+          },
+          {
+            "icon": "trending",
+            "title": "Heartbeat",
+            "description": "Multi-signal · checa N sinais ao mesmo tempo, decide se alerta ou não, filtra ruído por relevância. \"Pulso 4h comercial checa 5 coisas\"."
+          }
+        ],
+        "items": [],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que o Heartbeat pode checar · sugestões"
+      },
+      {
+        "type": "callout",
+        "title": "Sugestões · não é obrigatório fazer tudo",
+        "content": "Lista abaixo é cardápio · você escolhe o que faz sentido pra você. Coloca no HEARTBEAT.md só o que você QUER que o agente lembre. Se você já recebe notificação nativa de algo (ex: agenda Google já alerta), não precisa repetir aqui.",
+        "variant": "warning"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "check",
+            "title": "Tarefas pendentes",
+            "description": "Itens em memory/pending.md aguardando sua decisão. Se passou X dias, alerta."
+          },
+          {
+            "icon": "check",
+            "title": "Cron health",
+            "description": "Algum cron falhou nas últimas 24h? Lembra antes de virar problema."
+          },
+          {
+            "icon": "check",
+            "title": "Emails VIP urgentes",
+            "description": "Nova mensagem de pessoas marcadas como VIP em people.md, não respondida há >X horas."
+          },
+          {
+            "icon": "check",
+            "title": "Métricas com desvio",
+            "description": "Métrica de negócio fora do esperado (ex: vendas 30% abaixo da meta diária)."
+          },
+          {
+            "icon": "check",
+            "title": "Conversas paradas",
+            "description": "Você prometeu retornar pra alguém e ainda não retornou."
+          }
+        ],
+        "items": [],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Falar vs calar · anti-spam"
+      },
+      {
+        "type": "text",
+        "content": "Se o agente alertar TUDO toda hora, vira spam · você ignora e perde o valor. A regra é: **só fala se for relevante e acionável**. Tudo o mais loga em silêncio (HEARTBEAT_OK)."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "send",
+            "title": "FALAR (Telegram)",
+            "description": "Cron quebrou · precisa fix · Email VIP esperando >4h · Pendência crítica >3 dias · Métrica fora do range esperado. Você AGE."
+          },
+          {
+            "icon": "lock",
+            "title": "CALAR (log silencioso)",
+            "description": "Tudo OK · check normal · Email não-VIP · Pendência dentro do prazo · Métrica no range. Loga em memory/feedback/heartbeat-log.md sem te chamar."
+          }
+        ],
+        "items": [],
+        "fullWidth": true
+      },
+      {
+        "type": "callout",
+        "title": "Regra evolui",
+        "content": "Você vai descobrir que algumas coisas que estão em FALAR deviam estar em CALAR (você ignora). Outras o oposto. Toda semana, o agente revisa as regras com base em quais alertas você ignorou e quais agiu. **Aprende.**",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Conectar na VPS"
+      },
+      {
+        "type": "callout",
+        "title": "IP carregado da Etapa 1",
+        "content": "Se você fez a Etapa 1 nesse mesmo navegador, o IP carrega automático abaixo.",
+        "variant": "info"
+      },
+      {
+        "type": "command-with-input",
+        "label": "Conectar via SSH",
+        "command": "ssh root@{{ip}}",
+        "inputLabel": "IP da sua VPS",
+        "storageKey": "core-ai:vps-ip",
+        "placeholder": "1.2.3.4",
+        "extractPattern": "ip"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 1 · Criar HEARTBEAT.md"
+      },
+      {
+        "type": "text",
+        "content": "Esse arquivo vive em `~/.openclaw/HEARTBEAT.md` · é o **checklist** que o cron 4h e o cron weekly executam. Define: o que checar, qual o critério, e se é FALAR ou CALAR."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · criar HEARTBEAT.md",
+        "target": "telegram",
+        "content": "Quero que você crie o arquivo `HEARTBEAT.md` com meu cardápio de checks.\n\n**Meus checks escolhidos:** [eu listo aqui as opções que quero · ex: tarefas pendentes, cron health, emails VIP, métricas]\n\nFaz na ordem:\n\n1. **Cria o arquivo** `~/.openclaw/HEARTBEAT.md` com a estrutura:\n   ```\n   # Heartbeat checks\n   ## A cada 4h (horário comercial)\n   - [ ] Tarefas pendentes em memory/pending.md (alerta se >3 dias)\n   - [ ] Cron health (alerta se algum quebrou)\n   - [ ] Emails VIP urgentes (>4h sem resposta)\n\n   ## Semanal (sexta 16h)\n   - [ ] Resumo da semana\n   - [ ] Pendências em risco\n   ```\n\n2. **Define regras FALAR vs CALAR:**\n   · FALAR (Telegram): cron quebrado · email VIP >4h · pendência crítica >3 dias · métrica anormal\n   · CALAR (log silencioso `HEARTBEAT_OK`): tudo OK · check normal\n\n3. **Reporta no formato:**\n\n```\n💓 HEARTBEAT.md criado\n\n· Caminho: ~/.openclaw/HEARTBEAT.md\n· Checks 4h: N\n· Checks semanal: N\n· Regras FALAR/CALAR aplicadas: ✅\n```"
+      },
+      {
+        "type": "callout",
+        "title": "Adapta ao seu fluxo",
+        "content": "Esse template é genérico · personaliza com o que faz sentido pra você. Tira itens que não usa, adiciona outros do seu negócio (KPIs específicos, redes sociais que monitora, etc).",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 2 · Cron Heartbeat 4h comercial"
+      },
+      {
+        "type": "text",
+        "content": "Cron que executa o Heartbeat 4h, **só em horário comercial** (Seg-Sex 9-18h, fuso São Paulo). Fora disso, fica calado."
+      },
+      {
+        "type": "callout",
+        "title": "Regra de ouro dos crons",
+        "content": "Todo cron PRECISA usar `--session isolated` + `--payload-kind agentTurn` + `--delivery announce`. Sem isso, dispara mas não executa.",
+        "variant": "warning"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · criar crons de proatividade",
+        "target": "telegram",
+        "content": "Quero que você crie os crons de proatividade.\n\nExecuta na ordem:\n\n1. **Cria os crons:**\n   · `openclaw cron add heartbeat-4h --schedule '0 9,13,17 * * 1-5' --tz America/Sao_Paulo --session isolated --payload-kind agentTurn --delivery announce --message 'Executa o checklist HEARTBEAT.md secao 4h. Aplica a regra falar vs calar. Se nenhum sinal disparar, loga silenciosamente em memory/feedback/heartbeat-log.md.'`\n\n2. **Lista** todos crons ativos com `openclaw cron list`.\n\n3. **Reporta no formato:**\n\n```\n⏰ Crons de proatividade\n\n· heartbeat-4h · ✅ próxima: HH:00\n· weekly-review · ✅ próxima: sexta 16h\n· triagem-email · ✅ próxima: HH:00 (horário comercial)\n· memory-cleanup · ✅ próxima: domingo 22h\n\nStatus: N crons ativos\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 3 · Cron Weekly Review (Sex 16h)"
+      },
+      {
+        "type": "text",
+        "content": "Sexta 16h · revisão profunda da semana. Resume decisions, lessons, pending da semana. Manda resumo executivo no Telegram pra você fechar a semana com clareza e começar segunda focado."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Bônus 1 · Triagem de email"
+      },
+      {
+        "type": "callout",
+        "title": "Opcional · só se receber muito email",
+        "content": "Se você recebe 10+ emails/dia que precisam decisão, vale ativar. Se você já tem inbox zero ou poucos emails, pula.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Bônus 2 · Organização de memória"
+      },
+      {
+        "type": "callout",
+        "title": "Opcional · útil se você não revisa memória",
+        "content": "Esse cron mantém a memória limpa · move sessions antigas pra archive, consolida lessons recorrentes, atualiza índices. Roda silencioso (não te chama) · só agente trabalhando.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Ativar mandato proativo"
+      },
+      {
+        "type": "text",
+        "content": "Com cron e HEARTBEAT.md prontos, falta só **dar permissão** pro agente ser proativo · explicar o mandato. Cola o prompt abaixo no Telegram pra ativar."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · ativar mandato proativo (Telegram)",
+        "target": "telegram",
+        "content": "A partir de agora, quero que você seja PROATIVO. Isso significa:\n\n1. **Não espere eu pedir.** Se você vê algo que precisa de atenção (compromisso próximo, tarefa atrasada, oportunidade), me avise sem eu perguntar.\n\n2. **Antecipe problemas.** Se um prazo está chegando, um cron falhou, ou algo parece errado, me alerte.\n\n3. **Sugira melhorias.** Se você vê uma forma melhor de fazer algo que estamos fazendo, proponha.\n\n4. **Lembre de coisas que eu esqueci.** Se mencionei algo importante e não dei follow-up, me lembre.\n\n5. **Use os heartbeats produtivamente.** Cada heartbeat é uma chance de checar agenda, pendências e crons.\n\n**Regras:**\n· Interno (ler, pesquisar, organizar) = faça sem pedir\n· Externo (emails, posts, mensagens) = confirme comigo antes\n· Na dúvida = pergunte\n\nConfirme que entendeu e me diga o que vai checar primeiro."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Bônus opcional · OpenRouter como fallback"
+      },
+      {
+        "type": "callout",
+        "title": "Quando usar",
+        "content": "Se seus créditos do ChatGPT acabarem ou tiver instabilidade na OpenAI, OpenRouter funciona como **fallback automático** · cria uma API alternativa que o agente usa quando o provider primário falha. Não é obrigatório agora · vale conhecer pra futuro.",
+        "variant": "info"
+      },
+      {
+        "type": "text",
+        "content": "Setup rápido (não precisa fazer agora):\n\n1. Cria conta em openrouter.ai\n2. Pega API key\n3. Adiciona em `/etc/openclaw/.env` como `OPENROUTER_API_KEY=...`\n4. Configura no `openclaw.json` como provider de fallback (`fallbackProviders`)"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint da Etapa 6"
+      },
+      {
+        "id": "encontro-02-07-checkpoint",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "HEARTBEAT.md criado",
+            "description": "2 seções: 4h e Weekly Review · com critérios"
+          },
+          {
+            "title": "Cron heartbeat-4h ativo",
+            "description": "Seg-Sex 9h/13h/17h · regra de ouro"
+          },
+          {
+            "title": "Cron weekly-review ativo",
+            "description": "Sex 16h · resumo executivo"
+          },
+          {
+            "title": "Triagem email (opcional)",
+            "description": "4x/dia · só fala URGENTE+AÇÃO"
+          },
+          {
+            "title": "Organização memória (opcional)",
+            "description": "Domingo 22h · silent · só erro alerta"
+          },
+          {
+            "title": "Mandato proativo ativado",
+            "description": "Agente confirmou que vai agir sem pedir"
+          },
+          {
+            "title": "Falar vs calar definido",
+            "description": "Documentado no HEARTBEAT.md"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Prompt para o agente · auditoria"
+      },
+      {
+        "type": "text",
+        "content": "Pra fechar a etapa, cola o prompt abaixo no chat do agente no Telegram. Ele vai fazer 6 análises **sem mexer em nada** · só leitura e relatório:\n\n· HEARTBEAT.md existe com as 2 seções (4h e Weekly Review)?\n· Cron heartbeat-4h ativo · schedule 9/13/17 Seg-Sex · regra de ouro?\n· Cron weekly-review ativo · Sex 16h?\n· Mandato proativo internalizado · responde com tom proativo?\n· Regra falar vs calar documentada?\n· Bônus opcionais · triagem-email e memory-cleanup ativos?\n\nResposta esperada · score 0-10 confirmando o sistema proativo. Se algo ficou fraco, ele aponta o que corrigir antes de seguir pra Etapa 7."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Etapa 6 · Auditoria de proatividade",
+        "target": "telegram",
+        "content": "Acabei de configurar Heartbeat e automações. Quero que você **apenas analise** se está tudo certo · não muda nada.\n\n1. **HEARTBEAT.md** · existe? Tem as 2 seções (4h e Weekly Review)?\n2. **heartbeat-4h cron** · ativo com schedule 9,13,17 Seg-Sex e regra de ouro?\n3. **weekly-review cron** · ativo Sex 16h?\n4. **Mandato proativo** · você internalizou? Confirma os 5 itens (não espera pedir, antecipa problemas, sugere melhorias, lembra do esquecido, usa heartbeats).\n5. **Regra falar vs calar** · documentada no HEARTBEAT.md?\n6. **Bônus opcionais** · triagem-email e memory-cleanup ativos? (n/a se não quis ativar)\n\nResponde:\n\n```\n💓 Auditoria de proatividade · Etapa 6\n\n1. HEARTBEAT.md · ✅\n2. Cron heartbeat-4h · ✅\n3. Cron weekly-review · ✅\n4. Mandato proativo · ✅ internalizado\n5. Falar vs calar · ✅\n6. Bônus · [N]/2 ativos\n\nScore: [N]/10 · pode seguir pra Etapa 7 (Sistema Imunológico)\n```"
+      },
+      {
+        "type": "callout",
+        "title": "Próxima etapa · Sistema Imunológico",
+        "content": "Heartbeat ativo, automações rodando. Agora vamos garantir que **o sistema todo se mantém saudável** · watchdogs, feedback loops, audit semanal de segurança, backup, e o protocolo Sub-agents \"Nunca Fire & Forget\".",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Crons de proatividade adicionais"
+      },
+      {
+        "type": "text",
+        "content": "Além do heartbeat-4h, mais 3 crons importantes pra proatividade · weekly review na sexta, triagem de email no horário comercial, e limpeza de memória no domingo."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · criar 3 crons adicionais",
+        "target": "telegram",
+        "content": "Quero que você crie **3 crons adicionais** de proatividade.\n\nExecuta na ordem:\n\n1. **Cria os 3 crons:**\n   · `openclaw cron add weekly-review --schedule '0 16 * * 5' --tz America/Sao_Paulo --session isolated --payload-kind agentTurn --delivery announce --message 'Executa a secao Weekly Review do HEARTBEAT.md. Le a estrutura completa de memoria + atualiza MEMORY.md como indice. Manda no Telegram o resumo executivo: 3 wins, 3 gaps, 5 pendencias criticas pra segunda.'`\n   · `openclaw cron add triagem-email --schedule '0 9,12,15,18 * * 1-5' --tz America/Sao_Paulo --session isolated --payload-kind agentTurn --delivery announce --message 'Le ultimos 20 emails via gog gmail inbox. Classifica em 4 categorias: URGENTE (responder hoje, de pessoas em people.md como VIP), ACAO (responder essa semana, perguntas/propostas), INFO (arquivar, newsletters), LIXO (ignorar, spam). Fala SO se houver 1+ email em URGENTE ou ACAO. Calar se tudo for INFO/LIXO.'`\n   · `openclaw cron add memory-cleanup --schedule '0 22 * * 0' --tz America/Sao_Paulo --session isolated --payload-kind agentTurn --delivery announce --message 'Manutencao silent da memoria: 1) Move memory/sessions/HOJE.md para memory/sessions/{data}.md. 2) Move sessions/ONTEM.md para sessions/{data-1}.md. 3) Cria sessions/HOJE.md vazio pra proxima semana. 4) Le sessions/ ultimos 7 dias e extrai padroes repetidos pra memory/context/lessons.md. 5) Atualiza memory/MEMORY.md com novo indice. 6) Loga em memory/feedback/memory-cleanup-log.md o que mudou. So me chama no Telegram se algo der errado.'`\n\n2. **Lista** todos os crons ativos com `openclaw cron list`.\n\n3. **Reporta no formato:**\n\n```\n⏰ Crons adicionais criados\n\n· weekly-review · ✅ próxima: sexta 16h\n· triagem-email · ✅ próxima: HH:00 (horário comercial)\n· memory-cleanup · ✅ próximo: domingo 22h\n\nTotal de crons ativos no agente: N\n```"
+      }
+    ],
+    "number": "06",
+    "status": "available",
+    "duration": 50,
+    "schedule": [
+      {
+        "title": "Reativo vs Proativo",
+        "duration": "3 min"
+      },
+      {
+        "title": "O que é Heartbeat",
+        "duration": "4 min"
+      },
+      {
+        "title": "O que checar (sugestões)",
+        "duration": "5 min"
+      },
+      {
+        "title": "Falar vs calar (anti-spam)",
+        "duration": "5 min"
+      },
+      {
+        "title": "Conectar na VPS",
+        "duration": "1 min"
+      },
+      {
+        "title": "Passo 1 · Criar HEARTBEAT.md",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 2 · Cron Heartbeat 4h",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 3 · Cron Weekly Review",
+        "duration": "5 min"
+      },
+      {
+        "title": "Bônus 1 · Triagem de email",
+        "duration": "5 min"
+      },
+      {
+        "title": "Bônus 2 · Organização de memória",
+        "duration": "5 min"
+      },
+      {
+        "title": "Ativar mandato proativo",
+        "duration": "3 min"
+      },
+      {
+        "title": "Auditoria final",
+        "duration": "4 min"
+      }
+    ],
+    "subtitle": "HEARTBEAT.md · 2 ritmos · 2 automações · falar vs calar · mandato proativo",
+    "shortTitle": "Proatividade",
+    "learningGoals": [
+      "Entender o que é Heartbeat e por que faz o agente proativo",
+      "Saber o que o Heartbeat pode checar (sugestões adaptáveis)",
+      "Configurar HEARTBEAT.md com 2 ritmos (4h comercial + weekly)",
+      "Criar cron de Heartbeat (4h) com regra de ouro",
+      "Criar cron Weekly Review (Sex 16h)",
+      "Adicionar 2 automações opcionais · triagem email + organização memória",
+      "Definir regras de falar vs calar (anti-spam)",
+      "Ativar mandato proativo no agente",
+      "Auditar tudo via prompt final"
+    ]
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "id": "ee7c43ce-d8ff-4843-8e25-7ddd07c061da",
+  "titulo": "Claude Code: Instalando e Configurando a Sua Estrutura Completa",
+  "lesson_payload": {
+    "id": "encontro-01-02",
+    "tag": "Aula 2",
+    "title": "Claude Code: Instalando e Configurando a Sua Estrutura Completa",
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Por que esta aula existe",
+        "content": "No Encontro 1, alguns alunos travaram na instalação (Windows com `cloud not found`, Mac com erro do Homebrew/Tahoe). Esta aula é o **passo-a-passo definitivo**: do terminal vazio ao Claude Code funcionando + Stack Setup configurando tudo automaticamente.\n\nNo final, seu ambiente está **idêntico ao do Juliano** · pronto para o Encontro 2 onde construímos o Clone Master.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pré-requisitos · o que você precisa antes"
+      },
+      {
+        "type": "text",
+        "content": "Antes de instalar o Claude Code, você precisa de **dois pré-requisitos**: terminal aberto + Node.js instalado.\n\nNa Aula 1 do curso de Claude Code (em `playbook.torriani.com.br/claude-code/aula-1-1`) tem o passo-a-passo detalhado de como abrir o terminal e instalar Node. Aqui vai o resumo."
+      },
+      {
+        "type": "mermaid",
+        "caption": "A ordem dos passos: cada etapa depende da anterior estar funcionando",
+        "diagram": "graph LR\n    T[1. Terminal]:::a --> N[2. Node.js]:::b --> C[3. Claude Code]:::c --> S[4. Stack Setup]:::d\n    classDef a fill:#0c4a6e,stroke:#38bdf8,color:#f0f9ff\n    classDef b fill:#581c87,stroke:#c084fc,color:#faf5ff\n    classDef c fill:#7c2d12,stroke:#fb923c,color:#fff7ed\n    classDef d fill:#14532d,stroke:#4ade80,color:#f0fdf4"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "node --version",
+            "type": "command"
+          },
+          {
+            "text": "v20.10.0",
+            "type": "output"
+          },
+          {
+            "text": "Se aparecer um número (v18 ou superior), pode pular para a próxima seção.",
+            "type": "comment"
+          },
+          {
+            "text": "Se aparecer 'command not found', instale Node primeiro:",
+            "type": "comment"
+          },
+          {
+            "text": "→ Mac: brew install node",
+            "type": "comment"
+          },
+          {
+            "text": "→ Windows: winget install OpenJS.NodeJS",
+            "type": "comment"
+          },
+          {
+            "text": "→ Qualquer SO: baixe em https://nodejs.org",
+            "type": "comment"
+          }
+        ],
+        "title": "Verificar se Node.js está instalado"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Instalando o Claude Code"
+      },
+      {
+        "type": "text",
+        "content": "**Um comando. Menos de 60 segundos.** Você digita uma linha, aperta Enter, e quando o terminal parar de rodar, o Claude Code está no seu computador.\n\nTrês opções, dependendo do seu sistema. Escolha **uma**."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "curl -fsSL https://claude.ai/install.sh | sh",
+            "type": "command"
+          },
+          {
+            "text": "✓ Baixando Claude Code...",
+            "type": "output"
+          },
+          {
+            "text": "✓ Instalando dependências...",
+            "type": "output"
+          },
+          {
+            "text": "✓ Claude Code instalado com sucesso!",
+            "type": "output"
+          },
+          {
+            "text": "claude --version",
+            "type": "command"
+          },
+          {
+            "text": "1.0.12",
+            "type": "output"
+          },
+          {
+            "text": "Se apareceu um número de versão: instalação concluída.",
+            "type": "comment"
+          }
+        ],
+        "title": "Opção 1 · Mac (recomendada)"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "irm https://claude.ai/install.ps1 | iex",
+            "type": "command"
+          },
+          {
+            "text": "✓ Baixando Claude Code...",
+            "type": "output"
+          },
+          {
+            "text": "✓ Instalando dependências...",
+            "type": "output"
+          },
+          {
+            "text": "✓ Claude Code instalado com sucesso!",
+            "type": "output"
+          },
+          {
+            "text": "claude --version",
+            "type": "command"
+          },
+          {
+            "text": "1.0.12",
+            "type": "output"
+          },
+          {
+            "text": "Alternativa via WinGet: winget install Anthropic.ClaudeCode",
+            "type": "comment"
+          }
+        ],
+        "title": "Opção 2 · Windows (PowerShell, NÃO o CMD)"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "npm install -g @anthropic-ai/claude-code",
+            "type": "command"
+          },
+          {
+            "text": "✓ Pacote instalado globalmente",
+            "type": "output"
+          },
+          {
+            "text": "claude --version",
+            "type": "command"
+          },
+          {
+            "text": "1.0.12",
+            "type": "output"
+          },
+          {
+            "text": "Funciona em Mac, Windows e Linux. Requer Node.js já instalado.",
+            "type": "comment"
+          }
+        ],
+        "title": "Opção 3 · Qualquer sistema (via npm)"
+      },
+      {
+        "type": "callout",
+        "title": "Erro clássico do Windows: cloud / claude not found",
+        "content": "Se aparecer `'token && is not a valid statement separator'` ou `claude: command not found`, você está no **CMD**, não no PowerShell.\n\n**Solução:**\n1. Feche o CMD\n2. Procure por **\"PowerShell\"** no menu Iniciar (não \"Prompt de Comando\")\n3. Confira: a linha começa com `PS C:\\>` ? Então é PowerShell. ✓\n4. Rode novamente o comando de instalação\n\nFoi exatamente o que travou no Encontro 1 · Júlia e Júlio passaram ~30min nisso.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Login na sua conta Anthropic"
+      },
+      {
+        "type": "text",
+        "content": "Agora o terminal precisa **se conectar à sua conta Anthropic** (a mesma que você usa em claude.ai). Esse login acontece **uma vez** · depois ele guarda um token e nunca mais pede."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Digite `claude` no terminal",
+            "description": "O navegador vai abrir automaticamente em uma página de login da Anthropic."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Faça login no navegador",
+            "description": "Use sua conta Anthropic (a mesma do claude.ai). Se o navegador NÃO abrir sozinho, copie o link que aparece no terminal e cole no navegador manualmente."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Volte ao terminal",
+            "description": "Após o login, volte ao terminal. Você deve ver uma mensagem de boas-vindas. Pronto: você está logado."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Plano gratuito não funciona",
+        "content": "O Claude Code precisa de pelo menos o **plano Pro** (~US$20/mês) para funcionar. Para uso profissional na mentoria, o ideal é o **plano Max (~R$500/mês)** · você gasta muito menos por trabalho equivalente comparado a outras IAs (Manus, Lovable). Se você ainda está no plano Free, o terminal vai bloquear o `code` aqui.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Diagnóstico · o /doctor"
+      },
+      {
+        "type": "text",
+        "content": "Dentro do Claude Code, existe um comando de diagnóstico chamado `/doctor`. Ele verifica tudo: Node.js, autenticação, conexão com a API, permissões. É o seu **\"exame médico\"** do Claude Code · verde em tudo = pronto pra trabalhar."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/doctor",
+            "type": "command"
+          },
+          {
+            "text": "✓ Node.js v20.18.0",
+            "type": "output"
+          },
+          {
+            "text": "✓ Autenticação · Conectado",
+            "type": "output"
+          },
+          {
+            "text": "✓ API · Respondendo",
+            "type": "output"
+          },
+          {
+            "text": "✓ Permissões · OK",
+            "type": "output"
+          },
+          {
+            "text": "Verde = OK · Vermelho = precisa de atenção · Tudo verde = pronto",
+            "type": "comment"
+          }
+        ],
+        "title": "Resultado esperado do /doctor"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Primeiro teste real"
+      },
+      {
+        "type": "text",
+        "content": "Sem floreio: faça uma pergunta e veja se ele responde."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "Qual o dia da semana de hoje?",
+            "type": "command"
+          },
+          {
+            "text": "Hoje é terça-feira, 28 de abril de 2026.",
+            "type": "output"
+          },
+          {
+            "text": "Se o Claude respondeu: instalação completa e funcional.",
+            "type": "comment"
+          }
+        ],
+        "title": "Sua primeira interação"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Stack Setup · configurando todo o ambiente automaticamente"
+      },
+      {
+        "type": "text",
+        "content": "O Claude Code está rodando. Mas para a mentoria você precisa de **mais ferramentas configuradas**: GitHub CLI (gh), Supabase CLI, Git autenticado, `~/.claude/CLAUDE.md` global, `~/.claude/settings.json` otimizado para economizar tokens.\n\nFazer isso na mão leva ~1 hora e tem armadilhas. Por isso eu criei uma **skill chamada Stack Setup** · você roda um comando e ela faz tudo, perguntando só o necessário."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Roda 1 comando: `/stack-setup`",
+            "Skill detecta SO automaticamente (Mac/Windows/Linux)",
+            "Audita o que já tem instalado (tabela visual)",
+            "Instala só o que falta (você escolhe: tudo / essenciais / personalizado)",
+            "Autentica GitHub e Supabase com 1 clique",
+            "Cria CLAUDE.md global e settings.json com defaults otimizados",
+            "Tempo: 5-10 minutos. Risco de bug: baixíssimo."
+          ],
+          "title": "Com Stack Setup",
+          "result": "Ambiente idêntico ao do mentor, sem dor",
+          "variant": "after",
+          "subtitle": "Skill rodando por você"
+        },
+        "before": {
+          "items": [
+            "Instalar gh, supabase, docker um por um",
+            "Descobrir o package manager certo (brew/apt/winget)",
+            "Autenticar GitHub na mão (`gh auth login` + browser)",
+            "Autenticar Supabase na mão",
+            "Criar `~/.claude/CLAUDE.md` do zero (e descobrir o que escrever)",
+            "Criar `~/.claude/settings.json` (e errar permissões)",
+            "Tempo: 60-90 minutos. Risco de bug: alto."
+          ],
+          "title": "Sem Stack Setup",
+          "variant": "before",
+          "subtitle": "Configurando manualmente"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Como rodar"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Dentro do Claude Code, digite:",
+            "type": "comment"
+          },
+          {
+            "text": "/stack-setup",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "comment"
+          },
+          {
+            "text": "# A skill vai te perguntar o modo:",
+            "type": "comment"
+          },
+          {
+            "text": "[1] Guiado (Recomendado para iniciantes)",
+            "type": "output"
+          },
+          {
+            "text": "[2] Rápido (defaults inteligentes)",
+            "type": "output"
+          },
+          {
+            "text": "[3] Planejamento Completo (analisa antes de instalar)",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "comment"
+          },
+          {
+            "text": "# Recomendo o [1] na primeira vez. Ela explica cada passo.",
+            "type": "comment"
+          }
+        ],
+        "title": "Stack Setup · invocação"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "O que ela faz por dentro (em 6 fases)"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Fase 1",
+            "title": "Detecta seu sistema",
+            "description": "Identifica Mac/Windows/Linux, arquitetura (x64/ARM), package managers disponíveis (brew/apt/winget/choco)."
+          },
+          {
+            "badge": "Fase 2",
+            "title": "Auditoria de CLIs",
+            "description": "Mostra uma tabela visual: o que já está instalado (✅), o que falta (❌), o que está desatualizado (⚠️). Categorias: Essencial (git, gh, node), Infraestrutura (supabase, railway, docker), Qualidade (coderabbit), Opcionais (pnpm, bun)."
+          },
+          {
+            "badge": "Fase 3",
+            "title": "Instalação interativa",
+            "description": "Você escolhe: instalar tudo · só essenciais · personalizado · pular. Skill instala usando o package manager certo do seu SO."
+          },
+          {
+            "badge": "Fase 4",
+            "title": "Autenticação",
+            "description": "GitHub (browser ou token), Supabase (browser), Railway se instalado. Cada um com fallback se já estiver autenticado."
+          },
+          {
+            "badge": "Fase 5",
+            "title": "Configuração do Claude Code",
+            "description": "Cria/atualiza `~/.claude/CLAUDE.md` (instruções globais) e `~/.claude/settings.json` (permissões + economia de tokens). Pergunta seu perfil: 🟢 Assistido (iniciante) ou 🔵 Avançado."
+          },
+          {
+            "badge": "Fase 6",
+            "title": "Tipo de projeto",
+            "description": "Pergunta se é projeto novo (cria estrutura) ou existente (preserva e complementa). Cria `.gitignore`, `README.md`, scaffolding básico."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que isso vale tanto",
+        "content": "O `~/.claude/settings.json` que a Stack Setup cria já tem **permissões pré-aprovadas** para comandos comuns (`git status`, `npm install`, `supabase migration list`...) · sem isso, você ia clicar em \"permitir\" centenas de vezes nas primeiras horas de uso.\n\nE o `~/.claude/CLAUDE.md` global ensina o Claude a economizar tokens: usar grep com padrões específicos, não ler arquivos inteiros sem precisar, preferir subagentes para exploração. Resultado: você gasta **30-50% menos tokens** pelo mesmo trabalho.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Troubleshooting · erros mais comuns"
+      },
+      {
+        "type": "text",
+        "content": "Lista dos erros que mais aparecem no Encontro 1 e como resolver cada um:"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Erro",
+          "content": "claude: command not found (no terminal)"
+        },
+        "output": {
+          "label": "Causa + solução",
+          "content": "Instalação não completou OU o PATH não foi atualizado. Solução: feche o terminal totalmente, abra de novo, rode `claude --version`. Se persistir: rode novamente o comando de instalação (curl/irm/npm)."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Erro",
+          "content": "'token && is not a valid statement separator' (Windows)"
+        },
+        "output": {
+          "label": "Causa + solução",
+          "content": "Você está no CMD, não no PowerShell. Feche tudo. Abra **PowerShell** (não Prompt de Comando). Confirme: a linha começa com `PS C:\\>`? Ok. Rode de novo."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Erro",
+          "content": "Mac Tahoe: 'Não foi possível instalar o software' (Xcode CLT)"
+        },
+        "output": {
+          "label": "Causa + solução",
+          "content": "macOS Tahoe (26.x) não tem CLT publicado pra todas as versões intermediárias. Solução: baixar Git diretamente em git-scm.com/download/mac, ou rodar `brew install git`. Foi o problema do Júlio Peraça e da Fabi no Encontro 1."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Erro",
+          "content": "Navegador não abre no login"
+        },
+        "output": {
+          "label": "Causa + solução",
+          "content": "Navegador padrão bloqueado ou sandboxed. Solução: copie o link que aparece no terminal (começa com `https://claude.ai/auth/...`) e cole manualmente no navegador. Faça login. Volta automaticamente."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Erro",
+          "content": "/doctor mostra autenticação vermelha"
+        },
+        "output": {
+          "label": "Causa + solução",
+          "content": "Login não foi concluído ou token expirou. Solução: rode `/logout` e depois `claude` para fazer login novamente."
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Travou em alguma coisa?",
+        "content": "Não fica horas tentando sozinho. **Pergunta pro próprio Claude.** Cole o erro exato no chat e fala: \"estou tentando instalar o Claude Code e deu esse erro, o que faço?\"\n\nFoi o que destravou os alunos que estavam presos: pergunta → Claude diagnostica → soluções alternativas até funcionar. Era literalmente isso que o Juliano fez no encontro ao vivo.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checklist final · você está pronto se..."
+      },
+      {
+        "type": "callout",
+        "title": "Tudo isso aqui tem que estar OK",
+        "content": "- [ ] `claude --version` mostra um número (ex: 1.0.12)\n- [ ] `claude` abre navegador para login\n- [ ] Login feito · terminal mostra mensagem de boas-vindas\n- [ ] `/doctor` mostra 4 indicadores verdes\n- [ ] Fiz uma pergunta ao Claude e recebi resposta\n- [ ] Rodei `/stack-setup` no modo Guiado\n- [ ] `gh auth status` mostra que estou autenticado no GitHub\n- [ ] Existe arquivo `~/.claude/CLAUDE.md`\n- [ ] Existe arquivo `~/.claude/settings.json`\n\nSe TUDO acima está marcado: **você está pronto para o Encontro 2**, onde construímos o Clone Master no Telegram.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Para levar com você",
+        "content": "**A instalação ficou para trás. A partir de agora, é só uso.**\n\nVocê acabou de completar a parte que mais trava as pessoas. Terminal + Node.js + Claude Code + Stack Setup = toda a infraestrutura necessária para a mentoria inteira.\n\nNas próximas aulas, vamos parar de configurar e começar a **construir agentes**. O ambiente nunca mais será problema.",
+        "variant": "success"
+      },
+      {
+        "type": "text",
+        "content": "**Próxima aula:** Encontro 2 · Construindo Seu Clone para Atender 24/7 →"
+      }
+    ],
+    "status": "available",
+    "duration": 25,
+    "schedule": [
+      {
+        "title": "Pré-requisitos",
+        "duration": "2 min",
+        "description": "Terminal + Node.js"
+      },
+      {
+        "title": "Instalação Claude Code",
+        "duration": "5 min",
+        "description": "Um comando, três opções (curl / PowerShell / npm)"
+      },
+      {
+        "title": "Login Anthropic",
+        "duration": "2 min",
+        "description": "Navegador → conta Anthropic → token salvo"
+      },
+      {
+        "title": "Diagnóstico /doctor",
+        "duration": "2 min",
+        "description": "Verde em tudo = pronto"
+      },
+      {
+        "title": "Primeiro teste real",
+        "duration": "2 min",
+        "description": "Pergunta + resposta no terminal"
+      },
+      {
+        "title": "Stack Setup",
+        "duration": "8 min",
+        "description": "Skill que configura GitHub, Supabase, CLAUDE.md e settings.json automaticamente"
+      },
+      {
+        "title": "Troubleshooting comum",
+        "duration": "3 min",
+        "description": "Erros mais frequentes + como resolver"
+      },
+      {
+        "title": "Checklist final",
+        "duration": "1 min",
+        "description": "Tudo pronto para o Encontro 2"
+      }
+    ],
+    "subtitle": "Do zero ao Claude Code rodando + Stack Setup configurando tudo automaticamente",
+    "shortTitle": "Instalação + Setup",
+    "deliverable": "Claude Code instalado, autenticado, /doctor verde + Stack Setup rodada (GitHub + Supabase + CLAUDE.md + settings.json configurados)",
+    "learningGoals": [
+      "Verificar se Node.js está instalado e qual versão você tem",
+      "Instalar o Claude Code no Mac, Windows ou Linux com um comando",
+      "Fazer login com sua conta Anthropic via navegador",
+      "Rodar /doctor para confirmar que tudo está funcionando",
+      "Fazer o primeiro teste real (perguntar algo e receber resposta)",
+      "Rodar a skill Stack Setup que configura todo o ambiente automaticamente (CLIs, GitHub, Supabase, CLAUDE.md, settings.json)",
+      "Sair desta aula com ambiente 100% pronto para construir seu primeiro agente no Encontro 2"
+    ]
+  }
+}

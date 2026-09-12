@@ -1,0 +1,29 @@
+{
+  "modules": 3,
+  "lessons": 18,
+  "jsonParsed": true,
+  "lessonIdsUnique": true,
+  "contextOSPromotion": {
+    "publishedLessonId": "495a3982-0c8d-4366-9001-395afd1c9c1c",
+    "publishedPayloadId": "bonus-2",
+    "principalLessonId": "w04-contextos",
+    "canonicalBlockCount": 100,
+    "principalBlockCount": 104,
+    "workshopBridgeBlockCount": 4,
+    "canonicalPrefixExact": true,
+    "canonicalSha256": "921b7f94564fd3be3b6fc8c6c1ac63a9cc08b47d3fdab5a48a3bd1fd24c30ded",
+    "principalCanonicalPrefixSha256": "921b7f94564fd3be3b6fc8c6c1ac63a9cc08b47d3fdab5a48a3bd1fd24c30ded",
+    "learningGoalsPreserved": true,
+    "schedulePreserved": true,
+    "duplicateContextOSBonuses": []
+  },
+  "errors": [],
+  "sourceMap": "source-map.md",
+  "unconfirmed": [
+    "opportunity_2026_source",
+    "mentoria_commercial_terms",
+    "mentoria_official_cta",
+    "member_area_publication"
+  ],
+  "passedLocalStructure": true
+}

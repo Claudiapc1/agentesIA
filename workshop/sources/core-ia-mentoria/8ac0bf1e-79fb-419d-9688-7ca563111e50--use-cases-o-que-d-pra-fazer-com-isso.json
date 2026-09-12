@@ -1,0 +1,400 @@
+{
+  "id": "8ac0bf1e-79fb-419d-9688-7ca563111e50",
+  "titulo": "Use Cases: O Que Dá Pra Fazer Com Isso",
+  "lesson_payload": {
+    "id": "encontro-02-09",
+    "tag": "Etapa 8",
+    "title": "Use Cases: O Que Dá Pra Fazer Com Isso",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Você chegou aqui com o agente **completo**: identidade, memória, integrações, proatividade, manutenção. Está blindado, vivo e cheirando bem. **Agora vem a pergunta que importa**: o que ele faz pelo seu negócio de fato?"
+      },
+      {
+        "type": "text",
+        "content": "**Esta etapa transforma o agente em ferramenta de produção.** São 7 categorias de uso (conteúdo, negócio, suporte, comunidade, pesquisa, produtividade, dev) com 22+ casos prontos · cada um com prompt formatado pra colar no Telegram. O agente cria o cron ou skill correspondente e começa a executar."
+      },
+      {
+        "type": "callout",
+        "title": "Não ative tudo de uma vez",
+        "content": "Escolhe **3 a 5 casos** que resolvem dor real do seu negócio HOJE. Ativa, valida 1 semana, depois adiciona mais. Agente sobrecarregado = agente que erra. Comece pelo que economiza 30min/dia ou desbloqueia receita.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Não ative tudo de uma vez",
+        "content": "Escolhe 3 a 5 casos que resolvem dor real do teu negócio HOJE. Ativa, valida 1 semana, depois adiciona mais. Agente sobrecarregado vira agente que erra.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como escolher"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Resolve dor real?",
+            "accent": "cyan",
+            "description": "Se não economiza 30min/dia ou não desbloqueia receita, pula."
+          },
+          {
+            "title": "Você tem o input?",
+            "accent": "violet",
+            "description": "Caso de \"resumo de reuniões\" só funciona se você gravar reuniões."
+          },
+          {
+            "title": "Risco baixo?",
+            "accent": "lime",
+            "description": "Começa por casos onde erro do agente não causa prejuízo grande."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "1 · Conteúdo"
+      },
+      {
+        "type": "text",
+        "content": "Pra quem produz · marketing, copy, social, blog, newsletter."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Newsletter semanal automática",
+            "accent": "cyan",
+            "description": "Toda sexta 8h · agente puxa highlights da semana de memory/sessions/, monta newsletter e te manda pra revisar."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Carrosseis Instagram em lote",
+            "accent": "cyan",
+            "description": "Você manda tema · agente gera 5 carrosseis (10 slides cada) com copy + estrutura visual."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Repurpose de conteúdo longo",
+            "accent": "cyan",
+            "description": "Você cola transcript de podcast/aula · agente extrai 10 tweets, 3 reels, 1 thread, 1 newsletter."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Headlines em massa",
+            "accent": "cyan",
+            "description": "Pra cada produto/serviço · agente gera 30 headlines em frameworks diferentes (PAS, AIDA, Hormozi)."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Ativar newsletter semanal · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você crie um **cron de newsletter semanal**.\n\nFaz na ordem:\n\n1. **Cria o cron** · agenda pra rodar **toda sexta às 8h** (`0 8 * * 5`).\n\n2. **Define a lógica do script:**\n   · Lê `memory/sessions/` dos últimos 7 dias\n   · Extrai os **5 highlights mais relevantes** (decisões, vitórias, lições novas)\n   · Monta newsletter no formato: **assunto · 3 parágrafos · CTA**\n\n3. **Output** · salva em `~/openclaw/outputs/newsletters/YYYY-MM-DD.md`\n\n4. **Notificação** · me manda no Telegram pra revisar antes de eu publicar.\n\n5. **Reporta no formato:**\n\n```\n📰 Newsletter semanal agendada\n\n· Cron: 0 8 * * 5 (próxima sexta às 8h)\n· Output: ~/openclaw/outputs/newsletters/\n· Notificação Telegram: ✅\n· Status: aguardando próxima sexta\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "2 · Negócio"
+      },
+      {
+        "type": "text",
+        "content": "Pra quem vende · ofertas, preços, propostas, follow-up."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Gerador de propostas",
+            "accent": "violet",
+            "description": "Você manda nome do cliente + necessidade · agente puxa template, preenche, salva PDF, te entrega link."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Follow-up de leads",
+            "accent": "violet",
+            "description": "Lead chegou e não respondeu em 48h · agente redige follow-up no tom certo, te mostra antes de enviar."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Análise de oferta · Hormozi",
+            "accent": "violet",
+            "description": "Você cola sua oferta atual · agente avalia em 5 dimensões (valor percebido, garantia, escassez, urgência, bonus) e sugere upgrades."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Pipeline review semanal",
+            "accent": "violet",
+            "description": "Toda segunda · agente lista deals abertos, idade, próxima ação. Identifica os que estão parados há mais de 7 dias."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Ativar análise de oferta Hormozi · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você crie a **skill `analisar-oferta`** baseada no framework Grand Slam Offer do Alex Hormozi.\n\nFaz na ordem:\n\n1. **Cria a skill** em `memory/skills/analisar-oferta.md`.\n\n2. **Define o comportamento** · quando eu colar uma oferta, você avalia nas **5 dimensões** com nota 0-10:\n   · **Sonho real do cliente** · a oferta toca uma dor profunda?\n   · **Probabilidade percebida de sucesso** · o cliente acredita que vai funcionar?\n   · **Tempo até resultado** · quanto tempo leva pra ver valor?\n   · **Esforço/sacrifício** · o que o cliente precisa fazer?\n   · **Garantia** · que segurança você oferece?\n\n3. **Pra cada dimensão** · dá nota + sugestão de upgrade.\n\n4. **No fim** · propõe **oferta repaginada** aplicando os upgrades.\n\n5. **Reporta no formato:**\n\n```\n🎯 Skill analisar-oferta criada\n\n· Arquivo: memory/skills/analisar-oferta.md\n· Trigger: quando eu colar uma oferta\n· Output: 5 notas + repaginação\n· Status: pronta pra usar\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "3 · Suporte"
+      },
+      {
+        "type": "text",
+        "content": "Pra quem atende cliente · email, dúvidas, escalação."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Triagem de email · 3x ao dia",
+            "accent": "lime",
+            "description": "9h · 13h · 17h · agente lê inbox, separa em urgente/normal/lixo, redige rascunho de resposta pros urgentes."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Base de conhecimento viva",
+            "accent": "lime",
+            "description": "Toda dúvida que você responde vira entry em memory/context/faq.md. Próxima vez que perguntarem, agente responde."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Escalação inteligente",
+            "accent": "lime",
+            "description": "Cliente irritado · agente detecta tom, marca como prioridade alta e te chama no Telegram com contexto."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Ativar triagem 3x ao dia · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você crie **3 crons de triagem de email**.\n\nFaz na ordem:\n\n1. **Agenda 3 crons** · `9h`, `13h`, `17h` (`0 9,13,17 * * *`).\n\n2. **Define a lógica:**\n   · Lê inbox via integração Gmail\n   · Classifica cada msg em **URGENTE / NORMAL / LIXO**\n   · Pra **URGENTE** · redige rascunho de resposta no meu tom (consulta `memory/context/voice.md` se existir)\n\n3. **Notificação** · manda pro Telegram **só os URGENTES** com rascunho pronto pra eu aprovar.\n\n4. **Log** · salva em `memory/sessions/triagem-YYYY-MM-DD.md`.\n\n5. **Reporta no formato:**\n\n```\n📧 Triagem de email agendada\n\n· Crons: 0 9,13,17 * * *\n· Output: rascunhos pra urgentes\n· Log: memory/sessions/triagem-*\n· Status: próxima execução em HH:00\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "4 · Comunidade"
+      },
+      {
+        "type": "text",
+        "content": "Pra quem tem grupo · Discord, Telegram, WhatsApp, alunos."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Resumo diário do grupo",
+            "accent": "coral",
+            "description": "Toda noite · agente lê últimas 24h do grupo, extrai dúvidas recorrentes, vitórias dos membros e decisões."
+          },
+          {
+            "icon": "sparkles",
+            "title": "FAQ automático",
+            "accent": "coral",
+            "description": "Quando alguém pergunta no grupo algo já respondido em memory/context/faq.md · agente sugere resposta pra você revisar."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "5 · Pesquisa"
+      },
+      {
+        "type": "text",
+        "content": "Pra quem precisa de input externo · concorrentes, tendências, dados."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Monitor de concorrentes",
+            "accent": "magenta",
+            "description": "Lista de URLs · agente checa toda 2ª feira 7h · te avisa o que mudou (novos produtos, preços, posts)."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Trend scanner",
+            "accent": "magenta",
+            "description": "Tema X · agente vasculha Twitter/Reddit/HN · te entrega top 10 conversas da semana."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Brief de pessoa",
+            "accent": "magenta",
+            "description": "Você manda nome + LinkedIn · agente monta dossiê: quem é, o que faz, ganchos pra abertura."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Ativar monitor de concorrentes · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você crie um **monitor de concorrentes** semanal.\n\nFaz na ordem:\n\n1. **Agenda cron** · toda **2ª feira às 7h** (`0 7 * * 1`).\n\n2. **Define a lógica** · pra cada URL da minha lista (eu te mando depois):\n   · Acessa a URL\n   · Compara com snapshot anterior salvo em `memory/integrations/concorrentes/`\n   · Detecta: novos produtos, mudanças de preço, posts novos no blog, novidades\n\n3. **Output** · relatório no Telegram com o que mudou em cada concorrente.\n\n4. **Atualização** · salva o snapshot atualizado pra próxima comparação.\n\n5. **Reporta no formato:**\n\n```\n🔍 Monitor de concorrentes agendado\n\n· Cron: 0 7 * * 1 (próxima 2ª feira às 7h)\n· Pasta: memory/integrations/concorrentes/\n· Output: relatório semanal Telegram\n· Status: aguardando lista de URLs\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "6 · Produtividade"
+      },
+      {
+        "type": "text",
+        "content": "Pra você mesmo · agenda, foco, decisões."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Briefing matinal · 7h",
+            "accent": "cyan",
+            "description": "Agente te manda resumo: agenda do dia, pendências, top 3 prioridades, o clima/notícia que importa pra você."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Decisão estruturada",
+            "accent": "cyan",
+            "description": "Você está em dúvida X · agente faz 5 perguntas, organiza prós/contras, te entrega recomendação justificada."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Captura de ideias",
+            "accent": "cyan",
+            "description": "Áudio no Telegram · agente transcreve, classifica (ideia/tarefa/lição) e arquiva no lugar certo de memory/."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Ativar briefing matinal · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você ative o **briefing matinal** todo dia às 7h.\n\nFaz na ordem:\n\n1. **Agenda cron** · todo dia às 7h (`0 7 * * *`).\n\n2. **Define o conteúdo** · monta meu briefing com:\n   · **Compromissos do calendário** (Google Calendar do dia)\n   · **Top 3 prioridades** (baseadas em `memory/objectives.md` e `memory/pending.md`)\n   · **O que ficou aberto de ontem** (`memory/sessions/ONTEM.md`)\n   · **Frase de foco do dia**\n\n3. **Formato** · curto, máximo **8 linhas**.\n\n4. **Notificação** · manda no Telegram.\n\n5. **Reporta no formato:**\n\n```\n☀️ Briefing matinal agendado\n\n· Cron: 0 7 * * *\n· Conteúdo: agenda + 3 prioridades + ontem + foco\n· Formato: 8 linhas\n· Status: próxima execução amanhã às 7h\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "7 · Dev"
+      },
+      {
+        "type": "text",
+        "content": "Pra quem programa · code review, deploy, monitoramento."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "sparkles",
+            "title": "Code review automático",
+            "accent": "violet",
+            "description": "PR aberto · agente analisa diff, sugere melhorias, detecta bugs óbvios antes de você revisar."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Monitor de erros",
+            "accent": "violet",
+            "description": "Logs com ERROR · agente classifica gravidade, agrupa similares, te avisa só os críticos."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Deploy assistido",
+            "accent": "violet",
+            "description": "Você diz \"deploya X\" · agente roda checklist (testes, build, env vars), executa e reporta."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Plano de ativação"
+      },
+      {
+        "type": "text",
+        "content": "Escolhe 3 casos · ativa um por dia · valida cada um por 1 semana antes do próximo."
+      },
+      {
+        "type": "prompt",
+        "title": "Definir meu plano · cole no Telegram",
+        "target": "telegram",
+        "content": "Quero que você me ajude a **definir meu plano de uso** dos use cases.\n\nFaz na ordem:\n\n1. **Lê meu contexto** · `memory/objectives.md` se existir, ou me pergunta sobre meu negócio.\n\n2. **Recomenda os 3 casos** dos 22+ disponíveis que dão **maior ROI** pro meu contexto agora.\n\n3. **Justifica cada um** em 2 linhas: **por que esse case + qual problema resolve**.\n\n4. **Pra cada case define:**\n   · O que ativar primeiro\n   · Métrica de sucesso\n   · Prazo de validação\n\n5. **Salva o plano** em `memory/projects/use-cases-plano.md`.\n\n6. **Reporta no formato:**\n\n```\n🎯 Plano de use cases definido\n\nTop 3 recomendados:\n1. [case 1] · resolve [problema] · ROI: [estimativa]\n2. [case 2] · resolve [problema] · ROI: [estimativa]\n3. [case 3] · resolve [problema] · ROI: [estimativa]\n\n· Plano salvo em: memory/projects/use-cases-plano.md\n· Validação prevista: [prazo]\n```"
+      },
+      {
+        "type": "callout",
+        "title": "Fim do encontro 02",
+        "content": "Você tem agente vivo, com memória, integrado ao mundo, proativo, com sistema imune e use cases ativos. Daqui pra frente é refinar · cada semana você ajusta um pilar e adiciona um use case novo.",
+        "variant": "success"
+      }
+    ],
+    "number": "08",
+    "status": "available",
+    "summary": "7 categorias · 20+ casos prontos. Você escolhe os que fazem sentido pro seu negócio e ativa via Telegram. Cada caso vira um cron, uma skill ou uma rotina contínua.",
+    "duration": 15,
+    "schedule": [
+      {
+        "label": "0·3",
+        "topic": "Como escolher seus use cases"
+      },
+      {
+        "label": "3·8",
+        "topic": "Conteúdo · 4 casos"
+      },
+      {
+        "label": "8·13",
+        "topic": "Negócio · 4 casos"
+      },
+      {
+        "label": "13·17",
+        "topic": "Suporte · 3 casos"
+      },
+      {
+        "label": "17·21",
+        "topic": "Comunidade · 2 casos"
+      },
+      {
+        "label": "21·25",
+        "topic": "Pesquisa · 3 casos"
+      },
+      {
+        "label": "25·29",
+        "topic": "Produtividade · 3 casos"
+      },
+      {
+        "label": "29·33",
+        "topic": "Dev · 3 casos"
+      },
+      {
+        "label": "33·35",
+        "topic": "Plano de ativação"
+      }
+    ],
+    "subtitle": "20+ aplicações reais que cabem no agente que você acabou de construir",
+    "shortTitle": "Use Cases",
+    "learningGoals": [
+      "Conhecer use cases prontos em 5 categorias: produtividade, conteúdo, pesquisa, business, suporte",
+      "Saber qual deles encaixa no seu contexto agora (e qual fica para depois)",
+      "Sair com 1 use case escolhido para começar a usar amanhã de manhã",
+      "Entender que a aula acabou · agora é entrar em produção"
+    ],
+    "durationMinutes": 35
+  }
+}

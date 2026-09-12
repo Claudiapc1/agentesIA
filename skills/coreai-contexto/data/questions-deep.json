@@ -1,0 +1,150 @@
+{
+  "DEEP_PHASES": [
+    {
+      "id": "phase-1-company",
+      "titulo": "Fase 1 — Empresa",
+      "questions": [
+        { "file": "context/company-profile.yaml", "ypath": "company_essence.legal_name", "q": "Razão social?" },
+        { "file": "context/company-profile.yaml", "ypath": "company_essence.trade_name", "q": "Nome fantasia?" },
+        { "file": "context/company-profile.yaml", "ypath": "company_essence.year_founded", "q": "Ano de fundação?", "type": "number" },
+        { "file": "context/company-profile.yaml", "ypath": "company_essence.headquarters", "q": "Cidade/Estado da sede?" },
+        { "file": "context/company-profile.yaml", "ypath": "company_essence.one_liner", "q": "Em uma frase, o que a empresa faz?" },
+        { "file": "context/company-profile.yaml", "ypath": "company_essence.origin_story_short", "q": "Como a empresa nasceu? (história de origem em 2-3 frases)" },
+        { "file": "context/company-profile.yaml", "ypath": "mission.statement", "q": "Missão em 2-3 linhas:" },
+        { "file": "context/company-profile.yaml", "ypath": "mission.transformation", "q": "Que transformação a empresa promove?" },
+        { "file": "context/company-profile.yaml", "ypath": "mission.who_benefits", "q": "Quem se beneficia diretamente?" },
+        { "file": "context/company-profile.yaml", "ypath": "vision.statement", "q": "Visão (onde quer chegar em 5-10 anos)?" },
+        { "file": "context/company-profile.yaml", "ypath": "vision.timeframe", "q": "Horizonte da visão em anos? (número)", "type": "number" },
+        { "file": "context/company-profile.yaml", "ypath": "positioning.target_market", "q": "Público-alvo em uma frase:" },
+        { "file": "context/company-profile.yaml", "ypath": "positioning.unique_angle", "q": "Diferencial competitivo / ângulo único?" },
+        { "file": "context/company-profile.yaml", "ypath": "positioning.primary_promise", "q": "Promessa central?" },
+        { "file": "context/company-profile.yaml", "ypath": "positioning.credibility_foundation", "q": "Prova/evidência que sustenta a promessa?" },
+        { "file": "context/company-profile.yaml", "ypath": "market_analysis.market_segment", "q": "Segmento de mercado?" },
+        { "file": "context/company-profile.yaml", "ypath": "market_analysis.market_timing", "q": "Por que agora? (timing do mercado)" },
+        { "file": "context/company-profile.yaml", "ypath": "stage.current_stage", "q": "Estágio atual (Seed / Growth / Scale / Mature)?" },
+        { "file": "context/company-profile.yaml", "ypath": "company_voice.tone", "q": "Tom de voz da empresa?" }
+      ]
+    },
+    {
+      "id": "phase-2-founder",
+      "titulo": "Fase 2 — Fundador",
+      "questions": [
+        { "file": "context/founder-dna.yaml", "ypath": "founder_essence.legal_name", "q": "Nome completo?" },
+        { "file": "context/founder-dna.yaml", "ypath": "founder_essence.professional_name", "q": "Nome da marca pessoal (se houver)?" },
+        { "file": "context/founder-dna.yaml", "ypath": "founder_essence.age", "q": "Idade? (número)", "type": "number" },
+        { "file": "context/founder-dna.yaml", "ypath": "founder_essence.location", "q": "Cidade/Estado?" },
+        { "file": "context/founder-dna.yaml", "ypath": "founder_essence.one_liner", "q": "Em uma frase, quem é o fundador?" },
+        { "file": "context/founder-dna.yaml", "ypath": "founder_essence.archetype", "q": "Arquétipo (Mentor / Rebelde / Herói / Criador / Explorador)?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_1_before.timeline", "q": "Período do \"antes\" (ex: \"De 2010 a 2015...\")?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_1_before.challenge", "q": "Maior desafio enfrentado antes da empresa?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_2_turning_point.turning_point", "q": "Qual foi o momento de virada?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_2_turning_point.action", "q": "O que fez diferente após a virada?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_3_breakthrough.breakthrough", "q": "Primeira grande conquista?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_3_breakthrough.proof", "q": "Prova/número concreto dessa conquista?" },
+        { "file": "context/founder-dna.yaml", "ypath": "origin_story.act_4_present.present", "q": "O que o fundador faz hoje?" },
+        { "file": "context/founder-dna.yaml", "ypath": "professional_background.deepest_expertise", "q": "Área de expertise mais profunda?" },
+        { "file": "context/founder-dna.yaml", "ypath": "professional_background.years_of_experience", "q": "Anos de experiência? (número)", "type": "number" },
+        { "file": "context/founder-dna.yaml", "ypath": "philosophy.contrarian_view", "q": "Crença que vai contra o senso comum (visão contrária)?" },
+        { "file": "context/founder-dna.yaml", "ypath": "philosophy.core_belief_1", "q": "Crença central #1 que guia o trabalho?" },
+        { "file": "context/founder-dna.yaml", "ypath": "credibility_foundation", "q": "O que dá credibilidade ao fundador? (uma frase)" }
+      ]
+    },
+    {
+      "id": "phase-3-icp",
+      "titulo": "Fase 3 — ICP",
+      "questions": [
+        { "file": "context/icp.yaml", "ypath": "core_icp.icp_name", "q": "Nome do arquétipo do ICP?" },
+        { "file": "context/icp.yaml", "ypath": "core_icp.one_sentence_definition", "q": "ICP em uma frase:" },
+        { "file": "context/icp.yaml", "ypath": "core_icp.fit_percentage", "q": "% de leads que se encaixam no ICP? (número)", "type": "number" },
+        { "file": "context/icp.yaml", "ypath": "demographics.age", "q": "Faixa etária predominante?" },
+        { "file": "context/icp.yaml", "ypath": "demographics.income_range", "q": "Faixa de renda mensal (BRL)?" },
+        { "file": "context/icp.yaml", "ypath": "demographics.education", "q": "Escolaridade?" },
+        { "file": "context/icp.yaml", "ypath": "demographics.geography", "q": "Localização predominante?" },
+        { "file": "context/icp.yaml", "ypath": "demographics.life_stage", "q": "Momento de vida / ocupação típica?" },
+        { "file": "context/icp.yaml", "ypath": "psychographics.central_pain.what_they_say", "q": "Dor principal (o que o ICP verbaliza)?" },
+        { "file": "context/icp.yaml", "ypath": "psychographics.mental_state", "q": "Estado mental / como o ICP se sente no dia a dia?" },
+        { "file": "context/icp.yaml", "ypath": "psychographics.beliefs", "q": "Crenças limitantes do ICP?", "type": "list" },
+        { "file": "context/icp.yaml", "ypath": "pain_stack.existential", "q": "Custo da inação (o que perde se não agir / dor existencial)?" },
+        { "file": "context/icp.yaml", "ypath": "pain_stack.hidden", "q": "Frustração interna escondida?" },
+        { "file": "context/icp.yaml", "ypath": "motivations.action_triggers", "q": "Gatilhos que fazem o ICP agir / objetivo principal?", "type": "list" },
+        { "file": "context/icp.yaml", "ypath": "motivations.paralysis_triggers", "q": "O que paralisa o ICP / o que o impede de agir?", "type": "list" },
+        { "file": "context/icp.yaml", "ypath": "archetypes.primary_archetype", "q": "Estado desejado pós-transformação (arquétipo primário)?" },
+        { "file": "context/icp.yaml", "ypath": "archetypes.hardest_archetype", "q": "Nível de awareness (problema / solução / produto / most-aware) e por quê?" }
+      ]
+    },
+    {
+      "id": "phase-4-brand",
+      "titulo": "Fase 4 — Marca",
+      "questions": [
+        { "file": "context/brand.yaml", "ypath": "brand_core.brand_name", "q": "Nome da marca?" },
+        { "file": "context/brand.yaml", "ypath": "brand_core.brand_purpose", "q": "Propósito da marca (arquétipo / razão de existir)?" },
+        { "file": "context/brand.yaml", "ypath": "brand_essence.core_belief", "q": "Promessa central / crença sobre o cliente?" },
+        { "file": "context/brand.yaml", "ypath": "promises.marketing_promise", "q": "O que você diz que entrega (promessa de marketing)?" },
+        { "file": "context/brand.yaml", "ypath": "promises.true_promise", "q": "A transformação mais profunda que entrega (promessa verdadeira)?" },
+        { "file": "context/brand.yaml", "ypath": "personality.directness_level", "q": "Nível de franqueza/diretividade 1-10? (1=sutil, 10=extremamente direto)", "type": "number" },
+        { "file": "context/brand.yaml", "ypath": "personality.formality_level", "q": "Nível de formalidade 1-10? (1=casual, 10=formal)", "type": "number" },
+        { "file": "context/brand.yaml", "ypath": "voice_dna.power_words", "q": "5-10 palavras de poder da marca:", "type": "list" },
+        { "file": "context/brand.yaml", "ypath": "voice_dna.signature_phrases", "q": "Frases assinatura / bordões?", "type": "list" },
+        { "file": "context/brand.yaml", "ypath": "voice_dna.forbidden_words", "q": "Palavras proibidas (e por quê)?", "type": "list" },
+        { "file": "context/brand.yaml", "ypath": "brand_core.brand_tagline", "q": "Tagline?" },
+        { "file": "context/brand.yaml", "ypath": "personality.confidence_level", "q": "Nível de convicção 1-10? (1=humilde, 10=máxima convicção)", "type": "number" },
+        { "file": "context/brand.yaml", "ypath": "core_values.hierarchy", "q": "Qual o valor DEFINIDOR da marca (manifesto em uma frase)?" }
+      ]
+    },
+    {
+      "id": "phase-5-pricing",
+      "titulo": "Fase 5 — Pricing",
+      "questions": [
+        { "file": "context/pricing.yaml", "ypath": "pricing_foundation.pricing_model", "q": "Modelo de pricing?" },
+        { "file": "context/pricing.yaml", "ypath": "pricing_foundation.current_price", "q": "Preço atual da oferta principal (BRL)? (número)", "type": "number" },
+        { "file": "context/pricing.yaml", "ypath": "pricing_psychology.anchoring_strategy", "q": "Estratégia de ancoragem (preço de referência revelado primeiro)?" },
+        { "file": "context/pricing.yaml", "ypath": "pricing_psychology.price_framing", "q": "Como você enquadra o preço (custo/dia, comparação, ROI)?" },
+        { "file": "context/pricing.yaml", "ypath": "pricing_foundation.value_delivered", "q": "Valor entregue (em dinheiro, tempo ou transformação)?" },
+        { "file": "context/pricing.yaml", "ypath": "competitive_position.your_position", "q": "Sua posição de preço (Budget / Mid / Premium / Ultra-premium)?" },
+        { "file": "context/pricing.yaml", "ypath": "pricing_diagnostic.margin_health", "q": "Saúde da margem (%)? (número)", "type": "number" },
+        { "file": "context/pricing.yaml", "ypath": "pricing_diagnostic.pricing_risk", "q": "Principal risco do preço atual?" }
+      ]
+    },
+    {
+      "id": "phase-6-credentials",
+      "titulo": "Fase 6 — Credentials",
+      "questions": [
+        { "file": "context/credentials.yaml", "ypath": "online_presence.social_primary", "q": "Rede social principal (URL ou @)?" },
+        { "file": "context/credentials.yaml", "ypath": "online_presence.linkedin", "q": "LinkedIn?" },
+        { "file": "context/credentials.yaml", "ypath": "online_presence.website", "q": "Website principal?" },
+        { "file": "context/credentials.yaml", "ypath": "awards.industry_recognition", "q": "Principal reconhecimento/prêmio do setor?" },
+        { "file": "context/credentials.yaml", "ypath": "notable_clients.client_types", "q": "Tipos de clientes de destaque (PME / Enterprise / Startups / etc)?" },
+        { "file": "context/credentials.yaml", "ypath": "speaking_engagements.speaking_frequency", "q": "Frequência de palestras (mensal / trimestral / anual / raro)?" },
+        { "file": "context/credentials.yaml", "ypath": "media_appearances.media_highlights", "q": "Destaques de mídia (entrevistas, podcasts, publicações)?" }
+      ]
+    },
+    {
+      "id": "phase-7-team",
+      "titulo": "Fase 7 — Time",
+      "questions": [
+        { "file": "context/team.yaml", "ypath": "current_team.total_headcount", "q": "Tamanho total do time? (número)", "type": "number" },
+        { "file": "context/team.yaml", "ypath": "current_team.founder_wearing_hats", "q": "Papéis que o fundador acumula hoje?", "type": "list" },
+        { "file": "context/team.yaml", "ypath": "diagnostic.bottleneck", "q": "Onde o time trava hoje (principal gargalo)?" }
+      ]
+    },
+    {
+      "id": "phase-8-tech",
+      "titulo": "Fase 8 — Tech",
+      "questions": [
+        { "file": "context/tech-stack.yaml", "ypath": "course_platform", "q": "Plataforma de curso (Hotmart, Eduzz, própria)?" },
+        { "file": "context/tech-stack.yaml", "ypath": "checkout", "q": "Checkout principal (Stripe, PagSeguro, Hotmart)?" },
+        { "file": "context/tech-stack.yaml", "ypath": "crm", "q": "CRM utilizado?" },
+        { "file": "context/tech-stack.yaml", "ypath": "email_marketing", "q": "Ferramenta de e-mail marketing?" }
+      ]
+    },
+    {
+      "id": "phase-9-ai",
+      "titulo": "Fase 9 — IA",
+      "questions": [
+        { "file": "context/ai-strategy.yaml", "ypath": "position", "q": "Posição da empresa em IA (early / mainstream / conservador)?" },
+        { "file": "context/ai-strategy.yaml", "ypath": "privacy_policy", "q": "Políticas de privacidade em IA?" },
+        { "file": "context/ai-strategy.yaml", "ypath": "monthly_budget", "q": "Budget mensal de IA (BRL)? (número)", "type": "number" }
+      ]
+    }
+  ]
+}

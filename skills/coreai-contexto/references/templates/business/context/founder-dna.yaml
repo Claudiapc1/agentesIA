@@ -1,0 +1,66 @@
+# ContextOS - Founder DNA
+# Preenchido durante: *setup-context Fase 2
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+founder_essence:
+  legal_name: null
+  professional_name: null
+  age: null
+  location: null
+  nationality: null
+  one_liner: null
+  archetype: null  # Mentor | Rebelde | Heroi | Criador | Explorador
+
+origin_story:
+  act_1_before:
+    timeline: null   # "De 2010 a 2015..."
+    challenge: null  # O que enfrentava
+  act_2_turning_point:
+    turning_point: null  # O momento de virada
+    action: null         # O que fez diferente
+  act_3_breakthrough:
+    breakthrough: null  # A conquista
+    proof: null         # Evidencia concreta
+  act_4_present:
+    present: null       # O que faz hoje
+    legacy_building: null  # O legado que constroi
+
+professional_background:
+  starting_point: null
+  career_milestones:
+    - milestone: null
+    - milestone: null
+    - milestone: null
+  years_of_experience: null
+  expertise_areas:
+    - area: null
+    - area: null
+    - area: null
+  deepest_expertise: null
+
+philosophy:
+  core_belief_1: null
+  core_belief_2: null
+  core_belief_3: null
+  worldview: null
+  contrarian_view: null  # Crenca que vai contra o senso comum
+
+teaching_philosophy:
+  - principle: null
+    emphasis: null
+    avoids: null
+
+founder_narrative:  # AUTO-GENERATED na Fase 6
+  headline: null
+  hook: null
+  narrative_structure: null
+
+credibility_foundation: null
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

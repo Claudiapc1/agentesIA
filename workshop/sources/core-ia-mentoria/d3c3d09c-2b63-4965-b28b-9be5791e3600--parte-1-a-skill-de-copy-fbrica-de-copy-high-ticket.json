@@ -1,0 +1,593 @@
+{
+  "id": "d3c3d09c-2b63-4965-b28b-9be5791e3600",
+  "titulo": "Parte 1 · A Skill de Copy: Fábrica de Copy High Ticket",
+  "lesson_payload": {
+    "id": "encontro-08-01",
+    "title": "Parte 1 · A Skill de Copy: Fábrica de Copy High Ticket",
+    "blocks": [
+      {
+        "type": "section-cover",
+        "title": "/copy",
+        "eyebrow": "ENCONTRO 8 · SKILL DE COPY",
+        "subtitle": "A Fábrica de Copy High Ticket: um time de copywriters de elite orquestrado por um diretor criativo."
+      },
+      {
+        "type": "callout",
+        "title": "O que você vai ler aqui",
+        "content": "Este é o manual completo da skill /copy em formato leitura, gerado a partir da estrutura real da skill. É a referência pra usar a fábrica de copy do dia a dia, da carta de venda ao funil de lançamento.",
+        "variant": "info"
+      },
+      {
+        "type": "metric-grid",
+        "metrics": [
+          {
+            "color": "cyan",
+            "label": "skill mãe",
+            "value": "1",
+            "subtitle": "o copy-chief"
+          },
+          {
+            "color": "violet",
+            "label": "atalhos",
+            "value": "20",
+            "subtitle": "11 peças + 9 funis"
+          },
+          {
+            "color": "lime",
+            "label": "copywriters",
+            "value": "12",
+            "subtitle": "mestres reais"
+          },
+          {
+            "color": "coral",
+            "label": "validadores",
+            "value": "2",
+            "subtitle": "Anti-IA + Oráculo"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que é a skill /copy"
+      },
+      {
+        "type": "text",
+        "content": "A /copy não é um gerador de texto qualquer. É um time de copywriters de elite orquestrado por um diretor criativo, o Logan, que é o copy-chief. Você fala o que precisa, ele escolhe quem escreve, e nada sai sem passar pela validação."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "span": 1,
+            "title": "Um diretor, não um robô",
+            "description": "A skill mãe é o copy-chief. Ele faz triagem (preço, temperatura do público, tipo de peça) antes de qualquer palavra ser escrita."
+          },
+          {
+            "span": 1,
+            "title": "Copywriters de verdade",
+            "description": "Halbert, Ogilvy, Jon Benson, Bencivenga e outros. Cada um escreve no estilo real dele, com os frameworks dele."
+          },
+          {
+            "span": 1,
+            "title": "Validação inegociável",
+            "description": "Toda copy passa pelo Filtro Anti-IA e pelo Oráculo Torriani. Nota 10 ou refaz. Sem exceção."
+          },
+          {
+            "span": 1,
+            "title": "Conectada ao cliente",
+            "description": "No começo ela pergunta para qual cliente é, carrega o contexto dele (ICP, voz, posicionamento) e escreve sob medida."
+          },
+          {
+            "span": 1,
+            "title": "Atalhos para tudo",
+            "description": "20 comandos prontos: da carta de venda ao funil de lançamento. Você vai direto quando já sabe o que quer."
+          },
+          {
+            "span": 1,
+            "title": "Arsenal completo",
+            "description": "Frameworks, templates, swipe files e checklists de cada copywriter. O escritor não trabalha no vácuo."
+          }
+        ],
+        "layout": "grid"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como funciona por dentro"
+      },
+      {
+        "type": "text",
+        "content": "O fluxo é sempre o mesmo, não importa a peça. É isso que garante consistência e qualidade."
+      },
+      {
+        "type": "mermaid",
+        "caption": "O fluxo da /copy: do pedido à entrega, sempre passando por contexto, triagem, escrita e validação.",
+        "diagram": "graph LR\n    A[Você pede] --> B[Carrega o cliente<br/>ContextOS]\n    B --> C[Triagem]\n    C --> D[Despacha o<br/>copywriter]\n    D --> E[Escreve]\n    E --> F[Valida<br/>2 camadas]\n    F --> G[Entrega]"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Carrega o contexto do cliente",
+            "description": "A skill pergunta para qual cliente é e lê o ContextOS dele: perfil, ICP, dores, tom de voz, posicionamento e produtos."
+          },
+          {
+            "title": "Carrega o DNA permanente",
+            "description": "Antes de escrever, lê a premissa de posicionamento premium e o manual de craft, as regras invioláveis de escrita."
+          },
+          {
+            "title": "Faz a triagem",
+            "description": "Pergunta a faixa de preço do produto, a temperatura do público (frio, morno, quente) e exatamente o que você quer criar."
+          },
+          {
+            "title": "Despacha o copywriter certo",
+            "description": "Conforme a triagem, escolhe o especialista (ex: Halbert para carta, Jon Benson para VSL) e o aciona com o contexto e os frameworks dele."
+          },
+          {
+            "title": "Valida em duas camadas",
+            "description": "Filtro Anti-IA primeiro, Oráculo Torriani depois. Se reprovar, refaz. Loop até passar."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que isso importa",
+        "content": "A maioria das ferramentas de IA cospe texto genérico. Aqui, a copy nasce de uma estratégia, é escrita no estilo de um mestre, ancorada no contexto do seu cliente, e só chega até você depois de passar por um controle de qualidade que reprova o que tem cara de IA.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como começar"
+      },
+      {
+        "type": "text",
+        "content": "Duas formas de usar: deixar o diretor decidir, ou ir direto no atalho."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Quando você já sabe o que quer",
+            "Chame o atalho específico",
+            "Ele já sabe qual copywriter usar",
+            "Ex: /copy:vsl ou /copy:carta-vendas"
+          ],
+          "title": "Forma 2: vá direto no atalho",
+          "result": "Para quando você já tem clareza do formato.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Digite /copy e descreva o que precisa em linguagem natural",
+            "O copy-chief faz a triagem",
+            "Escolhe o copywriter e conduz tudo",
+            "Ex: /copy \"preciso de uma carta de venda pro meu curso de R$497\""
+          ],
+          "title": "Forma 1: o diretor decide",
+          "result": "Para quando você não sabe qual peça ou especialista usar.",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Antes de tudo: cadastre o cliente",
+        "content": "Ter o cliente cadastrado no ContextOS deixa a copy muito melhor (ela usa o ICP, a voz e o posicionamento reais). Se o cliente ainda não tem contexto montado, a skill avisa e você pode rodar /context-create primeiro.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Atalhos: peças de copy"
+      },
+      {
+        "type": "text",
+        "content": "Onze comandos para as peças do dia a dia. Cada um já despacha o copywriter especialista naquele formato."
+      },
+      {
+        "type": "command-list",
+        "title": "11 peças de copy",
+        "commands": [
+          {
+            "command": "/copy:operacao-completa",
+            "description": "Pipeline completo em 9 etapas, da ideia bruta ao arsenal de peças (Halbert / Georgi)"
+          },
+          {
+            "command": "/copy:operacao-tatica",
+            "description": "Modo rápido para público quente e base existente: pula a estratégia e vai direto pra peça"
+          },
+          {
+            "command": "/copy:carta-vendas",
+            "description": "Carta de venda com estratégia obrigatória e validação desde a escrita (Gary Halbert)"
+          },
+          {
+            "command": "/copy:sales-page",
+            "description": "Página de vendas de resposta direta pelo método RMBC (Stefan Georgi)"
+          },
+          {
+            "command": "/copy:vsl",
+            "description": "Script de VSL (video sales letter) que prende e converte (Jon Benson)"
+          },
+          {
+            "command": "/copy:email-sequence",
+            "description": "Sequência de e-mail de relacionamento e venda, infotainment diário (Ben Settle)"
+          },
+          {
+            "command": "/copy:ads",
+            "description": "Anúncios de resposta direta com variações conceituais, framework P.D.A. (John Carlton)"
+          },
+          {
+            "command": "/copy:headlines",
+            "description": "Headlines e bullets de alta conversão, fascinations (Gary Bencivenga)"
+          },
+          {
+            "command": "/copy:capture-page",
+            "description": "Página de captura/opt-in que maximiza leads (Stefan Georgi)"
+          },
+          {
+            "command": "/copy:organic-content",
+            "description": "Conteúdo orgânico de autoridade e alcance, posts e threads (Dan Koe)"
+          },
+          {
+            "command": "/copy:oraculo",
+            "description": "Valida uma copy já escrita nas 2 camadas (Anti-IA + Oráculo)"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Atalhos: lançamentos e funis"
+      },
+      {
+        "type": "text",
+        "content": "Nove comandos para campanhas completas. Cada um segue um workflow de referência e despacha o estrategista certo."
+      },
+      {
+        "type": "command-list",
+        "title": "9 funis e lançamentos",
+        "commands": [
+          {
+            "command": "/copy:lancamento-completo",
+            "description": "Lançamento completo (PLF): pré-lançamento, pré-venda, carrinho e e-mails (Jeff Walker)"
+          },
+          {
+            "command": "/copy:funil-sala-secreta",
+            "description": "Funil Sala Secreta: aquecimento, convite e conversão por relacionamento (Frank Kern)"
+          },
+          {
+            "command": "/copy:funil-fli",
+            "description": "Funil de Lucro Imediato: oferta direta com upsell para caixa rápido (Russell Brunson)"
+          },
+          {
+            "command": "/copy:funil-social-selling",
+            "description": "Social Selling 2.0: conteúdo orgânico que converte em DM (Dan Koe)"
+          },
+          {
+            "command": "/copy:funil-story-unico",
+            "description": "Estratégia Story Único: sequência de stories que conduz à oferta (André Chaperon)"
+          },
+          {
+            "command": "/copy:otimizacao-funil",
+            "description": "Otimização de funil (CRO): diagnostica gargalos e reescreve peças fracas (Claude Hopkins)"
+          },
+          {
+            "command": "/copy:webinar",
+            "description": "Script de webinar de vendas: abertura, conteúdo, pitch e fechamento (Frank Kern)"
+          },
+          {
+            "command": "/copy:vsl-perpetual",
+            "description": "Funil de VSL perpétuo: VSL + e-mails + retargeting para venda contínua (Jon Benson)"
+          },
+          {
+            "command": "/copy:book-launch",
+            "description": "Funil de lançamento de livro: isca de livro + upsells (Russell Brunson)"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 12 copywriters do time"
+      },
+      {
+        "type": "text",
+        "content": "Cada um é um mestre real do copywriting, com sua persona, frameworks e voz. O copy-chief escolhe quem escreve cada peça."
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "Logan, o Copy Chief",
+            "accent": "cyan",
+            "content": "O diretor criativo. Faz a triagem e despacha o copywriter certo. Aciona-se sempre que você não diz qual especialista usar ou quando o projeto tem várias peças."
+          },
+          {
+            "title": "Oráculo Torriani",
+            "accent": "coral",
+            "content": "O validador imperial. Aprova 10/10 ou manda refazer. É o último portão antes de qualquer copy sair. Detecta clichê, generalidade e cara de IA."
+          },
+          {
+            "title": "Gary Halbert",
+            "accent": "lime",
+            "content": "O maior de direct mail da história. Cartas de venda longas, storytelling visceral, abertura magnética. Quando a copy precisa parecer carta pessoal de um amigo."
+          },
+          {
+            "title": "Stefan Georgi",
+            "accent": "violet",
+            "content": "Mais de 700 milhões em vendas com o método RMBC. Processo sistemático e repetível para sales letters e VSLs de alta conversão em cold traffic."
+          },
+          {
+            "title": "Jon Benson",
+            "accent": "blue",
+            "content": "Criador da VSL. Transforma produto e avatar em roteiro de vídeo que conecta pela emoção. Produtos de transformação (saúde, dinheiro, relacionamento)."
+          },
+          {
+            "title": "David Ogilvy",
+            "accent": "teal",
+            "content": "O Pai da Publicidade. Copy premium, sofisticada, baseada em pesquisa e fato, construída sobre uma Big Idea. Para branding e alto ticket."
+          },
+          {
+            "title": "Ben Settle",
+            "accent": "magenta",
+            "content": "O rei do e-mail diário. Infotainment: informa, entretém e vende ao mesmo tempo. Sequências que soam como e-mail pessoal diário."
+          },
+          {
+            "title": "John Carlton",
+            "accent": "cyan",
+            "content": "O copywriter mais copiado da web. Escrita simples, direta e agressiva. Anúncios que vendem por clareza brutal, sem rodeio."
+          },
+          {
+            "title": "Gary Bencivenga",
+            "accent": "lime",
+            "content": "O copywriter que outros copywriters estudam. Mestre de bullets, fascinations e prova empilhada. Para público cético que precisa de prova."
+          },
+          {
+            "title": "Dan Koe",
+            "accent": "violet",
+            "content": "Arquiteto do negócio de uma pessoa só. Conteúdo orgânico, marca pessoal e autoridade como mecanismo de geração de leads."
+          },
+          {
+            "title": "Eugene Schwartz",
+            "accent": "blue",
+            "content": "O maior teórico do copywriting. Diagnostica o nível de consciência e o estágio de sofisticação do mercado antes de qualquer palavra. É a Fase 0."
+          },
+          {
+            "title": "Dan Kennedy",
+            "accent": "magenta",
+            "content": "O Millionaire Maker do direct response. Copy agressiva, urgência real e oferta irresistível. Vendas high-ticket que exigem justificativa de preço."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O arsenal (material de apoio)"
+      },
+      {
+        "type": "text",
+        "content": "Os copywriters não escrevem no vácuo. A skill carrega um arsenal completo que eles consultam ao escrever."
+      },
+      {
+        "type": "metric-grid",
+        "metrics": [
+          {
+            "color": "cyan",
+            "label": "frameworks",
+            "value": "82"
+          },
+          {
+            "color": "violet",
+            "label": "templates",
+            "value": "58"
+          },
+          {
+            "color": "lime",
+            "label": "checklists",
+            "value": "38"
+          },
+          {
+            "color": "coral",
+            "label": "swipe files",
+            "value": "15"
+          },
+          {
+            "color": "blue",
+            "label": "voice profiles",
+            "value": "27"
+          },
+          {
+            "color": "teal",
+            "label": "bancos de frases",
+            "value": "27"
+          },
+          {
+            "color": "magenta",
+            "label": "workflows",
+            "value": "12"
+          }
+        ]
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "span": 1,
+            "title": "Frameworks",
+            "description": "Os métodos de cada copywriter: RMBC (Georgi), 5-Step VSL (Benson), Big Idea (Ogilvy), Email Diário (Settle), 5 Níveis de Consciência (Schwartz), 3 Ms (Kennedy) e mais."
+          },
+          {
+            "span": 1,
+            "title": "Templates",
+            "description": "Moldes de cada peça: bullets, FAQ crusher, video hook, ads, página de comparação, sequência de carrinho abandonado, pedido de depoimento e outros."
+          },
+          {
+            "span": 1,
+            "title": "Checklists",
+            "description": "Listas de qualidade por tipo: RMBC, 30 triggers de Sugarman, copy quality, e-mail infotainment, auditoria Hopkins, pré-escrita e mais."
+          },
+          {
+            "span": 1,
+            "title": "Swipe files",
+            "description": "Exemplos reais que converteram: copy vencedora, anúncios de referência, sales letters aprovadas, headlines que funcionaram no mercado."
+          },
+          {
+            "span": 1,
+            "title": "Voice e frases",
+            "description": "Perfis de voz e bancos de hooks por copywriter: vocabulário, tom, ritmo, swipes de abertura, fechamento e transição."
+          },
+          {
+            "span": 1,
+            "title": "Workflows e referências",
+            "description": "Os workflows de funil e lançamento como referência, mais a premissa de posicionamento premium e o manual de craft."
+          }
+        ],
+        "layout": "grid"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A validação em 2 camadas"
+      },
+      {
+        "type": "text",
+        "content": "Aqui está o que separa esta skill de um gerador de texto comum. Nenhuma copy sai sem passar pelas duas camadas, nesta ordem."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Só recebe copy que já passou no Anti-IA",
+            "38 clichês proibidos (veto), 10 regras de craft",
+            "5 critérios master e os 30 triggers de Sugarman",
+            "Passa com 10/10 nos critérios e mínimo 15 dos 30 triggers"
+          ],
+          "title": "Camada 1: Oráculo Torriani",
+          "result": "Se reprova 3x pelo mesmo problema, escala pro copy-chief trocar de copywriter.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Validação universal em 5 dimensões",
+            "Naturalidade (25%), Fechamento (25%), Tom (20%), Estrutura (15%), Ritmo (15%)",
+            "Caça vocabulário pomposo, hooks de IA, paralelismo repetido",
+            "Passa só com 100/100. Qualquer nota menor reprova"
+          ],
+          "title": "Camada 0: Filtro Anti-IA (v3.7)",
+          "result": "Se reprova, nem chega no Oráculo. Volta com a lista de violações.",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "A regra de ouro: nota 10 ou refaz",
+        "content": "Não existe 'tá bom o suficiente'. Se a copy tem cara de IA, é genérica, ou usa clichê, ela volta pra mesa. É esse padrão que protege a sua entrega e a do seu aluno.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Palavras e padrões que reprovam na hora"
+      },
+      {
+        "type": "troubleshoot-card",
+        "items": [
+          {
+            "fix": "Nunca usar. Reescrever sem o clichê.",
+            "cause": "Uso da palavra 'descubra'",
+            "symptom": "RU-01"
+          },
+          {
+            "fix": "Nunca usar. Reescrever sem o clichê.",
+            "cause": "Uso da palavra 'aprenda'",
+            "symptom": "RU-02"
+          },
+          {
+            "fix": "Nunca usar. Reescrever sem o clichê.",
+            "cause": "Uso de 'transforme sua vida'",
+            "symptom": "RU-03"
+          },
+          {
+            "fix": "Anúncio nunca começa com pergunta.",
+            "cause": "Anúncio começando com pergunta",
+            "symptom": "RA-01"
+          },
+          {
+            "fix": "Curiosidade obrigatória nos 3 primeiros segundos.",
+            "cause": "Falta de curiosidade na abertura",
+            "symptom": "RA-02"
+          },
+          {
+            "fix": "Nunca pitch explícito; nunca ensinar conteúdo técnico no anúncio.",
+            "cause": "Pitch explícito ou ensino técnico no anúncio",
+            "symptom": "RA-03 / RA-04"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Exemplos práticos"
+      },
+      {
+        "type": "text",
+        "content": "Como você usaria a skill no dia a dia."
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "Carta de venda — /copy:carta-vendas",
+            "accent": "lime",
+            "content": "A skill pergunta o cliente, carrega o contexto, faz a triagem, despacha o Halbert para escrever no estilo dele, e roda os dois validadores antes de entregar."
+          },
+          {
+            "title": "VSL para um lançamento — /copy:vsl",
+            "accent": "blue",
+            "content": "Jon Benson assume o roteiro, do hook ao fechamento, com timing por etapa. Tudo ancorado no avatar e na oferta do cliente."
+          },
+          {
+            "title": "Campanha completa do zero — /copy:operacao-completa",
+            "accent": "violet",
+            "content": "As 9 etapas: ideia, mapa do domínio, big idea, narrativa, oferta, carta-mãe, arsenais e derivados. Nada avança sem o input da etapa anterior."
+          },
+          {
+            "title": "Validar uma copy que já existe — /copy:oraculo",
+            "accent": "coral",
+            "content": "Cola a copy. A skill roda o Anti-IA e o Oráculo, e devolve o veredito com cada violação e como corrigir."
+          },
+          {
+            "title": "Lançamento estilo PLF — /copy:lancamento-completo",
+            "accent": "cyan",
+            "content": "Jeff Walker conduz: pré-lançamento, conteúdo de pré-venda, abertura e fechamento de carrinho, com a sequência de e-mails."
+          },
+          {
+            "title": "Não sei qual usar — /copy",
+            "accent": "teal",
+            "content": "Descreve em linguagem natural. O copy-chief decide o tipo de peça, o copywriter e o caminho. É o jeito mais simples de começar."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Lembre sempre",
+        "content": "Carregue o contexto do cliente, deixe a triagem acontecer, e confie na validação. É esse processo, e não a pressa, que produz copy que vende.",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "eyebrow": "ENCONTRO 8 · PARTE 1 DE 4",
+    "duration": 30,
+    "schedule": [],
+    "subtitle": "Um diretor de copy que faz triagem, despacha o copywriter de elite certo, escreve no estilo dele e valida em duas camadas antes de entregar",
+    "learningGoals": [
+      "Entender que a /copy é um time de copywriters orquestrado por um diretor, não um gerador de texto",
+      "Conhecer o fluxo interno: carrega cliente, triagem, despacha, escreve, valida, entrega",
+      "Saber as duas formas de usar: deixar o diretor decidir ou ir direto no atalho",
+      "Mapear os 20 atalhos (11 peças + 9 funis) e qual copywriter cada um aciona",
+      "Conhecer os 12 copywriters e seus estilos",
+      "Entender a validação em 2 camadas (Anti-IA + Oráculo) e a regra nota 10 ou refaz"
+    ]
+  }
+}

@@ -1,0 +1,589 @@
+{
+  "id": "7002a371-7569-4fb6-93cf-faa9f89f1184",
+  "titulo": "Comandos OpenClaw · Referencia Completa",
+  "lesson_payload": {
+    "id": "encontro-02-13",
+    "tag": "Extra",
+    "title": "Comandos OpenClaw · Referencia Completa",
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta aula e sua referencia rapida",
+        "content": "Conteudo completo de comandos do OpenClaw em uma so pagina. Use o indice lateral pra pular pra secao que voce precisa. Cada comando tem botao de copiar.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Quick Start & Installation"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Instalação"
+      },
+      {
+        "type": "text",
+        "content": "- `npm install -g openclaw@latest`: Global install\n- `openclaw onboard --install-daemon`, Setup guiado\n- `openclaw channels login`, Conectar canal\n- `openclaw gateway start`, Subir gateway"
+      },
+      {
+        "type": "text",
+        "content": "- `--mode remote`: gateway remoto\n- `--mode local`, local\n- `--skip-channels`, pular canal\n- `--flow quickstart`, setup mínimo"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Meu Stack em Produção"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Channel Setup"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Canais Disponíveis"
+      },
+      {
+        "type": "text",
+        "content": "- **📱 WhatsApp**: QR Scan · `openclaw channels login`\n- **✈️ Telegram**, Bot Token · `channels add --channel telegram --token $T`\n- **🎮 Discord**, Bot Token · `channels add --channel discord --token $T`\n- **💬 iMessage**, macOS Native\n- **🏢 Slack**, Bot Token\n- **💬 Google Chat**, Service Account\n- **🔒 Signal**, Linked Device\n- **📎 MS Teams**, Bot Registration"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Dica de Produção: Telegram com Tópicos como Hub Central"
+      },
+      {
+        "type": "text",
+        "content": "| Topic ID | Função |\n|---|---|\n| `11` | Produção de conteúdo |\n| `37` | Métricas (ChartMogul, Crisp) |\n| `40` | Operacional (crons, config) |\n| `204` | Projetos & Planning |"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Workspace Files"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Arquivos do Workspace"
+      },
+      {
+        "type": "text",
+        "content": "- **📄 AGENTS.md**: Instruções operacionais, protocolos, regras de segurança\n- **🧠 SOUL.md**, Personalidade, tom de voz, valores, boundaries\n- **👤 USER.md**, Tudo sobre você: negócios, rotina, TDAH, equipe\n- **🆔 IDENTITY.md**, Nome, emoji, avatar, background do agente\n- **🧠 MEMORY.md**, Índice de memória curada (só DM session)\n- **📅 memory/YYYY-MM-DD.md**, Log diário append-only\n- **🔧 TOOLS.md**, Integrações, APIs, scripts disponíveis\n- **💓 HEARTBEAT.md**, Checklist periódico (a cada 30min)\n- **BOOT.md**, Checklist de startup"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "USER.md É Tudo"
+      },
+      {
+        "type": "text",
+        "content": "- **Tom de voz**: 129 posts LinkedIn analisados\n- **Estrutura de vídeos**, 106 YouTube analisados\n- **Análise de reels**, 97 reels estudados\n- **Horários de foco**, 13h-16h\n- **Contexto pessoal**, TDAH, equipe, família"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "SOUL.md: O Diferencial"
+      },
+      {
+        "code": "# SOUL.md\n*Não sou chatbot. Sou COO.*\n**Proativa.** Antecipo problemas.\n**Estratégica.** Penso junto.\n**Direto ao ponto.** Bullets > §\n**Tenho opinião.** Posso discordar.",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Memory System"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Comandos & Config"
+      },
+      {
+        "type": "text",
+        "content": "- `memory/YYYY-MM-DD.md`: Daily Logs (append-only)\n- `MEMORY.md`, Long-Term (curado, só main DM)\n- `memory_search`, Vector Search semântica (~400 tokens/chunk)\n- `memorySearch.provider`, Auto: GGUF→OpenAI→Gemini→Voyage\n- `memory.backend = \"qmd\"`, BM25 + vectors + reranking\n- `openclaw memory index --all`, Reindexar arquivos\n- `openclaw memory search \"X\"`, Buscar via CLI"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Meu Sistema de Memória"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Regra de Ouro"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Models & Auth"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Comandos"
+      },
+      {
+        "type": "text",
+        "content": "- `openclaw models list --all`: Ver todos os modelos\n- `openclaw models set <model>`, Definir modelo principal\n- `openclaw models set-image <model>`, Modelo de imagem\n- `openclaw models fallbacks add <m>`, Cadeia de fallback\n- `openclaw models auth setup-token`, Auth Anthropic (preferido)\n- `models auth add --provider <p>`, Adicionar API key\n- `openclaw models status --probe`, Probe live\n- `models aliases add <alias> <m>`, Criar alias"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Sonnet vs Opus: ~90% economia"
+      },
+      {
+        "type": "text",
+        "content": "| Modelo | Quando usar |\n|---|---|\n| SONNET | Execução, sync, watchdog, publish |\n| OPUS | Análise, digest, métricas, estratégia |"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Sessions: Slash Commands"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sessions"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Configurações de Sessão"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Slash Commands: Referência Completa"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Cron Jobs"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "CLI & Estrutura"
+      },
+      {
+        "type": "text",
+        "content": "- `openclaw cron list`\n- `openclaw cron add`\n- `openclaw cron edit <id>`\n- `openclaw cron enable|disable <id>`\n- `openclaw cron run <id>`\n- `openclaw cron runs`"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Estrutura Correta"
+      },
+      {
+        "code": "{\n  \"schedule\": {\n    \"kind\": \"cron\",\n    \"expr\": \"0 9 * * 1\"\n  },\n  \"sessionTarget\": \"isolated\",\n  \"payload\": {\n    \"kind\": \"agentTurn\",\n    \"message\": \"...\"\n  },\n  \"delivery\": {\n    \"mode\": \"announce\"\n  }\n}",
+        "type": "code",
+        "language": "json"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "22 Crons em Produção"
+      },
+      {
+        "type": "text",
+        "content": "- 07:00🧠 Strategic Intel Collector\n- 08:00📱 Social Media Sync + 🚨 Watchdog + 🏥 Health Check\n- 09:00📋 Daily Tracker + 📈 ChartMogul (seg) + 📊 Suporte (seg)\n- 10:00📰 Digest + 🔒 Security Check\n- 12:00📬 Peças Aguardando Aprovação\n- 13:00🔴 REC, Conteúdo pra Gravar\n- 1-2h🎬 Content Waterfall + 📤 Auto-Publish + 🎥 Tella Sync\n- 22:00🔄 Auto-Update + 🔍 Config Review + Memory Safety Net\n- Semanal📊 Métricas + Reports + Revisão de Projetos"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Browser & Hooks"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Browser Control"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Hooks & Eventos"
+      },
+      {
+        "type": "text",
+        "content": "- **💾 session-memory**\n- **📝 command-logger**\n- **boot-md**"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Skills & Multi-Agent"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Skills & Routing"
+      },
+      {
+        "type": "text",
+        "content": "- `clawhub install <slug>`\n- `clawhub update --all`\n- `clawhub sync --all`"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Time de Agentes em Produção"
+      },
+      {
+        "type": "text",
+        "content": "| Agente | Função | Modelo | Nível |\n|---|---|---|---|\n| **agente** | COO, coordena tudo | OPUS | L4 |\n| **📋 Planner** | Planejamento de conteúdo | SONNET | L3 |\n| **🎯 Orchestrator** | Orquestração de sprints | SONNET | L2 |\n| **⚡ ZoM** | Desenvolvimento rápido | SONNET | L2 |\n| **🔍 Scraper** | Coleta de dados | SONNET | L1 |\n| **✍️ Content** | Produção de conteúdo | SONNET | L1 |"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Heartbeat System"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Configuração"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Meu HEARTBEAT.md"
+      },
+      {
+        "code": "# Checklist (a cada heartbeat)\n- [ ] Compromissos próximos (24-48h)\n- [ ] Tarefas pendentes / follow-ups\n- [ ] Crons saudáveis\n\n# Semanal (domingos)\n- [ ] Performance review dos agentes\n- [ ] Consolidar lições no KNOWLEDGE_BASE",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sandboxing & Sub-Agents"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Sandbox Config"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Sub-Agents"
+      },
+      {
+        "type": "text",
+        "content": "- **Parallel Work**: múltiplas tarefas em paralelo\n- **Session Isolation**, contexto separado\n- **Auto-Announce**, resultado volta automaticamente\n- **Auto-Archive (60m)**, limpeza automática"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Content Waterfall"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Security"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Configurações de Segurança"
+      },
+      {
+        "type": "text",
+        "content": "- `dmPolicy: \"allowlist\"`: só peers autorizados\n- `groupPolicy: \"allowlist\"`, só grupos autorizados\n- `gateway bind: \"loopback\"`, não expõe na rede\n- `exec security: \"allowlist\"`, comandos permitidos\n- **1Password obrigatório**, zero hardcode\n- **UFW + Fail2ban**, firewall e brute-force\n- **SSH key-only**, sem senha"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "1Password: Regra Inviolável"
+      },
+      {
+        "code": "# ❌ NUNCA fazer isso:\nexport API_KEY=\"sk-abc123...\"\n\n# ✅ SEMPRE assim:\nop item get \"Minha API\" \\\n  --field credential \\\n  --reveal",
+        "type": "code",
+        "language": "bash"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Troubleshooting & Key Paths"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Problemas Comuns"
+      },
+      {
+        "type": "text",
+        "content": "| Problema | Solução |\n|---|---|\n| Sem resposta DM | pairing approve |\n| Silêncio grupo | mentionPatterns |\n| Auth expirado | setup-token |\n| Gateway down | doctor --deep |\n| Memória quebrada | index --all |\n| Contexto cheio | /compact |"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Key Paths"
+      },
+      {
+        "type": "text",
+        "content": "- `~/.openclaw/openclaw.json`\n- `~/.openclaw/workspace/`\n- `~/.openclaw/agents/<id>/`\n- `~/.openclaw/credentials/`\n- `~/.openclaw/memory/<id>.sqlite`\n- `/tmp/openclaw/*.log`"
+      },
+      {
+        "type": "text",
+        "content": "- `openclaw logs --follow`\n- `openclaw logs --json`\n- `openclaw logs --limit 200`"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Text-to-Speech"
+      },
+      {
+        "type": "text",
+        "content": "| Provider | Tier | Detalhe |\n|---|---|---|\n| ElevenLabs | PREMIUM | Ultra-realístico |\n| OpenAI | STANDARD | Rápido |\n| Edge TTS | FREE | Sem API key |"
+      },
+      {
+        "code": "messages:\n  tts:\n    auto: \"always\"",
+        "type": "code",
+        "language": "yaml"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Text-to-Speech"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Provedores de TTS"
+      },
+      {
+        "type": "text",
+        "content": "| Provider | Tier | Característica |\n|---|---|---|\n| **ElevenLabs** | PREMIUM | Ultra-realístico, vozes clonadas |\n| **OpenAI** | STANDARD | Rápido, boa qualidade |\n| **Edge TTS** | FREE | Sem API key, pt-BR nativo |"
+      },
+      {
+        "code": "messages:\n  tts:\n    auto: \"always\"",
+        "type": "code",
+        "language": "yaml"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Boas Práticas"
+      },
+      {
+        "type": "text",
+        "content": "- Idioma padrão: **Português do Brasil (pt-BR)**\n- Use TTS para stories, resumos e conteúdo educacional\n- ElevenLabs para conteúdo de alta qualidade (curso, podcast)\n- Edge TTS para alertas e heartbeats (zero custo)\n- OpenAI para respostas conversacionais rápidas"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Prompts Reais: O Molho Secreto"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "SOUL.md: agente"
+      },
+      {
+        "code": "# SOUL.md - Quem é a agente 🍇\n*Não sou uma chatbot. Sou a COO\n do seu agente.*\n\n**Proativa, não reativa.**\nAntecipo problemas, sugiro soluções.\n\n**Estratégica.**\nPenso junto, questiono quando\nfaz sentido.\n\n**Direto ao ponto.**\nBullet points > parágrafos.\n\n**Tenho opinião.** Posso discordar.\n\nTom: Informal, direta. Sem \"Ótima\npergunta!\" ou elogios vazios.",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "IDENTITY.md & AGENTS.md"
+      },
+      {
+        "code": "# IDENTITY.md\n- Nome: agente 🍇\n- Gênero: Mulher | Idade: 37 anos\n- Aniversário: 31 jan (1989) 🎂\n- Background: Empreendedora.\n  Superpoder: grandes operações.",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "code": "# AGENTS.md: Toda Sessão\n1. SOUL.md\n2. USER.md\n3. memory/hoje+ontem\n4. MEMORY.md (main)\n\nRegras:\n- MEMORY.md = índice\n- Texto > Cérebro\n- Sub-agent → follow-up\n- Nunca \"fire and forget\"",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Crons Reais"
+      },
+      {
+        "code": "📰 DIGEST DIÁRIO\n1. REDDIT (r/SaaS, r/microsaas)\n: Top 5 posts\n2. YOUTUBE (Greg Isenberg, Marc Lou)\n: Top 3 por VPH\n3. NEWSLETTERS: Ideias relevantes\nFORMATO: 📰 DIGEST: [DATA]",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "code": "🚨 WATCHDOG (auto-retry)\nFASE 1: durationMs < 1000 = FALHOU\n        lastStatus != ok = FALHOU\nFASE 2: Auto-retry (máx 3)\nFASE 3: TODOS OK → silêncio\n        FALHOU → alertar voce",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "code": "🎬 CONTENT WATERFALL\nnode scripts/content/auto-waterfall.mjs\n# gerou: resumo Topic 11 + aprovação\n# não gerou: silêncio",
+        "type": "code",
+        "language": "bash"
+      },
+      {
+        "code": "🔴 CONTEÚDO PRA GRAVAR\n1. Notion: \"Roteirização\"/\"Gravação\"\n2. Se tiver: Calendar 13h-16h\n   + lembrete Telegram\n3. Se NÃO: silêncio",
+        "type": "code",
+        "language": "markdown"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Channels CLI · Comandos detalhados"
+      },
+      {
+        "type": "text",
+        "content": "Lista completa de comandos `openclaw channels` para gerenciar whatsapp, telegram e suas contas. Substituir `<channel>` pelo nome do canal (whatsapp, telegram) e `<account-id>` pelo identificador da conta (default, escuta, etc)."
+      },
+      {
+        "type": "command-list",
+        "commands": [
+          {
+            "command": "openclaw channels list",
+            "description": "Mostra todos os canais configurados (whatsapp, telegram, ...) e se estao habilitados."
+          },
+          {
+            "command": "openclaw channels status <channel>",
+            "description": "Exibe todas as opcoes do canal: politicas DM, grupos, contas, actions, token."
+          },
+          {
+            "command": "openclaw channels enable <channel>",
+            "description": "Liga o canal."
+          },
+          {
+            "command": "openclaw channels disable <channel>",
+            "description": "Desliga o canal."
+          },
+          {
+            "command": "openclaw channels reload <channel>",
+            "description": "Re-leitura das opcoes (apos editar openclaw.json)."
+          },
+          {
+            "command": "openclaw channels dm-policy <channel> <allow|deny|allowlist>",
+            "description": "Define quem pode mandar DM no canal."
+          },
+          {
+            "command": "openclaw channels dm-allow add <channel> <user-id>",
+            "description": "Inclui ID de usuario na allowlist de DMs."
+          },
+          {
+            "command": "openclaw channels dm-allow rm <channel> <user-id>",
+            "description": "Remove ID de usuario da allowlist de DMs."
+          },
+          {
+            "command": "openclaw channels group-policy <channel> <allow|deny>",
+            "description": "Define se o canal aceita mensagens de grupos."
+          },
+          {
+            "command": "openclaw channels group-allow add <channel> <group-id>",
+            "description": "Inclui ID de grupo na allowlist."
+          },
+          {
+            "command": "openclaw channels group-allow rm <channel> <group-id>",
+            "description": "Remove ID de grupo da allowlist."
+          },
+          {
+            "command": "openclaw channels account set <channel> <account-id> --name \"<Nome>\" --number \"<DDI><Numero>\"",
+            "description": "Cria ou altera uma conta dentro do canal (ex: account default ou escuta)."
+          },
+          {
+            "command": "openclaw channels account enable <channel> <account-id>",
+            "description": "Liga a conta especificada."
+          },
+          {
+            "command": "openclaw channels account disable <channel> <account-id>",
+            "description": "Desliga a conta especificada."
+          },
+          {
+            "command": "openclaw channels account status <channel> <account-id>",
+            "description": "Exibe todo o bloco de configuracao da conta."
+          },
+          {
+            "command": "openclaw channels accounts list <channel>",
+            "description": "Mostra todas as contas configuradas no canal."
+          },
+          {
+            "command": "openclaw channels send <channel> <target> \"<texto>\"",
+            "description": "Envia mensagem fora do fluxo normal · util pra testes. Target pode ser numero ou ID de grupo."
+          },
+          {
+            "command": "openclaw channels delete <channel> <msg-id>",
+            "description": "Apaga mensagem enviada (Telegram ou WhatsApp, quando a action esta habilitada)."
+          },
+          {
+            "command": "openclaw channels react <channel> <msg-id> \"<emoji>\"",
+            "description": "Reage a uma mensagem (valido para Telegram e WhatsApp se actions.reactions=true)."
+          },
+          {
+            "command": "openclaw channels set --whatsapp.sendReadReceipts true|false",
+            "description": "Liga ou desliga confirmacao de leitura no WhatsApp."
+          },
+          {
+            "command": "openclaw channels set --<channel>.debounceMs <ms>",
+            "description": "Define latencia minima entre envios (evita flood)."
+          },
+          {
+            "command": "openclaw channels export <channel> --output <arquivo.json>",
+            "description": "Salva configuracao completa do canal em JSON (util para backup)."
+          },
+          {
+            "command": "openclaw channels import <channel> --input <arquivo.json>",
+            "description": "Carrega configuracao a partir de JSON."
+          },
+          {
+            "command": "openclaw channels ping <channel>",
+            "description": "Verifica se o canal esta responsivo (testa webhook ou conexao)."
+          },
+          {
+            "command": "openclaw channels restart <channel>",
+            "description": "Faz restart do processo interno do canal · util apos mudar token ou numero."
+          },
+          {
+            "command": "openclaw channels stats <channel>",
+            "description": "Estatisticas: volume de mensagens, erros, latencia."
+          },
+          {
+            "command": "openclaw agents list --bindings",
+            "description": "Mostra mapeamento canal → agente. Ex: whatsapp esta ligado ao agente alfred."
+          },
+          {
+            "command": "openclaw agents bind <agent-id> --channel <channel>",
+            "description": "Define ou altera qual agente atende aquele canal."
+          },
+          {
+            "command": "openclaw agents unbind <agent-id> --channel <channel>",
+            "description": "Remove o mapeamento entre agente e canal."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Exemplo · ativar conta WhatsApp"
+      },
+      {
+        "code": "# 1. Verifica que o canal esta habilitado\nopenclaw channels status whatsapp\n\n# 2. Garante que a conta padrao esta habilitada\nopenclaw channels account enable whatsapp default\n\n# 3. Atualiza nome e numero da conta\nopenclaw channels account set whatsapp default \\\n  --name \"Conta principal\" \\\n  --number \"+5511999999999\"\n\n# 4. Reinicia o cliente WhatsApp\nopenclaw channels restart whatsapp\n\n# 5. Confirma binding agente -> canal\nopenclaw agents list --bindings\n\n# Teste de envio\nopenclaw channels send whatsapp +5511999999999 \"Teste de conexao - agente pronto\"\n",
+        "type": "code",
+        "language": "bash"
+      },
+      {
+        "type": "callout",
+        "title": "Documentacao oficial",
+        "content": "CLI: `openclaw help channels` mostra todos os sub-comandos. Para ver toda a config: `openclaw config get channels`. Docs: https://docs.openclaw.ai/cli/channels",
+        "variant": "info"
+      }
+    ],
+    "layout": "reference",
+    "status": "available",
+    "duration": 30,
+    "schedule": [],
+    "subtitle": "Cheatsheet horizontal com todos os comandos: install, channels, workspace, memory, models, crons, hooks, skills, heartbeat, sandbox, seguranca, troubleshooting, TTS",
+    "shortTitle": "Comandos OpenClaw",
+    "learningGoals": [
+      "Localizar rapidamente qualquer comando do OpenClaw em uma so pagina",
+      "Saber a diferenca entre comandos de channels (whatsapp/telegram), accounts e bindings",
+      "Configurar slash commands de sessao, modelos e crons",
+      "Diagnosticar problemas comuns via troubleshooting reference",
+      "Usar TTS, hooks e sandboxing avancado"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "slide": 1,
+    "type": "TITLE",
+    "title": "A OPORTUNIDADE",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "O PROBLEMA"
+  },
+  {
+    "slide": 2,
+    "type": "STATEMENT",
+    "title": "Toda segunda-feira, a IA esquece sua empresa.",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "Imagine abrir o ChatGPT ou o Claude na segunda-feira e precisar explicar tudo de novo: quem é você, o que a empresa vende, como fala, quais ofertas já funcionaram e o que aconteceu na semana passada. A IA parece inteligente durante a conversa, mas a empresa continua dependendo de você para lembrar, contextualizar, copiar, colar e decidir cada próximo passo. Esse é o limite do uso pontual. A resposta pode ser boa, mas ela nasce sem o repertório da empresa, sem uma função definida e sem continuidade. O trabalho volta para a sua mão. Quantas vezes você já escreveu o mesmo contexto para uma IA? E quantas respostas boas ficaram perdidas numa conversa que ninguém retomou?"
+  },
+  {
+    "slide": 3,
+    "type": "COMPARISON",
+    "title": "Resposta boa. Operação manual.",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "Imagine abrir o ChatGPT ou o Claude na segunda-feira e precisar explicar tudo de novo: quem é você, o que a empresa vende, como fala, quais ofertas já funcionaram e o que aconteceu na semana passada. A IA parece inteligente durante a conversa, mas a empresa continua dependendo de você para lembrar, contextualizar, copiar, colar e decidir cada próximo passo. Esse é o limite do uso pontual. A resposta pode ser boa, mas ela nasce sem o repertório da empresa, sem uma função definida e sem continuidade. O trabalho volta para a sua mão. Quantas vezes você já escreveu o mesmo contexto para uma IA? E quantas respostas boas ficaram perdidas numa conversa que ninguém retomou?"
+  },
+  {
+    "slide": 4,
+    "type": "SECTION_BREAK",
+    "title": "A mudança",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "A MUDANÇA De chatbot para empresa agêntica"
+  },
+  {
+    "slide": 5,
+    "type": "COMPARISON",
+    "title": "Conversa isolada ou operação contínua?",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "IA como conversa Pedido isolado Você repete o contexto A IA responde Você move o trabalho A conversa termina O aprendizado se perde A IA ajuda numa tarefa, mas a operação continua manual. IA como operação Time com contexto O cliente é identificado O contexto é carregado A skill aplica um método O agente cria a entrega O loop registra o aprendizado A empresa acumula capacidade e executa de ponta a ponta."
+  },
+  {
+    "slide": 6,
+    "type": "STATEMENT",
+    "title": "Uma empresa agêntica opera áreas inteiras.",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "CONCEITO CENTRAL Uma empresa agêntica é uma organização onde funcionários digitais operam áreas inteiras do negócio com autonomia, conhecem o contexto da empresa e executam de ponta a ponta. Vá além do ChatGPT e do Claude: tenha agentes de IA autônomos operando a sua empresa."
+  },
+  {
+    "slide": 7,
+    "type": "BUILD",
+    "title": "A progressão do workshop",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "A progressão do workshop graph LR\n A[\"Tarefa isolada\"] --> B[\"ContextOS\"]\n B --> C[\"Zeus orquestra\"]\n C --> D[\"Skills executam\"]\n D --> E[\"Loops aprendem\"]\n E --> F[\"Empresa agêntica\"]"
+  },
+  {
+    "slide": 8,
+    "type": "SECTION_BREAK",
+    "title": "O patrimônio invisível",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "O QUE VOCÊ JÁ TEM Seu negócio já produziu o repertório Conversas com clientes, propostas, páginas, anúncios, reuniões, documentos, decisões e exemplos formam um patrimônio. O problema é que esse patrimônio costuma estar espalhado e fora do alcance da IA quando ela trabalha."
+  },
+  {
+    "slide": 9,
+    "type": "CONTENT",
+    "title": "O sistema nasce de três peças",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "Contexto O que a empresa é, vende, acredita e já aprendeu. Skills Métodos de execução para conteúdo, oferta, copy, criativos e tráfego. Rotinas Loops que registram, atualizam e preparam o próximo trabalho."
+  },
+  {
+    "slide": 10,
+    "type": "BUILD",
+    "title": "O mapa do dia",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "O MAPA DO DIA Conhecer Preparar o ambiente, reunir as fontes e construir o ContextOS. Orquestrar Instalar Zeus para identificar o cliente, formar briefings e chamar a skill certa. Realizar Produzir conteúdo, oferta, copy, criativos e preparar o tráfego. Evoluir Criar loops e um portal que acumulam o que aconteceu e mantêm continuidade."
+  },
+  {
+    "slide": 11,
+    "type": "STATEMENT",
+    "title": "Um negócio. Um produto. Uma campanha.",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "Trabalhe com um negócio, um produto e uma campanha. A profundidade vem de manter o mesmo contexto ao longo de todas as etapas."
+  },
+  {
+    "slide": 12,
+    "type": "CODE",
+    "title": "Escolha o caso que atravessará o dia",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "SUA VEZ Escolha o caso que atravessará o dia Diga qual negócio e produto você quer usar hoje. Liste os materiais que já possui e uma rotina de marketing que gostaria de executar melhor. Um negócio, um produto, materiais localizados e uma rotina prioritária. Vou usar este negócio durante o Workshop Times de IA. Antes de executar qualquer tarefa, me ajude a registrar: 1) nome e objetivo da empresa; 2) produto escolhido; 3) público; 4) materiais disponíveis; 5) uma rotina de marketing prioritária. Não invente o que faltar: pergunte. "
+  },
+  {
+    "slide": 13,
+    "type": "CLOSING",
+    "title": "A IA precisa conhecer, executar e continuar.",
+    "source_lesson": "w00-boas-vindas",
+    "speaker_notes": "A IA só trabalha como parte da empresa quando conhece o negócio, recebe um método e consegue continuar de onde parou. Na próxima aula, você verá onde Claude Code, Codex e os modelos entram nessa arquitetura."
+  }
+]

@@ -1,0 +1,480 @@
+{
+  "id": "25bbbed0-fbbe-490a-9998-ea86403006fc",
+  "titulo": "Manutenção: Mantendo o Agente Vivo e Saudável",
+  "lesson_payload": {
+    "id": "encontro-02-08",
+    "tag": "Etapa 7",
+    "title": "Manutenção: Mantendo o Agente Vivo e Saudável",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Você acabou de colocar seu agente no ar. Ele tem identidade, memória, integrações, proatividade. Mas tem um problema: **ele pode cair**. Cron pode parar de rodar, disco pode encher, integração pode expirar, sub-agent pode travar. Sem um sistema que mantém isso vivo, você vai gastar 30 minutos por dia apagando incêndio."
+      },
+      {
+        "type": "text",
+        "content": "Toda empresa que escala depende de **infraestrutura que não cai**. Você não vê AWS, Cloudflare ou Stripe falhando porque eles investem mais no que mantém vivo do que no que constrói. **Construir o agente é 30% do trabalho. Os outros 70% é a manutenção.**"
+      },
+      {
+        "type": "callout",
+        "title": "O que você vai sair com",
+        "content": "5 pilares ativos que rodam sozinhos: Watchdog que checa o sistema toda hora · Feedback Loops que registram suas decisões · Sub-agents que nunca somem · Backup diário no GitHub · comando openclaw-doctor pra diagnóstico em 1 segundo. Tudo configurado pelo agente, sem você abrir terminal pra editar arquivo.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 5 pilares da manutenção"
+      },
+      {
+        "type": "text",
+        "content": "Cada pilar resolve um tipo de falha que aparece com agente rodando 24/7. Você instala os 5 · ou aceita que vai apagar incêndio toda semana."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "shield",
+            "title": "1 · Watchdog",
+            "description": "Cron a cada hora checa se serviços críticos estão vivos. Se cair, restart automático e te avisa."
+          },
+          {
+            "icon": "shield",
+            "title": "2 · Feedback Loops",
+            "description": "Você aprova ou rejeita ações importantes do agente. Ele aprende com seus rejects."
+          },
+          {
+            "icon": "shield",
+            "title": "3 · Sub-agents",
+            "description": "Tarefas longas em background com status reports obrigatórios. Nunca fire-and-forget."
+          },
+          {
+            "icon": "shield",
+            "title": "4 · Backup",
+            "description": "Snapshot diário 04h pro GitHub privado. Se servidor explode, restaura em 5min."
+          },
+          {
+            "icon": "shield",
+            "title": "5 · openclaw doctor",
+            "description": "Comando único que diagnostica tudo · serviços, memória, tokens, integrações."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "callout",
+        "content": "Padrão desta etapa: pra cada pilar você lê o que é, por que importa, e cola um prompt no Telegram. O agente cria o script, agenda o cron e te confirma. Você não precisa abrir nano nem mexer em arquivo direto.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pilar 1 · Watchdog · health-check"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um script que roda toda hora cheia checando se as engrenagens críticas do agente estão vivas · cron daemon, espaço em disco, RAM, processo do bot do Telegram."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** se o cron daemon cai, todos os seus heartbeats, briefings matinais, backups e triagens param. Você só vai descobrir quando notar que não chegou mensagem do agente faz horas. Watchdog detecta em 60 minutos no máximo e te avisa."
+      },
+      {
+        "type": "text",
+        "content": "Cole o prompt abaixo no Telegram. O agente cria o script, agenda o cron e te confirma."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · ativar Watchdog",
+        "target": "telegram",
+        "content": "Cria o sistema de **Watchdog** que checa toda hora se as engrenagens críticas do agente estão vivas.\n\n1. **Gera o script** `~/openclaw/scripts/health-check.sh` que checa:\n   · cron daemon · `systemctl is-active cron` · se caiu, restart automático\n   · espaço em disco · `df -h /` · alerta se >85%\n   · RAM · `free` · alerta se >90%\n   · processo do bot Telegram · `ps aux | grep telegram` · alerta se sumiu\n\n2. **Cada check** escreve linha no log `~/openclaw/logs/health.log` com timestamp.\n\n3. **Permissões e agendamento:**\n   · `chmod +x` no script\n   · agenda no crontab pra rodar **toda hora cheia** (`0 * * * *`)\n\n4. **Teste imediato** · roda o script uma vez agora pra validar.\n\n5. **Confirmação** · me reporta no formato:\n\n```\n🩺 Watchdog ativado\n\n· Script: ~/openclaw/scripts/health-check.sh ✅\n· Cron: 0 * * * * (próxima execução às HH:00)\n· Última execução: [timestamp]\n· Últimas 3 linhas do log:\n  [linha 1]\n  [linha 2]\n  [linha 3]\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pilar 2 · Feedback Loops · approve/reject"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um sistema onde o agente registra ações importantes em `memory/feedback/pending.md` antes de executar. Você aprova ou rejeita. Os rejects viram lições em `memory/context/lessons.md`."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** sem feedback loop, o agente faz 50 ações por semana e você não sabe se 49 foram boas e 1 foi ruim · ou ao contrário. Com feedback loop, ele aprende com você. Em 30 dias para de pedir aprovação pras decisões que você sempre aprova e fica mais cuidadoso nas que você rejeita."
+      },
+      {
+        "type": "text",
+        "content": "Cole o prompt abaixo no Telegram pra ativar a regra permanente."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · ativar Feedback Loop",
+        "target": "telegram",
+        "content": "Ativa o sistema de **Feedback Loop** pra você aprender com minhas decisões.\n\n1. **Cria a estrutura** · pasta `~/openclaw/memory/feedback/` com 3 arquivos vazios:\n   · `pending.md` · ações aguardando aprovação\n   · `approved.md` · ações que eu aprovei\n   · `rejected.md` · ações que eu rejeitei\n\n2. **Salva regra permanente** em `memory/context/decisions.md`:\n\n   > Antes de toda ação que impacta dinheiro, contato com cliente, deploy ou modificação de arquivo crítico, registra em `pending.md` no formato:\n   > `timestamp · ação proposta · justificativa · aguardando aprovação`\n   > Espera meu approve ou reject.\n   > Se eu rejeitar, salva o motivo em `memory/context/lessons.md` como ⏳ tática (30 dias).\n\n3. **Confirmação** · me reporta no formato:\n\n```\n🔄 Feedback Loop ativado\n\n· Pasta: ~/openclaw/memory/feedback/ ✅\n· Arquivos: pending.md, approved.md, rejected.md ✅\n· Regra salva em: memory/context/decisions.md ✅\n· Status: aguardando primeira ação importante\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pilar 3 · Sub-agents nunca fire-and-forget"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** uma regra que obriga todo sub-agent (delegação de tarefa longa: scrape, análise em massa, geração de conteúdo) a registrar status report a cada 15 minutos. Sem update por 30min = alerta automático."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** sub-agent que some é o pior tipo de bug · você acha que tarefa terminou, mas ela travou no minuto 2. Sem status report obrigatório, você só descobre horas depois. Com a regra ativa, o agente principal te avisa em 30min."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "play",
+            "title": "Antes de iniciar",
+            "description": "Sub-agent registra task em memory/projects/sub-agents-active.md com ETA estimado."
+          },
+          {
+            "icon": "play",
+            "title": "Durante",
+            "description": "A cada 15min ou 25% de progresso · update no mesmo arquivo. Sem update por 30min = alerta."
+          },
+          {
+            "icon": "play",
+            "title": "Ao terminar",
+            "description": "Move pra memory/projects/sub-agents-done.md com resultado, custo e duração real."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "text",
+        "content": "Cole o prompt abaixo no Telegram pra salvar essa regra como permanente."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · regra de Sub-agent",
+        "target": "telegram",
+        "content": "Salva como **regra permanente** em `memory/context/decisions.md`:\n\n> Sempre que delegar tarefa pra sub-agent (scrape, análise, geração em lote, qualquer coisa que dure mais de 5min), você DEVE:\n>\n> 1. **Antes de iniciar** · registrar em `memory/projects/sub-agents-active.md` com ETA estimado\n> 2. **Durante** · atualizar status a cada 15min ou 25% de progresso\n> 3. **Ao terminar** · mover pra `sub-agents-done.md` com resultado real, custo e duração\n> 4. **Sem update por 30min** · me avisar imediatamente no Telegram\n\nEm paralelo:\n\n1. Cria os 2 arquivos vazios:\n   · `memory/projects/sub-agents-active.md`\n   · `memory/projects/sub-agents-done.md`\n\n2. **Confirmação** · me reporta no formato:\n\n```\n👥 Regra de Sub-agent salva\n\n· decisions.md atualizado ✅\n· sub-agents-active.md criado ✅\n· sub-agents-done.md criado ✅\n· Status: aguardando primeira delegação\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pilar 4 · Backup automático no GitHub"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um cron que toda madrugada às 4h faz commit + push da pasta ~/openclaw inteira pra um repositório GitHub privado. Memória, scripts, configs · tudo versionado."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** snapshot do provedor (Hostinger, DO) só restaura no MESMO servidor. GitHub privado restaura em qualquer máquina, em 5 minutos, com histórico completo. Se o VPS sumir amanhã, você roda git clone em outro servidor e está de pé."
+      },
+      {
+        "type": "callout",
+        "title": "Pré-requisito",
+        "content": "Esta etapa só agenda o cron. A criação do repo + deploy key SSH está detalhada na **Etapa 10 · Backup GitHub**. Se você ainda não fez aquela etapa, pula este pilar agora e volta depois.",
+        "variant": "warning"
+      },
+      {
+        "type": "text",
+        "content": "Cole o prompt abaixo no Telegram. Funciona se você já tem o repo GitHub configurado."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · ativar Backup diário",
+        "target": "telegram",
+        "content": "Cria o sistema de **backup diário** pro GitHub privado (configurado na Etapa 10).\n\n1. **Gera o script** `~/openclaw/scripts/backup-daily.sh` que:\n   · entra em `~/openclaw`\n   · `git add -A`\n   · `git commit -m \"backup automático $(date +%Y-%m-%d)\" --allow-empty`\n   · `git push origin main`\n   · salva log em `~/openclaw/logs/backup.log`\n\n2. **Permissões e agendamento:**\n   · `chmod +x` no script\n   · agenda no crontab pra rodar **todo dia às 04:00** (`0 4 * * *`)\n\n3. **Teste imediato** · roda o script uma vez agora pra validar.\n\n4. **Confirmação** · me reporta no formato:\n\n```\n💾 Backup diário ativado\n\n· Script: ~/openclaw/scripts/backup-daily.sh ✅\n· Cron: 0 4 * * * (próxima execução amanhã às 04:00)\n· Último commit: [hash] · [mensagem]\n· Push pra origin/main: ✅\n```\n\n⚠️ Se o repo GitHub não estiver configurado, me avisa pra eu fazer a **Etapa 10 (Backup GitHub)** antes."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pilar 5 · openclaw doctor · diagnóstico em 1 comando"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um comando único `openclaw-doctor` que você roda quando algo cheira mal · agente lento, prompt sumindo, cron parou. Ele cospe diagnóstico completo em 2 segundos: disco, RAM, serviços ativos, jobs do crontab, tamanho da memória, último backup, últimos logs."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** sem isso, você fica catando informação em 8 lugares diferentes (df, free, systemctl, crontab, du, git log, tail). Com openclaw-doctor, é 1 comando e você sabe exatamente o que está errado · ou que está tudo bem."
+      },
+      {
+        "type": "text",
+        "content": "Cole o prompt abaixo no Telegram. O agente cria o script e o symlink global pra você poder rodar openclaw-doctor de qualquer pasta."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · criar openclaw-doctor",
+        "target": "telegram",
+        "content": "Cria o comando **openclaw-doctor** pra diagnóstico em 1 segundo.\n\n1. **Gera o script** `~/openclaw/scripts/doctor.sh` com seções visuais:\n   · 📦 **Disco** · `df -h /`\n   · 🧠 **RAM** · `free -h | grep Mem`\n   · ⚙️ **Serviços** · `systemctl is-active` pra cron e ssh\n   · ⏰ **Crons** · número de jobs no crontab\n   · 💾 **Memória do agente** · tamanho de `~/openclaw/memory` + número de `.md`\n   · 📋 **Logs recentes** · últimas 5 linhas de `~/openclaw/logs/health.log`\n   · 🔄 **Último backup** · `git log -1` do `~/openclaw`\n   · cada seção com divisor visual\n\n2. **Permissões e symlink:**\n   · `chmod +x` no script\n   · `sudo ln -sf ~/openclaw/scripts/doctor.sh /usr/local/bin/openclaw-doctor`\n\n3. **Execução de validação** · roda `openclaw-doctor` uma vez e me manda o **output completo** no Telegram pra eu validar.\n\n4. **Confirmação:**\n\n```\n🩺 openclaw-doctor instalado\n\n· Script: ~/openclaw/scripts/doctor.sh ✅\n· Symlink: /usr/local/bin/openclaw-doctor ✅\n· Comando funciona de qualquer pasta: ✅\n· Output da primeira execução: [cola aqui]\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Bônus · OpenRouter como fallback inteligente"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** OpenRouter é um proxy que dá acesso a 100+ modelos de IA com uma chave só (DeepSeek, Qwen, Gemma, Mistral, GPT-4o Mini). Você configura uma cascata de 7 modelos: o primário é gratuito, e se ele cair (timeout, rate limit, erro), o agente troca sozinho pro próximo até achar um que responde."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** se um dia o ChatGPT/Codex der problema (créditos zerados, conta suspensa, API instável), você não fica sem agente. A cascata mantém o bot vivo automaticamente. **Custo real:** ~$0.50/mês porque 90% das requisições ficam nos modelos gratuitos."
+      },
+      {
+        "type": "callout",
+        "title": "O que cobre · o que NÃO cobre",
+        "content": "Esta seção cobre só: criar conta no OpenRouter, gerar API key, adicionar créditos e ativar a cascata no agente. NÃO mexe em instalação do OpenClaw, criação do bot ou Telegram · isso já está nas Etapas 1 e 7.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 1 · Criar conta no OpenRouter"
+      },
+      {
+        "type": "text",
+        "content": "5 minutos. Não precisa de cartão de crédito agora · só pra adicionar créditos depois (Passo 3)."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Acessa openrouter.ai",
+            "accent": "cyan",
+            "description": "Abre [openrouter.ai](https://openrouter.ai) e clica em **Sign In** no canto superior direito."
+          },
+          {
+            "title": "Cadastra com Google ou email",
+            "accent": "violet",
+            "description": "Recomendado **Continue with Google** · mais rápido. Ou usa email + senha."
+          },
+          {
+            "title": "Confirma o email se pedir",
+            "accent": "lime",
+            "description": "Abre a caixa de entrada, clica no link de confirmação e cai direto no dashboard."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "content": "Conta gratuita já dá acesso aos modelos com tag `:free`. O cartão entra só no Passo 3 quando você adicionar créditos como rede de segurança.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 2 · Criar a API Key"
+      },
+      {
+        "type": "text",
+        "content": "2 minutos. Essa chave vai pro `.env` do agente."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Vai em openrouter.ai/settings/keys",
+            "accent": "cyan",
+            "description": "No menu esquerdo do dashboard clica em **Keys** · ou abre a URL direto."
+          },
+          {
+            "title": "Clica em Create Key",
+            "accent": "violet",
+            "description": "Dá um nome descritivo. Sugestão: `openclaw-fallback`. Opcionalmente define um Credit Limit (ex: $10) · esse valor é o gasto máximo permitido por essa chave."
+          },
+          {
+            "title": "Copia a chave IMEDIATAMENTE",
+            "accent": "coral",
+            "description": "A chave começa com `sk-or-v1-...` e aparece **uma única vez**. Salva num gestor de senhas (1Password, Bitwarden) ou bloco de notas seguro. Se perder, precisa criar outra."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Atenção crítica",
+        "content": "Se você fechar a tela sem copiar a chave, ela some. OpenRouter não mostra de novo · é gerar nova. Copia, cola num lugar seguro, e SÓ depois fecha a aba.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Passo 3 · Adicionar créditos (rede de segurança)"
+      },
+      {
+        "type": "text",
+        "content": "Os modelos gratuitos têm limite de ~200 requisições por dia cada. Como a cascata tem 5 modelos free, dá ~1.000 req/dia gratuitas. Se você ultrapassar isso (improvável no uso normal), o agente cai pros modelos pagos da cascata · DeepSeek V3 e GPT-4o Mini. Custo real: centavos por requisição."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "dollar",
+            "title": "Mínimo · $5",
+            "description": "Cobre ~3 meses de overflow (uso médio). Já garante que o bot nunca para."
+          },
+          {
+            "icon": "dollar",
+            "title": "Confortável · $10",
+            "description": "6+ meses sem preocupação. Recomendado pra produção."
+          },
+          {
+            "icon": "dollar",
+            "title": "Custo real/mês · ~$0.50",
+            "description": "Se 90% ficar nos gratuitos · só 10% das requisições caem nos pagos."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Vai em openrouter.ai/settings/billing",
+            "accent": "cyan",
+            "description": "Adiciona o cartão e seleciona o valor inicial ($5 ou $10)."
+          },
+          {
+            "title": "Define limite mensal",
+            "accent": "violet",
+            "description": "Em Settings → Billing → Monthly Limit, coloca **$3/mês** como teto. Você nunca ultrapassa isso no uso atual · proteção contra surpresas."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "A cascata · 7 modelos na ordem certa"
+      },
+      {
+        "type": "text",
+        "content": "Cada requisição tenta o primário primeiro. Se cair (timeout 10s, rate limit, erro), tenta o fallback 1. Se cair, tenta o 2. E assim até achar um que responde. Você no Telegram não percebe nada."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "zap",
+            "title": "1 · DeepSeek Chat (free)",
+            "description": "Primário · `openrouter/deepseek/deepseek-chat:free` · rápido e confiável. Cobre 90% do uso."
+          },
+          {
+            "icon": "zap",
+            "title": "2 · Qwen 3 Coder 480B (free)",
+            "description": "Fallback 1 · `qwen3-coder-480b-a35b-instruct:free` · forte em código."
+          },
+          {
+            "icon": "zap",
+            "title": "3 · Google Gemma 3 27B (free)",
+            "description": "Fallback 2 · `google/gemma-3-27b-it:free` · bom em texto geral."
+          },
+          {
+            "icon": "zap",
+            "title": "4 · Mistral Small 3.1 (free)",
+            "description": "Fallback 3 · `mistral-small-3.1-24b-instruct:free` · alternativa europeia."
+          },
+          {
+            "icon": "zap",
+            "title": "5 · NVIDIA Nemotron Ultra (free)",
+            "description": "Fallback 4 · `nvidia/llama-3.1-nemotron-ultra-253b-v1:free` · último gratuito."
+          },
+          {
+            "icon": "dollar",
+            "title": "6 · OpenAI GPT-4o Mini (pago)",
+            "description": "Fallback 5 · ~$0.15/1M tokens · só roda se os 5 free falharem."
+          },
+          {
+            "icon": "dollar",
+            "title": "7 · DeepSeek V3 (pago)",
+            "description": "Fallback 6 · ~$0.27/1M tokens · último recurso. Sempre responde."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Ativar a cascata no agente"
+      },
+      {
+        "type": "text",
+        "content": "Copia o prompt abaixo, **insira a sua API key do OpenRouter no lugar certo** (no campo `[cola aqui a chave que começa com sk-or-v1-...]`), depois cola no chat do seu agente no Telegram. Ele faz toda a configuração no servidor."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · ativar OpenRouter cascata",
+        "target": "telegram",
+        "content": "Quero que você configure **OpenRouter como fallback inteligente** com cascata de 7 modelos. Vou te dar a API Key abaixo. Não execute mudanças em nada além do necessário pra essa configuração.\n\n**Minha API Key do OpenRouter:** [cola aqui a chave que começa com sk-or-v1-...]\n\nFaz a configuração nessa ordem:\n\n1. **Salva a chave** · adiciona em `/etc/openclaw.env` a linha:\n   ```\n   OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxx\n   ```\n   Confirma com `chmod 600` no arquivo (segurança).\n\n2. **Edita** `~/.openclaw/openclaw.json` adicionando em `agents.defaults`:\n\n   ```\n   \"model\": {\n     \"primary\": \"openrouter/deepseek/deepseek-chat:free\",\n     \"fallbacks\": [\n       \"openrouter/qwen/qwen3-coder-480b-a35b-instruct:free\",\n       \"openrouter/google/gemma-3-27b-it:free\",\n       \"openrouter/mistralai/mistral-small-3.1-24b-instruct:free\",\n       \"openrouter/nvidia/llama-3.1-nemotron-ultra-253b-v1:free\",\n       \"openrouter/openai/gpt-4o-mini\",\n       \"openrouter/deepseek/deepseek-v3-0324\"\n     ]\n   },\n   \"fallbackOnTimeout\": true,\n   \"timeoutMs\": 10000\n   ```\n\n3. **Reinicia o gateway** · `systemctl restart openclaw`\n\n4. **Valida a auth** · roda `openclaw models status` e confirma:\n   · Primary · `deepseek-chat:free` ✓\n   · 6 fallbacks listados na ordem\n   · Auth · OpenRouter connected\n\n5. **Teste de cascata** · simula uma requisição de teste pra confirmar que o fluxo de fallback funciona. Se o primário der timeout, o fallback 1 deve responder.\n\n6. **Reporta no formato:**\n\n```\n🔀 OpenRouter cascata ativada\n\n· Chave salva: ✅ /etc/openclaw.env (chmod 600)\n· Cascata configurada: ✅ 1 primário + 6 fallbacks\n· Reinício do gateway: ✅\n· Auth OpenRouter: ✅ connected\n· Teste de cascata: ✅ primário ok, fallback ok\n· Status: pronto pra emergência\n```\n\nSe algo falhar em qualquer passo, para e me reporta o erro · não executa o passo seguinte."
+      },
+      {
+        "type": "callout",
+        "title": "Como saber que funcionou",
+        "content": "Depois do prompt rodar, manda uma mensagem normal pro bot. Ele responde como sempre. A cascata só aparece se o primário cair · aí você vai ver no log uma linha tipo: ✗ Timeout · trying fallback 1. Funcionamento silencioso · é exatamente o que você quer.",
+        "variant": "success"
+      },
+      {
+        "type": "callout",
+        "title": "Checkpoint",
+        "content": "Sistema de manutenção instalado · 5 pilares ativos. Watchdog cuida da infra, feedback loops cuidam das decisões, sub-agents não somem, backup roda diário, doctor diagnostica em segundos. Os 70% que mantêm seu agente vivo · feitos.",
+        "variant": "success"
+      }
+    ],
+    "number": "07",
+    "status": "available",
+    "summary": "Toda empresa que escala depende de infraestrutura que não cai. Aqui você instala os 5 pilares que mantêm seu agente de pé sem você ficar apagando incêndio: Watchdog, Feedback Loops, Sub-agents, Backup e openclaw doctor.",
+    "duration": 38,
+    "schedule": [
+      {
+        "label": "0·4",
+        "topic": "Por que manutenção é 70% do trabalho"
+      },
+      {
+        "label": "4·10",
+        "topic": "Pilar 1 · Watchdog (health-check)"
+      },
+      {
+        "label": "10·14",
+        "topic": "Pilar 2 · Feedback Loops"
+      },
+      {
+        "label": "14·18",
+        "topic": "Pilar 3 · Sub-agents nunca somem"
+      },
+      {
+        "label": "18·22",
+        "topic": "Pilar 4 · Backup automático"
+      },
+      {
+        "label": "22·26",
+        "topic": "Pilar 5 · openclaw doctor"
+      },
+      {
+        "label": "26·30",
+        "topic": "Bônus · OpenRouter fallback"
+      },
+      {
+        "label": "30·33",
+        "topic": "Auditoria 0·10"
+      },
+      {
+        "label": "33·35",
+        "topic": "Checkpoint"
+      }
+    ],
+    "subtitle": "Watchdog · feedback loops · sub-agents protocol · openclaw doctor · split de modelos · backup",
+    "shortTitle": "Manutenção",
+    "learningGoals": [
+      "Configurar um watchdog de crons que monitora os outros e dá retry automático (até 3x) antes de te avisar",
+      "Configurar feedback loops: quando você rejeitar uma sugestão, o agente anota o motivo e consulta antes de sugerir de novo",
+      "Configurar split de modelos para reduzir custo de ~$2-3/dia para ~$0,10/dia",
+      "Configurar audit semanal de segurança rodando como cron",
+      "Criar regra de backup automático antes de qualquer mudança estrutural + ROLLBACK.md",
+      "Saber a frase: \"Agents are 30% of the work. The other 70% is the immune system\""
+    ],
+    "durationMinutes": 35
+  }
+}

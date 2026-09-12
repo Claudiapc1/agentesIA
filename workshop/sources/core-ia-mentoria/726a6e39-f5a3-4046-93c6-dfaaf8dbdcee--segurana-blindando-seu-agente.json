@@ -1,0 +1,366 @@
+{
+  "id": "726a6e39-f5a3-4046-93c6-dfaaf8dbdcee",
+  "titulo": "Segurança: Blindando Seu Agente",
+  "lesson_payload": {
+    "id": "encontro-02-03",
+    "tag": "Etapa 2",
+    "title": "Segurança: Blindando Seu Agente",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Você acabou de instalar OpenClaw e seu bot está respondendo no Telegram. Parece tudo ok, mas seu servidor agora tem **um IP público exposto na internet 24/7**. Em menos de 1 hora, bots vão começar a tentar entrar no SSH com senhas comuns. Em menos de 24 horas, alguém pode descobrir o token do seu bot e fazer ele responder pra estranhos · ou pior, executar comandos no seu servidor."
+      },
+      {
+        "type": "text",
+        "content": "Esta etapa fecha as 5 portas mais óbvias que invasor tenta primeiro. Não é paranoia · é higiene básica. Quem deixa o servidor sem isso, em 30 dias está limpando malware ou pagando conta de tráfego que não fez."
+      },
+      {
+        "type": "callout",
+        "title": "O que pode dar errado se você pular",
+        "content": "Bot respondendo pra estranhos · cobranças surpresa de API por uso indevido · senhas ou tokens vazando em logs · servidor virando spam-bot ou minerador. Tudo isso é evitável com 30 minutos seguindo esta etapa.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "As 5 frentes que vamos blindar"
+      },
+      {
+        "type": "text",
+        "content": "Cada frente fecha um vetor de ataque diferente. Você roda na ordem · ordem importa porque a frente 2 (firewall) depende de você ter SSH garantido antes de bloquear o resto."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "shield",
+            "title": "1 · Allowlist Telegram",
+            "description": "Só você fala com o bot. Ninguém mais consegue mandar mensagem mesmo descobrindo o username."
+          },
+          {
+            "icon": "shield",
+            "title": "2 · Firewall UFW",
+            "description": "Bloqueia toda porta exceto SSH. Servidor invisível pra scanner de internet."
+          },
+          {
+            "icon": "shield",
+            "title": "3 · Fail2ban",
+            "description": "Detecta tentativas de login por força bruta e bane o IP automaticamente por 1 hora."
+          },
+          {
+            "icon": "shield",
+            "title": "4 · Credenciais",
+            "description": "Tokens, API keys e senhas com permissão 600 · só root lê. Ninguém mais tem acesso."
+          },
+          {
+            "icon": "shield",
+            "title": "5 · Portas internas",
+            "description": "Serviços locais (cache, dashboard, banco) só escutam em 127.0.0.1, nunca expostos pra fora."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Conectar na VPS"
+      },
+      {
+        "type": "text",
+        "content": "Todos os comandos abaixo rodam dentro do servidor SSH. O IP da VPS já foi salvo na Etapa 1 · clica abaixo pra abrir o terminal SSH com ele."
+      },
+      {
+        "type": "callout",
+        "title": "IP carregado automaticamente",
+        "content": "Se você fez a Etapa 1, o IP está salvo. Caso contrário, cola o IP da sua VPS no campo abaixo.",
+        "variant": "info"
+      },
+      {
+        "type": "command-with-input",
+        "label": "Conectar via SSH (IP é salvo automaticamente)",
+        "command": "ssh root@{{ip}}",
+        "inputLabel": "IP da sua VPS · cola aqui",
+        "storageKey": "core-ai:vps-ip",
+        "placeholder": "1.2.3.4",
+        "extractPattern": "ip"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Frente 1 · Allowlist do Telegram"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** uma lista de IDs de Telegram autorizados a conversar com seu bot. Qualquer mensagem vinda de outro ID, o agente ignora silenciosamente."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** o username do bot é público (qualquer um descobre fazendo busca no Telegram). Sem allowlist, qualquer pessoa pode mandar prompt e seu agente responde · gastando seus créditos do Codex e potencialmente executando comandos no seu servidor."
+      },
+      {
+        "type": "text",
+        "content": "Você já configurou isso no Passo 10 da Etapa 1. Agora cola o prompt abaixo no Telegram pro agente validar que está tudo certo."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · validar allowlist",
+        "target": "telegram",
+        "content": "Quero que você **apenas analise** o allowlist do bot Telegram · não execute mudanças, não configure nada do zero. Se algo estiver errado, me alerta pra eu voltar pro **Passo 10 da Etapa 1** e refazer a configuração.\n\nFaz a análise item por item:\n\n1. **Config do allowlist** · Lê o arquivo `~/.openclaw/openclaw.json` e me mostra:\n   · valor atual de `dmPolicy`\n   · lista de IDs em `allowedChatIds`\n\n2. **Meu Telegram ID** · Confirma que o meu ID está na lista. Se não souber qual é, pergunta antes de seguir.\n\n3. **Teste de bloqueio** · Simula uma mensagem fictícia vinda de outro ID (não o meu). Confirma que o agente rejeitou silenciosamente.\n\n4. **Status do serviço** · Confirma que o openclaw service está rodando depois do restart (se houver).\n\nMe responde no formato:\n\n```\n🛡️ Auditoria do allowlist · Etapa 2 · Frente 1\n\n1. Config · ✅ dmPolicy = allowlist\n2. Meu ID · ✅ presente em allowedChatIds\n3. Bloqueio externo · ✅ rejeitado\n4. Service · ✅ running\n\nScore: 10/10 · allowlist blindado.\n```\n\nSe algo falhar, baixa o score e lista o que precisa corrigir. Volta na **Etapa 1 · Passo 10** se a config não existir."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Frente 2 · Firewall UFW"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** UFW (Uncomplicated Firewall) é a camada que decide quais portas do seu servidor aceitam conexão e quais ficam fechadas pro mundo."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** sem firewall, qualquer porta aberta no servidor é visível pra internet inteira. Scanner de bot encontra em minutos. Com UFW, só a porta 22 (SSH) fica aberta · todo o resto é invisível."
+      },
+      {
+        "type": "callout",
+        "title": "Ordem CRÍTICA · libera SSH ANTES de bloquear",
+        "content": "Se você bloquear tudo antes de garantir SSH, o servidor te trancou fora e você precisa reinstalar a VPS. Por isso o primeiro comando é liberar a porta 22, depois bloqueia o resto.",
+        "variant": "warning"
+      },
+      {
+        "type": "command-line",
+        "command": "ufw allow 22/tcp comment 'SSH'"
+      },
+      {
+        "type": "command-line",
+        "command": "ufw default deny incoming"
+      },
+      {
+        "type": "command-line",
+        "command": "ufw default allow outgoing"
+      },
+      {
+        "type": "command-line",
+        "command": "ufw --force enable"
+      },
+      {
+        "type": "command-line",
+        "command": "ufw status verbose"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "Status: active · Default: deny (incoming), allow (outgoing) · 22/tcp ALLOW IN Anywhere. Se aparecer isso, firewall ativo. Pode fechar a sessão SSH e reabrir tranquilamente · você está liberado pela porta 22.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Frente 3 · Fail2ban contra brute force SSH"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** Fail2ban monitora os logs de SSH em tempo real. Se um IP errar a senha 3 vezes em 10 minutos, ele bloqueia esse IP por 1 hora. Após 1 hora libera de novo · se errar de novo, bane de novo."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** mesmo com firewall liberando só a porta 22, a porta 22 fica exposta. Bots tentam combinações `root:123456`, `root:admin`, `root:password` o tempo todo. Sem fail2ban, eles podem tentar milhões de senhas. Com fail2ban, eles são banidos depois de 3 tentativas e desistem."
+      },
+      {
+        "type": "command-line",
+        "command": "apt install -y fail2ban"
+      },
+      {
+        "type": "text",
+        "content": "Cria o arquivo de configuração customizada com regras específicas pro SSH:"
+      },
+      {
+        "type": "command-line",
+        "command": "sudo tee /etc/fail2ban/jail.local > /dev/null <<EOF\n[sshd]\nenabled = true\nport = ssh\nmaxretry = 3\nbantime = 3600\nfindtime = 600\nEOF"
+      },
+      {
+        "type": "command-line",
+        "command": "systemctl enable fail2ban"
+      },
+      {
+        "type": "command-line",
+        "command": "systemctl restart fail2ban"
+      },
+      {
+        "type": "command-line",
+        "command": "fail2ban-client status sshd"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "Status for the jail: sshd · Currently failed: 0 · Total failed: 0 · Currently banned: 0 · Total banned: 0. Os números podem subir nas próximas horas conforme bots tentam · isso é normal e significa que está funcionando.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Frente 4 · Credenciais protegidas"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** OpenClaw guarda tokens sensíveis (Telegram, OpenAI, Google) em `/etc/openclaw/.env`. Por padrão, esse arquivo pode ser lido por qualquer usuário do sistema. Você restringe pra só root."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** se um dia você criar um usuário não-root pra rodar outra aplicação no mesmo servidor (e isso vai acontecer), esse usuário NÃO pode ler suas credenciais. chmod 600 garante que só root lê e escreve nesse arquivo."
+      },
+      {
+        "type": "command-line",
+        "command": "chmod 600 /etc/openclaw/.env"
+      },
+      {
+        "type": "command-line",
+        "command": "chown root:root /etc/openclaw/.env"
+      },
+      {
+        "type": "command-line",
+        "command": "ls -la /etc/openclaw/.env"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "-rw------- 1 root root [tamanho] [data] /etc/openclaw/.env · os 6 traços e o rw apenas significam que SÓ o owner (root) lê e escreve. Mais ninguém no sistema tem acesso.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Frente 5 · Portas internas em 127.0.0.1"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** quando você sobe um serviço no servidor (banco local, cache, dashboard interno), ele escuta numa porta. Essa porta pode escutar em `0.0.0.0` (qualquer interface, incluindo internet) ou em `127.0.0.1` (só localhost). A diferença é o que decide se um estranho consegue ou não conectar nele."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** UFW bloqueia entrada de fora, mas se você desativar o firewall um dia ou liberar uma porta sem pensar, serviços em `0.0.0.0` ficam expostos. Em `127.0.0.1` continuam protegidos sempre · não importa o estado do firewall."
+      },
+      {
+        "type": "command-line",
+        "command": "ss -tlnp"
+      },
+      {
+        "type": "callout",
+        "title": "Como ler a saída",
+        "content": "Linhas com 127.0.0.1:porta · ok, só localhost · Linhas com 0.0.0.0:porta · porta exposta, revisa se precisa estar pública. Apenas portas que precisam de acesso externo (22 SSH, 80/443 web) podem estar em 0.0.0.0. Tudo mais (banco, cache, dashboard) deve estar em 127.0.0.1.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Auditoria final"
+      },
+      {
+        "type": "text",
+        "content": "Marca cada item conforme você completa. O progresso fica salvo · se sair e voltar depois, o checklist lembra onde você parou."
+      },
+      {
+        "id": "checklist-encontro-02-03-4614",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Allowlist do Telegram validado",
+            "description": "só meu ID conversa com o bot"
+          },
+          {
+            "title": "UFW ativo",
+            "description": "default deny incoming, porta 22 liberada"
+          },
+          {
+            "title": "Fail2ban rodando",
+            "description": "jail sshd ativo"
+          },
+          {
+            "title": "Permissões /etc/openclaw/.env",
+            "description": "chmod 600 root:root"
+          },
+          {
+            "title": "Portas internas",
+            "description": "serviços em 127.0.0.1, sem exposição pública"
+          },
+          {
+            "title": "Sessão SSH testada após UFW",
+            "description": "consegui reconectar"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Prompt de auditoria final"
+      },
+      {
+        "type": "text",
+        "content": "Depois de marcar o checklist acima, cola o prompt abaixo no Telegram. O agente roda os 5 checks e te confirma que cada frente está blindada de verdade."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Etapa 2 · Auditoria de segurança",
+        "target": "telegram",
+        "content": "Acabei de blindar o servidor com as 5 frentes de segurança. Quero que você **apenas analise** se está tudo certo · não execute mudanças, não configure nada do zero. Só valida e me dá um relatório.\n\nFaz a análise item por item:\n\n1. **Allowlist Telegram** · Lê `dm_policy.allowlist` em `/etc/openclaw/openclaw.json` e confirma que só meu Telegram ID está autorizado.\n\n2. **Firewall UFW** · Roda `ufw status verbose` e confirma:\n   · status active\n   · default deny (incoming) + allow (outgoing)\n   · porta 22/tcp ALLOW\n\n3. **Fail2ban** · Roda `fail2ban-client status sshd` e confirma jail ativo:\n   · enabled = true\n   · maxretry = 3\n   · bantime = 3600\n\n4. **Credenciais protegidas** · Roda `ls -la /etc/openclaw/.env` e confirma:\n   · permissões `-rw-------` (chmod 600)\n   · dono `root:root`\n\n5. **Portas internas** · Roda `ss -tlnp` e me lista todas as portas que estão em `0.0.0.0`. Devem ser só 22 (SSH), 80 e 443 (se você rodar web). Tudo mais deveria estar em 127.0.0.1.\n\nMe responde no formato:\n\n```\n🛡️ Auditoria de segurança · Etapa 2\n\n1. Allowlist Telegram · ✅ só meu ID\n2. UFW · ✅ active, deny incoming, 22 allow\n3. Fail2ban · ✅ jail sshd ativo\n4. Credenciais · ✅ 600 root:root\n5. Portas internas · ✅ só 22/80/443 expostas\n\nScore final: 10/10 · servidor blindado.\nPode seguir pra Etapa 3 (Identidade).\n```\n\nSe algo não passar, baixa o score e lista o que precisa corrigir antes de seguir.\n\nNão executa nenhuma mudança · só análise."
+      },
+      {
+        "type": "callout",
+        "title": "Servidor blindado",
+        "content": "5 frentes ativas. Bot só fala com você, firewall fechado, força bruta bloqueada, credenciais protegidas, serviços internos invisíveis. Próxima etapa · dar identidade pro agente.",
+        "variant": "success"
+      }
+    ],
+    "number": "02",
+    "status": "available",
+    "summary": "Por que blindar agora · 5 frentes (allowlist Telegram, firewall UFW, fail2ban, credenciais, portas internas) · cada frente com explicação do que é, por que importa e os comandos exatos pra rodar no terminal SSH.",
+    "duration": 28,
+    "schedule": [
+      {
+        "label": "0·4",
+        "topic": "Por que segurança agora"
+      },
+      {
+        "label": "4·8",
+        "topic": "Frente 1 · Allowlist do Telegram"
+      },
+      {
+        "label": "8·14",
+        "topic": "Frente 2 · Firewall UFW"
+      },
+      {
+        "label": "14·20",
+        "topic": "Frente 3 · Fail2ban"
+      },
+      {
+        "label": "20·24",
+        "topic": "Frente 4 · Credenciais protegidas"
+      },
+      {
+        "label": "24·28",
+        "topic": "Frente 5 · Portas internas"
+      },
+      {
+        "label": "28·30",
+        "topic": "Auditoria de segurança"
+      }
+    ],
+    "subtitle": "Allowlist · UFW · Fail2ban · credenciais · portas internas",
+    "shortTitle": "Segurança",
+    "learningGoals": [
+      "Validar via prompt no agente que o allowlist do Telegram está só com seu user",
+      "Reconectar via SSH usando o IP salvo da Etapa 1",
+      "Configurar firewall UFW com default deny + porta 22 liberada (na ordem certa)",
+      "Instalar e configurar Fail2ban com maxretry=3, bantime=1h",
+      "Garantir permissão 600 e dono root:root em /etc/openclaw/.env",
+      "Auditar portas em escuta · só SSH em 0.0.0.0, resto em 127.0.0.1",
+      "Resolver bot sem acesso ao shell (tools.profile)",
+      "Rodar audit final com score 0-10 antes de avançar pra Etapa 3"
+    ],
+    "durationMinutes": 30
+  }
+}

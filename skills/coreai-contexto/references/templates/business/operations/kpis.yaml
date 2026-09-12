@@ -1,0 +1,48 @@
+# ContextOS - KPIs & Metrics
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+north_star_metric:
+  name: null
+  current_value: null
+  target: null
+  timeframe: null
+
+revenue_metrics:
+  mrr: null
+  arr: null
+  growth_rate: null
+  churn_rate: null
+  ltv: null
+  cac: null
+  ltv_cac_ratio: null
+
+marketing_metrics:
+  leads_per_month: null
+  conversion_rate: null
+  cpl: null
+  traffic_sources: []
+
+sales_metrics:
+  close_rate: null
+  average_deal_size: null
+  sales_cycle_days: null
+
+product_metrics:
+  active_users: null
+  nps: null
+  retention_rate: null
+  engagement_rate: null
+
+scorecards:
+  - department: null
+    owner: null
+    kpis:
+      - name: null
+        target: null
+        current: null
+        status: null  # on_track | at_risk | off_track
+
+metadata:
+  status: INCOMPLETE

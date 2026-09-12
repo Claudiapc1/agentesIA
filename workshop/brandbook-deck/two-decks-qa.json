@@ -1,0 +1,119 @@
+[
+  {
+    "deck": "a-oportunidade",
+    "id": "S01",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "a-oportunidade",
+    "id": "S05",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "a-oportunidade",
+    "id": "S07",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "a-oportunidade",
+    "id": "S13",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "contextos",
+    "id": "S01",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "contextos",
+    "id": "S06",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "contextos",
+    "id": "S11",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "contextos",
+    "id": "S20",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  },
+  {
+    "deck": "contextos",
+    "id": "S27",
+    "scroll": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ],
+    "notes": true
+  }
+]

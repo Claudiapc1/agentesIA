@@ -1,0 +1,527 @@
+{
+  "id": "6890de26-d019-434b-86d8-a75bc50611c9",
+  "titulo": "Pré-Encontro: Instalando o Claude Code e Entendendo Como Tudo Funciona",
+  "lesson_payload": {
+    "id": "extra-claude-code-pro-01",
+    "qa": [
+      {
+        "answer": "Cilada do Team Assento Padrão: R$105/mês não é Pro com mais ferramentas · é a MESMA cota do Pro só que com permissão de equipe. Não compensa. O Team Assento Premium (R$132/mês) sim tem 5x mais uso (equivalente ao Max individual). Pra começar sozinho, vai direto no Max individual: mesmo preço, sem confusão. Regra geral: comece no Pro (~R$100). Quando estourar (vai estourar rápido), pula pro Max (~R$500). Não tenta otimizar antes de saber como vai usar. Eu uso 2 contas Max simultâneas porque uso muito.",
+        "askedBy": "Fabio Moro (Le Pera)",
+        "question": "Plano Pro, Max ou Team Padrão? Vale R$105/mês do assento padrão da equipe?",
+        "seekSeconds": 92
+      },
+      {
+        "answer": "Tecnicamente, não tem. Mas sempre tem humanos no meio do caminho. O Claude não sai espalhando coisas pela internet sem você autorizar. O ponto é: ONDE você vai colocar os dados? Workspace local na sua máquina? GitHub? Drive? Cada lugar tem nível de acesso diferente. Como eu faço: workspace em `.md` no GitHub com nível de acesso restrito, e quando subo pra Vercel pra mostrar ao cliente, fica num espaço que SÓ é acessível pelo aplicativo · quem digitar a URL crua, não consegue ver. É praticamente a mesma realidade que você tem hoje no Drive: as informações JÁ estão em algum lugar e tem pessoas que acessam. Vai ser parecido, mas com mais opções de controle.",
+        "askedBy": "Fabio Moro (Le Pera)",
+        "question": "E a questão de LGPD e dados sensíveis? Tem perigo de vazar informações dos meus clientes?",
+        "seekSeconds": 8520
+      },
+      {
+        "answer": "Resposta direta: não existe API pública do NotebookLM. Mas você não precisa dele. A alternativa é melhor: criar um `claude.md` por projeto/cliente com o contexto da agência e do cliente já estruturado. Aí o Claude Code já sabe quem é o cliente, qual o objetivo, qual o tom de voz, sem precisar de ferramenta externa. Pra migrar do NotebookLM pra cá: pega as fontes de dados que você organizou lá, joga numa pasta no GitHub do cliente, pede pro Claude ler tudo e estruturar. Vamos fazer isso juntos durante a mentoria · eu já estou com a skill ContextOS quase pronta pra isso.",
+        "askedBy": "Fabio Moro (Le Pera)",
+        "question": "Posso conectar o Claude no NotebookLM onde tenho todo o contexto dos meus clientes organizado?",
+        "seekSeconds": 5660
+      },
+      {
+        "answer": "Você tem que programar. Se não for intencional, ele não atualiza sozinho · só grava algumas coisas na memória. Mas a gente vai criar SISTEMAS de atualização: por exemplo, toda reunião com cliente é gravada, transcrita automaticamente, jogada na pasta do cliente. Aí o Claude lê e atualiza o contexto sozinho. Outro exemplo: monitoramento de grupo WhatsApp envia perguntas frequentes pro contexto. Você cria as ROTINAS de atualização e elas viram skills que rodam sozinhas. Mas no início é manual mesmo · você vai dizendo pro Claude o que mudou, até a gente automatizar.",
+        "askedBy": "Bárbara Sakarella",
+        "question": "O contexto se atualiza sozinho ou eu tenho que sempre avisar o Claude quando algo mudou?",
+        "seekSeconds": 6480
+      },
+      {
+        "answer": "Privilegiados. Vou te falar o porquê: em 31 dias eu fiz 2.300 sessões com o Claude e gastei 94 milhões de tokens. Isso é MUITO teste. Tudo que vocês estão recebendo aqui é destilado. As coisas que vocês iam apanhar pra descobrir, vocês não vão · eu já apanhei. A primeira turma é especial mesmo: dou 8 horas pessoais. Da segunda turma em diante, vou colocar 1-2 mentores comigo e meu envolvimento direto cai pela metade. Da terceira turma, talvez nem esteja lá pessoalmente · só os mentores treinados. Você está pegando o melhor da minha pesquisa, do meu tempo, e da minha curva de aprendizado. Aproveita.",
+        "askedBy": "Bárbara / Fabio (em piada)",
+        "question": "Ô Bárbara, ou nós somos privilegiados ou nós somos cobaias?",
+        "seekSeconds": 9650
+      }
+    ],
+    "tag": "Pré-Encontro",
+    "title": "Pré-Encontro: Instalando o Claude Code e Entendendo Como Tudo Funciona",
+    "video": {
+      "title": "02 Pré-Encontro · Instalando o Claude e Entendendo Como Tudo Funciona",
+      "embedSrc": "https://player.scaleup.com.br/embed/058abfe6d81fd8f264d32562e31975fa21a17b2a",
+      "provider": "scaleup",
+      "sourceUrl": "https://fathom.video/share/mgMAScDwjQW5UtYeV4zguHFK6Q2P6EUT",
+      "recordedAt": "2026-04-22",
+      "durationSeconds": 10560
+    },
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta é a aula em formato de leitura",
+        "content": "Esse foi o **Pré-Encontro do dia 22/Abr** com Fabio, Bárbara, Sergio e Fabiana. Você pode **assistir o vídeo completo** (2h56min) no player acima ou **ler tudo aqui embaixo** · toda a aula está sintetizada com diagramas, exemplos reais e citações.\n\nEsta é uma aula **decisiva**: aqui você decide o plano Anthropic, instala o Claude Code, roda a skill Stack Setup ao vivo, e entende por que o Claude Code não é mais um chatbot · é a ferramenta que vai conectar TODA a sua empresa.\n\nQuando aparecer um botão **▶ ASSISTIR** no meio do conteúdo, é porque ali tem uma demonstração ao vivo que vale ver no vídeo.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Decidindo o plano Anthropic · a cilada que você não pode cair"
+      },
+      {
+        "type": "text",
+        "content": "Antes de qualquer coisa, você precisa de **uma conta Anthropic paga**. Mas qual plano? Esse foi o primeiro impasse no encontro: Fabio entrou olhando o **Plano Team Assento Padrão** a R$105/mês e quase comprou · pensando que seria suficiente.\n\nNão é. Aqui está o decisor:"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Limite ~5x maior que o Pro",
+            "Permite uso intensivo diário",
+            "Reset diário + semanal mais generoso",
+            "É o que TODO mundo na mentoria vai precisar pra valer a pena"
+          ],
+          "title": "Plano Max (R$500/mês)",
+          "result": "Comece no Pro · migre pro Max quando estourar",
+          "variant": "after",
+          "subtitle": "Plano profissional"
+        },
+        "before": {
+          "items": [
+            "Funciona pro Claude Code (por enquanto)",
+            "Acaba MUITO rápido se você usar de verdade",
+            "Reset semanal e diário no token",
+            "Bom pra começar e validar se você vai usar"
+          ],
+          "title": "Plano Pro (R$92-110/mês)",
+          "variant": "before",
+          "subtitle": "Plano de entrada"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Cilada do Plano Team Assento Padrão",
+        "content": "**R$105/mês não é o Pro com mais ferramentas · é só uma conta com permissão de equipe.** Limite de uso é o mesmo do Pro.\n\nO Team **Assento Premium** (R$132/mês) sim tem 5x mais uso · equivalente ao Max individual. Mas pra começar **sozinho**, vai direto no Max individual: mesmo preço, sem confusão.\n\nRegra do Juliano: **\"Comece no Pro. Quando estourar (vai estourar rápido), pula pro Max. Não fica tentando otimizar plano antes de saber como você vai usar.\"**",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Discussão completa dos planos com o Fabio",
+        "description": "Juliano e Fabio comparando Pro / Max / Team Padrão / Team Premium em tempo real. Fabio assina Pro ao vivo na aula.",
+        "seekSeconds": 100
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Instalação do Claude Code passo a passo (no Mac do Fabio)"
+      },
+      {
+        "type": "text",
+        "content": "Esse trecho da aula virou o **pronto-socorro de instalação**. Fabio compartilhou a tela e foi instalando ao vivo, com cada erro sendo resolvido perguntando ao próprio Claude. Esse é o método: **tudo o que você não sabe, pergunte pro Claude · ele te guia até funcionar**."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Criar a pasta-mãe `cloud` no seu user",
+            "description": "No seu home (~), crie uma pasta `cloud` (ou `code`). É a pasta-mãe onde TODOS os projetos vão viver. Cada projeto vira uma subpasta dentro dela."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Abrir o terminal e ir até a pasta",
+            "description": "No Mac: Terminal.app · No Windows: PowerShell (NÃO o CMD). Comando: `cd cloud` e depois `pwd` pra confirmar onde está."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Instalar Node.js + Homebrew (Mac)",
+            "description": "Se ainda não tem, instale o Homebrew (macOS) e depois `brew install node`. No Windows é `winget install OpenJS.NodeJS`. Ou pode ir direto pelo NPM no Passo 4."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Instalar o Claude Code via NPM",
+            "description": "O comando universal: `npm install -g @anthropic-ai/claude-code`. Funciona em Mac, Windows e Linux desde que tenha Node instalado."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Login Anthropic via navegador",
+            "description": "Digite `claude` no terminal. O navegador abre automaticamente. Faça login com sua conta Anthropic Pro/Max. Volte ao terminal · você está logado."
+          },
+          {
+            "badge": "Passo 6",
+            "title": "Validar com /usage e /doctor",
+            "description": "Dentro do Claude Code, digite `/usage` (mostra quanto você usou) e `/doctor` (verifica se tudo está OK). 4 indicadores verdes = pronto."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Quando der erro: pergunta pro próprio Claude",
+        "content": "Foi exatamente o que o Fabio fez ao vivo. Cada erro (Homebrew não encontrado, comando não autorizado, autenticação falhou) · Fabio copiava o erro, colava no chat do Claude na tela e perguntava: **\"deu esse erro, o que faço?\"**\n\nO Claude respondia com a solução, ele aplicava, próximo erro, próxima pergunta. Em ~25 minutos do zero ao Claude Code rodando.\n\n**Regra:** não fica horas tentando sozinho. Tudo o que você não sabe, pergunta pro Claude. Ele resolve.",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Instalação ao vivo no Mac do Fabio (24 min)",
+        "description": "Compartilhamento de tela com troubleshooting de Homebrew, Node, NPM, Cloud Code. Cada erro resolvido conversando com o Claude.",
+        "seekSeconds": 1280
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Stack Setup · a skill que configura tudo automaticamente"
+      },
+      {
+        "type": "text",
+        "content": "Depois do Claude instalado, você precisa de **mais ferramentas**: GitHub CLI, Supabase, Git autenticado, `~/.claude/CLAUDE.md` global, `~/.claude/settings.json` otimizado.\n\nFazer isso na mão leva 1 hora e tem armadilhas. Por isso o Juliano criou uma skill chamada **Stack Setup** · você roda 1 comando e ela faz tudo, perguntando só o necessário."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "1 comando: `/stack-setup`",
+            "Detecta SO automaticamente",
+            "Audita CLIs (tabela visual ✅ ❌ ⚠️)",
+            "Instala só o que falta",
+            "Autentica GitHub + Supabase com 1 clique",
+            "Cria CLAUDE.md e settings.json com defaults Torriani",
+            "10 min · risco quase zero"
+          ],
+          "title": "Com Stack Setup",
+          "result": "Ambiente idêntico ao do mentor, sem dor",
+          "variant": "after",
+          "subtitle": "Skill rodando por você"
+        },
+        "before": {
+          "items": [
+            "Instalar gh, supabase, docker um por um",
+            "Descobrir o package manager certo (brew/winget)",
+            "Autenticar GitHub na mão (browser dance)",
+            "Autenticar Supabase manual",
+            "Criar `CLAUDE.md` do zero (e descobrir o que escrever)",
+            "Criar `settings.json` (e errar permissões)",
+            "60-90 min · risco de bug ALTO"
+          ],
+          "title": "Sem Stack Setup",
+          "variant": "before",
+          "subtitle": "Configurando manualmente"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "As 6 fases que ela executa por dentro"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Fase 1",
+            "title": "Detecta SO + arquitetura + package managers",
+            "description": "Mac/Windows/Linux, x64/ARM, brew/apt/winget/choco."
+          },
+          {
+            "badge": "Fase 2",
+            "title": "Auditoria de CLIs (tabela)",
+            "description": "Essencial (git, gh, node) · Infra (supabase, railway, docker) · Qualidade (coderabbit) · Opcional (pnpm, bun)."
+          },
+          {
+            "badge": "Fase 3",
+            "title": "Instalação interativa",
+            "description": "Você escolhe: tudo · só essenciais · personalizado · pular."
+          },
+          {
+            "badge": "Fase 4",
+            "title": "Autenticação",
+            "description": "GitHub via browser/token, Supabase, Railway. Cada um com fallback."
+          },
+          {
+            "badge": "Fase 5",
+            "title": "Configuração Claude Code",
+            "description": "Cria/atualiza `~/.claude/CLAUDE.md` e `settings.json`. Pergunta perfil: 🟢 Assistido ou 🔵 Avançado."
+          },
+          {
+            "badge": "Fase 6",
+            "title": "Tipo de projeto",
+            "description": "Novo (cria estrutura) ou existente (preserva e complementa). Cria `.gitignore`, `README.md`."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Por que isso vale tanto",
+        "content": "O `settings.json` que a Stack Setup cria já tem **permissões pré-aprovadas** para comandos comuns (`git status`, `npm install`, `supabase migration list`...) · sem isso, você ia clicar em \"permitir\" centenas de vezes nas primeiras horas de uso.\n\nE o `CLAUDE.md` global ensina o Claude a **economizar tokens**: usar grep com padrões específicos, não ler arquivos inteiros sem precisar, preferir subagentes pra exploração. Resultado: você gasta **30-50% menos tokens** pelo mesmo trabalho.",
+        "variant": "success"
+      },
+      {
+        "type": "video-cue",
+        "label": "Stack Setup rodando ao vivo no Mac do Fabio",
+        "description": "Modo Guiado, instalação de 8 ferramentas, autenticação GitHub via browser code, Supabase via token, configuração CLAUDE.md e settings.json. ~33min de demo.",
+        "seekSeconds": 4040
+      },
+      {
+        "name": "Stack Setup",
+        "type": "skill-download",
+        "sizeKb": 17,
+        "version": "1.0.0",
+        "commands": [
+          "cd ~/Downloads && unzip stack-setup-v1.0.0.zip -d ~/.claude/skills/",
+          "claude",
+          "/stack-setup"
+        ],
+        "description": "A skill que rodou ao vivo no encontro. Configura ambiente completo de desenvolvimento (CLIs, auth, Git/GitHub, Claude Code, Supabase) em modo guiado, rápido ou planejamento. Funciona em Mac, Windows e Linux · detecta o SO automaticamente e instala usando o package manager certo.",
+        "downloadUrl": "/downloads/skills/stack-setup-v1.0.0.zip",
+        "installPath": "~/.claude/skills/"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que o Claude Code não é \"só mais um chatbot\""
+      },
+      {
+        "type": "text",
+        "content": "Bárbara perguntou: qual a diferença real entre o Claude Code e o ChatGPT, Manus, Lovable que ela já tinha testado?\n\nA resposta vale mais do que parece."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Conecta com APIs (Meta, plataformas pagamento, CRM)",
+            "Lê e escreve em sistemas externos",
+            "Acessa Drive, GitHub, Supabase",
+            "Constrói aplicações que rodam 24/7",
+            "Você abstrai e vai além"
+          ],
+          "title": "Claude Code",
+          "result": "De chatbot pra sistema operacional do seu negócio",
+          "variant": "after",
+          "subtitle": "A ferramenta que conecta TUDO"
+        },
+        "before": {
+          "items": [
+            "Você fala com uma tela e ela responde · fim",
+            "Limitado ao que o chat decide fazer",
+            "Sem contexto persistente entre sessões",
+            "Sem conexão com sistemas externos",
+            "Você fica numa caixinha fechada"
+          ],
+          "title": "Chatbots tradicionais",
+          "variant": "before",
+          "subtitle": "ChatGPT, Manus, Lovable"
+        }
+      },
+      {
+        "text": "CLI first. A primeira coisa que a gente vai fazer são ações dentro do CLI, dentro do Cloud Code direto, sem precisar ter interface web. Aí depois a gente vai começar a fazer uma interface web pra visualizar.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Second Brain · a arquitetura que vai sustentar tudo"
+      },
+      {
+        "type": "text",
+        "content": "Antes de qualquer skill, antes de qualquer agente, antes de qualquer automação, existe um conceito que precisa estar claro: o **Second Brain**.\n\nO Claude Code, sozinho, não sabe quem você é. Não sabe quem é a sua empresa. Quando você abre uma sessão, ele tem aquela sessão. Quando sai e volta, mesmo na mesma pasta, ele não sabe o que aconteceu.\n\nPor isso a gente constrói um **segundo cérebro** · uma estrutura permanente que o Claude lê toda vez que começa, e que sempre sabe tudo o que está acontecendo no seu negócio.\n\nTrês camadas. Sem elas, agente vira gasto de token."
+      },
+      {
+        "type": "mermaid",
+        "caption": "As 3 camadas do Second Brain · sustentam tudo o que vamos construir nos próximos encontros",
+        "diagram": "graph TD\n    SB[SECOND BRAIN]:::brain\n    C[CONTEXTO]:::ctx\n    S[SKILLS]:::skl\n    R[ROTINAS]:::rot\n    SB --> C\n    SB --> S\n    SB --> R\n    classDef brain fill:#1e293b,stroke:#0ea5e9,stroke-width:3px,color:#f8fafc\n    classDef ctx fill:#0c4a6e,stroke:#38bdf8,stroke-width:2px,color:#f0f9ff\n    classDef skl fill:#581c87,stroke:#c084fc,stroke-width:2px,color:#faf5ff\n    classDef rot fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#fff7ed"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Camada 1",
+            "title": "CONTEXTO",
+            "description": "Quem você é, quem é sua empresa, quem são seus clientes. Funcionários, cultura, posicionamento, movimento, história, sócios, produtos. + Pra cada cliente: reuniões, posicionamento atual, campanhas rodadas."
+          },
+          {
+            "badge": "Camada 2",
+            "title": "SKILLS",
+            "description": "Habilidades reutilizáveis empacotadas como SOP. 3 níveis: Empresa (todo mundo usa), Projeto (cliente específico), Departamento (área específica)."
+          },
+          {
+            "badge": "Camada 3",
+            "title": "ROTINAS",
+            "description": "O que você faz repetidamente · diária, semanal, mensal. Cada rotina é candidata a virar agente. Sem rotina mapeada, agente é gasto de token."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Regra de ouro",
+        "content": "**Só se automatiza o que já se faz repetidamente.**\n\nEsse é o motivo da tarefa de casa: antes de criar agente, você precisa MAPEAR o que faz. Sem isso, criar agente é só inventar trabalho que ninguém precisava.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Hierarquia de IA dentro da empresa"
+      },
+      {
+        "type": "text",
+        "content": "Fabio levantou: \"Tudo isso passa por mim. Como envolvo o time?\" A resposta foi uma das melhores construções da aula."
+      },
+      {
+        "type": "mermaid",
+        "caption": "Cada nível tem seu próprio OpenClaw · todos sincronizados via GitHub central",
+        "diagram": "graph TD\n    D[DONO]:::dono --> L1[Líder 1]:::lider\n    D --> L2[Líder 2]:::lider\n    L1 --> T1[Time 1]:::time\n    L1 --> T2[Time 2]:::time\n    L2 --> T3[Time 3]:::time\n    L2 --> T4[Time 4]:::time\n    G[(GitHub central)]:::git\n    D -.-> G\n    L1 -.-> G\n    L2 -.-> G\n    T1 -.-> G\n    T2 -.-> G\n    T3 -.-> G\n    T4 -.-> G\n    classDef dono fill:#0c4a6e,stroke:#38bdf8,stroke-width:3px,color:#f0f9ff\n    classDef lider fill:#581c87,stroke:#c084fc,stroke-width:2px,color:#faf5ff\n    classDef time fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#fff7ed\n    classDef git fill:#14532d,stroke:#4ade80,stroke-width:2px,color:#f0fdf4"
+      },
+      {
+        "type": "text",
+        "content": "**Cada pessoa tem seu próprio OpenClaw.** Mas todos eles **conversam pelo GitHub** · que é o centro de tudo. O dono enxerga tudo. Os líderes têm visão de cluster. O time vê só o que é dele.\n\nNão é 1 agente compartilhado por 40 pessoas. É **40 agentes** que se sincronizam via GitHub. Cada um com permissão e contexto adequado ao papel."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Demonstração ao vivo · o sistema do Juliano rodando"
+      },
+      {
+        "type": "text",
+        "content": "Juliano abriu o navegador apontando pra `192.168.86.20:8765` · o portal do **Logan**, o OpenClaw local da máquina dele. Tudo construído **sem programação tradicional** · só conversando com o Claude Code dentro da pasta."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Demo 1",
+            "title": "Trending Brasil",
+            "description": "Skill que busca o que tá comentado no Twitter/X Brasil + notícias do mercado de IA todo dia. Logan postou: 'Antrópica lança Cloud Ops 4.7'. Material pronto pra ideia de conteúdo."
+          },
+          {
+            "badge": "Demo 2",
+            "title": "Ângulos de Copy gerados",
+            "description": "Skill que pega tema + ICP + posicionamento e gera 5-10 ângulos de copy diferentes. Tudo armazenado no portal pra revisar e usar."
+          },
+          {
+            "badge": "Demo 3",
+            "title": "Monitoramento WhatsApp Coliseu",
+            "description": "Conectado aos grupos de mentoria via API oficial. Mostra: top 5 membros mais ativos, perguntas frequentes, problemas detectados. Caloa: 25 mensagens, Simone: 20."
+          },
+          {
+            "badge": "Demo 4",
+            "title": "Posts de Instagram com IA",
+            "description": "Posts dos copywriters lendários (Helbert, Schwartz, Kennedy, Ogilvy) · imagem, copy, legenda, todos gerados 100% pelo Claude. Publicados automaticamente."
+          },
+          {
+            "badge": "Demo 5",
+            "title": "Sistema CRM completo",
+            "description": "CRM próprio com leads classificados como 'Imperador' (NPS, faturamento, funcionários). API oficial WhatsApp. Dashboard executivo. Tudo construído sem programador."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Tour completo pelo dashboard Logan",
+        "description": "Juliano navegando ao vivo: Trending, ângulos copy, WhatsApp Coliseu, posts Instagram, CRM com classificação de leads. ~30min.",
+        "seekSeconds": 5500
+      },
+      {
+        "type": "callout",
+        "title": "O segredo: ROI vs Logan",
+        "content": "**Logan** = OpenClaw local na máquina do Juliano (24/7 ligada). Ambiente de TESTE · quebra coisa, faz teste, experimenta.\n\n**ROI** = OpenClaw na VPS (servidor remoto). Ambiente SÉRIO · só vai pra cá depois que testou no Logan.\n\n**Os dois sincronizam via GitHub.** É o padrão que vamos replicar pra cada aluno: máquina local pra testes + VPS pra produção. Você vai precisar de uma VPS de R$300-500/ano (Hostinger, Juliano vai mostrar com cupom).",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Estratégia de produto · pare de depender 100% de você"
+      },
+      {
+        "type": "text",
+        "content": "A última hora do encontro foi sobre **monetização**. Como transformar tudo isso em escala? Como sair da dependência de você entregar?"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Modelo atual",
+          "content": "Cliente paga R$10k/mês por consultoria. Você atende presencialmente. 8 clientes simultâneos = limite. Sua hora é o gargalo."
+        },
+        "output": {
+          "label": "Modelo com IA",
+          "content": "Você constrói: método granular + skills automáticas + dashboard pro cliente + agente que entrega 60-70% do trabalho. Resultado: pode atender 20-30 clientes com mesmo time. OU: vende o software produtizado em vez de cobrar mensalidade longa."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Caso real do Juliano",
+          "content": "Software CRM próprio pronto. Vai vender por R$10k em vez de mensalidade R$500."
+        },
+        "output": {
+          "label": "Cálculo",
+          "content": "R$500/mês × 24 meses = R$12k. Vender por R$10k antecipado = entrada imediata + R$500/mês de manutenção depois. Cliente paga porque já sabe quanto custa um software equivalente. Ganha-ganha."
+        }
+      },
+      {
+        "text": "Não é mudar o modelo, porque o modelo é bom. O que a gente precisa mudar é, em vez de você entregar, é alguém entregar.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Tema de casa antes do próximo encontro"
+      },
+      {
+        "type": "callout",
+        "title": "Sem isso, você fica pra trás",
+        "content": "**4 coisas pra fazer antes do próximo encontro:**\n\n1. **Lista 1 · Rotinas que eu já faço**\nTudo que se repete: respostas pra clientes, monitorar grupos de WhatsApp, entregas, pesquisas, relatórios, revisões, aprovações. Salva em `.md`.\n\n2. **Lista 2 · Rotinas que eu deveria fazer mas não faço**\nO que diferenciaria você se estivesse rodando? Análises, monitoramentos, follow-ups. Anota tudo.\n\n3. **Pratique no Claude Code**\nCrie skills inúteis só pra brincar. Pergunta coisas. Pede pra ele resolver problemas. Familiarize-se com a tela preta.\n\n4. **Pense IA-first**\nAntes de fazer qualquer coisa nessa semana, pergunte: \"como a IA poderia fazer isso pra mim?\" Mesmo que você acabe fazendo na mão, treine o cérebro nessa lente.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Para levar com você",
+        "content": "Você acabou de receber, em uma aula só, o que demorou 4 meses pro Juliano descobrir.\n\n- ✓ Plano Anthropic decidido (Pro pra começar, Max pra produção)\n- ✓ Claude Code instalado no seu computador\n- ✓ Stack Setup configurando GitHub, Supabase, CLAUDE.md, settings.json\n- ✓ Second Brain entendido (Contexto + Skills + Rotinas)\n- ✓ Hierarquia de IA mapeada (Dono → Líderes → Time via GitHub)\n- ✓ Visão de produto (serviço → software produtizado → recorrência)\n\nEsta é a base de TODOS os 10 encontros. Sem ela, o resto não para de pé. Volte aqui sempre que precisar relembrar.",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "duration": 176,
+    "schedule": [
+      {
+        "title": "Decidindo o plano Anthropic",
+        "duration": "11 min",
+        "description": "Pro vs Max vs Team · a cilada do assento padrão"
+      },
+      {
+        "title": "Instalação ao vivo no Mac",
+        "duration": "24 min",
+        "description": "Terminal, Node, Homebrew, NPM, login Anthropic"
+      },
+      {
+        "title": "Stack Setup rodando",
+        "duration": "33 min",
+        "description": "Skill que configura GitHub + Supabase + CLAUDE.md em 10min"
+      },
+      {
+        "title": "Second Brain explicado",
+        "duration": "22 min",
+        "description": "Contexto, Skills, Rotinas · a arquitetura mental"
+      },
+      {
+        "title": "Demo do dashboard Logan/ROI",
+        "duration": "30 min",
+        "description": "Trending Brasil, ângulos copy, monitoramento WhatsApp ao vivo"
+      },
+      {
+        "title": "Estratégia de produto",
+        "duration": "30 min",
+        "description": "Agentes que automatizam rotinas + serviço produtizado + recorrência"
+      },
+      {
+        "title": "Hierarquia de IA na empresa",
+        "duration": "16 min",
+        "description": "Dono → Líderes → Time, conectados via GitHub"
+      },
+      {
+        "title": "Tema de casa + perguntas",
+        "duration": "10 min",
+        "description": "Mapear rotinas que faço + rotinas que deveria fazer"
+      }
+    ],
+    "subtitle": "Setup completo + Stack Setup ao vivo + a arquitetura mental que sustenta tudo (Second Brain)",
+    "shortTitle": "Instalando o Claude Code",
+    "transcript": "transcripts/core-ia-mentoria/extra-claude-code-pro-01.md",
+    "deliverable": "Claude Code instalado + Stack Setup rodada + 2 listas .md (rotinas que faço · rotinas que deveria fazer)",
+    "learningGoals": [
+      "Decidir entre planos Pro / Max / Team da Anthropic com base no uso real (e não cair na cilada do plano errado)",
+      "Instalar o Claude Code do zero no Mac/Windows: terminal, Node.js, Homebrew, NPM, autenticação Anthropic",
+      "Rodar a skill Stack Setup ao vivo: configura GitHub, Supabase, CLAUDE.md global e settings.json otimizado em ~10min",
+      "Entender por que o Claude Code não é mais um chatbot · é a ferramenta que conecta TUDO (APIs, sistemas, dados, arquivos)",
+      "Internalizar o conceito de Second Brain: Contexto + Skills + Rotinas como a arquitetura permanente do seu negócio",
+      "Mapear hierarquia de IA dentro da empresa: Dono → Líderes → Time, todos com OpenClaw conectados via GitHub",
+      "Olhar suas rotinas diárias com nova lente: o que automatizar primeiro pra ter retorno rápido?",
+      "Pensar produto: como transformar serviço em software produtizado pra parar de depender 100% de você"
+    ]
+  }
+}

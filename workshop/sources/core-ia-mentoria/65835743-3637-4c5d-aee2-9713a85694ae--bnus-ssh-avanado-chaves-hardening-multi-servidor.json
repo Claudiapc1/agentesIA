@@ -1,0 +1,234 @@
+{
+  "id": "65835743-3637-4c5d-aee2-9713a85694ae",
+  "titulo": "Bônus · SSH Avançado: Chaves, Hardening, Multi-Servidor",
+  "lesson_payload": {
+    "id": "encontro-02-12",
+    "tag": "Bônus",
+    "title": "Bônus · SSH Avançado: Chaves, Hardening, Multi-Servidor",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que este bônus existe"
+      },
+      {
+        "type": "text",
+        "content": "Você já se conectou no servidor (Etapa 1) e configurou deploy key (Etapa 10). **Funciona, mas tá amador.** Cada hora que você digita `ssh root@123.45.67.89 -i ~/.ssh/chave` é tempo perdido. Cada chave SSH genérica que você gera é risco de sobrescrever a anterior. Cada porta 22 com senha aberta é convite pra bot brutar 24/7."
+      },
+      {
+        "type": "text",
+        "content": "**Este bônus profissionaliza o setup.** Você sai com chaves nomeadas por uso, alias `ssh vps` que conecta no servidor sem digitar IP nem caminho de chave, servidor blindado contra força bruta, e estrutura pronta pra gerenciar 2, 3, 5 VPS diferentes sem confusão."
+      },
+      {
+        "type": "callout",
+        "title": "Pra quem é este bônus",
+        "content": "Você fez Etapa 1 (criou primeira VPS) e Etapa 10 (gerou primeira deploy key). Quer escalar: vai ter mais de 1 servidor, quer parar de digitar IP, quer fechar SSH pra mundo. Se você só tem 1 VPS e nunca pensa em escalar, esta etapa é opcional.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Chaves nomeadas · nunca mais sobrescreve"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** ao gerar chave SSH com `ssh-keygen`, você passa o flag `-f` pra dar um nome específico (ex: `vps-openclaw` em vez do default `id_rsa`)."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** erro clássico é rodar `ssh-keygen` sem `-f` e sobrescrever `~/.ssh/id_rsa` que já existia · você perde acesso a tudo que dependia dela. Com chaves nomeadas, isso é impossível."
+      },
+      {
+        "type": "command-line",
+        "command": "ssh-keygen -t ed25519 -f ~/.ssh/vps-openclaw -N '' -C 'vps-openclaw-pessoal'"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "key",
+            "title": "-t ed25519",
+            "description": "Algoritmo moderno · mais rápido e seguro que RSA. Use sempre."
+          },
+          {
+            "icon": "key",
+            "title": "-f ~/.ssh/vps-openclaw",
+            "description": "Nome do arquivo · vira `vps-openclaw` (privada) e `vps-openclaw.pub` (pública)."
+          },
+          {
+            "icon": "key",
+            "title": "-N ''",
+            "description": "Sem passphrase · OK pra automação. Use passphrase em chaves de uso pessoal interativo."
+          },
+          {
+            "icon": "key",
+            "title": "-C 'descrição'",
+            "description": "Comentário pra você lembrar pra que serve. Aparece no fim da chave pública."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "~/.ssh/config · alias por servidor"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** um arquivo onde você define apelidos pros seus servidores. Em vez de digitar `ssh root@123.45.67.89 -i ~/.ssh/vps-openclaw`, você digita `ssh vps`."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** menos digitação · zero erro de IP · zero erro de chave. Quando você tiver 5 VPS, isso vira essencial. Configurar agora cria o hábito certo."
+      },
+      {
+        "type": "callout",
+        "content": "Vamos usar prompt no Telegram pro agente criar o `~/.ssh/config` com o alias do seu primeiro VPS. Se você tiver mais servidores depois, é só rodar o prompt de novo.",
+        "variant": "info"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · criar SSH config",
+        "target": "telegram",
+        "content": "Quero que você crie o `~/.ssh/config` no servidor (ou na minha máquina local · me pergunta antes onde você está rodando) com o alias do meu primeiro VPS.\n\n**IP do meu VPS:** [cola aqui · ex: 123.45.67.89]\n**Caminho da chave privada:** [cola aqui · ex: ~/.ssh/vps-openclaw]\n\nFaz na ordem:\n\n1. **Verifica se já existe** `~/.ssh/config`. Se sim, anexa o bloco abaixo no final · NÃO sobrescreve.\n\n2. **Adiciona o bloco:**\n   ```\n   Host vps\n     Hostname [IP_DO_VPS]\n     User root\n     IdentityFile [CAMINHO_DA_CHAVE]\n     IdentitiesOnly yes\n     ServerAliveInterval 60\n   ```\n\n3. **Aplica permissão correta** · `chmod 600 ~/.ssh/config`\n\n4. **Testa o alias** · roda `ssh vps \"echo ok\"` e confirma que conecta sem pedir senha.\n\n5. **Reporta no formato:**\n\n```\n🔑 SSH config criado\n\n· Alias: vps\n· Hostname: 123.45.67.89\n· IdentityFile: ~/.ssh/vps-openclaw\n· Permissões: ✅ 600\n· Teste de conexão: ✅ ok\n· Status: agora é só `ssh vps` de qualquer lugar\n```\n\nSe algo falhar, para e me reporta o erro."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Hardening · fechar a porta de senha"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** desativar autenticação por senha no servidor SSH. Só chave SSH entra. Bot que tenta `root:123456` é rejeitado de cara."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** por padrão SSH aceita senha. Bot da internet inteira tenta milhões de combinações 24/7. Sem senha · só chave · bot desiste em 1 hora. Servidor blindado de verdade."
+      },
+      {
+        "type": "callout",
+        "title": "ANTES de desativar senha",
+        "content": "Confirme que sua chave funciona: `ssh vps` deve conectar SEM pedir senha. Se desativar senha sem chave funcional, você fica trancado fora · precisa reinstalar a VPS. **Sempre teste a chave em outra aba antes do hardening.**",
+        "variant": "warning"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · hardening SSH",
+        "target": "telegram",
+        "content": "Quero que você aplique hardening no SSH do meu VPS. **CRÍTICO: antes de qualquer mudança, valida que minha chave SSH funciona** · senão eu fico trancado fora.\n\nFaz na ordem:\n\n1. **Pré-validação** · confirma que existe `~/.ssh/authorized_keys` no servidor com pelo menos 1 chave válida. Se não tiver, **PARA** e me avisa pra adicionar a chave antes.\n\n2. **Backup do config atual** · `cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak.$(date +%Y%m%d)`\n\n3. **Aplica as 3 mudanças** em `/etc/ssh/sshd_config`:\n   · `PasswordAuthentication no`\n   · `PermitRootLogin prohibit-password`\n   · `PubkeyAuthentication yes`\n\n4. **Reinicia o serviço** · `systemctl restart ssh`\n\n5. **Teste em sessão paralela** · me instrui a abrir OUTRA aba do terminal e testar `ssh vps`. Aguarda meu OK antes de fechar a sessão original.\n\n6. **Reporta no formato:**\n\n```\n🛡️ SSH hardening aplicado\n\n· authorized_keys: ✅ chave válida encontrada\n· Backup do config: ✅ sshd_config.bak.YYYYMMDD\n· PasswordAuthentication: no\n· PermitRootLogin: prohibit-password\n· PubkeyAuthentication: yes\n· systemctl restart ssh: ✅\n· Aguardando confirmação do teste em outra aba\n\n⚠️ NÃO feche a sessão original até confirmar que `ssh vps` funciona em outra aba.\n```\n\nSe a pré-validação (passo 1) falhar, **NÃO executa nenhum dos passos seguintes** e me reporta como adicionar a chave."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Multi-servidor · sem confusão"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** quando você tem 2+ VPS, o `~/.ssh/config` vira sua central. Cada servidor um Host, cada Host uma chave dedicada."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** sem essa estrutura, você decora IPs, mistura chaves, conecta no servidor errado e roda comando destrutivo no lugar errado. Com `~/.ssh/config` bem feito, isso é impossível."
+      },
+      {
+        "code": "Host vps\n  Hostname IP1\n  User root\n  IdentityFile ~/.ssh/vps-openclaw\n\nHost staging\n  Hostname IP2\n  User deploy\n  IdentityFile ~/.ssh/vps-staging\n\nHost cliente-acme\n  Hostname IP3\n  User torriani\n  Port 2222\n  IdentityFile ~/.ssh/cliente-acme",
+        "type": "code",
+        "language": "text"
+      },
+      {
+        "type": "callout",
+        "title": "Mudar porta do SSH (22 → 2222)",
+        "content": "Em produção, mudar a porta default do SSH reduz **99% dos scans de bot**. Bots scanneiam só a 22. Mudar pra 2222, 22000 ou outra porta alta é proteção bônus quase gratuita. Faz isso em servidor de cliente / produção · não precisa em VPS de aprendizado.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checklist final"
+      },
+      {
+        "id": "checklist-encontro-02-12-5099",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Chave nomeada por uso (vps-openclaw, github-openclaw, etc",
+            "description": "não usei id_rsa genérico)"
+          },
+          {
+            "title": "~/.ssh/config com alias `vps`",
+            "description": ""
+          },
+          {
+            "title": "chmod 600 em ~/.ssh/config e nas chaves privadas",
+            "description": ""
+          },
+          {
+            "title": "PasswordAuthentication no no servidor",
+            "description": ""
+          },
+          {
+            "title": "PermitRootLogin prohibit-password",
+            "description": ""
+          },
+          {
+            "title": "Testei ssh em outra aba antes de fechar a original",
+            "description": ""
+          },
+          {
+            "title": "Backup das chaves privadas em local seguro (1Password / Bitwarden)",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Backup das chaves",
+        "content": "Se você perder `~/.ssh/vps-openclaw` e desativou senha, fica trancado fora pra sempre. **Salva cópia da chave privada num gerenciador de senhas** (1Password, Bitwarden) · NÃO em Drive público, não em email, não em GitHub. Chave privada vaza = servidor comprometido.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Pronto · SSH profissional",
+        "content": "Chaves organizadas, alias funcionando, servidor blindado contra força bruta. Daqui pra frente é só `ssh vps` e você está dentro · seguro, rápido, sem decorar IP. Quando tiver o segundo VPS, é só adicionar Host novo no mesmo `~/.ssh/config`.",
+        "variant": "success"
+      }
+    ],
+    "number": "B",
+    "status": "available",
+    "summary": "Por que profissionalizar SSH · chaves nomeadas, alias por servidor, hardening (sem senha, sem root, porta diferente), gestão de múltiplos VPS sem confusão.",
+    "schedule": [
+      {
+        "label": "0·3",
+        "topic": "Por que isso importa"
+      },
+      {
+        "label": "3·8",
+        "topic": "Chaves nomeadas (não sobrescreve id_rsa)"
+      },
+      {
+        "label": "8·14",
+        "topic": "~/.ssh/config · alias por servidor"
+      },
+      {
+        "label": "14·19",
+        "topic": "Hardening · desativar senha + root"
+      },
+      {
+        "label": "19·23",
+        "topic": "Multi-servidor sem confusão"
+      },
+      {
+        "label": "23·25",
+        "topic": "Checklist final"
+      }
+    ],
+    "shortTitle": "Bônus SSH",
+    "learningGoals": [
+      "Gerar e organizar chaves SSH nomeadas por uso (não sobrescrever id_rsa)",
+      "Configurar ~/.ssh/config com alias por servidor",
+      "Aplicar hardening: desativar senha, root login com chave, mudar porta",
+      "Gerenciar múltiplos servidores sem confusão de credenciais"
+    ],
+    "durationMinutes": 25
+  }
+}

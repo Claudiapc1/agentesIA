@@ -1,0 +1,230 @@
+{
+  "id": "agentesia-configuracao",
+  "title": "Configurar seu computador com a ajuda do agente",
+  "subtitle": "Claude e Codex com acesso local, instalação guiada e diagnóstico",
+  "status": "available",
+  "duration": 30,
+  "learningGoals": [
+    "Abrir Claude e Codex com acesso ao pacote local.",
+    "Delegar a instalação ao Claude a partir do README.",
+    "Interpretar o diagnóstico e identificar pendências antes de avançar."
+  ],
+  "schedule": [
+    {
+      "title": "Aplicativos e acesso local",
+      "duration": "8 min"
+    },
+    {
+      "title": "Pasta, README e instalação",
+      "duration": "12 min"
+    },
+    {
+      "title": "Conferência e próximos passos",
+      "duration": "10 min"
+    }
+  ],
+  "deliverable": "Diagnóstico da configuração local com resultados observados e pendências identificadas.",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "Por que esta etapa existe"
+    },
+    {
+      "type": "text",
+      "content": "Você já explicou seu negócio para uma IA e precisou começar do zero na conversa seguinte? Nesta configuração, vamos preparar os aplicativos para trabalhar com a pasta de agentes no seu computador. Depois, essa mesma estrutura poderá consultar o contexto da sua empresa."
+    },
+    {
+      "type": "text",
+      "content": "Seu papel é abrir os aplicativos, entrar nas suas contas e permitir o acesso à pasta indicada. O Claude fará a instalação e o diagnóstico seguindo o README do pacote. Você acompanha o resultado pela conversa."
+    },
+    {
+      "type": "text",
+      "content": "Ao terminar, você terá um diagnóstico do que está instalado, do que realmente foi testado e do que ainda depende de acesso. Esta aula prepara o ambiente; contexto da empresa e conexões externas vêm na sequência."
+    },
+    {
+      "type": "cards-grid",
+      "fullWidth": true,
+      "cards": [
+        {
+          "title": "Abrir os aplicativos",
+          "description": "Claude e Codex autenticados, com uma sessão que consiga acessar arquivos locais."
+        },
+        {
+          "title": "Entregar a pasta ao Claude",
+          "description": "Selecionar agentesIA e pedir que ele leia o README antes de instalar."
+        },
+        {
+          "title": "Conferir o diagnóstico",
+          "description": "Verificar a descoberta das skills e separar testes locais de conexões pendentes."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "1. Instalar e abrir Claude e Codex"
+    },
+    {
+      "type": "text",
+      "content": "Instale os aplicativos pelos canais oficiais: [Claude](https://claude.ai/download) e [Codex](https://openai.com/codex/). Abra cada um e faça login. Disponibilidade e acesso podem variar conforme seu computador e sua conta."
+    },
+    {
+      "type": "text",
+      "content": "No Claude, use uma sessão de trabalho que tenha acesso aos arquivos locais, como o ambiente Claude Code quando disponível. Uma conversa comum no navegador não ganha acesso ao seu computador apenas porque você escreveu o nome da pasta. Se essa opção não estiver disponível, use o prompt abaixo para a IA orientar o acesso compatível com seu aplicativo. Informe o sistema operacional e o que aparece na tela; siga a orientação até ela confirmar acesso à pasta."
+    },
+    {
+      "type": "prompt",
+      "title": "No Claude: conferir acesso local",
+      "content": "Quero preparar meu computador para usar o pacote agentesIA. Confira quais recursos desta sessão permitem ler uma pasta local e executar a instalação prevista pelo pacote. Diga se já podemos continuar ou qual opção do aplicativo preciso abrir. Ainda não instale nada. Se você não tiver acesso local, explique o bloqueio sem afirmar que leu meus arquivos."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Resposta esperada",
+      "content": "O Claude informa se esta sessão consegue trabalhar com arquivos locais. Se não conseguir, ele identifica o acesso que falta. Só avance quando esse acesso estiver disponível."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "2. Abrir a pasta agentesIA"
+    },
+    {
+      "type": "text",
+      "content": "Baixe o pacote entregue pelo facilitador, extraia o arquivo se necessário e mantenha a pasta agentesIA completa. No aplicativo, selecione essa pasta como local de trabalho ou conceda acesso a ela pelo seletor de pastas."
+    },
+    {
+      "type": "text",
+      "content": "O README é o ponto de entrada do pacote. Ele orienta o agente sobre instalação, dependências e diagnóstico, evitando que você precise conduzir cada operação técnica."
+    },
+    {
+      "type": "prompt",
+      "title": "No Claude: ler o ponto de entrada",
+      "content": "Abra a pasta agentesIA que selecionei e leia integralmente o README dela. Antes de agir, confirme o caminho da pasta e resuma o processo de instalação descrito no arquivo. Se não encontrar o README, peça que eu selecione a pasta correta. Não substitua essas instruções por uma instalação genérica."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Resposta esperada",
+      "content": "O Claude confirma o caminho real e o README que conseguiu ler. Em seguida, explica de forma breve o que fará e quais ações de login ou permissão podem depender de você."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "3. Pedir a instalação e o diagnóstico"
+    },
+    {
+      "type": "text",
+      "content": "Agora o Claude executa o procedimento documentado. Você continua acompanhando a conversa e atende às solicitações de login ou permissão no próprio aplicativo."
+    },
+    {
+      "type": "text",
+      "content": "Instalar os arquivos e conseguir usá-los são verificações diferentes. O diagnóstico precisa mostrar as duas, sem tratar uma instalação concluída como prova de que todas as integrações funcionam."
+    },
+    {
+      "type": "prompt",
+      "title": "No Claude: instalar o pacote",
+      "content": "Siga o README da pasta agentesIA e execute a instalação e o diagnóstico previstos para Claude e Codex neste computador. Faça você as operações técnicas disponíveis. Peça minha intervenção somente quando depender de login, permissão ou uma escolha que não esteja definida no pacote. Preserve arquivos existentes e reporte conflitos antes de substituir qualquer coisa. Ao terminar, informe: o que foi instalado, o que foi testado com resultado observado, o que ficou pendente e qual é o próximo passo. Não publique conteúdo nem conecte contas externas nesta etapa."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Resposta esperada",
+      "content": "Um relatório distingue instalado, testado e pendente. Se houver conflito ou uma dependência indisponível, o Claude informa qual é e como continuar, sem declarar o ambiente inteiro pronto."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "4. Conferir o uso no Claude e no Codex"
+    },
+    {
+      "type": "text",
+      "content": "Siga a orientação do diagnóstico para abrir uma nova conversa ou atualizar a sessão, se necessário. Faça a conferência nos dois aplicativos."
+    },
+    {
+      "type": "text",
+      "content": "Essa etapa confirma se o pacote pode ser encontrado em uma nova sessão. Se uma skill só funcionar quando seu arquivo é indicado manualmente, isso deve aparecer como uma limitação de descoberta."
+    },
+    {
+      "type": "prompt",
+      "title": "Em cada aplicativo: conferir as skills",
+      "content": "Confira se as skills do pacote agentesIA estão disponíveis nesta sessão. Mostre quais você encontrou e como constatou isso. Verifique o ponto de entrada de configuração e o de contexto, sem criar contexto fictício nem iniciar produção. Se os arquivos estiverem instalados mas ainda não forem descobertos automaticamente, informe essa diferença e siga o procedimento do README para diagnosticar."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Resposta esperada",
+      "content": "Cada aplicativo informa o que encontrou e apresenta a evidência disponível. Uma falha de descoberta fica registrada como pendência, mesmo que a cópia dos arquivos tenha terminado."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "5. Preparar a próxima etapa"
+    },
+    {
+      "type": "text",
+      "content": "Com o acesso local verificado, o próximo trabalho será organizar o ContextOS da sua empresa. Você poderá fornecer respostas, documentos e transcrições. O agente deve distinguir informações confirmadas de lacunas."
+    },
+    {
+      "type": "text",
+      "content": "Google Drive, geração de imagens e Instagram/Meta entram depois, conforme a tarefa. Cada conexão exige uma configuração própria. Ter os agentes instalados não significa que essas contas já estão conectadas."
+    },
+    {
+      "type": "prompt",
+      "title": "No Claude: organizar a continuidade",
+      "content": "Com base no diagnóstico, organize os próximos passos para construir meu ContextOS e, depois, conectar os serviços necessários ao meu trabalho. Diga quais informações da empresa devo separar e quais conexões dependem de login ou permissão. Não crie dados da empresa e não peça senhas ou tokens na conversa. Aguarde minhas informações antes de consolidar o contexto."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Resposta esperada",
+      "content": "Uma lista curta de informações para o contexto e conexões futuras, sem afirmar que serviços externos já foram configurados."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "Auditoria final"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        {
+          "title": "Claude e Codex abertos com login",
+          "description": "Consegui entrar nos dois aplicativos e identificar a sessão com acesso local."
+        },
+        {
+          "title": "README da pasta correta lido",
+          "description": "O Claude confirmou o caminho real do pacote e o arquivo de instruções."
+        },
+        {
+          "title": "Instalação acompanhada pelo agente",
+          "description": "Recebi o resultado das operações e eventuais conflitos ou pendências."
+        },
+        {
+          "title": "Descoberta conferida nos dois aplicativos",
+          "description": "Sei quais skills foram encontradas e quais ainda precisam de ajuste."
+        },
+        {
+          "title": "Próximos passos separados",
+          "description": "ContextOS e conexões externas estão identificados como etapas posteriores."
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "title": "No Claude: fechar a configuração",
+      "content": "Revise o resultado desta configuração. Separe em três grupos: confirmado por teste, instalado mas ainda não testado e bloqueado. Para cada bloqueio, diga a próxima ação necessária e quem deve fazê-la. Indique se posso começar a coleta do ContextOS agora. Não marque etapas pendentes como concluídas."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "Checkpoint de sucesso"
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "title": "Você pode avançar quando",
+      "content": "Você consegue trabalhar com a pasta local, o README foi seguido e o diagnóstico mostra o estado real do Claude e do Codex. Se houver bloqueio de acesso ou instalação, resolva a pendência indicada antes da atividade que depende dela. O próximo passo é fornecer informações reais para o ContextOS."
+    }
+  ]
+}

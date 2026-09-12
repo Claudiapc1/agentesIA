@@ -1,0 +1,349 @@
+{
+  "produto": [
+    {
+      "id": "96895ed9-bea9-45e4-a991-bd7c797a8291",
+      "organization_id": "b8f10429-fed4-412d-b753-a0797f6aa5ea",
+      "codigo": null,
+      "titulo": "Workshop Times de IA",
+      "subtitulo": null,
+      "descricao": "Times de IA é um treinamento prático em que você instala, ao vivo e junto com Juliano Torriani, quatro times de IA para trabalhar no seu negócio: Copy, Conteúdo, Tráfego e Funil. Você acompanha a construção na tela e configura os agentes na sua própria conta, sem precisar escrever código.",
+      "capa_url": null,
+      "slug": "workshop-times-de-ia",
+      "categoria": null,
+      "status": "publicado",
+      "codigo_externo": null,
+      "created_at": "2026-08-30T10:21:57.66585+00:00",
+      "updated_at": "2026-09-12T03:45:46.436028+00:00",
+      "deleted_at": null,
+      "codigo_num": 166,
+      "imagem_horizontal_url": null,
+      "imagem_vitrine_url": "produto-imagens/b8f10429-fed4-412d-b753-a0797f6aa5ea/96895ed9-bea9-45e4-a991-bd7c797a8291/vitrine-1788085410851.png",
+      "banner_url": null,
+      "permissao_visibilidade": "privado",
+      "permissao_estado": "liberado",
+      "permissao_mensagens": {},
+      "url_personalizada": null,
+      "tema": "padrao",
+      "modo_abertura": "primeira_aula",
+      "hero_ativo": false,
+      "hero_video_url": null,
+      "hero_titulo": null,
+      "hero_subtitulo": null,
+      "hero_cta_texto": null,
+      "hero_cta_url": null
+    }
+  ],
+  "aula_recepcao": [
+    {
+      "id": "2412e8e9-0ed1-4610-b840-1e84131d7a4a",
+      "organization_id": "b8f10429-fed4-412d-b753-a0797f6aa5ea",
+      "titulo": "Boas-vindas: a oportunidade que quase ninguém está vendo",
+      "tipo": "texto",
+      "texto_conteudo": null,
+      "video_url": null,
+      "video_provider": null,
+      "arquivo_url": null,
+      "embed_url": null,
+      "duracao_seg": null,
+      "status": "publicado",
+      "codigo_externo": null,
+      "created_at": "2026-08-30T10:22:54.828955+00:00",
+      "updated_at": "2026-09-12T03:37:30.749787+00:00",
+      "deleted_at": null,
+      "webinar_inicio": null,
+      "webinar_fim": null,
+      "transmissao_url": null,
+      "replay_url": null,
+      "standalone": false,
+      "standalone_slug": null,
+      "visibilidade": "publica",
+      "disponibilizacao_tipo": "sempre",
+      "disponibilizacao_dias": null,
+      "disponibilizacao_data": null,
+      "descricao": null,
+      "slug": null,
+      "lesson_payload": {
+        "id": "w00-boas-vindas",
+        "tag": "Workshop",
+        "title": "Boas-vindas: a oportunidade que quase ninguém está vendo",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "O que você vai construir nesta aula",
+            "content": "Ao final, você terá uma entrega concreta: **Um negócio, um produto, materiais localizados e uma rotina prioritária.**. Leia a explicação, acompanhe a demonstração e execute a prática no seu próprio negócio.",
+            "variant": "info"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "content": "Por que esta etapa existe"
+          },
+          {
+            "type": "text",
+            "content": "Você já tem mais matéria-prima do que imagina: conversas, documentos, decisões, exemplos, clientes, produtos e processos. O problema é que esse patrimônio costuma estar disperso e não participa do trabalho diário da IA. O workshop organiza esse conhecimento e conecta times capazes de produzir com ele. Uma **empresa agêntica** é uma organização onde funcionários digitais operam áreas inteiras do negócio com autonomia, conhecem o contexto da empresa e executam de ponta a ponta. A nossa promessa é direta: **vá além do ChatGPT e do Claude: tenha agentes de IA autônomos operando a sua empresa.**"
+          },
+          {
+            "type": "numbered-steps",
+            "steps": [
+              {
+                "badge": "01",
+                "title": "Conhecimento",
+                "description": "O que a empresa sabe e já viveu."
+              },
+              {
+                "badge": "02",
+                "title": "Capacidade",
+                "description": "Skills que transformam método em execução."
+              },
+              {
+                "badge": "03",
+                "title": "Continuidade",
+                "description": "Rotinas e registros que permitem retomar o trabalho."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "content": "O que você terá ao final"
+          },
+          {
+            "type": "text",
+            "content": "Um ambiente local funcionando, um negócio identificado no ContextOS, um orquestrador, uma primeira produção de conteúdo e a cadeia oferta, copy, criativo e tráfego preparada."
+          },
+          {
+            "type": "text",
+            "content": "A entrega real depende dos acessos disponíveis. Tudo será classificado como configurado, testado ou pendente."
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "content": "O acordo do workshop"
+          },
+          {
+            "type": "text",
+            "content": "Vamos trabalhar com um negócio, um produto e uma campanha. Quem já tem ferramentas instaladas avança na qualidade do contexto; quem começa do zero segue o setup guiado pela própria IA."
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "content": "Prática guiada"
+          },
+          {
+            "type": "input-output",
+            "input": {
+              "label": "Seu pedido",
+              "content": "Diga qual negócio e produto você quer usar hoje. Liste os materiais que já possui e uma rotina de marketing que gostaria de executar melhor."
+            },
+            "output": {
+              "label": "Entrega que você deve receber",
+              "content": "Um negócio, um produto, materiais localizados e uma rotina prioritária."
+            }
+          },
+          {
+            "type": "prompt",
+            "title": "Escolha seu caso",
+            "content": "Diga qual negócio e produto você quer usar hoje. Liste os materiais que já possui e uma rotina de marketing que gostaria de executar melhor."
+          },
+          {
+            "type": "callout",
+            "title": "Resposta esperada",
+            "content": "Um negócio, um produto, materiais localizados e uma rotina prioritária.",
+            "variant": "info"
+          },
+          {
+            "type": "heading",
+            "level": 1,
+            "content": "Checkpoint"
+          },
+          {
+            "id": "w00-boas-vindas-checkpoint",
+            "type": "checklist",
+            "items": [
+              {
+                "title": "Negócio escolhido",
+                "description": "Você sabe qual empresa alimentará todas as atividades."
+              },
+              {
+                "title": "Produto escolhido",
+                "description": "O workshop não mistura várias ofertas."
+              },
+              {
+                "title": "Resultado compreendido",
+                "description": "Você consegue explicar o que pretende construir no dia."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Para levar com você",
+            "content": "A etapa só está concluída quando a entrega pode ser aberta, conferida e retomada. Se faltar acesso, fonte ou decisão, registre a pendência em vez de completar com suposição.",
+            "variant": "success"
+          }
+        ],
+        "status": "available",
+        "duration": 20,
+        "schedule": [
+          {
+            "time": "0:00",
+            "topic": "Conceito e demonstração",
+            "duration": "6 min"
+          },
+          {
+            "time": "0:06",
+            "topic": "Prática guiada e checkpoint",
+            "duration": "14 min"
+          }
+        ],
+        "subtitle": "Da primeira tarefa automatizada à empresa inteira operada por agentes de IA",
+        "shortTitle": "Boas-vindas",
+        "learningGoals": [
+          "Entender a proposta do dia",
+          "Reconhecer ativos que já existem no próprio negócio",
+          "Visualizar a operação que será construída"
+        ]
+      }
+    }
+  ],
+  "modulos": [
+    {
+      "id": "b3a4d66c-135d-4ec5-9156-eeba194bcfad",
+      "organization_id": "b8f10429-fed4-412d-b753-a0797f6aa5ea",
+      "produto_id": "96895ed9-bea9-45e4-a991-bd7c797a8291",
+      "parent_id": null,
+      "titulo": "Bem vindo",
+      "imagem_url": null,
+      "ordem": 0,
+      "created_at": "2026-08-30T10:22:14.994457+00:00",
+      "updated_at": "2026-08-30T10:22:14.994457+00:00",
+      "deleted_at": null,
+      "slug": null
+    },
+    {
+      "id": "a2ac0c55-e292-4aac-8e62-27a9ff54e93e",
+      "organization_id": "b8f10429-fed4-412d-b753-a0797f6aa5ea",
+      "produto_id": "96895ed9-bea9-45e4-a991-bd7c797a8291",
+      "parent_id": null,
+      "titulo": "Bônus",
+      "imagem_url": null,
+      "ordem": 2,
+      "created_at": "2026-08-30T10:48:40.932187+00:00",
+      "updated_at": "2026-08-30T10:48:40.932187+00:00",
+      "deleted_at": null,
+      "slug": null
+    },
+    {
+      "id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "organization_id": "b8f10429-fed4-412d-b753-a0797f6aa5ea",
+      "produto_id": "96895ed9-bea9-45e4-a991-bd7c797a8291",
+      "parent_id": null,
+      "titulo": "Workshop",
+      "imagem_url": null,
+      "ordem": 1,
+      "created_at": "2026-08-30T10:22:32.783107+00:00",
+      "updated_at": "2026-09-12T03:45:43.850281+00:00",
+      "deleted_at": null,
+      "slug": null
+    }
+  ],
+  "vinculos": [
+    {
+      "id": "75699437-fb8c-43fe-bbd0-a5eb6931110c",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "5f047980-72a8-4ebd-8a7a-3f4179892c0c",
+      "ordem": 0,
+      "obrigatoria": false
+    },
+    {
+      "id": "4c216f0c-b70b-4a63-a758-6cd43789a99d",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "21f0d972-21c0-4241-8860-ec0cedbebc9e",
+      "ordem": 3,
+      "obrigatoria": false
+    },
+    {
+      "id": "5a96a2df-3cad-449a-9418-79bf95ddf3cc",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "aa40a956-068b-45e3-b36b-e60552ac94c8",
+      "ordem": 5,
+      "obrigatoria": false
+    },
+    {
+      "id": "1c43857d-1590-4abb-9bbb-97b3eb672efb",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "dc1a5ac2-9ed8-4201-a177-903a7414de6d",
+      "ordem": 1,
+      "obrigatoria": false
+    },
+    {
+      "id": "b470c798-3bbd-4e52-a541-883a7d05ca12",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "72d9613e-2c59-4994-bdda-eeb4cb6169f6",
+      "ordem": 9,
+      "obrigatoria": false
+    },
+    {
+      "id": "7df653c6-d6a8-44fc-a650-67e22a5d3804",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "81ae53da-ed14-43d5-872c-a6c026448efc",
+      "ordem": 10,
+      "obrigatoria": false
+    },
+    {
+      "id": "7c508751-3f18-4ade-b3c8-c892506801ed",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "ae94d121-4792-46f2-be47-89c260e2db8f",
+      "ordem": 2,
+      "obrigatoria": false
+    },
+    {
+      "id": "eb50c821-ef14-484e-bc16-ccbac9d53d93",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "f3d2a5b0-c5e1-40a0-80eb-e40b5851d18c",
+      "ordem": 4,
+      "obrigatoria": false
+    },
+    {
+      "id": "51995afa-6944-4249-b764-9bbea201c856",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "a563fef5-1d74-44eb-8f63-17a6c5b59205",
+      "ordem": 6,
+      "obrigatoria": false
+    },
+    {
+      "id": "2ac45940-b47f-4c2d-b1bc-64954e2fdb89",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "5183e70c-620f-450d-8796-52fc5f7243aa",
+      "ordem": 11,
+      "obrigatoria": false
+    },
+    {
+      "id": "73e11fe3-472a-431f-977a-05813e4741e1",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "b1634be0-da4c-44ec-985c-d348b50619ad",
+      "ordem": 7,
+      "obrigatoria": false
+    },
+    {
+      "id": "138dc57c-3a4d-4305-9cee-a3e99bdcb874",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "6feab307-9d23-43f2-a95f-904104a3c291",
+      "ordem": 8,
+      "obrigatoria": false
+    },
+    {
+      "id": "3ff58857-0451-4c9f-9513-e42cb39b7e43",
+      "modulo_id": "681a5ba3-825c-4935-9eb9-7ddb70b9a857",
+      "aula_id": "be0b59ee-c185-4229-94e8-840740a48e40",
+      "ordem": 12,
+      "obrigatoria": false
+    },
+    {
+      "id": "b2b8247f-ab5b-40d6-9c5f-c93846c04783",
+      "modulo_id": "b3a4d66c-135d-4ec5-9156-eeba194bcfad",
+      "aula_id": "2412e8e9-0ed1-4610-b840-1e84131d7a4a",
+      "ordem": 0,
+      "obrigatoria": false
+    }
+  ]
+}

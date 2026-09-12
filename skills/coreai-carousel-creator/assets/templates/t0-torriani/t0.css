@@ -1,0 +1,470 @@
+/* T0 v2: adaptação portátil. Cor de acento definida pelo input. */
+
+:root {
+  --canvas: #000000;
+  --surface: #0A0A0A;
+  --surface-alt: #111111;
+  --accent: #666666;
+  --flare: #003A70;
+  --cream: #FFFFFF;
+  --muted: #DDE4EC;
+  --meta: #8899AA;
+  --hairline: rgba(221, 228, 236, 0.09);
+  --hairline-strong: rgba(221, 228, 236, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: var(--canvas);
+}
+
+.si {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  position: relative;
+  background: var(--canvas);
+}
+
+/* ── Barra superior: assinatura, handle, marcador de ano ──
+   Na referência são três elementos em fonte pequena, um em cada terço. */
+
+.t0-topbar {
+  position: absolute;
+  top: 46px;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 6;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+
+.t0-topbar .meta { color: var(--meta); }
+.t0-topbar .center { color: var(--muted); }
+
+/* ── Capa: retrato ocupando o quadro sobre fundo dramático ── */
+
+.t0-cover-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 32%, var(--flare) 0%, #001B36 45%, #000000 78%);
+}
+
+.t0-cover-photo {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1350px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+/* Escurece a base para o texto, mantendo o rosto limpo no terço superior. */
+.t0-cover-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 26%,
+    rgba(0, 0, 0, 0.30) 50%,
+    rgba(0, 0, 0, 0.86) 66%,
+    rgba(0, 0, 0, 0.97) 78%,
+    #000000 100%);
+}
+
+/* Rodapé da capa: assinatura, headline e linha de apoio empilhadas de baixo
+   para cima. Empilhar em fluxo em vez de posicionar cada bloco por conta
+   resolve a sobreposição na raiz: estimar a altura da headline por contagem de
+   caracteres errava quando a quebra por palavra deixava sobra no fim da linha,
+   e a assinatura acabava por baixo do texto. */
+.t0-cover-foot {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 84px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.t0-signature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.t0-signature img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--hairline-strong);
+}
+
+.t0-signature .handle {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.4px;
+}
+
+.t0-signature svg { width: 30px; height: 30px; fill: var(--accent); }
+
+/* Headline: caixa alta condensada e pesada na faixa inferior. */
+.t0-headline {
+  font-family: 'Arial Narrow', sans-serif;
+  font-weight: 900;
+  font-size: 108px;
+  line-height: 0.9;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.t0-headline .accent { color: var(--accent); }
+
+/* Linha de apoio com seta, pequena e em caixa alta. */
+.t0-kicker {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.t0-kicker .arrow { color: var(--accent); flex-shrink: 0; }
+
+/* ── Internas: fundo sólido, sem foto ── */
+
+.t0-body-wrap {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  top: 150px;
+  bottom: 130px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 44px;
+}
+
+.t0-title {
+  font-family: 'Arial Narrow', sans-serif;
+  font-weight: 900;
+  font-size: 104px;
+  line-height: 0.9;
+  letter-spacing: -1.4px;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.t0-title .accent { color: var(--accent); }
+
+/* Corpo em caixa normal, cinza claro e entrelinha generosa, como na referência. */
+.t0-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  color: var(--muted);
+  max-width: 940px;
+}
+
+.t0-text strong { color: var(--cream); font-weight: 700; }
+
+/* ── Variante A: interna com foto ──
+   Exceção deliberada, escolhida por slide, nunca o padrão. A imagem só entra
+   quando ILUSTRA a cena de que o texto fala (a fábrica, o palco, o bastidor,
+   o retrato de um terceiro citado). Nada de foto de banco decorativa.
+   A foto toma a metade superior e o texto ocupa a inferior. */
+
+.t0-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 620px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.t0-scene img {
+  width: 1080px;
+  height: 620px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dissolve a base da foto no fundo preto, sem linha de corte dura. */
+.t0-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.55) 78%,
+    #000000 100%);
+}
+
+.t0-body-wrap.com-foto {
+  top: 660px;
+  bottom: 130px;
+  justify-content: center;
+  gap: 32px;
+}
+
+.t0-body-wrap.com-foto .t0-title { font-size: 84px; }
+.t0-body-wrap.com-foto .t0-text { font-size: 36px; }
+
+/* Legenda opcional da cena, no padrão de crédito de foto. */
+.t0-scene-caption {
+  position: absolute;
+  top: 578px;
+  left: 56px;
+  right: 56px;
+  z-index: 3;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--meta);
+}
+
+/* Cartão de prova real: print de tela dentro do slide. */
+.t0-proof {
+  background: var(--surface-alt);
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+  padding: 14px;
+  overflow: hidden;
+}
+
+.t0-proof img { width: 100%; display: block; border-radius: 12px; }
+
+/* Lista com marcadores, como no slide de resultados da referência. */
+.t0-list { display: flex; flex-direction: column; gap: 26px; }
+
+.t0-list .item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  font-size: 38px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.t0-list .mark {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(43, 125, 225, 0.14);
+  border: 1px solid rgba(43, 125, 225, 0.4);
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t0-list .item strong { color: var(--cream); font-weight: 700; }
+
+/* ── Rodapé das internas: barra de progresso e contador ── */
+
+.t0-progress {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 62px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.t0-progress .track {
+  flex: 1;
+  height: 3px;
+  background: var(--hairline-strong);
+  position: relative;
+}
+
+.t0-progress .fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  background: var(--cream);
+}
+
+.t0-progress .count {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--meta);
+  letter-spacing: 0.5px;
+}
+
+/* ── CTA: fecha o carrossel com o acento em destaque ── */
+
+.t0-cta-wrap {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  top: 150px;
+  bottom: 130px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+
+.t0-cta-rule {
+  width: 132px;
+  height: 5px;
+  background: var(--accent);
+}
+
+.t0-cta-title {
+  font-family: 'Arial Narrow', sans-serif;
+  font-weight: 900;
+  font-size: 112px;
+  line-height: 0.9;
+  letter-spacing: -1.4px;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.t0-cta-title .accent { color: var(--accent); }
+
+/* ═══ DIAGRAMA ANTES E DEPOIS ═══════════════════════════════════════════
+   Gramática visual do carrossel comparativo: dois blocos e uma seta.
+   Tudo desenhado em SVG inline, sem imagem externa. Entra por slide
+   via `diagram`, nunca por padrão. */
+
+.t0-diagrama {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 26px;
+  margin-top: 44px;
+}
+
+.t0-diagrama .d-lado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 26px 18px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--surface);
+  min-height: 300px;
+}
+
+.t0-diagrama .d-lado.depois {
+  border-color: rgba(43, 125, 225, 0.35);
+  background: var(--surface-alt);
+  box-shadow: 0 0 0 1px rgba(43, 125, 225, 0.12);
+}
+
+.t0-diagrama .d-rotulo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 21px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  color: var(--meta);
+}
+
+.t0-diagrama .d-lado.depois .d-rotulo { color: var(--accent); }
+
+.t0-diagrama .d-forma {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t0-diagrama .d-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.t0-diagrama .d-chip {
+  font-size: 27px;
+  line-height: 1.3;
+  color: var(--muted);
+  text-align: center;
+  padding: 9px 12px;
+  border-radius: 4px;
+  background: rgba(221, 228, 236, 0.04);
+}
+
+.t0-diagrama .d-lado.depois .d-chip {
+  color: var(--cream);
+  background: rgba(43, 125, 225, 0.10);
+}
+
+.t0-diagrama .d-seta {
+  color: var(--accent);
+  width: 62px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ═══ CAPA DE TESE (sem retrato) ════════════════════════════════════════
+   Rótulo no topo, headline gigante, diagrama grande embaixo. Usada quando
+   a foto do founder não entra na peça. */
+
+.t0-cover-tese {
+  position: absolute;
+  inset: 132px 78px 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.t0-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 27px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.t0-eyebrow::before { content: '[ '; color: var(--meta); }
+.t0-eyebrow::after  { content: ' ]'; color: var(--meta); }
+
+.t0-cover-diagrama {
+  margin-top: auto;
+  padding-bottom: 8px;
+}
+
+.t0-cover-diagrama .t0-diagrama { margin-top: 0; }
+.t0-cover-diagrama .d-lado { min-height: 330px; padding: 30px 20px; }
+.t0-cover-diagrama .d-forma { height: 172px; }
+.t0-cover-diagrama .d-chip { font-size: 26px; }
+
+.t0-signature.capa-tese { margin-top: 4px; }

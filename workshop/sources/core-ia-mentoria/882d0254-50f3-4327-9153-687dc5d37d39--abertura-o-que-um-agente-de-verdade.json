@@ -1,0 +1,326 @@
+{
+  "id": "882d0254-50f3-4327-9153-687dc5d37d39",
+  "titulo": "Abertura: O Que É um Agente de Verdade",
+  "lesson_payload": {
+    "id": "encontro-02-01",
+    "tag": "Etapa 0",
+    "title": "Abertura: O Que É um Agente de Verdade",
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Bem-vindo ao Encontro 2",
+        "content": "Esse é o encontro mais hands-on do curso. Nos próximos 60 dias vamos construir, etapa por etapa, um **agente AI pessoal rodando 24/7 numa VPS**, conectado ao seu Telegram, com personalidade, memória, integrações e proatividade.\n\nNo final, você vai ter um time de agentes trabalhando pra você.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que agentes AI agora?"
+      },
+      {
+        "type": "text",
+        "content": "Estamos no exato momento em que o paradigma da AI saiu de **\"chatbot que responde perguntas\"** para **\"agente que executa tarefas no mundo real\"**. Quem entender isso primeiro tem 2-3 anos de vantagem competitiva. Quem deixar pra depois vai correr atrás."
+      },
+      {
+        "type": "text",
+        "content": "Diferente do ChatGPT no browser (que esquece tudo, fica isolado, depende de você abrir), o agente OpenClaw fica **vivo numa VPS**, lembra de você, executa crons, integra com Calendar/Gmail/Drive, e responde no seu Telegram a qualquer hora."
+      },
+      {
+        "type": "callout",
+        "title": "A janela está aberta agora",
+        "content": "Em 12-24 meses todo mundo vai ter agente. Hoje, menos de 1% das empresas/profissionais têm. Quem larga primeiro, ganha. **Esse curso é o atalho**.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A analogia do Matrix"
+      },
+      {
+        "type": "callout",
+        "title": "🕶️ Carregar skills, não treinar do zero",
+        "content": "Lembra do Neo aprendendo kung fu em segundos no Matrix? **\"I know kung fu.\"** O Morpheus carrega a skill direto no cérebro dele.\n\nÉ exatamente isso que você vai fazer com seu agente. Você não vai **treinar** ele do zero · você vai **carregar skills** prontas. USER.md, SOUL.md, AGENTS.md, IDENTITY.md, BOOT.md, memória estruturada, skills do Claude Code · cada etapa carrega uma camada de capacidade.",
+        "variant": "info"
+      },
+      {
+        "type": "text",
+        "content": "Cada uma das 8 etapas a seguir é uma camada de skill que você carrega. No fim, seu agente sabe quem você é, lembra do que importa, executa tarefas sozinho, e fala com seu time de outros agentes."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que vamos construir nos 60 dias"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Que conhece você profundamente",
+            "accent": "cyan",
+            "description": "Ele lê seu USER.md, sabe seu negócio, sua família, seus projetos, suas metas. Não é genérico · é seu.",
+            "numberLabel": "KNOW"
+          },
+          {
+            "title": "Que executa tarefas sem você pedir",
+            "accent": "violet",
+            "description": "Crons rodando 24/7. Triagem de email, daily briefing 7am, follow-ups automáticos. Pró-ativo, não reativo.",
+            "numberLabel": "DO"
+          },
+          {
+            "title": "Que aprende com você",
+            "accent": "lime",
+            "description": "Cada decisão sua, cada feedback, cada rejeição vira aprendizado. Memory loop com lessons.md, decisions.md.",
+            "numberLabel": "LEARN"
+          },
+          {
+            "title": "Que está blindado",
+            "accent": "coral",
+            "description": "Firewall, allowlist, fail2ban, secrets protegidos. Servidor invisível na internet, só você fala com ele.",
+            "numberLabel": "SAFE"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "As 8 etapas do Encontro 2"
+      },
+      {
+        "type": "text",
+        "content": "Cada etapa é uma camada de skill que vamos carregar. Ordem importa · não pula etapas. Total estimado: **3h 35min** de execução guiada."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Setup · do zero ao primeiro \"Oi\"",
+            "accent": "cyan",
+            "description": "VPS Hostinger · Ubuntu · OpenClaw instalado · bot Telegram conectado · primeira mensagem trocada · 55 min"
+          },
+          {
+            "title": "Segurança · blindando o agente",
+            "accent": "violet",
+            "description": "Allowlist · UFW · Fail2ban · credenciais protegidas · portas internas · 28 min"
+          },
+          {
+            "title": "Identidade · dando personalidade",
+            "accent": "lime",
+            "description": "USER.md · SOUL.md · AGENTS.md · IDENTITY.md · BOOT.md · 30 min"
+          },
+          {
+            "title": "Memória · pra ele não esquecer você",
+            "accent": "coral",
+            "description": "Estrutura em camadas · 8 arquivos · compaction · selective loading · 60 min"
+          },
+          {
+            "title": "Integrações & Crons",
+            "accent": "magenta",
+            "description": "gog CLI Google Workspace · Web Search · 3 crons essenciais · Session Memory · 46 min"
+          },
+          {
+            "title": "Proatividade · Heartbeat",
+            "accent": "blue",
+            "description": "HEARTBEAT.md · 2 crons (4h e semanal) · 2 automações · regra falar vs calar · 44 min"
+          },
+          {
+            "title": "Sistema Imunológico",
+            "accent": "teal",
+            "description": "Watchdog · feedback loops · audit semanal · backup + ROLLBACK · 36 min"
+          },
+          {
+            "title": "Use Cases · 20+ casos prontos",
+            "accent": "cyan",
+            "description": "Daily briefing · email triage · content waterfall · research · suporte · 25 min"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Para quem é"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "rocket",
+            "title": "Empreendedores e founders",
+            "description": "Quer escalar a operação sem contratar mais 5 pessoas. O agente faz o trabalho repetitivo enquanto você foca em estratégia."
+          },
+          {
+            "icon": "pen-tool",
+            "title": "Criadores de conteúdo",
+            "description": "Produz muito · podcast, vídeo, posts, newsletter. O agente vira sua máquina de waterfall · 1 áudio gera 5 formatos com sua voz."
+          },
+          {
+            "icon": "code",
+            "title": "Devs e técnicos",
+            "description": "Quer integrar AI no seu fluxo · automações, monitoramento, code review, deploy guiado. O agente é seu copiloto 24/7."
+          },
+          {
+            "icon": "briefcase",
+            "title": "Profissionais liberais",
+            "description": "Advogado, médico, consultor, designer. O agente lê documentos, prepara reuniões, organiza follow-ups, gerencia agenda."
+          }
+        ],
+        "items": [
+          {
+            "icon": "user",
+            "title": "Empreendedores e founders",
+            "accent": "cyan",
+            "description": "Quem toma decisão e precisa de braço operacional 24/7 · time enxuto, sem espaço pra contratar mais 3 pessoas."
+          },
+          {
+            "icon": "user",
+            "title": "Criadores de conteúdo",
+            "accent": "violet",
+            "description": "Newsletter, podcast, social, blog · agente que repurpose, gera carrosseis, monitora trends e libera horas de trabalho repetitivo."
+          },
+          {
+            "icon": "user",
+            "title": "Devs e técnicos",
+            "accent": "lime",
+            "description": "Quem já mexe com terminal e cron · vai longe rápido. Aqui o agente vira parceiro de side projects, automação interna, code review."
+          },
+          {
+            "icon": "user",
+            "title": "Profissionais liberais",
+            "accent": "coral",
+            "description": "Advogado, consultor, médico, contador · qualquer um que vende tempo. Agente cuida de triagem, follow-up, propostas, organização."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Pré-requisitos antes de começar"
+      },
+      {
+        "type": "text",
+        "content": "Tem os 3 itens abaixo? Pode seguir pra Etapa 1. Falta algum? Resolve agora · 5 minutos pra cada."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Conta no ChatGPT Plus",
+            "accent": "cyan",
+            "description": "Plano Plus US$ 20/mês · inclui acesso ao Codex que vamos usar como provider do agente. Não precisa de API key separada · usamos browser login."
+          },
+          {
+            "title": "Conta no Telegram",
+            "accent": "violet",
+            "description": "Free. Vai ser o canal principal de conversa com seu agente. Crie no celular ou desktop · qualquer um serve."
+          },
+          {
+            "title": "VPS Hostinger",
+            "accent": "lime",
+            "description": "Plano KVM 2 · R$ 49/mês · 1 vCPU · 8GB RAM · 100GB SSD · Ubuntu 24.04 · datacenter São Paulo. Link com desconto na Etapa 1."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que cada etapa entrega"
+      },
+      {
+        "type": "text",
+        "content": "Cada etapa do curso vem com 6 entregáveis prontos pra você executar em tempo real. Nada de teoria solta · tudo executável."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "book-open",
+            "title": "Aula leitura completa",
+            "description": "Texto, diagramas, callouts e comparações · você lê e implementa sem precisar voltar pro vídeo."
+          },
+          {
+            "icon": "book-open",
+            "title": "Prompts copiar/colar",
+            "description": "Cada prompt do Telegram já formatado · clica copiar, cola no agente, funciona."
+          },
+          {
+            "icon": "book-open",
+            "title": "Skills pro Claude Code",
+            "description": "openclaw-os installer + skills de cada etapa · automatiza 80% da configuração local."
+          },
+          {
+            "icon": "book-open",
+            "title": "Templates SOUL/USER/IDENTITY",
+            "description": "5 arquivos .md prontos pra você adaptar · base da personalidade do agente."
+          },
+          {
+            "icon": "book-open",
+            "title": "Exemplos reais",
+            "description": "Casos de uso aplicados · veja como outros alunos configuraram pra contextos parecidos."
+          },
+          {
+            "icon": "book-open",
+            "title": "Vídeo + texto + Q&A",
+            "description": "Aulas gravadas com transcript + Q&A com perguntas reais da comunidade."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "callout",
+        "title": "Pronto pra começar?",
+        "content": "Tem ChatGPT Plus, Telegram e VPS? **Bora pra Etapa 1** · vamos subir o OpenClaw na VPS, criar o bot, e em 55 minutos seu agente está respondendo no Telegram.",
+        "variant": "success"
+      }
+    ],
+    "number": "00",
+    "status": "available",
+    "duration": 19,
+    "schedule": [
+      {
+        "title": "Bem-vindo ao Encontro 2",
+        "duration": "2 min"
+      },
+      {
+        "title": "Por que agentes AI agora",
+        "duration": "3 min"
+      },
+      {
+        "title": "A analogia do Matrix · carregar skills",
+        "duration": "3 min"
+      },
+      {
+        "title": "O que vamos construir nos 60 dias",
+        "duration": "3 min"
+      },
+      {
+        "title": "As 8 etapas do Encontro 2",
+        "duration": "4 min"
+      },
+      {
+        "title": "Para quem é · 4 perfis",
+        "duration": "1 min"
+      },
+      {
+        "title": "Pré-requisitos antes de começar",
+        "duration": "1 min"
+      },
+      {
+        "title": "O que cada etapa entrega",
+        "duration": "2 min"
+      }
+    ],
+    "subtitle": "Por que agora, o que vamos construir nos 60 dias e nas próximas 8 etapas",
+    "shortTitle": "Abertura",
+    "learningGoals": [
+      "Entender por que o momento de construir um agente AI pessoal é AGORA",
+      "Captar a analogia do Matrix · carregar skills no agente, não treinar do zero",
+      "Ver claramente os 4 atributos do agente que vamos construir nos 60 dias",
+      "Conhecer as 8 etapas do Encontro 2 · Setup, Segurança, Identidade, Memória, Integrações, Proatividade, Sistema Imunológico, Use Cases",
+      "Identificar se o curso é pra você (4 perfis · empreendedores, criadores, devs, profissionais liberais)",
+      "Ter os 3 pré-requisitos prontos · ChatGPT Plus, conta Telegram, VPS Hostinger",
+      "Entender o formato de cada etapa (aula, passos, prompts, skills, templates, vídeo)",
+      "Sair da abertura com clareza do que esperar e mão na massa pronta"
+    ]
+  }
+}

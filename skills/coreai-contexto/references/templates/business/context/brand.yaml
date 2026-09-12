@@ -1,0 +1,63 @@
+# ContextOS - Brand Identity
+# Preenchido durante: *setup-context Fase 5
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+brand_core:
+  brand_name: null
+  brand_tagline: null
+  brand_purpose: null
+
+brand_essence:
+  core_belief: null  # Crenca sobre o potencial do cliente
+
+promises:
+  marketing_promise: null  # O que voce diz
+  actual_promise: null     # O que realmente entrega
+  true_promise: null       # A transformacao mais profunda
+
+enemies:
+  NOT_the_enemy: null  # O que as pessoas acham que e o problema
+  THE_real_enemy: null # O problema real
+
+personality:  # Escalas 1-10
+  warmth_level: null       # 1=frio/corporativo, 10=caloroso/acolhedor
+  warmth_description: null
+  directness_level: null   # 1=sutil, 10=extremamente direto
+  directness_description: null
+  formality_level: null    # 1=casual, 10=formal
+  formality_description: null
+  confidence_level: null   # 1=humilde, 10=maxima conviccao
+  confidence_description: null
+
+voice_dna:
+  power_words: []      # 5-10 palavras de poder
+  signature_phrases: [] # Frases assinatura
+  metaphors: []        # Metaforas recorrentes
+  forbidden_words: []  # Palavras proibidas (e por que)
+  communication_examples: []  # Frases reais da marca
+  anti_examples: []    # Como a marca NUNCA comunica
+
+core_values:
+  hierarchy: null     # O valor DEFINIDOR
+  tensions: []        # Tensoes entre valores (velocidade vs qualidade)
+  values:
+    - name: null
+      principle: null        # One-liner
+      manifestation: null    # Como aparece no dia a dia
+      client_impact: null    # Impacto no cliente
+    - name: null
+      principle: null
+      manifestation: null
+      client_impact: null
+    - name: null
+      principle: null
+      manifestation: null
+      client_impact: null
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

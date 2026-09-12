@@ -1,0 +1,23 @@
+# ContextOS - Source Registry
+# Rastreia origem de cada dado coletado
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+sources: []
+# Exemplo:
+# - file: context/company-profile.yaml
+#   field: company_essence.legal_name
+#   source_type: elicitation  # elicitation | website | social | document | meeting
+#   source_detail: "setup-context Fase 1"
+#   confidence: high  # high | medium | low
+#   collected_at: "2026-04-03"
+
+collection_methods:
+  elicitation: 0     # Campos coletados via perguntas
+  website: 0         # Campos extraidos do site
+  social: 0          # Campos extraidos de redes sociais
+  document: 0        # Campos extraidos de documentos
+  meeting: 0         # Campos extraidos de reunioes
+  synthesized: 0     # Campos gerados automaticamente

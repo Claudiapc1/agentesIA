@@ -1,0 +1,146 @@
+[
+  {
+    "module": "Módulo 0 · Comece aqui",
+    "id": "w00-boas-vindas",
+    "title": "Boas-vindas: a oportunidade que quase ninguém está vendo",
+    "duration": 20,
+    "blockCount": 16,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 0 · Comece aqui",
+    "id": "w01-ferramentas-modelos",
+    "title": "Claude Code, Codex e modelos: o que você está escolhendo",
+    "duration": 20,
+    "blockCount": 17,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 0 · Comece aqui",
+    "id": "w02-segundo-cerebro",
+    "title": "Segundo cérebro: contexto, skills, repertório e rotinas",
+    "duration": 30,
+    "blockCount": 17,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 0 · Comece aqui",
+    "id": "w03-setup",
+    "title": "Configurar seu computador com a ajuda do agente",
+    "duration": 30,
+    "blockCount": 35,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 1 · Segundo cérebro e orquestração",
+    "id": "w04-contextos",
+    "title": "ContextOS: ensinar a IA sobre o negócio",
+    "duration": 60,
+    "blockCount": 17,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 1 · Segundo cérebro e orquestração",
+    "id": "w05-zeus",
+    "title": "Zeus: o orquestrador que conhece a operação",
+    "duration": 30,
+    "blockCount": 15,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 1 · Segundo cérebro e orquestração",
+    "id": "w06-loops-portal",
+    "title": "Loops e portal: o sistema aprende com o trabalho",
+    "duration": 30,
+    "blockCount": 17,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w07-conteudo",
+    "title": "Time de conteúdo: do contexto ao carrossel",
+    "duration": 50,
+    "blockCount": 15,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w08-oferta",
+    "title": "Construção da oferta: tornar o valor concreto",
+    "duration": 35,
+    "blockCount": 15,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w09-copy",
+    "title": "Time de copy: transformar oferta em mensagem",
+    "duration": 40,
+    "blockCount": 15,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w10-criativos",
+    "title": "Criativos: transformar a mensagem em peça visual",
+    "duration": 45,
+    "blockCount": 15,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w11-trafego",
+    "title": "Tráfego: da peça à campanha",
+    "duration": 50,
+    "blockCount": 17,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w12-pitch",
+    "title": "Da primeira tarefa à empresa agêntica",
+    "duration": 20,
+    "blockCount": 17,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Módulo 2 · Times de marketing em ação",
+    "id": "w13-encerramento",
+    "title": "Seu time começa pelo próximo pedido",
+    "duration": 10,
+    "blockCount": 13,
+    "learningGoalCount": 3
+  },
+  {
+    "module": "Bônus · Aprofundamento",
+    "id": "bonus-1",
+    "title": "Como Usar o Claude Code Como um Profissional",
+    "duration": null,
+    "blockCount": 144,
+    "learningGoalCount": 12
+  },
+  {
+    "module": "Bônus · Aprofundamento",
+    "id": "bonus-2",
+    "title": "ContextOS · A Camada de Contexto do CORE AIOS",
+    "duration": null,
+    "blockCount": 100,
+    "learningGoalCount": 5
+  },
+  {
+    "module": "Bônus · Aprofundamento",
+    "id": "bonus-3",
+    "title": "Parte 1 · A Skill de Copy: Fábrica de Copy High Ticket",
+    "duration": 30,
+    "blockCount": 38,
+    "learningGoalCount": 6
+  },
+  {
+    "module": "Bônus · Aprofundamento",
+    "id": "bonus-4",
+    "title": "GitHub como Cérebro Compartilhado · Sync Bidirecional Local ↔ Agente",
+    "duration": null,
+    "blockCount": 45,
+    "learningGoalCount": 5
+  }
+]

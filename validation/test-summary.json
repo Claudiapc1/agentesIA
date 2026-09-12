@@ -1,0 +1,10 @@
+{
+  "python_tests": 17,
+  "python_result": "PASS",
+  "javascript_negative_assertions": 15,
+  "javascript_positive_outputs": 8,
+  "production_api_calls": 0,
+  "global_installation_changed": false,
+  "claude_behavior": "INCONCLUSIVE_BUDGET_EXHAUSTED",
+  "codex_behavior": "BLOCKED_CLI_UPDATE_REQUIRED"
+}

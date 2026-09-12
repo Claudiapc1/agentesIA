@@ -1,0 +1,212 @@
+{
+  "id": "1bb1824b-d945-4c68-aca7-93fab13b7876",
+  "titulo": "/goal: Trabalhar Sozinho Até Cumprir a Condição",
+  "lesson_payload": {
+    "id": "encontro-08-03",
+    "title": "/goal: Trabalhar Sozinho Até Cumprir a Condição",
+    "blocks": [
+      {
+        "type": "section-cover",
+        "title": "/goal",
+        "eyebrow": "ENCONTRO 8 · CLAUDE CODE PROFISSIONAL",
+        "subtitle": "Define uma condição de conclusão e o Claude trabalha sozinho, turno após turno, até cumprir."
+      },
+      {
+        "type": "callout",
+        "title": "A ideia em uma frase",
+        "content": "Em vez de você ficar dizendo 'continua' a cada turno, você diz onde é a linha de chegada. A cada turno, um modelo rápido verifica se a condição já é verdadeira. Quando for, ele para.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintaxe"
+      },
+      {
+        "type": "command-list",
+        "title": "Os três comandos do /goal",
+        "commands": [
+          {
+            "command": "/goal <condição>",
+            "description": "Inicia uma goal com a condição de parada"
+          },
+          {
+            "command": "/goal",
+            "description": "Mostra o status da goal ativa"
+          },
+          {
+            "command": "/goal clear",
+            "description": "Cancela a goal (aliases: stop, off, reset, none, cancel)"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como funciona"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Encadeia turnos sozinho",
+            "description": "O próximo turno começa assim que o anterior termina. Não espera tempo nenhum, diferente do /loop."
+          },
+          {
+            "title": "Para quando a condição é verdadeira",
+            "description": "Um modelo avaliador checa a cada turno se a condição já foi cumprida. Quando confirma, encerra."
+          },
+          {
+            "title": "Uma goal por sessão",
+            "description": "Roda na sessão aberta. Máximo de 1 goal por sessão: uma nova substitui a anterior."
+          },
+          {
+            "title": "Condição até 4.000 caracteres",
+            "description": "A descrição da condição de parada pode ser bem detalhada."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Modos de operação"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "claude -p \"/goal CONDIÇÃO\"",
+            "Roda até a conclusão",
+            "Tudo em uma única invocação"
+          ],
+          "title": "Headless (não-interativo)",
+          "result": "Dispara e volta só com o resultado.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Goal ativa na sessão aberta",
+            "Claude trabalha turno a turno automaticamente",
+            "Você vê o progresso em tempo real"
+          ],
+          "title": "Interativo (padrão)",
+          "result": "Você acompanha enquanto ele resolve.",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Exemplos concretos"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "Implementar um spec até todos os critérios de aceite passarem",
+            "type": "comment"
+          },
+          {
+            "text": "/goal all acceptance criteria in the design doc are satisfied",
+            "type": "command"
+          },
+          {
+            "text": "Refatorar até testes e lint limpos",
+            "type": "comment"
+          },
+          {
+            "text": "/goal all tests in test/auth pass and the lint step is clean",
+            "type": "command"
+          },
+          {
+            "text": "Migrar código até compilar sem erros",
+            "type": "comment"
+          },
+          {
+            "text": "/goal no TypeScript errors and all imports resolve",
+            "type": "command"
+          }
+        ],
+        "title": "Condições de parada reais"
+      },
+      {
+        "type": "callout",
+        "title": "A condição tem que ser verificável",
+        "content": "O /goal só funciona se a condição puder ser confirmada objetivamente pela saída do Claude. 'Deixar o código bonito' não serve. 'Todos os testes passam e o lint está limpo' serve.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Quando usar e quando não usar"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Monitoramento periódico: use /loop",
+            "Rodar com você desconectado: use /schedule",
+            "Condição que não dá pra verificar pela saída do Claude"
+          ],
+          "title": "Quando NÃO usar",
+          "result": "Fim verificável é a regra de ouro do /goal.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Migrar módulo para nova API até compilar e testar",
+            "Implementar design doc até os critérios passarem",
+            "Quebrar arquivo grande até cada módulo ficar no limite",
+            "Processar fila de issues até esvaziar",
+            "Qualquer tarefa com fim verificável objetivamente"
+          ],
+          "title": "Quando usar /goal",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parar, retomar e requisitos"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Parar",
+            "accent": "coral",
+            "description": "/goal clear, ou Ctrl+C no modo headless. Atenção: Esc NÃO funciona para goals (só para o /loop)."
+          },
+          {
+            "title": "Retomar",
+            "accent": "cyan",
+            "description": "claude --resume restaura a goal. Mas o contador de turnos e o timer resetam."
+          },
+          {
+            "title": "Requisitos",
+            "accent": "violet",
+            "description": "Claude Code v2.1.139+, workspace com trust aceito. Indisponível se disableAllHooks ou allowManagedHooksOnly estiverem ligados."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Resumo do /goal",
+        "content": "Você diz a linha de chegada, ele corre sozinho turno após turno e para quando cruza. Sem espera entre turnos, uma goal por sessão, condição verificável. Pra trabalho com fim objetivo, é a ferramenta certa.",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "eyebrow": "ENCONTRO 8 · PARTE 3 DE 4",
+    "duration": 15,
+    "schedule": [],
+    "subtitle": "Você define a linha de chegada, o Claude trabalha turno após turno até cruzar",
+    "learningGoals": [
+      "Entender o que é o /goal e quando ele é a ferramenta certa",
+      "Dominar a sintaxe: iniciar, ver status e cancelar uma goal",
+      "Escrever condições de parada verificáveis objetivamente",
+      "Diferenciar o modo interativo do headless",
+      "Saber parar e retomar uma goal e seus requisitos"
+    ]
+  }
+}

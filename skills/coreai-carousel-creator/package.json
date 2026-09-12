@@ -1,0 +1,9 @@
+{
+  "name": "coreai-carousel-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local runtime for CoreAI carousel HTML to PNG renderer",
+  "dependencies": {
+    "playwright": "1.59.1"
+  }
+}

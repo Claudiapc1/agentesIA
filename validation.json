@@ -1,0 +1,156 @@
+{
+  "release_status": "partial_local_release",
+  "global_links_changed": false,
+  "skills": [
+    {
+      "skill": "coreai-carousel-creator",
+      "status": "local_scope_verified",
+      "included": true
+    },
+    {
+      "skill": "coreai-content-chief",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-contexto",
+      "status": "local_scope_verified",
+      "included": true
+    },
+    {
+      "skill": "coreai-copy-ads",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-capture-page",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-carta-vendas",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-chief",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-funil-story-unico",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-headlines",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-operacao-completa",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-operacao-tatica",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-oraculo",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-organic-content",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-sales-page",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-stories-captacao",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-vsl",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-copy-whatsapp",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-criativos",
+      "status": "local_scope_verified",
+      "included": true
+    },
+    {
+      "skill": "coreai-design-artifact-cycle",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-design-chief",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-design-compose-page",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-design-critical-eye",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-funnel-perfect-webinar",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-grand-slam-offer",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-publicar-instagram",
+      "status": "mock_verified_real_account_pending",
+      "included": false
+    },
+    {
+      "skill": "coreai-setup",
+      "status": "local_scope_verified",
+      "included": true
+    },
+    {
+      "skill": "coreai-slide-creator",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-stories-recompensa",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-traffic-chief",
+      "status": "pending_runtime_validation",
+      "included": false
+    },
+    {
+      "skill": "coreai-zeus",
+      "status": "pending_runtime_validation",
+      "included": false
+    }
+  ]
+}

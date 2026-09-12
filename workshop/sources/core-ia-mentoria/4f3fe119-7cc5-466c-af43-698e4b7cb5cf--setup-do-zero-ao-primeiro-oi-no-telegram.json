@@ -1,0 +1,797 @@
+{
+  "id": "4f3fe119-7cc5-466c-af43-698e4b7cb5cf",
+  "titulo": "Setup: Do Zero ao Primeiro \"Oi\" no Telegram",
+  "lesson_payload": {
+    "id": "encontro-02-02",
+    "tag": "Etapa 1",
+    "title": "Setup: Do Zero ao Primeiro \"Oi\" no Telegram",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Você ouviu sobre OpenClaw, viu o potencial e chegou aqui. **Agora começa a parte que dá medo:** instalar do zero. VPS, SSH, comandos no terminal, configuração de bot · pra quem nunca mexeu, parece muito. Mas o roteiro abaixo é cirúrgico · 10 passos, cada um com explicação do que está acontecendo, comando exato pra colar e resposta esperada."
+      },
+      {
+        "type": "text",
+        "content": "**Em 30 minutos você sai com seu agente respondendo no Telegram.** Não é \"hello world\" · é o agente real que vai conversar com você nos próximos meses. A partir daqui é só evolução: segurança, identidade, memória, integrações."
+      },
+      {
+        "type": "callout",
+        "title": "Por que VPS e não local",
+        "content": "Você precisa de um servidor que fica ligado 24/7 pro agente responder a qualquer hora. Seu Mac/PC desliga · servidor não. KVM 2 da Hostinger custa R$49/mês e é mais que suficiente pra 1-2 agentes. Não tente rodar local · vai ser frustrante.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "O que vamos fazer aqui",
+        "content": "Em 55 minutos você vai sair do zero (sem nada instalado) até trocar a primeira mensagem com seu agente no Telegram. **Não é teoria** · é mão na massa, comando por comando, com seu agente respondendo no final.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que é OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "OpenClaw é a plataforma open-source que transforma LLMs em **agentes pessoais 24/7**. Diferente de um chatbot (ChatGPT, Claude no browser), o agente OpenClaw fica **vivo numa VPS**, conectado ao seu Telegram, executando tarefas, lembrando do contexto, rodando crons e integrado com suas ferramentas (Calendar, Gmail, Drive)."
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "O cérebro no servidor",
+            "accent": "violet",
+            "description": "Daemon que roda 24/7 na VPS, gerencia sessões, conexões com LLMs e despacha mensagens.",
+            "numberLabel": "GATEWAY"
+          },
+          {
+            "title": "A personalidade",
+            "accent": "cyan",
+            "description": "Quem ele é, como ele fala. Definido em SOUL.md, USER.md, AGENTS.md e nas skills instaladas.",
+            "numberLabel": "AGENTE"
+          },
+          {
+            "title": "Como você conversa",
+            "accent": "lime",
+            "description": "Interface de comunicação. Recomendado: Telegram (suporte nativo a bots, organização por tópicos, mobile).",
+            "numberLabel": "CANAL"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 1 · Criar a VPS Hostinger (KVM 2)"
+      },
+      {
+        "type": "text",
+        "content": "Vamos contratar o plano **KVM 2** da Hostinger · R$ 49/mês com 1 vCPU, 8GB RAM, 100GB SSD. Não precisa de plano maior agora. Use o link com desconto abaixo."
+      },
+      {
+        "type": "callout",
+        "title": "Link Hostinger com desconto",
+        "content": "Acessa [VPS Hostinger KVM 2 com 20% desconto · plano 12 meses](https://www.hostinger.com/br/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=MEWJULIAN0BV&referral_id=019e0061-1744-727a-abea-fdabbce5cf27) · clica no link, finaliza compra. Já vem com o plano e período corretos selecionados.",
+        "variant": "info"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Clica no link da Hostinger",
+            "accent": "cyan",
+            "description": "Vai abrir a página de contratação do VPS."
+          },
+          {
+            "title": "Escolhe o plano KVM 2",
+            "accent": "violet",
+            "description": "Deixa o período 12 meses já selecionado (melhor preço)."
+          },
+          {
+            "title": "Localização: São Paulo",
+            "accent": "lime",
+            "description": "Procura por São Paulo. Se não tiver disponível, deixa Estados Unidos."
+          },
+          {
+            "title": "Sistema: Ubuntu 24.04",
+            "accent": "coral",
+            "description": "Seleciona Ubuntu 24.04 LTS na lista de sistemas operacionais."
+          },
+          {
+            "title": "Finaliza compra e guarda IP/senha",
+            "accent": "magenta",
+            "description": "Ao final, você recebe o IP da VPS e a senha root. Guarda os dois · vai precisar agora."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 2 · Conectar via SSH"
+      },
+      {
+        "type": "text",
+        "content": "Cola o IP da VPS no campo abaixo. O comando SSH é gerado automaticamente pra você copiar. **O IP fica salvo** · próximas etapas usam ele automaticamente."
+      },
+      {
+        "type": "command-with-input",
+        "label": "Conectar via SSH (IP é salvo automaticamente)",
+        "command": "ssh root@{{ip}}",
+        "inputLabel": "IP da sua VPS · cola aqui",
+        "storageKey": "core-ai:vps-ip",
+        "placeholder": "1.2.3.4",
+        "extractPattern": "ip"
+      },
+      {
+        "type": "callout",
+        "title": "Primeira conexão",
+        "content": "Na primeira vez vai aparecer `Are you sure you want to continue connecting (yes/no)?`. Digite `yes` e Enter. Depois cola a senha root (não vai aparecer nada na tela enquanto você digita · isso é normal).",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 3 · Atualizar a VPS"
+      },
+      {
+        "type": "text",
+        "content": "Antes de instalar qualquer coisa, atualiza todos os pacotes do Ubuntu. Roda os 3 comandos abaixo **um de cada vez**, esperando cada um terminar (pode demorar 2-5 min)."
+      },
+      {
+        "type": "command-line",
+        "label": "Atualizar lista de pacotes disponíveis",
+        "command": "sudo apt update"
+      },
+      {
+        "type": "command-line",
+        "label": "Aplicar todas as atualizações",
+        "command": "sudo apt upgrade -y"
+      },
+      {
+        "type": "command-line",
+        "label": "Remover pacotes antigos não usados",
+        "command": "sudo apt autoremove -y"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 4 · Dependências básicas"
+      },
+      {
+        "type": "text",
+        "content": "Antes de instalar o OpenClaw, garante que o Ubuntu tem as ferramentas que ele precisa: compilador, curl pra baixar, file pra inspecionar binários, git pra clonar repos."
+      },
+      {
+        "type": "command-line",
+        "label": "Dependências do OpenClaw",
+        "command": "sudo apt install build-essential curl file git -y"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 5 · Instalar o Claude Code"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** o Claude Code é a CLI da Anthropic que você vai usar **direto na VPS** pra editar arquivos do OpenClaw, debugar problemas e rodar prompts complexos sem abrir editor de texto. Em algumas etapas seguintes (memória, identidade, allowlist) você vai precisar dele."
+      },
+      {
+        "type": "text",
+        "content": "**Por que importa:** sem o Claude Code, edições em `openclaw.json` ou nos arquivos de identidade só dá pra fazer com `nano` no terminal · lento e fácil de errar. Com Claude Code você descreve o que quer mudar e ele edita."
+      },
+      {
+        "type": "callout",
+        "title": "Caminho VPS · não é Mac",
+        "content": "No seu Mac talvez você instale via Homebrew, mas **na VPS Ubuntu** o caminho oficial é via `nvm` (Node Version Manager) + `npm`. É mais simples e não precisa sudo pra cada instalação global.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5.1 · Instalar nvm (Node Version Manager)"
+      },
+      {
+        "type": "text",
+        "content": "O `nvm` instala o Node em pasta do usuário (sem sudo). Roda no terminal SSH:"
+      },
+      {
+        "type": "command-line",
+        "command": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash"
+      },
+      {
+        "type": "text",
+        "content": "Depois recarrega o shell pra ativar o `nvm`:"
+      },
+      {
+        "type": "command-line",
+        "command": "source ~/.bashrc"
+      },
+      {
+        "type": "callout",
+        "title": "Confirma que instalou",
+        "content": "Roda `command -v nvm` · deve responder `nvm`. Se voltar vazio, fecha o SSH e reabre.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5.2 · Instalar Node 20 LTS"
+      },
+      {
+        "type": "text",
+        "content": "Claude Code precisa de Node 18+. Vamos com a versão 20 LTS que é estável:"
+      },
+      {
+        "type": "command-line",
+        "command": "nvm install 20"
+      },
+      {
+        "type": "command-line",
+        "command": "nvm use 20"
+      },
+      {
+        "type": "command-line",
+        "command": "nvm alias default 20"
+      },
+      {
+        "type": "text",
+        "content": "Confere as versões instaladas:"
+      },
+      {
+        "type": "command-line",
+        "command": "node --version && npm --version"
+      },
+      {
+        "type": "callout",
+        "title": "Resposta esperada",
+        "content": "`v20.x.x` (Node) e `10.x.x` (npm). Se aparecerem os dois, prossegue. Se der `command not found`, refaz o `source ~/.bashrc` do passo 5.1.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5.3 · Instalar o Claude Code via npm"
+      },
+      {
+        "type": "text",
+        "content": "Agora instala a CLI globalmente. O `nvm` já cuidou das permissões · não precisa `sudo`:"
+      },
+      {
+        "type": "command-line",
+        "command": "npm install -g @anthropic-ai/claude-code"
+      },
+      {
+        "type": "text",
+        "content": "Confere a versão:"
+      },
+      {
+        "type": "command-line",
+        "command": "claude --version"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5.4 · Fazer login (1ª vez)"
+      },
+      {
+        "type": "text",
+        "content": "Roda o comando `claude` pela primeira vez. Ele vai abrir uma URL pra você logar com a sua conta Anthropic:"
+      },
+      {
+        "type": "command-line",
+        "command": "claude"
+      },
+      {
+        "type": "callout",
+        "title": "Como o login funciona na VPS",
+        "content": "Como você está em SSH (sem browser na VPS), o Claude Code mostra uma URL grande. **Copia a URL e abre no browser do seu computador local** · faz login na conta Anthropic · cola o código que aparece de volta no terminal SSH. Plano Claude Pro ($20/mês) ou Claude Max já dá acesso · não precisa pagar API à parte.",
+        "variant": "warning"
+      },
+      {
+        "type": "text",
+        "content": "Quando o login confirmar, sai do Claude Code apertando `Ctrl+C` ou digitando `/exit`. A autenticação fica salva pras próximas sessões."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5.5 · Validar instalação"
+      },
+      {
+        "type": "text",
+        "content": "Faz um teste rápido pra confirmar que tudo funciona:"
+      },
+      {
+        "type": "command-line",
+        "command": "claude --version && which claude"
+      },
+      {
+        "type": "callout",
+        "title": "Pronto",
+        "content": "Saída esperada: versão do Claude Code (ex: `1.x.x`) seguida do path da instalação (algo tipo `/root/.nvm/versions/node/v20.x.x/bin/claude`). Se isso apareceu, Claude Code está pronto pra ser usado nas próximas etapas.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5.6 · Atalho · alias `claude` com bypass permissions"
+      },
+      {
+        "type": "text",
+        "content": "**O que é:** sempre que você roda `claude` direto no terminal, ele pede confirmação pra cada operação que mexe em arquivo (escrever, deletar, rodar bash). Isso é seguro mas atrapalha quando você confia no que está pedindo. Vamos criar um **alias** chamado `claude` que já entra com `--dangerously-skip-permissions` ativo · zero cliques de aprovação."
+      },
+      {
+        "type": "callout",
+        "title": "Quando usar bypass · e quando NÃO usar",
+        "content": "Bypass faz sentido na **sua VPS pessoal**, onde você é o único usuário e confia no que pede. **NÃO use** em servidor compartilhado, em produção real com clientes, ou quando outra pessoa pode estar mandando prompts pelo Telegram. Se um dia o agente ficar acessível pra outras pessoas, **remove o alias** desfazendo este passo.",
+        "variant": "warning"
+      },
+      {
+        "type": "text",
+        "content": "Adiciona o alias no `~/.bashrc` (carrega toda sessão SSH):"
+      },
+      {
+        "type": "command-line",
+        "command": "echo \"alias claude='claude --dangerously-skip-permissions'\" >> ~/.bashrc"
+      },
+      {
+        "type": "text",
+        "content": "Recarrega o shell pra ativar agora:"
+      },
+      {
+        "type": "command-line",
+        "command": "source ~/.bashrc"
+      },
+      {
+        "type": "text",
+        "content": "Testa · roda `claude` e veja que ele entra direto sem pedir aprovação:"
+      },
+      {
+        "type": "command-line",
+        "command": "claude"
+      },
+      {
+        "type": "callout",
+        "title": "Como sair do Claude Code",
+        "content": "Pra sair, digita `/exit` ou aperta `Ctrl+C` duas vezes.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Pronto",
+        "content": "A partir daqui, todo `claude` que você rodar na VPS já entra em bypass mode. Pra verificar que o alias está ativo, roda `alias claude` · deve mostrar `claude='claude --dangerously-skip-permissions'`.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 6 · Instalar o OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "Agora vem a parte central · instalar o OpenClaw com **um único comando**. Ele baixa, configura e prepara tudo pra rodar o wizard de onboard. Demora ~2 minutos."
+      },
+      {
+        "type": "command-line",
+        "label": "Instalador oficial OpenClaw",
+        "command": "curl -fsSL https://openclaw.ai/install.sh | bash"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 7 · Wizard de configuração"
+      },
+      {
+        "type": "text",
+        "content": "Roda o wizard que faz 5 perguntas e configura tudo. Vou te guiar pergunta por pergunta com a resposta certa."
+      },
+      {
+        "type": "command-line",
+        "label": "Iniciar wizard de onboard",
+        "command": "openclaw onboard --install-daemon"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Gateway mode → Local",
+            "accent": "cyan",
+            "description": "Roda no próprio VPS. As outras opções (cloud/managed) são avançadas e não precisamos agora."
+          },
+          {
+            "title": "AI provider → OpenAI Codex",
+            "accent": "violet",
+            "description": "Pode aparecer como \"OpenAI Codecs\". É a mesma coisa. Vamos usar sua conta ChatGPT Plus."
+          },
+          {
+            "title": "Browser login",
+            "accent": "lime",
+            "description": "Vai abrir um link no terminal. Copia, cola no navegador, faz login com a conta ChatGPT Plus, autoriza, volta."
+          },
+          {
+            "title": "Modelo → Codex 5.5",
+            "accent": "coral",
+            "description": "Recomendado · equilíbrio entre qualidade e custo."
+          },
+          {
+            "title": "Install as service → Sim (Y)",
+            "accent": "magenta",
+            "description": "Faz o OpenClaw rodar 24/7 mesmo após reboot. É o que torna seu agente sempre-on."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Tela de erro no browser? É normal",
+        "content": "Depois de logar com sua conta OpenAI/ChatGPT no browser, vai aparecer uma **tela de erro**. Não se assusta · isso é esperado. Copia a URL inteira da barra do navegador e cola de volta no terminal · é assim que o OpenClaw captura o token. Sem isso, o login não conclui.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 8 · Validar gateway status"
+      },
+      {
+        "type": "text",
+        "content": "O wizard terminou. O serviço deve estar de pé. Confere usando o comando abaixo no terminal."
+      },
+      {
+        "type": "command-line",
+        "label": "Status do gateway · deve retornar running",
+        "command": "openclaw gateway status"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 9 · Criar bot no Telegram (BotFather)"
+      },
+      {
+        "type": "text",
+        "content": "Vamos criar o bot oficial do seu agente. O **@BotFather** é o bot oficial do Telegram pra criar outros bots."
+      },
+      {
+        "type": "callout",
+        "title": "Abrir BotFather",
+        "content": "Clica no link → [t.me/BotFather](https://t.me/BotFather) · vai abrir o Telegram já no chat dele. Clica em **Start**.",
+        "variant": "info"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Manda /newbot",
+            "accent": "cyan",
+            "description": "BotFather pergunta o que você quer fazer. Manda o comando /newbot."
+          },
+          {
+            "title": "Define o NOME",
+            "accent": "violet",
+            "description": "Pode ter espaço e maiúscula (ex: \"Meu Alfred\", \"Sofia AI\"). É só visual."
+          },
+          {
+            "title": "Define o USERNAME",
+            "accent": "lime",
+            "description": "Tem que terminar em \"bot\" e ser único (ex: alfred_bot, sofia_ai_bot)."
+          },
+          {
+            "title": "Captura o TOKEN",
+            "accent": "coral",
+            "description": "Formato: 123456:ABC-defgh1234... Copia e guarda · você vai usar no Passo 9."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 10 · Conectar Telegram ao OpenClaw"
+      },
+      {
+        "type": "text",
+        "content": "Volta no terminal SSH. Agora vai conectar o token do bot ao seu OpenClaw."
+      },
+      {
+        "type": "command-line",
+        "label": "Adicionar Telegram como provider",
+        "command": "openclaw provider add telegram"
+      },
+      {
+        "type": "text",
+        "content": "Ele vai te pedir o token do bot. Cola o token que o @BotFather te deu no Passo 8. Depois, abre o chat com seu bot no Telegram (busca pelo username, ex: @alfred_bot) e manda `/start`. Isso registra seu chat_id no OpenClaw automaticamente. O bot deve responder algo (uma saudação)."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 11 · Configurar Allowlist (CRÍTICO)"
+      },
+      {
+        "type": "callout",
+        "title": "🚨 Antes de qualquer teste",
+        "content": "**Sem allowlist, qualquer pessoa que descobrir o username do seu bot pode mandar mensagem e gastar suas credenciais.** O allowlist garante que só o seu Telegram ID consegue falar com o bot. Faz isso AGORA, antes de seguir.",
+        "variant": "warning"
+      },
+      {
+        "type": "text",
+        "content": "Vamos fazer em 3 sub-passos · pega seu Telegram ID, abre o Claude Code, e usa um prompt pra ele configurar o allowlist pra você."
+      },
+      {
+        "type": "callout",
+        "title": "1. Pega seu Telegram ID",
+        "content": "Abre o Telegram e clica no link → [t.me/userinfobot](https://t.me/userinfobot) · clica em Start. Ele te responde com seu **ID numérico** (ex: 123456789). Copia esse número.",
+        "variant": "info"
+      },
+      {
+        "type": "text",
+        "content": "**2. Abre o Claude Code na sua máquina** (no terminal local, não na VPS) e cola o prompt abaixo · ele vai conectar via SSH na VPS, editar o `openclaw.json` e reiniciar o serviço pra você."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Telegram · configurar allowlist",
+        "target": "telegram",
+        "content": "Vou te dar o IP da minha VPS e o meu Telegram ID. Quero que você:\n\n1. Conecta via SSH no IP da VPS (`ssh root@<IP>`)\n2. Procura no arquivo `~/.openclaw/openclaw.json` pela chave `dmPolicy`\n3. Troca o valor pra `\"allowlist\"`\n4. Adiciona meu Telegram ID na lista de IDs autorizados (`allowedChatIds`)\n5. Salva o arquivo\n6. Reinicia o serviço com `systemctl restart openclaw`\n7. Confirma que ficou tudo certo lendo o arquivo de novo\n\n**IP da VPS:** [cola aqui]\n**Meu Telegram ID:** [cola aqui]\n\nNão executa nenhuma outra mudança no openclaw.json · só dmPolicy e allowedChatIds. Reporta cada passo enquanto executa."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Passo 12 · Primeiro teste real"
+      },
+      {
+        "type": "text",
+        "content": "Volta no Telegram, no chat com seu bot, e manda:"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Você manda",
+          "content": "Oi! Me diz quem você é e o que pode fazer."
+        },
+        "output": {
+          "label": "Bot responde (em até 5s)",
+          "content": "Olá! Sou seu agente OpenClaw rodando aqui na VPS. Posso executar comandos, gerenciar agenda, ler emails e muito mais. Pra começar, me conta um pouco sobre você."
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Resposta veio?",
+        "content": "Se respondeu (mesmo que em inglês ou genérico) · OpenClaw está vivo. Personalidade vamos dar na Etapa 3 (Identidade). Se não respondeu, pula pra seção \"Erros comuns\" abaixo.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Quanto custa"
+      },
+      {
+        "type": "text",
+        "content": "O custo que você vai ter ao rodar seu agente é a sua conta do **OpenAI Codex** · normalmente com a conta de US$ 20/mês (ChatGPT Plus) tudo se resolve. Tem novos planos agora de R$ 500-1000/mês com 5x ou 20x mais capacidade · se você começar a usar bastante, talvez seja necessário aumentar.\n\n**Cuidado importante:** se você for usar uma API direta (Anthropic, OpenAI, ou qualquer outra LLM), isso pode ficar muito caro · de US$ 300 a US$ 500/mês ou mais. Tome cuidado com isso."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Comandos úteis"
+      },
+      {
+        "type": "text",
+        "content": "Guarda esses comandos · você vai usar bastante daqui pra frente."
+      },
+      {
+        "type": "command-line",
+        "label": "Status do gateway",
+        "command": "openclaw gateway status"
+      },
+      {
+        "type": "command-line",
+        "label": "Ver logs em tempo real",
+        "command": "openclaw gateway logs"
+      },
+      {
+        "type": "command-line",
+        "label": "Reiniciar serviço",
+        "command": "systemctl restart openclaw"
+      },
+      {
+        "type": "command-line",
+        "label": "Atualizar OpenClaw pra última versão",
+        "command": "openclaw upgrade"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Erros comuns"
+      },
+      {
+        "type": "text",
+        "content": "Travou em algum passo? Aqui estão os 4 erros mais comuns. Clica no que se parece com seu problema."
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "command not found: openclaw",
+            "accent": "coral",
+            "content": "PATH não atualizou após instalação. Roda no terminal:\n\n`source ~/.bashrc`\n\nOu abre uma nova sessão SSH. Se persistir:\n\n`export PATH=$PATH:/usr/local/bin`"
+          },
+          {
+            "title": "Invalid API key / login OpenAI falhou",
+            "accent": "magenta",
+            "content": "Confere se sua conta OpenAI tem **ChatGPT Plus ativo** e billing OK. O browser login não usa API key · usa o login da sua conta. Se a conta estiver sem Plus, o Codex não vai aceitar."
+          },
+          {
+            "title": "Bot não responde após /start",
+            "accent": "violet",
+            "content": "1. Confere se gateway está running: `openclaw gateway status`\n2. Confere se provider Telegram foi adicionado: `openclaw provider list`\n3. Vê os logs em tempo real: `openclaw gateway logs`\n4. Reinicia o serviço se nada acima resolver: `systemctl restart openclaw`"
+          },
+          {
+            "title": "Gateway falhou ao subir",
+            "accent": "blue",
+            "content": "Porta 18789 ocupada? Roda:\n\n`ss -tlnp | grep 18789`\n\nSe aparecer outro processo, mata ele. Pra ver o erro real do systemd:\n\n`journalctl -u openclaw -n 50`"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint da Etapa 1"
+      },
+      {
+        "type": "text",
+        "content": "Marca cada item conforme você completa. O progresso fica salvo · quando voltar nessa página, continua de onde parou."
+      },
+      {
+        "id": "encontro-02-02-checkpoint",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "VPS Hostinger KVM 2 contratada (Ubuntu 24.04)",
+            "description": "IP e senha root guardados."
+          },
+          {
+            "title": "Conectado via SSH",
+            "description": "Prompt mostra root@hostname após login."
+          },
+          {
+            "title": "Sistema atualizado",
+            "description": "apt update/upgrade/autoremove rodaram sem erro."
+          },
+          {
+            "title": "Dependências instaladas",
+            "description": "build-essential, curl, file, git presentes."
+          },
+          {
+            "title": "OpenClaw instalado · gateway running",
+            "description": "openclaw gateway status retorna running."
+          },
+          {
+            "title": "Wizard concluído",
+            "description": "Local + OpenAI Codex + Codex 5.5 + daemon systemd."
+          },
+          {
+            "title": "Bot Telegram criado",
+            "description": "Token do BotFather guardado."
+          },
+          {
+            "title": "Telegram conectado ao OpenClaw",
+            "description": "openclaw provider add telegram concluído."
+          },
+          {
+            "title": "Allowlist configurada (dmPolicy = allowlist)",
+            "description": "Só seu chat_id está autorizado a falar com o bot."
+          },
+          {
+            "title": "Primeira mensagem trocada",
+            "description": "Bot respondeu ao /start e ao primeiro teste."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Etapa 1 fechada · seu agente está vivo",
+        "content": "Você acabou de subir um agente OpenClaw 24/7 numa VPS, conectado ao seu Telegram, com segurança básica de allowlist ativa. **Próxima etapa: Segurança (~28 min)** · vamos blindar o servidor com firewall, fail2ban e proteção de credenciais antes de dar identidade ao agente.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Prompt para o agente"
+      },
+      {
+        "type": "text",
+        "content": "Cola o prompt abaixo no chat do bot no Telegram. Ele vai validar se tudo está configurado e otimizado · sem mexer em nada, só análise."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Etapa 1 · Auditoria do setup",
+        "target": "telegram",
+        "content": "Acabei de fazer o setup do OpenClaw na VPS. Quero que você **apenas analise** se está tudo funcionando e otimizado · não execute mudanças, não configure nada do zero. Só valida o que já foi feito e me dá um relatório.\n\nFaz a análise item por item:\n\n1. **Gateway** · Roda `openclaw gateway status` e confirma que retorna `running`.\n\n2. **Provider e modelo** · Confirma:\n   · provider configurado (OpenAI Codex)\n   · modelo Codex 5.5 ativo\n   · login do browser concluído (sem API key hardcoded)\n\n3. **tools.profile** · Confere se está como `full` (não `messaging`). Se estiver `messaging`, alerta · esse perfil bloqueia exec/shell e o agente não consegue rodar comandos.\n\n4. **Failover** · Confere se há cadeia de fallback configurada para casos de instabilidade do provider primário.\n\n5. **Telegram conectado** · Confirma:\n   · provider Telegram presente\n   · `dmPolicy = allowlist`\n   · só meu chat_id está autorizado\n\n6. **Token optimization** · Confere a config de session initialization. Ideal: carrega só SOUL.md, USER.md, IDENTITY.md, daily memory · não 50KB de história. Reduz custos de ~$2-3/dia pra ~$0.10/dia.\n\n7. **Timezone** · Confere `OPENCLAW_TZ=America/Sao_Paulo` no systemd. Sem isso, crons rodam em UTC (3h de diferença) e disparam fora de hora.\n\n8. **Health check** · Roda um teste pequeno provando shell access (ex: `echo SHELL_TEST_OK`). Se retornar a string, exec está habilitado.\n\nMe responde no formato:\n\n```\n🚀 Auditoria do setup · Etapa 1\n\n1. Gateway · ✅ running\n2. Provider/modelo · ✅ Codex 5.5\n3. tools.profile · ✅ full\n4. Failover · ✅ configurado\n5. Telegram · ✅ allowlist + 1 chat_id\n6. Token optimization · ✅ ativada\n7. Timezone · ✅ America/Sao_Paulo\n8. Shell access · ✅ OK\n\nScore final: 10/10 · setup completo.\nPode seguir pra Etapa 2 (Segurança).\n```\n\nSe algo não passar, ajusta o score (ex: 7/10) e lista o que precisa corrigir antes de seguir.\n\nNão executa nenhuma mudança · só análise. Vamos lá."
+      }
+    ],
+    "number": "01",
+    "status": "available",
+    "duration": 55,
+    "schedule": [
+      {
+        "title": "O que é OpenClaw",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 1 · Criar VPS Hostinger",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 2 · Conectar via SSH",
+        "duration": "3 min"
+      },
+      {
+        "title": "Passo 3 · Atualizar VPS",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 4 · Dependências básicas",
+        "duration": "3 min"
+      },
+      {
+        "title": "Passo 5 · Instalar OpenClaw",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 6 · Wizard de configuração",
+        "duration": "8 min"
+      },
+      {
+        "title": "Passo 7 · Validar gateway",
+        "duration": "2 min"
+      },
+      {
+        "title": "Passo 8 · Criar bot Telegram",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 9 · Conectar Telegram",
+        "duration": "3 min"
+      },
+      {
+        "title": "Passo 10 · Allowlist via Claude Code",
+        "duration": "5 min"
+      },
+      {
+        "title": "Passo 11 · Primeiro teste",
+        "duration": "3 min"
+      },
+      {
+        "title": "Quanto custa",
+        "duration": "1 min"
+      },
+      {
+        "title": "Comandos úteis",
+        "duration": "1 min"
+      },
+      {
+        "title": "Erros comuns",
+        "duration": "2 min"
+      },
+      {
+        "title": "Checkpoint",
+        "duration": "2 min"
+      }
+    ],
+    "subtitle": "VPS Hostinger · Ubuntu · OpenClaw · Telegram · primeiro \"Oi\"",
+    "shortTitle": "Setup",
+    "learningGoals": [
+      "Entender o que é OpenClaw e a arquitetura Gateway · Agente · Canal",
+      "Provisionar VPS Hostinger KVM 2 (R$ 49/mês · Ubuntu 24.04 · São Paulo)",
+      "Conectar via SSH com IP e senha root",
+      "Atualizar Ubuntu (apt update/upgrade/autoremove) e instalar dependências",
+      "Instalar OpenClaw com instalador oficial em uma linha",
+      "Completar wizard: Local + OpenAI Codex + browser login + Codex 5.5 + daemon",
+      "Validar que o gateway está running",
+      "Criar bot Telegram via @BotFather e capturar token",
+      "Conectar Telegram ao OpenClaw com openclaw provider add telegram",
+      "Configurar dmPolicy=allowlist via Claude Code (CRÍTICO)",
+      "Trocar primeira mensagem com o agente no Telegram",
+      "Diagnosticar erros comuns via accordion de troubleshooting"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# ContextOS - Tech Stack
+# Preenchido durante: *setup-context Fase 8
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+course_platform: null   # Hotmart | Eduzz | Kiwify | propria
+checkout: null          # Stripe | PagSeguro | Hotmart | ...
+crm: null
+email_marketing: null
+analytics: []
+frontend: []
+backend: []
+database: []
+infrastructure: []
+ai_tools: []
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

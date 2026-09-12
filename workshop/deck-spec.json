@@ -1,0 +1,639 @@
+[
+  {
+    "id": "S01",
+    "function": "title",
+    "action_title": "TIMES DE IA",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "TIMES DE IA",
+      "Do conhecimento disperso a uma operação que trabalha com você"
+    ],
+    "structure": "title",
+    "speaker_notes": "Conecte este momento à aula correspondente. Do conhecimento disperso a uma operação que trabalha com você. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S02",
+    "function": "statement",
+    "action_title": "Vá além do ChatGPT e do Claude",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Vá além do ChatGPT e do Claude",
+      "Tenha agentes de IA autônomos operando a sua empresa"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. Tenha agentes de IA autônomos operando a sua empresa. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S03",
+    "function": "timeline",
+    "action_title": "Da primeira tarefa à empresa agêntica",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Da primeira tarefa à empresa agêntica",
+      "Automatizar · coordenar · operar áreas · evoluir"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Automatizar · coordenar · operar áreas · evoluir. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S04",
+    "function": "statement",
+    "action_title": "Você já tem o combustível",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Você já tem o combustível",
+      "Conversas, documentos, decisões, exemplos, produtos e processos"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. Conversas, documentos, decisões, exemplos, produtos e processos. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S05",
+    "function": "statement",
+    "action_title": "O problema é que nada disso trabalha junto",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "O problema é que nada disso trabalha junto",
+      "A IA recebe pedidos, mas não conhece a operação"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. A IA recebe pedidos, mas não conhece a operação. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S06",
+    "function": "timeline",
+    "action_title": "Hoje vamos conectar tudo",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Hoje vamos conectar tudo",
+      "Ambiente · contexto · Zeus · conteúdo · oferta · copy · criativos · tráfego"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Ambiente · contexto · Zeus · conteúdo · oferta · copy · criativos · tráfego. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S07",
+    "function": "section",
+    "action_title": "A ferramenta não é o sistema",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A ferramenta não é o sistema",
+      "Fundamentos"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Fundamentos. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S08",
+    "function": "comparison",
+    "action_title": "Chat responde. Agente executa.",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Chat responde. Agente executa.",
+      "Conversa sob demanda | Objetivo + ferramentas + registro"
+    ],
+    "structure": "comparison",
+    "speaker_notes": "Conecte este momento à aula correspondente. Conversa sob demanda | Objetivo + ferramentas + registro. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S09",
+    "function": "cards",
+    "action_title": "Quatro peças formam o segundo cérebro",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Quatro peças formam o segundo cérebro",
+      "Contexto | Skills | Repertório | Rotinas"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Contexto | Skills | Repertório | Rotinas. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S10",
+    "function": "statement",
+    "action_title": "O modelo pensa. O ambiente permite agir.",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "O modelo pensa. O ambiente permite agir.",
+      "Claude Code e Codex são ambientes; modelos são inteligências"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. Claude Code e Codex são ambientes; modelos são inteligências. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S11",
+    "function": "cards",
+    "action_title": "Escolha capacidade conforme a tarefa",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Escolha capacidade conforme a tarefa",
+      "Rápido | Equilibrado | Máxima capacidade"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Rápido | Equilibrado | Máxima capacidade. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S12",
+    "function": "section",
+    "action_title": "A instalação começa por uma conversa",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A instalação começa por uma conversa",
+      "Setup"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Setup. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S13",
+    "function": "timeline",
+    "action_title": "Desktop primeiro. A IA faz o resto.",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Desktop primeiro. A IA faz o resto.",
+      "Baixar · entrar · abrir pasta · ler README · instalar · conferir"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Baixar · entrar · abrir pasta · ler README · instalar · conferir. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S14",
+    "function": "demo",
+    "action_title": "Não copie comandos. Entregue a missão.",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Não copie comandos. Entregue a missão.",
+      "Leia o README e configure meu ambiente"
+    ],
+    "structure": "demo",
+    "speaker_notes": "Conecte este momento à aula correspondente. Leia o README e configure meu ambiente. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S15",
+    "function": "section",
+    "action_title": "Sem contexto, nenhuma skill trabalha",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Sem contexto, nenhuma skill trabalha",
+      "ContextOS"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. ContextOS. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S16",
+    "function": "comparison",
+    "action_title": "Formulário cheio não é contexto confiável",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Formulário cheio não é contexto confiável",
+      "Placeholder | Fato com fonte e revisão"
+    ],
+    "structure": "comparison",
+    "speaker_notes": "Conecte este momento à aula correspondente. Placeholder | Fato com fonte e revisão. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S17",
+    "function": "cards",
+    "action_title": "Conte sua empresa de três formas",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Conte sua empresa de três formas",
+      "Entrevista | Áudio | Documentos"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Entrevista | Áudio | Documentos. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S18",
+    "function": "timeline",
+    "action_title": "O ContextOS cresce sem inventar",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "O ContextOS cresce sem inventar",
+      "Quick · Deep · Enrich · Revisão · Gate"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Quick · Deep · Enrich · Revisão · Gate. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S19",
+    "function": "demo",
+    "action_title": "O dono valida a verdade do negócio",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "O dono valida a verdade do negócio",
+      "Produto · público · promessa · prova · limite"
+    ],
+    "structure": "demo",
+    "speaker_notes": "Conecte este momento à aula correspondente. Produto · público · promessa · prova · limite. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S20",
+    "function": "section",
+    "action_title": "Zeus transforma direção em execução",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Zeus transforma direção em execução",
+      "Orquestração"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Orquestração. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S21",
+    "function": "timeline",
+    "action_title": "Um pedido atravessa o time sem perder contexto",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Um pedido atravessa o time sem perder contexto",
+      "Dono · Zeus · líder · especialista · revisão"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Dono · Zeus · líder · especialista · revisão. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S22",
+    "function": "cards",
+    "action_title": "Todo despacho precisa ser conferível",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Todo despacho precisa ser conferível",
+      "Cliente | Fonte | Objetivo | Executor | Critério"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Cliente | Fonte | Objetivo | Executor | Critério. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S23",
+    "function": "statement",
+    "action_title": "O portal mostra. A memória guarda.",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "O portal mostra. A memória guarda.",
+      "O loop atualiza; Zeus consulta"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. O loop atualiza; Zeus consulta. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S24",
+    "function": "timeline",
+    "action_title": "Cada dia prepara o seguinte",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Cada dia prepara o seguinte",
+      "Sessões · extração · revisão · portal · briefing"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Sessões · extração · revisão · portal · briefing. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S25",
+    "function": "demo",
+    "action_title": "Teste a memória em uma nova sessão",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Teste a memória em uma nova sessão",
+      "Onde paramos e o que faço agora?"
+    ],
+    "structure": "demo",
+    "speaker_notes": "Conecte este momento à aula correspondente. Onde paramos e o que faço agora?. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S26",
+    "function": "section",
+    "action_title": "A primeira entrega torna o sistema real",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A primeira entrega torna o sistema real",
+      "Conteúdo"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Conteúdo. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S27",
+    "function": "timeline",
+    "action_title": "A imagem entra depois da ideia",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A imagem entra depois da ideia",
+      "Tese · headline · sequência · CTA · visual · revisão"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Tese · headline · sequência · CTA · visual · revisão. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S28",
+    "function": "demo",
+    "action_title": "Crie um carrossel do seu negócio",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Crie um carrossel do seu negócio",
+      "Contexto e identidade obrigatórios"
+    ],
+    "structure": "demo",
+    "speaker_notes": "Conecte este momento à aula correspondente. Contexto e identidade obrigatórios. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S29",
+    "function": "break",
+    "action_title": "ALMOÇO",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "ALMOÇO",
+      "Voltamos para transformar mensagem em campanha"
+    ],
+    "structure": "break",
+    "speaker_notes": "Conecte este momento à aula correspondente. Voltamos para transformar mensagem em campanha. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S30",
+    "function": "section",
+    "action_title": "Uma campanha forte começa na oferta",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Uma campanha forte começa na oferta",
+      "Oferta"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Oferta. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S31",
+    "function": "cards",
+    "action_title": "Valor precisa ser compreensível",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Valor precisa ser compreensível",
+      "Público | Promessa | Entrega | Mecanismo | Prova"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Público | Promessa | Entrega | Mecanismo | Prova. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S32",
+    "function": "statement",
+    "action_title": "A copy não inventa o que a oferta não sustenta",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A copy não inventa o que a oferta não sustenta",
+      "Condições reais entram; lacunas ficam visíveis"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. Condições reais entram; lacunas ficam visíveis. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S33",
+    "function": "section",
+    "action_title": "Cada canal muda a forma da mensagem",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Cada canal muda a forma da mensagem",
+      "Copy"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Copy. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S34",
+    "function": "cards",
+    "action_title": "Um time, várias rotas",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Um time, várias rotas",
+      "Anúncio | WhatsApp | VSL | Página | Webinar"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Anúncio | WhatsApp | VSL | Página | Webinar. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S35",
+    "function": "timeline",
+    "action_title": "Método antes de volume",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Método antes de volume",
+      "Briefing · estratégia · produção · Oráculo · derivados"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Briefing · estratégia · produção · Oráculo · derivados. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S36",
+    "function": "section",
+    "action_title": "Criativo bonito ainda pode estar errado",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Criativo bonito ainda pode estar errado",
+      "Criativos"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Criativos. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S37",
+    "function": "cards",
+    "action_title": "A peça nasce de quatro decisões",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A peça nasce de quatro decisões",
+      "Copy | direção | referência | formato"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Copy | direção | referência | formato. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S38",
+    "function": "demo",
+    "action_title": "Abra o arquivo antes de aprovar",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Abra o arquivo antes de aprovar",
+      "Texto · marca · pessoa · produto · CTA"
+    ],
+    "structure": "demo",
+    "speaker_notes": "Conecte este momento à aula correspondente. Texto · marca · pessoa · produto · CTA. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S39",
+    "function": "section",
+    "action_title": "Peça pronta ainda não é campanha",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Peça pronta ainda não é campanha",
+      "Tráfego"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Tráfego. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S40",
+    "function": "timeline",
+    "action_title": "O clique precisa chegar a algum lugar",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "O clique precisa chegar a algum lugar",
+      "Origem · destino · conversão · acompanhamento"
+    ],
+    "structure": "timeline",
+    "speaker_notes": "Conecte este momento à aula correspondente. Origem · destino · conversão · acompanhamento. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S41",
+    "function": "cards",
+    "action_title": "Meta exige configuração por camadas",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Meta exige configuração por camadas",
+      "App | System User | ativos | permissões | token"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. App | System User | ativos | permissões | token. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S42",
+    "function": "statement",
+    "action_title": "Criada não significa veiculando",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Criada não significa veiculando",
+      "Rascunho · pausada · análise · ativa · entregando"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. Rascunho · pausada · análise · ativa · entregando. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S43",
+    "function": "proof",
+    "action_title": "Você construiu uma cadeia completa",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Você construiu uma cadeia completa",
+      "Contexto → conteúdo → oferta → copy → criativo → campanha"
+    ],
+    "structure": "proof",
+    "speaker_notes": "Conecte este momento à aula correspondente. Contexto → conteúdo → oferta → copy → criativo → campanha. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S44",
+    "function": "section",
+    "action_title": "Agora transforme o começo em operação",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Agora transforme o começo em operação",
+      "Core IA Mentoria"
+    ],
+    "structure": "section",
+    "speaker_notes": "Conecte este momento à aula correspondente. Core IA Mentoria. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S45",
+    "function": "comparison",
+    "action_title": "Workshop instala a base. Mentoria acompanha a implementação.",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Workshop instala a base. Mentoria acompanha a implementação.",
+      "Primeira execução | Contexto, funcionários digitais, integrações, rotinas e evolução"
+    ],
+    "structure": "comparison",
+    "speaker_notes": "Conecte este momento à aula correspondente. Primeira execução | Contexto, funcionários digitais, integrações, rotinas e evolução. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S46",
+    "function": "statement",
+    "action_title": "Da primeira tarefa à empresa inteira",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Da primeira tarefa à empresa inteira",
+      "Agentes de IA operando áreas do seu negócio"
+    ],
+    "structure": "statement",
+    "speaker_notes": "Conecte este momento à aula correspondente. Agentes de IA operando áreas do seu negócio. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S47",
+    "function": "cards",
+    "action_title": "A proposta precisa ser confirmada",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "A proposta precisa ser confirmada",
+      "Formato | duração | entregas | investimento | vagas | CTA"
+    ],
+    "structure": "cards",
+    "speaker_notes": "Conecte este momento à aula correspondente. Formato | duração | entregas | investimento | vagas | CTA. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S48",
+    "function": "cta",
+    "action_title": "Quer construir isso no seu negócio?",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "Quer construir isso no seu negócio?",
+      "[CTA OFICIAL DA MENTORIA]"
+    ],
+    "structure": "cta",
+    "speaker_notes": "Conecte este momento à aula correspondente. [CTA OFICIAL DA MENTORIA]. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  },
+  {
+    "id": "S49",
+    "function": "closing",
+    "action_title": "SEU TIME COMEÇA PELO PRÓXIMO PEDIDO",
+    "audience_movement": "Avançar da curiosidade para uma decisão ou ação concreta",
+    "visible_copy": [
+      "SEU TIME COMEÇA PELO PRÓXIMO PEDIDO",
+      "Decisões · entregas · pendências · próxima rotina"
+    ],
+    "structure": "closing",
+    "speaker_notes": "Conecte este momento à aula correspondente. Decisões · entregas · pendências · próxima rotina. Não leia o slide; demonstre ou conte um caso real.",
+    "evidence": "Fonte local do workshop/CoreAI Mentoria"
+  }
+]

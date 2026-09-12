@@ -1,0 +1,74 @@
+# ContextOS - Company Profile
+# Preenchido durante: *setup-context Fase 1 e Fase 3
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+company_essence:
+  legal_name: null
+  trade_name: null
+  year_founded: null
+  headquarters: null  # cidade/estado
+  one_liner: null     # Uma frase que define a empresa
+  origin_story_short: null  # 2-3 frases da historia
+  status: INCOMPLETE  # COMPLETE | INCOMPLETE
+
+mission:
+  statement: null
+  who_benefits: null
+  transformation: null  # Que transformacao entrega
+  proof_of_traction: null
+
+vision:
+  statement: null
+  timeframe: null  # 3, 5, 10 anos
+  proof_of_traction: null
+
+values:
+  - name: null
+    definition: null
+    daily_manifestation: null
+  - name: null
+    definition: null
+    daily_manifestation: null
+  - name: null
+    definition: null
+    daily_manifestation: null
+
+positioning:
+  target_market: null
+  unique_angle: null
+  primary_promise: null
+  credibility_foundation: null
+
+products:
+  - name: null
+    type: null  # curso | mentoria | servico | SaaS | fisico
+    positioning: null
+    revenue_share: null  # % da receita
+
+market_analysis:
+  total_addressable_market: null
+  market_segment: null
+  competitive_landscape: null
+  market_timing: null
+
+stage:
+  current_stage: null  # Seed (<100K) | Growth (100K-1M) | Scale (1M-10M) | Mature (>10M)
+
+key_metrics:
+  annual_revenue: null
+  year_over_year_growth: null
+  customer_count: null
+  customer_retention_rate: null
+  ltv_average: null
+
+company_voice:
+  tone: null
+  vocabulary: []
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

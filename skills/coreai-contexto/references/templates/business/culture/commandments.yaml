@@ -1,0 +1,20 @@
+# ContextOS - Commandments (Mandamentos)
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+commandments:
+  - number: 1
+    statement: null   # Ex: "Sempre entregue mais do que prometeu"
+    context: null
+  - number: 2
+    statement: null
+    context: null
+  - number: 3
+    statement: null
+    context: null
+
+mantras: []           # Frases curtas repetidas internamente
+
+metadata:
+  status: INCOMPLETE

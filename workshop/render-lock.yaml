@@ -1,0 +1,6 @@
+mode: palco
+canvas: 1920x1080
+colors: {background: '#050505', surface: '#101010', accent: '#2B7DE1', text: '#F4EFE5', dim: '#9BA6B2'}
+fonts: {display: Arial Black, body: Arial, mono: monospace}
+forbidden: [stock_photos, paragraphs, invented_metrics, unconfirmed_offer_terms]
+assets: {portal: live_demo, opportunity_2026: pending_source, pitch_terms: pending_founder}

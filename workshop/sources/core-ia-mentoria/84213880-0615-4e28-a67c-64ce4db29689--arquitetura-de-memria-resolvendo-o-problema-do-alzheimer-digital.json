@@ -1,0 +1,568 @@
+{
+  "id": "84213880-0615-4e28-a67c-64ce4db29689",
+  "titulo": "Arquitetura de Memória: Resolvendo o Problema do Alzheimer Digital",
+  "lesson_payload": {
+    "id": "encontro-02-05",
+    "tag": "Etapa 4",
+    "title": "Arquitetura de Memória: Resolvendo o Problema do Alzheimer Digital",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que esta etapa existe"
+      },
+      {
+        "type": "text",
+        "content": "Sem memória, seu agente tem **Alzheimer digital**. Toda nova conversa começa do zero · você precisa explicar de novo quem é seu sócio, qual decisão você tomou semana passada, qual erro o time cometeu mês passado. Em uma semana, isso vira insuportável."
+      },
+      {
+        "type": "text",
+        "content": "**Esta etapa dá memória de verdade pro agente.** Não é \"chat history\" do ChatGPT · é uma estrutura organizada com decisões, lições, projetos, pessoas, ideias e objetivos. O agente carrega o essencial no boot e busca o resto sob demanda. Custa centavos em tokens, mas elimina 100% das conversas \"deixa eu te explicar de novo\"."
+      },
+      {
+        "type": "callout",
+        "title": "Memória em 4 camadas",
+        "content": "Carregada SEMPRE no boot · USER + SOUL + AGENTS + IDENTITY + BOOT (~5KB) · Buscada SOB DEMANDA · decisions, lessons, projects, people, sessions, ideas, objectives (até 100KB+ de contexto, mas só quando precisa). Esta arquitetura é a diferença entre agente caro e lento e agente rápido e barato.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Memória é complementada conversando",
+        "content": "Os arquivos abaixo NÃO precisam ser preenchidos do zero agora. Você cria a estrutura nesta etapa, mas eles vão crescer **conforme você conversa com o agente**. Sempre que quiser registrar algo, fala: **\"registra isso\"**, **\"salva isso na memória\"**, **\"coloca isso nas pendências\"**, **\"adiciona aos projetos\"**. O agente cuida de salvar no arquivo certo. Esta etapa é só pra criar a estrutura · daqui pra frente, é uso natural.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "O problema · Alzheimer digital",
+        "content": "Sem memória persistente, todo dia você começa do zero. Conta tudo de novo. O agente esquece a decisão que vocês tomaram ontem. Não sabe quem é seu sócio, qual o estado do projeto, que cliente já reclamou disso 3 vezes.\n\nMemória **não é luxo** · é a diferença entre um chatbot e um agente. Sem isso, ele é só ChatGPT com cara nova.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Tudo roda no chat do Telegram",
+        "content": "Diferente da Etapa 3 (Identidade · que precisa do Mac local pra rodar a skill), aqui **NÃO precisa** de Claude Code, SSH ou nada externo. Você cola os prompts abaixo no chat do agente no Telegram, um de cada vez · ele faz o resto.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Solução · memória em 4 camadas"
+      },
+      {
+        "type": "text",
+        "content": "Em vez de carregar TUDO toda hora (caro, lento, estoura tokens), dividimos em 4 camadas. As 2 primeiras carregam sempre · as 2 últimas só quando precisa. Resultado: redução de 50KB de history pra 8KB de contexto inicial · 80% mais barato."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "layers",
+            "title": "Sempre carregado · pequeno",
+            "description": "MEMORY.md (índice geral) + sessions/HOJE.md + sessions/ONTEM.md. ~5KB. Carrega no boot de toda sessão."
+          },
+          {
+            "icon": "layers",
+            "title": "Pendências · alerta automático",
+            "description": "pending.md · itens aguardando sua decisão. Carrega sempre. Agente lembra antes de você esquecer."
+          },
+          {
+            "icon": "layers",
+            "title": "Sob demanda · grande",
+            "description": "decisions, lessons, people, projects/. Buscado via memory_search() quando você pergunta algo que precisa contexto."
+          },
+          {
+            "icon": "layers",
+            "title": "Estratégico · raramente",
+            "description": "objectives.md, business-context.md, ideas.md. Buscado em decisões grandes ou planejamento."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "callout",
+        "title": "Busca semântica nativa desde Março 2026",
+        "content": "O `memory_search()` funciona **sem chave de API externa** (OpenAI/Gemini). Embedding built-in. Quando você pergunta \"qual cor preferida do meu cliente?\", o agente busca semanticamente em decisions, projects, people · acha o trecho certo · responde.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 8 arquivos de memória"
+      },
+      {
+        "type": "text",
+        "content": "Cada arquivo tem um propósito claro. Não é arquivo solto · é estrutura. O agente sabe onde buscar e onde escrever."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "decisions.md",
+            "accent": "cyan",
+            "description": "Decisões permanentes que você tomou · operacionais, técnicas, comerciais, de time, de posicionamento. Não muda toda hora · vira regra."
+          },
+          {
+            "title": "lessons.md",
+            "accent": "violet",
+            "description": "Erros e aprendizados · 🔒 estratégicas (permanentes) e ⏳ táticas (expiram em 30 dias). \"Não fiz X porque deu Y errado em [data]\"."
+          },
+          {
+            "title": "projects/{nome}.md",
+            "accent": "lime",
+            "description": "Um arquivo por projeto ativo. Estado atual, decisões, próximos passos, pendências. Busca semântica acha o projeto certo sem trazer outros junto."
+          },
+          {
+            "title": "people.md",
+            "accent": "coral",
+            "description": "Pessoas no contexto · time, sócios, clientes, fornecedores. Como cada um se comunica, o que valoriza, histórico."
+          },
+          {
+            "title": "pending.md",
+            "accent": "magenta",
+            "description": "Aguardando seu input · ordenado por urgência. Agente puxa antes de você esquecer."
+          },
+          {
+            "title": "ideas.md",
+            "accent": "blue",
+            "description": "Ideias capturadas · produto, conteúdo, processo, negócio, pessoal. Banco que se auto-organiza."
+          },
+          {
+            "title": "objectives.md",
+            "accent": "teal",
+            "description": "Objetivos · com seções EMPRESA (faturamento, time, produtos, palestras, audiência, operação) e PESSOAL (financeiro, material, profissional, vida)."
+          },
+          {
+            "title": "business-context.md",
+            "accent": "cyan",
+            "description": "Contexto do negócio · modelo, ICP, oferta, métricas, fase. Ancoragem estratégica pra decisões."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Critério rápido · o que vai onde"
+      },
+      {
+        "type": "text",
+        "content": "Quando você for pedir pro agente salvar algo, aponta direto pro arquivo certo. Tabela de referência rápida do PRD oficial:"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "file-text",
+            "title": "Decisão que não pode mudar",
+            "description": "→ memory/context/decisions.md · regras permanentes do negócio, técnicas, posicionamento. Não muda toda hora."
+          },
+          {
+            "icon": "file-text",
+            "title": "Erro que não pode repetir",
+            "description": "→ memory/context/lessons.md · 🔒 estratégicas (permanentes) ou ⏳ táticas (30 dias)."
+          },
+          {
+            "icon": "file-text",
+            "title": "Status de projeto",
+            "description": "→ memory/projects/nome-do-projeto.md · um arquivo por projeto ativo."
+          },
+          {
+            "icon": "file-text",
+            "title": "Aguardando seu input",
+            "description": "→ memory/pending.md · ordenado por urgência, carrega sempre."
+          },
+          {
+            "icon": "file-text",
+            "title": "O que aconteceu hoje",
+            "description": "→ memory/sessions/YYYY-MM-DD.md · diário do dia, criado automaticamente."
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Carregado sempre vs Buscado sob demanda"
+      },
+      {
+        "type": "text",
+        "content": "Pra economizar tokens, o agente carrega só o essencial no boot · o resto busca quando precisa. Saber o que é o quê ajuda a entender por que o agente \"esquece\" às vezes (se você pedir algo que está em arquivo sob demanda, ele precisa buscar primeiro)."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Carregado SEMPRE no boot · ~5KB",
+            "accent": "cyan",
+            "description": "SOUL.md (personalidade) · USER.md (você) · AGENTS.md (regras) · MEMORY.md (índice) · memory/sessions/HOJE.md · memory/sessions/ONTEM.md · memory/pending.md · entra em toda sessão automaticamente."
+          },
+          {
+            "title": "Buscado SOB DEMANDA · via memory_search()",
+            "accent": "violet",
+            "description": "memory/context/decisions.md · memory/context/lessons.md · memory/context/people.md · memory/context/business-context.md · memory/projects/*.md · memory/ideas.md · memory/objectives.md · memory/integrations/ · só carrega quando você pergunta algo que precisa do conteúdo."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Estrutura final da pasta memory/"
+      },
+      {
+        "code": "memory/\n├── MEMORY.md              ← índice geral (sempre carregado)\n├── pending.md             ← aguardando seu input (sempre carregado)\n├── ideas.md               ← banco de ideias\n├── objectives.md          ← objetivos · empresa + pessoal\n├── context/\n│   ├── decisions.md       ← regras permanentes\n│   ├── lessons.md         ← erros e aprendizados\n│   ├── people.md          ← equipe, parceiros, contatos\n│   └── business-context.md\n├── projects/              ← um arquivo por projeto ativo\n│   ├── projeto-a.md\n│   └── projeto-b.md\n├── sessions/              ← diário · um arquivo por dia\n│   ├── HOJE.md\n│   ├── ONTEM.md\n│   └── 2026-05-06.md\n├── integrations/          ← mapa de ferramentas, IDs, acessos\n└── feedback/              ← approve/reject pra evolução",
+        "type": "code",
+        "language": "text"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Configurar tudo de uma vez · prompt master"
+      },
+      {
+        "type": "text",
+        "content": "Cria toda a estrutura de pastas, arquivos vazios com headers, atualiza MEMORY.md com índice, atualiza AGENTS.md com regra inviolável de extração e configura compaction. Cola no chat do agente."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt master · cria estrutura de memória",
+        "target": "telegram",
+        "content": "Quero que você crie toda a estrutura de memória do meu agente de uma vez.\n\n**1. Cria estrutura de pastas em ~/.openclaw/memory/:**\n· context/\n· projects/\n· sessions/\n· integrations/\n· feedback/\n\n**2. Cria os 8 arquivos vazios com headers:**\n· memory/MEMORY.md (índice geral)\n· memory/pending.md\n· memory/objectives.md (com seções EMPRESA e PESSOAL)\n· memory/ideas.md\n· memory/context/decisions.md\n· memory/context/lessons.md\n· memory/context/people.md\n· memory/context/business-context.md\n\nCada arquivo começa com:\n```\n# {NOME DO ARQUIVO}\n\n> {Descrição do propósito}\n\n## Conteúdo\n\n_(vazio · será populado nas próximas conversas)_\n```\n\n**3. Atualiza MEMORY.md com índice:**\nLista todos os 8 arquivos + instruções de quando ler cada um. Sempre carrega MEMORY.md, sessions/HOJE.md, sessions/ONTEM.md, pending.md no boot. Outros via memory_search().\n\n**4. Adiciona regra inviolável no AGENTS.md:**\n```\n## REGRA INVIOLÁVEL · Extrair antes de compactar\n\nAntes de compactar qualquer sessão ou conversa, extrai e salva:\n· Decisões tomadas → memory/context/decisions.md\n· Lições aprendidas → memory/context/lessons.md\n· Projetos discutidos → memory/projects/{nome}.md\n· Pendências → memory/pending.md\n\nCompactar SEM extrair = perder informação = falha grave.\n```\n\n**5. Configura compaction em openclaw.json:**\n```json\n{\n  \"compaction\": { \"mode\": \"default\" },\n  \"contextTokens\": 160000,\n  \"reserveTokensFloor\": 30000\n}\n```\n\n**6. Atualiza BOOT.md** pra incluir leitura de memory/MEMORY.md, sessions/HOJE.md, sessions/ONTEM.md, pending.md.\n\nMe reporta cada passo. Não popula conteúdo · só estrutura."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Popular cada arquivo · 7 prompts individuais"
+      },
+      {
+        "type": "text",
+        "content": "Cada arquivo é populado por um prompt de **entrevista** · agente te pergunta, você responde, ele escreve no arquivo certo. Roda um por vez · pode espalhar pelos dias se preferir. Não tem ordem obrigatória."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "1. decisions.md · decisões permanentes"
+      },
+      {
+        "type": "text",
+        "content": "Decisões que viram regra · 5 categorias · operacional, tecnológico, posicionamento, comercial, time. Não muda toda hora · ancora futuras decisões similares."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 1 · popular decisions.md",
+        "target": "telegram",
+        "content": "Quero popular memory/context/decisions.md. Me pergunta sobre 5 categorias (uma por vez):\n\n· Operacional · regras de como meu negócio opera\n· Tecnológico · stack, ferramentas, frameworks\n· Posicionamento · marca, voz, mensagem\n· Comercial · pricing, política, modelo\n· Time · quem faz o que, hierarquia\n\nA cada categoria, faz 3-5 perguntas. Anota cada decisão no formato:\n\n## [Categoria]\n· Decisão: [X]\n· Data: [hoje]\n· Motivo: [resumo]\n· Tags: [palavras-chave pra busca]\n\nNo fim, salva tudo em memory/context/decisions.md e me confirma o tamanho."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "2. lessons.md · erros e aprendizados"
+      },
+      {
+        "type": "text",
+        "content": "Lições têm 2 tipos: 🔒 **estratégicas** (permanentes · regem decisões grandes) e ⏳ **táticas** (expiram em 30 dias · regem decisões operacionais). Sem distinguir, lições antigas poluem o contexto."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 2 · popular lessons.md",
+        "target": "telegram",
+        "content": "Vamos popular memory/context/lessons.md. Lições têm 2 tipos:\n\n· 🔒 Estratégicas · permanentes, regem decisões grandes\n· ⏳ Táticas · 30 dias, regem decisões operacionais\n\nMe pergunta sobre os 5 maiores erros que cometi nos últimos 6 meses · um por vez. Pra cada um:\n\n· O que eu fiz\n· O que deu errado\n· Lição extraída\n· É estratégica ou tática?\n· Tags pra busca semântica\n\nSalva no formato:\n\n## [Estratégica/Tática] · [Tema]\n· Contexto: [o que aconteceu]\n· Lição: [o que aprendi]\n· Aplicação: [quando usar essa lição no futuro]\n· Tags: [palavras-chave]\n· Expira em: [permanente / data + 30 dias se tática]"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "3. projects/ · um arquivo por projeto"
+      },
+      {
+        "type": "text",
+        "content": "Em vez de um `projects.md` gigante, **um arquivo por projeto**. Por que? Busca semântica acha o projeto certo sem trazer contexto de outros projetos junto."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 3 · popular projects/",
+        "target": "telegram",
+        "content": "Quero popular memory/projects/. Cada projeto ativo vira um arquivo separado.\n\nMe pergunta:\n\n1. Quais são os projetos ativos hoje? Lista os nomes.\n2. Pra CADA projeto, faz uma entrevista (uma por vez):\n   · Qual o objetivo\n   · Estado atual (% de progresso)\n   · Próximos 3 passos\n   · Quem está envolvido\n   · Pendências/bloqueios\n   · Deadline (se tiver)\n\nCria um arquivo memory/projects/{slug-do-nome}.md por projeto.\n\nFormato:\n\n# Projeto · [Nome]\n\n## Objetivo\n[descrição]\n\n## Estado atual\n[% + bullets do que está feito]\n\n## Próximos passos\n1. ...\n2. ...\n3. ...\n\n## Pessoas envolvidas\n· [nome] · [papel]\n\n## Bloqueios e pendências\n· ..."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "4. people.md · time, parceiros, contatos"
+      },
+      {
+        "type": "text",
+        "content": "Pessoas no seu contexto e como interagir com cada uma. Como ela se comunica melhor, o que valoriza, histórico relevante. Sem isso, agente trata todo mundo igual · você perde nuance."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 4 · popular people.md",
+        "target": "telegram",
+        "content": "Vamos popular memory/context/people.md. Vou te falar das pessoas que importam no meu contexto · você anota cada uma.\n\nMe pergunta uma de cada vez:\n· Nome\n· Papel (sócio, time, cliente, fornecedor, parceiro)\n· Como ela se comunica (formal, casual, direto)\n· O que valoriza\n· Histórico relevante\n· Próximos toques esperados\n\nSalva agrupado por categoria:\n\n## Time interno\n## Sócios e parceiros\n## Clientes-chave\n## Fornecedores estratégicos\n\nCada pessoa no formato:\n\n### [Nome]\n· Papel: [X]\n· Comunicação: [como falar com ele]\n· Valoriza: [o que importa pra ele]\n· Histórico: [contexto relevante]\n· Tags: [busca]"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5. pending.md · aguardando sua decisão"
+      },
+      {
+        "type": "text",
+        "content": "Itens que estão parados esperando você decidir algo. Ordenados por urgência. Esse arquivo carrega SEMPRE no boot · agente lembra antes de você esquecer."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 5 · popular pending.md",
+        "target": "telegram",
+        "content": "Vamos popular memory/pending.md · itens aguardando minha decisão.\n\nMe pergunta:\n\n· Tem alguma decisão importante aberta agora?\n· Tem algo que alguém te pediu e você ainda não respondeu?\n· Tem cobrança/pagamento pendente?\n· Tem conversa que parou no meio?\n\nLista cada item com:\n· Descrição\n· Quem aguarda\n· Urgência (alta/média/baixa)\n· Deadline\n\nOrdena por urgência. Salva no formato:\n\n## ALTA urgência\n· [item] · aguarda [pessoa] · até [data]\n\n## MÉDIA urgência\n· ...\n\n## BAIXA urgência\n· ..."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "6. ideas.md · banco de ideias"
+      },
+      {
+        "type": "text",
+        "content": "Ideias capturadas em 5 categorias · produto, conteúdo, processo, negócio, pessoal. Sem esse banco, ideia boa que aparece no chat se perde quando a sessão fecha."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 6 · popular ideas.md",
+        "target": "telegram",
+        "content": "Vamos popular memory/ideas.md · banco de ideias capturadas.\n\nMe pergunta sobre 5 categorias (uma por vez):\n\n· Produto · features, lançamentos\n· Conteúdo · posts, vídeos, palestras\n· Processo · como melhorar a operação\n· Negócio · novos modelos, parcerias\n· Pessoal · projetos paralelos, hobbies\n\nA cada ideia que eu der, anota:\n· Categoria\n· Descrição\n· Estado (rascunho, validando, executando)\n· Tags\n\nSalva no formato:\n\n## Produto\n· [ideia] · [estado] · [tags]\n\n## Conteúdo\n· ..."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "7. objectives.md · empresa + pessoal"
+      },
+      {
+        "type": "text",
+        "content": "Objetivos onde você quer chegar. Tem 2 seções dentro do mesmo arquivo · **EMPRESA** (onde a empresa quer chegar) e **PESSOAL** (onde você quer chegar como pessoa). Empresa e pessoa não são a mesma coisa, embora estejam ligados · agente decide melhor sabendo qual lado de você está perguntando."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "briefcase",
+            "title": "EMPRESA · onde a empresa vai",
+            "description": "Faturamento (meta R$ X até Z) · Time (contratar/dispensar/sócio) · Produtos (lançamentos, MRR) · Palestras e reconhecimento · Audiência (seguidores, lista, comunidade) · Operação (sistemas, processos)"
+          },
+          {
+            "icon": "user",
+            "title": "PESSOAL · onde você vai",
+            "description": "Financeiro (guardar, investir, patrimônio) · Material (comprar, conquistar bens) · Profissional (skills novos, certificações) · Vida (família, saúde, lazer, viagens)"
+          }
+        ],
+        "fullWidth": true
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 7 · popular objectives.md",
+        "target": "telegram",
+        "content": "Vamos popular memory/objectives.md · meus objetivos.\n\nDuas seções: EMPRESA e PESSOAL.\n\n**EMPRESA** · me pergunta:\n· Faturamento · meta até quando?\n· Time · quero contratar/dispensar/sócio?\n· Produtos · lançamentos planejados?\n· Reconhecimento · palestrar onde?\n· Audiência · seguidores, lista, comunidade?\n· Operação · sistemas a montar?\n\n**PESSOAL** · me pergunta:\n· Financeiro · quanto guardar até quando?\n· Material · o que quero adquirir esse ano?\n· Profissional · skills, certificações?\n· Vida · família, saúde, lazer, viagens?\n\nSalva no formato:\n\n# Objectives\n\n## EMPRESA\n\n### Faturamento\n· Meta · [valor] até [data]\n\n### Time\n· ...\n\n### Produtos\n· ...\n\n[etc]\n\n## PESSOAL\n\n### Financeiro\n· ...\n\n### Material\n· ...\n\n[etc]\n\nCada objetivo com data declarada e tags pra busca."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Bônus · Dreaming (Light/Deep/REM)"
+      },
+      {
+        "type": "callout",
+        "title": "Dreaming roda no chat do agente · não no Cloud Code",
+        "content": "Esse é o erro mais comum · gente tenta rodar `/dreaming` no Claude Code da máquina e não funciona. **Dreaming é slash command que roda DENTRO do agente, no Telegram.** Em momentos ociosos (configurável), ele revisita memórias antigas, conecta padrões, e escreve insights em `DREAMS.md`.",
+        "variant": "info"
+      },
+      {
+        "type": "agenda-list",
+        "items": [
+          {
+            "title": "Light Sleep · ingestão",
+            "accent": "cyan",
+            "description": "Pega sinais de memória do dia, deduplica, prepara candidatos. Gera Light Sleep block · NÃO escreve em MEMORY.md ainda.",
+            "numberLabel": "LIGHT"
+          },
+          {
+            "title": "Deep Sleep · consolidação",
+            "accent": "violet",
+            "description": "Decide o que vira memória de longo prazo. ESCREVE em MEMORY.md. Cria Deep Sleep block. É a fase que persiste.",
+            "numberLabel": "DEEP"
+          },
+          {
+            "title": "REM · padrões e reflexão",
+            "accent": "lime",
+            "description": "Extrai meta-padrões e sinais reflexivos. Cria REM Sleep block. NÃO escreve em MEMORY.md · só análise.",
+            "numberLabel": "REM"
+          }
+        ],
+        "variant": "stripe"
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · ativar Dreaming",
+        "target": "telegram",
+        "content": "Quero ativar o modo Dreaming experimental.\n\n1. Ativa via slash commands no chat:\n   · `/dreaming on` · liga\n   · `/dreaming off` · desliga\n   · `/dreaming status` · mostra estado\n\n2. OU ativa via JSON config no plugin memory-core:\n   ```json\n   { \"dreaming\": { \"enabled\": true } }\n   ```\n\n3. Documenta no AGENTS.md:\n   · Frequência sugerida: domingo 22h (cron)\n   · 3 fases · Light → Deep → REM\n   · Output: DREAMS.md (humano) + memory/.dreams/ (interno) + memory/dreaming/phase/YYYY-MM-DD.md (relatórios opcionais)\n\nMe confirma estado e me dá um exemplo do que ele faria na primeira execução."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Auditoria final · score 0-10"
+      },
+      {
+        "type": "text",
+        "content": "Pra fechar a etapa, cola o prompt abaixo no chat do agente no Telegram. Ele vai fazer 8 análises **sem mexer em nada** · só leitura e relatório:\n\n· Confere a estrutura de pastas memory/ com tree\n· Lê MEMORY.md e valida o índice + regras de boot\n· Confere AGENTS.md com a regra inviolável de extração\n· Confere BOOT.md carregando memória\n· Valida config de compaction (contextTokens, reserveTokensFloor)\n· Audita população dos 8 arquivos · quantas linhas, conteúdo real ou placeholder\n· Confere status do Dreaming\n· Faz teste de retrieval em decisions.md · busca semântica\n\nResposta esperada · score 0-10 com breakdown por item. Se algo ficou fraco, ele aponta o que corrigir antes de você seguir pra Etapa 5."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt · Etapa 4 · Auditoria de memória",
+        "target": "telegram",
+        "content": "Acabei de configurar toda a memória. Quero que você **apenas analise** se está tudo certo · não muda nada.\n\nFaz a análise item por item:\n\n**1. Estrutura** · `tree memory/ -L 2` · confirma 5 pastas + 8 arquivos.\n\n**2. MEMORY.md** · lê e me diz se contém:\n· lista dos 8 arquivos\n· instruções de quando ler cada um\n· regra de boot (sempre carrega MEMORY + sessions HOJE/ONTEM + pending)\n\n**3. AGENTS.md** · confirma que tem a seção \"REGRA INVIOLÁVEL · Extrair antes de compactar\".\n\n**4. BOOT.md** · confirma que carrega memória no início de cada sessão.\n\n**5. Compaction** · lê `~/.openclaw/openclaw.json` e confirma:\n· contextTokens: 160000\n· reserveTokensFloor: 30000\n· compaction.mode: default\n\n**6. População** · pra cada um dos 8 arquivos, me diz:\n· tamanho em linhas\n· se tem conteúdo real ou só placeholder\n· se faltou alguma seção crítica\n\n**7. Dreaming** · `/dreaming status` · está ativo? Qual a configuração?\n\n**8. Teste de retrieval** · faz uma busca semântica em `decisions.md` por uma decisão recente · retorna o trecho.\n\nResponde:\n\n```\n🧠 Auditoria de memória · Etapa 4\n\n1. Estrutura · ✅\n2. MEMORY.md · ✅ índice + regras\n3. AGENTS.md · ✅ regra inviolável\n4. BOOT.md · ✅ carrega memória\n5. Compaction · ✅ configurado\n6. População · [N]/8 arquivos populados\n7. Dreaming · [estado]\n8. Retrieval · ✅ busca funciona\n\nScore: [N]/10\n```"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint da Etapa 4"
+      },
+      {
+        "id": "encontro-02-05-checkpoint",
+        "type": "checklist",
+        "items": [
+          {
+            "title": "Estrutura memory/ criada",
+            "description": "5 pastas + 8 arquivos com headers"
+          },
+          {
+            "title": "MEMORY.md como índice",
+            "description": "Lista todos os 8 arquivos + regras"
+          },
+          {
+            "title": "BOOT.md carrega memória",
+            "description": "MEMORY + sessions HOJE/ONTEM + pending toda sessão"
+          },
+          {
+            "title": "AGENTS.md regra inviolável",
+            "description": "Antes de compactar, salva decisions/lessons/pending/projects"
+          },
+          {
+            "title": "Compaction configurado",
+            "description": "contextTokens 160000, reserveTokensFloor 30000"
+          },
+          {
+            "title": "decisions.md populado",
+            "description": "5 categorias entrevistadas"
+          },
+          {
+            "title": "lessons.md populado",
+            "description": "5 maiores erros + lições estratégicas/táticas"
+          },
+          {
+            "title": "projects/ populado",
+            "description": "1 arquivo por projeto ativo"
+          },
+          {
+            "title": "people.md populado",
+            "description": "Pessoas com papel, comunicação, histórico"
+          },
+          {
+            "title": "pending.md populado",
+            "description": "Itens por urgência"
+          },
+          {
+            "title": "ideas.md populado",
+            "description": "5 categorias de ideias"
+          },
+          {
+            "title": "objectives.md populado",
+            "description": "EMPRESA + PESSOAL com áreas detalhadas"
+          },
+          {
+            "title": "Dreaming ativado",
+            "description": "/dreaming on no chat (opcional)"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Próxima etapa · Integrações & Crons",
+        "content": "Memória persistente ativa, agente lembra de você. Próxima · vamos conectar ele ao mundo: Google Workspace, Web Search, crons que rodam sem você pedir.",
+        "variant": "success"
+      },
+      {
+        "type": "callout",
+        "title": "Leve sua memória pra todo lugar · sync com o PC",
+        "content": "A memória que você acabou de montar vive na VPS. No Encontro 4 (aula 04-04 · GitHub como Cérebro Compartilhado) você aprende a **sincronizar essa memória com a sua máquina local** via um repo GitHub privado: edita no PC, o agente sabe; o agente aprende, você recebe. Com cron de 2h e skill manual.",
+        "variant": "info"
+      }
+    ],
+    "number": "04",
+    "status": "available",
+    "duration": 60,
+    "schedule": [
+      {
+        "title": "Alzheimer digital · o problema",
+        "duration": "5 min"
+      },
+      {
+        "title": "4 camadas de memória",
+        "duration": "5 min"
+      },
+      {
+        "title": "Os 8 arquivos · explicação",
+        "duration": "8 min"
+      },
+      {
+        "title": "Como pedir pra salvar (❌ vs ✅)",
+        "duration": "3 min"
+      },
+      {
+        "title": "Master prompt · cria tudo de uma vez",
+        "duration": "5 min"
+      },
+      {
+        "title": "Prompt 1 · decisions.md",
+        "duration": "5 min"
+      },
+      {
+        "title": "Prompt 2 · lessons.md",
+        "duration": "5 min"
+      },
+      {
+        "title": "Prompt 3 · projects/",
+        "duration": "5 min"
+      },
+      {
+        "title": "Prompt 4 · people.md",
+        "duration": "5 min"
+      },
+      {
+        "title": "Prompt 5 · pending.md",
+        "duration": "3 min"
+      },
+      {
+        "title": "Prompt 6 · ideas.md",
+        "duration": "3 min"
+      },
+      {
+        "title": "Prompt 7 · objectives.md",
+        "duration": "5 min"
+      },
+      {
+        "title": "Bônus · Dreaming (Light/Deep/REM)",
+        "duration": "3 min"
+      },
+      {
+        "title": "Auditoria final 0-10",
+        "duration": "3 min"
+      }
+    ],
+    "subtitle": "A gente esquece tudo entre sessões · como fazer seu agente aprender, lembrar e evoluir entre sessões",
+    "shortTitle": "Memória",
+    "learningGoals": [
+      "Entender o problema do Alzheimer digital · agente que esquece tudo entre sessões",
+      "Conhecer as 4 camadas de memória · sempre carregada vs sob demanda",
+      "Configurar 8 arquivos de memória estruturados",
+      "Saber como pedir pra salvar do jeito certo (❌ vs ✅)",
+      "Configurar compactação inviolável · extrair antes de compactar",
+      "Usar memory_search() nativo (sem API key externa desde Março 2026)",
+      "Rodar prompt master pra criar tudo de uma vez",
+      "Rodar 7 prompts individuais pra popular cada arquivo via entrevista",
+      "Ativar Dreaming (Light/Deep/REM) no chat do Telegram",
+      "Auditar memória completa via prompt final"
+    ]
+  }
+}

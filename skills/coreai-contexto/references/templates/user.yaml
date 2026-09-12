@@ -1,0 +1,21 @@
+# ContextOS - Identidade do Usuario
+# Preenchido durante *init
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+identity:
+  full_name: null
+  call_me: null  # Como prefere ser chamado
+  email: null
+
+professional_context:
+  role: null  # Ex: CEO, Founder, Freelancer, Consultor
+  area: null  # Ex: Marketing Digital, E-commerce, SaaS
+  years_experience: null
+
+preferences:
+  tone: null       # formal | casual | direto | inspiracional
+  language: pt-BR
+  work_style: null # autonomo | colaborativo | delegador

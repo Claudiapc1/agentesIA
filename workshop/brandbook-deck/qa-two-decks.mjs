@@ -1,0 +1,5 @@
+import { chromium } from '/Users/julianotorriani/.agents/skills/coreai-carousel-creator/node_modules/playwright-core/index.mjs';
+import fs from 'node:fs';
+const b=await chromium.launch({headless:true});const p=await b.newPage({viewport:{width:1920,height:1080}});const out=[];
+for(const [name,count,shots] of [['a-oportunidade',13,[1,5,7,13]],['contextos',27,[1,6,11,20,27]]]){for(const n of shots){await p.goto(`file:///Users/julianotorriani/claude/agentesIA/workshop/brandbook-deck/${name}.html#S${String(n).padStart(2,'0')}`);await p.waitForTimeout(700);const q=await p.evaluate(()=>{const s=document.querySelector('.slide.active');return {id:s.id,scroll:[s.scrollWidth,s.scrollHeight],viewport:[innerWidth,innerHeight],notes:!!s.querySelector('.notes')?.innerText.trim()}});out.push({deck:name,...q});await p.screenshot({path:`/Users/julianotorriani/claude/agentesIA/workshop/brandbook-deck/${name}-S${String(n).padStart(2,'0')}.png`})}}
+fs.writeFileSync('/Users/julianotorriani/claude/agentesIA/workshop/brandbook-deck/two-decks-qa.json',JSON.stringify(out,null,2));await b.close();

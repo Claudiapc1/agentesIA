@@ -1,0 +1,419 @@
+{
+  "id": "c6f8288b-807d-4f7c-991c-df1c8ec8f3b0",
+  "titulo": "Superpowers: A Metodologia que Disciplina o Claude Code",
+  "lesson_payload": {
+    "id": "encontro-08-02",
+    "title": "Superpowers: A Metodologia que Disciplina o Claude Code",
+    "blocks": [
+      {
+        "type": "section-cover",
+        "title": "Superpowers",
+        "eyebrow": "MATERIAL DE APOIO DO ENCONTRO 7",
+        "subtitle": "A metodologia que não escreve código mais rápido. Ela força o Claude a desenvolver do jeito certo."
+      },
+      {
+        "type": "callout",
+        "title": "O que você vai ler aqui",
+        "content": "Este é um material de apoio em formato de leitura, gerado a partir do plugin Superpowers v5.0.7 instalado de verdade na máquina. Não tem vídeo: é referência pra consultar sempre que for construir um sistema, dashboard ou feature com o Claude Code.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O que é o Superpowers"
+      },
+      {
+        "type": "text",
+        "content": "O Superpowers não escreve código mais rápido. Ele força o Claude a desenvolver do jeito certo. É uma metodologia completa de desenvolvimento de software empacotada como um conjunto de 14 skills que se compõem entre si. Em vez de o agente sair escrevendo código assim que você pede algo, ele para, te entrevista, desenha a solução com você, escreve um plano, executa em TDD, revisa e só então declara pronto, com prova."
+      },
+      {
+        "text": "O Superpowers é um freio de qualidade. Quanto mais crítico o sistema (produção, dashboard que o cliente vê), mais ele vale a pena.",
+        "type": "quote"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "span": 1,
+            "title": "Test-Driven Development",
+            "description": "Teste primeiro, sempre. Nenhum código de produção sem um teste que falha antes."
+          },
+          {
+            "span": 1,
+            "title": "Sistemático no lugar de improviso",
+            "description": "Processo no lugar de adivinhação. Investigar antes de chutar."
+          },
+          {
+            "span": 1,
+            "title": "Redução de complexidade",
+            "description": "Simplicidade como objetivo primário, não acidente."
+          },
+          {
+            "span": 1,
+            "title": "Evidência no lugar de afirmação",
+            "description": "Verificar antes de declarar sucesso. Prova, não 'deve estar funcionando'."
+          }
+        ],
+        "layout": "grid"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Para que serve no seu caso"
+      },
+      {
+        "type": "text",
+        "content": "Quando você está construindo um sistema, um dashboard, uma feature nova ou corrigindo um bug, o Superpowers entra pra garantir disciplina em cada etapa. Ele não te deixa pular passos."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Te obriga a brainstorming antes de uma linha de código",
+            "Quebra em plano de tarefas de 2 a 5 min cada",
+            "Investiga causa raiz antes de propor qualquer fix",
+            "Roda verificação real e mostra a prova",
+            "Despacha subagentes em paralelo, com contexto isolado",
+            "Te apresenta opções claras de merge, PR ou descartar"
+          ],
+          "title": "O Superpowers faz...",
+          "result": "Disciplina forçada em cada etapa do desenvolvimento.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Construir uma feature ou dashboard novo",
+            "Implementar algo grande",
+            "Corrigir um bug",
+            "Garantir que funciona",
+            "Trabalhar em várias frentes",
+            "Fechar o trabalho"
+          ],
+          "title": "Você quer...",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "As 4 fases e as 14 skills"
+      },
+      {
+        "type": "text",
+        "content": "As 14 skills se organizam em 4 fases, mais um par de fundações que rodam por baixo de tudo. Cada skill se compõe com as outras: a saída de uma alimenta a próxima."
+      },
+      {
+        "type": "metric-grid",
+        "metrics": [
+          {
+            "color": "cyan",
+            "label": "fases",
+            "value": "4",
+            "subtitle": "Planejamento, Execução, Qualidade, Fechamento"
+          },
+          {
+            "color": "violet",
+            "label": "skills",
+            "value": "14",
+            "subtitle": "compostas entre si"
+          },
+          {
+            "color": "coral",
+            "label": "leis de ferro",
+            "value": "4",
+            "subtitle": "invioláveis"
+          },
+          {
+            "color": "lime",
+            "label": "por tarefa",
+            "value": "2-5min",
+            "subtitle": "a unidade de trabalho"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fase 1 · Planejamento"
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "brainstorming",
+            "accent": "cyan",
+            "content": "Use ANTES de qualquer trabalho criativo (feature, componente, mudança de comportamento). Transforma uma ideia vaga em um spec validado através de diálogo. Tem um hard-gate: nada de código antes do design aprovado, por mais simples que pareça."
+          },
+          {
+            "title": "writing-plans",
+            "accent": "cyan",
+            "content": "Depois do design aprovado. Escreve um plano de implementação com tarefas pequenas (2 a 5 min cada), caminhos de arquivo exatos, código completo e passos de verificação. A régua: 'claro o suficiente pra um júnior sem contexto e sem gosto seguir'."
+          },
+          {
+            "title": "using-git-worktrees",
+            "accent": "cyan",
+            "content": "Cria um workspace isolado em git (sem trocar de branch no diretório principal). Útil antes de começar uma feature ou rodar um plano, pra não bagunçar o que você está mexendo."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fase 2 · Execução"
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "subagent-driven-development (preferido)",
+            "accent": "lime",
+            "content": "Executa o plano despachando um subagente novo por tarefa, com revisão em duas etapas (conformidade com o spec, depois qualidade do código). Contexto isolado por tarefa significa qualidade alta mais iteração rápida. Fica na mesma sessão."
+          },
+          {
+            "title": "executing-plans",
+            "accent": "lime",
+            "content": "Executa um plano já escrito em uma sessão separada, com checkpoints de revisão humana. Alternativa quando você quer rodar em lote."
+          },
+          {
+            "title": "dispatching-parallel-agents",
+            "accent": "lime",
+            "content": "Pra 2 ou mais problemas independentes (arquivos de teste diferentes, subsistemas diferentes, bugs sem relação). Roda um agente por domínio, em paralelo. Não usar quando os problemas estão conectados ou compartilham estado."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fase 3 · Qualidade"
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "test-driven-development",
+            "accent": "magenta",
+            "content": "O coração do plugin. Escreve o teste primeiro, vê falhar, escreve o mínimo pra passar (Red-Green-Refactor). Lei de ferro: nenhum código de produção sem um teste que falha antes. Se escreveu código antes do teste, apaga e recomeça."
+          },
+          {
+            "title": "systematic-debugging",
+            "accent": "magenta",
+            "content": "Pra qualquer bug, falha de teste ou comportamento estranho. Quatro fases: investigar causa raiz, testar hipótese, verificar, propor fix. Proíbe 'fix por tentativa'. Especialmente valioso sob pressão de tempo, que é justo quando a gente quer chutar."
+          },
+          {
+            "title": "verification-before-completion",
+            "accent": "magenta",
+            "content": "Antes de dizer 'está pronto', roda o comando que prova isso, lê a saída e só então afirma. Lei de ferro: nenhuma afirmação de conclusão sem evidência de verificação fresca. Bandeira vermelha: usar 'deve', 'provavelmente', 'parece que'."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fase 4 · Colaboração e fechamento"
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "requesting-code-review",
+            "accent": "blue",
+            "content": "Despacha um subagente revisor com contexto preciso (não o histórico da sua sessão). Princípio: revisar cedo e com frequência. Após cada tarefa relevante, feature grande, ou antes de merge."
+          },
+          {
+            "title": "receiving-code-review",
+            "accent": "blue",
+            "content": "Como reagir a um code review com rigor técnico, não concordância performática. Proíbe respostas como 'Você tem toda razão!'. Em vez disso: reformular o ponto, verificar contra o código, e implementar ou rebater com argumento técnico."
+          },
+          {
+            "title": "finishing-a-development-branch",
+            "accent": "blue",
+            "content": "Quando a implementação está completa e os testes passam. Apresenta opções estruturadas: merge local, push mais PR, manter a branch, ou descartar. Depois limpa o worktree."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fundações (meta)"
+      },
+      {
+        "type": "accordion",
+        "items": [
+          {
+            "title": "using-superpowers",
+            "accent": "teal",
+            "content": "Carregada no início de toda sessão. Estabelece a prioridade: 1) instruções explícitas do usuário sempre vencem, 2) skills do Superpowers, 3) comportamento padrão. Regra: se há 1% de chance de uma skill se aplicar, ela DEVE ser invocada."
+          },
+          {
+            "title": "writing-skills",
+            "accent": "teal",
+            "content": "Como criar ou editar novas skills, aplicando TDD ao processo. Você escreve cenários de pressão, vê o agente falhar sem a skill, escreve a skill, vê passar. Princípio: se você não viu o agente falhar sem a skill, não sabe se ela ensina a coisa certa."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O fluxo completo"
+      },
+      {
+        "type": "text",
+        "content": "Este é o caminho do início ao fim. Brainstorming abre, fechamento da branch encerra, e três skills entram sob demanda em qualquer ponto onde houver bug, afirmação de conclusão ou trabalho paralelo."
+      },
+      {
+        "type": "mermaid",
+        "caption": "O fluxo padrão do Superpowers. As linhas pontilhadas entram sob demanda em qualquer etapa.",
+        "diagram": "graph TD\n    A[brainstorming<br/>design aprovado por voce] --> B[using-git-worktrees<br/>workspace isolado]\n    B --> C[writing-plans<br/>tarefas de 2-5 min]\n    C --> D[subagent-driven-development<br/>executa tarefa a tarefa]\n    D --> E[test-driven-development<br/>RED, GREEN, REFACTOR]\n    E --> F[requesting-code-review<br/>revisor isolado]\n    F --> G[finishing-a-development-branch<br/>merge, PR, manter ou descartar]\n    H[systematic-debugging] -.sob demanda.-> D\n    I[verification-before-completion] -.sob demanda.-> E\n    J[dispatching-parallel-agents] -.sob demanda.-> D"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "As 4 leis de ferro"
+      },
+      {
+        "type": "text",
+        "content": "Se você levar só uma coisa deste material, leve estas quatro. São invioláveis dentro da metodologia."
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Nada de código antes do design aprovado",
+            "accent": "coral",
+            "description": "Por mais simples que a tarefa pareça, o brainstorming vem primeiro. O hard-gate não abre sem o seu OK no desenho."
+          },
+          {
+            "title": "Nenhum código de produção sem um teste que falha antes",
+            "accent": "coral",
+            "description": "Red-Green-Refactor. Se escreveu código antes do teste, apaga e recomeça. Sem exceção."
+          },
+          {
+            "title": "Nenhum fix antes da causa raiz",
+            "accent": "coral",
+            "description": "Bug não se resolve por tentativa. Investiga, levanta hipótese, verifica, e só então corrige."
+          },
+          {
+            "title": "Nenhuma afirmação de conclusão sem evidência fresca",
+            "accent": "coral",
+            "description": "'Pronto' só depois de rodar o comando, ler a saída e ver a prova. 'Deve funcionar' é bandeira vermelha."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Superpowers x AIOX: o COMO e o O QUÊ"
+      },
+      {
+        "type": "text",
+        "content": "O Superpowers não tem épicos, stories nem sprints (a busca por esses termos no plugin deu zero ocorrências). A unidade de trabalho dele é o plano quebrado em tarefas de 2 a 5 minutos. Quem cobre planejamento de produto no seu setup é o AIOX. Os dois se complementam, não competem."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "TDD obrigatório (lei de ferro)",
+            "Debug sistemático",
+            "Verificação com prova",
+            "Disciplina técnica total de código"
+          ],
+          "title": "Superpowers",
+          "result": "Brainstorming, plano, TDD, review, verificação.",
+          "variant": "after",
+          "subtitle": "garante O COMO"
+        },
+        "before": {
+          "items": [
+            "Épicos e stories (@pm, @po, @sm)",
+            "Sprints e backlog",
+            "Planejamento de produto (PRD, MoSCoW, RICE)",
+            "QA gates parciais"
+          ],
+          "title": "AIOX (seu framework)",
+          "result": "Épico, story, critérios de aceite.",
+          "variant": "before",
+          "subtitle": "define O QUÊ"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "A combinação natural",
+        "content": "A story sai do AIOX (@sm draft). A implementação dessa story roda dentro do fluxo Superpowers: brainstorming dos critérios, writing-plans, subagent-driven-development com TDD, requesting-code-review. AIOX define o que; Superpowers garante o como.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como usar na prática"
+      },
+      {
+        "type": "text",
+        "content": "O plugin ativa sozinho no início de cada sessão (via SessionStart hook). Você não precisa ligar nada. Na prática, há dois jeitos de usar."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Deixa acontecer",
+            "description": "Peça naturalmente, tipo 'constrói um dashboard de vendas com filtro por período'. Com o Superpowers ativo, o agente puxa brainstorming antes de codar, depois writing-plans, e assim por diante."
+          },
+          {
+            "title": "Invoca explicitamente",
+            "description": "Quando quer forçar uma etapa específica, chame a skill pelo nome com o prefixo superpowers:"
+          }
+        ]
+      },
+      {
+        "type": "command-list",
+        "title": "Invocando skills do Superpowers",
+        "commands": [
+          {
+            "command": "superpowers:brainstorming",
+            "description": "Forçar o desenho da solução antes de qualquer código"
+          },
+          {
+            "command": "superpowers:writing-plans",
+            "description": "Escrever o plano de tarefas de 2 a 5 min"
+          },
+          {
+            "command": "superpowers:test-driven-development",
+            "description": "Entrar no ciclo Red-Green-Refactor"
+          },
+          {
+            "command": "superpowers:systematic-debugging",
+            "description": "Investigar um bug pela causa raiz"
+          },
+          {
+            "command": "superpowers:requesting-code-review",
+            "description": "Despachar um revisor isolado"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Suas instruções sempre vencem",
+        "content": "O Superpowers respeita seu CLAUDE.md. Instruções explícitas suas têm prioridade máxima sobre as skills. Se você disser 'não usa TDD aqui', ele obedece.",
+        "variant": "info"
+      },
+      {
+        "type": "callout",
+        "title": "Resumo de uma página",
+        "content": "O que é: metodologia de desenvolvimento em 14 skills compostas, ativada automaticamente. Pra que serve: garantir que sistemas e dashboards sejam construídos com disciplina (desenho antes de código, plano antes de execução, teste antes de implementação, prova antes de pronto). Épicos e stories quem cobre é o AIOX; o Superpowers cuida da execução técnica. Use os dois juntos.",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "eyebrow": "ENCONTRO 8 · PARTE 2 DE 2",
+    "duration": 25,
+    "schedule": [],
+    "subtitle": "Usando o Claude Code pra construir sistemas de uso profissional, com disciplina de verdade",
+    "learningGoals": [
+      "Entender o que é o Superpowers e por que ele é um freio de qualidade, não um acelerador",
+      "Conhecer as 4 fases e as 14 skills que compõem a metodologia",
+      "Memorizar as 4 leis de ferro do desenvolvimento disciplinado",
+      "Saber o fluxo completo: brainstorming, plano, TDD, review, fechamento",
+      "Diferenciar o papel do Superpowers (o COMO) do AIOX (o O QUÊ) e combinar os dois",
+      "Saber como acionar cada skill na prática"
+    ]
+  }
+}

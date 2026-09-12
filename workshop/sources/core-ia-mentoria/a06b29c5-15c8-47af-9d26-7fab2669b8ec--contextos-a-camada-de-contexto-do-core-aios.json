@@ -1,0 +1,1320 @@
+{
+  "id": "a06b29c5-15c8-47af-9d26-7fab2669b8ec",
+  "titulo": "ContextOS · A Camada de Contexto do CORE AIOS",
+  "lesson_payload": {
+    "id": "encontro-04-01",
+    "title": "ContextOS · A Camada de Contexto do CORE AIOS",
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "O que você vai dominar nesta aula",
+        "content": "A camada de contexto do CORE AIOS. Como construir, popular e enriquecer o cérebro de negócio que TODOS os seus agentes consultam antes de gerar copy, criativo, estratégia ou análise. Quatro skills. Quatro funções claras. Uma diferença gigante no output.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que contexto importa"
+      },
+      {
+        "type": "text",
+        "content": "No Core AIOS, **contexto** é tudo que define quem é o seu negócio: perfil da empresa, DNA do fundador, ICP, marca, pricing, cultura, produtos, decisões, reuniões. Esse contexto vive em arquivos YAML estruturados que qualquer agente ou skill do Core AIOS consulta **antes** de gerar qualquer coisa."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Output sai com a voz e os dados reais da empresa",
+            "ICP, pricing, brand voice já vêm embutidos",
+            "Cases reais, prêmios reais, números reais",
+            "Você revisa, não reescreve",
+            "Toda nova entrega herda o contexto"
+          ],
+          "title": "Com contexto rico",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Output sai genérico, com cara de IA",
+            "Sem voz, sem números reais, sem prova social",
+            "Toda copy parece de qualquer agência",
+            "Você precisa reescrever 80% do que sai",
+            "Cada nova entrega começa do zero"
+          ],
+          "title": "Sem contexto rico",
+          "variant": "before"
+        }
+      },
+      {
+        "text": "Contexto rico é o que separa output genérico de output preciso.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "Regra férrea · Zero invenção",
+        "content": "Nenhuma skill do ContextOS inventa fatos. Todo dado vem do usuário (entrevista) ou de fontes públicas verificáveis (web). Se não tem evidência, o campo fica vazio. Isso é o que garante que sua copy é fact-checked automaticamente.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "As 4 skills do ContextOS"
+      },
+      {
+        "type": "text",
+        "content": "O ContextOS é dividido em 4 skills que cobrem o ciclo completo: criar estrutura, preencher rápido, aprofundar, enriquecer com web. Cada uma tem função única e ordem natural de execução."
+      },
+      {
+        "type": "mermaid",
+        "diagram": "flowchart LR\n    A[context-create<br/>Estrutura<br/>0%] --> B[context-quick<br/>~25 perguntas<br/>35%]\n    B --> C[context-deep<br/>~210 perguntas<br/>70%]\n    C --> D[context-enrich<br/>Web automático<br/>95%]\n    style A fill:#1e293b,stroke:#3b82f6,color:#fff\n    style B fill:#1e293b,stroke:#06b6d4,color:#fff\n    style C fill:#1e293b,stroke:#8b5cf6,color:#fff\n    style D fill:#1e293b,stroke:#10b981,color:#fff"
+      },
+      {
+        "type": "callout",
+        "title": "Completude progressiva",
+        "content": "Cada etapa é incremental. Você não precisa fazer tudo de uma vez. Pode parar em 35% se só quer algo usável rápido. Pode ir até 95% se vai gerar muito conteúdo.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Resumo executivo das 4 skills"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "context-create",
+            "description": "Constrói a estrutura inicial · 28 templates YAML prontos · execução instantânea · ponto de partida obrigatório."
+          },
+          {
+            "title": "context-quick",
+            "description": "Preenche o essencial em ~25 perguntas críticas · ~10 minutos · vai de 0% para ~35% de completude."
+          },
+          {
+            "title": "context-deep",
+            "description": "Preenchimento profundo em ~210 perguntas, 9 fases · pause/resume robusto · ~2h parcelado · vai de 35% para ~70%."
+          },
+          {
+            "title": "context-enrich",
+            "description": "Scraping do site + research público · automático, sem perguntar nada · vai de 70% para ~95% com fontes verificáveis."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Tabela de completude por etapa"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "CREATE roda toda vez que adicionar empresa nova",
+            "QUICK roda no dia 1 da empresa",
+            "DEEP roda em sessões de 30-40 min ao longo da semana",
+            "ENRICH roda automático, pode rodar de novo pra atualizar"
+          ],
+          "title": "Quando rodar cada uma",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Após CREATE · 0% · primeira vez ou nova empresa",
+            "Após QUICK · 35% · quando quer algo usável rápido",
+            "Após DEEP · 70% · empresa principal com tempo pra entrevista",
+            "Após ENRICH · 95% · antes de gerar copy com prova social"
+          ],
+          "title": "Pipeline em ordem natural",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Skill 1 · context-create"
+      },
+      {
+        "type": "text",
+        "content": "**Função:** constrói toda a estrutura do ContextOS no workspace. Cria diretórios e copia 28 templates YAML prontos pra preencher. Suporta múltiplas empresas no mesmo workspace."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Quando usar"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Primeira vez configurando o ContextOS",
+            "description": "Você acabou de instalar o Core AIOS e precisa criar a base."
+          },
+          {
+            "title": "Adicionar uma nova empresa ao workspace",
+            "description": "Já tem ContextOS rodando, agora quer entrar com cliente novo."
+          },
+          {
+            "title": "Verificar saúde do que já existe",
+            "description": "Quer saber percentual de completude e integridade do workspace."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Subcomandos"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "*status · dashboard de completude (%) por YAML",
+            "*health-check · audita integridade do workspace",
+            "Roda sempre antes de pedir socorro",
+            "Mostra exatamente onde estão os gaps"
+          ],
+          "title": "Diagnóstico e saúde",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "*init · inicializa estrutura raiz do ContextOS",
+            "*add-business {slug} · adiciona empresa com 28 templates YAML",
+            "*setup-context {slug} · pipeline interativo de 6 fases (~2h total)",
+            "*set-active {slug} · define qual empresa está ativa"
+          ],
+          "title": "Setup e gestão de empresas",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Exemplo de uso · do zero até empresa ativa"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Passo 1 · inicializa estrutura no workspace",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *init",
+            "type": "command"
+          },
+          {
+            "text": "  → Cria ~/coreaios/context-os/ com config.yaml, user.yaml e diretórios",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Passo 2 · adiciona sua empresa",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *add-business torriani",
+            "type": "command"
+          },
+          {
+            "text": "  → Cria businesses/torriani/ com 28 templates YAML",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Passo 3 · define como empresa ativa",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *set-active torriani",
+            "type": "command"
+          },
+          {
+            "text": "  ✓ Empresa ativa: Torriani Sistemas (torriani)",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "O que é criado · 28 templates YAML em 7 diretórios"
+      },
+      {
+        "type": "mermaid",
+        "diagram": "flowchart TD\n    Root[businesses/empresa] --> Ctx[context · 9 YAMLs]\n    Root --> Brand[brand-dna · 5 YAMLs]\n    Root --> DS[design-system · 4 YAMLs]\n    Root --> Cult[culture · 4 YAMLs]\n    Root --> Ops[operations · 3 YAMLs]\n    Root --> Int[intelligence · reuniões/decisões]\n    Root --> Ev[evidence · completeness/sources]\n    style Root fill:#0f172a,stroke:#3b82f6,color:#fff\n    style Ctx fill:#1e293b,stroke:#06b6d4,color:#fff\n    style Brand fill:#1e293b,stroke:#8b5cf6,color:#fff\n    style DS fill:#1e293b,stroke:#ec4899,color:#fff\n    style Cult fill:#1e293b,stroke:#f59e0b,color:#fff\n    style Ops fill:#1e293b,stroke:#10b981,color:#fff\n    style Int fill:#1e293b,stroke:#64748b,color:#fff\n    style Ev fill:#1e293b,stroke:#64748b,color:#fff"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "brand-dna/ · voice, visual, archetype, positioning, manifesto",
+            "design-system/ · tokens, components, patterns, guidelines",
+            "culture/ · values, pillars, commandments, hiring",
+            "operations/ · KPIs, processes, tech-stack",
+            "intelligence/ · reuniões, decisões, memory index",
+            "evidence/ · completeness, source registry, ETL history"
+          ],
+          "title": "Outras camadas",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "company-profile · perfil da empresa",
+            "founder-dna · DNA do fundador",
+            "icp · perfil do cliente ideal",
+            "brand · brand fundamentals",
+            "pricing · pricing e ofertas",
+            "team · time e responsabilidades",
+            "credentials · prêmios, mídia, autoridade",
+            "diagnosis · diagnóstico do negócio",
+            "authority-story · história de autoridade"
+          ],
+          "title": "context/ · 9 YAMLs principais",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Dica · setup-context vs skills granulares",
+        "content": "`*setup-context` roda as 6 fases interativas tudo de uma vez (~2h). Se preferir granular, use as próximas skills (quick, deep, enrich) que dão mais controle e permitem parar/voltar quando quiser.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Skill 2 · context-quick"
+      },
+      {
+        "type": "text",
+        "content": "**Função:** preenche o essencial em ~25 perguntas críticas. Vai de 0% para ~35% de completude no business ativo. Tempo estimado: **10 minutos**. É a primeira skill que você roda depois do create."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Quando usar"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Acabou de criar a empresa",
+            "description": "Quer algo usável agora, sem investir 2h em entrevista."
+          },
+          {
+            "title": "Cliente novo de projeto pontual",
+            "description": "Precisa de contexto suficiente pra 1-2 entregas, não mais."
+          },
+          {
+            "title": "Quer popular o mínimo",
+            "description": "Pra outras skills do Core AIOS funcionarem (copy, criativo, traffic)."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Pré-requisitos"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Rode /coreaios:context-create *status",
+            "Veja qual empresa está ativa",
+            "Veja se os 28 templates foram criados",
+            "Se algo estiver faltando, rode *add-business antes"
+          ],
+          "title": "Como verificar",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "setup do Core AIOS rodou",
+            "Existe ~/coreaios/.config/config.yaml",
+            "Existe active_business no config",
+            "Pasta ~/coreaios/businesses/{slug}/ populada"
+          ],
+          "title": "Antes de rodar",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Como funciona · 4 passos internos"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Lê questions-quick.json",
+            "description": "Banco de ~25 perguntas críticas em ~/coreaios/data/."
+          },
+          {
+            "title": "Pergunta uma a uma",
+            "description": "Resposta vazia = pula. Resposta válida = escreve no YAML correspondente."
+          },
+          {
+            "title": "Grava em YAML",
+            "description": "Cada pergunta tem `file` + `ypath` dotted (ex: company-profile.yaml + essencia.nome_fantasia)."
+          },
+          {
+            "title": "Resumo final",
+            "description": "Completude estimada + sugere próximo passo (deep ou enrich)."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Sessão real · simulação"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "📋 Pergunta 1/25",
+            "type": "output"
+          },
+          {
+            "text": "Qual o nome legal da empresa?",
+            "type": "command"
+          },
+          {
+            "text": "› Torriani Sistemas Ltda",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "📋 Pergunta 2/25",
+            "type": "output"
+          },
+          {
+            "text": "E o nome fantasia (como as pessoas conhecem)?",
+            "type": "command"
+          },
+          {
+            "text": "› Torriani",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "📋 Pergunta 3/25",
+            "type": "output"
+          },
+          {
+            "text": "Site oficial?",
+            "type": "command"
+          },
+          {
+            "text": "› torriani.com.br",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "[...22 perguntas restantes]",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "✓ Completude: 35% (8 YAMLs tocados)",
+            "type": "output"
+          },
+          {
+            "text": "→ Próximo: /coreaios:context-deep ou /coreaios:context-enrich",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Modo batch",
+        "content": "Pode coletar todas as 25 respostas no chat (uma por vez) e a skill grava de uma só vez no final. Útil quando você já tem as informações organizadas em outro lugar (briefing, deck, doc).",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Skill 3 · context-deep"
+      },
+      {
+        "type": "text",
+        "content": "**Função:** preenchimento completo em ~210 perguntas organizadas em **9 fases**. Pause/resume robusto. Vai de ~35% para ~70% de completude. Esta é a skill que constrói o perfil profundo da empresa."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Quando usar"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Depois do context-quick",
+            "description": "Você já tem o essencial em 35%, agora quer profundidade."
+          },
+          {
+            "title": "Empresa principal que vai gerar muito conteúdo",
+            "description": "Vale a pena investir as ~2h em sessões."
+          },
+          {
+            "title": "Precisa de ICP, brand voice, pricing detalhados",
+            "description": "Pra copy de alta performance ou estratégia de marca."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Comandos especiais durante a execução"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Você não precisa responder tudo",
+            "Fases inteiras podem ser irrelevantes pro seu negócio",
+            "Pause permite sessões de 30-40 min",
+            "Status mostra X/Y respondidas, fase atual"
+          ],
+          "title": "Por que isso importa",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "/skip · pula esta pergunta",
+            "/skip-phase · pula fase inteira",
+            "/pause · salva estado e sai",
+            "/status · progresso atual"
+          ],
+          "title": "Controle de fluxo",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Estado persistente · cache de progresso"
+      },
+      {
+        "type": "text",
+        "content": "Salva em `~/coreaios/.config/cache/context-deep-{slug}.json`. Ao rodar novamente, detecta progresso e pergunta se quer retomar:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/coreaios:context-deep",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Encontrei progresso anterior:",
+            "type": "command"
+          },
+          {
+            "text": "  Fase: 3/9 (Empresa + Time)",
+            "type": "output"
+          },
+          {
+            "text": "  Pergunta: 12/24",
+            "type": "output"
+          },
+          {
+            "text": "  Última atualização: 2 dias atrás",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "Retomar de onde parou? (s/n)",
+            "type": "command"
+          },
+          {
+            "text": "› s",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "✓ Retomando Fase 3, pergunta 12...",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "As 9 fases · ordem e duração"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Fase 0 · Pre-flight (~2 min)",
+            "description": "Validação automática · checa se quick rodou, se há empresa ativa, se YAMLs estão lá."
+          },
+          {
+            "title": "Fase 1 · Essência (~15 min · FORM)",
+            "description": "Formulário básico · nome, site, segmento, tempo de mercado, sócios."
+          },
+          {
+            "title": "Fase 2 · Deep dive fundador (~40 min · INTERVIEW)",
+            "description": "4 atos sobre o fundador · trajetória, gatilhos, autoridade, virada."
+          },
+          {
+            "title": "Fase 3 · Empresa + time (~30 min · INTERVIEW + FORM)",
+            "description": "Organograma, papéis, decisões, divisão de responsabilidades."
+          },
+          {
+            "title": "Fase 4 · ICP completo (~30 min · INTERVIEW)",
+            "description": "Pain stack, arquétipos, vocabulário, objeções, gatilhos de compra."
+          },
+          {
+            "title": "Fase 5 · Brand + pricing (~25 min · INTERVIEW + FORM)",
+            "description": "Brand voice, posicionamento, faixas de pricing, ofertas vivas."
+          },
+          {
+            "title": "Fase 6 · Cultura (~15 min · INTERVIEW)",
+            "description": "Valores, mandamentos, critérios de contratação, cultura interna."
+          },
+          {
+            "title": "Fase 7 · Operações (~15 min · FORM)",
+            "description": "KPIs, processos críticos, tech-stack, ferramentas."
+          },
+          {
+            "title": "Fase 8 · Produtos (~20 min · INTERVIEW)",
+            "description": "Catálogo completo, posicionamento de cada produto, jornada de compra."
+          },
+          {
+            "title": "Fase 9 · Validação (~10 min · automático)",
+            "description": "Enriquecimento + validação · checa coerência e completude antes de fechar."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Estratégia recomendada",
+        "content": "**Não tente fazer as 9 fases de uma vez.** Reserve 30-40 min por sessão, use `/pause`, e volte no dia seguinte. Pause/resume é o ponto forte dessa skill. Tentar de 1 vez = burnout + respostas pobres.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Skill 4 · context-enrich"
+      },
+      {
+        "type": "text",
+        "content": "**Função:** vai de ~70% para ~95% **sem perguntar nada**. Usa WebFetch pra scrapear o site da empresa e WebSearch pra achar mídia, prêmios, entrevistas e redes sociais. Cada fato vem com URL e tag de confiança."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Pré-requisitos · só dois campos obrigatórios"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "essencia.nome_completo preenchido",
+            "É a chave pra research público sobre o fundador",
+            "Entrevistas, podcasts, palestras, prêmios",
+            "Tudo verificável e com URL"
+          ],
+          "title": "founder-dna.yaml precisa de",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "essencia.nome_fantasia preenchido",
+            "essencia.website preenchido",
+            "Esses são os pontos de partida pro scraping",
+            "Sem eles, enrich não consegue começar"
+          ],
+          "title": "company-profile.yaml precisa de",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "O que faz · 4 etapas internas"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Scrape do site",
+            "description": "WebFetch na home + 3-5 páginas internas (sobre, serviços, blog). Extrai tagline, serviços, cases, diferenciais, selos."
+          },
+          {
+            "title": "Research público",
+            "description": "WebSearch por entrevistas, podcasts, palestras, prêmios, redes sociais do fundador e da empresa."
+          },
+          {
+            "title": "Tag de confiança em cada fato",
+            "description": "ALTA · fonte oficial. MEDIA · mídia reconhecida. BAIXA · blog/agregador. Você decide o que entra no contexto."
+          },
+          {
+            "title": "Síntese e gravação",
+            "description": "Atualiza company-profile, founder-dna, brand, credentials. Gera intelligence/research.md com tudo encontrado."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Regra férrea · Zero invenção"
+      },
+      {
+        "type": "callout",
+        "title": "NUNCA inventa fatos",
+        "content": "Se a skill não encontrar evidência pública verificável, o campo fica vazio. Toda menção em `credentials.yaml` precisa de URL. Isso é o que garante que sua copy gerada nunca diga 'fundador entrevistado no podcast X' se aquilo não existir.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Use case real · copy fact-checked automaticamente"
+      },
+      {
+        "type": "text",
+        "content": "Antes de gerar uma copy que diz \"fundador entrevistado no podcast X\", você quer ter certeza. Roda enrich → o YAML `credentials.yaml` só lista entrevistas com URL real → copy gerada vira fact-checked automaticamente. Sem risco de inventar prova social que não existe."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Output esperado · sessão real"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "✅ Enriquecimento concluído.",
+            "type": "output"
+          },
+          {
+            "text": "Fontes consultadas: 12",
+            "type": "command"
+          },
+          {
+            "text": "Fatos novos:",
+            "type": "command"
+          },
+          {
+            "text": "  - Fundador entrevistado no Cast for Closers [ALTA]",
+            "type": "output"
+          },
+          {
+            "text": "    https://...",
+            "type": "output"
+          },
+          {
+            "text": "  - Empresa citada em matéria da Exame [MEDIA]",
+            "type": "output"
+          },
+          {
+            "text": "    https://...",
+            "type": "output"
+          },
+          {
+            "text": "  - 23.4k seguidores no LinkedIn [ALTA]",
+            "type": "output"
+          },
+          {
+            "text": "    https://...",
+            "type": "output"
+          },
+          {
+            "text": "  ...",
+            "type": "output"
+          },
+          {
+            "text": "Completude estimada: 70% → 94%",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Receitas práticas"
+      },
+      {
+        "type": "text",
+        "content": "Quatro caminhos prontos pra cenários reais. Decora as receitas, não os comandos isolados."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Receita 1 · Do zero ao 95% (empresa nova)"
+      },
+      {
+        "type": "text",
+        "content": "Pipeline completo. Use quando entrar com cliente novo que vai virar empresa principal."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# 1 · Estrutura (instantâneo)",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *init",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-create *add-business minha-empresa",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-create *set-active minha-empresa",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# 2 · Quick fill (~10 min, vai a 35%)",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# 3 · Deep fill (~2h em sessões de 30-40 min, vai a 70%)",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-deep",
+            "type": "command"
+          },
+          {
+            "text": "  → use /pause entre sessões, retome quando puder",
+            "type": "output"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# 4 · Enrichment (automático, vai a 95%)",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-enrich",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# 5 · Confere status final",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *status",
+            "type": "command"
+          },
+          {
+            "text": "  ✓ minha-empresa: 94% (Pronto pra gerar copy)",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Receita 2 · Adicionar empresa sem perder a atual"
+      },
+      {
+        "type": "text",
+        "content": "Você já tem empresa principal configurada. Quer adicionar cliente novo sem perder o que já fez."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Adiciona scaffold (não muda a empresa ativa)",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *add-business cliente-novo",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Troca pra ela só agora",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *set-active cliente-novo",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Quick fill",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Volta pra empresa principal quando terminar",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *set-active minha-empresa",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Receita 3 · Empresa rápida pra projeto pontual"
+      },
+      {
+        "type": "text",
+        "content": "Cliente novo de 1-2 entregas. Não vale a pena investir 2h. Pula o deep, vai direto pro enrich."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/coreaios:context-create *add-business cliente-rapido",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-create *set-active cliente-rapido",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "/coreaios:context-enrich",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "→ Vai pra ~75% de completude em ~15 minutos totais",
+            "type": "output"
+          },
+          {
+            "text": "→ Suficiente pra gerar copy/criativo decente",
+            "type": "output"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Receita 4 · Atualizar empresa existente"
+      },
+      {
+        "type": "text",
+        "content": "Empresa antiga, dados desatualizados (novo prêmio, nova posição, time mudou). Re-rode enrich primeiro, só faça deep no que mudou."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Garante que está ativa",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *set-active empresa-existente",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Verifica completude atual",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *status",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Re-roda enrich pra pegar novidades públicas",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-enrich",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Se quer atualizar dados privados, roda deep",
+            "type": "comment"
+          },
+          {
+            "text": "# e usa /skip pra pular o que não mudou",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-deep",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Troubleshooting · os 6 erros mais comuns"
+      },
+      {
+        "type": "callout",
+        "title": "Regra geral antes de pedir socorro",
+        "content": "Sempre rode `/coreaios:context-create *status` primeiro. Ele te dá diagnóstico claro do estado atual: qual empresa está ativa, quantos YAMLs existem, qual a completude por arquivo. 80% dos problemas se resolvem só com isso.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Erro 1 · \"Sem active_business no config\""
+      },
+      {
+        "type": "text",
+        "content": "Você rodou `/coreaios:context-quick` e deu erro de empresa ativa. Significa que ninguém setou qual empresa o ContextOS deve trabalhar agora."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Solução",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *set-active {slug-da-empresa}",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Erro 2 · \"Template YAML target inexistente\""
+      },
+      {
+        "type": "text",
+        "content": "A skill quick tenta escrever num arquivo que não foi criado. Significa que o scaffold da empresa nunca foi feito."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Solução · rodar o scaffold primeiro",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *add-business {slug}",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Erro 3 · \"Enrich falhou: nome_fantasia ou website ausente\""
+      },
+      {
+        "type": "text",
+        "content": "Faltam dados básicos pra começar o scraping. Solução é rodar quick primeiro."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Solução · quick antes do enrich",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-quick",
+            "type": "command"
+          },
+          {
+            "text": "  # garante company-profile.yaml com nome_fantasia + website",
+            "type": "comment"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "/coreaios:context-enrich",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Erro 4 · \"Context-deep não retoma de onde parei\""
+      },
+      {
+        "type": "text",
+        "content": "Verifique se o cache de progresso ainda existe:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "ls ~/coreaios/.config/cache/context-deep-*.json",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Se não existir é porque:",
+            "type": "comment"
+          },
+          {
+            "text": "# - Você terminou o pipeline (cache é deletado ao concluir)",
+            "type": "comment"
+          },
+          {
+            "text": "# - Trocou de empresa ativa (cada empresa tem cache próprio)",
+            "type": "comment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Erro 5 · \"Não sei qual empresa está ativa agora\""
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# Opção rápida",
+            "type": "comment"
+          },
+          {
+            "text": "cat ~/coreaios/.config/config.yaml | grep active_business",
+            "type": "command"
+          },
+          {
+            "text": "",
+            "type": "output"
+          },
+          {
+            "text": "# Opção completa · vê tudo",
+            "type": "comment"
+          },
+          {
+            "text": "/coreaios:context-create *status",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Erro 6 · \"Quero ver onde os YAMLs ficam\""
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "ls ~/coreaios/businesses/",
+            "type": "command"
+          },
+          {
+            "text": "ls ~/coreaios/businesses/{slug}/context/",
+            "type": "command"
+          },
+          {
+            "text": "cat ~/coreaios/businesses/{slug}/context/company-profile.yaml",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os 5 princípios do ContextOS"
+      },
+      {
+        "type": "text",
+        "content": "Decora estes 5 princípios. Eles explicam por que o ContextOS é desenhado do jeito que é, e te ajudam a confiar no sistema quando bater dúvida."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Zero invenção",
+            "description": "Todos os dados vêm do usuário ou de fontes públicas verificáveis. Skills nunca inventam fatos. Se não tem evidência, fica vazio."
+          },
+          {
+            "title": "Pause/resume",
+            "description": "Pipelines longos sempre permitem pausar e retomar depois. Estado persistente em cache. Sessões de 30-40 min em vez de maratonas."
+          },
+          {
+            "title": "Multi-empresa",
+            "description": "Workspace suporta N empresas, apenas uma ativa por vez. Você troca com *set-active. Cada empresa tem seu próprio cache de progresso."
+          },
+          {
+            "title": "Completude progressiva",
+            "description": "35% → 70% → 95%. Cada etapa é incremental. Você pode parar onde for suficiente pro seu caso."
+          },
+          {
+            "title": "YAML como fonte de verdade",
+            "description": "Toda informação vira YAML estruturado, acessível por qualquer agente ou skill. Sem banco fechado, sem caixa-preta. Você abre o arquivo e vê tudo."
+          }
+        ]
+      },
+      {
+        "text": "Contexto rico é o que separa output genérico de output preciso.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Checkpoint · você terminou esta aula sabendo"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Receita 1 · do zero ao 95% (empresa nova)",
+            "Receita 2 · adicionar empresa sem perder a atual",
+            "Receita 3 · empresa rápida pra projeto pontual",
+            "Receita 4 · atualizar empresa existente",
+            "Os 6 erros mais comuns e como resolver"
+          ],
+          "title": "Execução prática",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "O que é contexto no Core AIOS e por que importa",
+            "As 4 skills do ContextOS e quando rodar cada uma",
+            "Pipeline de completude 0% → 35% → 70% → 95%",
+            "Estrutura dos 28 templates YAML em 7 diretórios",
+            "Regra férrea de zero invenção"
+          ],
+          "title": "Conceitos dominados",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Próximo passo · você está pronto pra",
+        "content": "Rodar a Receita 1 no seu próprio negócio. Reserva 10 minutos pro `/coreaios:context-quick` ainda hoje. Quando tiver 30-40 min disponíveis em algum dia da semana, começa o `/coreaios:context-deep`. No fim, roda o `/coreaios:context-enrich` e seu contexto vira combustível pra TODOS os outros agentes do Core AIOS.",
+        "variant": "success"
+      }
+    ],
+    "status": "published",
+    "schedule": [
+      {
+        "label": "0 a 10",
+        "topic": "Por que contexto importa · a diferença entre output genérico e output preciso"
+      },
+      {
+        "label": "10 a 20",
+        "topic": "Visão geral das 4 skills · pipeline 0% → 95%"
+      },
+      {
+        "label": "20 a 35",
+        "topic": "Skill 1 · context-create (estrutura e subcomandos)"
+      },
+      {
+        "label": "35 a 50",
+        "topic": "Skill 2 · context-quick (~25 perguntas, 10 min)"
+      },
+      {
+        "label": "50 a 70",
+        "topic": "Skill 3 · context-deep (~210 perguntas em 9 fases, pause/resume)"
+      },
+      {
+        "label": "70 a 80",
+        "topic": "Skill 4 · context-enrich (scraping + research automático)"
+      },
+      {
+        "label": "80 a 90",
+        "topic": "Receitas práticas + troubleshooting + princípios"
+      }
+    ],
+    "subtitle": "Como dar memória de negócio pra todos os seus agentes em 4 skills",
+    "learningGoals": [
+      "Entender o que é contexto no Core AIOS e por que ele separa output genérico de output preciso.",
+      "Conhecer as 4 skills do ContextOS: context-create, context-quick, context-deep, context-enrich.",
+      "Dominar o pipeline de completude progressiva: 0% → 35% → 70% → 95%.",
+      "Saber executar as 4 receitas práticas (do zero, nova empresa, projeto pontual, atualização).",
+      "Diagnosticar e resolver os erros mais comuns do ContextOS."
+    ],
+    "durationMinutes": 90
+  }
+}

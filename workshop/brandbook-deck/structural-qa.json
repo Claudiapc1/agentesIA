@@ -1,0 +1,302 @@
+{
+  "slide_count": 49,
+  "first_type": "TITLE",
+  "last_type": "CLOSING",
+  "speaker_notes": 49,
+  "word_counts": [
+    {
+      "slide": 1,
+      "words": 13,
+      "over_15": false,
+      "type": "TITLE"
+    },
+    {
+      "slide": 2,
+      "words": 16,
+      "over_15": true,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 3,
+      "words": 11,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 4,
+      "words": 12,
+      "over_15": false,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 5,
+      "words": 17,
+      "over_15": true,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 6,
+      "words": 12,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 7,
+      "words": 7,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 8,
+      "words": 12,
+      "over_15": false,
+      "type": "COMPARISON"
+    },
+    {
+      "slide": 9,
+      "words": 10,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 10,
+      "words": 16,
+      "over_15": true,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 11,
+      "words": 9,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 12,
+      "words": 7,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 13,
+      "words": 15,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 14,
+      "words": 13,
+      "over_15": false,
+      "type": "CODE"
+    },
+    {
+      "slide": 15,
+      "words": 6,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 16,
+      "words": 12,
+      "over_15": false,
+      "type": "COMPARISON"
+    },
+    {
+      "slide": 17,
+      "words": 9,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 18,
+      "words": 10,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 19,
+      "words": 12,
+      "over_15": false,
+      "type": "CODE"
+    },
+    {
+      "slide": 20,
+      "words": 6,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 21,
+      "words": 13,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 22,
+      "words": 10,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 23,
+      "words": 11,
+      "over_15": false,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 24,
+      "words": 10,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 25,
+      "words": 14,
+      "over_15": false,
+      "type": "CODE"
+    },
+    {
+      "slide": 26,
+      "words": 8,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 27,
+      "words": 12,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 28,
+      "words": 10,
+      "over_15": false,
+      "type": "CODE"
+    },
+    {
+      "slide": 29,
+      "words": 7,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 30,
+      "words": 7,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 31,
+      "words": 9,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 32,
+      "words": 16,
+      "over_15": true,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 33,
+      "words": 8,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 34,
+      "words": 9,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 35,
+      "words": 9,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 36,
+      "words": 7,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 37,
+      "words": 10,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 38,
+      "words": 11,
+      "over_15": false,
+      "type": "CODE"
+    },
+    {
+      "slide": 39,
+      "words": 7,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 40,
+      "words": 11,
+      "over_15": false,
+      "type": "BUILD"
+    },
+    {
+      "slide": 41,
+      "words": 11,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 42,
+      "words": 9,
+      "over_15": false,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 43,
+      "words": 16,
+      "over_15": true,
+      "type": "BUILD"
+    },
+    {
+      "slide": 44,
+      "words": 9,
+      "over_15": false,
+      "type": "SECTION_BREAK"
+    },
+    {
+      "slide": 45,
+      "words": 17,
+      "over_15": true,
+      "type": "COMPARISON"
+    },
+    {
+      "slide": 46,
+      "words": 14,
+      "over_15": false,
+      "type": "STATEMENT"
+    },
+    {
+      "slide": 47,
+      "words": 11,
+      "over_15": false,
+      "type": "CONTENT"
+    },
+    {
+      "slide": 48,
+      "words": 10,
+      "over_15": false,
+      "type": "CLOSING"
+    },
+    {
+      "slide": 49,
+      "words": 11,
+      "over_15": false,
+      "type": "CLOSING"
+    }
+  ]
+}

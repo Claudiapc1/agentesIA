@@ -1,0 +1,1108 @@
+{
+  "presentation": {
+    "title": "Workshop Times de IA",
+    "subtitle": "Da primeira tarefa automatizada a uma empresa agêntica",
+    "author": "Juliano Torriani",
+    "date": "2026-09-12",
+    "mode": "palco",
+    "format": "technical",
+    "aspect_ratio": "16:9",
+    "brand": {
+      "name": "CoreAI / Torriani",
+      "color": {
+        "bg_primary": "#050505",
+        "bg_accent": "#2B7DE1",
+        "surface": "#111111",
+        "text_primary": "#FFFDD0",
+        "text_secondary": "#999999",
+        "accent": "#2B7DE1",
+        "border": "#2A2A2A",
+        "warning": "#FF5F42"
+      },
+      "font": {
+        "sans": "Geist, Arial, sans-serif",
+        "mono": "Geist Mono, monospace"
+      }
+    },
+    "slides": [
+      {
+        "id": "slide-001",
+        "type": "TITLE",
+        "title": "TIMES DE IA",
+        "content": {
+          "title": "TIMES DE IA",
+          "subtitle": "Do conhecimento disperso a uma operação que trabalha com você"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Do conhecimento disperso a uma operação que trabalha com você. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-002",
+        "type": "STATEMENT",
+        "title": "Vá além do ChatGPT e do Claude",
+        "content": {
+          "title": "Vá além do ChatGPT e do Claude",
+          "subtitle": "Tenha agentes de IA autônomos operando a sua empresa"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Tenha agentes de IA autônomos operando a sua empresa. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-003",
+        "type": "BUILD",
+        "title": "Da primeira tarefa à empresa agêntica",
+        "content": {
+          "title": "Da primeira tarefa à empresa agêntica",
+          "subtitle": "Automatizar · coordenar · operar áreas · evoluir"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Automatizar · coordenar · operar áreas · evoluir. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-004",
+        "type": "STATEMENT",
+        "title": "Você já tem o combustível",
+        "content": {
+          "title": "Você já tem o combustível",
+          "subtitle": "Conversas, documentos, decisões, exemplos, produtos e processos"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Conversas, documentos, decisões, exemplos, produtos e processos. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-005",
+        "type": "STATEMENT",
+        "title": "O problema é que nada disso trabalha junto",
+        "content": {
+          "title": "O problema é que nada disso trabalha junto",
+          "subtitle": "A IA recebe pedidos, mas não conhece a operação"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. A IA recebe pedidos, mas não conhece a operação. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-006",
+        "type": "BUILD",
+        "title": "Hoje vamos conectar tudo",
+        "content": {
+          "title": "Hoje vamos conectar tudo",
+          "subtitle": "Ambiente · contexto · Zeus · conteúdo · oferta · copy · criativos · tráfego"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Ambiente · contexto · Zeus · conteúdo · oferta · copy · criativos · tráfego. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-007",
+        "type": "SECTION_BREAK",
+        "title": "A ferramenta não é o sistema",
+        "content": {
+          "title": "A ferramenta não é o sistema",
+          "subtitle": "Fundamentos"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Fundamentos. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-008",
+        "type": "COMPARISON",
+        "title": "Chat responde. Agente executa.",
+        "content": {
+          "title": "Chat responde. Agente executa.",
+          "subtitle": "Conversa sob demanda | Objetivo + ferramentas + registro"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Conversa sob demanda | Objetivo + ferramentas + registro. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-009",
+        "type": "CONTENT",
+        "title": "Quatro peças formam o segundo cérebro",
+        "content": {
+          "title": "Quatro peças formam o segundo cérebro",
+          "subtitle": "Contexto | Skills | Repertório | Rotinas"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Contexto | Skills | Repertório | Rotinas. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-010",
+        "type": "STATEMENT",
+        "title": "O modelo pensa. O ambiente permite agir.",
+        "content": {
+          "title": "O modelo pensa. O ambiente permite agir.",
+          "subtitle": "Claude Code e Codex são ambientes; modelos são inteligências"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Claude Code e Codex são ambientes; modelos são inteligências. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-011",
+        "type": "CONTENT",
+        "title": "Escolha capacidade conforme a tarefa",
+        "content": {
+          "title": "Escolha capacidade conforme a tarefa",
+          "subtitle": "Rápido | Equilibrado | Máxima capacidade"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Rápido | Equilibrado | Máxima capacidade. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-012",
+        "type": "SECTION_BREAK",
+        "title": "A instalação começa por uma conversa",
+        "content": {
+          "title": "A instalação começa por uma conversa",
+          "subtitle": "Setup"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Setup. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-013",
+        "type": "BUILD",
+        "title": "Desktop primeiro. A IA faz o resto.",
+        "content": {
+          "title": "Desktop primeiro. A IA faz o resto.",
+          "subtitle": "Baixar · entrar · abrir pasta · ler README · instalar · conferir"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Baixar · entrar · abrir pasta · ler README · instalar · conferir. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-014",
+        "type": "CODE",
+        "title": "Não copie comandos. Entregue a missão.",
+        "content": {
+          "title": "Não copie comandos. Entregue a missão.",
+          "subtitle": "Leia o README e configure meu ambiente"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Leia o README e configure meu ambiente. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-015",
+        "type": "SECTION_BREAK",
+        "title": "Sem contexto, nenhuma skill trabalha",
+        "content": {
+          "title": "Sem contexto, nenhuma skill trabalha",
+          "subtitle": "ContextOS"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. ContextOS. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-016",
+        "type": "COMPARISON",
+        "title": "Formulário cheio não é contexto confiável",
+        "content": {
+          "title": "Formulário cheio não é contexto confiável",
+          "subtitle": "Placeholder | Fato com fonte e revisão"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Placeholder | Fato com fonte e revisão. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-017",
+        "type": "CONTENT",
+        "title": "Conte sua empresa de três formas",
+        "content": {
+          "title": "Conte sua empresa de três formas",
+          "subtitle": "Entrevista | Áudio | Documentos"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Entrevista | Áudio | Documentos. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-018",
+        "type": "BUILD",
+        "title": "O ContextOS cresce sem inventar",
+        "content": {
+          "title": "O ContextOS cresce sem inventar",
+          "subtitle": "Quick · Deep · Enrich · Revisão · Gate"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Quick · Deep · Enrich · Revisão · Gate. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-019",
+        "type": "CODE",
+        "title": "O dono valida a verdade do negócio",
+        "content": {
+          "title": "O dono valida a verdade do negócio",
+          "subtitle": "Produto · público · promessa · prova · limite"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Produto · público · promessa · prova · limite. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-020",
+        "type": "SECTION_BREAK",
+        "title": "Zeus transforma direção em execução",
+        "content": {
+          "title": "Zeus transforma direção em execução",
+          "subtitle": "Orquestração"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Orquestração. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-021",
+        "type": "BUILD",
+        "title": "Um pedido atravessa o time sem perder contexto",
+        "content": {
+          "title": "Um pedido atravessa o time sem perder contexto",
+          "subtitle": "Dono · Zeus · líder · especialista · revisão"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Dono · Zeus · líder · especialista · revisão. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-022",
+        "type": "CONTENT",
+        "title": "Todo despacho precisa ser conferível",
+        "content": {
+          "title": "Todo despacho precisa ser conferível",
+          "subtitle": "Cliente | Fonte | Objetivo | Executor | Critério"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Cliente | Fonte | Objetivo | Executor | Critério. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-023",
+        "type": "STATEMENT",
+        "title": "O portal mostra. A memória guarda.",
+        "content": {
+          "title": "O portal mostra. A memória guarda.",
+          "subtitle": "O loop atualiza; Zeus consulta"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. O loop atualiza; Zeus consulta. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-024",
+        "type": "BUILD",
+        "title": "Cada dia prepara o seguinte",
+        "content": {
+          "title": "Cada dia prepara o seguinte",
+          "subtitle": "Sessões · extração · revisão · portal · briefing"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Sessões · extração · revisão · portal · briefing. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-025",
+        "type": "CODE",
+        "title": "Teste a memória em uma nova sessão",
+        "content": {
+          "title": "Teste a memória em uma nova sessão",
+          "subtitle": "Onde paramos e o que faço agora?"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Onde paramos e o que faço agora?. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-026",
+        "type": "SECTION_BREAK",
+        "title": "A primeira entrega torna o sistema real",
+        "content": {
+          "title": "A primeira entrega torna o sistema real",
+          "subtitle": "Conteúdo"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Conteúdo. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-027",
+        "type": "BUILD",
+        "title": "A imagem entra depois da ideia",
+        "content": {
+          "title": "A imagem entra depois da ideia",
+          "subtitle": "Tese · headline · sequência · CTA · visual · revisão"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Tese · headline · sequência · CTA · visual · revisão. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-028",
+        "type": "CODE",
+        "title": "Crie um carrossel do seu negócio",
+        "content": {
+          "title": "Crie um carrossel do seu negócio",
+          "subtitle": "Contexto e identidade obrigatórios"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Contexto e identidade obrigatórios. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-029",
+        "type": "SECTION_BREAK",
+        "title": "ALMOÇO",
+        "content": {
+          "title": "ALMOÇO",
+          "subtitle": "Voltamos para transformar mensagem em campanha"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Voltamos para transformar mensagem em campanha. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-030",
+        "type": "SECTION_BREAK",
+        "title": "Uma campanha forte começa na oferta",
+        "content": {
+          "title": "Uma campanha forte começa na oferta",
+          "subtitle": "Oferta"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Oferta. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-031",
+        "type": "CONTENT",
+        "title": "Valor precisa ser compreensível",
+        "content": {
+          "title": "Valor precisa ser compreensível",
+          "subtitle": "Público | Promessa | Entrega | Mecanismo | Prova"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Público | Promessa | Entrega | Mecanismo | Prova. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-032",
+        "type": "STATEMENT",
+        "title": "A copy não inventa o que a oferta não sustenta",
+        "content": {
+          "title": "A copy não inventa o que a oferta não sustenta",
+          "subtitle": "Condições reais entram; lacunas ficam visíveis"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Condições reais entram; lacunas ficam visíveis. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-033",
+        "type": "SECTION_BREAK",
+        "title": "Cada canal muda a forma da mensagem",
+        "content": {
+          "title": "Cada canal muda a forma da mensagem",
+          "subtitle": "Copy"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Copy. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-034",
+        "type": "CONTENT",
+        "title": "Um time, várias rotas",
+        "content": {
+          "title": "Um time, várias rotas",
+          "subtitle": "Anúncio | WhatsApp | VSL | Página | Webinar"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Anúncio | WhatsApp | VSL | Página | Webinar. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-035",
+        "type": "BUILD",
+        "title": "Método antes de volume",
+        "content": {
+          "title": "Método antes de volume",
+          "subtitle": "Briefing · estratégia · produção · Oráculo · derivados"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Briefing · estratégia · produção · Oráculo · derivados. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-036",
+        "type": "SECTION_BREAK",
+        "title": "Criativo bonito ainda pode estar errado",
+        "content": {
+          "title": "Criativo bonito ainda pode estar errado",
+          "subtitle": "Criativos"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Criativos. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-037",
+        "type": "CONTENT",
+        "title": "A peça nasce de quatro decisões",
+        "content": {
+          "title": "A peça nasce de quatro decisões",
+          "subtitle": "Copy | direção | referência | formato"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Copy | direção | referência | formato. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-038",
+        "type": "CODE",
+        "title": "Abra o arquivo antes de aprovar",
+        "content": {
+          "title": "Abra o arquivo antes de aprovar",
+          "subtitle": "Texto · marca · pessoa · produto · CTA"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Texto · marca · pessoa · produto · CTA. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-039",
+        "type": "SECTION_BREAK",
+        "title": "Peça pronta ainda não é campanha",
+        "content": {
+          "title": "Peça pronta ainda não é campanha",
+          "subtitle": "Tráfego"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Tráfego. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-040",
+        "type": "BUILD",
+        "title": "O clique precisa chegar a algum lugar",
+        "content": {
+          "title": "O clique precisa chegar a algum lugar",
+          "subtitle": "Origem · destino · conversão · acompanhamento"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Origem · destino · conversão · acompanhamento. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-041",
+        "type": "CONTENT",
+        "title": "Meta exige configuração por camadas",
+        "content": {
+          "title": "Meta exige configuração por camadas",
+          "subtitle": "App | System User | ativos | permissões | token"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. App | System User | ativos | permissões | token. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-042",
+        "type": "STATEMENT",
+        "title": "Criada não significa veiculando",
+        "content": {
+          "title": "Criada não significa veiculando",
+          "subtitle": "Rascunho · pausada · análise · ativa · entregando"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Rascunho · pausada · análise · ativa · entregando. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-043",
+        "type": "BUILD",
+        "title": "Você construiu uma cadeia completa",
+        "content": {
+          "title": "Você construiu uma cadeia completa",
+          "subtitle": "Contexto → conteúdo → oferta → copy → criativo → campanha"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Contexto → conteúdo → oferta → copy → criativo → campanha. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-044",
+        "type": "SECTION_BREAK",
+        "title": "Agora transforme o começo em operação",
+        "content": {
+          "title": "Agora transforme o começo em operação",
+          "subtitle": "Core IA Mentoria"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Core IA Mentoria. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-045",
+        "type": "COMPARISON",
+        "title": "Workshop instala a base. Mentoria acompanha a implementação.",
+        "content": {
+          "title": "Workshop instala a base. Mentoria acompanha a implementação.",
+          "subtitle": "Primeira execução | Contexto, funcionários digitais, integrações, rotinas e evolução"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Primeira execução | Contexto, funcionários digitais, integrações, rotinas e evolução. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-046",
+        "type": "STATEMENT",
+        "title": "Da primeira tarefa à empresa inteira",
+        "content": {
+          "title": "Da primeira tarefa à empresa inteira",
+          "subtitle": "Agentes de IA operando áreas do seu negócio"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Agentes de IA operando áreas do seu negócio. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 15
+      },
+      {
+        "id": "slide-047",
+        "type": "CONTENT",
+        "title": "A proposta precisa ser confirmada",
+        "content": {
+          "title": "A proposta precisa ser confirmada",
+          "subtitle": "Formato | duração | entregas | investimento | vagas | CTA"
+        },
+        "layout": "left_aligned",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Formato | duração | entregas | investimento | vagas | CTA. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-048",
+        "type": "CLOSING",
+        "title": "Quer construir isso no seu negócio?",
+        "content": {
+          "title": "Quer construir isso no seu negócio?",
+          "subtitle": "[CTA OFICIAL DA MENTORIA]"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. [CTA OFICIAL DA MENTORIA]. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      },
+      {
+        "id": "slide-049",
+        "type": "CLOSING",
+        "title": "SEU TIME COMEÇA PELO PRÓXIMO PEDIDO",
+        "content": {
+          "title": "SEU TIME COMEÇA PELO PRÓXIMO PEDIDO",
+          "subtitle": "Decisões · entregas · pendências · próxima rotina"
+        },
+        "layout": "full_center",
+        "decoratives": [
+          "MetaBar",
+          "WatermarkNumber",
+          "PageFooter",
+          "SectionTag"
+        ],
+        "animation": {
+          "preset": "fadeUp",
+          "delay": 0.1
+        },
+        "speaker_notes": "Conecte este momento à aula correspondente. Decisões · entregas · pendências · próxima rotina. Não leia o slide; demonstre ou conte um caso real.",
+        "duration_s": 35
+      }
+    ]
+  }
+}

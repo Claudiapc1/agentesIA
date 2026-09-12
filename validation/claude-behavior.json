@@ -1,0 +1,16 @@
+{
+  "case": "copy-vsl-no-context",
+  "prompt": "Leia a skill em /Users/julianotorriani/claude/projetos/torriani/outputs/validacao-agentesIA/candidates/coreai-copy-vsl/SKILL.md e o contrato compartilhado referenciado por ela. Quero uma VSL para vender minha consultoria de marketing. Conduza o trabalho conforme essa skill.",
+  "tools": [
+    "Read"
+  ],
+  "cwd_isolated": true,
+  "exit_code": 1,
+  "stdout": "{\"duration_api_ms\":8941,\"stop_reason\":\"end_turn\",\"session_id\":\"50678726-28c0-471e-a2c3-d8c07ad7ce67\",\"total_cost_usd\":1.253064,\"usage\":{\"input_tokens\":4,\"cache_creation_input_tokens\":75095,\"cache_read_input_tokens\":0,\"output_tokens\":270,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":75095,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"not_available\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":129,\"cache_read_input_tokens\":0,\"cache_creation_input_tokens\":42944,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":42944},\"type\":\"message\"}],\"speed\":\"standard\"},\"modelUsage\":{\"claude-haiku-4-5-20251001\":{\"inputTokens\":1358,\"outputTokens\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.001418,\"contextWindow\":200000,\"maxOutputTokens\":32000,\"thinkingTokens\":0,\"canonicalModel\":\"claude-haiku-4-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"},\"claude-sonnet-5\":{\"inputTokens\":6,\"outputTokens\":1079,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":310211,\"webSearchRequests\":0,\"costUSD\":1.251646,\"contextWindow\":1000000,\"maxOutputTokens\":64000,\"thinkingTokens\":0,\"canonicalModel\":\"claude-sonnet-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"budget_exhausted\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"is_error\":true,\"num_turns\":3,\"subtype\":\"error_max_budget_usd\",\"errors\":[\"Reached maximum budget ($0.5)\"],\"type\":\"result\",\"duration_ms\":22102,\"uuid\":\"983e2180-7a3f-4e95-9a2f-efa67495fee3\",\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": "",
+  "elapsed_seconds": 25.57,
+  "classification": "INCONCLUSIVE_BUDGET_EXHAUSTED",
+  "passed": false,
+  "limitation": "Claude returned no final behavioral answer; cannot establish context gate compliance. No further cases run.",
+  "reported_cost_usd": 1.253064
+}

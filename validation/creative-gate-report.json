@@ -1,0 +1,44 @@
+{
+  "status": "PASS_EXECUTED_SCOPE",
+  "negative_assertions": 15,
+  "positive_local_outputs": 8,
+  "covered": [
+    "prompt missing context",
+    "T0 missing context",
+    "montar missing context",
+    "render missing context",
+    "all four outside destination",
+    "all four cross-business destination",
+    "import buildDeck missing context",
+    "prompt alpha beta",
+    "T0 HTML alpha beta",
+    "montar HTML alpha beta"
+  ],
+  "png_status": "PASS",
+  "evidence": "/Users/julianotorriani/claude/projetos/torriani/outputs/validacao-agentesIA/tests/creative-run-nNtlQ5/results.json",
+  "limits": [
+    "Context structural validation does not establish semantic truth",
+    "Pure prompt engine remains unchanged",
+    "No API calls",
+    "No global or original skill changed"
+  ],
+  "png_results": [
+    {
+      "business": "alpha",
+      "file": "/Users/julianotorriani/claude/projetos/torriani/outputs/validacao-agentesIA/tests/creative-run-nNtlQ5/context/businesses/alpha/outputs/png/slide-01.png",
+      "bytes": 399268,
+      "status": "PASS"
+    },
+    {
+      "business": "beta",
+      "file": "/Users/julianotorriani/claude/projetos/torriani/outputs/validacao-agentesIA/tests/creative-run-nNtlQ5/context/businesses/beta/outputs/png/slide-01.png",
+      "bytes": 399268,
+      "status": "PASS"
+    },
+    {
+      "test": "individual PNG symlink blocked",
+      "status": "PASS"
+    }
+  ],
+  "dependency": "npm ci --ignore-scripts using candidate lock; node_modules excluded from distribution"
+}

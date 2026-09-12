@@ -1,0 +1,1598 @@
+{
+  "id": "888096b2-dbfa-43a9-820a-a1420c5b7b50",
+  "titulo": "Como Usar o Claude Code Como um Profissional",
+  "lesson_payload": {
+    "id": "encontro-01-03",
+    "tag": "Aula 3",
+    "title": "Como Usar o Claude Code Como um Profissional",
+    "blocks": [
+      {
+        "type": "section-badge",
+        "color": "#F59E0B",
+        "label": "ABERTURA"
+      },
+      {
+        "type": "text",
+        "content": "Em **30 de março de 2026**, **Boris Cherny**, o criador do Claude Code, publicou um tweet revelando mais de 20 funcionalidades escondidas que quase ninguém conhecia. O tweet viralizou. Desenvolvedores do mundo inteiro ficaram chocados: estavam usando apenas 20% do que a ferramenta oferece."
+      },
+      {
+        "text": "A maioria das pessoas usa o Claude Code como um chat glorificado. Mas ele é um sistema operacional completo de IA, e a maioria das funcionalidades mais poderosas está escondida atrás de comandos que você nunca viu.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "Nesta aula, você vai conhecer **22 funcionalidades avançadas** que vão transformar completamente a forma como você usa o Claude Code. Cada funcionalidade tem um passo a passo detalhado para você acompanhar na tela. Ao final, você terá uma tabela de referência rápida com todos os comandos."
+      },
+      {
+        "type": "callout",
+        "title": "Para quem é esta aula?",
+        "content": "Você já tem o Claude Code instalado e já sabe o básico (digitar comandos, pedir tarefas). Agora é hora de ir além. Cada funcionalidade que você aprender aqui vai **multiplicar** sua produtividade, não somar, multiplicar.",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "ACESSO REMOTO (01-03)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Acesse de qualquer lugar: 3 formas pelo celular"
+      },
+      {
+        "type": "text",
+        "content": "Imagina estar no ônibus, no sofá, ou na fila do banco e conseguir mandar o Claude Code trabalhar no seu projeto. Existem **3 formas diferentes** de fazer isso, cada uma para uma situação."
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "01 · APLICATIVO MOBILE"
+      },
+      {
+        "type": "text",
+        "content": "O app do Claude no celular permite acessar seus projetos do GitHub diretamente. Você conecta o GitHub pelo computador e os repositórios aparecem no celular."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Baixe o app Claude",
+            "description": "Baixe o aplicativo Claude no iPhone (App Store) ou Android (Google Play)."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Abra a aba Code",
+            "description": "Abra o app e toque na aba **Code** no menu lateral esquerdo."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Conecte o GitHub pelo computador",
+            "description": "No computador, abra claude.ai e vá em **Settings > Connected Apps > GitHub**. Conecte sua conta."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Dê permissão aos repositórios",
+            "description": "Selecione quais repositórios do GitHub você quer acessar pelo celular."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Acesse pelo celular",
+            "description": "Volte ao celular. Seus projetos do GitHub aparecerão na aba Code. Toque em qualquer projeto para começar a trabalhar."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/mobile",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "02 · REMOTE CONTROL"
+      },
+      {
+        "type": "text",
+        "content": "O Remote Control permite **continuar uma sessão do computador no celular**. Como WhatsApp Web, mas ao contrário: você começa no PC e continua no celular."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra o Claude Code no terminal",
+            "description": "No computador, inicie o Claude Code normalmente no terminal."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Digite /remote-control",
+            "description": "Digite `/remote-control` e pressione Enter."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Copie a URL gerada",
+            "description": "O Claude vai gerar uma URL única. Copie essa URL."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Abra no celular",
+            "description": "No celular, abra o navegador e cole a URL."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Continue a conversa",
+            "description": "O app do Claude vai abrir com a mesma sessão. Agora você pode continuar a conversa pelo celular."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/remote-control",
+            "type": "command"
+          },
+          {
+            "text": "Gerando URL de acesso remoto...",
+            "type": "output"
+          },
+          {
+            "text": "URL gerada: https://claude.ai/remote/abc123xyz",
+            "type": "output"
+          },
+          {
+            "text": "Abra este link no navegador do celular",
+            "type": "output"
+          }
+        ],
+        "title": "Remote Control: continuar sessão no celular"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/remote-control",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "03 · DISPATCH"
+      },
+      {
+        "type": "text",
+        "content": "O Dispatch vai além dos dois anteriores. Ele permite **controlar o computador inteiro pelo celular**, não apenas projetos do GitHub ou sessões do Claude."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra o Claude Desktop",
+            "description": "No computador, abra o Claude Desktop (não o terminal)."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Encontre o Dispatch",
+            "description": "Encontre o item **Dispatch** no menu."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Gere o QR Code",
+            "description": "Clique e ele vai gerar um QR Code na tela."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Escaneie com o celular",
+            "description": "No celular, abra a câmera e escaneie o QR Code."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Controle remotamente",
+            "description": "O celular vai sincronizar com o computador. Agora você controla o computador inteiro pelo celular."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Diferença entre as 3 formas",
+        "content": "**Mobile** = acessa projetos do GitHub pelo app.\n**Remote Control** = continua uma sessão do Claude Code no celular.\n**Dispatch** = controla o computador inteiro pelo celular.\n\nO Dispatch é o mais poderoso. Ele transforma seu celular num controle remoto do computador.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/dispatch",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "AUTOMAÇÕES (04-06)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Automatize tarefas recorrentes: Loop, Hooks e Schedule"
+      },
+      {
+        "type": "text",
+        "content": "Existem tarefas que você faz todo dia, toda semana, sempre igual. Rodar um comando de verificação, atualizar dados, gerar um relatório. Fazer isso manualmente é perda de tempo. O Claude Code tem **três funcionalidades** para automatizar isso de vez."
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "04 · LOOP"
+      },
+      {
+        "type": "text",
+        "content": "O **Loop** permite agendar prompts que rodam automaticamente em intervalos definidos. Pense nele como um despertador para o Claude Code."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra o Claude Code",
+            "description": "Abra o Claude Code no terminal normalmente."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Configure o loop",
+            "description": "Digite `/loop 5m /nome-do-comando`. Exemplo: `/loop 5m /enrich` para rodar o comando /enrich a cada 5 minutos."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Confirme a execução",
+            "description": "Pressione Enter. O Claude vai executar esse comando automaticamente a cada 5 minutos."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Veja loops ativos",
+            "description": "Para ver todos os loops ativos, digite `/loop list`."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Pare um loop",
+            "description": "Para parar um loop, digite `/loop stop`."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/loop 5m /enrich",
+            "type": "command"
+          },
+          {
+            "text": "Loop configurado: /enrich será executado a cada 5 minutos",
+            "type": "output"
+          },
+          {
+            "text": "/loop list",
+            "type": "command"
+          },
+          {
+            "text": "Loops ativos: 1",
+            "type": "output"
+          },
+          {
+            "text": "  /enrich - a cada 5 minutos",
+            "type": "output"
+          }
+        ],
+        "title": "Loop: agendar tarefa recorrente"
+      },
+      {
+        "type": "callout",
+        "title": "Como Boris usa o Loop",
+        "content": "Boris usa `/loop 5m /babysit` para cuidar dos PRs dele automaticamente. O Claude verifica a cada 5 minutos se tem PR novo, se tem review pendente, e resolve sozinho.",
+        "variant": "success"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/scheduled-tasks",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "05 · HOOKS"
+      },
+      {
+        "type": "text",
+        "content": "Os **Hooks** são diferentes do Loop. Eles funcionam como triggers: \"quando X acontecer, faça Y\". A diferença crucial é que hooks são **determinísticos**, acontecem 100% das vezes, sem falha. Não é como uma instrução em prompt que a IA pode ignorar."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Peça ao Claude para criar o hook",
+            "description": "Diga ao Claude: \"Crie um hook que toda vez que eu rodar o comando X, faça Y\"."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "O Claude configura automaticamente",
+            "description": "O Claude vai criar a configuração no arquivo settings.json do projeto."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "O hook roda automaticamente",
+            "description": "A partir de agora, o hook roda automaticamente, 100% das vezes. Diferente de instrução no prompt, que a IA pode ignorar."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Conheça os tipos de hooks",
+            "description": "**SessionStart** (início da sessão), **PreToolUse** (antes de executar), **PostToolUse** (depois de executar), **Stop** (quando para)."
+          }
+        ]
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "\"Quando arquivo for criado, execute: adicionar cabeçalho\"",
+            "Acontece 100% das vezes",
+            "Não depende do contexto",
+            "Funciona sempre, em qualquer sessão"
+          ],
+          "title": "Hook configurado",
+          "result": "Garantido. Como um trigger do Zapier ou N8N.",
+          "variant": "after",
+          "subtitle": "Determinístico"
+        },
+        "before": {
+          "items": [
+            "\"Sempre que criar um arquivo, adicione cabeçalho\"",
+            "A IA pode esquecer",
+            "Depende do contexto da conversa",
+            "Falha em sessões longas"
+          ],
+          "title": "Instrução em prompt",
+          "result": "Não garantido. A IA decide se faz ou não.",
+          "variant": "before",
+          "subtitle": "Probabilística"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/hooks",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "06 · SCHEDULE"
+      },
+      {
+        "type": "text",
+        "content": "O **Schedule** é a evolução do Loop. Diferente do Loop que roda no seu computador, o Schedule roda **na nuvem**. Funciona 24/7 mesmo com o laptop fechado."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra o Schedule",
+            "description": "Digite `/schedule` no Claude Code."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Defina o trigger",
+            "description": "Escolha o tipo de trigger: **cron** (horário fixo), **evento GitHub** (quando abrir um PR), ou **API** (quando receber uma requisição)."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Configure a ação",
+            "description": "Defina o que o Claude deve fazer quando o trigger disparar."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Funciona sem o computador",
+            "description": "Diferente do Loop, o Schedule roda na nuvem. Não precisa do computador ligado. Funciona 24/7 mesmo com o laptop fechado."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Loop vs Schedule",
+        "content": "**Loop** = roda no seu computador, enquanto ele estiver ligado.\n**Schedule** = roda na nuvem, 24/7, mesmo com o computador desligado.\n\nUse Loop para tarefas rápidas durante o dia. Use Schedule para automações que precisam rodar sempre.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/scheduled-tasks",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "NAVEGADOR (07)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "O Claude Code vê o que ele construiu"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "07 · EXTENSÃO DO CHROME"
+      },
+      {
+        "type": "text",
+        "content": "Com a **extensão do Chrome**, o Claude Code consegue operar o navegador: clicar em botões, preencher formulários, navegar em páginas. Mas o mais importante: ele consegue **ver o resultado do próprio trabalho**. Isso se chama **auto-feedback loop**, o agente avalia o que fez e se autocorrige."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra o Claude Code",
+            "description": "Abra o Claude Code no terminal normalmente."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Ative a extensão",
+            "description": "Digite o comando para ativar a extensão do Chrome. Autorize quando o Claude pedir permissão."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "O Claude acessa o navegador",
+            "description": "Agora o Claude consegue abrir seu navegador, navegar em sites, preencher formulários."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Auto-feedback loop",
+            "description": "O Claude consegue VER o que ele construiu. Ele cria o código, abre no navegador, olha o resultado e corrige sozinho se algo estiver errado."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "claude \"Crie uma landing page e me mostre como ficou no navegador\"",
+            "type": "command"
+          },
+          {
+            "text": "Criando landing page...",
+            "type": "output"
+          },
+          {
+            "text": "Abrindo no Chrome para verificar...",
+            "type": "output"
+          },
+          {
+            "text": "Verificando resultado visual...",
+            "type": "output"
+          },
+          {
+            "text": "Ajustando espaçamento do header...",
+            "type": "output"
+          },
+          {
+            "text": "Página finalizada e validada visualmente",
+            "type": "output"
+          },
+          {
+            "text": "Ele criou, olhou, corrigiu e entregou. Sem você precisar verificar.",
+            "type": "comment"
+          }
+        ],
+        "title": "Extensão Chrome: auto-feedback loop"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/browser",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "GESTÃO DE CONVERSAS (08-10)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Controle total das suas conversas"
+      },
+      {
+        "type": "text",
+        "content": "Quando você está no meio de uma tarefa complexa e precisa perguntar algo diferente, o que faz? Normalmente, cancela o que está fazendo, faz a pergunta, e tenta voltar ao assunto original. Resultado: perde contexto e bagunça tudo. O Claude Code tem três soluções para isso."
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "08 · BRANCH"
+      },
+      {
+        "type": "text",
+        "content": "O **Branch** duplica a conversa atual com todo o histórico. Você faz suas perguntas na branch sem poluir a conversa original."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Crie uma branch",
+            "description": "No meio de uma conversa, digite `/branch` e pressione Enter."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Conversa duplicada",
+            "description": "O Claude vai criar uma cópia da conversa com todo o histórico."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Explore livremente",
+            "description": "Faça suas perguntas ou testes nessa branch, sem medo de poluir a conversa original."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Volte à conversa original",
+            "description": "Para voltar à conversa original, use o comando que ele mostra. A conversa original fica limpa."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/sessions",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "09 · BTW (BY THE WAY)"
+      },
+      {
+        "type": "text",
+        "content": "O **BTW** permite enviar um comando adicional **enquanto o Claude está trabalhando**, sem cancelar o que ele está fazendo. Como mandar um \"ah, e também...\" sem interromper."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Claude está trabalhando",
+            "description": "Enquanto o Claude está executando alguma tarefa, você tem uma pergunta rápida."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Digite /btw",
+            "description": "Digite `/btw` seguido da sua pergunta ou comando adicional."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Resposta sem parar",
+            "description": "O Claude responde sua pergunta sem parar o trabalho que está fazendo."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "Claude está trabalhando em algo...",
+            "type": "comment"
+          },
+          {
+            "text": "/btw Quando terminar, também crie um arquivo README.md",
+            "type": "command"
+          },
+          {
+            "text": "Anotado! Vou fazer isso quando terminar a tarefa atual.",
+            "type": "output"
+          },
+          {
+            "text": "O Claude não parou o que estava fazendo. Ele anotou e vai executar depois.",
+            "type": "comment"
+          }
+        ],
+        "title": "BTW: enviar comando sem interromper"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/btw",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "10 · REWIND"
+      },
+      {
+        "type": "text",
+        "content": "O **Rewind** permite voltar ao estado anterior quando o Claude fez algo errado. Ele descarta a tentativa falhada e economiza tokens."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Identifique o erro",
+            "description": "O Claude fez algo errado ou tomou um caminho ruim."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Double Esc ou /rewind",
+            "description": "Pressione **Esc duas vezes rapidamente** (Double Esc) ou digite `/rewind`."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Estado restaurado",
+            "description": "O Claude volta ao estado anterior e descarta a tentativa falhada."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Economia de tokens",
+            "description": "Isso economiza tokens porque remove o contexto da tentativa ruim da janela de conversa."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/sessions",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "TRABALHO EM PARALELO (11-13)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Multiplique seus agentes"
+      },
+      {
+        "type": "text",
+        "content": "Até agora, tudo que vimos é sobre **um** Claude Code fazendo **uma** coisa. Mas e se você pudesse ter **vários** trabalhando ao mesmo tempo? Como ter uma equipe inteira, cada um fazendo uma tarefa diferente, sem nenhum atrapalhar o outro."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Agente 1: criar componente",
+            "Agente 2: escrever testes",
+            "Agente 3: documentação",
+            "Agente 4: corrigir bug",
+            "Todos trabalhando simultaneamente"
+          ],
+          "title": "Trabalho em paralelo",
+          "result": "Total: ~10 minutos. Quatro tarefas de uma vez.",
+          "variant": "after",
+          "subtitle": "Vários ao mesmo tempo"
+        },
+        "before": {
+          "items": [
+            "Tarefa 1: criar componente (10 min)",
+            "Tarefa 2: escrever testes (8 min)",
+            "Tarefa 3: documentação (5 min)",
+            "Tarefa 4: corrigir bug (7 min)"
+          ],
+          "title": "Trabalho sequencial",
+          "result": "Total: 30 minutos. Uma tarefa por vez.",
+          "variant": "before",
+          "subtitle": "Um de cada vez"
+        }
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "11 · WORKTREES"
+      },
+      {
+        "type": "text",
+        "content": "**Worktrees** permitem que múltiplos agentes trabalhem no mesmo projeto ao mesmo tempo, cada um na sua cópia isolada. Como várias pessoas editando cópias separadas de um documento. Cada uma faz suas alterações sem conflitar com as outras. Depois, tudo é unificado (merge)."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Inicie em uma worktree",
+            "description": "Abra o Claude Code e digite `claude -w` para iniciar em uma worktree."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "No Desktop, use o checkbox",
+            "description": "No Claude Desktop, marque o checkbox **worktree** ao criar nova sessão."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Cópia isolada",
+            "description": "Cada worktree é uma cópia isolada do projeto. Vários agentes trabalham ao mesmo tempo sem interferir."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Junte os resultados",
+            "description": "Quando terminam, você junta (merge) os resultados de todas as worktrees."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "claude -w",
+            "type": "command"
+          },
+          {
+            "text": "Criando worktree isolada...",
+            "type": "output"
+          },
+          {
+            "text": "Worktree pronta. Trabalhando em cópia isolada do projeto.",
+            "type": "output"
+          }
+        ],
+        "title": "Worktrees: iniciar cópia isolada"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/worktrees",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "12 · BATCH"
+      },
+      {
+        "type": "text",
+        "content": "O **Batch** é para projetos grandes. Ele analisa o que precisa ser feito, faz perguntas para entender melhor, cria um plano e depois **delega para dezenas de agentes** em worktrees paralelas. Cada agente trabalha isolado, testa sozinho, e cria um PR."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Inicie o Batch",
+            "description": "Digite `/batch` seguido do que você quer fazer. Exemplo: `/batch migre todos os arquivos de Solid para React`."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Responda as perguntas",
+            "description": "O Claude vai te fazer perguntas para entender o escopo e os detalhes da tarefa."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Revise o plano",
+            "description": "Depois, ele cria um plano e mostra quantos agentes vai usar e o que cada um vai fazer."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Execução paralela",
+            "description": "O Claude distribui para dezenas de agentes em worktrees paralelas. Cada agente trabalha isolado, testa sozinho e cria um PR."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/batch migre todos os arquivos de Solid para React",
+            "type": "command"
+          },
+          {
+            "text": "Analisando escopo...",
+            "type": "output"
+          },
+          {
+            "text": "Plano criado com 12 subtarefas",
+            "type": "output"
+          },
+          {
+            "text": "Delegando para 12 agentes em worktrees paralelas...",
+            "type": "output"
+          },
+          {
+            "text": "Todos os agentes trabalhando em paralelo...",
+            "type": "output"
+          }
+        ],
+        "title": "Batch: delegar para múltiplos agentes"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/batch",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "13 · ADD DIRECTORY"
+      },
+      {
+        "type": "text",
+        "content": "Por padrão, o Claude Code só enxerga a pasta onde você iniciou a sessão. Com o **Add Directory**, você dá acesso a pastas adicionais."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Adicione ao iniciar",
+            "description": "Ao iniciar o Claude, rode: `claude --add-dir /caminho/da/outra/pasta`."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Ou durante a sessão",
+            "description": "Durante a sessão, digite `/add-dir /caminho/da/pasta`."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Acesso expandido",
+            "description": "Agora o Claude acessa a pasta adicional além da pasta atual. Útil quando seu projeto precisa ler arquivos de outro repositório."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "claude --add-dir /caminho/para/outra-pasta",
+            "type": "command"
+          },
+          {
+            "text": "Diretório adicionado: /caminho/para/outra-pasta",
+            "type": "output"
+          },
+          {
+            "text": "Claude Code agora pode ler e editar arquivos nesta pasta",
+            "type": "output"
+          }
+        ],
+        "title": "Add Directory: acessar pasta extra"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/add-dir",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#8B5CF6",
+        "label": "AGENTES (14)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Crie mini Claude Codes especializados"
+      },
+      {
+        "type": "section-badge",
+        "color": "#8B5CF6",
+        "label": "14 · AGENTES ESPECIALIZADOS"
+      },
+      {
+        "type": "text",
+        "content": "Com o comando `/agents`, você pode criar **agentes especializados**: mini Claude Codes com ferramentas e permissões próprias. Cada agente é focado em uma coisa e faz aquilo muito bem."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra o menu de agentes",
+            "description": "No Claude Code, rode o comando `/agents`."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Escolha criar novo agente",
+            "description": "Escolha \"Criar novo agente\" no menu que aparece."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Defina o escopo",
+            "description": "Defina se é só para este projeto ou global (para todos os projetos)."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Deixe o Claude criar ou faça você",
+            "description": "Deixe o Claude criar o agente automaticamente ou defina você mesmo as instruções."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Dê um nome",
+            "description": "Dê um nome descritivo. Exemplo: \"Slide Designer\", \"Code Reviewer\", \"Test Writer\"."
+          },
+          {
+            "badge": "Passo 6",
+            "title": "Configure permissões",
+            "description": "Escolha as permissões: acesso total, só leitura, etc."
+          },
+          {
+            "badge": "Passo 7",
+            "title": "Escolha o modelo padrão",
+            "description": "Escolha qual modelo o agente usa: Sonnet (rápido), Opus (poderoso), Haiku (econômico)."
+          },
+          {
+            "badge": "Passo 8",
+            "title": "Agente salvo",
+            "description": "O agente fica salvo em `.claude/agents/nome.md`. Para usar: `claude --agent=nome`."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/agents",
+            "type": "command"
+          },
+          {
+            "text": "Agentes disponíveis:",
+            "type": "output"
+          },
+          {
+            "text": "  1. Criar novo agente",
+            "type": "output"
+          },
+          {
+            "text": "  2. slide-designer (projeto)",
+            "type": "output"
+          },
+          {
+            "text": "  3. code-reviewer (global)",
+            "type": "output"
+          },
+          {
+            "text": "claude --agent=slide-designer",
+            "type": "command"
+          },
+          {
+            "text": "Agente slide-designer ativado.",
+            "type": "output"
+          }
+        ],
+        "title": "Agentes: criar e usar"
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "icon": "check-circle",
+            "title": "Agente de Testes",
+            "description": "Especializado em escrever e rodar testes automatizados. Só tem acesso à pasta de testes."
+          },
+          {
+            "icon": "file-text",
+            "title": "Agente de Documentação",
+            "description": "Focado em criar e manter documentação. Conhece os padrões do projeto."
+          },
+          {
+            "icon": "search",
+            "title": "Agente de Review",
+            "description": "Revisa código antes de commits. Verifica padrões, bugs e segurança."
+          },
+          {
+            "icon": "upload",
+            "title": "Agente de Deploy",
+            "description": "Cuida do processo de publicação. Roda build, verifica erros, publica."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/agents",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "VOZ (15)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Fale em vez de digitar"
+      },
+      {
+        "type": "section-badge",
+        "color": "#06B6D4",
+        "label": "15 · MODO VOZ"
+      },
+      {
+        "type": "text",
+        "content": "O modo voz permite ditar seus prompts em vez de digitar. Você fala 3x mais rápido do que digita. Boris diz que faz a maior parte do código falando."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Ative o modo voz",
+            "description": "No Claude Code, digite `/voice`. Vai aparecer \"Voice enabled\"."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Fale seu prompt",
+            "description": "Segure a **barra de espaço** para falar. Solte para enviar."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Configure o idioma",
+            "description": "**IMPORTANTE:** vá em `/config` e mude o idioma para **Português (Brasil)**, senão ele escreve em inglês."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "No Desktop",
+            "description": "No Claude Desktop, use o botão de microfone."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "No iOS",
+            "description": "No iOS, ative o ditado nas configurações do app."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/config",
+            "type": "command"
+          },
+          {
+            "text": "Idioma de voz: Português (Brasil)",
+            "type": "output"
+          },
+          {
+            "text": "Idioma configurado",
+            "type": "output"
+          },
+          {
+            "text": "/voice",
+            "type": "command"
+          },
+          {
+            "text": "Voice enabled. Segure espaço para falar.",
+            "type": "output"
+          }
+        ],
+        "title": "Modo Voz: ativar e configurar"
+      },
+      {
+        "type": "callout",
+        "title": "Dica do Boris",
+        "content": "Boris diz que faz a maior parte do código falando. Você fala 3x mais rápido do que digita. Configure o idioma uma vez e use o modo voz sempre que quiser acelerar.",
+        "variant": "success"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/voice",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "PLANEJAMENTO E QUALIDADE (16-18)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Planeje antes de executar"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "16 · PLAN MODE"
+      },
+      {
+        "type": "text",
+        "content": "O **Plan Mode** faz o Claude criar um plano detalhado antes de executar qualquer coisa. Você revisa, ajusta e só depois ele implementa."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Entre no modo planejamento",
+            "description": "Pressione **Shift+Tab** para entrar no modo planejamento."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Descreva o que quer",
+            "description": "Descreva o que você quer construir. Seja detalhado."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Revise o plano",
+            "description": "O Claude cria um plano detalhado antes de executar. Revise e ajuste o que for necessário."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Aceite e execute",
+            "description": "Pressione **Shift+Tab** novamente para aceitar o plano. O Claude executa tudo de uma vez."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Dica do Boris",
+        "content": "Gaste energia no plano para o Claude fazer a implementação de uma vez só. Um plano bem feito evita idas e vindas que consomem tokens e tempo.",
+        "variant": "success"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/plan-mode",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "17 · SIMPLIFY"
+      },
+      {
+        "type": "text",
+        "content": "O **Simplify** faz agentes paralelos revisarem o código automaticamente após uma tarefa ser concluída."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Termine uma tarefa",
+            "description": "Depois que o Claude terminar uma tarefa, digite `/simplify`."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Revisão automática",
+            "description": "Agentes paralelos vão revisar o código automaticamente."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Checagem de qualidade",
+            "description": "Eles checam: reutilização de código, qualidade e eficiência."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Melhorias aplicadas",
+            "description": "O Claude aplica as melhorias encontradas automaticamente."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/simplify",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#22C55E",
+        "label": "18 · FOCUS MODE"
+      },
+      {
+        "type": "text",
+        "content": "O **Focus Mode** esconde todo o trabalho intermediário e mostra apenas o resultado final. Ideal quando você confia no modelo e quer menos ruído visual."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Ative o Focus",
+            "description": "Digite `/focus` para ativar."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Trabalho limpo",
+            "description": "O Claude esconde todo o trabalho intermediário. Você vê apenas o resultado final."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Desative quando quiser",
+            "description": "Digite `/focus` novamente para desativar e voltar a ver tudo."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/focus",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "GERENCIAMENTO DE CONTEXTO (19-20)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Controle a memória do Claude"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "19 · COMPACT"
+      },
+      {
+        "type": "text",
+        "content": "Quando a conversa fica longa, o Claude começa a esquecer o início. O **Compact** resume a conversa mantendo o que importa."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Identifique a necessidade",
+            "description": "Quando a conversa ficar longa e o Claude começar a repetir perguntas ou esquecer decisões."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Execute o compact",
+            "description": "Digite `/compact` e o Claude resume a conversa mantendo o que importa."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Adicione contexto ao compact",
+            "description": "Dica: adicione contexto. Exemplo: `/compact foque no refactor de auth, ignore os testes`."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Use quando trocar de subtarefa",
+            "description": "Use quando vai continuar trabalhando no mesmo assunto, mas precisa liberar espaço na memória."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/compact foque no refactor de auth, ignore os testes",
+            "type": "command"
+          },
+          {
+            "text": "Compactando conversa...",
+            "type": "output"
+          },
+          {
+            "text": "Conversa resumida. Contexto de auth preservado.",
+            "type": "output"
+          }
+        ],
+        "title": "Compact: resumir conversa longa"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/context",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "20 · EFFORT"
+      },
+      {
+        "type": "text",
+        "content": "O **Effort** controla quanto \"esforço mental\" o Claude coloca em cada resposta. Tarefas simples não precisam do máximo de poder."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Escolha o nível",
+            "description": "Digite `/effort` seguido do nível desejado."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Níveis disponíveis",
+            "description": "**low** para tarefas simples (renomear arquivo). **medium** para tarefas normais. **high** para tarefas complexas. **xhigh** para debug difícil. **max** para decisões de arquitetura."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Persistência",
+            "description": "O nível persiste entre sessões, exceto **max**, que é resetado a cada nova sessão."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/effort low",
+            "type": "command"
+          },
+          {
+            "text": "Effort definido: low",
+            "type": "output"
+          },
+          {
+            "text": "Para tarefas simples. Respostas rápidas e econômicas.",
+            "type": "comment"
+          },
+          {
+            "text": "/effort max",
+            "type": "command"
+          },
+          {
+            "text": "Effort definido: max (válido apenas para esta sessão)",
+            "type": "output"
+          },
+          {
+            "text": "Para debug difícil ou decisões de arquitetura.",
+            "type": "comment"
+          }
+        ],
+        "title": "Effort: ajustar nível de esforço"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/effort",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#8B5CF6",
+        "label": "MEMÓRIA E CONFIGURAÇÃO (21-22)"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Ensine o Claude a aprender com os próprios erros"
+      },
+      {
+        "type": "section-badge",
+        "color": "#8B5CF6",
+        "label": "21 · CLAUDE.md"
+      },
+      {
+        "type": "text",
+        "content": "O **CLAUDE.md** é o arquivo de memória do projeto. O Claude lê esse arquivo automaticamente em toda sessão e segue as regras que estão nele."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Crie o arquivo",
+            "description": "Crie um arquivo chamado `CLAUDE.md` na raiz do seu projeto."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Escreva as regras",
+            "description": "Escreva as regras que o Claude deve seguir neste projeto. Exemplo: \"Sempre use TypeScript\", \"Nunca delete dados sem confirmação\"."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Leitura automática",
+            "description": "O Claude lê esse arquivo automaticamente em toda sessão. Não precisa pedir."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Atualize após correções",
+            "description": "Após cada correção, peça: \"Atualize o CLAUDE.md para não cometer esse erro de novo\". O Claude é muito bom em escrever regras para si mesmo."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Evolução contínua",
+            "description": "Com o tempo, o CLAUDE.md se torna uma base de conhecimento do projeto. Quanto mais regras, menos erros."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Dica do Boris",
+        "content": "A equipe inteira da Anthropic contribui no CLAUDE.md do Claude Code várias vezes por semana. É o arquivo mais importante do projeto. Use e abuse dele.",
+        "variant": "success"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/claude-md",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#8B5CF6",
+        "label": "22 · PERMISSIONS"
+      },
+      {
+        "type": "text",
+        "content": "O **Permissions** permite pré-autorizar comandos seguros para que o Claude não peça permissão toda vez."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Passo 1",
+            "title": "Abra as permissões",
+            "description": "Digite `/permissions` para abrir o menu de configuração."
+          },
+          {
+            "badge": "Passo 2",
+            "title": "Pré-autorize comandos seguros",
+            "description": "Pré-autorize comandos que você sabe que são seguros. Exemplo: \"npm run test\", \"git status\", \"git diff\"."
+          },
+          {
+            "badge": "Passo 3",
+            "title": "Sem confirmação repetitiva",
+            "description": "Assim o Claude não pede permissão toda vez para coisas que você sempre aprova."
+          },
+          {
+            "badge": "Passo 4",
+            "title": "Compartilhe com o time",
+            "description": "Configure em `.claude/settings.json` para compartilhar as permissões com todo o time."
+          },
+          {
+            "badge": "Passo 5",
+            "title": "Sugestão automática",
+            "description": "Alternativa: `/fewer-permission-prompts` escaneia seu histórico e sugere automaticamente o que liberar."
+          }
+        ]
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/permissions",
+            "type": "command"
+          },
+          {
+            "text": "Configurando permissões...",
+            "type": "output"
+          },
+          {
+            "text": "/fewer-permission-prompts",
+            "type": "command"
+          },
+          {
+            "text": "Analisando histórico de uso...",
+            "type": "output"
+          },
+          {
+            "text": "Sugestões: npm run test, git status, git diff",
+            "type": "output"
+          },
+          {
+            "text": "Aceitar sugestões? (y/n)",
+            "type": "output"
+          }
+        ],
+        "title": "Permissions: configurar permissões"
+      },
+      {
+        "type": "callout",
+        "title": "Referência",
+        "content": "Documentação oficial: https://code.claude.com/docs/en/permissions",
+        "variant": "info"
+      },
+      {
+        "type": "section-badge",
+        "color": "#2B7DE1",
+        "label": "TABELA DE REFERÊNCIA RÁPIDA"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Todos os 22 comandos em um só lugar"
+      },
+      {
+        "type": "text",
+        "content": "Aqui está a tabela completa com todas as funcionalidades que você aprendeu hoje. Salve esta referência.\n\n| # | Funcionalidade | O que faz | Comando / Ação |\n|---|---|---|---|\n| 01 | App Mobile | Acessa projetos GitHub pelo celular | App Claude (aba Code) |\n| 02 | Remote Control | Continua sessão do PC no celular | `/remote-control` |\n| 03 | Dispatch | Controla o computador pelo celular | QR Code no Claude Desktop |\n| 04 | Loop | Agenda prompts recorrentes | `/loop 5m /comando` |\n| 05 | Hooks | Automações \"quando X, faça Y\" | Configuração no settings.json |\n| 06 | Schedule | Automações na nuvem, 24/7 | `/schedule` |\n| 07 | Extensão Chrome | Claude opera e vê o navegador | Ativar extensão no Chrome |\n| 08 | Branch | Duplica conversa com contexto | `/branch` |\n| 09 | BTW | Envia comando sem interromper | `/btw mensagem` |\n| 10 | Rewind | Volta ao estado anterior | Double Esc ou `/rewind` |\n| 11 | Worktrees | Cópias isoladas do projeto | `claude -w` |\n| 12 | Batch | Delega para múltiplos agentes | `/batch tarefa` |\n| 13 | Add Directory | Acessa pastas adicionais | `--add-dir /caminho` |\n| 14 | Agentes | Cria agentes especializados | `/agents` |\n| 15 | Modo Voz | Falar prompts em vez de digitar | `/voice` |\n| 16 | Plan Mode | Planejar antes de executar | Shift+Tab |\n| 17 | Simplify | Revisão automática de código | `/simplify` |\n| 18 | Focus Mode | Mostra só o resultado final | `/focus` |\n| 19 | Compact | Resume conversa longa | `/compact` |\n| 20 | Effort | Ajusta nível de esforço | `/effort low/max` |\n| 21 | CLAUDE.md | Memória persistente do projeto | Criar arquivo CLAUDE.md |\n| 22 | Permissions | Pré-autoriza comandos seguros | `/permissions` |"
+      },
+      {
+        "type": "section-badge",
+        "color": "#F59E0B",
+        "label": "FECHAMENTO"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Hora de colocar em prática"
+      },
+      {
+        "type": "callout",
+        "title": "Pra levar com você",
+        "content": "Agora você conhece **22 funcionalidades** do Claude Code que a maioria das pessoas nunca descobre. Veja o que você aprendeu:\n\n- [ ] 3 formas de acessar pelo celular (Mobile, Remote Control, Dispatch)\n- [ ] 3 tipos de automação (Loop, Hooks, Schedule)\n- [ ] Auto-feedback visual com a extensão do Chrome\n- [ ] 3 formas de gerenciar conversas (Branch, BTW, Rewind)\n- [ ] 3 formas de trabalho em paralelo (Worktrees, Batch, Add Dir)\n- [ ] Agentes especializados com permissões próprias\n- [ ] Modo voz para ditar 3x mais rápido\n- [ ] Planejamento com Plan Mode, Simplify e Focus\n- [ ] Gerenciamento de contexto com Compact e Effort\n- [ ] Memória persistente com CLAUDE.md e Permissions\n\nO segredo não é usar todas ao mesmo tempo. Escolha 2 ou 3 que fazem sentido para o seu fluxo e vá adicionando aos poucos. Comece hoje. Você acabou de sair do grupo dos 20% que usam o básico e entrou no grupo dos que dominam a ferramenta.",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "schedule": [
+      {
+        "time": "0:00",
+        "topic": "Abertura. O tweet de 30 de março de 2026",
+        "duration": "3 min"
+      },
+      {
+        "time": "0:03",
+        "topic": "Acesso Remoto. Mobile, Remote Control e Dispatch (01-03)",
+        "duration": "10 min"
+      },
+      {
+        "time": "0:13",
+        "topic": "Automações. Loop, Hooks e Schedule (04-06)",
+        "duration": "10 min"
+      },
+      {
+        "time": "0:23",
+        "topic": "Navegador. Extensão do Chrome (07)",
+        "duration": "5 min"
+      },
+      {
+        "time": "0:28",
+        "topic": "Gestão de Conversas. Branch, BTW e Rewind (08-10)",
+        "duration": "7 min"
+      },
+      {
+        "time": "0:35",
+        "topic": "Trabalho em Paralelo. Worktrees, Batch e Add Directory (11-13)",
+        "duration": "10 min"
+      },
+      {
+        "time": "0:45",
+        "topic": "Agentes Especializados. /agents (14)",
+        "duration": "7 min"
+      },
+      {
+        "time": "0:52",
+        "topic": "Modo Voz. /voice (15)",
+        "duration": "5 min"
+      },
+      {
+        "time": "0:57",
+        "topic": "Planejamento e Qualidade. Plan Mode, Simplify e Focus (16-18)",
+        "duration": "8 min"
+      },
+      {
+        "time": "1:05",
+        "topic": "Gerenciamento de Contexto. Compact e Effort (19-20)",
+        "duration": "5 min"
+      },
+      {
+        "time": "1:10",
+        "topic": "Memória e Configuração. CLAUDE.md e Permissions (21-22)",
+        "duration": "7 min"
+      },
+      {
+        "time": "1:17",
+        "topic": "Tabela de Referência Rápida. Todos os 22 comandos",
+        "duration": "3 min"
+      },
+      {
+        "time": "1:20",
+        "topic": "Fechamento. Checklist e próximos passos",
+        "duration": "5 min"
+      }
+    ],
+    "subtitle": "22 funcionalidades avançadas que transformam seu fluxo de trabalho",
+    "learningGoals": [
+      "Acessar e controlar o Claude Code pelo celular de 3 formas diferentes (Mobile, Remote Control, Dispatch)",
+      "Automatizar tarefas recorrentes com Loop, Hooks e Schedule",
+      "Usar a extensão do Chrome para feedback visual automático",
+      "Gerenciar conversas com Branch, BTW e Rewind sem perder contexto",
+      "Trabalhar em paralelo com Worktrees, Batch e Add Directory",
+      "Criar agentes especializados com ferramentas e permissões próprias",
+      "Usar o modo voz para ditar prompts 3x mais rápido do que digitando",
+      "Planejar implementações com Plan Mode antes de executar",
+      "Revisar código automaticamente com Simplify e Focus Mode",
+      "Gerenciar contexto com Compact e Effort para sessões longas",
+      "Configurar CLAUDE.md para o Claude aprender com os próprios erros",
+      "Dominar as 22 funcionalidades avançadas que aceleram seu fluxo de trabalho"
+    ]
+  }
+}

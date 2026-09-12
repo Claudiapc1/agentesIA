@@ -1,0 +1,9 @@
+{
+  "date": "2026-09-11",
+  "source": "criativos/src/lib/prompt-builder.ts",
+  "sha256": "f0839b761c52773eaf1aa5d443104479e9dd734466260bec994651af04a313f9",
+  "analysisSource": "criativos/src/app/api/template-analyze/route.ts#ANALYZE_PROMPT",
+  "analysisSha256": "d746e9cb5b247e0eb823d5563c86c34446a89c2d2c9e23eee39f9503c4c39a4f",
+  "compiler": "5.9.3",
+  "note": "JavaScript transpiled without changing rules; no backend, network or database"
+}

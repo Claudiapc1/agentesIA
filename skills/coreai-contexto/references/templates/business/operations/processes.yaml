@@ -1,0 +1,41 @@
+# ContextOS - Business Processes
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+core_processes:
+  - name: null        # Ex: Onboarding de cliente
+    owner: null
+    steps: []
+    tools_used: []
+    sla: null
+    bottleneck: null
+
+  - name: null        # Ex: Producao de conteudo
+    owner: null
+    steps: []
+    tools_used: []
+    sla: null
+    bottleneck: null
+
+  - name: null        # Ex: Atendimento ao cliente
+    owner: null
+    steps: []
+    tools_used: []
+    sla: null
+    bottleneck: null
+
+automation_opportunities:
+  - process: null
+    current_time: null
+    potential_savings: null
+    tool_suggestion: null
+
+tools_ecosystem:
+  - name: null
+    purpose: null
+    cost_monthly: null
+    integrations: []
+
+metadata:
+  status: INCOMPLETE

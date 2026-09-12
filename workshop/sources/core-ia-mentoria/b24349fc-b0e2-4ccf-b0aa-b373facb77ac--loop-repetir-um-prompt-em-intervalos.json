@@ -1,0 +1,289 @@
+{
+  "id": "b24349fc-b0e2-4ccf-b0aa-b373facb77ac",
+  "titulo": "/loop: Repetir um Prompt em Intervalos",
+  "lesson_payload": {
+    "id": "encontro-08-04",
+    "title": "/loop: Repetir um Prompt em Intervalos",
+    "blocks": [
+      {
+        "type": "section-cover",
+        "title": "/loop",
+        "eyebrow": "ENCONTRO 8 · CLAUDE CODE PROFISSIONAL",
+        "subtitle": "Re-executa um prompt em intervalos, dentro da sessão aberta. Feito para polling e monitoramento."
+      },
+      {
+        "type": "callout",
+        "title": "A ideia em uma frase",
+        "content": "Enquanto você trabalha, o Claude verifica algo de tempos em tempos: o deploy terminou? a CI passou? chegou review novo no PR? Você não precisa ficar perguntando.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Sintaxe"
+      },
+      {
+        "type": "command-list",
+        "title": "As quatro formas de chamar o /loop",
+        "commands": [
+          {
+            "command": "/loop <intervalo> <prompt>",
+            "description": "Intervalo fixo com prompt definido"
+          },
+          {
+            "command": "/loop <prompt>",
+            "description": "Intervalo dinâmico: o Claude escolhe de 1 a 60 min"
+          },
+          {
+            "command": "/loop <intervalo>",
+            "description": "Sem prompt: usa o prompt built-in de manutenção"
+          },
+          {
+            "command": "/loop",
+            "description": "Sem nada: built-in em ritmo dinâmico"
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Unidades de intervalo",
+        "content": "s, m, h, d (ex.: 5m, 2h, 1d). Intervalos 'tortos' como 7m ou 90m são arredondados pro cron mais próximo, e o Claude avisa qual escolheu.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Os três modos"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Modo 1 · Intervalo fixo"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/loop 5m check if the deployment finished",
+            "type": "command"
+          },
+          {
+            "text": "/loop every 2 hours review the PR",
+            "type": "command"
+          }
+        ],
+        "title": "Cadência fixa"
+      },
+      {
+        "type": "text",
+        "content": "Gera um cron interno, confirma a cadência e o job ID. Continua até você parar ou expirar em 7 dias."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Modo 2 · Intervalo dinâmico (auto-pacing)"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/loop check whether CI passed and address review comments",
+            "type": "command"
+          }
+        ],
+        "title": "O Claude escolhe o ritmo"
+      },
+      {
+        "type": "text",
+        "content": "Sem intervalo, o Claude escolhe o próximo delay após cada iteração: espera curta enquanto o build roda, espera longa quando nada está pendente. É o modo mais econômico em tokens."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Modo 3 · Built-in de manutenção (sem prompt)"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "/loop 15m",
+            "type": "command"
+          },
+          {
+            "text": "built-in em intervalo fixo",
+            "type": "comment"
+          },
+          {
+            "text": "/loop",
+            "type": "command"
+          },
+          {
+            "text": "built-in em ritmo dinâmico",
+            "type": "comment"
+          }
+        ],
+        "title": "Prompt built-in"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Continuar trabalho não terminado",
+            "description": "A primeira prioridade do prompt built-in é retomar o que ficou pela metade."
+          },
+          {
+            "title": "Cuidar do PR da branch",
+            "description": "Review, CI, conflitos: o built-in cuida do pull request da branch atual."
+          },
+          {
+            "title": "Limpezas quando nada está pendente",
+            "description": "Caça a bugs e simplificações. Ações irreversíveis só com autorização prévia."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Customizar o default",
+        "content": "Crie um loop.md em .claude/loop.md (projeto) ou ~/.claude/loop.md (global). Escreva como se estivesse digitando o prompt. Ex.: 'Verifique o PR release/next. Se a CI estiver vermelha, puxe o log, diagnostique e empurre o fix. Se houver review novo, resolva cada um.'",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Exemplos reais"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "Acompanhar deploy a cada 5 minutos",
+            "type": "comment"
+          },
+          {
+            "text": "/loop 5m check the status of the production deployment",
+            "type": "command"
+          },
+          {
+            "text": "Monitorar PR enquanto você trabalha (dinâmico)",
+            "type": "comment"
+          },
+          {
+            "text": "/loop monitor the PR for CI failures and new review comments",
+            "type": "command"
+          },
+          {
+            "text": "Re-executar uma skill existente em intervalo",
+            "type": "comment"
+          },
+          {
+            "text": "/loop 20m /review-pr 1234",
+            "type": "command"
+          }
+        ],
+        "title": "Casos de uso do dia a dia"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Quando usar e quando não usar"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Trabalho substancial com fim verificável: use /goal",
+            "Rodar com a sessão fechada: use /schedule",
+            "Timing exato crítico (há jitter)",
+            "Mais de 50 tasks na mesma sessão (limite)"
+          ],
+          "title": "Quando NÃO usar",
+          "result": "/loop é pra vigiar, não pra trabalhar até terminar.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Polling de deploy ('já ficou pronto?')",
+            "Monitorar PR (CI passou? review novo?)",
+            "Babysitting de builds longos",
+            "Checar periodicamente se uma condição virou verdadeira"
+          ],
+          "title": "Quando usar /loop",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Parar com segurança e o jitter"
+      },
+      {
+        "type": "numbered-cards",
+        "items": [
+          {
+            "title": "Como parar",
+            "accent": "coral",
+            "description": "Esc enquanto aguarda a próxima iteração, ou peça em linguagem natural ('cancela o job de checar o deploy')."
+          },
+          {
+            "title": "Expira sozinho",
+            "accent": "lime",
+            "description": "Recurring tasks expiram em 7 dias (disparam uma última vez e se deletam). Isso limita o estrago de um /loop esquecido."
+          },
+          {
+            "title": "Jitter (atraso)",
+            "accent": "violet",
+            "description": "Recurring: até 30 min de atraso (ou metade do intervalo se menor que 1h). Se o timing exato importa, use um minuto que não seja :00 nem :30."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "/goal vs /loop vs /schedule"
+      },
+      {
+        "type": "text",
+        "content": "O erro mais comum é escolher o recurso errado. Esta tabela resolve. /goal trabalha até cumprir uma condição; /loop repete um prompt em intervalo; /schedule roda na nuvem em horário ou evento."
+      },
+      {
+        "type": "cards-grid",
+        "cards": [
+          {
+            "span": 1,
+            "title": "/goal",
+            "description": "Trabalhar até cumprir uma condição. Próximo turno começa quando o anterior termina. Para quando a condição é verdadeira. Precisa da sessão aberta."
+          },
+          {
+            "span": 1,
+            "title": "/loop",
+            "description": "Repetir um prompt em intervalo. Próximo turno começa quando passa o tempo. Para quando você cancela ou expira em 7 dias. Precisa da sessão aberta."
+          },
+          {
+            "span": 1,
+            "title": "/schedule",
+            "description": "Rodar na nuvem em horário ou evento. Dispara no cron ou evento. Para quando você desativa a routine. Roda com a sessão fechada."
+          }
+        ],
+        "layout": "grid"
+      },
+      {
+        "type": "callout",
+        "title": "Resumo do /loop",
+        "content": "Re-executa um prompt em intervalos pra vigiar algo enquanto você trabalha. Três modos: fixo, dinâmico e built-in. Expira em 7 dias sozinho. Pra trabalho com fim objetivo, vá de /goal; pra rodar desconectado, /schedule.",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "eyebrow": "ENCONTRO 8 · PARTE 4 DE 4",
+    "duration": 15,
+    "schedule": [],
+    "subtitle": "Polling e monitoramento dentro da sessão: o Claude verifica algo de tempos em tempos pra você",
+    "learningGoals": [
+      "Entender o que é o /loop e pra que serve (polling e monitoramento)",
+      "Dominar a sintaxe e as unidades de intervalo",
+      "Conhecer os três modos: intervalo fixo, dinâmico e built-in",
+      "Customizar o prompt default com um loop.md",
+      "Saber quando usar /loop vs /goal vs /schedule, e parar com segurança"
+    ]
+  }
+}

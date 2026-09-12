@@ -1,0 +1,33 @@
+# ContextOS - Design Patterns
+# Padroes de UI recorrentes
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+layout_patterns:
+  - name: null        # Ex: Dashboard, Landing Page, Settings
+    description: null
+    grid: null        # Ex: 12-col, flex, css-grid
+    breakpoint_behavior: null
+
+interaction_patterns:
+  - name: null        # Ex: Infinite Scroll, Drag & Drop, Wizard
+    description: null
+    trigger: null
+    feedback: null
+
+feedback_patterns:
+  toast_position: null     # top-right | bottom-right | top-center
+  loading_style: null      # spinner | skeleton | progress-bar
+  empty_state_style: null  # illustration | text | cta
+  error_style: null        # inline | banner | modal
+
+accessibility:
+  wcag_level: null    # A | AA | AAA
+  focus_style: null
+  color_contrast: null
+  keyboard_navigation: null
+
+metadata:
+  status: INCOMPLETE

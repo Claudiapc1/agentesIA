@@ -1,0 +1,191 @@
+[
+  {
+    "slide": 1,
+    "type": "TITLE",
+    "title": "ContextOS",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "A camada de contexto do CORE AIOS. Como construir, popular e enriquecer o cérebro de negócio que TODOS os seus agentes consultam antes de gerar copy, criativo, estratégia ou análise. Quatro skills. Quatro funções claras. Uma diferença gigante no output."
+  },
+  {
+    "slide": 2,
+    "type": "STATEMENT",
+    "title": "Contexto rico separa o genérico do preciso.",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Por que contexto importa No Core AIOS, contexto é tudo que define quem é o seu negócio: perfil da empresa, DNA do fundador, ICP, marca, pricing, cultura, produtos, decisões, reuniões. Esse contexto vive em arquivos YAML estruturados que qualquer agente ou skill do Core AIOS consulta antes de gerar qualquer coisa. Sem contexto rico Output sai genérico, com cara de IA Sem voz, sem números reais, sem prova social Toda copy parece de qualquer agência Você precisa reescrever 80% do que sai Cada nova entrega começa do zero Com contexto rico Output sai com a voz e os dados reais da empresa ICP, pricing, brand voice já vêm embutidos Cases reais, prêmios reais, números reais Você revisa, não reescreve Toda nova entrega herda o contexto Contexto rico é o que separa output genérico de output preciso. Nenhuma skill do ContextOS inventa fatos. Todo dado vem do usuário (entrevista) ou de fontes públicas verificáveis (web). Se não tem evidência, o campo fica vazio. Isso é o que garante que sua copy é fact-checked automaticamente."
+  },
+  {
+    "slide": 3,
+    "type": "COMPARISON",
+    "title": "Sem contexto você reescreve. Com contexto você revisa.",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "No Core AIOS, contexto é tudo que define quem é o seu negócio: perfil da empresa, DNA do fundador, ICP, marca, pricing, cultura, produtos, decisões, reuniões. Esse contexto vive em arquivos YAML estruturados que qualquer agente ou skill do Core AIOS consulta antes de gerar qualquer coisa. Sem contexto rico Output sai genérico, com cara de IA Sem voz, sem números reais, sem prova social Toda copy parece de qualquer agência Você precisa reescrever 80% do que sai Cada nova entrega começa do zero Com contexto rico Output sai com a voz e os dados reais da empresa ICP, pricing, brand voice já vêm embutidos Cases reais, prêmios reais, números reais Você revisa, não reescreve Toda nova entrega herda o contexto Contexto rico é o que separa output genérico de output preciso. Nenhuma skill do ContextOS inventa fatos. Todo dado vem do usuário (entrevista) ou de fontes públicas verificáveis (web). Se não tem evidência, o campo fica vazio. Isso é o que garante que sua copy é fact-checked automaticamente."
+  },
+  {
+    "slide": 4,
+    "type": "STATEMENT",
+    "title": "Zero invenção.",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Nenhuma skill do ContextOS inventa fatos. Todo dado vem do usuário (entrevista) ou de fontes públicas verificáveis (web). Se não tem evidência, o campo fica vazio. Isso é o que garante que sua copy é fact-checked automaticamente."
+  },
+  {
+    "slide": 5,
+    "type": "SECTION_BREAK",
+    "title": "As quatro skills",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "As 4 skills do ContextOS O ContextOS é dividido em 4 skills que cobrem o ciclo completo: criar estrutura, preencher rápido, aprofundar, enriquecer com web. Cada uma tem função única e ordem natural de execução. flowchart LR\n    A[context-create<br/>Estrutura<br/>0%] --> B[context-quick<br/>~25 perguntas<br/>35%]\n    B --> C[context-deep<br/>~210 perguntas<br/>70%]\n    C --> D[context-enrich<br/>Web automático<br/>95%]\n    style A fill:#1e293b,stroke:#3b82f6,color:#fff\n    style B fill:#1e293b,stroke:#06b6d4,color:#fff\n    style C fill:#1e293b,stroke:#8b5cf6,color:#fff\n    style D fill:#1e293b,stroke:#10b981,color:#fff Cada etapa é incremental. Você não precisa fazer tudo de uma vez. Pode parar em 35% se só quer algo usável rápido. Pode ir até 95% se vai gerar muito conteúdo."
+  },
+  {
+    "slide": 6,
+    "type": "BUILD",
+    "title": "Do zero a 95%",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "As 4 skills do ContextOS O ContextOS é dividido em 4 skills que cobrem o ciclo completo: criar estrutura, preencher rápido, aprofundar, enriquecer com web. Cada uma tem função única e ordem natural de execução. flowchart LR\n    A[context-create<br/>Estrutura<br/>0%] --> B[context-quick<br/>~25 perguntas<br/>35%]\n    B --> C[context-deep<br/>~210 perguntas<br/>70%]\n    C --> D[context-enrich<br/>Web automático<br/>95%]\n    style A fill:#1e293b,stroke:#3b82f6,color:#fff\n    style B fill:#1e293b,stroke:#06b6d4,color:#fff\n    style C fill:#1e293b,stroke:#8b5cf6,color:#fff\n    style D fill:#1e293b,stroke:#10b981,color:#fff Cada etapa é incremental. Você não precisa fazer tudo de uma vez. Pode parar em 35% se só quer algo usável rápido. Pode ir até 95% se vai gerar muito conteúdo. Resumo executivo das 4 skills context-create Constrói a estrutura inicial · 28 templates YAML prontos · execução instantânea · ponto de partida obrigatório. context-quick Preenche o essencial em ~25 perguntas críticas · ~10 minutos · vai de 0% para ~35% de completude. context-deep Preenchimento profundo em ~210 perguntas, 9 fases · pause/resume robusto · ~2h parcelado · vai de 35% para ~70%. context-enrich Scraping do site + research público · automático, sem perguntar nada · vai de 70% para ~95% com fontes verificáveis. Tabela de completude por etapa Pipeline em ordem natural Após CREATE · 0% · primeira vez ou nova empresa Após QUICK · 35% · quando quer algo usável rápido Após DEEP · 70% · empresa principal com tempo pra entrevista Após ENRICH · 95% · antes de gerar copy com prova social Quando rodar cada uma CREATE roda toda vez que adicionar empresa nova QUICK roda no dia 1 da empresa DEEP roda em sessões de 30-40 min ao longo da semana ENRICH roda automático, pode rodar de novo pra atualizar"
+  },
+  {
+    "slide": 7,
+    "type": "CONTENT",
+    "title": "Cada skill tem uma função",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Resumo executivo das 4 skills context-create Constrói a estrutura inicial · 28 templates YAML prontos · execução instantânea · ponto de partida obrigatório. context-quick Preenche o essencial em ~25 perguntas críticas · ~10 minutos · vai de 0% para ~35% de completude. context-deep Preenchimento profundo em ~210 perguntas, 9 fases · pause/resume robusto · ~2h parcelado · vai de 35% para ~70%. context-enrich Scraping do site + research público · automático, sem perguntar nada · vai de 70% para ~95% com fontes verificáveis. Tabela de completude por etapa Pipeline em ordem natural Após CREATE · 0% · primeira vez ou nova empresa Após QUICK · 35% · quando quer algo usável rápido Após DEEP · 70% · empresa principal com tempo pra entrevista Após ENRICH · 95% · antes de gerar copy com prova social Quando rodar cada uma CREATE roda toda vez que adicionar empresa nova QUICK roda no dia 1 da empresa DEEP roda em sessões de 30-40 min ao longo da semana ENRICH roda automático, pode rodar de novo pra atualizar"
+  },
+  {
+    "slide": 8,
+    "type": "SECTION_BREAK",
+    "title": "Context Create",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 1 · context-create Função: constrói toda a estrutura do ContextOS no workspace. Cria diretórios e copia 28 templates YAML prontos pra preencher. Suporta múltiplas empresas no mesmo workspace. Quando usar Primeira vez configurando o ContextOS Você acabou de instalar o Core AIOS e precisa criar a base. Adicionar uma nova empresa ao workspace Já tem ContextOS rodando, agora quer entrar com cliente novo. Verificar saúde do que já existe Quer saber percentual de completude e integridade do workspace. Subcomandos Setup e gestão de empresas *init · inicializa estrutura raiz do ContextOS *add-business {slug} · adiciona empresa com 28 templates YAML *setup-context {slug} · pipeline interativo de 6 fases (~2h total) *set-active {slug} · define qual empresa está ativa Diagnóstico e saúde *status · dashboard de completude (%) por YAML *health-check · audita integridade do workspace Roda sempre antes de pedir socorro Mostra exatamente onde estão os gaps"
+  },
+  {
+    "slide": 9,
+    "type": "CONTENT",
+    "title": "Uma base para cada empresa",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 1 · context-create Função: constrói toda a estrutura do ContextOS no workspace. Cria diretórios e copia 28 templates YAML prontos pra preencher. Suporta múltiplas empresas no mesmo workspace. Quando usar Primeira vez configurando o ContextOS Você acabou de instalar o Core AIOS e precisa criar a base. Adicionar uma nova empresa ao workspace Já tem ContextOS rodando, agora quer entrar com cliente novo. Verificar saúde do que já existe Quer saber percentual de completude e integridade do workspace. Subcomandos Setup e gestão de empresas *init · inicializa estrutura raiz do ContextOS *add-business {slug} · adiciona empresa com 28 templates YAML *setup-context {slug} · pipeline interativo de 6 fases (~2h total) *set-active {slug} · define qual empresa está ativa Diagnóstico e saúde *status · dashboard de completude (%) por YAML *health-check · audita integridade do workspace Roda sempre antes de pedir socorro Mostra exatamente onde estão os gaps"
+  },
+  {
+    "slide": 10,
+    "type": "BUILD",
+    "title": "Do zero até empresa ativa",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Exemplo de uso · do zero até empresa ativa "
+  },
+  {
+    "slide": 11,
+    "type": "BUILD",
+    "title": "28 templates em sete diretórios",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "O que é criado · 28 templates YAML em 7 diretórios flowchart TD\n    Root[businesses/empresa] --> Ctx[context · 9 YAMLs]\n    Root --> Brand[brand-dna · 5 YAMLs]\n    Root --> DS[design-system · 4 YAMLs]\n    Root --> Cult[culture · 4 YAMLs]\n    Root --> Ops[operations · 3 YAMLs]\n    Root --> Int[intelligence · reuniões/decisões]\n    Root --> Ev[evidence · completeness/sources]\n    style Root fill:#0f172a,stroke:#3b82f6,color:#fff\n    style Ctx fill:#1e293b,stroke:#06b6d4,color:#fff\n    style Brand fill:#1e293b,stroke:#8b5cf6,color:#fff\n    style DS fill:#1e293b,stroke:#ec4899,color:#fff\n    style Cult fill:#1e293b,stroke:#f59e0b,color:#fff\n    style Ops fill:#1e293b,stroke:#10b981,color:#fff\n    style Int fill:#1e293b,stroke:#64748b,color:#fff\n    style Ev fill:#1e293b,stroke:#64748b,color:#fff context/ · 9 YAMLs principais company-profile · perfil da empresa founder-dna · DNA do fundador icp · perfil do cliente ideal brand · brand fundamentals pricing · pricing e ofertas team · time e responsabilidades credentials · prêmios, mídia, autoridade diagnosis · diagnóstico do negócio authority-story · história de autoridade Outras camadas brand-dna/ · voice, visual, archetype, positioning, manifesto design-system/ · tokens, components, patterns, guidelines culture/ · values, pillars, commandments, hiring operations/ · KPIs, processes, tech-stack intelligence/ · reuniões, decisões, memory index evidence/ · completeness, source registry, ETL history *setup-context roda as 6 fases interativas tudo de uma vez (~2h). Se preferir granular, use as próximas skills (quick, deep, enrich) que dão mais controle e permitem parar/voltar quando quiser."
+  },
+  {
+    "slide": 12,
+    "type": "SECTION_BREAK",
+    "title": "Context Quick",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 2 · context-quick Função: preenche o essencial em ~25 perguntas críticas. Vai de 0% para ~35% de completude no business ativo. Tempo estimado: 10 minutos. É a primeira skill que você roda depois do create. Quando usar Acabou de criar a empresa Quer algo usável agora, sem investir 2h em entrevista. Cliente novo de projeto pontual Precisa de contexto suficiente pra 1-2 entregas, não mais. Quer popular o mínimo Pra outras skills do Core AIOS funcionarem (copy, criativo, traffic). Pré-requisitos Antes de rodar setup do Core AIOS rodou Existe ~/coreaios/.config/config.yaml Existe active_business no config Pasta ~/coreaios/businesses/{slug}/ populada Como verificar Rode /coreaios:context-create *status Veja qual empresa está ativa Veja se os 28 templates foram criados Se algo estiver faltando, rode *add-business antes Como funciona · 4 passos internos Lê questions-quick.json Banco de ~25 perguntas críticas em ~/coreaios/data/. Pergunta uma a uma Resposta vazia = pula. Resposta válida = escreve no YAML correspondente. Grava em YAML Cada pergunta tem file + ypath dotted (ex: company-profile.yaml + essencia.nome_fantasia). Resumo final Completude estimada + sugere próximo passo (deep ou enrich). Sessão real · simulação  Pode coletar todas as 25 respostas no chat (uma por vez) e a skill grava de uma só vez no final. Útil quando você já tem as informações organizadas em outro lugar (briefing, deck, doc)."
+  },
+  {
+    "slide": 13,
+    "type": "CONTENT",
+    "title": "25 perguntas tornam o contexto utilizável",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Função: preenche o essencial em ~25 perguntas críticas. Vai de 0% para ~35% de completude no business ativo. Tempo estimado: 10 minutos. É a primeira skill que você roda depois do create. Quando usar Acabou de criar a empresa Quer algo usável agora, sem investir 2h em entrevista. Cliente novo de projeto pontual Precisa de contexto suficiente pra 1-2 entregas, não mais. Quer popular o mínimo Pra outras skills do Core AIOS funcionarem (copy, criativo, traffic). Pré-requisitos Antes de rodar setup do Core AIOS rodou Existe ~/coreaios/.config/config.yaml Existe active_business no config Pasta ~/coreaios/businesses/{slug}/ populada Como verificar Rode /coreaios:context-create *status Veja qual empresa está ativa Veja se os 28 templates foram criados Se algo estiver faltando, rode *add-business antes Como funciona · 4 passos internos Lê questions-quick.json Banco de ~25 perguntas críticas em ~/coreaios/data/. Pergunta uma a uma Resposta vazia = pula. Resposta válida = escreve no YAML correspondente. Grava em YAML Cada pergunta tem file + ypath dotted (ex: company-profile.yaml + essencia.nome_fantasia). Resumo final Completude estimada + sugere próximo passo (deep ou enrich). Sessão real · simulação  Pode coletar todas as 25 respostas no chat (uma por vez) e a skill grava de uma só vez no final. Útil quando você já tem as informações organizadas em outro lugar (briefing, deck, doc)."
+  },
+  {
+    "slide": 14,
+    "type": "BUILD",
+    "title": "Quick em quatro passos",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Como funciona · 4 passos internos Lê questions-quick.json Banco de ~25 perguntas críticas em ~/coreaios/data/. Pergunta uma a uma Resposta vazia = pula. Resposta válida = escreve no YAML correspondente. Grava em YAML Cada pergunta tem file + ypath dotted (ex: company-profile.yaml + essencia.nome_fantasia). Resumo final Completude estimada + sugere próximo passo (deep ou enrich). Sessão real · simulação  Pode coletar todas as 25 respostas no chat (uma por vez) e a skill grava de uma só vez no final. Útil quando você já tem as informações organizadas em outro lugar (briefing, deck, doc)."
+  },
+  {
+    "slide": 15,
+    "type": "SECTION_BREAK",
+    "title": "Context Deep",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 3 · context-deep Função: preenchimento completo em ~210 perguntas organizadas em 9 fases. Pause/resume robusto. Vai de ~35% para ~70% de completude. Esta é a skill que constrói o perfil profundo da empresa. Quando usar Depois do context-quick Você já tem o essencial em 35%, agora quer profundidade. Empresa principal que vai gerar muito conteúdo Vale a pena investir as ~2h em sessões. Precisa de ICP, brand voice, pricing detalhados Pra copy de alta performance ou estratégia de marca. Comandos especiais durante a execução Controle de fluxo /skip · pula esta pergunta /skip-phase · pula fase inteira /pause · salva estado e sai /status · progresso atual Por que isso importa Você não precisa responder tudo Fases inteiras podem ser irrelevantes pro seu negócio Pause permite sessões de 30-40 min Status mostra X/Y respondidas, fase atual Estado persistente · cache de progresso Salva em ~/coreaios/.config/cache/context-deep-{slug}.json. Ao rodar novamente, detecta progresso e pergunta se quer retomar:  As 9 fases · ordem e duração Fase 0 · Pre-flight (~2 min) Validação automática · checa se quick rodou, se há empresa ativa, se YAMLs estão lá. Fase 1 · Essência (~15 min · FORM) Formulário básico · nome, site, segmento, tempo de mercado, sócios. Fase 2 · Deep dive fundador (~40 min · INTERVIEW) 4 atos sobre o fundador · trajetória, gatilhos, autoridade, virada. Fase 3 · Empresa + time (~30 min · INTERVIEW + FORM) Organograma, papéis, decisões, divisão de responsabilidades. Fase 4 · ICP completo (~30 min · INTERVIEW) Pain stack, arquétipos, vocabulário, objeções, gatilhos de compra. Fase 5 · Brand + pricing (~25 min · INTERVIEW + FORM) Brand voice, posicionamento, faixas de pricing, ofertas vivas. Fase 6 · Cultura (~15 min · INTERVIEW) Valores, mandamentos, critérios de contratação, cultura interna. Fase 7 · Operações (~15 min · FORM) KPIs, processos críticos, tech-stack, ferramentas. Fase 8 · Produtos (~20 min · INTERVIEW) Catálogo completo, posicionamento de cada produto, jornada de compra. Fase 9 · Validação (~10 min · automático) Enriquecimento + validação · checa coerência e completude antes de fechar. Não tente fazer as 9 fases de uma vez. Reserve 30-40 min por sessão, use /pause, e volte no dia seguinte. Pause/resume é o ponto forte dessa skill. Tentar de 1 vez = burnout + respostas pobres."
+  },
+  {
+    "slide": 16,
+    "type": "CONTENT",
+    "title": "210 perguntas em nove fases",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 3 · context-deep Função: preenchimento completo em ~210 perguntas organizadas em 9 fases. Pause/resume robusto. Vai de ~35% para ~70% de completude. Esta é a skill que constrói o perfil profundo da empresa. Quando usar Depois do context-quick Você já tem o essencial em 35%, agora quer profundidade. Empresa principal que vai gerar muito conteúdo Vale a pena investir as ~2h em sessões. Precisa de ICP, brand voice, pricing detalhados Pra copy de alta performance ou estratégia de marca. Comandos especiais durante a execução Controle de fluxo /skip · pula esta pergunta /skip-phase · pula fase inteira /pause · salva estado e sai /status · progresso atual Por que isso importa Você não precisa responder tudo Fases inteiras podem ser irrelevantes pro seu negócio Pause permite sessões de 30-40 min Status mostra X/Y respondidas, fase atual Estado persistente · cache de progresso Salva em ~/coreaios/.config/cache/context-deep-{slug}.json. Ao rodar novamente, detecta progresso e pergunta se quer retomar:  As 9 fases · ordem e duração Fase 0 · Pre-flight (~2 min) Validação automática · checa se quick rodou, se há empresa ativa, se YAMLs estão lá. Fase 1 · Essência (~15 min · FORM) Formulário básico · nome, site, segmento, tempo de mercado, sócios. Fase 2 · Deep dive fundador (~40 min · INTERVIEW) 4 atos sobre o fundador · trajetória, gatilhos, autoridade, virada. Fase 3 · Empresa + time (~30 min · INTERVIEW + FORM) Organograma, papéis, decisões, divisão de responsabilidades. Fase 4 · ICP completo (~30 min · INTERVIEW) Pain stack, arquétipos, vocabulário, objeções, gatilhos de compra. Fase 5 · Brand + pricing (~25 min · INTERVIEW + FORM) Brand voice, posicionamento, faixas de pricing, ofertas vivas. Fase 6 · Cultura (~15 min · INTERVIEW) Valores, mandamentos, critérios de contratação, cultura interna. Fase 7 · Operações (~15 min · FORM) KPIs, processos críticos, tech-stack, ferramentas. Fase 8 · Produtos (~20 min · INTERVIEW) Catálogo completo, posicionamento de cada produto, jornada de compra. Fase 9 · Validação (~10 min · automático) Enriquecimento + validação · checa coerência e completude antes de fechar. Não tente fazer as 9 fases de uma vez. Reserve 30-40 min por sessão, use /pause, e volte no dia seguinte. Pause/resume é o ponto forte dessa skill. Tentar de 1 vez = burnout + respostas pobres."
+  },
+  {
+    "slide": 17,
+    "type": "COMPARISON",
+    "title": "Você controla o ritmo",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Comandos especiais durante a execução Controle de fluxo /skip · pula esta pergunta /skip-phase · pula fase inteira /pause · salva estado e sai /status · progresso atual Por que isso importa Você não precisa responder tudo Fases inteiras podem ser irrelevantes pro seu negócio Pause permite sessões de 30-40 min Status mostra X/Y respondidas, fase atual Estado persistente · cache de progresso Salva em ~/coreaios/.config/cache/context-deep-{slug}.json. Ao rodar novamente, detecta progresso e pergunta se quer retomar: "
+  },
+  {
+    "slide": 18,
+    "type": "STATEMENT",
+    "title": "Não faça as nove fases de uma vez.",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "As 9 fases · ordem e duração Fase 0 · Pre-flight (~2 min) Validação automática · checa se quick rodou, se há empresa ativa, se YAMLs estão lá. Fase 1 · Essência (~15 min · FORM) Formulário básico · nome, site, segmento, tempo de mercado, sócios. Fase 2 · Deep dive fundador (~40 min · INTERVIEW) 4 atos sobre o fundador · trajetória, gatilhos, autoridade, virada. Fase 3 · Empresa + time (~30 min · INTERVIEW + FORM) Organograma, papéis, decisões, divisão de responsabilidades. Fase 4 · ICP completo (~30 min · INTERVIEW) Pain stack, arquétipos, vocabulário, objeções, gatilhos de compra. Fase 5 · Brand + pricing (~25 min · INTERVIEW + FORM) Brand voice, posicionamento, faixas de pricing, ofertas vivas. Fase 6 · Cultura (~15 min · INTERVIEW) Valores, mandamentos, critérios de contratação, cultura interna. Fase 7 · Operações (~15 min · FORM) KPIs, processos críticos, tech-stack, ferramentas. Fase 8 · Produtos (~20 min · INTERVIEW) Catálogo completo, posicionamento de cada produto, jornada de compra. Fase 9 · Validação (~10 min · automático) Enriquecimento + validação · checa coerência e completude antes de fechar. Não tente fazer as 9 fases de uma vez. Reserve 30-40 min por sessão, use /pause, e volte no dia seguinte. Pause/resume é o ponto forte dessa skill. Tentar de 1 vez = burnout + respostas pobres."
+  },
+  {
+    "slide": 19,
+    "type": "SECTION_BREAK",
+    "title": "Context Enrich",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 4 · context-enrich Função: vai de ~70% para ~95% sem perguntar nada. Usa WebFetch pra scrapear o site da empresa e WebSearch pra achar mídia, prêmios, entrevistas e redes sociais. Cada fato vem com URL e tag de confiança. Pré-requisitos · só dois campos obrigatórios company-profile.yaml precisa de essencia.nome_fantasia preenchido essencia.website preenchido Esses são os pontos de partida pro scraping Sem eles, enrich não consegue começar founder-dna.yaml precisa de essencia.nome_completo preenchido É a chave pra research público sobre o fundador Entrevistas, podcasts, palestras, prêmios Tudo verificável e com URL O que faz · 4 etapas internas Scrape do site WebFetch na home + 3-5 páginas internas (sobre, serviços, blog). Extrai tagline, serviços, cases, diferenciais, selos. Research público WebSearch por entrevistas, podcasts, palestras, prêmios, redes sociais do fundador e da empresa. Tag de confiança em cada fato ALTA · fonte oficial. MEDIA · mídia reconhecida. BAIXA · blog/agregador. Você decide o que entra no contexto. Síntese e gravação Atualiza company-profile, founder-dna, brand, credentials. Gera intelligence/research.md com tudo encontrado. Regra férrea · Zero invenção Se a skill não encontrar evidência pública verificável, o campo fica vazio. Toda menção em credentials.yaml precisa de URL. Isso é o que garante que sua copy gerada nunca diga 'fundador entrevistado no podcast X' se aquilo não existir. Use case real · copy fact-checked automaticamente Antes de gerar uma copy que diz \"fundador entrevistado no podcast X\", você quer ter certeza. Roda enrich → o YAML credentials.yaml só lista entrevistas com URL real → copy gerada vira fact-checked automaticamente. Sem risco de inventar prova social que não existe. Output esperado · sessão real "
+  },
+  {
+    "slide": 20,
+    "type": "BUILD",
+    "title": "Enriquecimento em quatro etapas",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Skill 4 · context-enrich Função: vai de ~70% para ~95% sem perguntar nada. Usa WebFetch pra scrapear o site da empresa e WebSearch pra achar mídia, prêmios, entrevistas e redes sociais. Cada fato vem com URL e tag de confiança. Pré-requisitos · só dois campos obrigatórios company-profile.yaml precisa de essencia.nome_fantasia preenchido essencia.website preenchido Esses são os pontos de partida pro scraping Sem eles, enrich não consegue começar founder-dna.yaml precisa de essencia.nome_completo preenchido É a chave pra research público sobre o fundador Entrevistas, podcasts, palestras, prêmios Tudo verificável e com URL O que faz · 4 etapas internas Scrape do site WebFetch na home + 3-5 páginas internas (sobre, serviços, blog). Extrai tagline, serviços, cases, diferenciais, selos. Research público WebSearch por entrevistas, podcasts, palestras, prêmios, redes sociais do fundador e da empresa. Tag de confiança em cada fato ALTA · fonte oficial. MEDIA · mídia reconhecida. BAIXA · blog/agregador. Você decide o que entra no contexto. Síntese e gravação Atualiza company-profile, founder-dna, brand, credentials. Gera intelligence/research.md com tudo encontrado. Regra férrea · Zero invenção Se a skill não encontrar evidência pública verificável, o campo fica vazio. Toda menção em credentials.yaml precisa de URL. Isso é o que garante que sua copy gerada nunca diga 'fundador entrevistado no podcast X' se aquilo não existir. Use case real · copy fact-checked automaticamente Antes de gerar uma copy que diz \"fundador entrevistado no podcast X\", você quer ter certeza. Roda enrich → o YAML credentials.yaml só lista entrevistas com URL real → copy gerada vira fact-checked automaticamente. Sem risco de inventar prova social que não existe. Output esperado · sessão real "
+  },
+  {
+    "slide": 21,
+    "type": "COMPARISON",
+    "title": "Cada fato precisa de evidência.",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "O que faz · 4 etapas internas Scrape do site WebFetch na home + 3-5 páginas internas (sobre, serviços, blog). Extrai tagline, serviços, cases, diferenciais, selos. Research público WebSearch por entrevistas, podcasts, palestras, prêmios, redes sociais do fundador e da empresa. Tag de confiança em cada fato ALTA · fonte oficial. MEDIA · mídia reconhecida. BAIXA · blog/agregador. Você decide o que entra no contexto. Síntese e gravação Atualiza company-profile, founder-dna, brand, credentials. Gera intelligence/research.md com tudo encontrado. Regra férrea · Zero invenção Se a skill não encontrar evidência pública verificável, o campo fica vazio. Toda menção em credentials.yaml precisa de URL. Isso é o que garante que sua copy gerada nunca diga 'fundador entrevistado no podcast X' se aquilo não existir. Use case real · copy fact-checked automaticamente Antes de gerar uma copy que diz \"fundador entrevistado no podcast X\", você quer ter certeza. Roda enrich → o YAML credentials.yaml só lista entrevistas com URL real → copy gerada vira fact-checked automaticamente. Sem risco de inventar prova social que não existe. Output esperado · sessão real "
+  },
+  {
+    "slide": 22,
+    "type": "SECTION_BREAK",
+    "title": "Receitas práticas",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Receitas práticas Quatro caminhos prontos pra cenários reais. Decora as receitas, não os comandos isolados. Receita 1 · Do zero ao 95% (empresa nova) Pipeline completo. Use quando entrar com cliente novo que vai virar empresa principal.  Receita 2 · Adicionar empresa sem perder a atual Você já tem empresa principal configurada. Quer adicionar cliente novo sem perder o que já fez.  Receita 3 · Empresa rápida pra projeto pontual Cliente novo de 1-2 entregas. Não vale a pena investir 2h. Pula o deep, vai direto pro enrich.  Receita 4 · Atualizar empresa existente Empresa antiga, dados desatualizados (novo prêmio, nova posição, time mudou). Re-rode enrich primeiro, só faça deep no que mudou. "
+  },
+  {
+    "slide": 23,
+    "type": "CONTENT",
+    "title": "Quatro cenários reais",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Receitas práticas Quatro caminhos prontos pra cenários reais. Decora as receitas, não os comandos isolados. Receita 1 · Do zero ao 95% (empresa nova) Pipeline completo. Use quando entrar com cliente novo que vai virar empresa principal.  Receita 2 · Adicionar empresa sem perder a atual Você já tem empresa principal configurada. Quer adicionar cliente novo sem perder o que já fez.  Receita 3 · Empresa rápida pra projeto pontual Cliente novo de 1-2 entregas. Não vale a pena investir 2h. Pula o deep, vai direto pro enrich.  Receita 4 · Atualizar empresa existente Empresa antiga, dados desatualizados (novo prêmio, nova posição, time mudou). Re-rode enrich primeiro, só faça deep no que mudou. "
+  },
+  {
+    "slide": 24,
+    "type": "SECTION_BREAK",
+    "title": "Diagnóstico",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Troubleshooting · os 6 erros mais comuns Sempre rode /coreaios:context-create *status primeiro. Ele te dá diagnóstico claro do estado atual: qual empresa está ativa, quantos YAMLs existem, qual a completude por arquivo. 80% dos problemas se resolvem só com isso. Erro 1 · \"Sem active_business no config\" Você rodou /coreaios:context-quick e deu erro de empresa ativa. Significa que ninguém setou qual empresa o ContextOS deve trabalhar agora.  Erro 2 · \"Template YAML target inexistente\" A skill quick tenta escrever num arquivo que não foi criado. Significa que o scaffold da empresa nunca foi feito.  Erro 3 · \"Enrich falhou: nome_fantasia ou website ausente\" Faltam dados básicos pra começar o scraping. Solução é rodar quick primeiro.  Erro 4 · \"Context-deep não retoma de onde parei\" Verifique se o cache de progresso ainda existe:  Erro 5 · \"Não sei qual empresa está ativa agora\"  Erro 6 · \"Quero ver onde os YAMLs ficam\" "
+  },
+  {
+    "slide": 25,
+    "type": "CONTENT",
+    "title": "Seis erros comuns têm caminho claro",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Troubleshooting · os 6 erros mais comuns Sempre rode /coreaios:context-create *status primeiro. Ele te dá diagnóstico claro do estado atual: qual empresa está ativa, quantos YAMLs existem, qual a completude por arquivo. 80% dos problemas se resolvem só com isso. Erro 1 · \"Sem active_business no config\" Você rodou /coreaios:context-quick e deu erro de empresa ativa. Significa que ninguém setou qual empresa o ContextOS deve trabalhar agora.  Erro 2 · \"Template YAML target inexistente\" A skill quick tenta escrever num arquivo que não foi criado. Significa que o scaffold da empresa nunca foi feito.  Erro 3 · \"Enrich falhou: nome_fantasia ou website ausente\" Faltam dados básicos pra começar o scraping. Solução é rodar quick primeiro.  Erro 4 · \"Context-deep não retoma de onde parei\" Verifique se o cache de progresso ainda existe:  Erro 5 · \"Não sei qual empresa está ativa agora\"  Erro 6 · \"Quero ver onde os YAMLs ficam\" "
+  },
+  {
+    "slide": 26,
+    "type": "CONTENT",
+    "title": "Os cinco princípios do ContextOS",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Os 5 princípios do ContextOS Decora estes 5 princípios. Eles explicam por que o ContextOS é desenhado do jeito que é, e te ajudam a confiar no sistema quando bater dúvida. Zero invenção Todos os dados vêm do usuário ou de fontes públicas verificáveis. Skills nunca inventam fatos. Se não tem evidência, fica vazio. Pause/resume Pipelines longos sempre permitem pausar e retomar depois. Estado persistente em cache. Sessões de 30-40 min em vez de maratonas. Multi-empresa Workspace suporta N empresas, apenas uma ativa por vez. Você troca com *set-active. Cada empresa tem seu próprio cache de progresso. Completude progressiva 35% → 70% → 95%. Cada etapa é incremental. Você pode parar onde for suficiente pro seu caso. YAML como fonte de verdade Toda informação vira YAML estruturado, acessível por qualquer agente ou skill. Sem banco fechado, sem caixa-preta. Você abre o arquivo e vê tudo. Contexto rico é o que separa output genérico de output preciso."
+  },
+  {
+    "slide": 27,
+    "type": "CLOSING",
+    "title": "Contexto vira combustível.",
+    "source_lesson": "495a3982-0c8d-4366-9001-395afd1c9c1c / bonus-2",
+    "speaker_notes": "Checkpoint · você terminou esta aula sabendo Conceitos dominados O que é contexto no Core AIOS e por que importa As 4 skills do ContextOS e quando rodar cada uma Pipeline de completude 0% → 35% → 70% → 95% Estrutura dos 28 templates YAML em 7 diretórios Regra férrea de zero invenção Execução prática Receita 1 · do zero ao 95% (empresa nova) Receita 2 · adicionar empresa sem perder a atual Receita 3 · empresa rápida pra projeto pontual Receita 4 · atualizar empresa existente Os 6 erros mais comuns e como resolver Rodar a Receita 1 no seu próprio negócio. Reserva 10 minutos pro /coreaios:context-quick ainda hoje. Quando tiver 30-40 min disponíveis em algum dia da semana, começa o /coreaios:context-deep. No fim, roda o /coreaios:context-enrich e seu contexto vira combustível pra TODOS os outros agentes do Core AIOS."
+  }
+]

@@ -1,0 +1,358 @@
+{
+  "id": "323461e5-06be-40b3-885c-b62d5c437e30",
+  "titulo": "GitHub como Cérebro Compartilhado · Sync Bidirecional Local ↔ Agente",
+  "lesson_payload": {
+    "id": "encontro-04-04",
+    "title": "GitHub como Cérebro Compartilhado · Sync Bidirecional Local ↔ Agente",
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "O que você vai dominar nesta aula",
+        "content": "Depois do Encontro 2 (memória) e do 04-03 (ContextOS no agente), seu agente já sabe quem é o business e lembra de decisões. Mas tem um buraco: **o que você produz na máquina local e o que o agente produz na VPS vivem separados.** Nesta aula você liga os dois com um repo GitHub privado, configura sync automático a cada 2h e cria uma skill pra atualizar na hora.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "content": "O problema · dois cérebros desconectados"
+      },
+      {
+        "type": "text",
+        "content": "Hoje você tem **dois lados que não se falam**:\n\n· **Máquina local (Claude Code):** é onde você roda as 4 skills do ContextOS, edita YAMLs, gera trabalho. Esse contexto fica só no seu PC.\n· **VPS (OpenClaw no Telegram):** é onde o agente acumula memória sessão após sessão (decisões, lições, projetos) e tem o contexto que você mandou no 04-03.\n\nResultado: você atualiza o pricing no PC, mas o agente no Telegram continua com o antigo. O agente registra uma decisão importante numa conversa, mas isso nunca chega no seu PC. **Trabalho dobrado e dados desencontrados.**"
+      },
+      {
+        "text": "Sem sincronização, você tem dois agentes com memórias diferentes fingindo ser o mesmo.",
+        "type": "quote"
+      },
+      {
+        "type": "mermaid",
+        "diagram": "graph LR\n    subgraph LOCAL[Máquina Local · Claude Code]\n        A[context-os/ + memory/]\n    end\n    subgraph GH[📦 GitHub · repo privado único]\n        B[(contexto + memória<br/>versionados)]\n    end\n    subgraph VPS[VPS · OpenClaw / Telegram]\n        C[~/.openclaw/memory/<br/>+ context-os/]\n    end\n    A -->|push| B\n    B -->|pull| A\n    C -->|push| B\n    B -->|pull| C\n    D{{cron 2h na VPS<br/>pull + push}} -.-> C"
+      },
+      {
+        "type": "callout",
+        "title": "Etapa 0 · A regra de ouro do first-sync",
+        "content": "**Quem já tem dados sobe primeiro. Sempre.**\n\nSua VPS já tem memória populada (Encontro 2 · aula de memória) e contexto (04-03). Isso é dado real, acumulado, insubstituível. Se o seu PC (que está começando agora) subir primeiro e a VPS sincronizar pra esse estado, **você apaga a memória do agente.**\n\nPor isso a ordem da primeira vez é inegociável:\n\n1. **VPS faz o primeiro push** → o GitHub nasce com a memória real.\n2. **Local faz git clone** → o PC recebe tudo que a VPS tinha.\n3. Daí em diante, os dois lados fazem pull + push normalmente.\n\n_(Exceção: se você está começando do absoluto zero e a VPS ainda está vazia, aí tanto faz quem sobe primeiro.)_",
+        "variant": "warning"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "local ↔ GitHub ↔ VPS (vai e volta)",
+            "Objetivo: os dois lados sempre iguais",
+            "Cron a cada 2h · pull + push",
+            "Local clona, edita e devolve",
+            "Pull antes, push depois (evita conflito)"
+          ],
+          "title": "Sync bidirecional · esta aula",
+          "variant": "after",
+          "subtitle": "Dois sentidos"
+        },
+        "before": {
+          "items": [
+            "VPS → GitHub apenas (ida só)",
+            "Objetivo: não perder dados se a VPS morrer",
+            "Cron diário (1x/dia, 04:00)",
+            "Local não participa",
+            "Só push"
+          ],
+          "title": "Backup · Encontro 2 (02-11)",
+          "variant": "before",
+          "subtitle": "Sentido único"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Escopo do repo · só o que importa",
+        "content": "O repo sincroniza **apenas a camada de contexto e memória**:\n\n· `~/.openclaw/memory/` (os 8 arquivos + subpastas da aula de memória)\n· `context-os/` (os YAMLs do ContextOS)\n\n**Não entra:** código, outputs pesados, `.env`, tokens, chaves. Repo **PRIVADO** e `.gitignore` forte. Reaproveitamos a deploy key SSH que você já criou no Encontro 2 (aula de Backup · 02-11).",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "content": "Os 5 passos"
+      },
+      {
+        "type": "heading",
+        "content": "Passo 1 · A VPS sobe primeiro (a base)"
+      },
+      {
+        "type": "text",
+        "content": "Como a VPS já tem a memória real, ela cria o repo de conteúdo e faz o primeiro push. Cole o prompt abaixo **no Telegram do agente**. Substitua `SEU-USER` pelo seu usuário do GitHub.\n\n**Antes:** crie um repositório **privado** vazio no GitHub chamado `aios-context-sync` (sem README, sem .gitignore — vazio mesmo)."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 1 · Telegram · VPS faz o primeiro push",
+        "target": "telegram",
+        "content": "Quero que você configure a sincronização de contexto e memória pro GitHub. A VPS sobe primeiro porque já tem os dados reais.\n\n**Minha URL SSH do repo (privado, vazio):** [cola aqui · formato `git@github.com:SEU-USER/aios-context-sync.git`]\n\nFaz na ordem:\n\n1. **Reusa a deploy key** que já configuramos no backup (`~/.ssh/openclaw-backup` + alias `github-openclaw`). Confirma que `ssh -T github-openclaw` autentica.\n\n2. **Cria a pasta de sync** em `~/.openclaw/context-sync/` e move/linka pra dentro dela:\n   · `~/.openclaw/memory/` (toda a árvore)\n   · `context-os/` (os YAMLs do ContextOS, se já estiverem na VPS)\n\n3. **Cria o `.gitignore`** dentro de `~/.openclaw/context-sync/` com:\n   ```\n   *.env\n   .env\n   *credentials*.json\n   *token*\n   *.key\n   *.pem\n   ```\n\n4. **Inicializa o git e faz o primeiro push:**\n   ```\n   cd ~/.openclaw/context-sync\n   git init\n   git remote add origin github-openclaw:SEU-USER/aios-context-sync.git\n   git add .\n   git commit -m \"first-sync: base da VPS (memória + contexto)\"\n   git branch -M main\n   git push -u origin main\n   ```\n\n5. **Reporta no formato:**\n   ```\n   ☁️ First-sync · VPS → GitHub\n   · Auth SSH: ✅/❌\n   · Arquivos commitados: N\n   · .gitignore protegendo secrets: ✅/❌\n   · Push: ✅ branch main no ar\n   ```"
+      },
+      {
+        "type": "callout",
+        "title": "Validação do Passo 1",
+        "content": "Abre o GitHub no navegador e confere: o repo `aios-context-sync` agora tem a pasta `memory/` com seus arquivos. **Se a memória da VPS está lá, a base está segura.**",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "content": "Passo 2 · O local clona (primeira inserção segura)"
+      },
+      {
+        "type": "text",
+        "content": "Agora que o GitHub tem a base da VPS, o seu PC clona. Assim o local **recebe** o que a VPS tinha em vez de sobrescrever. Cole o prompt abaixo **no Claude Code, na sua máquina local**."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 2 · Claude Code local · clonar a base",
+        "target": "claude-code",
+        "content": "Quero clonar o repo de sincronização de contexto pra cá. A VPS já subiu a base, então eu só recebo.\n\n**URL SSH do repo:** [cola · `git@github.com:SEU-USER/aios-context-sync.git`]\n\nFaz na ordem:\n\n1. **Escolhe a pasta destino** no meu workspace local (ex: `~/aios/context-sync/`) e clona:\n   ```\n   git clone git@github.com:SEU-USER/aios-context-sync.git ~/aios/context-sync\n   ```\n\n2. **Confirma o conteúdo** · roda `ls -la ~/aios/context-sync/memory/` e me mostra os arquivos que vieram da VPS.\n\n3. **Aponta minhas skills de contexto** (context-create/quick/deep/enrich) pra trabalhar dentro de `~/aios/context-sync/context-os/` daqui pra frente, em vez de uma pasta solta.\n\n4. **Reporta:**\n   ```\n   💻 Local ← GitHub\n   · Clone: ✅/❌\n   · memory/ recebido: N arquivos\n   · context-os/ recebido: N arquivos\n   · Pronto pra editar local\n   ```"
+      },
+      {
+        "type": "heading",
+        "content": "Passo 3 · Cron de 2h na VPS · pull + push"
+      },
+      {
+        "type": "text",
+        "content": "Com os dois lados alinhados, automatizamos a sincronização da VPS. A cada 2 horas ela puxa o que veio do seu PC e empurra o que o agente produziu. Cole **no Telegram**."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 3 · Telegram · cron de sync a cada 2h",
+        "target": "telegram",
+        "content": "Quero que você crie um cron de sincronização do contexto a cada 2 horas. Ele faz pull primeiro (pra pegar o que veio do meu PC) e push depois (pra mandar o que você produziu).\n\nFaz na ordem:\n\n1. **Cria o script** `~/.openclaw/scripts/sync-context.sh`:\n   ```bash\n   #!/usr/bin/env bash\n   cd ~/.openclaw/context-sync || exit 1\n   git pull --no-edit github-openclaw:SEU-USER/aios-context-sync.git main\n   git add .\n   git commit -m \"sync auto · $(date '+%Y-%m-%d %H:%M')\" || echo \"nada novo\"\n   git push github-openclaw:SEU-USER/aios-context-sync.git main\n   ```\n   Aplica `chmod +x ~/.openclaw/scripts/sync-context.sh`.\n\n2. **Agenda o cron a cada 2h:**\n   ```\n   openclaw cron add sync-context --schedule '0 */2 * * *' --tz America/Sao_Paulo\n   ```\n   Aponta o cron pra rodar `~/.openclaw/scripts/sync-context.sh`.\n\n3. **Testa rodando uma vez manualmente** e me mostra o output.\n\n4. **Reporta:**\n   ```\n   ⏱️ Cron sync-context\n   · Script: ✅ criado e executável\n   · Schedule: 0 */2 * * * (a cada 2h)\n   · Teste manual: ✅/❌\n   · Último commit: <hash + hora>\n   ```"
+      },
+      {
+        "type": "callout",
+        "title": "Validação do Passo 3",
+        "content": "Roda `openclaw cron list` (ou `crontab -l`) e confirma que `sync-context` aparece com schedule `0 */2 * * *`. Pull antes do push é o que evita conflito de merge.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "content": "Passo 4 · Skill atualiza-memoria · sync manual a qualquer hora"
+      },
+      {
+        "type": "text",
+        "content": "O cron resolve o automático, mas às vezes você quer sincronizar **agora** (acabou uma sessão importante e não quer esperar 2h). Pra isso, criamos uma skill que o agente roda na hora. Cole **no Telegram**."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 4 · Telegram · criar skill atualiza-memoria",
+        "target": "telegram",
+        "content": "Quero que você crie uma skill chamada `atualiza-memoria` que sincroniza o contexto na hora, sem esperar o cron.\n\nFaz na ordem:\n\n1. **Cria a skill** que, quando eu disser \"atualiza memória\" ou rodar `/atualiza-memoria`, executa:\n   · Pega tudo que foi produzido nesta sessão (decisões, lições, projetos novos) e salva nos arquivos certos de `~/.openclaw/memory/`.\n   · Roda `~/.openclaw/scripts/sync-context.sh` (o mesmo do cron: pull + commit + push).\n\n2. **Registra a skill** no teu sistema de skills do OpenClaw pra eu poder chamar por comando ou linguagem natural.\n\n3. **Testa** · roda a skill agora e me mostra o que foi salvo + o resultado do push.\n\n4. **Reporta:**\n   ```\n   🔄 Skill atualiza-memoria\n   · Criada e registrada: ✅/❌\n   · Salvou na memória: N itens\n   · Push pro GitHub: ✅ <hash>\n   · Chamável por: /atualiza-memoria + \"atualiza memória\"\n   ```"
+      },
+      {
+        "type": "heading",
+        "content": "Passo 5 · Rotina local · pull antes, push depois"
+      },
+      {
+        "type": "text",
+        "content": "No seu PC não precisa de cron: você sincroniza no início e no fim do trabalho. Cole **no Claude Code local** pra firmar a rotina."
+      },
+      {
+        "type": "prompt",
+        "title": "Prompt 5 · Claude Code local · rotina de sync",
+        "target": "claude-code",
+        "content": "Quero firmar minha rotina de sync local com o repo aios-context-sync.\n\nSempre que eu for trabalhar no contexto/memória, você deve:\n\n1. **Antes de começar** · `cd ~/aios/context-sync && git pull --no-edit` (pega o que a VPS subiu).\n\n2. **Depois de editar** · `git add . && git commit -m \"local · {resumo do que mudei}\" && git push`.\n\n3. **Se der conflito de merge** · me avisa e me mostra os dois lados ANTES de resolver. Nunca sobrescreve sem eu ver.\n\nCria um atalho/skill local `sync-context` que faz pull+push de uma vez, e me confirma que está pronto."
+      },
+      {
+        "type": "callout",
+        "title": "Segurança · zero secrets no repo",
+        "content": "O repo é **PRIVADO** e o `.gitignore` bloqueia `.env`, tokens, chaves e credenciais. **Nunca** commite secrets — mesmo em repo privado, é risco. Se um secret vazou pro histórico, troque a chave imediatamente (rotacionar > esconder).",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "content": "Teste de fogo · os dois lados estão sincronizados?"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Edita no local",
+            "description": "No PC, adiciona uma linha de teste em `context-os/.../company-profile.yaml` (ex: um campo `teste_sync: ok`). Faz commit + push."
+          },
+          {
+            "title": "Força o sync na VPS",
+            "description": "No Telegram, roda `/atualiza-memoria` (ou espera o cron de 2h)."
+          },
+          {
+            "title": "Pergunta pro agente",
+            "description": "No Telegram: \"Qual o valor de teste_sync no meu contexto?\" Se ele responder `ok`, o sync local → VPS funciona."
+          },
+          {
+            "title": "Inverso",
+            "description": "Pede pro agente registrar uma decisão. No PC, roda o pull. A decisão tem que aparecer em `memory/context/decisions.md`."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Troubleshooting · os 4 erros mais comuns"
+      },
+      {
+        "type": "heading",
+        "content": "Erro 1 · Conflito de merge no pull"
+      },
+      {
+        "type": "text",
+        "content": "Os dois lados editaram o mesmo arquivo entre syncs. Por isso o script faz **pull antes do push**. Se mesmo assim conflitar:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "cd ~/.openclaw/context-sync",
+            "type": "command"
+          },
+          {
+            "text": "git status                  # mostra arquivos em conflito",
+            "type": "command"
+          },
+          {
+            "text": "git diff                    # vê os dois lados",
+            "type": "command"
+          },
+          {
+            "text": "# resolve manualmente, depois:",
+            "type": "comment"
+          },
+          {
+            "text": "git add . && git commit -m \"resolve conflito\" && git push",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Erro 2 · Cron não dispara"
+      },
+      {
+        "type": "text",
+        "content": "Confere se o cron está agendado e se o script é executável:"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "openclaw cron list | grep sync-context",
+            "type": "command"
+          },
+          {
+            "text": "crontab -l | grep sync",
+            "type": "command"
+          },
+          {
+            "text": "ls -la ~/.openclaw/scripts/sync-context.sh   # tem que ter +x",
+            "type": "command"
+          },
+          {
+            "text": "bash ~/.openclaw/scripts/sync-context.sh      # roda na mão pra ver o erro",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Erro 3 · Auth SSH falha na VPS"
+      },
+      {
+        "type": "text",
+        "content": "A deploy key não está sendo usada. Confirma o alias SSH (mesmo da aula de Backup · 02-11):"
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "ssh -T github-openclaw                 # esperado: Hi SEU-USER/aios-context-sync!",
+            "type": "command"
+          },
+          {
+            "text": "cat ~/.ssh/config | grep -A4 github-openclaw",
+            "type": "command"
+          },
+          {
+            "text": "git remote -v                          # confere se usa github-openclaw:",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Erro 4 · Secret vazou pro repo"
+      },
+      {
+        "type": "text",
+        "content": "Um `.env` ou token foi commitado. Aja rápido: rotacione a chave (gera nova, invalida a antiga) e ajuste o `.gitignore`. Esconder do histórico não basta — quem clonou já viu."
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "cat ~/.openclaw/context-sync/.gitignore   # confirma que cobre o arquivo",
+            "type": "command"
+          },
+          {
+            "text": "# adiciona o que faltou, depois:",
+            "type": "comment"
+          },
+          {
+            "text": "git rm --cached <arquivo-secreto>",
+            "type": "command"
+          },
+          {
+            "text": "git commit -m \"remove secret do tracking\" && git push",
+            "type": "command"
+          },
+          {
+            "text": "# E ROTACIONE a chave que vazou.",
+            "type": "comment"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Checkpoint · você terminou esta aula sabendo"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Um repo único espelha os dois lados",
+            "Sync de dois sentidos",
+            "Cron de 2h + skill on-demand",
+            "Regra de ouro: quem tem dados sobe primeiro"
+          ],
+          "title": "Depois desta aula",
+          "variant": "after",
+          "subtitle": "Um cérebro só"
+        },
+        "before": {
+          "items": [
+            "PC e agente com contextos diferentes",
+            "Backup só de ida (VPS → GitHub)",
+            "Atualização manual e esquecível",
+            "Risco de sobrescrever a memória"
+          ],
+          "title": "Antes desta aula",
+          "variant": "before",
+          "subtitle": "Dois cérebros separados"
+        }
+      },
+      {
+        "type": "callout",
+        "title": "Próximo passo",
+        "content": "Seu contexto agora é vivo e compartilhado. Edite no PC, o agente sabe; o agente aprende, você recebe. Combine isso com a memória do Encontro 2 e o agente trabalha como se estivesse na sua mesa há anos.",
+        "variant": "success"
+      }
+    ],
+    "status": "published",
+    "schedule": [],
+    "subtitle": "Tudo que você faz no PC o agente sabe · tudo que o agente faz você puxa. Sync automático a cada 2h + skill manual.",
+    "learningGoals": [
+      "Entender o problema dos dois cérebros desconectados: o que você faz no PC fica no PC, o que o agente faz fica na VPS.",
+      "Dominar a regra de ouro do first-sync: quem já tem dados sobe primeiro, pra nunca sobrescrever memória acumulada.",
+      "Levar memory/ e context-os/ pra um repo GitHub privado único, espelhado entre máquina local e VPS.",
+      "Configurar um cron de 2h na VPS que faz pull + push automático.",
+      "Criar a skill atualiza-memoria pra sincronizar manualmente a qualquer momento."
+    ],
+    "durationMinutes": 35
+  }
+}

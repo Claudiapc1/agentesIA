@@ -1,0 +1,763 @@
+{
+  "id": "a6606424-a769-4810-abd1-b13ad8435024",
+  "titulo": "Gravação Completa do Encontro 1 (Ao Vivo · 3h35min)",
+  "lesson_payload": {
+    "id": "encontro-01-00",
+    "qa": [
+      {
+        "answer": "Você pode fazer os dois, mas pensa numa analogia: se eu delegar a tarefa pra um funcionário e disser 'o contexto tá em 50 livros, lê tudo' · ele leva um tempão e gasta um monte de token. Agora se eu disser 'na página 50 do livro X tem a informação que você precisa', ele faz muito mais rápido. Eu posso pedir pro Claude abrir seu Drive e procurar tudo, mas vai demorar e custar caro. O caminho que vamos seguir é organizar primeiro: eu vou trazer perguntas e estruturas, você vai saber o que organizar e de onde buscar. As duas palavras de ordem agora são organização e síntese.",
+        "askedBy": "Fabio (Le Pera)",
+        "question": "Tudo isso que vou organizar · empresa, clientes, histórico · precisa ser arquivos .md e PDFs, ou posso conectar via MCP nas minhas ferramentas atuais (Drive, Calendar, Gmail)?",
+        "seekSeconds": 4364
+      },
+      {
+        "answer": "A diferença é que no Claude Code você vai criar squads e skills dentro de um padrão que eu te mostro · você não sai do zero. Vai abrir um agente que te ajuda a criar o que precisa. Eu criei um Skill Creator que te guia. Sobre a Manus: ela é boa, mas créditos ficam caros rápido. Nada bate o Claude Pro Max (~R$500/mês) · você faz muito mais com os mesmos R$500 do que faria na Manus. A gente está passando da era mais cara da IA, tudo está surgindo e ficando mais barato.",
+        "askedBy": "Júlio Peraça",
+        "question": "Qual a diferença real entre as IAs (Manus, Claude, Claude Code)? A gente paga uma e surge outra. Vou ter limitações no Cloud por não saber criar um bom squad?",
+        "seekSeconds": 4810
+      },
+      {
+        "answer": "Aqui no Claude Code você tem o comando /usage. Ele mostra: sessão atual em %, sessão semanal em %, quando reseta. Diferente da Manus, onde você tem 300 créditos e só reabastece com pagamento, aqui o reset é automático. Eu tenho 2 contas porque uso muito. E criei a skill stack-setup (que vou entregar de presente) que já configura cloud.md e settings.json pra economizar tokens. No final do dia, tudo é token · mas no Claude você gasta menos pelo mesmo trabalho.",
+        "askedBy": "Júlio Peraça",
+        "question": "Como funciona token e crédito? Não sei se vou gastar 1 ou 200 créditos numa skill · fico travado, sem entender se acaba ou não.",
+        "seekSeconds": 5111
+      },
+      {
+        "answer": "O Claude tem 3 cérebros: Opus (4.7), Sonnet (4.6) e Haiku (4.5). Pra um SDR ou pra tradução, uso Haiku · rápido e barato. Coisas médias, Sonnet. Pra escrever copy ou tomar decisões complexas, Opus. Eu pergunto pro próprio Claude: 'qual modelo melhor pra essa tarefa?' Ele te responde. /model mostra os disponíveis.",
+        "askedBy": "Gustavo Vieira / Júlio Peraça",
+        "question": "Existe um modelo mais leve que economiza tokens? Como sei quando usar cada um?",
+        "seekSeconds": 5380
+      },
+      {
+        "answer": "Você tem método pra tudo? Tem. Você consegue ensinar uma pessoa a fazer? Consegue. Tem regras do que é certo e errado? Tem. Então é possível. Não vou prometer que vai estar tudo pronto até o fim das 10 semanas · eu sei que você faz muita coisa. Mas vou prometer que você vai SABER fazer. Há 4 meses eu não sabia nada disso. Vocês são pessoas que já construíram empresas que faturaram milhões · vocês têm consciência de construção de processos. O que falta é consciência de execução técnica. E quem ensina isso é o próprio Claude.",
+        "askedBy": "Fabiana Farias",
+        "question": "Vou conseguir chegar no fim das 10 semanas com tudo mapeado, agente pra cada processo, automatizado? Tô achando que é muito.",
+        "seekSeconds": 5667
+      },
+      {
+        "answer": "Dá. Se você tem acesso ao banco da plataforma e consegue exportar pra planilha, já dá pra fazer o primeiro teste. Você abre o Skill Creator e fala exatamente o que falou pra mim: 'quero uma skill que ajude a fazer o match'. Vai te perguntar mais coisas, demora um pouco mais que uma skill simples, mas dá. Primeiro fica de tema de casa, depois evoluímos pra um sistema.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Tenho um portfólio de 500+ fazendas e clientes que chegam com perfil de demanda. Dá pra criar uma skill que faz esse match automaticamente?",
+        "seekSeconds": 7937
+      },
+      {
+        "answer": "Pode criar agora. O comando inicial é simples: 'Claude, preciso de ajuda para criar uma skill, pode me ajudar?' Ele te oferece o Skill Creator oficial da Anthropic. Você responde 3 perguntas (o que faz, quando ativar, exemplo) e ele monta. No exercício ao vivo a turma criou skill /status (mostra contexto, modelo, conta, branch) em ~2 minutos.",
+        "askedBy": "Geral (exercício ao vivo)",
+        "question": "Já posso criar skills sem ter passado por todo o curso? Ou preciso saber tudo antes?",
+        "seekSeconds": 7050
+      },
+      {
+        "answer": "Pode usar pelo aplicativo. Vou conduzir vocês a usar o terminal porque funciona melhor · crio mais sessões, comandos são melhores, mais liberdade. Mas se você prefere o aplicativo, sem problema, só vai ser um pouco mais lento. Os comandos são os mesmos.",
+        "askedBy": "Júlio Peraça (implícito)",
+        "question": "Posso usar tudo isso pelo aplicativo Claude Desktop, ou preciso obrigatoriamente do terminal?",
+        "seekSeconds": 9300
+      },
+      {
+        "answer": "GitHub é o novo Google Drive pra código e contexto. Quando você programa ou organiza contexto, salva ali pra não perder. Funciona como backup remoto + sincronização. Tudo que vamos construir fica salvo em 2 lugares: seu computador local + GitHub. Se roubarem seu notebook, tá tudo na nuvem. E permite acessar do celular, do computador da rua, da VPS · sempre a mesma versão. São arquivos .md (texto puro), bem pequenos, não ocupa espaço.",
+        "askedBy": "Júlia / Júlio (implícito)",
+        "question": "O que é o GitHub e por que eu preciso configurar? Ele substitui o Google Drive?",
+        "seekSeconds": 11510
+      },
+      {
+        "answer": "Três coisas: (1) duas listas em arquivo .md · rotinas que faço hoje e rotinas que deveria fazer mas não faço; (2) se familiarizar com o Claude Code criando skills (mesmo inúteis, só pra brincar e entender); (3) começar a organizar diretórios no seu computador com material que você quer que o agente aprenda · método, ICP, cases, posicionamento, campanhas. Sem as duas listas, semana que vem não dá pra construir o Clone Master no Telegram.",
+        "askedBy": "Geral",
+        "question": "O que faço entre hoje e o próximo encontro? Qual é o tema de casa?",
+        "seekSeconds": 11580
+      }
+    ],
+    "tag": "Gravação",
+    "title": "Gravação Completa do Encontro 1 (Ao Vivo · 3h35min)",
+    "video": {
+      "title": "Encontro 1 · Gravação Oficial",
+      "embedSrc": "https://player.scaleup.com.br/embed/c34314d4240421e7810d4e8bf9d239ac5828a59f",
+      "provider": "scaleup",
+      "sourceUrl": "https://fathom.video/share/xj1QmwBr9Ezw_P1b6vxdv_urFTzk5T5u",
+      "recordedAt": "2026-04-28",
+      "durationSeconds": 12900
+    },
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta é a aula em formato de leitura",
+        "content": "Você pode **assistir o vídeo completo** (3h35min) no player acima ou **ler tudo aqui embaixo** · a aula está sintetizada em texto com diagramas, exemplos e citações exatas. Quando aparecer um botão **▶ ASSISTIR** dentro do conteúdo, é porque ali tem uma demonstração ao vivo que vale ver no vídeo.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A promessa dos próximos 60 dias"
+      },
+      {
+        "type": "text",
+        "content": "Em 10 encontros ao vivo, você vai construir um **time de agentes de IA no Claude Code** que trabalham 24/7 para sua empresa em marketing, vendas, conteúdo e tráfego.\n\nEsses agentes não pedem aumento. Não cobram hora extra. Não dormem.\n\nNo final, você sai do operacional. O sistema roda · e você decide."
+      },
+      {
+        "text": "Hoje a gente tá 80% do tempo no operacional e 20% do tempo no estratégico. A ideia é que você construa os agentes que possam automatizar de 60% a 70% do que você faz.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Três casos que mostram o que é possível"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Caso 1",
+            "title": "40 contratos atualizados em 5 minutos",
+            "description": "Aluno tinha 40 contratos pra atualizar com novos dados financeiros. Abriu o Claude Code, jogou o template + a planilha de financeiro + os 40 contratos e pediu: 'pega esses dados desse financeiro e atualiza todos os contratos seguindo esse template'. 5 minutos. O que levaria horas."
+          },
+          {
+            "badge": "Caso 2",
+            "title": "Posts do Instagram do Juliano",
+            "description": "Os últimos 3 posts no Instagram do Juliano foram feitos pelo Claude Code: imagem, copy, legenda · tudo. E publicados automaticamente. 'Eu fazendo testes lá, ele produziu tudo e publicou pra mim.'"
+          },
+          {
+            "badge": "Caso 3",
+            "title": "Medivi · US$400M com 2 pessoas",
+            "description": "Empresa americana faturou US$400 milhões no ano passado com 2 sócios · o resto eram pessoas envolvidas em entrega, contratadas. Tudo construído com IA. É o ponto que estamos vivendo agora: empresas de R$10·20M/ano com 2-3 pessoas + fundador."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Ver os 3 casos contados ao vivo",
+        "description": "Juliano mostrando o sistema dele com leads classificados como 'Imperador' (NPS, faturamento, funcionários) e o exemplo dos 40 contratos.",
+        "seekSeconds": 600
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Por que a gente não usa só o ChatGPT"
+      },
+      {
+        "type": "text",
+        "content": "Toda IA generativa é **agnóstica** · extremamente criativa, alucina, cria coisas da própria cabeça. Se você der o mesmo prompt pra 10 pessoas, vai ter 10 resultados diferentes.\n\nO que a gente vai construir são coisas **determinísticas**: tem início, tem meio, tem fim. Sai sempre do mesmo jeito. É a diferença entre arte e engenharia."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Tem início, meio e fim definidos (SOP)",
+            "Mesmo input → mesmo output sempre",
+            "Guardrails: não inventa, segue o checklist",
+            "Contexto permanente · lembra de tudo",
+            "Reutilizável: configura uma vez, usa mil"
+          ],
+          "title": "Sistema determinístico (Claude Code com Skills)",
+          "result": "Pessoas viram revisores, não construtores",
+          "variant": "after",
+          "subtitle": "Como vamos construir aqui"
+        },
+        "before": {
+          "items": [
+            "Cria coisas que você não pediu",
+            "Mesmo prompt → resultado diferente cada vez",
+            "Alucinações ('13ª sinfonia de Beethoven' quando só existem 9)",
+            "Sem contexto persistente · esquece tudo entre sessões",
+            "Você refaz o trabalho toda vez"
+          ],
+          "title": "IA agnóstica (ChatGPT puro, Claude solto)",
+          "variant": "before",
+          "subtitle": "Como a maioria usa hoje"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Second Brain · A arquitetura que sustenta tudo"
+      },
+      {
+        "type": "text",
+        "content": "Antes de qualquer skill, antes de qualquer agente, antes de qualquer automação, existe um conceito que precisa estar claro: o **Second Brain**.\n\nO Claude Code, sozinho, não sabe quem você é. Não sabe quem é a sua empresa. Quando você abre uma sessão, ele tem aquela sessão. Quando sai e volta, mesmo na mesma pasta, ele não sabe o que aconteceu.\n\nEntão a gente precisa construir um **segundo cérebro** · uma estrutura permanente que o Claude lê toda vez que começa, e que sempre sabe tudo o que está acontecendo no seu negócio.\n\nEsse Second Brain tem **3 camadas**. E essas 3 camadas são a espinha dorsal de tudo que vamos construir nos próximos 10 encontros."
+      },
+      {
+        "type": "mermaid",
+        "caption": "O Second Brain é o cérebro permanente do seu negócio dentro do Claude Code · sustentado por 3 camadas",
+        "diagram": "graph TD\n    SB[SECOND BRAIN]:::brain\n    C[CONTEXTO]:::ctx\n    S[SKILLS]:::skl\n    R[ROTINAS]:::rot\n    SB --> C\n    SB --> S\n    SB --> R\n    classDef brain fill:#1e293b,stroke:#0ea5e9,stroke-width:3px,color:#f8fafc\n    classDef ctx fill:#0c4a6e,stroke:#38bdf8,stroke-width:2px,color:#f0f9ff\n    classDef skl fill:#581c87,stroke:#c084fc,stroke-width:2px,color:#faf5ff\n    classDef rot fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#fff7ed"
+      },
+      {
+        "type": "callout",
+        "title": "Analogia do funcionário",
+        "content": "Pensa que você está explicando algo pra um colaborador. Se você fica o dia inteiro despejando contexto, contexto, contexto · no fim do dia ele lembra de 20%, 30%. Mas se você dá um pouco de contexto e ele aplica, mais um pouco e ele aplica, ele consolida.\n\nA IA é igual. Contexto demais de uma vez **quebra a janela** e ele perde tudo. Tem que reiniciar a sessão.\n\nO Second Brain resolve isso: o Claude lê sempre o que precisa, na medida certa, e tudo que aprende fica gravado.",
+        "variant": "info"
+      },
+      {
+        "type": "video-cue",
+        "label": "Juliano explicando o Second Brain",
+        "description": "Por que o Claude precisa de uma arquitetura mental do seu negócio antes de qualquer ferramenta.",
+        "seekSeconds": 1450
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Camada 1 · Contexto"
+      },
+      {
+        "type": "text",
+        "content": "**Contexto é tudo que define quem você é, quem é sua empresa e quem são seus clientes.** É o que o Claude lê para entender o terreno antes de qualquer ação.\n\nSe divide em duas frentes: contexto da **sua empresa** + contexto de **cada cliente**."
+      },
+      {
+        "type": "mermaid",
+        "caption": "Contexto da empresa · tudo que o Claude precisa saber sobre o seu negócio",
+        "diagram": "graph LR\n    E[SUA EMPRESA]:::root\n    E --> F[Funcionarios]\n    E --> CU[Cultura]\n    E --> P[Posicionamento]\n    E --> M[Movimento]\n    E --> H[Historia]\n    E --> SC[Socios]\n    E --> PR[Produtos]\n    classDef root fill:#0c4a6e,stroke:#38bdf8,stroke-width:3px,color:#f0f9ff"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "01",
+            "title": "Funcionários",
+            "description": "Quem trabalha com você, o que cada um faz, responsabilidades."
+          },
+          {
+            "badge": "02",
+            "title": "Cultura",
+            "description": "Como a empresa pensa, o que valoriza, como toma decisões."
+          },
+          {
+            "badge": "03",
+            "title": "Posicionamento",
+            "description": "Como você se posiciona no mercado, contra quem, com qual diferencial."
+          },
+          {
+            "badge": "04",
+            "title": "Movimento",
+            "description": "Sua narrativa de marketing · o que você defende, o que você ataca."
+          },
+          {
+            "badge": "05",
+            "title": "História",
+            "description": "De onde a empresa veio, marcos, viradas."
+          },
+          {
+            "badge": "06",
+            "title": "Sócios",
+            "description": "Quem são, perfil, função, share."
+          },
+          {
+            "badge": "07",
+            "title": "Produtos",
+            "description": "O que você vende, preço, ICP, promessa."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "E se você atende clientes?",
+        "content": "Cria uma pasta para o seu negócio e dentro dela uma pasta para cada cliente. Quanto mais conteúdo em arquivos `.md`, melhor. Tem PDFs, planilhas, transcrições? Joga tudo lá · o Claude lê uma vez e organiza.\n\nDocumenta: **reuniões**, **posicionamento atual** dele, **campanhas rodadas**, **resultados**.\n\nNa hora de ativar uma skill (ex: copy), você fala: 'quero rodar essa skill para o cliente X'. O Claude carrega o contexto **só** daquele cliente e trabalha com foco.",
+        "variant": "warning"
+      },
+      {
+        "text": "Eu fico pensando: o que o Steve Jobs faria nesse meu caso? O que o Elon Musk faria? O que o Bill Gates faria? Posso clonar essas mentes · pegar a forma deles pensarem, o tom de voz, informações públicas · e perguntar pra eles. É uma das coisas que vamos construir.",
+        "type": "quote"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Camada 2 · Skills"
+      },
+      {
+        "type": "text",
+        "content": "**Skill é uma habilidade reutilizável que você ensina pro Claude.** Em vez de explicar do zero toda vez como uma tarefa precisa ser feita, você empacota o passo a passo numa skill · e ela vira **determinística**.\n\nÉ exatamente o conceito corporativo de **SOP (Standard Operating Procedure)**: um procedimento padrão com início, meio e fim, que sempre sai do mesmo jeito."
+      },
+      {
+        "type": "callout",
+        "title": "A analogia do Matrix",
+        "content": "Lembra do Neo precisando pilotar helicóptero? O Morpheus injeta a habilidade direto na mente dele · ele não estudou, mas agora sabe pilotar.\n\n**Skills são isso.** Você dá habilidades pros seus funcionários (ou pra você mesmo) sem precisar treinar do zero. E eu vou entregar um monte delas prontas, de presente.",
+        "variant": "info"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Skill encapsula o passo a passo uma vez",
+            "Sempre sai igual · guardrails + checklist",
+            "Funcionário só precisa rodar /comando",
+            "Página feita pelo agente: 5-15 minutos",
+            "Trabalho vira revisão, não construção"
+          ],
+          "title": "Com skills",
+          "result": "Velocidade × volume × qualidade",
+          "variant": "after",
+          "subtitle": "O que vamos construir"
+        },
+        "before": {
+          "items": [
+            "Você explica a tarefa do zero toda vez",
+            "Cada execução pode sair diferente",
+            "Funcionário leva 1 dia pra dominar a ferramenta",
+            "Página feita por terceiro: 7-15 dias",
+            "Você é o gargalo de tudo"
+          ],
+          "title": "Sem skills",
+          "variant": "before",
+          "subtitle": "Como funciona hoje"
+        }
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Os 3 níveis de Skills"
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "Nível 1",
+            "title": "Skills da empresa",
+            "description": "Qualquer departamento usa. Ex: 'criar nova landing page no padrão Torriani', 'gerar relatório de campanha'. Todo mundo tem acesso."
+          },
+          {
+            "badge": "Nível 2",
+            "title": "Skills de projeto",
+            "description": "Específicas de um cliente ou produto. Ex: 'gerar copy pro produto X' usando ICP/promessa do produto X. Apenas quem trabalha naquele projeto."
+          },
+          {
+            "badge": "Nível 3",
+            "title": "Skills de departamento",
+            "description": "Áreas específicas. Ex: skill financeira pra conciliação de caixa · só usuários do financeiro. Skill de pesquisa · só marketing."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Demonstração ao vivo: criando a primeira skill",
+        "description": "Juliano mostrando ao vivo o `/usage`, `/context` e como criar uma skill /status do zero usando o Skill Creator oficial da Anthropic. Em ~3 minutos a turma criou a primeira.",
+        "seekSeconds": 2580
+      },
+      {
+        "type": "terminal",
+        "lines": [
+          {
+            "text": "# 1. Abra o Claude Code (terminal ou app desktop) e digite:",
+            "type": "comment"
+          },
+          {
+            "text": "Claude, preciso de ajuda para criar uma skill, pode me ajudar?",
+            "type": "command"
+          },
+          {
+            "text": "# 2. Ele oferece o Skill Creator oficial. Você responde:",
+            "type": "comment"
+          },
+          {
+            "text": "Quero usar isso. Como faço?",
+            "type": "command"
+          },
+          {
+            "text": "# 3. Ele faz 3 perguntas: o que faz · quando ativar · exemplo",
+            "type": "comment"
+          },
+          {
+            "text": "# 4. Você responde tudo de uma vez, ele monta a skill",
+            "type": "comment"
+          },
+          {
+            "text": "✓ Skill creator ativado. Skill criada em ~/.claude/skills/",
+            "type": "output"
+          }
+        ],
+        "title": "Como invocar o Skill Creator"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Camada 3 · Rotinas"
+      },
+      {
+        "type": "text",
+        "content": "**Rotinas são o que você faz repetidamente** · diária, semanal, mensalmente. Cada rotina é candidata a virar um agente.\n\nEsse é o motivo da tarefa de casa: antes de criar agente, você precisa **mapear** o que você já faz."
+      },
+      {
+        "type": "callout",
+        "title": "Regra de ouro da mentoria",
+        "content": "**Só se automatiza o que já se faz repetidamente.**\n\nSe não tem rotina mapeada, criar agente é só gasto de token. É inventar trabalho que ninguém precisava.",
+        "variant": "warning"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Exercício ao vivo: rotinas reais da turma"
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Rodrigo Severo",
+          "content": "Recepção de leads. Receber, atender, qualificar."
+        },
+        "output": {
+          "label": "Como vira agente",
+          "content": "Mapeia o processo: lead chega → primeira mensagem → segunda → terceira → quando responde, o que responder → objetivo final. Vira um agente que atende 24/7."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Fabio (Le Pera)",
+          "content": "Montar proposta comercial."
+        },
+        "output": {
+          "label": "Como vira agente",
+          "content": "Skill que lê o template da proposta + casos no workspace + benchmarks fora do Brasil → monta proposta personalizada. Antes mostrava 3 cases. Agora mostra 50."
+        }
+      },
+      {
+        "type": "input-output",
+        "input": {
+          "label": "Fabiana Farias",
+          "content": "Extração de método + construção de apostila."
+        },
+        "output": {
+          "label": "Como vira agente",
+          "content": "Fase 1: extração via IA (com pessoalidade humana só no início). Fase 2: estrutura. Fase 3: layout. O time entra como revisor, não construtor · atende mais clientes com mesmo time."
+        }
+      },
+      {
+        "type": "video-cue",
+        "label": "Exercício ao vivo: rotinas dos alunos",
+        "description": "Rodrigo, Fabio e Fabiana mapeando suas rotinas em tempo real e o Juliano mostrando como cada uma vira agente.",
+        "seekSeconds": 3300
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Como as 3 camadas se conectam"
+      },
+      {
+        "type": "mermaid",
+        "caption": "Ciclo: contexto → skills → rotinas → novos dados → atualiza contexto",
+        "diagram": "graph LR\n    C[CONTEXTO]:::ctx -->|alimenta| S[SKILLS]:::skl\n    S -->|executam| R[ROTINAS]:::rot\n    R -->|geram dados que voltam pra| C\n    classDef ctx fill:#0c4a6e,stroke:#38bdf8,stroke-width:2px,color:#f0f9ff\n    classDef skl fill:#581c87,stroke:#c084fc,stroke-width:2px,color:#faf5ff\n    classDef rot fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#fff7ed"
+      },
+      {
+        "type": "callout",
+        "title": "Quando as 3 camadas estão de pé",
+        "content": "- Uma rotina **sem skill** é manual.\n- Uma skill **sem contexto** é genérica.\n- Um contexto **sem rotina** é documentação morta.\n\nQuando as 3 estão de pé, o Claude Code para de ser ferramenta de chat e vira o **sistema operacional do seu negócio**.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A jornada dos 10 encontros"
+      },
+      {
+        "type": "text",
+        "content": "Não é aula avulsa. É **construção progressiva** · cada encontro adiciona uma camada do AIOS."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "badge": "1",
+            "title": "Abertura + Setup",
+            "description": "Visão geral, 3 camadas, instalação, primeira skill (você está aqui)."
+          },
+          {
+            "badge": "2",
+            "title": "Construindo seu Clone 24/7",
+            "description": "Primeiro agente · Clone Master no Telegram, na sua VPS. Já vai trabalhar pra você."
+          },
+          {
+            "badge": "3",
+            "title": "CORE AIOS · As 5 Camadas",
+            "description": "Construção formal do contexto, skills e rotinas no padrão."
+          },
+          {
+            "badge": "4",
+            "title": "Content Skill",
+            "description": "Skill de conteúdo: pesquisa, criação, publicação."
+          },
+          {
+            "badge": "5",
+            "title": "Copy Skill",
+            "description": "Skill de copy: pesquisa → big idea → narrativa → copy mestre."
+          },
+          {
+            "badge": "6",
+            "title": "Design Skill",
+            "description": "Skill de design: páginas no padrão da marca em minutos."
+          },
+          {
+            "badge": "7",
+            "title": "Traffic Skill",
+            "description": "Skill de tráfego: análise de campanhas, otimização, novos criativos."
+          },
+          {
+            "badge": "8",
+            "title": "Dashboard Executivo",
+            "description": "Construção do dashboard que conecta tudo. Você recebe 60% pronto."
+          },
+          {
+            "badge": "9",
+            "title": "Sistema Pronto",
+            "description": "Integração final. Tudo conversando. Agente checando o agente."
+          },
+          {
+            "badge": "10",
+            "title": "Monetização",
+            "description": "Como cobrar, vender e licenciar o que você construiu."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Demonstração ao vivo · Cloud Code Profissional"
+      },
+      {
+        "type": "text",
+        "content": "Última hora do encontro foi dedicada a 22 funcionalidades avançadas do Claude Code. Aqui as principais · cada uma com botão pra ver o momento exato no vídeo."
+      },
+      {
+        "type": "video-cue",
+        "label": "Mobile + GitHub no celular",
+        "description": "Demo: backlog do Dominus carregado no celular via app do Cloud, com 59 stories, mostrando que dá pra programar de qualquer lugar.",
+        "seekSeconds": 10200
+      },
+      {
+        "type": "video-cue",
+        "label": "/remote-control · continuar sessão no celular",
+        "description": "Mesma sessão do desktop disponível no celular. QR code, sincronização ao vivo, conversa continua exatamente onde parou.",
+        "seekSeconds": 10680
+      },
+      {
+        "type": "video-cue",
+        "label": "/dispatch · controlar o computador inteiro",
+        "description": "Thread única persistente. Pelo celular você pede coisas e o Claude executa no seu desktop, mesmo de longe.",
+        "seekSeconds": 10980
+      },
+      {
+        "type": "video-cue",
+        "label": "/loop, /hooks, /schedule · automação",
+        "description": "Loop roda no seu computador a cada X minutos. Hooks são triggers determinísticos (quando X, faça Y). Schedule roda na nuvem 24/7 mesmo com o computador desligado.",
+        "seekSeconds": 11280
+      },
+      {
+        "type": "video-cue",
+        "label": "Extensão Chrome · auto-feedback loop",
+        "description": "Demo: Juliano pediu pro Claude analisar leads no sistema dele. O Claude operou o navegador, leu a página, classificou os leads como 'Imperador' baseado em score próprio.",
+        "seekSeconds": 11760
+      },
+      {
+        "type": "video-cue",
+        "label": "/branch e /btw · conversas paralelas",
+        "description": "Branch duplica a conversa atual com todo o histórico. BTW abre fala lateral enquanto o Claude trabalha. Sem perder contexto da tarefa principal.",
+        "seekSeconds": 12060
+      },
+      {
+        "type": "video-cue",
+        "label": "/voice e WhisperFlow · ditar prompts",
+        "description": "Voice nativo do Cloud + WhisperFlow (R$30/mês). Juliano ditou 538 mil palavras esse mês. 3× mais rápido que digitar.",
+        "seekSeconds": 12360
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Tarefa de casa antes do Encontro 2"
+      },
+      {
+        "type": "callout",
+        "title": "Sem isso, semana que vem não dá",
+        "content": "Você precisa chegar com **duas listas mapeadas em arquivo `.md`**:\n\n**Lista 1 · Rotinas que eu já faço**\nQualquer coisa que se repete: resposta para clientes, monitorar grupos de WhatsApp, entregas, pesquisas, relatórios, revisões, aprovações. Tudo.\n\n**Lista 2 · Rotinas que eu deveria fazer mas não faço**\nO que diferenciaria você se estivesse rodando? Análises, monitoramentos, relatórios proativos, follow-ups. Anote tudo.\n\nEssas duas listas são o input para o **Clone Master 24/7** que vamos construir no Encontro 2.",
+        "variant": "warning"
+      },
+      {
+        "type": "callout",
+        "title": "Para levar com você",
+        "content": "Você acabou de receber a arquitetura mental que sustenta toda a mentoria. Antes de qualquer ferramenta, antes de qualquer agente, lembre:\n\n- [ ] **Contexto** · empresa (funcionários, cultura, posicionamento, movimento, história, sócios, produtos) + clientes (reuniões, posicionamento, campanhas)\n- [ ] **Skills** · empresa, projeto, departamento\n- [ ] **Rotinas** · só se automatiza o que se faz repetidamente\n\nE a regra de ouro: **sem rotina mapeada, agente é gasto de token.**",
+        "variant": "success"
+      }
+    ],
+    "status": "available",
+    "duration": 215,
+    "schedule": [
+      {
+        "time": "0:00",
+        "topic": "Liberação de acessos e senhas. Troubleshooting de login no playbook (123mudar)",
+        "duration": "10 min",
+        "seekSeconds": 0
+      },
+      {
+        "time": "0:10",
+        "topic": "Exemplos motivacionais: 40 contratos atualizados em 5min, posts no Instagram com Cloud Code, case Medivi (US$400M com 2 pessoas)",
+        "duration": "8 min",
+        "seekSeconds": 600
+      },
+      {
+        "time": "0:18",
+        "topic": "Boas-vindas oficial. Início da aula formal. A promessa: transformar colaboradores nota 3-4 em nota 8-9",
+        "duration": "5 min",
+        "seekSeconds": 1080
+      },
+      {
+        "time": "0:21",
+        "topic": "IA agnóstica vs determinística. Por que processos com IA precisam ter início, meio e fim",
+        "duration": "3 min",
+        "seekSeconds": 1268
+      },
+      {
+        "time": "0:23",
+        "topic": "Second Brain. A arquitetura mental que sustenta tudo (3 camadas: Contexto, Skills, Rotinas)",
+        "duration": "8 min",
+        "seekSeconds": 1450
+      },
+      {
+        "time": "0:30",
+        "topic": "Camada 1 · CONTEXTO. Empresa (funcionários, cultura, posicionamento) + Clientes (reuniões, campanhas)",
+        "duration": "5 min",
+        "seekSeconds": 1700
+      },
+      {
+        "time": "0:35",
+        "topic": "Camada 2 · SKILLS. Analogia do Matrix (Neo + Morpheus). Skills da empresa, projeto, departamento",
+        "duration": "8 min",
+        "seekSeconds": 2100
+      },
+      {
+        "time": "0:43",
+        "topic": "Demonstração ao vivo: barra /usage, /context. Skill stack-setup que economiza tokens",
+        "duration": "10 min",
+        "seekSeconds": 2580
+      },
+      {
+        "time": "0:55",
+        "topic": "Camada 3 · ROTINAS. Regra de ouro: só se automatiza o que já se faz. Exercício ao vivo (Rodrigo: leads · Fabio: propostas)",
+        "duration": "5 min",
+        "seekSeconds": 3300
+      },
+      {
+        "time": "1:00",
+        "topic": "Como as 3 camadas se conectam. Cloud Code como sistema operacional do negócio",
+        "duration": "5 min",
+        "seekSeconds": 3600
+      },
+      {
+        "time": "1:05",
+        "topic": "Jornada dos 10 encontros. Cada semana adiciona uma camada do AIOS",
+        "duration": "5 min",
+        "seekSeconds": 3900
+      },
+      {
+        "time": "1:10",
+        "topic": "Tarefa de casa: 2 listas em .md (rotinas que faço · rotinas que deveria fazer)",
+        "duration": "2 min",
+        "seekSeconds": 4200
+      },
+      {
+        "time": "1:12",
+        "topic": "Q&A · Fabio: posso conectar via MCP nas minhas ferramentas (Drive, Calendar)?",
+        "duration": "8 min",
+        "seekSeconds": 4364
+      },
+      {
+        "time": "1:20",
+        "topic": "Q&A · Júlio: diferença entre IAs (Manus, Claude, Claude Code). Limitações e custo",
+        "duration": "10 min",
+        "seekSeconds": 4810
+      },
+      {
+        "time": "1:31",
+        "topic": "Q&A · Fabiana: dá pra chegar no fim das 10 semanas com tudo mapeado e automatizado?",
+        "duration": "5 min",
+        "seekSeconds": 5667
+      },
+      {
+        "time": "1:36",
+        "topic": "Hands-on ao vivo: criação da primeira skill (/status) usando Skill Creator oficial da Anthropic",
+        "duration": "20 min",
+        "seekSeconds": 5760
+      },
+      {
+        "time": "1:56",
+        "topic": "Troubleshooting Windows: CMD vs PowerShell, comando cloud not found, instalação via npm",
+        "duration": "20 min",
+        "seekSeconds": 6960
+      },
+      {
+        "time": "2:12",
+        "topic": "Q&A · Rodrigo: skill de match demanda × oferta (500 fazendas × perfil cliente)",
+        "duration": "5 min",
+        "seekSeconds": 7937
+      },
+      {
+        "time": "2:18",
+        "topic": "Troubleshooting Mac: instalação Homebrew + Git no macOS Tahoe. Problemas com Xcode CLT",
+        "duration": "15 min",
+        "seekSeconds": 8280
+      },
+      {
+        "time": "2:33",
+        "topic": "GitHub: criação de conta, liberação de acesso ao repositório coreaios, captcha do inferno",
+        "duration": "12 min",
+        "seekSeconds": 9180
+      },
+      {
+        "time": "2:45",
+        "topic": "Curso Cloud Code (playbook): tour pelas funcionalidades disponíveis para estudo independente",
+        "duration": "5 min",
+        "seekSeconds": 9900
+      },
+      {
+        "time": "2:50",
+        "topic": "Mobile: acesso ao GitHub e Cloud Code pelo celular. Demo com backlog do Dominus",
+        "duration": "8 min",
+        "seekSeconds": 10200
+      },
+      {
+        "time": "2:58",
+        "topic": "Remote Control: continuar a sessão do desktop no celular. Demo ao vivo",
+        "duration": "5 min",
+        "seekSeconds": 10680
+      },
+      {
+        "time": "3:03",
+        "topic": "Dispatch: thread única que controla o computador inteiro pelo celular",
+        "duration": "5 min",
+        "seekSeconds": 10980
+      },
+      {
+        "time": "3:08",
+        "topic": "Automatize com /loop, /hooks e /schedule. Diferença entre cada um",
+        "duration": "8 min",
+        "seekSeconds": 11280
+      },
+      {
+        "time": "3:16",
+        "topic": "Extensão Chrome: auto-feedback loop. Demo: análise de leads no sistema com IA mexendo o mouse",
+        "duration": "5 min",
+        "seekSeconds": 11760
+      },
+      {
+        "time": "3:21",
+        "topic": "/branch e /btw: gerenciar conversas paralelas sem perder contexto",
+        "duration": "5 min",
+        "seekSeconds": 12060
+      },
+      {
+        "time": "3:26",
+        "topic": "Modo voz: /voice nativo + WhisperFlow (538k palavras ditadas no mês)",
+        "duration": "5 min",
+        "seekSeconds": 12360
+      },
+      {
+        "time": "3:31",
+        "topic": "Encerramento. Tema de casa, marcação de encontro extra de pronto-socorro",
+        "duration": "5 min",
+        "seekSeconds": 12660
+      }
+    ],
+    "subtitle": "A aula original do dia 28/Abr na íntegra · abertura, Second Brain, hands-on, troubleshooting e Cloud Code Profissional",
+    "shortTitle": "Gravação Completa",
+    "transcript": "transcripts/core-ia-mentoria/encontro-01-01.md",
+    "learningGoals": [
+      "Assistir o encontro 1 inteiro na íntegra (3h35min) · exatamente como aconteceu ao vivo no dia 28/Abr",
+      "Acompanhar o setup operacional inicial (acessos, senhas, exemplos motivacionais: 40 contratos, posts no Instagram, case Medivi)",
+      "Revisar a aula teórica oficial: Second Brain, 3 camadas (Contexto, Skills, Rotinas), jornada dos 10 encontros e tarefa de casa",
+      "Acompanhar o hands-on guiado: criação ao vivo da skill /status, troubleshooting Windows e Mac, configuração GitHub",
+      "Aprender as 22 funcionalidades avançadas do Cloud Code: Mobile, Remote Control, Dispatch, /loop, /hooks, /schedule, extensão Chrome, /branch, /btw, /voice",
+      "Ouvir as perguntas reais dos alunos (Fabio, Júlio, Fabi, Rodrigo, Gustavo) e as respostas dadas no momento",
+      "Pular direto para qualquer trecho específico usando os timestamps clicáveis na lateral"
+    ]
+  }
+}

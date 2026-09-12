@@ -1,0 +1,318 @@
+{
+  "id": "c3b6b682-92f3-40ea-bb7a-1eb6a71d0e92",
+  "titulo": "Parte 2 · Construindo a Skill de Conteúdo",
+  "lesson_payload": {
+    "id": "encontro-07-02",
+    "qa": [
+      {
+        "answer": "Quando você abrir qualquer coisa, ela tem que perguntar automaticamente qual negócio vai trabalhar. Se a conexão não está feita, peça: pega a pasta do Workspace e faz com que, toda vez que abrir, me pergunte qual negócio vou trabalhar e carregue o contexto desse negócio. A skill de conteúdo precisa fazer isso.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Como faço pra saber se as skills estão usando o contexto? Como operacionalizo isso na prática?",
+        "seekSeconds": 5993
+      },
+      {
+        "answer": "Commit é o que sobe e envia pro GitHub. No fim do trabalho: dá commit, grava na memória e faz o deploy na VPS. Git é backup e forma da galera baixar os arquivos; a VPS é pra expor os serviços, os dashboards e os agentes.",
+        "askedBy": "Rodrigo Severo",
+        "question": "O que é o git commit? Eu não estava fazendo essa etapa.",
+        "seekSeconds": 4637
+      },
+      {
+        "answer": "Deploy é como compilar o aplicativo e deixá-lo pronto: pega todos os arquivos, fecha numa caixinha e sobe na internet, e você não mexe mais nele. Estou criando um deploy pra cada programa, Agents Deploy, Dominus Deploy, que faz versionamento e sobe tudo bonitinho.",
+        "askedBy": "Fabio Moro",
+        "question": "O que é o deploy, qual a vantagem dele?",
+        "seekSeconds": 12862
+      },
+      {
+        "answer": "Resolvido na hora pelo Rodrigo: abre o NotebookLM no Chrome e usa a extensão do Cloud, pedindo pra ele acessar a janela aberta. Ele entrou, leu e começou a dar comando digitando no próprio prompt do NotebookLM. Sem precisar de API.",
+        "askedBy": "Fabio Moro",
+        "question": "Como conecto o NotebookLM? Estudei e ele não tem API, é fechado.",
+        "seekSeconds": 4908
+      },
+      {
+        "answer": "Memória RAM e um processador melhor ajudam muito. Placa de vídeo ajuda se você for rodar LLM local. Eu tenho 18GB e precisava de 64; estou de olho no Mac Studio.",
+        "askedBy": "Rodrigo Severo",
+        "question": "Na compra de máquina nova, o que ajuda na lentidão? É memória RAM?",
+        "seekSeconds": 4344
+      }
+    ],
+    "title": "Parte 2 · Construindo a Skill de Conteúdo",
+    "video": {
+      "title": "Encontro 7 — Construindo a Skill de Conteúdo (09/06/2026)",
+      "embedSrc": "https://fathom.video/share/6TYd2MH17ARUBNyn8F6doYJpwwTDhZXB",
+      "provider": "raw",
+      "sourceUrl": "https://fathom.video/share/6TYd2MH17ARUBNyn8F6doYJpwwTDhZXB",
+      "recordedAt": "2026-06-09"
+    },
+    "blocks": [
+      {
+        "type": "callout",
+        "title": "Esta é a aula em formato de leitura",
+        "content": "Você pode assistir a gravação completa OU ler tudo aqui embaixo. Esta é a Parte 2 do Encontro 7: a construção prática do squad de conteúdo, do contexto até a publicação. A Parte 1 cobriu o feedback e os hotseats da turma.",
+        "variant": "info"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Contexto é tudo"
+      },
+      {
+        "type": "text",
+        "content": "Se tem uma palavra pra levar deste curso inteiro, é contexto. Antes de qualquer skill ou agente fazer sentido, você precisa de um lugar único onde mora tudo do seu negócio: campanhas, produtos, cultura, inteligência de mercado, sessões anteriores. Esse lugar é o Workspace, que na estrutura do Torriani aparece com o nome de Contexto, ou ContextOS, a camada de contexto do sistema operacional de IA."
+      },
+      {
+        "text": "O mais importante de tudo do que a gente trabalha aqui é a palavra contexto. Esse é o que vai fazer toda a diferença.",
+        "type": "quote"
+      },
+      {
+        "text": "Quanto melhor você fizer o Workspace, quanto melhor você tiver a centralização dos seus dados, melhor vai ser todo o seu contexto.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "A regra prática é simples: você cria essa pasta de Contexto uma única vez, alimenta ela com os arquivos do negócio, e faz cada skill consultar esse contexto quando precisar. Sem isso, as skills não servem de muita coisa, porque elas trabalham no vácuo. Com isso, qualquer agente passa a falar na voz e na realidade do seu negócio."
+      },
+      {
+        "type": "callout",
+        "title": "Como operacionalizar o contexto numa skill",
+        "content": "Quando você abrir qualquer skill, ela deveria perguntar automaticamente qual negócio você vai trabalhar e carregar o contexto desse negócio. Se essa conexão ainda não existe, peça pro Cloud: 'pega a pasta do Workspace e faça com que, toda vez que abrir, você me pergunte qual negócio vou trabalhar e carregue o contexto dele'.",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Por que contexto é a parte central",
+        "description": "Torriani explica que o Workspace é o coração do sistema e mostra o dashboard de épicos que acompanha o desenvolvimento.",
+        "seekSeconds": 642
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "A estrutura de pastas (monorepo)"
+      },
+      {
+        "type": "text",
+        "content": "Boa parte da confusão de quem começa vem de uma estrutura de pastas bagunçada. A recomendação é um monorepo: uma pasta raiz única, em minúsculas, com tudo dentro dela organizado por função. Torriani admitiu na hora que a estrutura dele estava errada, com uma pasta legacy e o iox duplicado dentro de várias pastas, e que vai refazer a dele toda seguindo esse padrão."
+      },
+      {
+        "type": "mermaid",
+        "caption": "Hierarquia recomendada: uma raiz cloud com iox-core, apps, squads e contexto separados por função.",
+        "diagram": "graph TD\n    A[cloud] --> B[iox-core<br/>sistema de desenvolvimento]\n    A --> C[apps/<br/>cada aplicativo]\n    A --> D[squads/<br/>seus assistentes]\n    A --> E[contexto<br/>Workspace dos negocios]\n    A --> F[docs / outputs / inputs]"
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "Uma raiz cloud, tudo minúsculo",
+            "iox-core único pro desenvolvimento",
+            "apps, squads e contexto separados por função",
+            "Qualquer agente sabe onde achar cada coisa"
+          ],
+          "title": "Monorepo organizado",
+          "result": "Um lugar só, organizado por função, sem duplicação.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "Pasta legacy carregando histórico",
+            "iox duplicado dentro de cada pasta",
+            "Difícil de saber onde mora cada coisa",
+            "Cada projeto reinventa a organização"
+          ],
+          "title": "Estrutura bagunçada",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "text",
+        "content": "O iox-core é o framework de desenvolvimento: é ele que traz a lógica de trabalhar com agentes, scrum, stories e workflows. Os apps são cada aplicativo que você constrói. Os squads são seus times de assistentes. E o contexto é o Workspace que alimenta todos eles."
+      },
+      {
+        "type": "video-cue",
+        "label": "Tour pela estrutura de pastas no Finder",
+        "description": "Torriani navega no Finder mostrando a hierarquia cloud, iox-core, apps, squads e contexto.",
+        "seekSeconds": 6480
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Skill ou Squad?"
+      },
+      {
+        "type": "text",
+        "content": "Skill é uma capacidade única, um comando que faz uma coisa bem feita. Squad é um time: vários agentes organizados em tiers que trabalham juntos. No squad de conteúdo, por exemplo, tem um Chief que orquestra, criadores especializados (Carrossel, Reels, Stories) e agentes de apoio (Planner, Validator). Torriani contou que está migrando squads pra skills, porque skill é mais fácil de qualquer agente entender e ativar."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Chief (orquestrador)",
+            "description": "Recebe o pedido, diagnostica a intenção e direciona pro agente certo. No conteúdo, é o Content Chief."
+          },
+          {
+            "title": "Criadores (Tier 1)",
+            "description": "Os especialistas que produzem a peça: Carrossel Creator, Reels Creator, Stories Strategist."
+          },
+          {
+            "title": "Apoio (Tier 2/3)",
+            "description": "Planner pra calendário, Validator pro filtro de qualidade, Repurposer pra adaptar conteúdo entre formatos."
+          }
+        ]
+      },
+      {
+        "type": "video-cue",
+        "label": "Squad de Conteúdo rodando ao vivo",
+        "description": "Demo do Content Chief perguntando o cliente, listando os agentes por tier e respondendo ao comando help.",
+        "seekSeconds": 8460
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "O pulo do gato: a pasta data"
+      },
+      {
+        "type": "text",
+        "content": "Dentro de um squad existem várias pastas: workflows, templates, tasks, skills e data. As quatro primeiras são a mecânica. A pasta data é onde mora o seu diferencial. É ali que ficam as regras de escrita, os clichês proibidos, o benchmark, a voz da marca, tudo o que faz o conteúdo soar como você e não como qualquer IA genérica."
+      },
+      {
+        "text": "Aqui que mora o pulo do gato: o data são as informações, é o teu diferencial.",
+        "type": "quote"
+      },
+      {
+        "type": "callout",
+        "title": "Por que o data importa tanto",
+        "content": "Dois squads com o mesmo workflow produzem resultados completamente diferentes dependendo do data. É o data que carrega o repertório. Quem investe no data tem um squad que ninguém consegue copiar só olhando os comandos.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Se é repetitivo, vira skill"
+      },
+      {
+        "type": "text",
+        "content": "O princípio de automação do curso, dito pra turma gravar: toda vez que você se pega repetindo o mesmo comando ou a mesma instrução pro Cloud, isso tem que virar uma skill. Em vez de digitar a mesma sequência toda sessão, você encapsula uma vez e chama por um comando."
+      },
+      {
+        "text": "Tudo que é trabalho repetitivo, quero que todo mundo grave isso: se é trabalho repetitivo, precisa ter uma skill.",
+        "type": "quote"
+      },
+      {
+        "type": "text",
+        "content": "Exemplos reais citados na sessão: a skill Salva Workspace, que grava o contexto da sessão; a skill Publicar, pra postar no Instagram; a skill Ativa Squad, pra ligar um squad na máquina; e skills de Deploy como Agents Deploy e Dominus Deploy, que sobem os sistemas prontos."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Setup da Meta pra publicar no Instagram"
+      },
+      {
+        "type": "text",
+        "content": "Pra skill de conteúdo não parar na criação e chegar até a publicação, é preciso configurar o acesso na Meta. Isso é feito uma vez no painel de desenvolvedores, criando um System User com token de longa duração, e é o que permite a skill Publicar postar no Instagram via API."
+      },
+      {
+        "type": "numbered-steps",
+        "steps": [
+          {
+            "title": "Criar um app no Meta Developers",
+            "description": "Em developers.facebook.com, crie um aplicativo do tipo Business pra ter onde gerar as credenciais."
+          },
+          {
+            "title": "Criar o System User",
+            "description": "Dentro das configurações de negócio, crie um System User. Ele é o usuário técnico que vai publicar em nome da conta."
+          },
+          {
+            "title": "Atribuir os ativos",
+            "description": "Dê ao System User acesso à página e à conta do Instagram que você quer publicar."
+          },
+          {
+            "title": "Gerar o token",
+            "description": "Gere um token de acesso de longa duração com as permissões de publicação. Esse token é o que a skill Publicar usa."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "title": "Trate o token como senha",
+        "content": "O token do System User dá acesso a publicar na sua conta. Guarde em variável de ambiente, nunca dentro do código que você sobe pro Git.",
+        "variant": "warning"
+      },
+      {
+        "type": "video-cue",
+        "label": "Setup do System User na Meta",
+        "description": "Passo a passo no painel de desenvolvedores: criar o app, o System User, atribuir ativos e gerar o token.",
+        "seekSeconds": 10200
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Backup em 3 camadas e deploy"
+      },
+      {
+        "type": "text",
+        "content": "Pra fechar, o fluxo de preservar e publicar o que você construiu. São três camadas com papéis diferentes, e a sessão deixou claro que confundir elas é o erro comum. Rodrigo, por exemplo, não estava nem fazendo commit, e foi nesse ponto que o conceito apareceu."
+      },
+      {
+        "type": "comparison",
+        "after": {
+          "items": [
+            "1. git commit pra subir e versionar no GitHub",
+            "2. gravar na memória o que foi feito na sessão",
+            "3. deploy na VPS pra deixar o serviço no ar"
+          ],
+          "title": "Fluxo de fechar a sessão",
+          "result": "Commit, memória, deploy: a sessão fecha preservada e publicada.",
+          "variant": "after"
+        },
+        "before": {
+          "items": [
+            "GitHub: backup e forma da equipe baixar os arquivos",
+            "VPS: expor serviços (dashboards, agentes) pra clientes acessarem",
+            "Local: onde você trabalha no dia a dia"
+          ],
+          "title": "As 3 camadas",
+          "result": "Cada uma tem uma função; nenhuma substitui as outras.",
+          "variant": "before"
+        }
+      },
+      {
+        "type": "text",
+        "content": "Deploy é como compilar o aplicativo e deixá-lo pronto: pega todos os arquivos, fecha numa caixinha e sobe na internet, e você não mexe mais nele. Torriani está criando um deploy pra cada programa (Agents Deploy, Dominus Deploy) que faz o versionamento e sobe tudo de uma vez. Detalhe prático do Fabio, validado na hora: coloque um número de versão visível no dashboard, pra não abrir uma versão antiga por engano."
+      },
+      {
+        "text": "Deploy é pegar todos os arquivos, fechar numa caixinha e subir na internet, e você não mexe mais nele.",
+        "type": "quote"
+      },
+      {
+        "type": "video-cue",
+        "label": "git pull e ativação na máquina do aluno",
+        "description": "Torriani guia os alunos no terminal: cd na pasta, git pull, ativa-squad e ativação global dos comandos.",
+        "seekSeconds": 12120
+      },
+      {
+        "type": "callout",
+        "title": "Recapitulando a Parte 2",
+        "content": "Contexto no centro, monorepo organizado, squad com data como diferencial, tudo repetitivo virando skill, Meta configurada pra publicar e backup em 3 camadas. Esse é o esqueleto da Skill de Conteúdo, da ideia até o post no ar.",
+        "variant": "success"
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "content": "Perguntas da turma"
+      }
+    ],
+    "status": "available",
+    "eyebrow": "ENCONTRO 7 · PARTE 2 DE 2",
+    "duration": 120,
+    "schedule": [],
+    "subtitle": "Do contexto à publicação: estrutura de pastas, squad de conteúdo, setup da Meta e deploy",
+    "transcript": "transcripts/core-ia-mentoria/encontro-zoom-09-06.md",
+    "learningGoals": [
+      "Entender por que o Contexto (Workspace) é a parte central do sistema e como alimentá-lo",
+      "Organizar o projeto num monorepo: cloud com iox-core, apps, squads e contexto",
+      "Saber a diferença entre Skill e Squad e o que vive dentro de um squad",
+      "Reconhecer que a pasta data é o diferencial do squad (regras, benchmark, voz)",
+      "Transformar todo trabalho repetitivo numa skill",
+      "Fazer o setup do System User da Meta pra publicar no Instagram via API",
+      "Entender backup em 3 camadas: GitHub, VPS e local, e o papel do deploy"
+    ]
+  }
+}

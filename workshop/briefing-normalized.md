@@ -1,0 +1,3 @@
+# Briefing normalizado
+
+Público: empresários e profissionais com níveis Novice e Advanced Beginner. Formato: workshop intensivo ao vivo, 9h às 17h, com prática aplicada ao negócio do participante. Ponto A: uso de ChatGPT ou Claude como conversa isolada, sem contexto persistente nem processo. Ponto B: base de uma empresa agêntica instalada, com ContextOS, Zeus, times de marketing e rotina de continuidade. Promessa: “Vá além do ChatGPT e do Claude: tenha agentes de IA autônomos operando a sua empresa.” Progressão: “da primeira tarefa automatizada à empresa inteira operada por agentes de IA.” Materiais: CoreAI Mentoria, Eliaquim, portal, skills agentesIA e brandbook. CTA: Core IA Mentoria, com condições comerciais pendentes de confirmação do Juliano.

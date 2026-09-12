@@ -1,0 +1,20 @@
+# ContextOS - AI Strategy
+# Preenchido durante: *setup-context Fase 9
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+position: null            # early | mainstream | conservador
+privacy_policy: null
+monthly_budget: null      # BRL
+current_use_cases: []
+planned_use_cases: []
+models_used: []
+orchestration_tools: []
+success_metrics: []
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

@@ -1,0 +1,31 @@
+# ContextOS - Hiring Criteria
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+hiring_philosophy:
+  skills_vs_attitude: null  # % importancia de cada
+  culture_fit_weight: null
+  experience_minimum: null
+
+must_haves:
+  - trait: null
+    how_to_assess: null
+  - trait: null
+    how_to_assess: null
+
+red_flags:
+  - flag: null
+  - flag: null
+
+interview_questions:
+  - question: null
+    what_to_look_for: null
+
+leadership_profile:
+  style: null
+  expectations: []
+  development: null
+
+metadata:
+  status: INCOMPLETE

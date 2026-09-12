@@ -1,0 +1,32 @@
+{
+  "runtime": "/Users/julianotorriani/claude/brandbook/apps/aiox-design-starter",
+  "accent": "#2B7DE1",
+  "mode": "palco",
+  "ratio": "16:9",
+  "decks": [
+    {
+      "slug": "workshop-times-ia-oportunidade",
+      "source": "w00-boas-vindas",
+      "slides": 13,
+      "benchmarks": [
+        "mastermind-2026",
+        "agentes-na-pratica"
+      ]
+    },
+    {
+      "slug": "workshop-times-ia-contextos",
+      "source": "w04-contextos",
+      "slides": 24,
+      "benchmarks": [
+        "aios",
+        "aios-v2"
+      ]
+    }
+  ],
+  "source_policy": "O manual completo fica preservado em source-preservation.json; slides comprimem a aula para palco e speaker notes orientam a explicacao.",
+  "validation": {
+    "tsx_parse": "PASS (esbuild, 6 arquivos)",
+    "full_next_build": "BLOCKED: dependencias do app nao estao instaladas neste checkout",
+    "catalog_registration": "not requested; routes work by direct URL"
+  }
+}
