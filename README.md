@@ -6,17 +6,32 @@ Abra esta pasta no Claude com capacidade de trabalhar nos arquivos do computador
 
 A aula de configuração pertence ao Workshop Times de IA na área de membros. Este README é a instrução que a IA executa.
 
+## Usando o Claude Desktop (sem terminal)
+
+O Claude Desktop, sozinho, não lê nem escreve arquivo no seu computador e não roda comando nenhum. Para ele executar este setup de verdade, ele precisa primeiro de um conector com acesso ao seu computador, ativado uma única vez:
+
+1. No Claude Desktop, abra Configurações → Conectores e adicione o conector **Desktop Commander**. Autorize o que ele pedir.
+2. Confirme que o conector está ativo: pergunte "você consegue rodar comandos no meu computador agora?" e espere confirmação real, não uma resposta genérica.
+
+Com o conector ativo, siga a seção abaixo que se aplica ao seu caso (primeira instalação ou atualização) — a mesma mensagem que você mandaria no Claude Code funciona aqui, porque agora o Claude Desktop também tem acesso real à sua máquina.
+
+## Primeira instalação (você ainda não tem a pasta agentesIA)
+
+Com o conector ativo (veja acima, se estiver no Claude Desktop), envie:
+
+> Clone o repositório https://github.com/torriani/agentesIA.git na minha pasta de projetos, entre na pasta, leia o README.md e configure meu ambiente seguindo as instruções para o agente. Execute a instalação por mim, confira o resultado e me peça apenas os logins, permissões e informações que dependem de mim. Não me entregue comandos para copiar no terminal.
+
 ## Já tem o pacote instalado e quer as skills novas
 
-No terminal, dentro da pasta `agentesIA` que você já baixou:
+Com o conector ativo (veja acima, se estiver no Claude Desktop), envie, dentro da conversa já apontando para a pasta `agentesIA`:
+
+> Rode git pull nesta pasta para trazer as skills novas, depois leia o README, rode o inventário do catálogo de skills e instale só o que ainda não está instalado no meu ambiente. Não me entregue comandos para copiar no terminal.
+
+Se preferir fazer o `git pull` você mesmo, num terminal, dentro da pasta `agentesIA`:
 
 ```
 git pull
 ```
-
-Depois abra a pasta no Claude ou no Codex e envie:
-
-> Leia este README, rode o inventário do catálogo de skills e instale só o que ainda não está instalado no meu ambiente. Não me entregue comandos para copiar no terminal.
 
 Nunca baixe as skills à mão nem crie atalho/link para a pasta do pacote: a instalação sempre grava uma cópia própria de cada skill dentro do seu ambiente (`~/.claude/skills/` e/ou `~/.agents/skills/`), então atualizar o pacote nunca muda skill já instalada sem você rodar o comando de instalação de novo.
 
