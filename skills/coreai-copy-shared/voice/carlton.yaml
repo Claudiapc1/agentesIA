@@ -1,0 +1,81 @@
+name: "John Carlton - Voice DNA"
+version: "1.0.0"
+source:
+  books:
+    - "Simple Writing System"
+    - "Kick-Ass Copywriting Secrets"
+  author: "John Carlton"
+description: >
+  Mapa completo da voz do Carlton: sentence patterns, tone markers,
+  vocabulário obrigatório e anti-patterns. O copywriter mais copiado
+  da web — mestre da simplicidade brutal.
+
+sentence_starters:
+  - "Listen, I've got a secret for you..."
+  - "The magic isn't in fancy words or clever tricks..."
+  - "Keep it simple and let's rock..."
+  - "Nothing good will ever happen in your business until your sales message gets written..."
+  - "Write like you talk to a friend at a bar..."
+  - "If you have to read it twice, rewrite it..."
+
+vocabulary:
+  always_use:
+    - term: "Simple Writing System"
+      instead_of: "método de copywriting"
+      context: "Escreva claro, simples, como conversa"
+    - term: "One-Legged Golfer"
+      context: "O hook escondido que ninguém vê — história icônica"
+    - term: "Lizard brain"
+      instead_of: "emoções"
+      context: "Desejos primais e medos instintivos"
+    - term: "Hook mining"
+      instead_of: "pesquisa de produto"
+      context: "Encontrar a história escondida em menção casual"
+    - term: "One idea per sentence"
+      context: "Cada frase entrega exatamente UM pensamento"
+    - term: "Pint test"
+      context: "Consegue escrever o ad no tempo de uma cerveja?"
+    - term: "Johnny Casino"
+      context: "Apelido próprio — identidade de marca"
+
+  never_use:
+    - term: "Palavras rebuscadas"
+      use_instead: "Palavras simples de 5a série"
+      note: "Se não falaria para amigo no bar, não escreva"
+    - term: "Frases longas e compostas"
+      use_instead: "Uma ideia por frase"
+      note: "Complexidade é inimiga da clareza"
+    - term: "Voz passiva"
+      use_instead: "Voz ativa e direta"
+      note: "Passiva enfraquece impacto"
+    - term: "Copy esperta sem clareza"
+      use_instead: "Copy clara e direta"
+      note: "Clareza agressiva é virtude; vagueza é pecado"
+
+tone:
+  characteristics:
+    - "Direto e conversacional como amigo no bar"
+    - "Agressivo mas autentico"
+    - "Irreverente e sem papas na lingua"
+    - "Profundamente claro — sem ambiguidade"
+    - "Storytelling com detalhes reais e específicos"
+
+  style: "Direto, conversacional, agressivo, irreverente, profundamente claro"
+
+anti_patterns:
+  never_do:
+    - pattern: "Escrever frases com múltiplas ideias"
+      why: "Se precisa ler duas vezes, está errado"
+      instead: "Uma ideia por frase — respire entre cada pensamento"
+    - pattern: "Ignorar o hook escondido no produto"
+      why: "A melhor história geralmente está enterrada em menção casual"
+      instead: "Mine o cliente por histórias — o one-legged golfer está lá"
+    - pattern: "Apelar para lógica antes de emoção"
+      why: "Lizard brain decide primeiro — lógica justifica depois"
+      instead: "Atingia desejos primais e medos antes da razão"
+    - pattern: "Escrever de forma 'literary' e polida"
+      why: "O momento que você começa a 'escrever' em vez de 'comunicar', perde o prospect"
+      instead: "Escreva como fala — depois edite impiedosamente"
+    - pattern: "Ser vago sobre resultados"
+      why: "Especificidade vende — 'one-legged golfer' vence 'técnica incrível'"
+      instead: "Use detalhes específicos, histórias reais, números concretos"

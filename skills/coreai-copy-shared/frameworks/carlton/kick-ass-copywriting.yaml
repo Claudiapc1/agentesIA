@@ -1,0 +1,53 @@
+# Kick-Ass Copywriting Secrets - John Carlton
+# Source: John Carlton - Kick-Ass Copywriting Secrets of a Marketing Rebel
+# Category: copy_review
+
+name: "Kick-Ass Copywriting Secrets"
+version: "1.0"
+source: "John Carlton - Kick-Ass Copywriting Secrets of a Marketing Rebel"
+category: "copy_review"
+command: "*kick-ass"
+
+description: |
+  Framework de auditoria brutal para garantir que cada peça de copy
+  atinge o nível "kick-ass" - copy tão direto e poderoso que
+  concorrentes não conseguem evitar copiar.
+
+audit_checklist:
+  clarity:
+    - "Um leitor de 12 anos entenderia?"
+    - "Cada frase tem apenas UMA ideia?"
+    - "Pode ser simplificado mais?"
+    - "Tem jargão desnecessário?"
+
+  hook:
+    - "O hook é inesperado e específico?"
+    - "Faz o leitor parar TUDO para ler?"
+    - "Tem elemento visual ou concreto?"
+    - "Promete benefício claro?"
+
+  emotion:
+    - "Atinge o lizard brain nos primeiros segundos?"
+    - "Faz SENTIR algo (medo, ganância, curiosidade)?"
+    - "Existe uma história real com drama?"
+    - "O leitor se VÊ na situação?"
+
+  specificity:
+    - "Números são exatos (não arredondados)?"
+    - "Nomes e lugares são reais?"
+    - "Prazos são específicos?"
+    - "Resultados são mensuráveis?"
+
+  close:
+    - "O CTA é impossível de confundir?"
+    - "Urgência é genuína?"
+    - "Garantia elimina risco?"
+    - "O leitor sabe EXATAMENTE o que fazer?"
+
+carlton_rules:
+  - "Se você pode cortar uma palavra sem perder sentido, CORTE"
+  - "Se uma frase precisa ser lida duas vezes, REESCREVA"
+  - "Se parece 'escrita', faça parecer 'fala'"
+  - "Se não dá medo de publicar, não está direto o suficiente"
+
+when_to_use: "Revisão final de qualquer copy antes de publicar."

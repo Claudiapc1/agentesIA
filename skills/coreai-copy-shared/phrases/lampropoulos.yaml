@@ -1,0 +1,70 @@
+name: "Parris Lampropoulos - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Boardroom Promotions"
+    - "Titans Mastermind Talks"
+  author: "Parris Lampropoulos"
+description: >
+  Frases icônicas do Parris Lampropoulos organizadas por categoria, com fonte e contexto de uso.
+
+bullets_related:
+  - phrase: "I write 700 bullets to use 100. That's not overkill—that's craft."
+    source: "Parris Lampropoulos"
+    context: "Volume como caminho para qualidade"
+  - phrase: "Every bullet should be able to make the sale on its own."
+    source: "Parris Lampropoulos"
+    context: "Padrão de qualidade de bullets"
+  - phrase: "Specificity plus curiosity—that's the magic formula."
+    source: "Parris Lampropoulos"
+    context: "Fórmula de fascinations"
+  - phrase: "If it doesn't make you slap your forehead, it's not done."
+    source: "Parris Lampropoulos"
+    context: "Teste do forehead-slapper"
+  - phrase: "Bullets ARE the copy. Everything else is just connective tissue."
+    source: "Parris Lampropoulos"
+    context: "Centralidade dos bullets"
+
+craft_related:
+  - phrase: "80% of my coaching time is spent on bullets alone."
+    source: "Parris Lampropoulos"
+    context: "Prioridade de treinamento"
+  - phrase: "Master bullets before you worry about headlines or leads."
+    source: "Parris Lampropoulos"
+    context: "Sequência de aprendizado"
+  - phrase: "Good copywriters write bullets. Great copywriters OBSESS over them."
+    source: "Parris Lampropoulos"
+    context: "Diferença entre bom e excelente"
+  - phrase: "The first 100 bullets are easy. The magic is in the next 600."
+    source: "Parris Lampropoulos"
+    context: "Volume gera qualidade"
+
+curiosity_related:
+  - phrase: "Like crossword puzzle clues—hint but don't reveal."
+    source: "Parris Lampropoulos"
+    context: "Técnica de misdirection"
+  - phrase: "Create a gap they MUST fill."
+    source: "Parris Lampropoulos"
+    context: "Curiosity gap"
+  - phrase: "Make them think they know—but they don't."
+    source: "Parris Lampropoulos"
+    context: "Misdirection em fascinations"
+  - phrase: "Curiosity isn't optional. It's the only thing that matters."
+    source: "Parris Lampropoulos"
+    context: "Curiosidade como força motriz"
+
+control_beating:
+  - phrase: "I don't try to write better copy. I write DIFFERENT copy."
+    source: "Parris Lampropoulos"
+    context: "Estratégia para bater controles"
+  - phrase: "The control owns certain territory. Find what they don't own."
+    source: "Parris Lampropoulos"
+    context: "Análise de controle"
+  - phrase: "85% win rate isn't luck. It's strategy."
+    source: "Parris Lampropoulos"
+    context: "Track record comprovado"
+  - phrase: "Sometimes the best angle is the one they completely ignored."
+    source: "Parris Lampropoulos"
+    context: "Ângulos inexplorados"
+
+throne_phrase: "I write 700 bullets to use 100. That's not overkill—that's craft."

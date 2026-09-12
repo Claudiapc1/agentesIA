@@ -1,0 +1,61 @@
+name: "Brand Image Theory"
+version: "1.0.0"
+source:
+  book: "Ogilvy on Advertising"
+  author: "David Ogilvy"
+  category: "Brand Strategy"
+  note: "Ogilvy pioneered this concept"
+description: >
+  Todo anúncio deve ser pensado como contribuição para o símbolo complexo
+  que é a imagem da marca. Sua brand image representa 95% do que você tem
+  para vender.
+
+principle: "Every advertisement is a long-term investment in the image of the brand."
+
+core_concept:
+  insight: >
+    Every product has a personality, just like people do. This personality,
+    or brand image, can make or break its success in the market.
+  components:
+    - "Product's NAME"
+    - "Product's PRICE"
+    - "Product's PACKAGING"
+    - "Advertising STYLE"
+    - "The nature of the PRODUCT itself"
+
+long_term_thinking:
+  rule: "Take a long-term view rather than chasing short-term sales"
+  evidence: "Manufacturers who maintain consistent personality for 20 years gain largest market share"
+  warning: "Any damn fool can put on a deal, but it takes genius, faith, and perseverance to create a brand."
+
+image_quality_principle:
+  rule: "Give products a first-class image - a first-class ticket"
+  reason: "If your advertising looks ugly, consumers will conclude that your product is shoddy"
+  success_cases:
+    - "Pepperidge Farm"
+    - "Hathaway"
+    - "Mercedes Benz"
+    - "Schweppes"
+    - "Dove"
+
+consistency_rules:
+  - "Message should align with brand image year after year"
+  - "Never copy competitors' advertising"
+  - "Make advertising contemporary but consistent"
+  - "Define your brand image sharply and document it"
+  - "Maintain consistent messaging across all channels"
+
+application:
+  when: "Every single advertisement - no exceptions"
+  process:
+    - "Define brand personality clearly"
+    - "Ensure every ad contributes to that personality"
+    - "Think 20-30 years ahead, not next quarter"
+    - "Never compromise image for short-term sales"
+
+common_mistakes:
+  - "Changing brand image for short-term gains"
+  - "Running promotions that cheapen the brand"
+  - "Inconsistent messaging across campaigns"
+  - "Letting committees dilute brand personality"
+  - "Copying competitor's style"

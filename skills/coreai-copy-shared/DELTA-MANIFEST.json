@@ -1,0 +1,1866 @@
+{
+  "ported": [
+    {
+      "source_relative": "workflows/operacao-completa.md",
+      "destination": "workflows/operacao-completa.md",
+      "source_sha256": "be7735d6994c223f5dfe958b7b5ccb3398ada4bab2dfc29b7c0823b02b3bce46"
+    },
+    {
+      "source_relative": "workflows/wf-vsl-perpetual.yaml",
+      "destination": "workflows/wf-vsl-perpetual.yaml",
+      "source_sha256": "7763a206009be820d8e3b553b7548de041efe7053b2e2054534eb3d7cdf8fb03"
+    },
+    {
+      "source_relative": "workflows/wf-producao-pagina.md",
+      "destination": "workflows/wf-producao-pagina.md",
+      "source_sha256": "63d34ec90d9d02b4276a11631474a32bca28d918e94c4e521f450faa54925694"
+    },
+    {
+      "source_relative": "workflows/workflow-carta-vendas-obrigatorio.md",
+      "destination": "workflows/workflow-carta-vendas-obrigatorio.md",
+      "source_sha256": "cf4dc8c995746d1d91c35b509ea20050b6c7d48d93fd701f5b6cc8582bbe5180"
+    },
+    {
+      "source_relative": "workflows/wf-anuncio-estatico.md",
+      "destination": "workflows/wf-anuncio-estatico.md",
+      "source_sha256": "871b8a2f9be5c2621c9d1c169a35b42061a114ee960243a7b92c4f69c5dc0cd8"
+    },
+    {
+      "source_relative": "workflows/convite-reuniao-diagnostico.md",
+      "destination": "workflows/convite-reuniao-diagnostico.md",
+      "source_sha256": "8d56dee43ab7a64c8de9bce31cbbcbe47b203435088dc357fb12c6050fc7b91d"
+    },
+    {
+      "source_relative": "tasks/criacao/create-vsl.md",
+      "destination": "tasks/criacao/create-vsl.md",
+      "source_sha256": "197ae1354e61c34fe081461aa1289cd30b1481f357afc38ce7f30c18cf9f2bad"
+    },
+    {
+      "source_relative": "tasks/criacao/create-sales-page.md",
+      "destination": "tasks/criacao/create-sales-page.md",
+      "source_sha256": "3e7434b8b5bd4a04bbebada791ed7c60f75aabd73d9e50935639bd9c2fe093bc"
+    },
+    {
+      "source_relative": "tasks/criacao/create-anuncio-estatico.md",
+      "destination": "tasks/criacao/create-anuncio-estatico.md",
+      "source_sha256": "ef9059af1f2228f41806e0f873e5753eca68a0273f28ee98111149f5f1bd77ea"
+    },
+    {
+      "source_relative": "tasks/criacao/create-whatsapp-utility-campaign.md",
+      "destination": "tasks/criacao/create-whatsapp-utility-campaign.md",
+      "source_sha256": "e1dd2afb99d153dfbb2e0259fe0cd967102a4766651418e4be1806aa87510df2"
+    },
+    {
+      "source_relative": "data/banco-templates-utility-whatsapp.yaml",
+      "destination": "data/banco-templates-utility-whatsapp.yaml",
+      "source_sha256": "fdef533b66fd845af7ee613a9f8f9bc57b3a061a6c4088de96f3dcd7c7bc9506"
+    },
+    {
+      "source_relative": "swipe/templates-utility-whatsapp.md",
+      "destination": "swipe/templates-utility-whatsapp.md",
+      "source_sha256": "e5fdb028598a0216f7d115fe693487d4cfa7434e3a00ec947d258e55d7e62fa2"
+    },
+    {
+      "source_relative": "templates/mensagens-convite-reuniao-tmpl.md",
+      "destination": "templates/mensagens-convite-reuniao-tmpl.md",
+      "source_sha256": "a6abd09e6968204fe99478b76c2dca78d481eb9c955c15587f15c6ef573a90d8"
+    },
+    {
+      "source_relative": "checklists/anuncio-estatico-checklist.md",
+      "destination": "checklists/anuncio-estatico-checklist.md",
+      "source_sha256": "c9e3ba7b0b64db8bf8ab0b3753af8d5a4e7b718979d2dc53ad9b01c84041e975"
+    },
+    {
+      "source_relative": "checklists/estrutura-pagina.md",
+      "destination": "checklists/estrutura-pagina.md",
+      "source_sha256": "13fcdd7352b44d99283581d26965f101b37e08a8164d33ef1638488a41966a02"
+    },
+    {
+      "source_relative": "checklists/carta-vs-pagina.md",
+      "destination": "checklists/carta-vs-pagina.md",
+      "source_sha256": "d4f2a655bd61939b1b62bb2df412659b292a05fb845cdba0e31d8ccae819ad82"
+    },
+    {
+      "source_relative": "data/section-contract.md",
+      "destination": "data/section-contract.md",
+      "source_sha256": "216cc575b78ed28bdb2ea77c46bfd0d9e5e08ed3ca55caa84a604cf8e0c8d398"
+    },
+    {
+      "source_relative": "data/estruturas/pagina-vendas-perpetuo-FONTE-FOUNDER.md",
+      "destination": "data/estruturas/pagina-vendas-perpetuo-FONTE-FOUNDER.md",
+      "source_sha256": "83c84e2dbc6b2a1ed1d44d4bed6b823cee7c2c87c2f534acf4c5a6c011b31fd5"
+    },
+    {
+      "source_relative": "data/estruturas/pagina-vendas-mentoria.md",
+      "destination": "data/estruturas/pagina-vendas-mentoria.md",
+      "source_sha256": "5d592a68769bf63ce5b64e641494bb4a41c55440509d71f9d2fcb051135efbaa"
+    },
+    {
+      "source_relative": "data/estruturas/taxonomia-paginas.yaml",
+      "destination": "data/estruturas/taxonomia-paginas.yaml",
+      "source_sha256": "8b0605b8b4dd51d4b561a62f56d3bea4c69304429593a176038e3cd04619fc85"
+    },
+    {
+      "source_relative": "data/estruturas/pagina-vendas-perpetuo.md",
+      "destination": "data/estruturas/pagina-vendas-perpetuo.md",
+      "source_sha256": "a9b40d5db7bdc10b02225e210d38c56c72f91a49ba5bf08bf48c03fe043451bc"
+    },
+    {
+      "source_relative": "tasks/diagnostico/create-brand-dna.md",
+      "destination": "tasks/diagnostico/create-brand-dna.md",
+      "source_sha256": "f10e2d4f0d9e3b32ad57541118196b601646367e51b76e02525f61068a7a66dc"
+    },
+    {
+      "source_relative": "tasks/otimizacao/copysearch.md",
+      "destination": "tasks/otimizacao/copysearch.md",
+      "source_sha256": "ebe1c393486c6e3489b4617146f92d333a82dc87aa7facdcfda24d297c0e239c"
+    },
+    {
+      "source_relative": "tasks/estrategia/rmbc-method.md",
+      "destination": "tasks/estrategia/rmbc-method.md",
+      "source_sha256": "8e74ce5f8dcf24c8ce580b33479f2ad343de773e3aca9cdc6cbe64253af4354d"
+    },
+    {
+      "source_relative": "tasks/estrategia/create-proof-stack.md",
+      "destination": "tasks/estrategia/create-proof-stack.md",
+      "source_sha256": "eb89879f796c1e373086b826be6e1581b8aea4f5e709ccf764888865c02ca675"
+    },
+    {
+      "source_relative": "tasks/estrategia/create-big-idea.md",
+      "destination": "tasks/estrategia/create-big-idea.md",
+      "source_sha256": "2bd45f4e29eefc29628f7d985314236751094af05cb5eb55ecd93d33ceef45f5"
+    },
+    {
+      "source_relative": "tasks/estrategia/create-unique-mechanism.md",
+      "destination": "tasks/estrategia/create-unique-mechanism.md",
+      "source_sha256": "cb68d38f84ce2493f554aa3ef4b157758bcfafec16640fcdffe4251172c5f67f"
+    },
+    {
+      "source_relative": "tasks/estrategia/create-offer.md",
+      "destination": "tasks/estrategia/create-offer.md",
+      "source_sha256": "767a4c1e71cf33b2c6a3fc635219767f0d4f8fa6bd29d409074dc4950bfbc6c3"
+    },
+    {
+      "source_relative": "tasks/estrategia/evaluate-offer.md",
+      "destination": "tasks/estrategia/evaluate-offer.md",
+      "source_sha256": "0b00100014f18ae3e1ace2af6aeff51b9edcba01947987761386338f7ef208e4"
+    },
+    {
+      "source_relative": "tasks/otimizacao/sugarman-check.md",
+      "destination": "tasks/otimizacao/sugarman-check.md",
+      "source_sha256": "6d300acaa5410d5f3baa65d8ef16dca7ce7a24d9c175d785759f167f8cf8a8eb"
+    },
+    {
+      "source_relative": "tasks/otimizacao/audit-copy.md",
+      "destination": "tasks/otimizacao/audit-copy.md",
+      "source_sha256": "3f448e752a7fbff1e1c21e30ce0ef648ebf97a478ca3e5149bbc1fb364a73096"
+    },
+    {
+      "source_relative": "tasks/validacao/validate-copy-oraculo.md",
+      "destination": "tasks/validacao/validate-copy-oraculo.md",
+      "source_sha256": "b719cdd315327e012107d4733f7ac6e837876fb775a2220434d1225511e4c205"
+    },
+    {
+      "source_relative": "tasks/criacao/create-headlines.md",
+      "destination": "tasks/criacao/create-headlines.md",
+      "source_sha256": "aea43dfa923ac84902b9b7ebb83bc9ea64c8cd21c49a03436257fe0a64b97115"
+    },
+    {
+      "source_relative": "tasks/criacao/create-bullets.md",
+      "destination": "tasks/criacao/create-bullets.md",
+      "source_sha256": "07daf3e2dc98ec430371246f72098f1b090240ffc7a22b49754e71716bc1d026"
+    },
+    {
+      "source_relative": "tasks/criacao/create-capture-page.md",
+      "destination": "tasks/criacao/create-capture-page.md",
+      "source_sha256": "7a1f8f0a6a1588ba22aca83023bc02f33d0f31d3d5924163b0dbadf513a74fdf"
+    },
+    {
+      "source_relative": "tasks/criacao/create-landing-page.md",
+      "destination": "tasks/criacao/create-landing-page.md",
+      "source_sha256": "38e76a7a1a2897b59a84e84274edc1eac53861d27a197bc02c7201efb7de7b73"
+    },
+    {
+      "source_relative": "tasks/criacao/create-email-sequence.md",
+      "destination": "tasks/criacao/create-email-sequence.md",
+      "source_sha256": "18bad292172b6071057beed562a81abb1dcb391d2d84f23e094e7f6eec54228b"
+    },
+    {
+      "source_relative": "tasks/criacao/create-soap-opera-sequence.md",
+      "destination": "tasks/criacao/create-soap-opera-sequence.md",
+      "source_sha256": "ee5909d9d9b88ba068ce7fb923d1b950eebb20cae69a38ce974b9076d561f8b2"
+    },
+    {
+      "source_relative": "tasks/criacao/create-ad-copy.md",
+      "destination": "tasks/criacao/create-ad-copy.md",
+      "source_sha256": "12d19b4bcf7b0c32bd8c54d449df470c19f8068aa0c6f66d0cb6e4cf01fea297"
+    },
+    {
+      "source_relative": "tasks/criacao/create-mentorship-ads.md",
+      "destination": "tasks/criacao/create-mentorship-ads.md",
+      "source_sha256": "8829cbb9152c87ff6ae514b3ea6d0cde57112c533b983732d4d0f3da7b531840"
+    },
+    {
+      "source_relative": "tasks/criacao/create-organic-content.md",
+      "destination": "tasks/criacao/create-organic-content.md",
+      "source_sha256": "0a63130b5f2a4b438746cfc183a4c9b19a85c312a9e2e9da459ebfd4857b8eff"
+    },
+    {
+      "source_relative": "tasks/vendas/create-webinar-script.md",
+      "destination": "tasks/vendas/create-webinar-script.md",
+      "source_sha256": "3fe2ef8587ad6d49160e26569b99317fa57340f9929651d415f876a80dd32db9"
+    },
+    {
+      "source_relative": "tasks/criacao/create-upsell-page.md",
+      "destination": "tasks/criacao/create-upsell-page.md",
+      "source_sha256": "62085f35aaa2dd30d55ce5403cb3c03d65b9bd27871d16f5e3b593ebaf58ce65"
+    },
+    {
+      "source_relative": "tasks/criacao/create-downsell-page.md",
+      "destination": "tasks/criacao/create-downsell-page.md",
+      "source_sha256": "8cc27522a739278494bb501747ba904f5691afb0622e5878da8bd1a03b982087"
+    },
+    {
+      "source_relative": "tasks/criacao/create-lead-magnet.md",
+      "destination": "tasks/criacao/create-lead-magnet.md",
+      "source_sha256": "618ebd24a705f8aee3b910467b9a503fa1ff0e45a14938cc6f5849f4375cea77"
+    },
+    {
+      "source_relative": "data/manual-craft.md",
+      "destination": "data/manual-craft.md",
+      "source_sha256": "bb01e47a1b137cfb6a82dd63e2f9de6f748d2d38470c028456a4eb95a488f7bd"
+    },
+    {
+      "source_relative": "checklists/hopkins-audit-checklist.md",
+      "destination": "checklists/hopkins-audit-checklist.md",
+      "source_sha256": "047591782912a6ac5b51e3dd7842df1224bb03a4423fa62f53a9732519652759"
+    },
+    {
+      "source_relative": "checklists/sugarman-30-triggers.md",
+      "destination": "checklists/sugarman-30-triggers.md",
+      "source_sha256": "e4dc20f3ea5d6befe1cc6404ca3e7d77d2d28b8f0277cb48d789a4f340b627e4"
+    },
+    {
+      "source_relative": "checklists/vsl-quality-checklist.md",
+      "destination": "checklists/vsl-quality-checklist.md",
+      "source_sha256": "86a66ca472a61e7557ed7549023654ac3a339f0f739b79fabb1a78db2790d2f7"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/gary-halbert.md",
+      "destination": "agents/tier-2-executores/gary-halbert.md",
+      "source_sha256": "afde70b7b6e67b251bd944d9024d61be1971b2ee07ee020779f045979e7a5507"
+    },
+    {
+      "source_relative": "data/anuncio-estatico/FORMATO.md",
+      "destination": "data/anuncio-estatico/FORMATO.md",
+      "source_sha256": "d2e816ff387193de260a9a3fd6f47e091bf2d89e9eb5226c96ed08b3d70f7674"
+    },
+    {
+      "source_relative": "data/anuncio-estatico/pecas-modelo.md",
+      "destination": "data/anuncio-estatico/pecas-modelo.md",
+      "source_sha256": "4ebba4cbf9044dfcf2838e20b510e13b9d02b6f6e67a74f47ad77e7a813ca10c"
+    },
+    {
+      "source_relative": "checklists/filtro-anti-ia.md",
+      "destination": "checklists/filtro-anti-ia.md",
+      "source_sha256": "befabfc2151a530254150377f76baa566517ca9819b28b13664650388937885f"
+    },
+    {
+      "source_relative": "checklists/oraculo-torriani.md",
+      "destination": "checklists/oraculo-torriani.md",
+      "source_sha256": "53c05e79e226b98195a1ff1c1cbf2fc9c98413367c2a0ec6c3ea77a14fc73ff9"
+    },
+    {
+      "source_relative": "tasks/validacao/aprovacao-anuncios-html.md",
+      "destination": "tasks/validacao/aprovacao-anuncios-html.md",
+      "source_sha256": "6e389c4544367445c0d48e317f60dc1fdafeb05dc04c3cb035c177083f783681"
+    },
+    {
+      "source_relative": "data/banco-angulos-convite-reuniao.yaml",
+      "destination": "data/banco-angulos-convite-reuniao.yaml",
+      "source_sha256": "aa562207bcc5e097bbd644704a97446cdaf68fae38e78a5c7efc14e14c4a1ccb"
+    },
+    {
+      "source_relative": "workflows/validacao-oraculo-torriani.md",
+      "destination": "workflows/validacao-oraculo-torriani.md",
+      "source_sha256": "b168562577d53125f8c51946d0f88613bf2bf755ec61774f47634e26af10d1aa"
+    },
+    {
+      "source_relative": "templates/vsl-script-tmpl.md",
+      "destination": "templates/vsl-script-tmpl.md",
+      "source_sha256": "22c8808667fe303519ce11373fead8e2b9d55babde5df0787d643709b1ef743f"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/jon-benson.md",
+      "destination": "agents/tier-2-executores/jon-benson.md",
+      "source_sha256": "d472ef4fe2ab616b271769ddc9ff5b93dc7715747da74bd6a7ccef5432a1bae3"
+    },
+    {
+      "source_relative": "data/anuncios-estaticos/INSTRUCAO-LLM-anuncio-estatico.md",
+      "destination": "data/anuncios-estaticos/INSTRUCAO-LLM-anuncio-estatico.md",
+      "source_sha256": "fff203108a6a83f7c43c3f3b7ea94355d7c0173f9a85804ddeb9f0c24731132a"
+    },
+    {
+      "source_relative": "templates/anuncio-estatico.md",
+      "destination": "templates/anuncio-estatico.md",
+      "source_sha256": "3e2ff90797de7392c01fc22753c3449ba90ba0c6066c62d02c89745f2fba7ce2"
+    },
+    {
+      "source_relative": "frameworks/torriani/anuncios-mentoria.md",
+      "destination": "frameworks/torriani/anuncios-mentoria.md",
+      "source_sha256": "4163365dd7cdfd53ac353efe82ec03119bfb726f4f23a3b5b16ba968c3d244b1"
+    },
+    {
+      "source_relative": "swipe/headlines/_index.yaml",
+      "destination": "swipe/headlines/_index.yaml",
+      "source_sha256": "14b0b4629779dbe8fd049286192c73d3768d4ad1e7b488289a008dca638dc7e2"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/john-carlton.md",
+      "destination": "agents/tier-2-executores/john-carlton.md",
+      "source_sha256": "77b974501dd58af1f6b04a7d3cd5d65451a93b038460a3970aea54c44a396420"
+    },
+    {
+      "source_relative": "data/templates-utility-convite-reuniao-torriani.yaml",
+      "destination": "data/templates-utility-convite-reuniao-torriani.yaml",
+      "source_sha256": "72e3eec2cf41dd07ef6af6d5d4b2408278ec006d3741f35e66852ee8d425e23e"
+    },
+    {
+      "source_relative": "data/swipe-file-headlines.md",
+      "destination": "data/swipe-file-headlines.md",
+      "source_sha256": "5b27f36833c07cacee154b5eda914f979d5d4be066ac1df7c87a208e2ecdf2c5"
+    },
+    {
+      "source_relative": "data/diretriz-entrega-builder.md",
+      "destination": "data/diretriz-entrega-builder.md",
+      "source_sha256": "995c1689d7b0ef2a727b9a391ab3436051941f1320d5105d2ba546fe1d4e092b"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/russell-brunson.md",
+      "destination": "agents/tier-2-executores/russell-brunson.md",
+      "source_sha256": "0ff7c97dd1e78ad28d00a3ba42ad49265a26e6f89353ca5b306fa2e3bac814c4"
+    },
+    {
+      "source_relative": "templates/application-page-tmpl.md",
+      "destination": "templates/application-page-tmpl.md",
+      "source_sha256": "8abfbc9d2c1dadb757810e474ffbffc4cdf3c72a636206015f9682a65568d530"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/david-ogilvy.md",
+      "destination": "agents/tier-2-executores/david-ogilvy.md",
+      "source_sha256": "8fe6b09904f0db1f5ae6cf4d68d32960c975239c0df02996ebf702bc2503a0f2"
+    },
+    {
+      "source_relative": "templates/sales-page-tmpl.yaml",
+      "destination": "templates/sales-page-tmpl.yaml",
+      "source_sha256": "ba3622ed1c169ee2495ebe5e8600f38ac0c326528f85955d1a3e5da57a9739c1"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/jeff-walker.md",
+      "destination": "agents/tier-2-executores/jeff-walker.md",
+      "source_sha256": "77f3bf55a9a005568949313071c58621504cfbe7df81aade69cb7b32f0bb2266"
+    },
+    {
+      "source_relative": "templates/plf/sales-page-blueprint-tmpl.md",
+      "destination": "templates/plf/sales-page-blueprint-tmpl.md",
+      "source_sha256": "1d000b64ad4be367e51e35868b7b517f5e51d5f5f368e9c2619ead5b3623ca1a"
+    },
+    {
+      "source_relative": "agents/tier-1-estrategistas/stefan-georgi.md",
+      "destination": "agents/tier-1-estrategistas/stefan-georgi.md",
+      "source_sha256": "32da7aeceb1d93473aaa723dc07d98d2552a90cc6f045375031be5cbd8626316"
+    },
+    {
+      "source_relative": "templates/comparison-page-tmpl.md",
+      "destination": "templates/comparison-page-tmpl.md",
+      "source_sha256": "2690f679da21c8360c500f9d4eee7cbe57480ca63a19cfe75407cc8c4add2e42"
+    },
+    {
+      "source_relative": "templates/guarantee-page-tmpl.md",
+      "destination": "templates/guarantee-page-tmpl.md",
+      "source_sha256": "77a5238f78366c6ed8f49fbb54c9cc6e68f9730c68f94a99a5ca907f3c8c0e48"
+    },
+    {
+      "source_relative": "frameworks/torriani/headlines-ganchos.md",
+      "destination": "frameworks/torriani/headlines-ganchos.md",
+      "source_sha256": "23a52258c98f67eca350143df758e2dc35cf884e7ebed737dbbb6decbe93ba79"
+    },
+    {
+      "source_relative": "tasks/criacao/create-order-bump.md",
+      "destination": "tasks/criacao/create-order-bump.md",
+      "source_sha256": "dadea0dff5360738c00f8ff5e484e2d4b08c147edf4a24eb5def9ab806fcf667"
+    },
+    {
+      "source_relative": "agents/tier-3-otimizadores/claude-hopkins.md",
+      "destination": "agents/tier-3-otimizadores/claude-hopkins.md",
+      "source_sha256": "d386a46736552a09bc89eaee7037669668b079b0e6476b41dd492b9843d8fbdc"
+    },
+    {
+      "source_relative": "data/premissa-core.md",
+      "destination": "data/premissa-core.md",
+      "source_sha256": "ec53e8d5deca22bf82d8e3e2bd68e219564c4d99354b8a9d45b92072b1a24223"
+    },
+    {
+      "source_relative": "tasks/diagnostico/diagnose-avatar.md",
+      "destination": "tasks/diagnostico/diagnose-avatar.md",
+      "source_sha256": "dddc64231ad5a5bd920d3180ed5564fa322da657ddafc66cc865563879a5160b"
+    },
+    {
+      "source_relative": "checklists/copysearch-checklist.md",
+      "destination": "checklists/copysearch-checklist.md",
+      "source_sha256": "e2e28c583b6c48208a9bdab5650c7a1a5d751235a1a0ff7993063144675e60f7"
+    },
+    {
+      "source_relative": "templates/copysearch-template.md",
+      "destination": "templates/copysearch-template.md",
+      "source_sha256": "00687d7a4b0ab045ca90d011b19db8685e40f4aed5651d452b878caec2af28db"
+    },
+    {
+      "source_relative": "data/reference/copysearch-anti-hallucination.md",
+      "destination": "data/reference/copysearch-anti-hallucination.md",
+      "source_sha256": "2e0851dc4ed3c1a403153e9275282af14ee68f3719967533f8ee31a7114a6479"
+    },
+    {
+      "source_relative": "data/reference/copysearch-quick-reference.md",
+      "destination": "data/reference/copysearch-quick-reference.md",
+      "source_sha256": "c98877edc21d917ac8ab4da0cfaeb1abbe5555c1dad844e1f70e6356e304112c"
+    },
+    {
+      "source_relative": "data/reference/copysearch-tool-stack.md",
+      "destination": "data/reference/copysearch-tool-stack.md",
+      "source_sha256": "7d9ea0e8ab2084783237e092c0bad6f52c5cae1209f75d387cf454ff6a4b9fa0"
+    },
+    {
+      "source_relative": "templates/capture-page-tmpl.md",
+      "destination": "templates/capture-page-tmpl.md",
+      "source_sha256": "80953bf3df59b7bbd561d3b9ca0bfac203d872b7482cba7c44b2799eb81753f5"
+    },
+    {
+      "source_relative": "frameworks/externos/schwartz-5-levels.md",
+      "destination": "frameworks/externos/schwartz-5-levels.md",
+      "source_sha256": "50243e66351266517dc33eaed27647520d2e4cb8441dd12353a250603478bfe1"
+    },
+    {
+      "source_relative": "tasks/diagnostico/diagnose-awareness.md",
+      "destination": "tasks/diagnostico/diagnose-awareness.md",
+      "source_sha256": "5c702d2a92beeda93143d18cf08cc5a958e942ef30f62355252c1260f2f5e873"
+    },
+    {
+      "source_relative": "checklists/soap-opera-checklist.md",
+      "destination": "checklists/soap-opera-checklist.md",
+      "source_sha256": "919e0e3d4bda081558aa92a7d73ebaa44eb527d3d75db266736f0d22e2f837ad"
+    },
+    {
+      "source_relative": "templates/soap-opera-tmpl.yaml",
+      "destination": "templates/soap-opera-tmpl.yaml",
+      "source_sha256": "08fb7ab973cb2838cb199a31be9bf84ef887d3397cc9155e4a66b72fa800a605"
+    },
+    {
+      "source_relative": "templates/daily-email-tmpl.yaml",
+      "destination": "templates/daily-email-tmpl.yaml",
+      "source_sha256": "e850bf247eb05718a4717dc8ce3df8983be9a24894b2acc754d3d8ef2d6e38b9"
+    },
+    {
+      "source_relative": "data/framework-anuncios-mentoria.md",
+      "destination": "data/framework-anuncios-mentoria.md",
+      "source_sha256": "b98d21fb462f84694567afe6bc2b4f4547560f424c9030f9c1ae8c0e9a24aa50"
+    },
+    {
+      "source_relative": "checklists/ad-copy-quality.md",
+      "destination": "checklists/ad-copy-quality.md",
+      "source_sha256": "72e21a4de9c1bca80c2f7d1e9d7377456daf05e75982dd39b7aa50b725ed2641"
+    },
+    {
+      "source_relative": "tasks/criacao/create-ad-script.md",
+      "destination": "tasks/criacao/create-ad-script.md",
+      "source_sha256": "9f5057baa373f66ca2237239ad28a4f841fdd2973dd8e9a332ef21aa39d27731"
+    },
+    {
+      "source_relative": "tasks/criacao/create-video-hook.md",
+      "destination": "tasks/criacao/create-video-hook.md",
+      "source_sha256": "56fdbd1337093c150cb7a27116fb433f7720fde1ddebefbe0f20411a318dbc1b"
+    },
+    {
+      "source_relative": "workflows/otimizacao-funil.md",
+      "destination": "workflows/otimizacao-funil.md",
+      "source_sha256": "733268deb9b1159082f5352ff5a8f61c5a270fc0c520dcd4427f6520a8c19bbb"
+    },
+    {
+      "source_relative": "workflows/funil-sala-secreta.md",
+      "destination": "workflows/funil-sala-secreta.md",
+      "source_sha256": "d65c27f74a7ad7f79388afab297480370895177dca60c2982e1820991431f964"
+    },
+    {
+      "source_relative": "workflows/wf-1-full-launch.yaml",
+      "destination": "workflows/wf-1-full-launch.yaml",
+      "source_sha256": "c2d4f9548f4812cf5658150bad90c10056464e99eedb9c9b4b658a2ff9f2987a"
+    },
+    {
+      "source_relative": "workflows/wf-copy-production.yaml",
+      "destination": "workflows/wf-copy-production.yaml",
+      "source_sha256": "4bb94ce7824d53525a3abb0129779729d5986e3150a7d6b2a892b13fd4204385"
+    },
+    {
+      "source_relative": "workflows/lancamento-completo.md",
+      "destination": "workflows/lancamento-completo.md",
+      "source_sha256": "2828b5e2965cd41b481cf8d7f44d9b147da05da7ffd5b5cfb6163379e437ebee"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/joe-sugarman.md",
+      "destination": "agents/tier-2-executores/joe-sugarman.md",
+      "source_sha256": "f2faa61954b84ab20edea9d01bae8a39de4f18efc5c5f7b973bcdc0126302817"
+    },
+    {
+      "source_relative": "data/halbert-editing-formula.yaml",
+      "destination": "data/halbert-editing-formula.yaml",
+      "source_sha256": "6ae97cf295d031802fd5cb3c241971c484fa7c5cdb5aa44124752fe73df1e599"
+    },
+    {
+      "source_relative": "frameworks/halbert/headline-formulas.yaml",
+      "destination": "frameworks/halbert/headline-formulas.yaml",
+      "source_sha256": "a947d52adfe3833b3021089405ceb283eecbfeeedde193795cac6b8f40c18106"
+    },
+    {
+      "source_relative": "swipe/headlines/headlines_batch_1.yaml",
+      "destination": "swipe/headlines/headlines_batch_1.yaml",
+      "source_sha256": "10abb114444e6bd8c76a69351530fa59a9550941062ecac01196ca2a8390b426"
+    },
+    {
+      "source_relative": "swipe/headlines/headlines_batch_2.yaml",
+      "destination": "swipe/headlines/headlines_batch_2.yaml",
+      "source_sha256": "7a35209bec85f4225776eb77559e78a4560e04e1ae7c028929bbd964a44acb7c"
+    },
+    {
+      "source_relative": "swipe/headlines/headlines_batch_3.yaml",
+      "destination": "swipe/headlines/headlines_batch_3.yaml",
+      "source_sha256": "0438bf5128a979b8b0ff54b2014b22eaacf76c07b10d7b6150fd3946eca27fa1"
+    },
+    {
+      "source_relative": "swipe/full_pieces/famous-sales-letters.md",
+      "destination": "swipe/full_pieces/famous-sales-letters.md",
+      "source_sha256": "74fe58daaa7185e7fcdb1b9eff33d5a49361ac34de24b80d8158a4e5920d8d49"
+    },
+    {
+      "source_relative": "frameworks/ogilvy/headline-rules.yaml",
+      "destination": "frameworks/ogilvy/headline-rules.yaml",
+      "source_sha256": "3685d7ac59a84eef4ecf5af571facc431df319fe1873f91df89682224b4a7036"
+    },
+    {
+      "source_relative": "swipe/emails/subject-lines-collection.md",
+      "destination": "swipe/emails/subject-lines-collection.md",
+      "source_sha256": "300d394828018a2e96ae34d5438381845208cbc8de7aa38d1a257a6f1f55f4c7"
+    },
+    {
+      "source_relative": "swipe/mensagens-convite-reuniao-torriani.md",
+      "destination": "swipe/mensagens-convite-reuniao-torriani.md",
+      "source_sha256": "44475fe4955e27fa0ff053a75a04b939407822d5983b09c04e8a78491e467aaf"
+    },
+    {
+      "source_relative": "tasks/brunson/create-book-funnel.md",
+      "destination": "tasks/brunson/create-book-funnel.md",
+      "source_sha256": "15ec23db553fee8e0e7314e7ceb38b646f882ec3a7b75479ec8d8c1fc1479b08"
+    },
+    {
+      "source_relative": "tasks/brunson/build-authority-arsenal.md",
+      "destination": "tasks/brunson/build-authority-arsenal.md",
+      "source_sha256": "9b13407d7c2659d1d2d26d18a6ec564387631f8d607ec35bd37ed056cd47572d"
+    },
+    {
+      "source_relative": "templates/brunson/book-funnel-sales-page-tmpl.md",
+      "destination": "templates/brunson/book-funnel-sales-page-tmpl.md",
+      "source_sha256": "65a0b6fdb3a5a59409e3521c1450f6fe86bf680bb7799c2df5416dd96b2fc23b"
+    },
+    {
+      "source_relative": "templates/brunson/order-bump-tmpl.md",
+      "destination": "templates/brunson/order-bump-tmpl.md",
+      "source_sha256": "742ed8a702ad717f8bbfbc2ce71fcac53fcbfaec8dc7b0120e5d161714409188"
+    },
+    {
+      "source_relative": "templates/brunson/upsell-oto-tmpl.md",
+      "destination": "templates/brunson/upsell-oto-tmpl.md",
+      "source_sha256": "18df98e695319e025d8d26dc428bdaeddfb106876a3dea0dc3413e5ac3c3107f"
+    },
+    {
+      "source_relative": "templates/brunson/follow-up-email-sequence-tmpl.md",
+      "destination": "templates/brunson/follow-up-email-sequence-tmpl.md",
+      "source_sha256": "2e6219f77291b29cc875cb5694c8fac16a8ec70d42313c379151656ed1ca3ca1"
+    },
+    {
+      "source_relative": "checklists/brunson/book-funnel-completeness.md",
+      "destination": "checklists/brunson/book-funnel-completeness.md",
+      "source_sha256": "7563e8b41ab8dc5ebeb7079c7188eef1b546c342bbaa492a268b296482836b55"
+    },
+    {
+      "source_relative": "frameworks/brunson/hook-story-offer.yaml",
+      "destination": "frameworks/brunson/hook-story-offer.yaml",
+      "source_sha256": "95f32ce87e0af44c79fd19926b4dcb6da6e44949c5b868d2335701b4221cc8cc"
+    },
+    {
+      "source_relative": "frameworks/brunson/value-ladder.yaml",
+      "destination": "frameworks/brunson/value-ladder.yaml",
+      "source_sha256": "d7c8bb9ccc05fcc8e67b42b1c594c9bdacf7b211cdc7d4d0de9291accd3643ed"
+    },
+    {
+      "source_relative": "frameworks/brunson/attractive-character.yaml",
+      "destination": "frameworks/brunson/attractive-character.yaml",
+      "source_sha256": "369a46d90ff34d1d44659f072bb83c8df234905f7b78726a518f44381dce97c8"
+    },
+    {
+      "source_relative": "frameworks/brunson/secret-formula.yaml",
+      "destination": "frameworks/brunson/secret-formula.yaml",
+      "source_sha256": "2391482dddb6446e707640d718ae613c5140dceb411d445fe5c652f01f3f8a58"
+    },
+    {
+      "source_relative": "frameworks/brunson/funnel-hacking.yaml",
+      "destination": "frameworks/brunson/funnel-hacking.yaml",
+      "source_sha256": "be2261f350bd1a668197ac2ffcaf1d3b77330c91f8b92703694c39aa71435ad5"
+    },
+    {
+      "source_relative": "tasks/plf/create-preprelaunch.md",
+      "destination": "tasks/plf/create-preprelaunch.md",
+      "source_sha256": "bb54ebc3196304f5be06b261c2d6bf65bfd55be6984ce84a6701e88473342d7e"
+    },
+    {
+      "source_relative": "tasks/plf/create-plc-sequence.md",
+      "destination": "tasks/plf/create-plc-sequence.md",
+      "source_sha256": "aa8f2256f3d64d5766c9a3bdddfd2dbe34c003515047d7bd56d7e40b3bd3f0ae"
+    },
+    {
+      "source_relative": "tasks/plf/create-launch-stack.md",
+      "destination": "tasks/plf/create-launch-stack.md",
+      "source_sha256": "7cd777ea06a997643f093486e97482e75baf7f7b3f6ffce95fd8c0baf84911db"
+    },
+    {
+      "source_relative": "tasks/plf/create-open-cart-sequence.md",
+      "destination": "tasks/plf/create-open-cart-sequence.md",
+      "source_sha256": "38d6c9aa17e27e71e2472af247234d77aaca69011846e379622b53e83539c631"
+    },
+    {
+      "source_relative": "tasks/plf/create-seed-launch.md",
+      "destination": "tasks/plf/create-seed-launch.md",
+      "source_sha256": "c7517d9e8527b0f433b2b9f3eefb7ae2c288c634c45aceb35b4ee411f5df6be4"
+    },
+    {
+      "source_relative": "tasks/plf/create-jv-launch.md",
+      "destination": "tasks/plf/create-jv-launch.md",
+      "source_sha256": "417843e8238552f10b8eb4fc18a6c5f240e47b9645c23533f106313ad6226776"
+    },
+    {
+      "source_relative": "tasks/plf/create-live-launch.md",
+      "destination": "tasks/plf/create-live-launch.md",
+      "source_sha256": "e5ab76585aaaf0d26f7cb687df75dadf509ba687a63b8ce442b553e7cd4ebe6b"
+    },
+    {
+      "source_relative": "tasks/plf/create-evergreen-launch.md",
+      "destination": "tasks/plf/create-evergreen-launch.md",
+      "source_sha256": "6de62a563eae1f8f18ab823162aa8e49d228ae31898274d24a02e3b9299cf3bd"
+    },
+    {
+      "source_relative": "tasks/plf/create-sales-page-plf.md",
+      "destination": "tasks/plf/create-sales-page-plf.md",
+      "source_sha256": "6b694ddb29f952dd686bd55df48ec212d330429a1c4d4f2615e3adea4061f5f9"
+    },
+    {
+      "source_relative": "tasks/plf/map-mental-triggers.md",
+      "destination": "tasks/plf/map-mental-triggers.md",
+      "source_sha256": "f55bfb2582b83df52ad50ac8d61d6bc4851579bd0264e2a8fbb11ed3e38f119f"
+    },
+    {
+      "source_relative": "tasks/plf/create-case-study.md",
+      "destination": "tasks/plf/create-case-study.md",
+      "source_sha256": "18e08e4835a4e252befd0a99cfb165b05a44808a88d0bccb86a7e30305a408e4"
+    },
+    {
+      "source_relative": "tasks/plf/diagnose-failed-launch.md",
+      "destination": "tasks/plf/diagnose-failed-launch.md",
+      "source_sha256": "e93394672d557de926c388c611e410639868bda9cd77421c9ce700d8e3de5e38"
+    },
+    {
+      "source_relative": "tasks/plf/create-launch-emails.md",
+      "destination": "tasks/plf/create-launch-emails.md",
+      "source_sha256": "d6f75e676ce74a4be95556e42d13f7052bdcdb251d9db7e26d5e1537c915e336"
+    },
+    {
+      "source_relative": "tasks/plf/plan-paid-traffic.md",
+      "destination": "tasks/plf/plan-paid-traffic.md",
+      "source_sha256": "fbe24359b615e1fa8fbc98d790fb3ff8051fd915402143e3dc731fdc97335b36"
+    },
+    {
+      "source_relative": "templates/plf/preprelaunch-survey-tmpl.md",
+      "destination": "templates/plf/preprelaunch-survey-tmpl.md",
+      "source_sha256": "94461ae654bf614b70ced8a73ec8a2444e519c9af387a27581ceb208c63c70dd"
+    },
+    {
+      "source_relative": "templates/plf/plc1-script-tmpl.md",
+      "destination": "templates/plf/plc1-script-tmpl.md",
+      "source_sha256": "7ce7ba26647ceb4ade50d0d2e448b39fc967fcb31abcc8140ac56ede5dd61619"
+    },
+    {
+      "source_relative": "templates/plf/plc2-script-tmpl.md",
+      "destination": "templates/plf/plc2-script-tmpl.md",
+      "source_sha256": "eaac8779b74d49d64ac9f7bf26828c676235161e71afc14518d06b22e59aef56"
+    },
+    {
+      "source_relative": "templates/plf/plc3-script-tmpl.md",
+      "destination": "templates/plf/plc3-script-tmpl.md",
+      "source_sha256": "bf2ffc88aa1014f45e40c078df1018dea247d5b6851b83635bfc778079b008a7"
+    },
+    {
+      "source_relative": "templates/plf/open-cart-day1-tmpl.md",
+      "destination": "templates/plf/open-cart-day1-tmpl.md",
+      "source_sha256": "e8462f1971fb501608377f881fe91b4fc8264a26d8437531028686f451ae6e85"
+    },
+    {
+      "source_relative": "templates/plf/open-cart-final-tmpl.md",
+      "destination": "templates/plf/open-cart-final-tmpl.md",
+      "source_sha256": "ef0952613dba9b56af8232d84a46e7710ca02acbc97ae12e6e50171f130236c7"
+    },
+    {
+      "source_relative": "templates/plf/launch-stack-tmpl.md",
+      "destination": "templates/plf/launch-stack-tmpl.md",
+      "source_sha256": "5bb6559f4820b38b26e67a949463abc06a528e05ebd16b609ab0b3816df38032"
+    },
+    {
+      "source_relative": "templates/plf/objection-crusher-tmpl.md",
+      "destination": "templates/plf/objection-crusher-tmpl.md",
+      "source_sha256": "2f076d84a4333773b1c0214777b7c014d521d3dbcf2b0584b74214448ca5595b"
+    },
+    {
+      "source_relative": "templates/plf/case-study-tmpl.md",
+      "destination": "templates/plf/case-study-tmpl.md",
+      "source_sha256": "a4ea5d1abf0b614c08ac504045401bdd731ddca5379268d121c80cdd8424f7ed"
+    },
+    {
+      "source_relative": "templates/plf/jv-swipe-tmpl.md",
+      "destination": "templates/plf/jv-swipe-tmpl.md",
+      "source_sha256": "f6e4e6d31b438d37779ce35316c7d9eadae33db774e9eaae20b753930c208289"
+    },
+    {
+      "source_relative": "templates/plf/launch-timeline-tmpl.md",
+      "destination": "templates/plf/launch-timeline-tmpl.md",
+      "source_sha256": "9b26791c4de9f72f18cc9ab7bc9ab0d2a36fd1a5ce9330c864cae21bcea0edd0"
+    },
+    {
+      "source_relative": "templates/plf/email-subject-lines-tmpl.md",
+      "destination": "templates/plf/email-subject-lines-tmpl.md",
+      "source_sha256": "8f8166adec71484f73da0027cebbe498ff85fa7b2f9e14bf5f73d43dd686b877"
+    },
+    {
+      "source_relative": "checklists/plf/cpl-evaluation-execution-checklist.md",
+      "destination": "checklists/plf/cpl-evaluation-execution-checklist.md",
+      "source_sha256": "cac10a9c5e1db61f3dd760161ee00d21f2a53da18cd731d5eb99dc5569233362"
+    },
+    {
+      "source_relative": "checklists/plf/preprelaunch-readiness.md",
+      "destination": "checklists/plf/preprelaunch-readiness.md",
+      "source_sha256": "60bd60c094dc39d0ed5d0fb9a2ca6767a08a25b8a999245d7dbd42631201c717"
+    },
+    {
+      "source_relative": "checklists/plf/mental-triggers-activation.md",
+      "destination": "checklists/plf/mental-triggers-activation.md",
+      "source_sha256": "f1e2e8387ad3b136822120a01c08ccf807998bfd2fa6118087f9b39481ae6ca1"
+    },
+    {
+      "source_relative": "checklists/plf/seed-launch-checklist.md",
+      "destination": "checklists/plf/seed-launch-checklist.md",
+      "source_sha256": "ea4f78ede96cc00629bf4745dd6a5f7e6b4da4804dc2e6be147ea38c6d74e813"
+    },
+    {
+      "source_relative": "checklists/plf/live-launch-readiness.md",
+      "destination": "checklists/plf/live-launch-readiness.md",
+      "source_sha256": "5ba6347faf983bb67039b4876b00eecd1884af6ca9e9601be98b36a772978df0"
+    },
+    {
+      "source_relative": "checklists/plf/jv-launch-partner.md",
+      "destination": "checklists/plf/jv-launch-partner.md",
+      "source_sha256": "a07656b6c76b013cdc19294a9d8e671c76694e9b657dba2b56572ab055020af4"
+    },
+    {
+      "source_relative": "checklists/plf/evergreen-setup.md",
+      "destination": "checklists/plf/evergreen-setup.md",
+      "source_sha256": "acdbff545f4a95b33086c4983f9f16b7eff4e435c8bcee5953781259867bac5d"
+    },
+    {
+      "source_relative": "checklists/plf/launch-stack-completeness.md",
+      "destination": "checklists/plf/launch-stack-completeness.md",
+      "source_sha256": "5bf9ca34dcad3a1e5cb8a2c7cbda3d8e589e8eb174a27b6ae72706adacd9b7b1"
+    },
+    {
+      "source_relative": "checklists/plf/open-cart-sequence.md",
+      "destination": "checklists/plf/open-cart-sequence.md",
+      "source_sha256": "89706f5dba7808fb1aede8a7b38012205871e335f007b0a81990d8bcfab9a64d"
+    },
+    {
+      "source_relative": "checklists/plf/sales-page-plf.md",
+      "destination": "checklists/plf/sales-page-plf.md",
+      "source_sha256": "ea080999187048d46821058d26a923f0e22c153446d1d2ebc85ef25c7fc94025"
+    },
+    {
+      "source_relative": "checklists/plf/launch-day-execution.md",
+      "destination": "checklists/plf/launch-day-execution.md",
+      "source_sha256": "7257bee072f3453bfc6fd934e993688e479a7410f8a51d08e58497d51690e53b"
+    },
+    {
+      "source_relative": "checklists/plf/post-launch-analysis.md",
+      "destination": "checklists/plf/post-launch-analysis.md",
+      "source_sha256": "077d111fe50853dd1b4587a710e6ae9b15fc9b68b15fcbb7425a29a838e72855"
+    },
+    {
+      "source_relative": "checklists/plf/social-media-launch.md",
+      "destination": "checklists/plf/social-media-launch.md",
+      "source_sha256": "4e2590991048ed5d60a8ba2b755521c9494f67736087bd1a55ea28e7edb0d1a1"
+    },
+    {
+      "source_relative": "data/jeff-walker-plf-extraction.md",
+      "destination": "data/jeff-walker-plf-extraction.md",
+      "source_sha256": "aee942c7c7b9de76159dd79b239e25c37dfbea048ee761b052c26747d120b84d"
+    },
+    {
+      "source_relative": "data/plf/mental-triggers-kb.yaml",
+      "destination": "data/plf/mental-triggers-kb.yaml",
+      "source_sha256": "0e03b7ccd4d77d9f3caf94a047632bfbb791b4bba97b61afef5141c59b10b516"
+    },
+    {
+      "source_relative": "data/plf/avatar-framework-kb.yaml",
+      "destination": "data/plf/avatar-framework-kb.yaml",
+      "source_sha256": "1bb0476b6a7c181a8714d3b77e5efba43cc6421384911142dc838ebb5ce950fb"
+    },
+    {
+      "source_relative": "data/plf/objection-database.yaml",
+      "destination": "data/plf/objection-database.yaml",
+      "source_sha256": "385fb4acd5dce2124617b7d3abceb6565a58155193ed4b07988c4fa087fb5668"
+    },
+    {
+      "source_relative": "data/plf/email-benchmarks-kb.yaml",
+      "destination": "data/plf/email-benchmarks-kb.yaml",
+      "source_sha256": "ef67cdfe617fe40667e1b63fc5420df66c392472548ac60bd2c519d6530e7e52"
+    },
+    {
+      "source_relative": "data/plf/launch-budget-kb.yaml",
+      "destination": "data/plf/launch-budget-kb.yaml",
+      "source_sha256": "20be2b57c9b8d9c4fed5b87ee49382e5e497d5bf004f60a5e72cda020ce098ae"
+    },
+    {
+      "source_relative": "data/plf/content-formats-kb.yaml",
+      "destination": "data/plf/content-formats-kb.yaml",
+      "source_sha256": "7f8875367e817a8447bf9abf09b0a8bf8974f2b3c65f04709714c918bf2f4793"
+    },
+    {
+      "source_relative": "data/plf/timeline-reference-kb.yaml",
+      "destination": "data/plf/timeline-reference-kb.yaml",
+      "source_sha256": "bf2ccb32eed1cd649f4a5542ad7238185840ec67750e1c66e340c92ce97762fa"
+    },
+    {
+      "source_relative": "data/plf/platform-comparison-kb.yaml",
+      "destination": "data/plf/platform-comparison-kb.yaml",
+      "source_sha256": "48de578e03338fcf7885153c76fe1f4109f7aab592c2261a934cc2b6803cdcae"
+    },
+    {
+      "source_relative": "data/plf/copy-swipes-kb.yaml",
+      "destination": "data/plf/copy-swipes-kb.yaml",
+      "source_sha256": "966f911395b9d57d06a0d95ea83874aba8d55e9d989d5c291bbf654e41200f0a"
+    },
+    {
+      "source_relative": "data/plf/contingency-framework-kb.yaml",
+      "destination": "data/plf/contingency-framework-kb.yaml",
+      "source_sha256": "b1a801d10142afa2c7a54f8cc6aba6fc935fcde9183c37664d7f4ef70d7433e1"
+    },
+    {
+      "source_relative": "checklists/plf/plc1-complete-production-aid.md",
+      "destination": "checklists/plf/plc1-complete-production-aid.md",
+      "source_sha256": "d1a58fc48bb19a2d2a206a1756530f8359b76f95a5d2240ed7faf8e37a9e3319"
+    },
+    {
+      "source_relative": "checklists/plf/plc2-complete-production-aid.md",
+      "destination": "checklists/plf/plc2-complete-production-aid.md",
+      "source_sha256": "37b2241b3a396fcde1230e439dd7b3c0dd35d36f8bfd38501428fb64a5839e37"
+    },
+    {
+      "source_relative": "checklists/plf/plc3-complete-production-aid.md",
+      "destination": "checklists/plf/plc3-complete-production-aid.md",
+      "source_sha256": "e9601a51cd94abbb457d149f41f68a529cac834e2c9136c23be883f8861b7d91"
+    },
+    {
+      "source_relative": "checklists/plf/sales-video-complete-production-aid.md",
+      "destination": "checklists/plf/sales-video-complete-production-aid.md",
+      "source_sha256": "982a8e131ed1b3edfc466d1559749562a4b389589bcc8de84c6cc8189c96ca97"
+    },
+    {
+      "source_relative": "checklists/avatar-research-checklist.md",
+      "destination": "checklists/avatar-research-checklist.md",
+      "source_sha256": "351183a00f32174c9c76b3e6f9f20f12d030cf764ba65ce8a4aebca1f0b7f156"
+    },
+    {
+      "source_relative": "templates/avatar-research-template.md",
+      "destination": "templates/avatar-research-template.md",
+      "source_sha256": "5117421220618a59f7e10817d4cdd9fa776fde1549f449964daa0d67caf0fcea"
+    },
+    {
+      "source_relative": "workflows/trafego-pago-rapido.md",
+      "destination": "workflows/trafego-pago-rapido.md",
+      "source_sha256": "81562f7ea8174b18b7819f69054cd031302e794d539d19ab24ec4e7b83928ec8"
+    },
+    {
+      "source_relative": "workflows/high-ticket-sales.md",
+      "destination": "workflows/high-ticket-sales.md",
+      "source_sha256": "86981b895ecd399d973e3bb81dfb338639f2c87d77d2e34ece497274aa8adb39"
+    },
+    {
+      "source_relative": "frameworks/sugarman/30-triggers.yaml",
+      "destination": "frameworks/sugarman/30-triggers.yaml",
+      "source_sha256": "e59407bc8f40da059072a49c43f760e1dc6e2ad42b2d6d3a1ca9ae8c2a8c753c"
+    },
+    {
+      "source_relative": "frameworks/sugarman/slippery-slide.yaml",
+      "destination": "frameworks/sugarman/slippery-slide.yaml",
+      "source_sha256": "577a35a6612816a995f0c13b42972ff2bd0689fa228b13b5a626f39b52235b22"
+    },
+    {
+      "source_relative": "frameworks/sugarman/first-sentence.yaml",
+      "destination": "frameworks/sugarman/first-sentence.yaml",
+      "source_sha256": "b8aa14af04715bf736f784648b3c21edca978ee42e0caf42ed8507675ee8ff87"
+    },
+    {
+      "source_relative": "frameworks/sugarman/seeds-of-curiosity.yaml",
+      "destination": "frameworks/sugarman/seeds-of-curiosity.yaml",
+      "source_sha256": "171d51e1769183bc0d91ac0da74e51ac7633a4838edc4b4112813e80ab90cd76"
+    },
+    {
+      "source_relative": "frameworks/sugarman/story-structure.yaml",
+      "destination": "frameworks/sugarman/story-structure.yaml",
+      "source_sha256": "fb832182c0d4b6f9ebb22f0b2fbc4d7bc5945f694e0ef996665bfadf58776fed"
+    },
+    {
+      "source_relative": "frameworks/sugarman/conversational-tone.yaml",
+      "destination": "frameworks/sugarman/conversational-tone.yaml",
+      "source_sha256": "173a99b758894c787cc53c0cb65f87c90524cd67efa34d624ce5d5e695c1a7b1"
+    },
+    {
+      "source_relative": "frameworks/sugarman/honesty-framework.yaml",
+      "destination": "frameworks/sugarman/honesty-framework.yaml",
+      "source_sha256": "fbd9a6f751980e01cfdc7a047c7640b5b473ec64c743a08367e619adce9a3748"
+    },
+    {
+      "source_relative": "frameworks/sugarman/graphic-elements.yaml",
+      "destination": "frameworks/sugarman/graphic-elements.yaml",
+      "source_sha256": "1236c5da03276b505e717312a1f960025966241dbbeaf3a10019bc0f18d74798"
+    },
+    {
+      "source_relative": "frameworks/sugarman/infomercial-formula.yaml",
+      "destination": "frameworks/sugarman/infomercial-formula.yaml",
+      "source_sha256": "1cd4f55611963d45530e1dca5f7daa361770fa966f8e8e25cd14bcc116d363d7"
+    },
+    {
+      "source_relative": "frameworks/sugarman/incubation-process.yaml",
+      "destination": "frameworks/sugarman/incubation-process.yaml",
+      "source_sha256": "ffbe1f430a6259526b32f429945b211fc8b77ac1c5b76cf8f09babf7ec4d8e49"
+    },
+    {
+      "source_relative": "voice/sugarman.yaml",
+      "destination": "voice/sugarman.yaml",
+      "source_sha256": "3eb7846a2782434c85d5a3e1fd9abd7bab6b9116faba92c13e7ccce9c383497a"
+    },
+    {
+      "source_relative": "templates/authority-arsenal-tmpl.yaml",
+      "destination": "templates/authority-arsenal-tmpl.yaml",
+      "source_sha256": "4cebfa21420b6748582396659b69399885ea65c986b6114a24f93933d53c8b61"
+    },
+    {
+      "source_relative": "agents/tier-1-estrategistas/dan-kennedy.md",
+      "destination": "agents/tier-1-estrategistas/dan-kennedy.md",
+      "source_sha256": "0800a94d0f4391463df5475fc5328d0c73840f7e88e3ea4218be385696e77900"
+    },
+    {
+      "source_relative": "checklists/plf/cpl1-opportunity-checklist.md",
+      "destination": "checklists/plf/cpl1-opportunity-checklist.md",
+      "source_sha256": "fd95fce346c1d9d375205188abeca27a01eb69c4eb35f9e0770d84285013efff"
+    },
+    {
+      "source_relative": "templates/plf/cpl-evaluation-report-tmpl.md",
+      "destination": "templates/plf/cpl-evaluation-report-tmpl.md",
+      "source_sha256": "e485988f298dfa609ec156335e4b8046861f18daa6c34be1f9ff5cb6b7b2d533"
+    },
+    {
+      "source_relative": "templates/plf/rubric-scores-tmpl.yaml",
+      "destination": "templates/plf/rubric-scores-tmpl.yaml",
+      "source_sha256": "9cf01adb686efbb0b2d71981623c2afd106e635ac44c556340615d16a267baa6"
+    },
+    {
+      "source_relative": "templates/plf/beat-analysis-tmpl.yaml",
+      "destination": "templates/plf/beat-analysis-tmpl.yaml",
+      "source_sha256": "4807e7f2acb618e7baab62bf3f19bd5652c623286f445dcb7719d258aaf47e09"
+    },
+    {
+      "source_relative": "workflows/wf-evaluate-cpl.yaml",
+      "destination": "workflows/wf-evaluate-cpl.yaml",
+      "source_sha256": "9afc671b1c6141647b2a65284a6a5ed19bcd9b0a99a719c714063f7f11bd2c66"
+    },
+    {
+      "source_relative": "templates/copywriter-agent-tmpl.yaml",
+      "destination": "templates/copywriter-agent-tmpl.yaml",
+      "source_sha256": "f66c2de91980d8083aced3a8abc74d8c2898ee5c24555af36f8885e79b1aa24f"
+    },
+    {
+      "source_relative": "frameworks/kennedy/urgency-engineering.yaml",
+      "destination": "frameworks/kennedy/urgency-engineering.yaml",
+      "source_sha256": "29e73e985170a474ad95a68520da138f999ba80159d6feb0b1ee022edc47fa5b"
+    },
+    {
+      "source_relative": "frameworks/kennedy/guarantee-architecture.yaml",
+      "destination": "frameworks/kennedy/guarantee-architecture.yaml",
+      "source_sha256": "e6d30af59a37307af75eb508266078d38780c61bce2054701e9fc8131e8f9cae"
+    },
+    {
+      "source_relative": "frameworks/kennedy/ultimate-sales-letter.yaml",
+      "destination": "frameworks/kennedy/ultimate-sales-letter.yaml",
+      "source_sha256": "81681f71275d8d93e5bb6bb2c8eeae6a6cb1f4758ee9a41db55d21782ad58f04"
+    },
+    {
+      "source_relative": "frameworks/kennedy/pas.yaml",
+      "destination": "frameworks/kennedy/pas.yaml",
+      "source_sha256": "19e65e92e5e26323bbf00b7bdf1908c10ce00878820415bec0a0659ae3437e29"
+    },
+    {
+      "source_relative": "frameworks/kennedy/10-rules.yaml",
+      "destination": "frameworks/kennedy/10-rules.yaml",
+      "source_sha256": "255d3652fa9c25524c4a21fddf939c3b114a8f70bc3afcbb0f8e42b1f949cb80"
+    },
+    {
+      "source_relative": "frameworks/kennedy/magnetic-marketing.yaml",
+      "destination": "frameworks/kennedy/magnetic-marketing.yaml",
+      "source_sha256": "974311ed65586d9b1d21506092eb019a48b4d07b481564098ec1c3522c1d0a92"
+    },
+    {
+      "source_relative": "frameworks/kennedy/takeaway-selling.yaml",
+      "destination": "frameworks/kennedy/takeaway-selling.yaml",
+      "source_sha256": "d2ec9bda3d37b8629b24d7d6159a38e83b9f543fbda241ad50f1ab4ee934be33"
+    },
+    {
+      "source_relative": "frameworks/kennedy/market-selection.yaml",
+      "destination": "frameworks/kennedy/market-selection.yaml",
+      "source_sha256": "234eb8511064fcc5df891b6d41e8f91e792536578c7ea9d28b3c31c79dfcd1d6"
+    },
+    {
+      "source_relative": "frameworks/kennedy/3ms-triangle.yaml",
+      "destination": "frameworks/kennedy/3ms-triangle.yaml",
+      "source_sha256": "3b0fca2383ec854e2bc7033026895a847da0899ff55884e0b086cbdd6d33a9e3"
+    },
+    {
+      "source_relative": "frameworks/kennedy/6-step-sales-process.yaml",
+      "destination": "frameworks/kennedy/6-step-sales-process.yaml",
+      "source_sha256": "3939d677c77ab54f2f2e4b45417d9f550de033d4c4e3b3372fd794f712efbd16"
+    },
+    {
+      "source_relative": "voice/kennedy.yaml",
+      "destination": "voice/kennedy.yaml",
+      "source_sha256": "c53222536c1d89607b76d0f82720bc43ba1d484af5af5f5d1f348c30fcc22c87"
+    },
+    {
+      "source_relative": "agents/copy-chief.md",
+      "destination": "agents/copy-chief.md",
+      "source_sha256": "da82ff14aba760cc4c513aa1a57a7ade51a893f9e7c54a9d27ca7aacdb54e1fe"
+    },
+    {
+      "source_relative": "tasks/dna-cloning/create-copywriter-agent.md",
+      "destination": "tasks/dna-cloning/create-copywriter-agent.md",
+      "source_sha256": "4f4c5c64b208a80aeac1e7bd508cb1bbe5467f51cc89693a0adaf6c138c4c1f4"
+    },
+    {
+      "source_relative": "tasks/dna-cloning/extract-frameworks.md",
+      "destination": "tasks/dna-cloning/extract-frameworks.md",
+      "source_sha256": "d65b98a94ae059bc1560fc35cae1bd32ac8a917887d0824f650ee584ccf18528"
+    },
+    {
+      "source_relative": "tasks/dna-cloning/extract-communication-dna.md",
+      "destination": "tasks/dna-cloning/extract-communication-dna.md",
+      "source_sha256": "c63e908c2c8dcc2073bb8a78dd882fcc08249f31d5cf840febe33ebf67bee72d"
+    },
+    {
+      "source_relative": "tasks/dna-cloning/extract-signature-phrases.md",
+      "destination": "tasks/dna-cloning/extract-signature-phrases.md",
+      "source_sha256": "65c0b41325adde96b1a9b356b55a604294dea58e30be731e5e97afb77b1e9d97"
+    },
+    {
+      "source_relative": "tasks/estrategia/create-objection-algorithms.md",
+      "destination": "tasks/estrategia/create-objection-algorithms.md",
+      "source_sha256": "3f516c4ce51c0dcd79b7896d59d9fd75fce219f277d72b3737095e7b5fb13633"
+    },
+    {
+      "source_relative": "checklists/copywriter-agent-creation-checklist.md",
+      "destination": "checklists/copywriter-agent-creation-checklist.md",
+      "source_sha256": "cf21218a00e93a36f466da33660ebb0703b477a53d0efb971fe5333e2bc2f1bb"
+    },
+    {
+      "source_relative": "tasks/briefing.md",
+      "destination": "tasks/briefing.md",
+      "source_sha256": "76cc3b990f038633dbd71bae41c2aa43218318f0d52dac94b625e62059391b41"
+    },
+    {
+      "source_relative": "tasks/campaign-planning-pack.md",
+      "destination": "tasks/campaign-planning-pack.md",
+      "source_sha256": "3f067914c6f027a17de4a8c04ff7b12e7f16f2a164708a21cf769f2bef26d019"
+    },
+    {
+      "source_relative": "tasks/create-artifact-from-kb.md",
+      "destination": "tasks/create-artifact-from-kb.md",
+      "source_sha256": "a929ec30cf6c5ea23c61f9bff123b842e0c29c4a2842a117c76be1564ddf87ed"
+    },
+    {
+      "source_relative": "tasks/create-campaign-brief.md",
+      "destination": "tasks/create-campaign-brief.md",
+      "source_sha256": "542f84ed6d2fbbe37dde3d98a3e30109e6ec882ad53b8f04cc5390d64014464a"
+    },
+    {
+      "source_relative": "tasks/deliver.md",
+      "destination": "tasks/deliver.md",
+      "source_sha256": "48b1b2da449d9755688cbb9d59c042271a0bcccd0b1b80dc445ae43faa0d3d38"
+    },
+    {
+      "source_relative": "tasks/diagnose.md",
+      "destination": "tasks/diagnose.md",
+      "source_sha256": "626f09b08342defb3dd0de3dc059bebd3cd0fbf34b094b87584c200b17a83e3c"
+    },
+    {
+      "source_relative": "tasks/load-workspace-context.md",
+      "destination": "tasks/load-workspace-context.md",
+      "source_sha256": "1b5dbe92287f840db092b34b8613f779d1de01f22ff7e6666a46a14d1fa43817"
+    },
+    {
+      "source_relative": "tasks/qa-gate.md",
+      "destination": "tasks/qa-gate.md",
+      "source_sha256": "4eb525332da0cce74e87ff83908342b31ef0b3e5aa534ec77f1b55086939a124"
+    },
+    {
+      "source_relative": "tasks/review-copy.md",
+      "destination": "tasks/review-copy.md",
+      "source_sha256": "93a3e1fd62e51441125331bdcc73f26307fd068d59f82c3a2fc2ed968077b974"
+    },
+    {
+      "source_relative": "tasks/triagem-copy-projeto.md",
+      "destination": "tasks/triagem-copy-projeto.md",
+      "source_sha256": "07ebedad9b76a420fb128c55a63014352bb2309d5987d4da323f191dbbd145ef"
+    },
+    {
+      "source_relative": "tasks/write-copy.md",
+      "destination": "tasks/write-copy.md",
+      "source_sha256": "0c0a5a41926b0b436cf6eb47925c1adcffbece921993cdf39a6494b0f89c91a3"
+    },
+    {
+      "source_relative": "tasks/criacao/build-narrative-evaldo.md",
+      "destination": "tasks/criacao/build-narrative-evaldo.md",
+      "source_sha256": "5c96fa24a078db5855ebf1959bd34f7883944ec9d7fab017fa514573461c1e2c"
+    },
+    {
+      "source_relative": "tasks/criacao/create-abandoned-cart.md",
+      "destination": "tasks/criacao/create-abandoned-cart.md",
+      "source_sha256": "25a85379b97ce77d01d643268b13a60bc80ddeb7b9e91e091f6a44cb9ec39b33"
+    },
+    {
+      "source_relative": "tasks/criacao/create-cold-email.md",
+      "destination": "tasks/criacao/create-cold-email.md",
+      "source_sha256": "f9775dd09dcf19642e5087878f11664c8b4269432cea16c64766ba192379edce"
+    },
+    {
+      "source_relative": "tasks/criacao/create-daily-email.md",
+      "destination": "tasks/criacao/create-daily-email.md",
+      "source_sha256": "0d86ff653381c0d5cfb303e4e8408e4e6c1c11cbe15a1bf4adfaf2253143774b"
+    },
+    {
+      "source_relative": "tasks/criacao/create-ghosted-lead-recovery.md",
+      "destination": "tasks/criacao/create-ghosted-lead-recovery.md",
+      "source_sha256": "0ccbc6a79a15f6ae59bd3a533c0457108724106baedbecd3f982b9872174c0a7"
+    },
+    {
+      "source_relative": "tasks/criacao/create-launch-emails.md",
+      "destination": "tasks/criacao/create-launch-emails.md",
+      "source_sha256": "19f5aedefc8d212da7aa34d56ab13b55ebbf634439fce3614e7e2d30e3102abd"
+    },
+    {
+      "source_relative": "tasks/criacao/create-magalog.md",
+      "destination": "tasks/criacao/create-magalog.md",
+      "source_sha256": "c4a62bd39846c8dcfc485332af17b03c0eb6b375bb78ecce34bbca3fd7aa6ce8"
+    },
+    {
+      "source_relative": "tasks/criacao/create-native-ads.md",
+      "destination": "tasks/criacao/create-native-ads.md",
+      "source_sha256": "452e173072bba9a3653a401e424a16356e181a69afa336406c54572244c619fd"
+    },
+    {
+      "source_relative": "tasks/criacao/create-newsletter.md",
+      "destination": "tasks/criacao/create-newsletter.md",
+      "source_sha256": "e0873db1e6f5dde3aa8c7d14a132a8f8cc65357dafabbafddb93b50637754963"
+    },
+    {
+      "source_relative": "tasks/criacao/create-pre-call-hammer-sequence.md",
+      "destination": "tasks/criacao/create-pre-call-hammer-sequence.md",
+      "source_sha256": "bfe812279fc9b5f82845970b0b4afa064f84d80be422488c879d8ac0e1a424d2"
+    },
+    {
+      "source_relative": "tasks/criacao/create-thank-you-page.md",
+      "destination": "tasks/criacao/create-thank-you-page.md",
+      "source_sha256": "694ed72a648b277a07f407417380230c8d11aa9c5d7c0e20789d3ac8992c20a8"
+    },
+    {
+      "source_relative": "tasks/criacao/create-youtube-ads.md",
+      "destination": "tasks/criacao/create-youtube-ads.md",
+      "source_sha256": "378870ab08124b3be6f820688c93d93fcbfa9ed49fcdc3e893087dad96cd76e4"
+    },
+    {
+      "source_relative": "tasks/diagnostico/analyze-mental-conversation.md",
+      "destination": "tasks/diagnostico/analyze-mental-conversation.md",
+      "source_sha256": "9200d6f806e4d5ac1dc6da10b2c04a287150e42abb310d3d8f090f8dddc9023d"
+    },
+    {
+      "source_relative": "tasks/diagnostico/diagnose-sophistication.md",
+      "destination": "tasks/diagnostico/diagnose-sophistication.md",
+      "source_sha256": "1d6ef6610460a62af427e53751248a920a2b92d806987cd70081a418e33258f2"
+    },
+    {
+      "source_relative": "tasks/diagnostico/map-6-primary-motives.md",
+      "destination": "tasks/diagnostico/map-6-primary-motives.md",
+      "source_sha256": "f74ef4f126df881e1b2891c72b34b68195a6fc347bd233053e7b43f8c21d9760"
+    },
+    {
+      "source_relative": "tasks/diagnostico/select-lead-type.md",
+      "destination": "tasks/diagnostico/select-lead-type.md",
+      "source_sha256": "06c7ff4d0b23f8e734cb766132808127972a100a103b0ba223c2e0450c322bda"
+    },
+    {
+      "source_relative": "tasks/estrategia/create-decision-matrix.md",
+      "destination": "tasks/estrategia/create-decision-matrix.md",
+      "source_sha256": "55e5aec4b1077d2bd3f6c3c8630ae0da7c221e823c3d3f9feb5885744b6f1aa0"
+    },
+    {
+      "source_relative": "tasks/otimizacao/apply-sugarman-triggers.md",
+      "destination": "tasks/otimizacao/apply-sugarman-triggers.md",
+      "source_sha256": "d9dcdf8c7093b61a7fbac763684666b0c3fd2d779426e477bd48af234a5d73f6"
+    },
+    {
+      "source_relative": "tasks/otimizacao/audit-landing-page.md",
+      "destination": "tasks/otimizacao/audit-landing-page.md",
+      "source_sha256": "981e6dbb182128a67903fdb1a586549f3f24b1e4f34a849245d085cd4717bc49"
+    },
+    {
+      "source_relative": "tasks/otimizacao/blend.md",
+      "destination": "tasks/otimizacao/blend.md",
+      "source_sha256": "b182cba070bf893c7fe2073b0bfa2f094546a71c1ca5b7c50b124051f8388885"
+    },
+    {
+      "source_relative": "tasks/otimizacao/copy-debate.md",
+      "destination": "tasks/otimizacao/copy-debate.md",
+      "source_sha256": "735c87cb61e05bf09254fce9e28da34e1714feb6c05c868351cee7ce44f4c194"
+    },
+    {
+      "source_relative": "tasks/otimizacao/edit-copy-halbert.md",
+      "destination": "tasks/otimizacao/edit-copy-halbert.md",
+      "source_sha256": "cf6daee2a5f480f09a5e62bdbcd8b6e847b69afd94b2557fc90ecf170a48b102"
+    },
+    {
+      "source_relative": "tasks/otimizacao/setup-split-test.md",
+      "destination": "tasks/otimizacao/setup-split-test.md",
+      "source_sha256": "01d7d278adfdd21676441b6ca4861c31b6896f22f1177460a2a629ef0629a899"
+    },
+    {
+      "source_relative": "tasks/otimizacao/simple-writing-audit.md",
+      "destination": "tasks/otimizacao/simple-writing-audit.md",
+      "source_sha256": "72fce60d13427456989de191f769a4e57ab201da7ec947aef2d9b24fed714bec"
+    },
+    {
+      "source_relative": "tasks/otimizacao/write-lampropoulos-bullets.md",
+      "destination": "tasks/otimizacao/write-lampropoulos-bullets.md",
+      "source_sha256": "8070549955b8d449c8e7a41313d0b1a3ba0612b99f76bd40192c1de6a5f28a45"
+    },
+    {
+      "source_relative": "tasks/otimizacao/write-visceral-copy.md",
+      "destination": "tasks/otimizacao/write-visceral-copy.md",
+      "source_sha256": "67c93830a49bef70bcc464963640079fb86e387c1e116745c1aeac60ca43e296"
+    },
+    {
+      "source_relative": "tasks/vendas/create-call-script.md",
+      "destination": "tasks/vendas/create-call-script.md",
+      "source_sha256": "b9700f97fe3e4dedc2997ff2cf5519ebbab1fe15ae91d448865716e16fd3c6c7"
+    },
+    {
+      "source_relative": "tasks/vendas/create-close-script.md",
+      "destination": "tasks/vendas/create-close-script.md",
+      "source_sha256": "327fb015cc580f3ccf615a0132f0f4711326aa0e0f6bfd1536df47d446b3a484"
+    },
+    {
+      "source_relative": "tasks/vendas/create-cold-webinar-script.md",
+      "destination": "tasks/vendas/create-cold-webinar-script.md",
+      "source_sha256": "815ecb989d99c33ef22ca2379b211bdc26c28b92f86532e97078796f3447b3ba"
+    },
+    {
+      "source_relative": "tasks/vendas/create-warm-webinar-script.md",
+      "destination": "tasks/vendas/create-warm-webinar-script.md",
+      "source_sha256": "1bc29ff2f80142199755511f632cf0e68edb667dfd62412a8258913555e402ef"
+    },
+    {
+      "source_relative": "tasks/plf/evaluate-cpl.md",
+      "destination": "tasks/plf/evaluate-cpl.md",
+      "source_sha256": "d9e4fea0c8b5f36cbc397436e6d001c32bc1b5c6157c36af5f34db32e44a48c2"
+    },
+    {
+      "source_relative": "tasks/validacao/validate-cialdini-principles.md",
+      "destination": "tasks/validacao/validate-cialdini-principles.md",
+      "source_sha256": "356b3e555b273e6e280fb89202a0a265a9d73a8c55dae79e74d63eae7d423565"
+    },
+    {
+      "source_relative": "tasks/validacao/validate-copy-cub.md",
+      "destination": "tasks/validacao/validate-copy-cub.md",
+      "source_sha256": "252acea0e1466b2e2d6c76f2ff1651f5ced7f945175064814f12e71e40c43d69"
+    },
+    {
+      "source_relative": "tasks/dna-cloning/load-mmos-voice.md",
+      "destination": "tasks/dna-cloning/load-mmos-voice.md",
+      "source_sha256": "0adbbecdb3d5e379676dd6d591218c901477c9918b914872278996ef38be19ad"
+    },
+    {
+      "source_relative": "data/copy-catalog.yaml",
+      "destination": "data/copy-catalog.yaml",
+      "source_sha256": "f0b205782c81c5247826358674b55d6815e52e800b72a709c928b0d792be796c"
+    },
+    {
+      "source_relative": "data/tier-definitions.yaml",
+      "destination": "data/tier-definitions.yaml",
+      "source_sha256": "1b2df0cef985afd7bd9ca980414f6e64617eb6c3dfc6c08bde687b2599ea2b36"
+    },
+    {
+      "source_relative": "agents/tier-1-estrategistas/robert-collier.md",
+      "destination": "agents/tier-1-estrategistas/robert-collier.md",
+      "source_sha256": "52f1bfe8bc0640d062486bc93672a1efb3c751b647bcc3e7360bb7108a15625a"
+    },
+    {
+      "source_relative": "data/arvore-decisao.md",
+      "destination": "data/arvore-decisao.md",
+      "source_sha256": "df6c86c149826d204e08c4c90184b50e5c30e23073c7045875b2136e19c3851f"
+    },
+    {
+      "source_relative": "agents/tier-1-estrategistas/evaldo-albuquerque.md",
+      "destination": "agents/tier-1-estrategistas/evaldo-albuquerque.md",
+      "source_sha256": "e3eb55ee351ab7a1465b5f7bb924e5972772a83380cbdd294682041fadeaee98"
+    },
+    {
+      "source_relative": "agents/tier-1-estrategistas/michael-masterson.md",
+      "destination": "agents/tier-1-estrategistas/michael-masterson.md",
+      "source_sha256": "6a8cc13d47ce72bde9c6cb5f116727eaeda97085c5893978fd7e41dacb7e84a7"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/jim-rutz.md",
+      "destination": "agents/tier-2-executores/jim-rutz.md",
+      "source_sha256": "380c5560112fa94676fed2818a0a865d239c99425a1df8591e4df3447cd641cf"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/parris-lampropoulos.md",
+      "destination": "agents/tier-2-executores/parris-lampropoulos.md",
+      "source_sha256": "240022d430ae753749a158f200b96ab9f7aaf1cdff8873b94684e0c0f304c007"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/david-deutsch.md",
+      "destination": "agents/tier-2-executores/david-deutsch.md",
+      "source_sha256": "226dc74d548a6ea827b20ce40046378cf4861f2c71dfc1405eedf87425026d0d"
+    },
+    {
+      "source_relative": "agents/oraculo-torriani.md",
+      "destination": "agents/oraculo-torriani.md",
+      "source_sha256": "7aa45b8cf3b8d272b4a306d2f7b56babb976aaf673a453788fe5606eccce1e7b"
+    },
+    {
+      "source_relative": "templates/frameworks-extraction-tmpl.yaml",
+      "destination": "templates/frameworks-extraction-tmpl.yaml",
+      "source_sha256": "de3a9e8c9d6c2f7419e3acea9bff36b848abc7339abc4b5b967ec3091af2f1cb"
+    },
+    {
+      "source_relative": "templates/communication-dna-tmpl.yaml",
+      "destination": "templates/communication-dna-tmpl.yaml",
+      "source_sha256": "71cbbc4745db4eb39e7aa002b7f5972fdb260da1c637db04a9b0377a8165f8ae"
+    },
+    {
+      "source_relative": "templates/signature-phrases-tmpl.yaml",
+      "destination": "templates/signature-phrases-tmpl.yaml",
+      "source_sha256": "922d09dfca9887718ff8898ed533adfd00ac709c05d60e97b929a26a900b551c"
+    },
+    {
+      "source_relative": "templates/objection-algorithms-tmpl.yaml",
+      "destination": "templates/objection-algorithms-tmpl.yaml",
+      "source_sha256": "54591786808379b3ddf6972cafe8f5ba41e321d75576743647ed37166c74181f"
+    },
+    {
+      "source_relative": "agents/tier-1-estrategistas/alex-hormozi.md",
+      "destination": "agents/tier-1-estrategistas/alex-hormozi.md",
+      "source_sha256": "eb231cd97400735acdcb6f08fc6409b184290c32a6895b811b04bca49c86f7a3"
+    },
+    {
+      "source_relative": "checklists/copywriter-quality-checklist.md",
+      "destination": "checklists/copywriter-quality-checklist.md",
+      "source_sha256": "0fea645bab390fc2edfea3a9490d54782e920efb49de55819a7ce1b70b30d88f"
+    },
+    {
+      "source_relative": "agents/tier-2-executores/gary-bencivenga.md",
+      "destination": "agents/tier-2-executores/gary-bencivenga.md",
+      "source_sha256": "9af502aacd4d865896b82fd91d7eefad550d452fb35260fbecb3e0e1da3ed153"
+    },
+    {
+      "source_relative": "data/evaldo-10-perguntas.yaml",
+      "destination": "data/evaldo-10-perguntas.yaml",
+      "source_sha256": "046ce53082ba0037ebe3d04ab9edbc4804c026f8933ee1df30e570c7dd075a6e"
+    },
+    {
+      "source_relative": "data/masterson-6-lead-types.yaml",
+      "destination": "data/masterson-6-lead-types.yaml",
+      "source_sha256": "803ffa1b4fd8c52a4c8d5ea491fecae272c684904129a29008719e509c4f01f0"
+    },
+    {
+      "source_relative": "checklists/plf/cpl2-transformation-checklist.md",
+      "destination": "checklists/plf/cpl2-transformation-checklist.md",
+      "source_sha256": "7c41e08bfc2c12db1aaabbc51fd95ac74a21ea9be8e91af3073be0c3adc09d27"
+    },
+    {
+      "source_relative": "checklists/plf/cpl3-ownership-checklist.md",
+      "destination": "checklists/plf/cpl3-ownership-checklist.md",
+      "source_sha256": "36586407687d991642aae117de0f1bb4d03986b9d0bca355f3c5e8edf88d60a8"
+    },
+    {
+      "source_relative": "checklists/plf/cpl4-enrollment-checklist.md",
+      "destination": "checklists/plf/cpl4-enrollment-checklist.md",
+      "source_sha256": "d41857b9f21b6e0ace898ed443f0264893a0c537449ffcf698c5bbb956227dc0"
+    },
+    {
+      "source_relative": "data/cialdini-7-principios.yaml",
+      "destination": "data/cialdini-7-principios.yaml",
+      "source_sha256": "fc04bb728fe40dcc9c42480600cc4e205136b5773def3c27b217cdcfef23a929"
+    },
+    {
+      "source_relative": "data/masterson-core-emotional-complex.yaml",
+      "destination": "data/masterson-core-emotional-complex.yaml",
+      "source_sha256": "765d6f5eb738ebfab74b0b0f373759cd323d4682a2d8c515df0eadef426ce74c"
+    },
+    {
+      "source_relative": "data/expert-clone-mapping.yaml",
+      "destination": "data/expert-clone-mapping.yaml",
+      "source_sha256": "6322c794489036abbac48be29587236d33245bbc94c413712b506204be87837a"
+    },
+    {
+      "source_relative": "data/routing-matrix.yaml",
+      "destination": "data/routing-matrix.yaml",
+      "source_sha256": "f594e438fe5f3863a67f87776db6cafce1cd2a293003432b2999d29ff54b0602"
+    },
+    {
+      "source_relative": "data/artifact-capability-map.yaml",
+      "destination": "data/artifact-capability-map.yaml",
+      "source_sha256": "a33cf2eb5ee245e24fde1b753764fed3483271e2597288e7ddc060b403b3e22f"
+    },
+    {
+      "source_relative": "workflows/funil-fli.md",
+      "destination": "workflows/funil-fli.md",
+      "source_sha256": "b1268bef4e4942df8ace6e606d7cfd3d062eed774388e0dce23ab7ba23dd4041"
+    },
+    {
+      "source_relative": "templates/sales-page-tmpl.md",
+      "destination": "templates/sales-page-tmpl.md",
+      "source_sha256": "1dee59187424a8b5d1ef106773f69e739320498525bd7d824b377e1720676ac0"
+    },
+    {
+      "source_relative": "checklists/landing-page-quality.md",
+      "destination": "checklists/landing-page-quality.md",
+      "source_sha256": "e735e21d95e952c0fa61660621f7fabc26bbb5bddedecc3079d3f2bf1b726093"
+    },
+    {
+      "source_relative": "templates/thank-you-page-tmpl.md",
+      "destination": "templates/thank-you-page-tmpl.md",
+      "source_sha256": "1b9983c565ea0e8e24cf9d0b4b2ceb8228292e11a08e42e0aa522cd1b7d99981"
+    },
+    {
+      "source_relative": "templates/checkout-microcopy-tmpl.md",
+      "destination": "templates/checkout-microcopy-tmpl.md",
+      "source_sha256": "4f40da558aa659e287ef24b9848e749314af2129190f4ed3361e1c68b0da432e"
+    },
+    {
+      "source_relative": "templates/video-hook-tmpl.md",
+      "destination": "templates/video-hook-tmpl.md",
+      "source_sha256": "dce3e2e88bd7b53e66e2c0c803647a71f604711d6a9ed81cbacc48855e8108aa"
+    },
+    {
+      "source_relative": "templates/ad-copy-tmpl.md",
+      "destination": "templates/ad-copy-tmpl.md",
+      "source_sha256": "00d0a90c30a2bddeb0e04eaf1b6d04e6400cec316d98ec866a553468d016aa32"
+    },
+    {
+      "source_relative": "templates/ads-tmpl.md",
+      "destination": "templates/ads-tmpl.md",
+      "source_sha256": "e1bd6e0472ce5c658724a87936f8c81a2bc3f42ec85c4172e30a78e202102e37"
+    },
+    {
+      "source_relative": "data/high-ticket-ads-framework.md",
+      "destination": "data/high-ticket-ads-framework.md",
+      "source_sha256": "8260ea8e1789731a147fc60c7afb876e7cd7184a948b06a3a66540e5c07b9028"
+    },
+    {
+      "source_relative": "templates/advertorial-tmpl.md",
+      "destination": "templates/advertorial-tmpl.md",
+      "source_sha256": "92d367f25d37b9581b35e9a973e41273149c079f2e4f93707afe9cd857b9ae08"
+    },
+    {
+      "source_relative": "templates/email-sequence-tmpl.md",
+      "destination": "templates/email-sequence-tmpl.md",
+      "source_sha256": "3789921074a0eb1b2fcfff1a83e129b8a4a65def314ac717ca0dc2e54edc278e"
+    },
+    {
+      "source_relative": "workflows/email-marketing-continuo.md",
+      "destination": "workflows/email-marketing-continuo.md",
+      "source_sha256": "21aec21a9a200acf99e133e884177be7ca969b145cd30da13551a8374c341c2e"
+    },
+    {
+      "source_relative": "checklists/email-quality-checklist.md",
+      "destination": "checklists/email-quality-checklist.md",
+      "source_sha256": "7fa2b758debfcc5188ebec9ede2853a16f4802b40f5d7cc25d933c5536cee700"
+    },
+    {
+      "source_relative": "checklists/daily-email-quality.md",
+      "destination": "checklists/daily-email-quality.md",
+      "source_sha256": "67c43e6391814b526ac7c699ae82e387218eb1f8bea87ec92d28f5fe3eb92a20"
+    },
+    {
+      "source_relative": "checklists/cold-email-quality.md",
+      "destination": "checklists/cold-email-quality.md",
+      "source_sha256": "21aa48b8ee24ebb44dc4c1b538605fe65a4333086ac443e59e4a7365252a1cbe"
+    },
+    {
+      "source_relative": "templates/cart-abandonment-sequence-tmpl.md",
+      "destination": "templates/cart-abandonment-sequence-tmpl.md",
+      "source_sha256": "8fdee19c71022fa28b31b217a6c8a9ebf49d8c24c025746b80cbb7c39d6cf27f"
+    },
+    {
+      "source_relative": "workflows/wf-11-ghosted-recovery.yaml",
+      "destination": "workflows/wf-11-ghosted-recovery.yaml",
+      "source_sha256": "c8851d75a1d8044395fd917d26d95cfb3ba91c0235ec0ec78a2625ce25b0d2b9"
+    },
+    {
+      "source_relative": "templates/hammer-email-sequence-tmpl.yaml",
+      "destination": "templates/hammer-email-sequence-tmpl.yaml",
+      "source_sha256": "1135d1cf82d50e0b87972777401308fa523115b5cd45255b46b399423fbb1d93"
+    },
+    {
+      "source_relative": "workflows/wf-9-call-funnel-complete.yaml",
+      "destination": "workflows/wf-9-call-funnel-complete.yaml",
+      "source_sha256": "6541231b21bcff4c30cdbd4bbe9d8b6c7441a77d6d7cb25899463506da4d41b4"
+    },
+    {
+      "source_relative": "checklists/pre-call-email-validation.md",
+      "destination": "checklists/pre-call-email-validation.md",
+      "source_sha256": "9bce312b7f12930fab8d462495abc9959a0f2b81c051cc3ec042337c545ec466"
+    },
+    {
+      "source_relative": "templates/email-sequence-tmpl.yaml",
+      "destination": "templates/email-sequence-tmpl.yaml",
+      "source_sha256": "5848e9fa72ed4184cb6023a5d466a4551451765180bd17cde55ed5217fdab355"
+    },
+    {
+      "source_relative": "checklists/offer-quality-checklist.md",
+      "destination": "checklists/offer-quality-checklist.md",
+      "source_sha256": "6b75f789b3a51fa6fa12fc154bd5a5e90e467bbe50a58ab767b7a90a42f31642"
+    },
+    {
+      "source_relative": "checklists/proof-stack-quality.md",
+      "destination": "checklists/proof-stack-quality.md",
+      "source_sha256": "c68b4a4bede9224a117c90e483986106826dafb7c5e188fdde2dde98233b5e4e"
+    },
+    {
+      "source_relative": "data/mental-trigger-reference.md",
+      "destination": "data/mental-trigger-reference.md",
+      "source_sha256": "5e36c774a8281ea2397835f51bb61f68e9f3087fb8edca6aa8166d8ceb0f5f16"
+    },
+    {
+      "source_relative": "workflows/wf-2-paid-traffic.yaml",
+      "destination": "workflows/wf-2-paid-traffic.yaml",
+      "source_sha256": "b9db47cf5bfd15357d20972c118c4963bbb853534499cfa156bf223b4eefdbbb"
+    },
+    {
+      "source_relative": "workflows/wf-evaluate-cpls-batch.yaml",
+      "destination": "workflows/wf-evaluate-cpls-batch.yaml",
+      "source_sha256": "460625f2943f7f39011a6b8d411c01e3b7484c61e34f63ef6df8298bd1eb66d3"
+    },
+    {
+      "source_relative": "checklists/cold-vs-warm-webinar-checklist.md",
+      "destination": "checklists/cold-vs-warm-webinar-checklist.md",
+      "source_sha256": "627b23291f3ac9296f2942b0d13fd4c2d1a165a88419822df638554f9dd346fe"
+    },
+    {
+      "source_relative": "templates/cold-webinar-script-tmpl.yaml",
+      "destination": "templates/cold-webinar-script-tmpl.yaml",
+      "source_sha256": "9c17f2366c5ec4b2113ab806ae0c127a0163dd4cfa397a3bc1165cbab0975529"
+    },
+    {
+      "source_relative": "workflows/wf-10-webinar-cold-weekly.yaml",
+      "destination": "workflows/wf-10-webinar-cold-weekly.yaml",
+      "source_sha256": "ba4eb28d28a37a4c7fb86b4cee77785d5b5b499e05eaee100164417d5f014999"
+    },
+    {
+      "source_relative": "templates/warm-webinar-script-tmpl.md",
+      "destination": "templates/warm-webinar-script-tmpl.md",
+      "source_sha256": "34ba05b3d027fd1b273728c66f06462b42b84763f536131134da36ad5fd161bb"
+    },
+    {
+      "source_relative": "templates/call-script-tmpl.md",
+      "destination": "templates/call-script-tmpl.md",
+      "source_sha256": "e73fcf1f7141e949aacd05cab6592a7e9621301eeb2284eda8ce4482cfb2691a"
+    },
+    {
+      "source_relative": "checklists/call-script-quality.md",
+      "destination": "checklists/call-script-quality.md",
+      "source_sha256": "7d8f2451451c588c74103d38f8c9995b6b917e3155a9c7f35e6742fcf5dade4e"
+    },
+    {
+      "source_relative": "templates/close-script-tmpl.md",
+      "destination": "templates/close-script-tmpl.md",
+      "source_sha256": "ce34a8733c45eca120c3e976e226f7c8d3bb786df40f42567993bcac1b0284df"
+    },
+    {
+      "source_relative": "data/future-regret-close-technique.md",
+      "destination": "data/future-regret-close-technique.md",
+      "source_sha256": "49ba3f291c21ac010d55b826679b2e388aae1c53af93ae13ce93593cdc8ff3f5"
+    },
+    {
+      "source_relative": "checklists/close-script-quality.md",
+      "destination": "checklists/close-script-quality.md",
+      "source_sha256": "b94d3c64679d34ed79d9e9f3ac6cd80381c4f3dda57915afe1fff5ec4e5e0ade"
+    },
+    {
+      "source_relative": "templates/organic-content-tmpl.md",
+      "destination": "templates/organic-content-tmpl.md",
+      "source_sha256": "6e9582dfd7394a3713bd39821e0d226b0b75ad774a35023169914104bdee2d7a"
+    },
+    {
+      "source_relative": "workflows/conteudo-organico-diario.md",
+      "destination": "workflows/conteudo-organico-diario.md",
+      "source_sha256": "1a6feb53753d017754d67ee7da9210c75d47b3d126f911dbd4a0aee737128922"
+    },
+    {
+      "source_relative": "templates/magalog-tmpl.yaml",
+      "destination": "templates/magalog-tmpl.yaml",
+      "source_sha256": "74a815efd9d302aa83a98ebbd3ba66df63274a743bbe5cdcd7adfcaf116d15dc"
+    },
+    {
+      "source_relative": "workflows/wf-7-direct-mail.yaml",
+      "destination": "workflows/wf-7-direct-mail.yaml",
+      "source_sha256": "36f39df2bdfe568de71dc746547e5ce085db13825eb307270f74dd63aca245d1"
+    },
+    {
+      "source_relative": "checklists/magalog-checklist.md",
+      "destination": "checklists/magalog-checklist.md",
+      "source_sha256": "048244d20908b217d068fad977563992fdd82614e6663db1182e0170ad0b0dbe"
+    },
+    {
+      "source_relative": "templates/headline-tmpl.md",
+      "destination": "templates/headline-tmpl.md",
+      "source_sha256": "37b1de54e341477b7e0c8f2f581ddc69d035fecd5fed61f891f65ed7b00f8bf5"
+    },
+    {
+      "source_relative": "checklists/headline-quality-checklist.md",
+      "destination": "checklists/headline-quality-checklist.md",
+      "source_sha256": "db8d1fe8f609745d8e781a14387becf57f5e3792d83fc4ee1411d280f998e7ef"
+    },
+    {
+      "source_relative": "templates/bullets-tmpl.md",
+      "destination": "templates/bullets-tmpl.md",
+      "source_sha256": "405f879bbf7e3ae6ce7057588800a5912f7982e4e2566a94dc25cc6db11c1212"
+    },
+    {
+      "source_relative": "data/swipe-file-bullets.md",
+      "destination": "data/swipe-file-bullets.md",
+      "source_sha256": "390fc190c03c7a048f65c8318f85240664bacb28c28c1cc609c887d8985179b5"
+    },
+    {
+      "source_relative": "checklists/bullet-quality-checklist.md",
+      "destination": "checklists/bullet-quality-checklist.md",
+      "source_sha256": "80ff493637d0f6545238ca7bdc633abfd0a027070bb29ef558e7c596717b468f"
+    },
+    {
+      "source_relative": "data/makepeace-13-proof-types.yaml",
+      "destination": "data/makepeace-13-proof-types.yaml",
+      "source_sha256": "93e7dcbba5c5962cff984639b685fe822392a2b422061b0f887305306539ee6e"
+    },
+    {
+      "source_relative": "checklists/decision-matrix-quality.md",
+      "destination": "checklists/decision-matrix-quality.md",
+      "source_sha256": "2bde1bd6212e868f2f8e0cbec9158eb4f4a271c07e87f5258470ae4563d059b5"
+    },
+    {
+      "source_relative": "templates/rmbc-brief-tmpl.yaml",
+      "destination": "templates/rmbc-brief-tmpl.yaml",
+      "source_sha256": "71d5e5d8a313f9d7642c4b45e8216647ffb40a026bfa8563db30a170ec35db83"
+    },
+    {
+      "source_relative": "checklists/rmbc-checklist.md",
+      "destination": "checklists/rmbc-checklist.md",
+      "source_sha256": "0d99b6ac4049469d932fb6d375f23034a1b0e394543fdbc2990609f6d81570c7"
+    },
+    {
+      "source_relative": "checklists/schwartz-diagnosis-checklist.md",
+      "destination": "checklists/schwartz-diagnosis-checklist.md",
+      "source_sha256": "78412b6c81692fc9f132ef8d538a5e82ab657500c0fa3539ff09b3bb89fe6577"
+    },
+    {
+      "source_relative": "checklists/collier-letter-checklist.md",
+      "destination": "checklists/collier-letter-checklist.md",
+      "source_sha256": "35f77ad7fdcda8c1db056931ea826c1b1eb4feb14f8957ffefce1d6f5ddc791d"
+    },
+    {
+      "source_relative": "workflows/wf-split-test-creation.md",
+      "destination": "workflows/wf-split-test-creation.md",
+      "source_sha256": "88478449c2492cd7762a8ecdedb5966962a3a0cc2bf28c5109f43b609173fa93"
+    },
+    {
+      "source_relative": "checklists/hopkins-audit.md",
+      "destination": "checklists/hopkins-audit.md",
+      "source_sha256": "dbb4d56614aad315f04554787f05c8bd4268aade2ef1ad886ec92db9d352d627"
+    },
+    {
+      "source_relative": "checklists/copy-quality-checklist.md",
+      "destination": "checklists/copy-quality-checklist.md",
+      "source_sha256": "98e769b45d882122c4d8967867db07d2ae547472dd576c6cb0574e2024647bd0"
+    },
+    {
+      "source_relative": "checklists/visceral-copy-quality.md",
+      "destination": "checklists/visceral-copy-quality.md",
+      "source_sha256": "fb2e8f5f26e5c093a7246b79214655f3d639966cb66ef1f3b4de5611b4f317ad"
+    },
+    {
+      "source_relative": "checklists/carlton-simplicity-checklist.md",
+      "destination": "checklists/carlton-simplicity-checklist.md",
+      "source_sha256": "ce5090c8b78b185f86af38a70cd741aae072d5705ee960c3588f5720f39f1edb"
+    },
+    {
+      "source_relative": "templates/debate-tmpl.yaml",
+      "destination": "templates/debate-tmpl.yaml",
+      "source_sha256": "a70b94b4dbc76cae4a777548480d393ba05d0e63c087de7b815a36f398ff0c94"
+    },
+    {
+      "source_relative": "templates/blend-tmpl.yaml",
+      "destination": "templates/blend-tmpl.yaml",
+      "source_sha256": "4e778673e0e4e388701e2ba863a65151989d03d3f0b389da63f8f2b28d975c7b"
+    },
+    {
+      "source_relative": "workflows/wf-book-launch.yaml",
+      "destination": "workflows/wf-book-launch.yaml",
+      "source_sha256": "c2678d5af08a7f8cc1126acc646990410a1f407425c915858cc5f070ea299e59"
+    },
+    {
+      "source_relative": "data/copy-operating-model.md",
+      "destination": "data/copy-operating-model.md",
+      "source_sha256": "ec5b284d0178df0a7b31c340c7846644776153e72c84db4152d8e1863ba65d7e"
+    },
+    {
+      "source_relative": "workflows/operacao-tatica.md",
+      "destination": "workflows/operacao-tatica.md",
+      "source_sha256": "a67ac19cbea1c1f9c5b2883cf8314700584dec45ed48c35743aea5c2f47fcff8"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/fascinations.yaml",
+      "destination": "frameworks/bencivenga/fascinations.yaml",
+      "source_sha256": "bd2f4e68cbc0e2998c998555cf04e1fd1f843c9adff1fbd33d85c3d83f2ba6ec"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/proof-elements.yaml",
+      "destination": "frameworks/bencivenga/proof-elements.yaml",
+      "source_sha256": "b484d2e5bd52a15270b36d174d61e4b558e09cf392fc660d7d429ffb2daa9c07"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/persuasion-equation.yaml",
+      "destination": "frameworks/bencivenga/persuasion-equation.yaml",
+      "source_sha256": "91ea78d646005e781308b77ef2fea683775ff211ae2639b960b6aea51b59af9b"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/12-marketing-maxims.yaml",
+      "destination": "frameworks/bencivenga/12-marketing-maxims.yaml",
+      "source_sha256": "7b71f3d75517a0dd41fafa3073056010b2c5f302fee6410b0129a5f0529449cd"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/credo-technique.yaml",
+      "destination": "frameworks/bencivenga/credo-technique.yaml",
+      "source_sha256": "7168e07d3e37f3ff14ae87278e71ed820ac8d29cf32f0ccb4a87c34b48547340"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/7x-research.yaml",
+      "destination": "frameworks/bencivenga/7x-research.yaml",
+      "source_sha256": "c14bab7124b566f7e6b4a66e26a2a06bc72026ba930fe5c541f2f2d48f0e57f2"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/two-step-selling.yaml",
+      "destination": "frameworks/bencivenga/two-step-selling.yaml",
+      "source_sha256": "1bde25a169a185d6077b42e06d3d2d919118d1a1170cc6a5df7c785547f8ebbd"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/three-questions.yaml",
+      "destination": "frameworks/bencivenga/three-questions.yaml",
+      "source_sha256": "002159abd4a552ffe040239a7ef6a59d94f61e3599ed93f3e32a381c4d643f57"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/gifted-product.yaml",
+      "destination": "frameworks/bencivenga/gifted-product.yaml",
+      "source_sha256": "054da858b53d4b1f8336335d0eda1af25d07580d8418bfafab1a42815d9a26bf"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/29-marketing-bullets.yaml",
+      "destination": "frameworks/bencivenga/29-marketing-bullets.yaml",
+      "source_sha256": "0ba168f9f71c65c3242b54b71272f5d9553968878b819e2fb6da67221eea7122"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/80-20-rule.yaml",
+      "destination": "frameworks/bencivenga/80-20-rule.yaml",
+      "source_sha256": "33df9c3d2344f1417a91cbac53db4ea2b15835e999f110fed16338a07cfcfeea"
+    },
+    {
+      "source_relative": "frameworks/bencivenga/ad-a-day.yaml",
+      "destination": "frameworks/bencivenga/ad-a-day.yaml",
+      "source_sha256": "b526cd5414ff5204a291c38e9d1e56888ecd79012f29c6d7b353e47e533a912f"
+    },
+    {
+      "source_relative": "voice/bencivenga.yaml",
+      "destination": "voice/bencivenga.yaml",
+      "source_sha256": "d6910b69e81d14e505d819a39d28feb44542279ee214dc2f02d1701b596d1b8e"
+    },
+    {
+      "source_relative": "data/copy-request-routing.md",
+      "destination": "data/copy-request-routing.md",
+      "source_sha256": "aefe4f06491192e947f05e266fdd6781d7012cdc08a6e9b17cf6f1c9405f4be9"
+    }
+  ],
+  "unresolved": [
+    "agents/___________.md",
+    "agents/alex-hormozi.md",
+    "agents/david-ogilvy.md",
+    "checklists/plf/plc-quality.md",
+    "data/estruturas/pagina-aplicacao.md",
+    "data/estruturas/pagina-captura.md",
+    "data/estruturas/pagina-comparacao.md",
+    "data/estruturas/pagina-diagnostico-sessao.md",
+    "data/estruturas/pagina-downsell.md",
+    "data/estruturas/pagina-garantia.md",
+    "data/estruturas/pagina-lista-espera.md",
+    "data/estruturas/pagina-obrigado.md",
+    "data/estruturas/pagina-registro-evento.md",
+    "data/estruturas/pagina-vendas-evento.md",
+    "data/estruturas/pagina-vendas-geral.md",
+    "data/estruturas/pagina-vendas-lancamento.md",
+    "data/estruturas/pagina-vendas-oto.md",
+    "data/estruturas/pagina-vendas-tripwire.md",
+    "data/estruturas/pagina-vsl.md",
+    "data/references/thiagoroas-copy-analysis.yaml",
+    "data/references/thiagoroas-vsl-funnel-and-traffic-framework.yaml",
+    "data/sops/vsl-diagnostic-optimization-sop.md",
+    "data/sops/vsl-funnel-architecture-sop.md",
+    "data/sops/vsl-script-creation-sop.md",
+    "data/swipe-file-headlines-pagina.md",
+    "tasks/audit-copy-hopkins.md",
+    "tasks/criacao/vsl-script.md",
+    "tasks/design-application-page.md",
+    "tasks/diagnostico/diagnose-awareness-level.md",
+    "tasks/generate-creatives.md",
+    "templates/content/campaign-brief.yaml",
+    "templates/product-offerbook/acelerador-digital.yaml",
+    "workflows/agent-routed-execution-loop.yaml"
+  ],
+  "reference_base": "coreai-copy-shared root",
+  "status": "structural port; runtime not verified"
+}

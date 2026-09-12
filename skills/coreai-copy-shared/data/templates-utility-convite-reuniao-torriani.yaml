@@ -1,0 +1,470 @@
+---
+# ============================================================================
+# TEMPLATES UTILITY, CONVITE PARA REUNIAO (Torriani)
+# ============================================================================
+# 21 templates para submissao na API oficial do WhatsApp, categoria UTILITY.
+# Conversao das mensagens de convite (formato Marketing) para o formato que a
+# Meta aprova como Utility, mantendo a voz Imperial Torriani.
+#
+# Padroes de referência: data/banco-templates-utility-whatsapp.yaml
+# Mensagens de origem: swipe/mensagens-convite-reuniao-torriani.md (grupo E, convite)
+#
+# VALIDACAO: aprovado no regex anti-IA, no estrutural e no oraculo Torriani
+# (score clareza 6/6, auto-reprova false). Zero travessao, zero emoji.
+
+metadata:
+  schema: "copy.data.templates_utility_convite_reuniao"
+  version: "1.0.0"
+  status: "PRONTO PARA SUBMISSAO"
+  autor: "Torriani"
+  copywriter: "Dan Kennedy (clone) via Copy Chief"
+  last_updated: "2026-07-31"
+  categoria_meta: "UTILITY"
+  idioma: "pt_BR"
+  total: 21
+
+# ----------------------------------------------------------------------------
+# O FATO QUE SUSTENTA O ENQUADRAMENTO UTILITY
+# ----------------------------------------------------------------------------
+fato_gerador: |
+  O lead enviou a palavra-chave AGENTE no Instagram e preencheu o formulário
+  pedindo uma análise de IA aplicada a marketing, copy e conteúdo. Esse ato cria uma solicitação
+  real no sistema, com data e protocolo.
+
+  Toda mensagem abaixo notifica o ESTADO dessa solicitação. Nenhuma inventa
+  compromisso que não existe. Sem esse ato anterior, nada aqui é Utility.
+
+# ----------------------------------------------------------------------------
+# ANTES DE SUBMETER
+# ----------------------------------------------------------------------------
+checklist_submissao:
+  - "Gerar protocolo real no momento do preenchimento do formulário (ex: AIA-4471)"
+  - "Registrar a data do preenchimento e usar ela na variavel de data"
+  - "Definir a política real de validade do registro antes de usar os templates de expiracao"
+  - "Preencher exemplo real de cada variavel na submissao (a Meta exige)"
+  - "Submeter como UTILITY, idioma pt_BR"
+  - "Se reprovar, o motivo quase sempre e adjetivo de venda no corpo: revisar e resubmeter"
+
+# ----------------------------------------------------------------------------
+# OS 21 TEMPLATES
+# ----------------------------------------------------------------------------
+templates:
+
+  - nome_template: analise_ia_solicitacao_registrada
+    padrao: P6
+    origem: "E03 (Voce foi selecionado)"
+    nivel: SEGURO
+    titulo: "Solicitação registrada: {{1}}"
+    corpo: |
+      Olá {{1}}, sua solicitação de análise de IA aplicada a marketing, copy e conteúdo foi registrada em {{2}}.
+      Protocolo: {{3}}.
+      Status atual: aguardando definição de horário com Torriani.
+      Responda esta mensagem para seguir com o agendamento.
+    botoes: ["Acompanhar"]
+    exemplo_preenchido: |
+      Olá Marcos, sua solicitação de análise de IA aplicada a marketing, copy e conteúdo foi registrada em 28/07.
+      Protocolo: AIA-4471.
+      Status atual: aguardando definição de horário com Torriani.
+      Responda esta mensagem para seguir com o agendamento.
+    por_que_passa: "O lead enviou AGENTE e preencheu o formulário, então existe solicitação real com data e protocolo."
+
+  - nome_template: analise_ia_status_pendente
+    categoria_meta_real: MARKETING
+    status_meta: "RECLASSIFICADO EM 2026-09-03"
+    padrao: P3
+    origem: "E30 (Status: análise nao confirmada)"
+    nivel: SEGURO
+    titulo: "Status da análise de IA"
+    corpo: |
+      Status da sua solicitação de análise de IA para marketing, {{1}}: pendente.
+      Falta apenas uma informação: o melhor dia e horário para a conversa com Torriani.
+      Registrado no seu formulário em {{2}}.
+      Envie sua preferência de horário nesta conversa para atualizarmos o status.
+    botoes: ["Verificar status"]
+    exemplo_preenchido: |
+      Status da sua solicitação de análise de IA para marketing, Marcos: pendente.
+      Falta apenas uma informação: o melhor dia e horário para a conversa com Torriani.
+      Registrado no seu formulário em 28/07.
+      Envie sua preferência de horário nesta conversa para atualizarmos o status.
+    por_que_passa: "O formulário existe e está literalmente incompleto até o horário ser definido."
+
+  - nome_template: analise_ia_pendencia_agendamento
+    padrao: P3
+    origem: "E06 (Percebi que nao avancou)"
+    nivel: SEGURO
+    titulo: "Pendência no seu agendamento"
+    corpo: |
+      Antes de liberarmos sua análise de IA aplicada ao processo de marketing, {{1}}, precisamos confirmar um dado do seu cadastro.
+      Solicitação recebida em {{2}} e ainda em aberto.
+      Confirme se o número {{3}} continua sendo o melhor contato e qual período do dia funciona para você.
+    botoes: ["Confirmar dados"]
+    exemplo_preenchido: |
+      Antes de liberarmos sua análise de IA aplicada ao processo de marketing, Marcos, precisamos confirmar um dado do seu cadastro.
+      Solicitação recebida em 28/07 e ainda em aberto.
+      Confirme se o número 51 99xxx-4412 continua sendo o melhor contato e qual período do dia funciona para você.
+    por_que_passa: "O cadastro está de fato incompleto para efeito de agendamento, o que caracteriza pendência real."
+
+  - nome_template: analise_ia_lembrete_solicitacao
+    padrao: P2
+    origem: "E16 (Ainda nao garantiu)"
+    nivel: SEGURO
+    titulo: "Lembrete: análise de IA em aberto"
+    corpo: |
+      Lembrete da sua análise de IA para copy e conteúdo, {{1}}, solicitada em {{2}}.
+      Ela permanece em aberto e sem horário marcado.
+      Para reservar um horário, basta responder aqui com o dia que funciona melhor.
+    botoes: ["Ver detalhes", "Confirmar horário"]
+    exemplo_preenchido: |
+      Lembrete da sua análise de IA para copy e conteúdo, Marcos, solicitada em 28/07.
+      Ela permanece em aberto e sem horário marcado.
+      Para reservar um horário, basta responder aqui com o dia que funciona melhor.
+    por_que_passa: "A solicitação está registrada com data e o lembrete informa o estado atual do pedido."
+
+  - nome_template: analise_ia_prazo_expira
+    padrao: P5
+    origem: "E23 (Penultimo dia)"
+    nivel: SEGURO
+    titulo: "Sua solicitação expira em {{1}}"
+    corpo: |
+      Sua solicitação de análise de IA para marketing, {{1}}, fica válida até {{2}}.
+      Depois dessa data o registro é encerrado e o cadastro precisa ser refeito para entrar na próxima leva de agendamentos.
+      Responda aqui com um horário caso queira manter o registro ativo.
+    botoes: ["Manter ativo"]
+    exemplo_preenchido: |
+      Sua solicitação de análise de IA para marketing, Marcos, fica válida até 02/08.
+      Depois dessa data o registro é encerrado e o cadastro precisa ser refeito para entrar na próxima leva de agendamentos.
+      Responda aqui com um horário caso queira manter o registro ativo.
+    por_que_passa: "Existe política real de validade do registro, com data declarada e consequência operacional verificável."
+    atencao: "So use se a política de validade existir de verdade no seu processo."
+
+  - nome_template: analise_ia_encerramento_registro
+    padrao: P5
+    origem: "E19 (Encerrando atendimentos)"
+    nivel: SEGURO
+    titulo: "Encerramento de registros sem retorno"
+    corpo: |
+      Estamos encerrando os registros de análise de IA que ficaram sem retorno, {{1}}.
+      O seu, feito em {{2}}, entra nessa lista em {{3}}.
+      Se preferir manter o agendamento em aberto, responda esta mensagem antes dessa data.
+    botoes: ["Manter em aberto"]
+    exemplo_preenchido: |
+      Estamos encerrando os registros de análise de IA que ficaram sem retorno, Marcos.
+      O seu, feito em 28/07, entra nessa lista em 02/08.
+      Se preferir manter o agendamento em aberto, responda esta mensagem antes dessa data.
+    por_que_passa: "Encerramento por inatividade é procedimento operacional real sobre um registro que existe."
+
+  - nome_template: analise_ia_reagendamento
+    padrao: P4
+    origem: "E13 (Voce sumiu)"
+    nivel: SEGURO
+    titulo: "Retomar a análise de IA"
+    corpo: |
+      Sua análise de IA para conteúdo, {{1}}, segue registrada desde {{2}} e sem horário definido.
+      Registros parados costumam ser fechados por falta de contato, e o seu ainda está ativo.
+      Se quiser retomar, responda com um dia da semana que funcione.
+    botoes: ["Reagendar"]
+    exemplo_preenchido: |
+      Sua análise de IA para conteúdo, Marcos, segue registrada desde 28/07 e sem horário definido.
+      Registros parados costumam ser fechados por falta de contato, e o seu ainda está ativo.
+      Se quiser retomar, responda com um dia da semana que funcione.
+    por_que_passa: "Refere-se a registro existente que ficou parado, sem afirmar compromisso não criado."
+
+  - nome_template: analise_ia_confirmacao_interesse
+    padrao: P7
+    origem: "E20 (Ainda tem interesse)"
+    nivel: SEGURO
+    titulo: "Confirmação do seu cadastro"
+    corpo: |
+      Seu cadastro para a análise de IA de copy, {{1}}, foi feito em {{2}} e ainda consta como ativo.
+      Precisamos de uma confirmação simples para atualizar o registro: você segue querendo a análise ou prefere que ela seja arquivada?
+      Responda com sim ou arquivar.
+    botoes: ["Confirmar", "Arquivar"]
+    exemplo_preenchido: |
+      Seu cadastro para a análise de IA de copy, Marcos, foi feito em 28/07 e ainda consta como ativo.
+      Precisamos de uma confirmação simples para atualizar o registro: você segue querendo a análise ou prefere que ela seja arquivada?
+      Responda com sim ou arquivar.
+    por_que_passa: "A coleta está âncorada no cadastro datado e serve para atualizar o estado do registro."
+    nota_estrategica: "O botao Arquivar da saida honrosa. Quem clica limpa a base, quem nao clica se compromete."
+
+  - nome_template: analise_ia_vaga_reservada
+    categoria_meta_real: MARKETING
+    status_meta: "RECLASSIFICADO EM 2026-09-03"
+    padrao: P1
+    origem: "E18 (Nao me deu posicao)"
+    nivel: CRIATIVO
+    titulo: "Sua vaga está reservada até {{1}}"
+    corpo: |
+      Sua vaga na análise de IA aplicada ao marketing, {{1}}, está reservada desde {{2}}, quando você enviou a palavra AGENTE e preencheu o formulário.
+      A reserva fica no seu nome e ninguém ocupa esse lugar enquanto ela estiver ativa.
+      Falta só uma coisa: o horário. Responda com o seu e a reserva vira agendamento.
+    botoes: ["Ver detalhes", "Confirmar horário"]
+    exemplo_preenchido: |
+      Sua vaga na análise de IA aplicada ao marketing, Marcos, está reservada desde 28/07, quando você enviou a palavra AGENTE e preencheu o formulário.
+      A reserva fica no seu nome e ninguém ocupa esse lugar enquanto ela estiver ativa.
+      Falta só uma coisa: o horário. Responda com o seu e a reserva vira agendamento.
+    por_que_passa: "A reserva existe: o lead pediu a análise e ocupa lugar na fila até definir horário ou ser arquivado."
+    nota_estrategica: |
+      O melhor do lote. Usa a estrutura de confirmacao de compromisso (P1) para
+      dar peso a algo que o lead ja fez, e cita o proprio ato dele (mandou AGENTE)
+      como prova. Escassez sem urgencia fabricada.
+
+  - nome_template: analise_ia_pauta_registrada
+    padrao: P1
+    origem: "E28 (Nessa conversa voce vai entender)"
+    nivel: CRIATIVO
+    titulo: "Pauta da sua análise registrada"
+    corpo: |
+      A pauta da sua análise de IA para copy e conteúdo, {{1}}, já está montada com base no que você respondeu no formulário em {{2}}.
+      Itens registrados: {{3}}.
+      A pauta fica reservada no seu nome até o agendamento. Responda com o horário para marcarmos.
+    botoes: ["Ver detalhes"]
+    exemplo_preenchido: |
+      A pauta da sua análise de IA para copy e conteúdo, Marcos, já está montada com base no que você respondeu no formulário em 28/07.
+      Itens registrados: onde a IA entra no seu processo comercial, o que dá pra automatizar sem perder resposta, e o que custa dinheiro hoje sem você ver.
+      A pauta fica reservada no seu nome até o agendamento. Responda com o horário para marcarmos.
+    por_que_passa: "A pauta é gerada das respostas reais do formulário, então o documento existe antes da mensagem."
+    nota_estrategica: |
+      Entrega valor antes da reuniao. O lead le a pauta e ja entende o que ganha,
+      o que resolve o problema do E28 original sem soar vendedor.
+
+  - nome_template: analise_ia_protocolo_torriani
+    padrao: P6
+    origem: "E21 (Sigo com o agendamento)"
+    nivel: CRIATIVO
+    titulo: "Protocolo {{1}} atribuído"
+    corpo: |
+      Seu protocolo de análise de IA aplicada à sua operação, {{1}}, é {{2}}, aberto em {{3}}.
+      Responsável pelo protocolo: Torriani, que conduz essa conversa pessoalmente, um cadastro por vez.
+      O protocolo fica em processamento até você informar um horário nesta conversa.
+    botoes: ["Acompanhar"]
+    exemplo_preenchido: |
+      Seu protocolo de análise de IA aplicada à sua operação, Marcos, é AIA-4471, aberto em 28/07.
+      Responsável pelo protocolo: Torriani, que conduz essa conversa pessoalmente, um cadastro por vez.
+      O protocolo fica em processamento até você informar um horário nesta conversa.
+    por_que_passa: "O protocolo é gerado no preenchimento e a atribuição ao responsável é dado operacional real."
+    nota_estrategica: |
+      "Responsável pelo protocolo: Torriani" comunica atendimento individual usando
+      linguagem de sistema de atendimento. Diz que e pessoal sem dizer que e especial.
+
+  - nome_template: analise_ia_aviso_fila
+    categoria_meta_real: MARKETING
+    status_meta: "RECLASSIFICADO EM 2026-09-03"
+    padrao: P8
+    origem: "E26 (Solicitação registrada)"
+    nivel: CRIATIVO
+    titulo: "Atualização da sua fila de análise"
+    corpo: |
+      Atualização sobre a fila de análise de IA de marketing, {{1}}.
+      Seu registro de {{2}} continua aguardando a definição do horário. Os cadastros nessa condição avançam por ordem de resposta e disponibilidade de agenda.
+      Informe um horário nesta conversa para avançar na fila.
+    botoes: ["Verificar"]
+    exemplo_preenchido: |
+      Atualização sobre a fila de análise de IA de marketing, Marcos.
+      Seu registro de 28/07 continua aguardando a definição do horário. Os cadastros nessa condição avançam por ordem de resposta e disponibilidade de agenda.
+      Informe um horário nesta conversa para avançar na fila.
+    por_que_passa: "A fila de leads aguardando agendamento existe e a ordem por resposta é o critério operacional usado."
+    nota_estrategica: |
+      "Processados por ordem de resposta" transforma a demora do lead em custo
+      dele, sem ameaca e sem prazo fabricado. Quem responde primeiro anda primeiro.
+
+  - nome_template: analise_ia_contato_sem_retorno
+    padrao: P3
+    origem: "E01 (Tentei contato + motivo)"
+    nivel: SEGURO
+    titulo: "Análise de IA: 3 tentativas registradas"
+    corpo: |
+      Olá {{1}}, aqui é da equipe Torriani.
+      Registramos 3 tentativas de contato referentes à sua solicitação de análise de IA aplicada a copy e conteúdo, protocolo {{2}}, e nenhuma delas teve retorno até agora.
+      O material da sua análise já foi preparado e está anexado ao protocolo, aguardando apenas o seu aceite para ser apresentado.
+      Se preferir que a gente encerre o protocolo, é só responder aqui e retiramos você da lista de acompanhamento.
+    botoes: ["Quero receber", "Encerrar protocolo"]
+    exemplo_preenchido: |
+      Olá Marcos, aqui é da equipe Torriani.
+      Registramos 3 tentativas de contato referentes à sua solicitação de análise de IA aplicada a copy e conteúdo, protocolo AIA-4471, e nenhuma delas teve retorno até agora.
+      O material da sua análise já foi preparado e está anexado ao protocolo, aguardando apenas o seu aceite para ser apresentado.
+      Se preferir que a gente encerre o protocolo, é só responder aqui e retiramos você da lista de acompanhamento.
+    por_que_passa: "O lead enviou a palavra-chave e preencheu o formulário, o que gera protocolo real cujas tentativas de contato ficam registradas."
+
+  - nome_template: analise_ia_verificacao_recebimento
+    padrao: P8
+    origem: "E09 (Conseguiu ver minha mensagem)"
+    nivel: SEGURO
+    titulo: "Verificação de entrega da mensagem anterior"
+    corpo: |
+      Aviso automático de verificação, {{1}}.
+      A mensagem enviada em {{2}} sobre a sua análise de IA para conteúdo consta como entregue, porém sem leitura confirmada no nosso sistema.
+      Antes de seguir com o protocolo, precisamos confirmar se este é o número correto para tratar do assunto.
+      Responda com "sim" para manter este canal ou informe outro número de contato.
+    botoes: ["Número correto", "Trocar contato"]
+    exemplo_preenchido: |
+      Aviso automático de verificação, Marcos.
+      A mensagem enviada em 28/07 sobre a sua análise de IA para conteúdo consta como entregue, porém sem leitura confirmada no nosso sistema.
+      Antes de seguir com o protocolo, precisamos confirmar se este é o número correto para tratar do assunto.
+      Responda com "sim" para manter este canal ou informe outro número de contato.
+    por_que_passa: "O envio anterior e o status de entrega são eventos reais do sistema, e confirmar canal é operação de cadastro."
+
+  - nome_template: analise_ia_lista_curta_tres
+    categoria_meta_real: MARKETING
+    status_meta: "RECLASSIFICADO EM 2026-09-03"
+    padrao: P6
+    origem: "E11 (Lista VIP)"
+    nivel: CRIATIVO
+    titulo: "Seu protocolo entrou na fila de 3 análises de IA"
+    corpo: |
+      Atualização para você, {{1}}, sobre o protocolo {{2}}.
+      A fila desta semana comporta 3 análises de IA aplicadas ao marketing conduzidas diretamente por Torriani, e o seu protocolo é um dos três que constam nela.
+      A posição fica reservada até a confirmação do horário. Sem resposta, o protocolo volta para o fim da fila geral e a posição passa para o próximo da ordem.
+      Confirme aqui para manter a sua posição.
+    botoes: ["Confirmar posição", "Ver horários"]
+    exemplo_preenchido: |
+      Atualização para você, Marcos, sobre o protocolo AIA-4471.
+      A fila desta semana comporta 3 análises de IA aplicadas ao marketing conduzidas diretamente por Torriani, e o seu protocolo é um dos três que constam nela.
+      A posição fica reservada até a confirmação do horário. Sem resposta, o protocolo volta para o fim da fila geral e a posição passa para o próximo da ordem.
+      Confirme aqui para manter a sua posição.
+    por_que_passa: "A fila com capacidade limitada e a posição do protocolo são estados reais de agendamento."
+    nota_estrategica: "A escassez fica na mecânica da fila, não em adjetivo de venda. O lead lê capacidade e sente seleção."
+
+  - nome_template: analise_ia_credito_liberado
+    padrao: P6
+    origem: "E12 (Você ganhou)"
+    nivel: CRIATIVO
+    titulo: "Crédito de análise liberado no seu protocolo"
+    corpo: |
+      Olá {{1}}. O seu protocolo {{2}} teve um crédito de análise de IA para copy e conteúdo liberado e foi vinculado a uma sessão individual de 30 minutos com Torriani.
+      O crédito fica registrado em nome do titular do protocolo e não é transferível para terceiros.
+      Para usar, basta responder aqui e a equipe abre a agenda com os horários disponíveis.
+    botoes: ["Usar crédito", "Falar com a equipe"]
+    exemplo_preenchido: |
+      Olá Marcos. O seu protocolo AIA-4471 teve um crédito de análise de IA para copy e conteúdo liberado e foi vinculado a uma sessão individual de 30 minutos com Torriani.
+      O crédito fica registrado em nome do titular do protocolo e não é transferível para terceiros.
+      Para usar, basta responder aqui e a equipe abre a agenda com os horários disponíveis.
+    por_que_passa: "O preenchimento do formulário libera benefício vinculado ao protocolo, e comunicar liberação é notificação de conta."
+    nota_estrategica: "Ganhou vira crédito liberado, que é linguagem de sistema. A cláusula de não transferência reforça valor sem citar preço."
+
+  - nome_template: analise_ia_detalhes_do_formato
+    categoria_meta_real: MARKETING
+    status_meta: "RECLASSIFICADO EM 2026-09-03"
+    padrao: P7
+    origem: "E15 (Quer saber como funciona)"
+    nivel: SEGURO
+    titulo: "Detalhes do formato da sua análise"
+    corpo: |
+      Antes de agendar a análise de IA aplicada à sua operação, {{1}}, queremos verificar se você já tem os detalhes do formato.
+      A sessão do protocolo {{2}} dura 30 minutos, é individual e cobre os pontos de marketing, copy ou conteúdo que você descreveu no formulário.
+      Podemos enviar o detalhamento completo aqui antes de abrir a agenda, ou seguir direto para os horários. Escolha uma opção abaixo.
+    botoes: ["Ver detalhes", "Ir para agenda"]
+    exemplo_preenchido: |
+      Antes de agendar a análise de IA aplicada à sua operação, Marcos, queremos verificar se você já tem os detalhes do formato.
+      A sessão do protocolo AIA-4471 dura 30 minutos, é individual e cobre os pontos de marketing, copy ou conteúdo que você descreveu no formulário.
+      Podemos enviar o detalhamento completo aqui antes de abrir a agenda, ou seguir direto para os horários. Escolha uma opção abaixo.
+    por_que_passa: "Informar formato e duração de atendimento já solicitado é comunicação de serviço sobre transação existente."
+
+  - nome_template: analise_ia_status_curto
+    padrao: P8
+    origem: "E22 (Tudo bem, ultra-curta)"
+    nivel: SEGURO
+    titulo: "Atualização do protocolo"
+    corpo: |
+      Status do protocolo {{1}}: a análise de IA continua em aberto no sistema, {{2}}. Responda aqui para acompanhar.
+    botoes: ["Acompanhar"]
+    exemplo_preenchido: |
+      Status do protocolo AIA-4471: a análise de IA continua em aberto no sistema, Marcos. Responda aqui para acompanhar.
+    por_que_passa: "Uma linha de status sobre protocolo aberto é o formato mais puro de notificação de sistema."
+
+  - nome_template: analise_ia_pendencia_horario
+    padrao: P3
+    origem: "E27 (Ainda em aberto)"
+    nivel: SEGURO
+    titulo: "Pendência: horário não definido"
+    corpo: |
+      Olá {{1}}. O protocolo {{2}} está com uma pendência: a análise de IA para marketing foi solicitada, o material foi preparado, mas o horário segue sem definição.
+      Enquanto o horário não é fechado, o protocolo permanece parado nesta etapa e não avança para a agenda de Torriani.
+      Se algo estiver travando a definição do horário (agenda cheia, semana ruim, outro responsável), responda aqui que a equipe ajusta.
+    botoes: ["Definir horário", "Preciso de ajuda"]
+    exemplo_preenchido: |
+      Olá Marcos. O protocolo AIA-4471 está com uma pendência: a análise de IA para marketing foi solicitada, o material foi preparado, mas o horário segue sem definição.
+      Enquanto o horário não é fechado, o protocolo permanece parado nesta etapa e não avança para a agenda de Torriani.
+      Se algo estiver travando a definição do horário (agenda cheia, semana ruim, outro responsável), responda aqui que a equipe ajusta.
+    por_que_passa: "A pendência de agendamento existe de fato, já que a solicitação foi feita e o horário nunca foi definido."
+
+  - nome_template: analise_ia_coleta_prioridade
+    categoria_meta_real: MARKETING
+    status_meta: "RECLASSIFICADO EM 2026-09-03"
+    padrao: P7
+    origem: "E29 (O que mais te trava)"
+    nivel: SEGURO
+    titulo: "Informação pendente para sua análise"
+    corpo: |
+      Para dar sequência ao protocolo {{1}} falta um campo do seu cadastro, {{2}}.
+      Precisamos saber qual frente está travando a sua operação hoje, porque é ela que define o recorte da análise de IA aplicada a marketing, copy ou conteúdo.
+      Responda com o número correspondente:
+      1. Atrair leads
+      2. Dar conta de vender
+      3. Produzir conteúdo
+      Assim que o campo for preenchido, o protocolo segue para agendamento.
+    botoes: ["Responder agora"]
+    exemplo_preenchido: |
+      Para dar sequência ao protocolo AIA-4471 falta um campo do seu cadastro, Marcos.
+      Precisamos saber qual frente está travando a sua operação hoje, porque é ela que define o recorte da análise de IA aplicada a marketing, copy ou conteúdo.
+      Responda com o número correspondente:
+      1. Atrair leads
+      2. Dar conta de vender
+      3. Produzir conteúdo
+      Assim que o campo for preenchido, o protocolo segue para agendamento.
+    por_que_passa: "É coleta de informação faltante num cadastro que o próprio lead abriu ao preencher o formulário."
+
+  - nome_template: analise_ia_lembrete_janela_hoje
+    padrao: P2
+    origem: "E31 (Vai conseguir hoje)"
+    nivel: CRIATIVO
+    titulo: "Lembrete: janela de hoje, {{1}}"
+    corpo: |
+      Olá, aqui é da equipe Torriani.
+      A janela de análises de IA para conteúdo de hoje, {{1}}, ainda tem horário disponível e o seu protocolo {{2}} está entre os que aguardam confirmação para entrar nela.
+      A confirmação precisa acontecer até o fim do dia. Depois disso, o protocolo é realocado para a próxima janela da agenda.
+      Confirme abaixo se você participa hoje.
+    botoes: ["Participo hoje", "Outra data"]
+    exemplo_preenchido: |
+      Olá, aqui é da equipe Torriani.
+      A janela de análises de IA para conteúdo de hoje, 28/07, ainda tem horário disponível e o seu protocolo AIA-4471 está entre os que aguardam confirmação para entrar nela.
+      A confirmação precisa acontecer até o fim do dia. Depois disso, o protocolo é realocado para a próxima janela da agenda.
+      Confirme abaixo se você participa hoje.
+    por_que_passa: "Existe janela de atendimento datada e protocolo aguardando confirmação, o que torna o lembrete aviso de agenda legítimo."
+    nota_estrategica: "A urgência vem do calendário operacional, não de linguagem de escassez. Realocação soa administrativa e ainda assim custa a posição."
+
+# ----------------------------------------------------------------------------
+# SEQUENCIA RECOMENDADA DE DISPARO
+# ----------------------------------------------------------------------------
+sequencia:
+  - dia: "D+0 (logo apos o formulário)"
+    template: "analise_ia_solicitacao_registrada"
+    objetivo: "Confirmar que o pedido entrou. Abre a conversa."
+  - dia: "D+1"
+    template: "analise_ia_vaga_reservada"
+    objetivo: "O mais forte do lote. Da peso ao ato do lead e pede o horário."
+  - dia: "D+3"
+    template: "analise_ia_pauta_registrada"
+    objetivo: "Entrega valor antecipado pra quem nao respondeu."
+  - dia: "D+5"
+    template: "analise_ia_status_pendente"
+    objetivo: "Reduz a acao a uma informação so."
+  - dia: "D+8"
+    template: "analise_ia_aviso_fila"
+    objetivo: "Custo de nao responder, sem ameaca."
+  - dia: "D+12"
+    template: "analise_ia_confirmacao_interesse"
+    objetivo: "Binario com saida honrosa. Limpa a base."
+  - dia: "D+15"
+    template: "analise_ia_encerramento_registro"
+    objetivo: "Ultimo. So se a política de encerramento for real."
+
+# ----------------------------------------------------------------------------
+# LEMBRETE OPERACIONAL
+# ----------------------------------------------------------------------------
+janela_24h: |
+  Assim que o lead responde qualquer um desses templates, abre a janela de
+  24 horas e voce fala livre, sem template e sem custo por mensagem.
+
+  O template nao precisa vender. Precisa gerar UMA resposta.
+  A venda inteira acontece dentro da janela, na regua que ja existe em
+  swipe/mensagens-convite-reuniao-torriani.md.

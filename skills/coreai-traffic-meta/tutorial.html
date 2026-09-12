@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Meta · Tutorial de instalação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     DOMINUS DESIGN TOKENS — Tech Refined / Dark Mode
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root {
+    /* Background scale — pure black depth */
+    --bg-base: #000000;
+    --bg-elevated: #050505;
+    --bg-surface: #0a0a0a;
+    --bg-surface-hover: #0f0f0f;
+    --bg-overlay: #111111;
+
+    /* Foreground — WCAG AA */
+    --fg: #FAFAF8;
+    --fg-muted: #A1A1A1;
+    --fg-subtle: #6B6B6B;
+
+    /* Border scale */
+    --border: rgba(255, 255, 255, 0.06);
+    --border-subtle: rgba(255, 255, 255, 0.04);
+    --border-medium: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.15);
+
+    /* Gold accent (Dominus signature) */
+    --gold: #C9B298;
+    --gold-light: #E4D8CA;
+    --gold-dim: rgba(201, 178, 152, 0.25);
+    --gold-bg: rgba(201, 178, 152, 0.08);
+    --gold-bg-hover: rgba(201, 178, 152, 0.12);
+    --gold-border: rgba(201, 178, 152, 0.25);
+    --gold-border-strong: rgba(201, 178, 152, 0.5);
+
+    /* Status semântico */
+    --success: #4ADE80;
+    --success-bg: rgba(74, 222, 128, 0.08);
+    --success-border: rgba(74, 222, 128, 0.2);
+
+    --warning: #FBBF24;
+    --warning-bg: rgba(251, 191, 36, 0.08);
+    --warning-border: rgba(251, 191, 36, 0.2);
+
+    --error: #F87171;
+    --error-bg: rgba(248, 113, 113, 0.08);
+    --error-border: rgba(248, 113, 113, 0.2);
+
+    --info: #60A5FA;
+    --info-bg: rgba(96, 165, 250, 0.08);
+    --info-border: rgba(96, 165, 250, 0.2);
+
+    /* Layout */
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow: 0 2px 8px -2px rgb(0 0 0 / 0.3), 0 4px 16px -4px rgb(0 0 0 / 0.2);
+    --shadow-elevated: 0 4px 12px -2px rgb(0 0 0 / 0.4), 0 8px 24px -4px rgb(0 0 0 / 0.3);
+  }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg-base);
+    color: var(--fg);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     LAYOUT — main centralizado + aside TOC à direita (desktop only)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+
+  @media (min-width: 1024px) {
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 240px;
+      gap: 60px;
+      padding: 56px 40px 120px;
+    }
+  }
+
+  main { min-width: 0; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════════════════════════════════════════ */
+  header.hero {
+    text-align: left;
+    margin-bottom: 56px;
+    padding: 48px 28px 56px;
+    background:
+      radial-gradient(ellipse 100% 80% at 0% 0%, var(--gold-bg) 0%, transparent 60%),
+      var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold-border-strong) 50%, transparent 100%);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background: var(--gold-bg);
+    border: 1px solid var(--gold-border);
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .badge::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 8px var(--gold);
+  }
+  h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(34px, 6vw, 56px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    color: var(--fg);
+    margin-bottom: 16px;
+  }
+  h1 .accent { color: var(--gold); }
+  .tagline {
+    font-size: clamp(15px, 2vw, 18px);
+    color: var(--fg-muted);
+    max-width: 640px;
+    line-height: 1.55;
+  }
+  .author {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 13px;
+    color: var(--fg-subtle);
+  }
+  .author a { color: var(--gold); text-decoration: none; font-weight: 500; }
+  .author a:hover { color: var(--gold-light); }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     TOC — aside à direita no desktop, escondido no mobile
+     ═══════════════════════════════════════════════════════════════════════════ */
+  aside.toc {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    aside.toc {
+      display: block;
+      position: sticky;
+      top: 32px;
+      align-self: start;
+      max-height: calc(100vh - 64px);
+      overflow-y: auto;
+      padding: 20px 0;
+    }
+    aside.toc::-webkit-scrollbar { width: 4px; }
+    aside.toc::-webkit-scrollbar-track { background: transparent; }
+    aside.toc::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 4px; }
+  }
+  aside.toc h3 {
+    font-size: 11px;
+    color: var(--fg-subtle);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 700;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  aside.toc ol { list-style: none; counter-reset: section; }
+  aside.toc li {
+    counter-increment: section;
+    margin-bottom: 2px;
+  }
+  aside.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--fg-muted);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+    line-height: 1.4;
+  }
+  aside.toc a::before {
+    content: counter(section, decimal-leading-zero);
+    color: var(--fg-subtle);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  aside.toc a:hover {
+    color: var(--gold);
+    background: var(--gold-bg);
+    border-left-color: var(--gold);
+  }
+  aside.toc a:hover::before { color: var(--gold); }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     SECTIONS
+     ═══════════════════════════════════════════════════════════════════════════ */
+  section {
+    margin-bottom: 64px;
+    scroll-margin-top: 24px;
+  }
+  h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--fg);
+  }
+  h2 .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--gold-bg);
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    border-radius: var(--radius);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  @media (min-width: 768px) {
+    h2 .num { width: 44px; height: 44px; font-size: 16px; }
+  }
+  h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(17px, 2.5vw, 20px);
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: var(--fg);
+    letter-spacing: -0.2px;
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 8px;
+    color: var(--fg);
+  }
+  p {
+    margin-bottom: 14px;
+    color: var(--fg-muted);
+    line-height: 1.7;
+  }
+  p strong { color: var(--fg); font-weight: 600; }
+  ul, ol { margin: 12px 0 18px 22px; color: var(--fg-muted); }
+  li { margin-bottom: 6px; line-height: 1.65; }
+  a { color: var(--gold); text-decoration: none; transition: color 0.15s; }
+  a:hover { color: var(--gold-light); text-decoration: underline; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     CARDS
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  @media (min-width: 768px) {
+    .card { padding: 22px 24px; }
+  }
+  .card.success { border-color: var(--success-border); background: var(--success-bg); }
+  .card.warning { border-color: var(--warning-border); background: var(--warning-bg); }
+  .card.danger  { border-color: var(--error-border);   background: var(--error-bg); }
+  .card.info    { border-color: var(--gold-border);    background: var(--gold-bg); }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     CODE
+     ═══════════════════════════════════════════════════════════════════════════ */
+  pre {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-family: 'JetBrains Mono', 'SF Mono', Menlo, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.65;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media (min-width: 768px) {
+    pre { padding: 16px 20px; font-size: 13.5px; }
+  }
+  pre code { color: var(--fg); }
+  pre .comment { color: var(--fg-subtle); font-style: italic; }
+  pre .cmd { color: var(--gold); font-weight: 500; }
+  pre .str { color: #4ADE80; }
+  pre .var { color: #FBBF24; }
+  pre .key { color: #C084FC; }
+
+  code:not(pre code) {
+    background: var(--bg-surface);
+    color: var(--gold);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-size: 0.86em;
+    border: 1px solid var(--border);
+    word-break: break-word;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     TABS
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tab {
+    padding: 10px 16px;
+    cursor: pointer;
+    color: var(--fg-muted);
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  .tab:hover { color: var(--fg); }
+  .tab.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+  .tab-content { display: none; padding: 20px 0 4px; }
+  .tab-content.active { display: block; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     TABLES — mobile responsive
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 16px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-surface);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 480px;
+  }
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  tr:last-child td { border-bottom: none; }
+  th {
+    color: var(--fg-subtle);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background: var(--bg-elevated);
+  }
+  td { color: var(--fg-muted); }
+  td strong { color: var(--fg); }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     STEP MARKER
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--gold-bg);
+    color: var(--gold);
+    border: 1px solid var(--gold-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .step-body { flex: 1; min-width: 0; }
+  .step-body h4 { margin-top: 0; margin-bottom: 6px; }
+  .step-body p { margin-bottom: 8px; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     COMMAND GRID
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .highlight {
+    background: var(--gold-bg);
+    color: var(--gold);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .cmd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+    margin: 18px 0;
+  }
+  .cmd-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    transition: all 0.15s;
+  }
+  .cmd-card:hover {
+    border-color: var(--gold-border);
+    background: var(--bg-surface-hover);
+    transform: translateY(-1px);
+  }
+  .cmd-card .cmd {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    word-break: break-word;
+  }
+  .cmd-card .desc { font-size: 12.5px; color: var(--fg-muted); }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     QUOTE
+     ═══════════════════════════════════════════════════════════════════════════ */
+  blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 10px 18px;
+    margin: 16px 0;
+    background: var(--gold-bg);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--fg);
+    font-style: italic;
+    font-size: 14.5px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════════════════ */
+  footer {
+    text-align: center;
+    padding: 56px 0 20px;
+    color: var(--fg-subtle);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    margin-top: 64px;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer p { margin-bottom: 8px; color: var(--fg-subtle); }
+  footer p strong { color: var(--fg); }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     MOBILE OPTIMIZATIONS
+     ═══════════════════════════════════════════════════════════════════════════ */
+  @media (max-width: 640px) {
+    body { font-size: 15px; }
+    header.hero { padding: 36px 20px 40px; margin-bottom: 40px; }
+    section { margin-bottom: 48px; }
+    h2 { gap: 12px; }
+    .step { gap: 12px; margin: 16px 0; }
+    .step-num { width: 26px; height: 26px; font-size: 12px; }
+    pre { font-size: 12.5px; }
+    blockquote { padding: 10px 14px; font-size: 14px; }
+    .cmd-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<main>
+
+<!-- HEADER -->
+<header class="hero">
+  <span class="badge">Skill Claude Code · v1.0.0</span>
+  <h1>Traffic <span class="accent">Meta</span></h1>
+  <p class="tagline">Tutorial completo de instalação e uso da skill que conecta Meta Ads ao Claude Code e Claude Desktop em poucos minutos.</p>
+  <p class="author">por <a href="https://torriani.com.br" target="_blank">Juliano Torriani</a> · Maio/2026</p>
+</header>
+
+<!-- 1. O QUE É -->
+<section id="oque-e">
+  <h2><span class="num">01</span>O que é o Traffic Meta?</h2>
+  <p>É uma <strong>skill</strong> (extensão) do Claude Code que permite operar o <strong>Meta Ads</strong> (Facebook + Instagram) direto do terminal — sem abrir o Ads Manager.</p>
+
+  <div class="card info">
+    <p style="margin: 0;"><strong>Por que isso importa?</strong> Você consegue rodar análises, ver performance de campanhas, diagnosticar pixel/CAPI, identificar oportunidades — tudo conversando com o Claude. Em segundos, não em horas.</p>
+  </div>
+
+  <h3>O que você consegue fazer depois de instalar</h3>
+  <ul>
+    <li>📊 <strong>Daily pulse</strong> — resumo dos últimos 7 dias da sua conta</li>
+    <li>🎯 <strong>Análise de leads</strong> — Lead Form nativo + via pixel</li>
+    <li>🔬 <strong>Health-check</strong> — diagnóstico do pixel/CAPI</li>
+    <li>💰 <strong>Insights por campanha/adset/criativo</strong></li>
+    <li>📈 <strong>Benchmark</strong> — performance vs indústria (via MCP)</li>
+    <li>🚨 <strong>Anomalias</strong> — Meta avisa o que está fora do padrão</li>
+  </ul>
+
+  <h3>Existem dois caminhos para usar</h3>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Caminho</th><th>Onde</th><th>Para quem</th></tr>
+    <tr><td><strong>Claude Code</strong> (CLI)</td><td>Terminal</td><td>Quem quer automação, scripts, análise técnica</td></tr>
+    <tr><td><strong>Claude Desktop</strong> (MCP)</td><td>App desktop</td><td>Quem quer conversar via interface, sem terminal</td></tr>
+  </table>
+  </div>
+  <p>Este tutorial mostra os <strong>dois</strong> — você decide qual usar (ou os dois).</p>
+</section>
+
+<!-- 2. PRÉ-REQUISITOS -->
+<section id="prereqs">
+  <h2><span class="num">02</span>Pré-requisitos do sistema</h2>
+  <p>Antes de tudo, você precisa de:</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Requisito</th><th>Como verificar</th></tr>
+    <tr><td><strong>macOS, Linux ou Windows</strong></td><td>Tutorial focado em macOS — Windows funciona com adaptações</td></tr>
+    <tr><td><strong>Conta Meta Business Manager</strong> ativa</td><td><a href="https://business.facebook.com" target="_blank">business.facebook.com</a></td></tr>
+    <tr><td><strong>Acesso de Admin</strong> ao Business Manager</td><td>Settings → Users → seu papel</td></tr>
+    <tr><td><strong>Pelo menos 1 conta de ads</strong> dentro do BM</td><td>Settings → Ad Accounts</td></tr>
+  </table>
+  </div>
+
+  <div class="card warning">
+    <p style="margin: 0;">⚠️ <strong>Não tem Business Manager?</strong> Crie em <a href="https://business.facebook.com/overview" target="_blank">business.facebook.com/overview</a>. É grátis e leva 5 minutos.</p>
+  </div>
+</section>
+
+<!-- 3. INSTALAR CLI -->
+<section id="instalar-cli">
+  <h2><span class="num">03</span>Instalar a Meta Ads CLI</h2>
+  <p>A Meta lançou uma CLI oficial em <strong>29/abril/2026</strong> chamada <code>meta-ads</code>, distribuída via PyPI. É grátis.</p>
+
+  <div class="tabs" data-group="os">
+    <button class="tab active" data-tab="mac">🍎 macOS</button>
+    <button class="tab" data-tab="linux">🐧 Linux</button>
+    <button class="tab" data-tab="windows">🪟 Windows</button>
+  </div>
+
+  <div class="tab-content active" data-tab-content="mac">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div class="step-body">
+        <h4>Instale o uv (gerenciador Python moderno)</h4>
+        <p>Abra o Terminal (Cmd+Space → "Terminal") e cole:</p>
+<pre><code><span class="cmd">brew install uv</span></code></pre>
+        <p>Não tem Homebrew? Instale antes em <a href="https://brew.sh" target="_blank">brew.sh</a>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-num">2</span>
+      <div class="step-body">
+        <h4>Instale Python 3.12+</h4>
+<pre><code><span class="cmd">uv python install 3.12</span></code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-num">3</span>
+      <div class="step-body">
+        <h4>Instale a Meta Ads CLI</h4>
+<pre><code><span class="cmd">uv tool install meta-ads</span></code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-num">4</span>
+      <div class="step-body">
+        <h4>Verifique se funcionou</h4>
+<pre><code><span class="cmd">meta ads --help</span></code></pre>
+        <p>Deve aparecer ajuda da CLI com subcomandos: <code>ad</code>, <code>adaccount</code>, <code>campaign</code>, <code>insights</code>...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" data-tab-content="linux">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div class="step-body">
+        <h4>Instale o uv</h4>
+<pre><code><span class="cmd">curl -LsSf https://astral.sh/uv/install.sh | sh</span></code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div class="step-body">
+        <h4>Instale Python e a CLI</h4>
+<pre><code><span class="cmd">uv python install 3.12
+uv tool install meta-ads</span></code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div class="step-body">
+        <h4>Verifique</h4>
+<pre><code><span class="cmd">meta ads --help</span></code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" data-tab-content="windows">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div class="step-body">
+        <h4>Instale o uv via PowerShell</h4>
+<pre><code><span class="cmd">powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"</span></code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div class="step-body">
+        <h4>Instale Python e a CLI</h4>
+<pre><code><span class="cmd">uv python install 3.12
+uv tool install meta-ads</span></code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div class="step-body">
+        <h4>Verifique</h4>
+<pre><code><span class="cmd">meta ads --help</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. TOKEN -->
+<section id="token">
+  <h2><span class="num">04</span>Gerar o token Meta (System User Token)</h2>
+  <p>Você precisa de um token para autorizar o acesso. <strong>Use System User Token</strong> — ele <span class="highlight">não expira</span>, diferente do token do Graph API Explorer (que expira em 60 dias).</p>
+
+  <div class="card info">
+    <p style="margin: 0;">⏱️ <strong>Tempo:</strong> ~5 minutos · 💰 <strong>Custo:</strong> grátis</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-body">
+      <h4>Acesse o Business Manager</h4>
+      <p>Abra <a href="https://business.facebook.com/settings/system-users" target="_blank">business.facebook.com/settings/system-users</a></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-body">
+      <h4>Crie um System User</h4>
+      <p>Clique em <strong>+ Add</strong> (canto superior direito) e preencha:</p>
+      <ul>
+        <li><strong>Nome:</strong> <code>meta-cli-{seu-nome}</code> (ex: <code>meta-cli-juliano</code>)</li>
+        <li><strong>Role:</strong> <strong>Admin</strong></li>
+      </ul>
+      <p>Clique em <strong>Create System User</strong>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-body">
+      <h4>Adicione Assets ao System User</h4>
+      <p>Clique no usuário criado → <strong>Add Assets</strong> → marque:</p>
+      <ul>
+        <li>✅ <strong>Ad Accounts</strong> — todas as contas que você quer gerenciar (defina permissão "Manage campaigns")</li>
+        <li>✅ <strong>Pages</strong> — Facebook Pages das suas marcas</li>
+        <li>✅ <strong>Pixels/Datasets</strong> — pixels de tracking</li>
+      </ul>
+      <p>Clique em <strong>Save Changes</strong>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-body">
+      <h4>Gere o token</h4>
+      <p>De volta na tela do System User, clique em <strong>Generate New Token</strong>:</p>
+      <ul>
+        <li><strong>App:</strong> selecione qualquer Meta Developer App. Não tem? Crie um em <a href="https://developers.facebook.com/apps" target="_blank">developers.facebook.com/apps</a> tipo "Business" (qualquer nome)</li>
+        <li><strong>Token Expiration:</strong> <span class="highlight">Never</span></li>
+        <li><strong>Permissions:</strong> ✅ <code>ads_management</code> · ✅ <code>ads_read</code> · ✅ <code>business_management</code></li>
+      </ul>
+      <p>Clique em <strong>Generate Token</strong>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">5</span>
+    <div class="step-body">
+      <h4>Copie o token</h4>
+      <div class="card warning">
+        <p style="margin: 0;">⚠️ <strong>O token só aparece UMA vez.</strong> Se fechar a janela sem copiar, vai ter que gerar outro. Copie agora.</p>
+      </div>
+      <p>Token tem ~200 caracteres e começa com <code>EAAi...</code></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">6</span>
+    <div class="step-body">
+      <h4>Persista no shell (não precisa colar toda vez)</h4>
+      <p>No terminal:</p>
+<pre><code><span class="cmd">echo '' &gt;&gt; ~/.zshrc
+echo '# Meta Ads CLI' &gt;&gt; ~/.zshrc
+echo 'export ACCESS_TOKEN="<span class="str">SEU_TOKEN_AQUI</span>"' &gt;&gt; ~/.zshrc
+echo 'export AD_ACCOUNT_ID="<span class="str">act_XXXXXXXXX</span>"' &gt;&gt; ~/.zshrc
+source ~/.zshrc</span></code></pre>
+      <p>Substitua <code>SEU_TOKEN_AQUI</code> e <code>act_XXXXXXXXX</code> pelos seus valores.</p>
+      <p>O <code>AD_ACCOUNT_ID</code> você pega em <a href="https://business.facebook.com/settings/ad-accounts" target="_blank">business.facebook.com/settings/ad-accounts</a> (formato <code>act_123456789</code>).</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">7</span>
+    <div class="step-body">
+      <h4>Teste</h4>
+<pre><code><span class="cmd">meta ads adaccount list</span></code></pre>
+      <p>Deve aparecer uma tabela com suas contas. Se aparecer, ✅ está tudo certo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CLAUDE DESKTOP -->
+<section id="claude-desktop">
+  <h2><span class="num">05</span>Configurar Claude Desktop + MCP</h2>
+  <p>O <strong>Claude Desktop</strong> é o app gráfico (não é o Claude Code do terminal). É onde você usa o <strong>MCP oficial da Meta</strong> — tem ferramentas extra como <strong>opportunities</strong>, <strong>industry benchmark</strong> e <strong>anomaly signal</strong>.</p>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-body">
+      <h4>Baixe o Claude Desktop</h4>
+      <p>Acesse <a href="https://claude.ai/download" target="_blank">claude.ai/download</a> e instale o app pra Mac/Windows.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-body">
+      <h4>Faça login</h4>
+      <p>Abra o Claude Desktop e faça login com sua conta Anthropic (a mesma do claude.ai).</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-body">
+      <h4>Conecte o MCP da Meta</h4>
+      <p>No Claude Desktop:</p>
+      <ol>
+        <li>Vá em <strong>Settings</strong> → <strong>Connectors</strong> (ou <strong>Features → MCP</strong> dependendo da versão)</li>
+        <li>Clique em <strong>Add MCP Server</strong></li>
+        <li>Cole a URL: <code>https://mcp.facebook.com/ads</code></li>
+        <li>Confirme</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-body">
+      <h4>Autorize no Meta Business</h4>
+      <p>Vai abrir o navegador. Faça login no Meta Business e:</p>
+      <ul>
+        <li>Selecione quais Ad Accounts autorizar</li>
+        <li>Selecione Pages, Pixels, Catálogos</li>
+        <li>Escolha <strong>Read + Write</strong> (para criar campanhas) ou <strong>Read-only</strong> (só análise)</li>
+      </ul>
+      <p>Confirme. O token é gerenciado pela Meta automaticamente.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">5</span>
+    <div class="step-body">
+      <h4>Teste</h4>
+      <p>De volta no Claude Desktop, peça:</p>
+<pre><code><span class="cmd">"Mostra minhas contas Meta Ads"</span></code></pre>
+      <p>Ele vai listar suas contas — está conectado.</p>
+    </div>
+  </div>
+
+  <div class="card success">
+    <p style="margin: 0;">✅ <strong>Vantagem do Claude Desktop:</strong> tem acesso às 29 ferramentas oficiais Meta, incluindo <code>ads_get_opportunity_score</code>, <code>ads_insights_industry_benchmark</code> e <code>ads_insights_anomaly_signal</code> — que NÃO estão na CLI.</p>
+  </div>
+</section>
+
+<!-- 6. CLAUDE CODE -->
+<section id="claude-code">
+  <h2><span class="num">06</span>Configurar Claude Code (terminal)</h2>
+  <p>O <strong>Claude Code</strong> é a CLI do terminal — é onde você instala skills (extensões customizadas como esta <code>traffic-meta</code>).</p>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-body">
+      <h4>Instale o Claude Code</h4>
+<pre><code><span class="cmd">curl -fsSL https://claude.ai/install.sh | sh</span></code></pre>
+      <p>Ou siga <a href="https://claude.com/claude-code" target="_blank">claude.com/claude-code</a>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-body">
+      <h4>Faça login</h4>
+<pre><code><span class="cmd">claude /login</span></code></pre>
+      <p>Use a mesma conta Anthropic.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-body">
+      <h4>Verifique se tudo funciona</h4>
+<pre><code><span class="cmd">claude</span></code></pre>
+      <p>Abre o Claude Code dentro da pasta atual. Para sair: <code>Ctrl+C</code> duas vezes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. INSTALAR SKILL -->
+<section id="instalar-skill">
+  <h2><span class="num">07</span>Instalar a skill traffic-meta</h2>
+  <p>Você recebeu o arquivo <code>traffic-meta.zip</code>. Agora vamos instalar.</p>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-body">
+      <h4>Extrair o ZIP</h4>
+<pre><code><span class="cmd">mkdir -p ~/claude/coreaios/skills
+unzip ~/Downloads/traffic-meta.zip -d ~/claude/coreaios/skills/</span></code></pre>
+      <p>Resultado: pasta criada em <code>~/claude/coreaios/skills/traffic-meta/</code></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-body">
+      <h4>Conectar com Claude Code</h4>
+      <p>Garante que <code>~/.claude/skills</code> aponta para sua pasta de skills:</p>
+<pre><code><span class="cmd">mkdir -p ~/.claude
+ln -sfn ~/claude/coreaios/skills ~/.claude/skills</span></code></pre>
+      <p>Isso cria um symlink. A partir daí, qualquer skill que você colocar em <code>~/claude/coreaios/skills/</code> aparece automaticamente no Claude Code.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-body">
+      <h4>Reinicie o Claude Code</h4>
+      <p>Feche todas as instâncias abertas do Claude Code e abra novamente. A skill <code>traffic-meta</code> aparece automaticamente.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-body">
+      <h4>Teste</h4>
+      <p>Dentro do Claude Code, digite:</p>
+<pre><code><span class="cmd">/traffic-meta status</span></code></pre>
+      <p>Deve mostrar o diagnóstico:</p>
+<pre><code><span class="comment">📊 traffic-meta status
+─────────────────────────────────────────────────────────
+Python:           3.14.x
+uv:               0.10.x
+meta CLI:         ✅
+ACCESS_TOKEN:     EAAi...XXXX
+AD_ACCOUNT_ID:    act_XXXXXXX
+Token válido:     ✅ (1 contas autorizadas)</span></code></pre>
+    </div>
+  </div>
+
+  <div class="card success">
+    <p style="margin: 0;">🎉 <strong>Pronto!</strong> Tudo funcionando. Próxima seção: como usar.</p>
+  </div>
+</section>
+
+<!-- 8. USAR -->
+<section id="usar">
+  <h2><span class="num">08</span>Como usar</h2>
+  <p>Dentro do Claude Code, em qualquer pasta:</p>
+
+  <h3>🔧 Setup &amp; diagnóstico</h3>
+  <div class="cmd-grid">
+    <div class="cmd-card"><span class="cmd">/traffic-meta setup</span><span class="desc">Wizard interativo de instalação</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta status</span><span class="desc">Diagnóstico read-only do estado atual</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta token-rotate</span><span class="desc">Renovar/substituir token</span></div>
+  </div>
+
+  <h3>📊 Inteligência diária</h3>
+  <div class="cmd-grid">
+    <div class="cmd-card"><span class="cmd">/traffic-meta daily-pulse</span><span class="desc">Snapshot últimos 7 dias + alertas</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta health-check</span><span class="desc">Diagnóstico do pixel/CAPI</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta opportunities</span><span class="desc">Oportunidades rankeadas pela Meta (via MCP)</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta benchmark</span><span class="desc">Performance vs indústria (via MCP)</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta anomalies</span><span class="desc">Anomalias detectadas pela Meta (via MCP)</span></div>
+  </div>
+
+  <h3>🎓 Educacional</h3>
+  <div class="cmd-grid">
+    <div class="cmd-card"><span class="cmd">/traffic-meta tour</span><span class="desc">Tour pelas 29 ferramentas oficiais</span></div>
+    <div class="cmd-card"><span class="cmd">/traffic-meta troubleshoot</span><span class="desc">Wizard de problemas comuns</span></div>
+  </div>
+
+  <h3>💬 Linguagem natural</h3>
+  <p>Você também pode pedir em português direto:</p>
+  <blockquote>"Faz uma análise de leads dos últimos 7 dias na conta Tastefy"</blockquote>
+  <blockquote>"Quais campanhas estão gerando mais leads e qual o CPL de cada uma?"</blockquote>
+  <blockquote>"O pixel está saudável? Qual a taxa de conversão da landing page?"</blockquote>
+  <p>O Claude Code chama a skill <code>traffic-meta</code> automaticamente quando reconhece que é sobre Meta Ads.</p>
+</section>
+
+<!-- 9. TROUBLESHOOTING -->
+<section id="troubleshooting">
+  <h2><span class="num">09</span>Troubleshooting</h2>
+
+  <h3>🔴 <code>command not found: meta</code></h3>
+  <div class="card">
+    <p><strong>Causa:</strong> CLI não foi instalada ou PATH não atualizado.</p>
+    <p><strong>Fix:</strong></p>
+<pre><code><span class="cmd">uv tool install meta-ads
+uv tool update-shell
+source ~/.zshrc</span></code></pre>
+    <p>Se persistir, abra novo terminal.</p>
+  </div>
+
+  <h3>🔴 <code>Invalid OAuth access token</code></h3>
+  <div class="card">
+    <p><strong>Causa:</strong> Token expirado, vazio ou revogado.</p>
+    <p><strong>Fix:</strong> Verifique:</p>
+<pre><code><span class="cmd">echo $ACCESS_TOKEN | head -c 20</span></code></pre>
+    <p>Deve aparecer <code>EAAi...</code>. Se vazio, persista no <code>~/.zshrc</code>. Se aparecer mas inválido, gere novo System User Token (volte ao Passo 4).</p>
+  </div>
+
+  <h3>🔴 <code>adaccount list</code> retorna array vazio</h3>
+  <div class="card">
+    <p><strong>Causa:</strong> Token válido, mas System User não tem assets.</p>
+    <p><strong>Fix:</strong> Volte em <a href="https://business.facebook.com/settings/system-users" target="_blank">business.facebook.com/settings/system-users</a> → seu System User → <strong>Add Assets</strong> → adicione Ad Accounts e defina permissão <strong>Manage campaigns</strong>.</p>
+  </div>
+
+  <h3>🔴 Skill não aparece no Claude Code</h3>
+  <div class="card">
+    <p><strong>Causa:</strong> Symlink não criado ou skill em pasta errada.</p>
+    <p><strong>Fix:</strong></p>
+<pre><code><span class="cmd">ls -la ~/.claude/skills</span></code></pre>
+    <p>Deve mostrar <code>skills -&gt; /Users/seu-usuario/claude/coreaios/skills</code>. Se não:</p>
+<pre><code><span class="cmd">rm -rf ~/.claude/skills
+ln -sfn ~/claude/coreaios/skills ~/.claude/skills</span></code></pre>
+    <p>Reinicie o Claude Code.</p>
+  </div>
+
+  <h3>🔴 MCP não conecta no Claude Desktop</h3>
+  <div class="card">
+    <p><strong>Causa:</strong> Internet, sessão expirada, ou conta sem assets.</p>
+    <p><strong>Fix:</strong> Settings → Connectors → desconectar e reconectar <code>https://mcp.facebook.com/ads</code>. Reinicie Claude Desktop. Se persistir, autorize um System User dedicado em <a href="https://business.facebook.com/settings/people" target="_blank">business.facebook.com/settings/people</a>.</p>
+  </div>
+
+  <h3>🔴 Token expirou (raro com System User)</h3>
+  <div class="card">
+    <p><strong>Causa:</strong> Token foi revogado (manual ou política Meta).</p>
+    <p><strong>Fix:</strong> Gere novo token em <a href="https://business.facebook.com/settings/system-users" target="_blank">business.facebook.com/settings/system-users</a> → System User → <strong>Generate New Token</strong>. Atualize <code>ACCESS_TOKEN</code> no <code>~/.zshrc</code>.</p>
+  </div>
+
+  <h3>🟡 Performance da CLI lenta</h3>
+  <div class="card">
+    <p><strong>Causa:</strong> Rate limit Meta API (~200 calls/hora padrão).</p>
+    <p><strong>Fix:</strong> Aguarde 5-15min. Para escalar, peça <strong>Marketing API Standard Access</strong> em <a href="https://developers.facebook.com" target="_blank">developers.facebook.com</a>.</p>
+  </div>
+
+  <h3>❓ Preciso de ajuda extra</h3>
+  <div class="card info">
+    <p style="margin: 0;">📧 <a href="mailto:juliano@torriani.com.br">juliano@torriani.com.br</a> · 🐦 <a href="https://twitter.com/torriani" target="_blank">@torriani</a> · 🌐 <a href="https://torriani.com.br" target="_blank">torriani.com.br</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Traffic Meta v1.0.0</strong> · Maio/2026 · por <a href="https://torriani.com.br" target="_blank">Juliano Torriani</a></p>
+  <p>Compatível com Meta Ads CLI <code>meta-ads</code> · MCP <code>mcp.facebook.com/ads</code> · Claude Code &amp; Claude Desktop</p>
+  <p style="margin-top: 16px;">🤖 Skill criada com Claude Code · Design system Dominus</p>
+</footer>
+
+</main>
+
+<!-- TOC sidebar (desktop only, escondido no mobile via CSS) -->
+<aside class="toc" aria-label="Sumário">
+  <h3>Sumário</h3>
+  <ol>
+    <li><a href="#oque-e">O que é o Traffic Meta?</a></li>
+    <li><a href="#prereqs">Pré-requisitos</a></li>
+    <li><a href="#instalar-cli">Instalar a CLI</a></li>
+    <li><a href="#token">Gerar o token</a></li>
+    <li><a href="#claude-desktop">Claude Desktop + MCP</a></li>
+    <li><a href="#claude-code">Claude Code</a></li>
+    <li><a href="#instalar-skill">Instalar a skill</a></li>
+    <li><a href="#usar">Como usar</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+  </ol>
+</aside>
+
+</div>
+
+<script>
+  // Tabs (compartilhado entre todas as seções com data-group)
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const tabId = tab.dataset.tab;
+      tab.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const contents = tab.parentElement.parentElement.querySelectorAll('.tab-content');
+      contents.forEach(c => c.classList.remove('active'));
+      const target = tab.parentElement.parentElement.querySelector(`[data-tab-content="${tabId}"]`);
+      if (target) target.classList.add('active');
+    });
+  });
+
+  // Scroll spy — destaca link ativo do TOC no desktop
+  const sections = document.querySelectorAll('section[id]');
+  const tocLinks = document.querySelectorAll('aside.toc a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        tocLinks.forEach(link => {
+          link.style.color = '';
+          link.style.background = '';
+          link.style.borderLeftColor = 'transparent';
+          if (link.getAttribute('href') === '#' + id) {
+            link.style.color = 'var(--gold)';
+            link.style.background = 'var(--gold-bg)';
+            link.style.borderLeftColor = 'var(--gold)';
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

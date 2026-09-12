@@ -1,0 +1,261 @@
+[
+  {
+    "reference": "agents/___________.md",
+    "classification": "example-placeholder",
+    "reason": "Exemplo/placeholder de origem, não dependência de cliente.",
+    "consumers": [
+      "checklists/copywriter-agent-creation-checklist.md"
+    ]
+  },
+  {
+    "reference": "agents/alex-hormozi.md",
+    "classification": "resolved-alternative",
+    "reason": "agents/tier-1-estrategistas/alex-hormozi.md",
+    "consumers": []
+  },
+  {
+    "reference": "agents/david-ogilvy.md",
+    "classification": "resolved-alternative",
+    "reason": "agents/tier-2-executores/david-ogilvy.md",
+    "consumers": []
+  },
+  {
+    "reference": "checklists/plf/plc-quality.md",
+    "classification": "blocked-branch",
+    "reason": "Sem alternativa equivalente comprovada; bloquear ramo que solicitar este recurso.",
+    "consumers": [
+      "workflows/wf-evaluate-cpls-batch.yaml",
+      "agents/tier-2-executores/jeff-walker.md"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-aplicacao.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/pagina-vendas-mentoria.md",
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-captura.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-comparacao.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-diagnostico-sessao.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-downsell.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-garantia.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-lista-espera.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-obrigado.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-registro-evento.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-vendas-evento.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-vendas-geral.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-vendas-lancamento.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-vendas-oto.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-vendas-tripwire.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/estruturas/pagina-vsl.md",
+    "classification": "blocked-branch",
+    "reason": "Estrutura específica inexistente; bloquear este tipo de página. Apenas perpetuo/mentoria com estrutura real ficam disponíveis.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "data/references/thiagoroas-copy-analysis.yaml",
+    "classification": "optional-planned",
+    "reason": "Workflow VSL atual declara estas fontes planejadas/opcionais; fallback create-vsl real.",
+    "consumers": [
+      "workflows/wf-vsl-perpetual.yaml"
+    ]
+  },
+  {
+    "reference": "data/references/thiagoroas-vsl-funnel-and-traffic-framework.yaml",
+    "classification": "optional-planned",
+    "reason": "Workflow VSL atual declara estas fontes planejadas/opcionais; fallback create-vsl real.",
+    "consumers": [
+      "workflows/wf-vsl-perpetual.yaml"
+    ]
+  },
+  {
+    "reference": "data/sops/vsl-diagnostic-optimization-sop.md",
+    "classification": "optional-planned",
+    "reason": "Workflow VSL atual declara estas fontes planejadas/opcionais; fallback create-vsl real.",
+    "consumers": [
+      "workflows/wf-vsl-perpetual.yaml"
+    ]
+  },
+  {
+    "reference": "data/sops/vsl-funnel-architecture-sop.md",
+    "classification": "optional-planned",
+    "reason": "Workflow VSL atual declara estas fontes planejadas/opcionais; fallback create-vsl real.",
+    "consumers": [
+      "workflows/wf-vsl-perpetual.yaml"
+    ]
+  },
+  {
+    "reference": "data/sops/vsl-script-creation-sop.md",
+    "classification": "optional-planned",
+    "reason": "Workflow VSL atual declara estas fontes planejadas/opcionais; fallback create-vsl real.",
+    "consumers": [
+      "workflows/wf-vsl-perpetual.yaml"
+    ]
+  },
+  {
+    "reference": "data/swipe-file-headlines-pagina.md",
+    "classification": "blocked-branch",
+    "reason": "Sem alternativa equivalente comprovada; bloquear ramo que solicitar este recurso.",
+    "consumers": [
+      "data/estruturas/taxonomia-paginas.yaml",
+      "frameworks/torriani/headlines-ganchos.md"
+    ]
+  },
+  {
+    "reference": "tasks/audit-copy-hopkins.md",
+    "classification": "blocked-branch",
+    "reason": "Sem alternativa equivalente comprovada; bloquear ramo que solicitar este recurso.",
+    "consumers": [
+      "tasks/otimizacao/audit-copy.md"
+    ]
+  },
+  {
+    "reference": "tasks/criacao/vsl-script.md",
+    "classification": "resolved-alternative",
+    "reason": "tasks/criacao/create-vsl.md",
+    "consumers": []
+  },
+  {
+    "reference": "tasks/design-application-page.md",
+    "classification": "blocked-branch",
+    "reason": "Sem alternativa equivalente comprovada; bloquear ramo que solicitar este recurso.",
+    "consumers": [
+      "data/estruturas/pagina-vendas-mentoria.md",
+      "data/estruturas/taxonomia-paginas.yaml"
+    ]
+  },
+  {
+    "reference": "tasks/diagnostico/diagnose-awareness-level.md",
+    "classification": "resolved-alternative",
+    "reason": "tasks/diagnostico/diagnose-awareness.md",
+    "consumers": []
+  },
+  {
+    "reference": "tasks/generate-creatives.md",
+    "classification": "blocked-branch",
+    "reason": "Geração visual fora da escrita; não disponível nesta rota.",
+    "consumers": [
+      "checklists/anuncio-estatico-checklist.md",
+      "workflows/wf-anuncio-estatico.md"
+    ]
+  },
+  {
+    "reference": "templates/content/campaign-brief.yaml",
+    "classification": "excluded-organizational-template",
+    "reason": "Fonte localizada fora do escopo autorizado; não dependência direta das rotas principais. Briefing de escrita local disponível; bloqueio geral removido.",
+    "consumers": [
+      "tasks/create-campaign-brief.md"
+    ]
+  },
+  {
+    "reference": "templates/product-offerbook/acelerador-digital.yaml",
+    "classification": "example-placeholder",
+    "reason": "Exemplo/placeholder de origem, não dependência de cliente.",
+    "consumers": [
+      "tasks/load-workspace-context.md"
+    ]
+  },
+  {
+    "reference": "workflows/agent-routed-execution-loop.yaml",
+    "classification": "excluded-integration",
+    "reason": "Orquestração externa excluída; contrato CoreAI governa contexto/execução.",
+    "consumers": []
+  }
+]

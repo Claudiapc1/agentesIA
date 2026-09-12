@@ -1,0 +1,28 @@
+# ContextOS - Brand Manifesto
+# Sintetizado a partir de: brand.yaml + founder-dna.yaml + company-profile.yaml
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+manifesto:
+  opening: null       # Frase de abertura impactante
+  beliefs: []         # No que acreditamos (3-5 crencas)
+  stand_against: []   # Contra o que lutamos
+  stand_for: []       # Pelo que lutamos
+  promise: null       # A promessa central
+  call_to_action: null  # O chamado
+  closing: null       # Frase de fechamento
+
+tone_guide:
+  read_aloud: null    # Como soa quando lido em voz alta
+  emotion_evoked: null  # Que emocao deve evocar
+  energy_level: null  # baixa | media | alta | explosiva
+
+metadata:
+  source_files:
+    - context/brand.yaml
+    - context/founder-dna.yaml
+    - context/company-profile.yaml
+  generated: false
+  status: INCOMPLETE

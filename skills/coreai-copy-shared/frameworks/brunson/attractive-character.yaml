@@ -1,0 +1,46 @@
+# Attractive Character - Russell Brunson
+# Source: DotCom Secrets
+# Category: personal_branding
+
+name: "Attractive Character"
+version: "1.0"
+source: "Russell Brunson - DotCom Secrets"
+category: "personal_branding"
+command: "*attractive-character"
+
+description: |
+  A persona que voce projeta para criar conexao com sua audiencia.
+  Nao e ser falso - e amplificar os elementos certos de quem
+  voce realmente e para atrair os clientes certos.
+
+elements:
+  backstory:
+    purpose: "Criar relatabilidade"
+    include: ["Origem humilde", "Dificuldades enfrentadas", "Momento de virada"]
+
+  parables:
+    purpose: "Ensinar atraves de historias"
+    types: ["Historias de clientes", "Suas proprias experiencias", "Metaforas"]
+
+  character_flaws:
+    purpose: "Criar autenticidade"
+    examples: ["Vulnerabilidades", "Erros passados", "Lutas continuas"]
+
+  polarity:
+    purpose: "Tomar posicao e atrair os certos"
+    approach: "Nao tente agradar a todos - tenha opiniao"
+
+identities:
+  - "The Leader: Lidera pelo exemplo"
+  - "The Adventurer: Compartilha a jornada"
+  - "The Reporter: Investiga e reporta"
+  - "The Reluctant Hero: Nao queria, mas precisou"
+
+application: |
+  Sua Attractive Character aparece em:
+  - Emails (historias pessoais)
+  - VSLs (origin story)
+  - Social media (bastidores)
+  - Sales pages (quem e voce e por que devem ouvir)
+
+when_to_use: "Desenvolver presenca de marca pessoal para qualquer funil."

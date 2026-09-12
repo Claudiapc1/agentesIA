@@ -1,0 +1,18 @@
+# Guarantee Formulations
+# Target: 50-80 entries
+# Formulacoes de garantia organizadas por tipo
+
+category: guarantees
+target_count: "50-80"
+description: "Formulacoes de garantia (money-back, condicional, better-than-money-back, anti-garantia)"
+created: 2026-03-09T00:00:00-03:00
+entries: []
+tags: []
+
+# Quality distribution (target)
+quality_distribution:
+  5_star: "10%"
+  4_star: "30%"
+  3_star: "40%"
+  2_star: "15%"
+  1_star: "5%"

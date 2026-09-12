@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+  TEMPLATE HTML — Stories de Captação (Torriani)
+  Squad copy · saída visual da task create-stories-captacao.md
+  COMO USAR: substituir os placeholders {{...}} e preencher o array `stories`.
+    {{TITULO}}        → nome da recompensa/campanha (ex: O Time Que Nunca Dorme)
+    {{SUBTITULO}}     → linha de contexto (ex: 30 agentes de IA, casos reais)
+    {{PALAVRA_CHAVE}} → palavra do Direct em CAIXA ALTA (ex: AGENTE)
+    {{STORAGE_KEY}}   → chave única do localStorage (ex: stories-captacao-{tema})
+    {{QTD}}           → número de stories no banco
+    array `stories`   → cada item {n:"01", a:"abertura\ncom quebra", c:"contexto\ncom quebra"}
+  Design System Torriani Dark (A): Made Outer + Torriani Blue #2B7DE1. NÃO alterar as cores.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stories de Captação — {{TITULO}}</title>
+<style>
+  :root{
+    --bg:#000000; --card:#0A0A0A; --card-border:rgba(156,156,156,0.15);
+    --abertura:#FFFFFF; --contexto:#BDBDBD; --mut:#8a8a8a;
+    --accent:#2B7DE1; --accent-soft:#5b9be6; --divider:rgba(156,156,156,0.18);
+    --btn-bg:#2B7DE1; --btn-text:#FFFFFF; --used-bg:#0a1f3d; --used-border:#1a3c70; --ok:#22c55e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--abertura);
+    font-family:"Made Outer",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    line-height:1.5;padding:32px 16px 80px;}
+  .wrap{max-width:1200px;margin:0 auto}
+  header{text-align:center;margin-bottom:8px}
+  h1{font-size:28px;font-weight:800;letter-spacing:-.5px;color:var(--abertura)}
+  .sub{color:var(--mut);font-size:14px;margin-top:6px}
+  .key{display:inline-block;margin-top:14px;background:var(--accent);color:#FFFFFF;
+    font-weight:800;padding:6px 14px;border-radius:999px;font-size:13px;letter-spacing:.5px}
+  .meta{color:var(--mut);font-size:13px;margin-top:18px;text-align:center;
+    border-top:1px solid var(--divider);padding-top:18px;max-width:900px;margin-left:auto;margin-right:auto}
+  .toolbar{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap;align-items:center}
+  .btn-all{background:var(--accent);color:#FFFFFF;border:none;font-weight:800;
+    padding:11px 20px;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit}
+  .btn-all:hover{background:var(--accent-soft)}
+  .btn-secondary{background:transparent;color:var(--abertura);border:1px solid var(--card-border);
+    font-weight:700;padding:11px 18px;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit}
+  .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+  .counter{background:var(--card);border:1px solid var(--card-border);
+    padding:8px 14px;border-radius:999px;font-size:13px;color:var(--mut)}
+  .counter b{color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px;margin-top:28px}
+  .card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;
+    padding:20px;display:flex;flex-direction:column;gap:14px;position:relative;
+    transition:border-color .2s,transform .2s,background .2s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card.used{background:var(--used-bg);border-color:var(--used-border);opacity:.7}
+  .card.used:hover{opacity:1}
+  .card.used::after{content:"USADO";position:absolute;top:14px;right:14px;
+    background:var(--accent);color:#FFFFFF;font-size:10px;font-weight:800;letter-spacing:1.5px;
+    padding:4px 10px;border-radius:999px;}
+  .num{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px}
+  .block{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mut);
+    margin-bottom:5px;display:block;font-weight:700}
+  .abertura{font-size:19px;font-weight:800;line-height:1.3;color:var(--abertura)}
+  .contexto{font-size:15px;color:var(--contexto);line-height:1.5}
+  .cta{font-size:15px;font-weight:700;color:var(--abertura)}
+  .cta b{color:var(--accent)}
+  .divider{height:1px;background:var(--divider);margin:2px 0}
+  .actions{display:flex;gap:8px;margin-top:4px}
+  .btn{flex:1;background:transparent;border:1px solid var(--card-border);
+    color:var(--abertura);font-size:13px;font-weight:700;padding:10px 12px;border-radius:10px;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;
+    transition:all .15s;font-family:inherit}
+  .btn:hover{background:var(--accent);color:#FFFFFF;border-color:var(--accent)}
+  .btn.copied{background:var(--ok);border-color:var(--ok);color:#fff}
+  footer{color:var(--mut);font-size:12px;text-align:center;margin-top:40px;line-height:1.7;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stories de Captação</h1>
+    <div class="sub">Recompensa: <strong>{{TITULO}}</strong> · {{SUBTITULO}}</div>
+    <div class="key">PALAVRA-CHAVE: {{PALAVRA_CHAVE}}</div>
+  </header>
+
+  <div class="toolbar">
+    <button class="btn-all" onclick="copyAll()">Copiar todos os {{QTD}}</button>
+    <button class="btn-secondary" onclick="resetUsed()">Resetar marcados</button>
+    <div class="counter"><b id="usedCount">0</b> de {{QTD}} já usados</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="meta">
+    <strong>Como usar:</strong> poste 1 por dia ou a cada 2 dias. Fundo de vídeo casual (palco, escritório, mesa, café).
+    Abertura numa caixa grande com o número em destaque, contexto na caixa do meio, CTA com {{PALAVRA_CHAVE}} destacado.
+    Alterne os temas. Quem responde recebe a isca na DM. Marque "Usado" depois de postar pra controlar o ciclo.
+  </div>
+
+  <footer>
+    Design System Torriani Dark (A) · Made Outer + Torriani Blue #2B7DE1 · voz Imperial Torriani · validado anti-IA<br>
+    Estado dos stories marcados como "usado" fica salvo no teu navegador (localStorage).
+  </footer>
+</div>
+
+<script>
+const STORAGE_KEY = '{{STORAGE_KEY}}';
+
+// === PREENCHER: array de stories (n = número, a = abertura, c = contexto). Use \n pra quebra de linha. ===
+const stories = [
+  {n:"01", a:"ABERTURA do story 1\nsegunda linha opcional.", c:"CONTEXTO/isca do story 1\nsegunda linha opcional."},
+  {n:"02", a:"ABERTURA do story 2.", c:"CONTEXTO/isca do story 2."},
+  // ... adicionar até {{QTD}} stories ...
+];
+
+const CTA = 'Me manda "{{PALAVRA_CHAVE}}" aqui';
+
+function fullText(s){ return s.a + "\n\n" + s.c + "\n\n" + CTA; }
+function loadUsed(){ try{ const raw=localStorage.getItem(STORAGE_KEY); return raw?JSON.parse(raw):{}; }catch(e){ return {}; } }
+function saveUsed(u){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(u)); }catch(e){} }
+function updateCounter(){ const u=loadUsed(); const count=Object.values(u).filter(Boolean).length; document.getElementById('usedCount').textContent=count; }
+
+const used = loadUsed();
+const grid = document.getElementById('grid');
+
+stories.forEach((s,i)=>{
+  const isUsed = !!used[s.n];
+  const card = document.createElement('div');
+  card.className = 'card' + (isUsed ? ' used' : '');
+  card.dataset.story = s.n;
+  card.innerHTML = `
+    <div class="num">STORY ${s.n}</div>
+    <div><span class="block">Abertura</span><div class="abertura">${s.a.replace(/\n/g,'<br>')}</div></div>
+    <div class="divider"></div>
+    <div><span class="block">Contexto</span><div class="contexto">${s.c.replace(/\n/g,'<br>')}</div></div>
+    <div class="divider"></div>
+    <div><span class="block">CTA</span><div class="cta">Me manda <b>"{{PALAVRA_CHAVE}}"</b> aqui</div></div>
+    <div class="actions">
+      <button class="btn btn-copy" data-i="${i}">Copiar story ${s.n}</button>
+      <button class="btn btn-used" data-n="${s.n}" title="Marcar como usado">${isUsed ? 'Desmarcar' : 'Usei'}</button>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+
+grid.addEventListener('click', e=>{
+  const copyBtn = e.target.closest('.btn-copy');
+  const usedBtn = e.target.closest('.btn-used');
+  if(copyBtn){ const s=stories[+copyBtn.dataset.i]; copyText(fullText(s), copyBtn, `Copiar story ${s.n}`); }
+  if(usedBtn){
+    const n=usedBtn.dataset.n; const u=loadUsed(); u[n]=!u[n]; saveUsed(u);
+    const card=usedBtn.closest('.card'); card.classList.toggle('used', !!u[n]);
+    usedBtn.textContent = u[n] ? 'Desmarcar' : 'Usei'; updateCounter();
+  }
+});
+
+function copyText(text, btn, original){
+  navigator.clipboard.writeText(text).then(()=>{
+    if(btn){ btn.textContent='Copiado!'; btn.classList.add('copied');
+      setTimeout(()=>{ btn.textContent=original; btn.classList.remove('copied'); }, 1600); }
+  });
+}
+function copyAll(){
+  const all = stories.map(s=>`STORY ${s.n}\n${fullText(s)}`).join("\n\n———\n\n");
+  navigator.clipboard.writeText(all).then(()=>{
+    const b=document.querySelector('.btn-all'); const o=b.textContent;
+    b.textContent='Todos copiados!'; setTimeout(()=>{ b.textContent=o; }, 1600);
+  });
+}
+function resetUsed(){
+  if(!confirm('Resetar todos os marcados como usado?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  document.querySelectorAll('.card').forEach(c=>{ c.classList.remove('used'); const b=c.querySelector('.btn-used'); if(b) b.textContent='Usei'; });
+  updateCounter();
+}
+updateCounter();
+</script>
+</body>
+</html>

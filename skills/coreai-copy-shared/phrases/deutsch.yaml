@@ -1,0 +1,78 @@
+name: "David Deutsch - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Copythinking Method"
+    - "Boardroom Promotions"
+  author: "David Deutsch"
+description: >
+  Frases icônicas do David Deutsch organizadas por categoria, com fonte e contexto de uso.
+
+copythinking_related:
+  - phrase: "Copywriting is 80% thinking and 20% writing. Most people reverse that."
+    source: "David Deutsch - Copythinking"
+    context: "Princípio central do Copythinking"
+  - phrase: "Before you write, THINK. What does this person really want?"
+    source: "David Deutsch - Copythinking"
+    context: "Processo de preparação"
+  - phrase: "Great copy starts with a great idea—not great writing."
+    source: "David Deutsch - Copythinking"
+    context: "Ideia sobre técnica"
+  - phrase: "The sale happens in your head before it happens on the page."
+    source: "David Deutsch - Copythinking"
+    context: "Venda mental antes da escrita"
+
+method_acting_related:
+  - phrase: "Slip into their shoes. Feel what they feel. Then write."
+    source: "David Deutsch - Method Acting"
+    context: "Empatia radical com o prospect"
+  - phrase: "Don't write ABOUT your prospect. Write AS your prospect."
+    source: "David Deutsch - Method Acting"
+    context: "Imersão no avatar"
+  - phrase: "If you can't feel their pain, you can't solve it."
+    source: "David Deutsch - Method Acting"
+    context: "Conexão emocional obrigatória"
+  - phrase: "The best copywriters are empaths, not manipulators."
+    source: "David Deutsch - Method Acting"
+    context: "Empatia como habilidade central"
+
+hot_buttons_related:
+  - phrase: "The secret to great copy is LISTENING, not talking."
+    source: "David Deutsch - Hot Buttons"
+    context: "Pesquisa sobre escrita"
+  - phrase: "Use their exact words. Their vocabulary is your vocabulary."
+    source: "David Deutsch - Hot Buttons"
+    context: "Voice of customer"
+  - phrase: "Every prospect has hot buttons. Your job is to find them and press them."
+    source: "David Deutsch - Hot Buttons"
+    context: "Descoberta de gatilhos emocionais"
+  - phrase: "Pain is specific. Pleasure is specific. Get specific."
+    source: "David Deutsch - Hot Buttons"
+    context: "Especificidade em copy"
+
+versatility_related:
+  - phrase: "I've had six controls at once. Not because I'm better—because I think differently each time."
+    source: "David Deutsch - Boardroom"
+    context: "Recorde de controles simultâneos"
+  - phrase: "Every product has multiple angles. Find them all."
+    source: "David Deutsch - Multi-Control Strategy"
+    context: "Versatilidade de ângulos"
+  - phrase: "The angle you least expect often wins."
+    source: "David Deutsch - Multi-Control Strategy"
+    context: "Ângulos inesperados"
+  - phrase: "Don't compete with yourself. Find a new angle."
+    source: "David Deutsch - Multi-Control Strategy"
+    context: "Diferenciação de controles"
+
+craft_related:
+  - phrase: "Never be boring. That's the only real sin in copywriting."
+    source: "David Deutsch"
+    context: "Padrão de qualidade"
+  - phrase: "Classy hard sell—persuasive AND dignified."
+    source: "David Deutsch (influência Ogilvy)"
+    context: "Estilo de venda elegante"
+  - phrase: "Direct response doesn't have to be ugly."
+    source: "David Deutsch"
+    context: "Qualidade visual e textual"
+
+throne_phrase: "Copywriting is 80% thinking and 20% writing. Most people reverse that."

@@ -1,0 +1,65 @@
+# Anti-Professional Selling Framework - Ben Settle
+# Source: Email Players Newsletter
+# Category: sales_philosophy
+
+name: "Anti-Professional Selling"
+version: "1.0"
+source: "Ben Settle - Email Players Newsletter"
+category: "sales_philosophy"
+command: "*polarize"
+
+description: |
+  Framework anti-profissional que rejeita linguagem corporativa
+  e templates padronizados em favor de autenticidade crua.
+  Corporate-speak é a morte de qualquer email marketing.
+
+philosophy: |
+  A maioria dos emails parece escrita por um comitê de advogados.
+  É por isso que ninguém lê. Quebre todas as regras do
+  "email marketing profissional" e venda mais.
+
+rules:
+  do:
+    - "Escreva como você fala"
+    - "Use gírias e informalidade"
+    - "Conte piadas (mesmo ruins)"
+    - "Compartilhe opiniões controversas"
+    - "Venda em CADA email sem desculpas"
+    - "Use subject lines curtas e curiosas"
+    - "Seja imprevisível"
+
+  dont:
+    - "Templates padronizados"
+    - "Linguagem corporativa"
+    - "Emails 'de valor puro' sem pitch"
+    - "Subject lines com emojis e exclamações"
+    - "Pedir permissão para vender"
+    - "Segmentar obsessivamente em vez de escrever"
+    - "Terceirizar sua voz"
+
+subject_line_rules:
+  keep_short: "4-6 palavras máximo"
+  create_curiosity: "Não revele o conteúdo"
+  avoid_hype: "Sem caps lock, sem exclamações"
+  examples:
+    good:
+      - "meu contador maluco"
+      - "o erro de $50K"
+      - "por que dispensei clientes"
+    bad:
+      - "🔥 IMPERDÍVEL! Desconto de 50%!! 🔥"
+      - "Newsletter Semanal - Edição 47"
+      - "5 Dicas Para Melhorar Seu Marketing"
+
+client_less_model:
+  principle: "Venda seus próprios produtos, não tempo"
+  structure:
+    - "Crie produto próprio (info, newsletter, membership)"
+    - "Escreva 1 email por dia vendendo"
+    - "Nunca aceite clientes (opcional)"
+    - "Lista pequena de compradores > lista grande de curiosos"
+
+when_to_use: |
+  Use quando seu email marketing está "corporativo demais" e
+  ninguém está abrindo/clicando. Use para injetar personalidade
+  real em qualquer campanha de email.

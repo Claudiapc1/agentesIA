@@ -1,0 +1,35 @@
+# ContextOS - Brand Voice
+# Propagado de: context/brand.yaml (voice_dna section)
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+tone:
+  primary: null       # Ex: direto, inspiracional, tecnico
+  secondary: null
+  forbidden: null     # Tom que NUNCA usar
+
+vocabulary:
+  power_words: []     # Palavras de poder da marca
+  signature_phrases: []  # Frases assinatura
+  metaphors: []       # Metaforas recorrentes
+  forbidden_words: [] # Palavras proibidas + motivo
+
+communication_style:
+  formality: null     # 1-10
+  warmth: null        # 1-10
+  directness: null    # 1-10
+  confidence: null    # 1-10
+
+examples:
+  ideal_copy: []      # Exemplos de copy ideal
+  anti_examples: []   # Como a marca NUNCA fala
+
+persona:
+  name: null          # Nome da persona de comunicacao
+  description: null   # Como ela se comporta
+
+metadata:
+  source: context/brand.yaml
+  status: INCOMPLETE

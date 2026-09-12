@@ -1,0 +1,43 @@
+---
+name: {{prefix}}
+description: "{{description}}"
+when-to-use: >
+  {{when_to_use}}
+argument-hint: "[tema ou acao]"
+allowed-tools: "Read, Write, Bash, Glob, Grep, Skill"
+user-invocable: true
+---
+
+# {{title}} — Orquestrador
+
+{{persona}}
+
+## PASSO 1 — Carregar contexto do cliente (ContextOS)
+
+Localizar `context-os/` (workspace → home → pai). Se não achar, avisar e sugerir
+`/context-create`. Ler `context-os/config.yaml` → `active_business`.
+
+**SEMPRE perguntar qual cliente** (listar businesses, oferecer o ativo como default):
+> "Qual cliente?
+> 1. {{business-1}}
+> ...
+> Responde número ou nome. Enter usa o ativo."
+
+Carregar `context-os/businesses/{slug}/`:
+- context/company-profile.yaml, context/icp.yaml, context/credentials.yaml
+- brand-dna/voice.yaml, brand-dna/positioning.yaml, brand-dna/archetype.yaml
+- culture/values.yaml, products/*.yaml
+
+Checar `evidence/completeness.yaml` (< 50% avisar / 50-84% cuidado / ≥85% ok).
+
+## PASSO 2 — Detectar a ação e rotear
+
+Comandos disponíveis:
+{{commands_list}}
+
+- Se o pedido já é uma ação clara, invocar a sub-skill via Skill tool.
+- Se ambíguo, listar os comandos e perguntar qual.
+
+## Regras
+- Sempre carregar o cliente antes de gerar qualquer coisa.
+- Nunca referenciar o squad original — tudo está em `shared/`.

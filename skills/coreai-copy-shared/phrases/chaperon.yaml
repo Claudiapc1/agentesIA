@@ -1,0 +1,66 @@
+name: "Andre Chaperon - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Autoresponder Madness"
+    - "Sphere of Influence"
+  author: "Andre Chaperon"
+description: >
+  Frases icônicas do Andre Chaperon organizadas por categoria, com fonte e contexto de uso.
+
+sequence_related:
+  - phrase: "$70 per subscriber, not $1."
+    source: "Autoresponder Madness"
+    context: "Descrevendo o poder das Soap Opera Sequences"
+  - phrase: "People don't read emails. They watch stories unfold."
+    source: "Autoresponder Madness"
+    context: "Filosofia central das sequências serializada"
+  - phrase: "Each email is an episode, not a standalone piece."
+    source: "Autoresponder Madness"
+    context: "Storytelling serializado em email"
+  - phrase: "Don't write emails. Write episodes."
+    source: "Autoresponder Madness"
+    context: "Mentalidade de conteúdo episódico"
+  - phrase: "A launch is a story with a deadline."
+    source: "Autoresponder Madness"
+    context: "Estrutura de lançamento como narrativa"
+
+open_loops:
+  - phrase: "The human brain hates incomplete patterns."
+    source: "Autoresponder Madness"
+    context: "Efeito Zeigarnik aplicado a email"
+  - phrase: "Open a loop in every email except the last."
+    source: "Autoresponder Madness"
+    context: "Metodologia de open loops"
+  - phrase: "Open loop A, open loop B, close B, close A."
+    source: "Autoresponder Madness"
+    context: "Nested loops para sequências complexas"
+  - phrase: "Every cliffhanger must be a promise you keep."
+    source: "Autoresponder Madness"
+    context: "Qualidade do cliffhanger"
+
+conversion_related:
+  - phrase: "Make them WANT to buy before you offer."
+    source: "Autoresponder Madness"
+    context: "Conversão de tráfego frio"
+  - phrase: "Cold traffic is the hardest to convert—and the most valuable."
+    source: "Autoresponder Madness"
+    context: "Estratégia de tráfego"
+  - phrase: "Build relationship in first 3-5 emails, then offer."
+    source: "Autoresponder Madness"
+    context: "Timing de oferta em tráfego frio"
+  - phrase: "The first 7 days determine everything."
+    source: "Autoresponder Madness"
+    context: "Importância da welcome sequence"
+
+segmentation_related:
+  - phrase: "The right message to the wrong person is still wrong."
+    source: "Sphere of Influence"
+    context: "Segmentação de lista"
+
+structure_related:
+  - phrase: "Set the Stage → High Drama → Epiphany → Hidden Benefits → Urgency"
+    source: "Autoresponder Madness"
+    context: "Estrutura da Soap Opera Sequence"
+
+throne_phrase: "People don't read emails. They watch stories unfold."

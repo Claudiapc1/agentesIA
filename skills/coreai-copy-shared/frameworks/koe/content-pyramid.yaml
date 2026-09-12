@@ -1,0 +1,43 @@
+# Content Pyramid - Dan Koe
+# Source: Modern Mastery Newsletter
+# Category: content_strategy
+
+name: "The Content Pyramid"
+version: "1.0"
+source: "Dan Koe - Modern Mastery Newsletter"
+category: "content_strategy"
+command: "*content-pyramid"
+
+description: |
+  Sistema hierárquico de ideação de conteúdo que começa com pilares
+  amplos e afunila para posts específicos. Garante ideias ilimitadas
+  mapeando tudo que você sabe em categorias estruturadas.
+
+principle: "Os MELHORES posts são relacionáveis. Faça seus pilares/tópicos relacionáveis entendendo benefícios e problemas que resolvem."
+
+hierarchy:
+  pillars:
+    level: "Top"
+    description: "2-5 sub-mercados amplos onde você tem experiência"
+    source: "Derivados dos Big 3: Health, Wealth, Relationships"
+
+  topics:
+    level: "Middle"
+    description: "Assuntos que você poderia discutir por minutos ou fazer um vídeo"
+
+  content:
+    level: "Bottom"
+    description: "Ideias específicas que se tornam posts publicáveis"
+
+  emotional_layer:
+    level: "Secret Sauce"
+    description: "Foque em transformações, exagero estratégico, absolutos"
+
+process:
+  step_1: "Defina seus pilares - No que é bom? Sobre o que falaria por horas?"
+  step_2: "Liste tópicos por pilar - 5-10 tópicos cada"
+  step_3: "Gere ideias de conteúdo - ângulos específicos para cada tópico"
+  step_4: "Adicione hooks emocionais - onde estão vs onde querem estar"
+  step_5: "Crie swipe file - salve conteúdo que te inspirou"
+
+when_to_use: "Início de estratégia de conteúdo, bloqueio criativo, escala de produção."

@@ -1,0 +1,4715 @@
+# Índice canônico de headlines — squad copy
+# FONTE ÚNICA DE VERDADE. O squad tem prioridade P0 sobre as skills.
+# Regra: clonar de tier A é o padrão. Clonar de B ou C EXIGE declaração explícita
+# de que a estrutura veio de template, não de campeã comprovada.
+
+meta:
+  version: "1.0"
+  updated: "2026-07-30"
+  total: 244
+  by_tier:
+    A: 24
+    B: 56
+    C: 164
+  by_mercado:
+    negocios: 79
+    info-produto: 45
+    educacao: 40
+    saude: 38
+    financas: 24
+    consumo: 15
+    imobiliario: 2
+    esportes: 1
+  by_idioma:
+    en: 204
+    pt-br: 40
+  regra_de_uso: |
+    tier A → clonável como headline campeã. Declare id + autor + resultado.
+    tier B → autor real, sem prova de resultado. Declare que não há métrica.
+    tier C → estrutura/template. Declare "estrutura de template, não campeã comprovada".
+  campos_obrigatorios_ao_adicionar: [id, tier, text, fonte_arquivo, clonavel_como_campea]
+  schema_notas: |
+    mercado: saude|financas|educacao|info-produto|consumo|esportes|negocios|imobiliario|outro
+    ticket: baixo|medio|alto|high-ticket|desconhecido
+    canal: mala-direta|impresso|email|vsl|anuncio|landing|infomercial|desconhecido
+    idioma: en|pt-br
+    Entradas tier C têm autor: null e campo origem: com o texto literal do source da fonte.
+  fontes_indexadas:
+    - "swipe/headlines/headlines_batch_1.yaml"
+    - "swipe/headlines/headlines_batch_2.yaml"
+    - "swipe/headlines/headlines_batch_3.yaml"
+    - "swipe/full_pieces/famous-sales-letters.md"
+    - "frameworks/ogilvy/headline-rules.yaml"
+    - "data/swipe-file-headlines.md"
+    - "swipe/emails/subject-lines-collection.md"
+  nota_exclusoes: |
+    De data/swipe-file-headlines.md e swipe/emails/subject-lines-collection.md
+    foram indexadas APENAS as entradas com autor real identificado. Fórmulas
+    genéricas, templates editáveis e "Templates universais" ficaram de fora do
+    índice por decisão de escopo (não são headlines, são esqueletos).
+
+entries:
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # TIER A — autor real + campanha específica + resultado documentado
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  - id: hl_conroy_001
+    tier: A
+    text: "On a beautiful late spring afternoon, twenty-five years ago, two young men graduated from the same college."
+    autor: "Martin Conroy"
+    campanha: "The Wall Street Journal — carta de assinatura (Two Young Men letter)"
+    ano: 1975
+    resultado: "28 anos como controle (1975-2003), mais de US$ 2 bilhões em assinaturas. A carta de vendas mais lucrativa já escrita."
+    mercado: financas
+    produto: "assinatura de jornal"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "narrative lead + identification + delayed product mention"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_halbert_001
+    tier: A
+    text: "Does Your Family Have a Coat of Arms?"
+    autor: "Gary Halbert"
+    campanha: "Family Crest Letter — mala direta vendendo impressões do brasão da família"
+    ano: 1971
+    resultado: "600 milhões de peças enviadas — a peça de mala direta mais enviada da história"
+    mercado: consumo
+    produto: "impressão de brasão de família"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosity + personalização extrema + identity appeal"
+    awareness: unaware
+    sophistication: 1
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_lampropoulos_001
+    tier: A
+    text: "How Doctors Stay Well While Treating Sick Patients All Day"
+    autor: "Parris Lampropoulos"
+    campanha: "Bottom Line Health — magalog de assinatura"
+    ano: 2003
+    resultado: "12 anos como controle (2003-2015), 250% melhor que o controle anterior, circulação de 35.000 para 300.000+"
+    mercado: saude
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosity + authority borrow + insider secret"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_carlton_001
+    tier: A
+    text: "Amazing Secret Discovered by One-Legged Golfer Adds 50 Yards to Your Drives, Eliminates Hooks and Slices... And Can Slash Up to 10 Strokes From Your Game Almost Overnight!"
+    autor: "John Carlton"
+    campanha: "Anúncio de resposta direta para produto de instrução de golfe"
+    ano: 1990
+    resultado: "A headline mais copiada da história do direct response"
+    mercado: esportes
+    produto: "curso de instrução de golfe"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "curiosity through incongruence + benefit stacking + specificity"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_ogilvy_001
+    tier: A
+    text: "At 60 miles an hour, the loudest noise in the new Rolls-Royce comes from the electric clock."
+    autor: "David Ogilvy"
+    campanha: "Rolls-Royce — anúncio de revista"
+    ano: 1958
+    resultado: "Considerada uma das maiores headlines já escritas. Ogilvy passou 3 semanas de pesquisa para essa única headline."
+    mercado: consumo
+    produto: "automóvel de luxo"
+    ticket: high-ticket
+    canal: impresso
+    idioma: en
+    tecnica: "specificity como prova + demonstration lead"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+      - "swipe/full_pieces/famous-sales-letters.md"
+      - "frameworks/ogilvy/headline-rules.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_ogilvy_002
+    tier: A
+    text: "The man in the Hathaway shirt"
+    autor: "David Ogilvy"
+    campanha: "Hathaway Shirts — campanha do homem com tapa-olho"
+    ano: 1951
+    resultado: "Transformou uma marca pequena e desconhecida em marca nacional. O tapa-olho de US$ 1,50 construiu uma marca de milhões."
+    mercado: consumo
+    produto: "camisas masculinas"
+    ticket: medio
+    canal: impresso
+    idioma: en
+    tecnica: "brand character + visual storytelling + aspirational positioning"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+      - "frameworks/ogilvy/headline-rules.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_hopkins_001
+    tier: A
+    text: "Washed with Live Steam"
+    autor: "Claude Hopkins"
+    campanha: "Schlitz Beer — campanha do processo de fabricação"
+    ano: 1919
+    resultado: "Levou a Schlitz do 5o lugar para empatada em 1o no mercado de cerveja"
+    mercado: consumo
+    produto: "cerveja"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "pre-emptive claim + process proof + specificity cascade"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_hopkins_002
+    tier: A
+    text: "Just run your tongue across your teeth. You'll feel a film — that's what makes your teeth look 'off color' and invites decay."
+    autor: "Claude Hopkins"
+    campanha: "Pepsodent — campanha do film nos dentes"
+    ano: 1907
+    resultado: "Mudou o hábito de higiene bucal de uma nação inteira. Analisada por Charles Duhigg em The Power of Habit como criação de habit loop."
+    mercado: consumo
+    produto: "creme dental"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "sensory trigger + problem naming + demonstration lead"
+    awareness: unaware
+    sophistication: 1
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_caples_001
+    tier: A
+    text: "They Laughed When I Sat Down At The Piano — But When I Started To Play!"
+    autor: "John Caples"
+    campanha: "U.S. School of Music — curso de piano por correspondência"
+    ano: 1927
+    resultado: "Rodou por décadas. Um dos anúncios mais famosos e copiados de todos os tempos; template adaptado para centenas de produtos."
+    mercado: educacao
+    produto: "curso por correspondência"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "story lead + underdog narrative + before/after na headline"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: true
+
+  - id: hl_cody_001
+    tier: A
+    text: "Do You Make These Mistakes in English?"
+    autor: "Sherwin Cody"
+    campanha: "Curso de inglês por correspondência"
+    ano: 1919
+    resultado: "Rodou por mais de 40 anos sem ser superada"
+    mercado: educacao
+    produto: "curso por correspondência"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "question lead + self-examination + ego activation"
+    awareness: problem-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: true
+
+  - id: hl_sugarman_001
+    tier: A
+    text: "I am about to tell you a true story. If you believe me, you will be well rewarded. If you don't believe me, I will make it worth your while to change your mind."
+    autor: "Joe Sugarman"
+    campanha: "BluBlocker Sunglasses — anúncio de resposta direta e infomerciais"
+    ano: 1986
+    resultado: "Mais de 20 milhões de unidades vendidas"
+    mercado: consumo
+    produto: "óculos de sol"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "slippery slide + first-person narrative + skeptic positioning"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_karbo_001
+    tier: A
+    text: "The Lazy Man's Way to Riches"
+    autor: "Joe Karbo"
+    campanha: "Anúncio de página inteira em jornais vendendo livro de US$ 10"
+    ano: 1973
+    resultado: "Karbo investiu suas últimas economias no anúncio e fez milhões"
+    mercado: negocios
+    produto: "livro"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "contradiction/paradox + lifestyle proof + confessional opening"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_benson_001
+    tier: A
+    text: "In the next 12 minutes, I'll reveal..."
+    autor: "Jon Benson"
+    campanha: "VSL Formula — Snap Suggestion (formato VSL que ele inventou)"
+    ano: 2006
+    resultado: "US$ 12 bilhões em vendas atribuídos ao formato VSL que ele criou"
+    mercado: info-produto
+    produto: "video sales letter"
+    ticket: medio
+    canal: vsl
+    idioma: en
+    tecnica: "pattern interrupt + time commitment + promise"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_chaperon_001
+    tier: A
+    text: "Tomorrow I'll tell you how..."
+    autor: "Andre Chaperon"
+    campanha: "Autoresponder Madness — Soap Opera Sequence, open loop"
+    ano: 2009
+    resultado: "US$ 10-50 por subscriber (vs US$ 1 de média da indústria)"
+    mercado: info-produto
+    produto: "curso de email marketing"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "open loop (Zeigarnik) + serialização + antecipação"
+    awareness: problem-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_bencivenga_003
+    tier: A
+    text: "The warning sign of [problem] that [percentage]% ignore"
+    autor: "Gary Bencivenga"
+    campanha: "Fascination template de medo (Rodale)"
+    ano: 1995
+    resultado: "Nunca perdeu um split-run test na Rodale"
+    mercado: saude
+    produto: "newsletter / info-produto"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "fear + curiosity + self-preservation"
+    awareness: problem-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_bencivenga_001
+    tier: A
+    text: "The $47,000 mistake that 93% of investors make every month — and how to profit when they lose (page 34)"
+    autor: "Gary Bencivenga"
+    campanha: "Sistema de fascinations para newsletters financeiras"
+    ano: 1995
+    resultado: "Estilo de template usado em promoções que geraram US$ 50M+"
+    mercado: financas
+    produto: "newsletter financeira"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "specificity + fear + curiosity gap + page reference"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_settle_001
+    tier: A
+    text: "[Controversial opinion statement]"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject lines de infotainment diário"
+    ano: 2012
+    resultado: "Newsletter de US$ 97/mês com base devota; open rates reportados de 35-45%"
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "polarização + personalidade + opinião"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: true
+
+  - id: hl_settle_002
+    tier: A
+    text: "the weird trick"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line de curiosidade"
+    ano: 2015
+    resultado: "Open rates de 35-45% reportados por Settle para a lista engajada"
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "curiosidade + tudo minúsculo (tom casual)"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: true
+
+  - id: hl_deiss_001
+    tier: A
+    text: "Don't open this email"
+    autor: "Ryan Deiss"
+    campanha: "DigitalMarketer — email para lista própria"
+    ano: 2013
+    resultado: "Reportado como um dos emails com maior open rate do DigitalMarketer"
+    mercado: info-produto
+    produto: "treinamento de marketing digital"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "reactance psychology"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: true
+
+  - id: hl_chaperon_002
+    tier: A
+    text: "[first name only]"
+    autor: "Andre Chaperon / Ben Settle"
+    campanha: "Subject line usando só o primeiro nome do destinatário"
+    ano: 2012
+    resultado: "Open rates de 50%+ reportados"
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "personalização extrema"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: true
+
+  - id: hl_wallach_001
+    tier: A
+    text: "Dead Doctors Don't Lie"
+    autor: "Dr. Joel Wallach"
+    campanha: "Fita cassete viral vendendo suplementos minerais"
+    ano: 1995
+    resultado: "Uma das peças de marketing mais virais da era pré-internet; espalhou-se de pessoa a pessoa apenas pelo título"
+    mercado: saude
+    produto: "suplementos minerais"
+    ticket: baixo
+    canal: infomercial
+    idioma: en
+    tecnica: "contrarian lead + statistical shock + anti-authority positioning"
+    awareness: unaware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_bencivenga_005
+    tier: A
+    text: "On a beautiful late spring afternoon, twenty-five years ago, two young men graduated from the same college. They were very much alike, these two young men..."
+    autor: "Gary Bencivenga"
+    campanha: "Boardroom Reports / Bottom Line Personal — adaptação do formato WSJ (Two Young Men)"
+    ano: 1978
+    resultado: "Adaptação do controle de 28 anos do WSJ; Bencivenga é considerado pelos pares o maior copywriter vivo e nunca perdeu um split test na Rodale"
+    mercado: financas
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "two paths narrative + identification + curiosity gap"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_halbert_002
+    tier: A
+    text: "Here is the SIMPLE secret of how I lost 30 pounds of ugly, unwanted fat in just 6 weeks... without going on any kind of a diet... without doing any kind of exercise... and without taking any kind of pills."
+    autor: "Gary Halbert"
+    campanha: "Amazing Diet — mala direta para programa de perda de peso"
+    ano: 1985
+    resultado: "Citada pelo próprio Halbert como o exemplo canônico de reason-why copy dele"
+    mercado: saude
+    produto: "programa de perda de peso"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "result-first lead + triple objection removal + common enemy"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: true
+
+  - id: hl_ogilvy_003
+    tier: A
+    text: "Only Dove is one-quarter moisturizing cream"
+    autor: "David Ogilvy"
+    campanha: "Dove — posicionamento de diferenciação de produto"
+    ano: 1957
+    resultado: "Posicionamento que sustentou a marca Dove por décadas; citada por Ogilvy entre suas melhores headlines"
+    mercado: consumo
+    produto: "sabonete"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "product differentiation fact + specificity"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "frameworks/ogilvy/headline-rules.yaml"
+    clonavel_como_campea: true
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # TIER B — autor real e obra identificada, sem número de resultado
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  - id: hl_schwartz_006
+    tier: B
+    text: "Do You Have the Courage to Earn $500,000 a Year?"
+    autor: "Eugene Schwartz"
+    campanha: "Anúncio para livro de negócios/autoajuda"
+    ano: 1965
+    resultado: null
+    mercado: negocios
+    produto: "livro"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "question lead + qualificação reversa + contrarian hook"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: false
+
+  - id: hl_collier_001
+    tier: B
+    text: "What is the secret that makes one man a failure and another a success?"
+    autor: "Robert Collier"
+    campanha: "The Secret of the Ages — carta de vendas do livro"
+    ano: 1925
+    resultado: null
+    mercado: negocios
+    produto: "livro"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "comparison lead + story lead + curiosity gap"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: false
+
+  - id: hl_kennedy_001
+    tier: B
+    text: "WARNING: What Your Dentist Isn't Telling You About Root Canals Could Be Costing You Thousands — And Putting Your Health At Risk"
+    autor: "Dan Kennedy"
+    campanha: "The Ultimate Sales Letter — exemplo de abertura estilo Kennedy para dentista"
+    ano: 2006
+    resultado: null
+    mercado: saude
+    produto: "serviço odontológico"
+    ticket: alto
+    canal: mala-direta
+    idioma: en
+    tecnica: "warning/command lead + authority gap + stakes escalation"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/full_pieces/famous-sales-letters.md"
+    clonavel_como_campea: false
+
+  - id: hl_bencivenga_002
+    tier: B
+    text: "Why drinking 8 glasses of water per day may be DESTROYING your kidneys — and what to do instead"
+    autor: "Gary Bencivenga"
+    campanha: "Fascination de saúde (exemplo documentado do sistema dele)"
+    ano: 1995
+    resultado: null
+    mercado: saude
+    produto: "newsletter / info-produto de saúde"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "contrarian + fear + solution tease"
+    awareness: unaware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_bencivenga_004
+    tier: B
+    text: "[Institution] study reveals [discovery]"
+    autor: "Gary Bencivenga"
+    campanha: "Template de fascination baseada em prova/autoridade"
+    ano: 1995
+    resultado: null
+    mercado: saude
+    produto: "newsletter / info-produto"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "authority borrow + news hook"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_001
+    tier: B
+    text: "What Never to Eat on an Airplane"
+    autor: "Gary Bencivenga"
+    campanha: "Boardroom — fascination clássica"
+    ano: 1995
+    resultado: null
+    mercado: saude
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosity + specificity + self-preservation"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_006
+    tier: B
+    text: "Why Your Doctor Checks Your Fingernails (And What He's Really Looking For)"
+    autor: "Parris Lampropoulos"
+    campanha: "Fascination de newsletter de saúde"
+    ano: 2005
+    resultado: null
+    mercado: saude
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosity + authority borrow + insider knowledge"
+    awareness: unaware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_lampropoulos_002
+    tier: B
+    text: "The 3 warning signs that predict heart attack 6 months in advance"
+    autor: "Parris Lampropoulos"
+    campanha: "Bullet de amplificação para magalog de saúde"
+    ano: 2005
+    resultado: null
+    mercado: saude
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "specificity + fear + time specificity"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_lampropoulos_003
+    tier: B
+    text: "What Harvard cardiologists do differently (hint: it's not what you think)"
+    autor: "Parris Lampropoulos"
+    campanha: "Bullet de autoridade + intriga para magalog de saúde"
+    ano: 2005
+    resultado: null
+    mercado: saude
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "authority borrow + parenthetical intrigue"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_carlton_template_001
+    tier: B
+    text: "How to [achieve result] in [timeframe] without [obstacle]"
+    autor: "John Carlton"
+    campanha: "Simple Writing System — template universal de headline"
+    ano: 2005
+    resultado: null
+    mercado: info-produto
+    produto: "curso de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "benefit + timeframe + objection removal"
+    awareness: solution-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_carlton_template_002
+    tier: B
+    text: "The [adjective] way to [benefit] that [authorities] don't want you to know"
+    autor: "John Carlton"
+    campanha: "Simple Writing System — template de conspiração/insider"
+    ano: 2005
+    resultado: null
+    mercado: info-produto
+    produto: "curso de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "curiosity + conspiracy + us vs them"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_carlton_template_003
+    tier: B
+    text: "Warning: Don't even THINK about [action] until you read this"
+    autor: "John Carlton"
+    campanha: "Simple Writing System — headline de pattern interrupt"
+    ano: 2005
+    resultado: null
+    mercado: info-produto
+    produto: "curso de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "pattern interrupt + warning + command"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_carlton_template_004
+    tier: B
+    text: "[Number] reasons why [common approach] is keeping you from [goal]"
+    autor: "John Carlton"
+    campanha: "Simple Writing System — template listicle/contrarian"
+    ano: 2005
+    resultado: null
+    mercado: info-produto
+    produto: "curso de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "listicle + contrarian + problem agitation"
+    awareness: problem-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_schwartz_001
+    tier: B
+    text: "You probably don't realize this, but 73% of people..."
+    autor: "Eugene Schwartz"
+    campanha: "Breakthrough Advertising — exemplo de lead para público Unaware (nível 1)"
+    ano: 1966
+    resultado: null
+    mercado: info-produto
+    produto: "livro de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "story entry + indirect + identification"
+    awareness: unaware
+    sophistication: 1
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_schwartz_002
+    tier: B
+    text: "Tired of waking up exhausted every single day?"
+    autor: "Eugene Schwartz"
+    campanha: "Breakthrough Advertising — exemplo de lead Problem Aware (nível 2)"
+    ano: 1966
+    resultado: null
+    mercado: saude
+    produto: "livro de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "problem agitation + identification + question"
+    awareness: problem-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_schwartz_003
+    tier: B
+    text: "There's a new method that works differently..."
+    autor: "Eugene Schwartz"
+    campanha: "Breakthrough Advertising — exemplo de lead Solution Aware (nível 3)"
+    ano: 1966
+    resultado: null
+    mercado: info-produto
+    produto: "livro de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "mechanism + diferenciação + news"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_schwartz_004
+    tier: B
+    text: "Here's what changed in version 2.0..."
+    autor: "Eugene Schwartz"
+    campanha: "Breakthrough Advertising — exemplo de lead Product Aware (nível 4)"
+    ano: 1966
+    resultado: null
+    mercado: info-produto
+    produto: "livro de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "enhancement + news + continuação"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_schwartz_005
+    tier: B
+    text: "50% off today only. Click here."
+    autor: "Eugene Schwartz"
+    campanha: "Breakthrough Advertising — exemplo de lead Most Aware (nível 5)"
+    ano: 1966
+    resultado: null
+    mercado: info-produto
+    produto: "livro de copywriting"
+    ticket: medio
+    canal: desconhecido
+    idioma: en
+    tecnica: "direct offer + urgência + CTA"
+    awareness: most-aware
+    sophistication: 5
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_toddbrown_001
+    tier: B
+    text: "The Shack Method: how to build a 7-figure business starting with $100 and an 'ugly' idea"
+    autor: "Todd Brown"
+    campanha: "Big Marketing Idea — exemplo de headline de mecanismo nomeado"
+    ano: 2015
+    resultado: null
+    mercado: negocios
+    produto: "treinamento de marketing"
+    ticket: alto
+    canal: desconhecido
+    idioma: en
+    tecnica: "mechanism naming + contraste + acessibilidade"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_toddbrown_002
+    tier: B
+    text: "The reason [common approach] doesn't work is because [hidden cause]..."
+    autor: "Todd Brown"
+    campanha: "E5 Method — template de Problem Mechanism"
+    ano: 2015
+    resultado: null
+    mercado: negocios
+    produto: "treinamento de marketing"
+    ticket: alto
+    canal: desconhecido
+    idioma: en
+    tecnica: "problem mechanism + revelação + reframe"
+    awareness: problem-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_1.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_toddbrown_003
+    tier: B
+    text: "why your best idea is probably your worst"
+    autor: "Todd Brown"
+    campanha: "Subject line de email contraintuitivo"
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "treinamento de marketing"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "inversão direta + contrarian"
+    awareness: solution-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_002
+    tier: B
+    text: "The Two-Word Phrase That Doubles Tips for Waiters"
+    autor: "Robert Cialdini"
+    campanha: "Influence — referência usada em palestras"
+    ano: 2005
+    resultado: null
+    mercado: educacao
+    produto: "livro / palestra"
+    ticket: baixo
+    canal: desconhecido
+    idioma: en
+    tecnica: "curiosity + specificity + social proof"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_005
+    tier: B
+    text: "We Analyzed 11.8 Million Google Search Results. Here's What We Learned About SEO."
+    autor: "Brian Dean"
+    campanha: "Backlinko — estudo de pesquisa de SEO"
+    ano: 2020
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo / treinamento de SEO"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "proof + data driven + escala"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_001
+    tier: B
+    text: "How to Negotiate a Raise Without Feeling Awkward"
+    autor: "Ramit Sethi"
+    campanha: "I Will Teach You to Be Rich"
+    ano: 2015
+    resultado: null
+    mercado: educacao
+    produto: "curso online / livro"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "how to + remoção de barreira emocional"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_sethi_002
+    tier: B
+    text: "I owe you an apology"
+    autor: "Ramit Sethi"
+    campanha: "Subject line de email para lista própria"
+    ano: 2016
+    resultado: null
+    mercado: educacao
+    produto: "curso online"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "curiosidade social + vulnerabilidade"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_sethi_003
+    tier: B
+    text: "a favor?"
+    autor: "Ramit Sethi"
+    campanha: "Subject line curta de reciprocidade"
+    ano: 2016
+    resultado: null
+    mercado: educacao
+    produto: "curso online"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "reciprocidade + brevidade"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_kern_001
+    tier: B
+    text: "This made me uncomfortable"
+    autor: "Frank Kern"
+    campanha: "Subject line de email para lista própria"
+    ano: 2015
+    resultado: null
+    mercado: info-produto
+    produto: "treinamento de marketing"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "vulnerabilidade + curiosidade"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_kern_002
+    tier: B
+    text: "I'm pulling this down tomorrow"
+    autor: "Frank Kern"
+    campanha: "Subject line de urgência em lançamento"
+    ano: 2015
+    resultado: null
+    mercado: info-produto
+    produto: "curso / treinamento"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "urgência em primeira pessoa + ação tangível"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_kennedy_002
+    tier: B
+    text: "[Name], can I be blunt with you?"
+    autor: "Dan Kennedy"
+    campanha: "Subject line de email direto"
+    ano: 2010
+    resultado: null
+    mercado: negocios
+    produto: "consultoria / newsletter"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "personalização + permissão retórica"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_kennedy_003
+    tier: B
+    text: "stop trying to get more customers"
+    autor: "Dan Kennedy"
+    campanha: "Subject line contraintuitiva de email"
+    ano: 2010
+    resultado: null
+    mercado: negocios
+    produto: "consultoria / newsletter"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "anti-growth messaging + contrarian"
+    awareness: problem-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_kennedy_004
+    tier: B
+    text: "why free advice is expensive"
+    autor: "Dan Kennedy"
+    campanha: "Subject line paradoxal de email"
+    ano: 2010
+    resultado: null
+    mercado: negocios
+    produto: "consultoria / newsletter"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "paradoxo econômico + reframe"
+    awareness: problem-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_kennedy_005
+    tier: B
+    text: "FREE Book Reveals..."
+    autor: "Dan Kennedy"
+    campanha: "Estrutura clássica de headline de oferta"
+    ano: 2005
+    resultado: null
+    mercado: negocios
+    produto: "livro isca"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "grátis + revelação"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_kennedy_006
+    tier: B
+    text: "This Isn't For Everyone. Read the Requirements Before You Apply."
+    autor: "Dan Kennedy"
+    campanha: "Posicionamento de mastermind"
+    ano: 2010
+    resultado: null
+    mercado: negocios
+    produto: "mastermind"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "exclusividade + qualificação + reverse selling"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_chaperon_003
+    tier: B
+    text: "I was wrong about this"
+    autor: "Andre Chaperon"
+    campanha: "Subject line de admissão de erro"
+    ano: 2014
+    resultado: null
+    mercado: info-produto
+    produto: "curso de email marketing"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "admissão de erro + curiosidade"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_chaperon_004
+    tier: B
+    text: "final reminder (then I'm done)"
+    autor: "Andre Chaperon"
+    campanha: "Subject line de fechamento de sequência"
+    ano: 2014
+    resultado: null
+    mercado: info-produto
+    produto: "curso de email marketing"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "urgência + respeito ao tempo do leitor"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_chaperon_005
+    tier: B
+    text: "thanks (and a confession)"
+    autor: "Andre Chaperon"
+    campanha: "Subject line de dual hook"
+    ano: 2014
+    resultado: null
+    mercado: info-produto
+    produto: "curso de email marketing"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "gratidão + promessa de confissão"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_brunson_001
+    tier: B
+    text: "please don't share this"
+    autor: "Russell Brunson"
+    campanha: "Subject line de exclusividade"
+    ano: 2018
+    resultado: null
+    mercado: info-produto
+    produto: "software / treinamento"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "exclusividade + reactance"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_brunson_002
+    tier: B
+    text: "price goes up at midnight (not a drill)"
+    autor: "Russell Brunson"
+    campanha: "Subject line de urgência de lançamento"
+    ano: 2018
+    resultado: null
+    mercado: info-produto
+    produto: "software / treinamento"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "deadline específico + autenticidade declarada"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_walker_001
+    tier: B
+    text: "closing tonight at midnight"
+    autor: "Jeff Walker"
+    campanha: "Product Launch Formula — email de fechamento de carrinho"
+    ano: 2015
+    resultado: null
+    mercado: info-produto
+    produto: "curso de lançamento"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "deadline específico"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_mclaren_001
+    tier: B
+    text: "I'm closing the doors on [program] in 24 hours"
+    autor: "Stu McLaren"
+    campanha: "TRIBE — email de fechamento"
+    ano: 2018
+    resultado: null
+    mercado: info-produto
+    produto: "curso de membership"
+    ticket: alto
+    canal: email
+    idioma: en
+    tecnica: "metáfora de portas + programa nomeado + timeline exata"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_halbert_003
+    tier: B
+    text: "my wife is going to kill me"
+    autor: "Gary Halbert"
+    campanha: "Abertura lendária de email/carta"
+    ano: 1990
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter / info-produto"
+    ticket: baixo
+    canal: email
+    idioma: en
+    tecnica: "humor + domesticidade + curiosidade"
+    awareness: product-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_halbert_004
+    tier: B
+    text: "Try It For 30 Days. If It's Not Everything I Promised, Keep the Bonuses and Get a Full Refund."
+    autor: "Gary Halbert"
+    campanha: "Estrutura de garantia com retenção de bônus (influência Halbert)"
+    ano: 1990
+    resultado: null
+    mercado: info-produto
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "garantia + generosidade + reciprocidade"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_settle_003
+    tier: B
+    text: "the $1,267 email"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line de número específico"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "número específico + mistério"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_settle_004
+    tier: B
+    text: "you're going to hate me for this"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line de verdade inconveniente"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "promessa de verdade inconveniente + polarização"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_settle_005
+    tier: B
+    text: "so I was at the grocery store yesterday..."
+    autor: "Ben Settle"
+    campanha: "Email Players — storytelling mundano"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "storytelling mundano + incongruência"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_settle_006
+    tier: B
+    text: "why I WANT you to unsubscribe"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line contraintuitiva"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "contradição total + polarização"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_settle_007
+    tier: B
+    text: "I hope this email offends you"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line confrontacional"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "confronto deliberado + polarização"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_settle_008
+    tier: B
+    text: "how I made $4,367 from a single email"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line de especificidade numérica"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "número ímpar/específico + simplicidade do método"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_settle_009
+    tier: B
+    text: "is this true about you?"
+    autor: "Ben Settle"
+    campanha: "Email Players — subject line introspectiva"
+    ano: 2016
+    resultado: null
+    mercado: info-produto
+    produto: "newsletter por assinatura"
+    ticket: medio
+    canal: email
+    idioma: en
+    tecnica: "introspecção + vagueza produtiva"
+    awareness: product-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_abraham_001
+    tier: B
+    text: "What Would It Be Worth to You to Add $500,000 to Your Annual Revenue This Year?"
+    autor: "Jay Abraham"
+    campanha: "Posicionamento de consultoria"
+    ano: 2010
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "value question + ROI framing"
+    awareness: solution-aware
+    sophistication: 4
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_carnegie_001
+    tier: B
+    text: "How to Win Friends and Influence People"
+    autor: "Dale Carnegie"
+    campanha: "Título/headline do livro homônimo"
+    ano: 1936
+    resultado: null
+    mercado: educacao
+    produto: "livro"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "how to + duplo benefício universal"
+    awareness: solution-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+      - "frameworks/ogilvy/headline-rules.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_caples_002
+    tier: B
+    text: "A Little Mistake That Cost a Farmer $3,000 a Year"
+    autor: "John Caples"
+    campanha: "Anúncio de resposta direta (exemplo canônico de Tested Advertising Methods)"
+    ano: 1930
+    resultado: null
+    mercado: negocios
+    produto: "curso / assinatura"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "specificity + minimização da complexidade"
+    awareness: problem-aware
+    sophistication: 2
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_nightingale_001
+    tier: B
+    text: "The Strangest Secret in the World"
+    autor: "Earl Nightingale"
+    campanha: "The Strangest Secret — programa de áudio de desenvolvimento pessoal"
+    ano: 1956
+    resultado: null
+    mercado: educacao
+    produto: "programa de áudio"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosidade máxima (strangest + secret + in the world)"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_merrill_001
+    tier: B
+    text: "What Everybody Ought to Know About This Stock and Bond Business"
+    autor: "Merrill Lynch"
+    campanha: "Anúncio institucional de corretora"
+    ano: 1948
+    resultado: null
+    mercado: financas
+    produto: "serviços de investimento"
+    ticket: medio
+    canal: impresso
+    idioma: en
+    tecnica: "obrigação implícita de ler + autoridade"
+    awareness: unaware
+    sophistication: 2
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_ogilvy_004
+    tier: B
+    text: "How to create advertising that sells"
+    autor: "David Ogilvy"
+    campanha: "Anúncio institucional da Ogilvy & Mather"
+    ano: 1972
+    resultado: null
+    mercado: negocios
+    produto: "serviços de agência"
+    ticket: high-ticket
+    canal: impresso
+    idioma: en
+    tecnica: "how to + promessa de benefício"
+    awareness: solution-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "frameworks/ogilvy/headline-rules.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ogilvy_005
+    tier: B
+    text: "A lighter cake with new Bisquick"
+    autor: "David Ogilvy"
+    campanha: "Bisquick — exemplo de benefit headline citado em Ogilvy on Advertising"
+    ano: 1960
+    resultado: null
+    mercado: consumo
+    produto: "mistura para bolo"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "benefit headline + marca na headline"
+    awareness: product-aware
+    sophistication: 3
+    fonte_arquivo:
+      - "frameworks/ogilvy/headline-rules.yaml"
+    clonavel_como_campea: false
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # TIER C — template, adaptação ou genérica sem autor real
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  - id: hl_b2_curiosity_003
+    tier: C
+    text: "The Strange Reason Why Millionaires Drive Used Cars"
+    autor: null
+    origem: "Adaptado de Thomas Stanley — The Millionaire Next Door (conceito)"
+    campanha: null
+    ano: 1996
+    resultado: null
+    mercado: financas
+    produto: "info-produto financeiro"
+    ticket: desconhecido
+    canal: desconhecido
+    idioma: en
+    tecnica: "curiosity + contrarian"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_004
+    tier: C
+    text: "What Your Handwriting Reveals About Your Personality"
+    autor: null
+    origem: "Template classico de fascination — Boardroom/Bottom Line style"
+    campanha: null
+    ano: 1985
+    resultado: null
+    mercado: saude
+    produto: "newsletter por assinatura"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosity + self examination + identity"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_005
+    tier: C
+    text: "The Hidden Tax You Pay Every Time You Use a Credit Card"
+    autor: null
+    origem: "Template Agora Financial — Financial newsletter promotion"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: financas
+    produto: "newsletter financeira"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "curiosity + fear + hidden enemy"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_007
+    tier: C
+    text: "The Color of Your Front Door May Be Costing You $20,000 in Home Value"
+    autor: null
+    origem: "Template imobiliario — Real estate marketing"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: imobiliario
+    produto: "serviço imobiliário"
+    ticket: desconhecido
+    canal: desconhecido
+    idioma: en
+    tecnica: "curiosity + specificity + financial loss"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_008
+    tier: C
+    text: "The One Negotiation Mistake That Cost Me a $2 Million Deal"
+    autor: null
+    origem: "Template de business storytelling — B2B content marketing"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo B2B"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "curiosity + confissão + specificity"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_009
+    tier: C
+    text: "The Ingredient in Your Shampoo That's Banned in 14 Countries"
+    autor: null
+    origem: "Template health/beauty — Natural products marketing"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: saude
+    produto: "produto natural / cosmético"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "curiosity + fear + specificity"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_curiosity_010
+    tier: C
+    text: "What I Found Inside a $50,000-a-Year Mastermind (That You Can Get for Free)"
+    autor: null
+    origem: "Template de info-product — Digital marketing"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: info-produto
+    produto: "info-produto digital"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "curiosity + price contrast + insider access"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_001
+    tier: C
+    text: "Retire 10 Years Early — Without Saving More Money"
+    autor: null
+    origem: "Template financial — Retirement planning offers"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: financas
+    produto: "planejamento de aposentadoria"
+    ticket: desconhecido
+    canal: desconhecido
+    idioma: en
+    tecnica: "benefit + timeframe + objection removal"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_002
+    tier: C
+    text: "Speak Fluent Spanish in 30 Days — Using Only 15 Minutes a Day"
+    autor: null
+    origem: "Pimsleur/language course template — Language learning direct response"
+    campanha: null
+    ano: 2005
+    resultado: null
+    mercado: educacao
+    produto: "curso de idiomas"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "benefit + timeframe + low effort"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_003
+    tier: C
+    text: "Write a Complete Book in 90 Days — Even If You've Never Written a Chapter"
+    autor: null
+    origem: "Template de info-product — Self-publishing courses"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: educacao
+    produto: "curso de self-publishing"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "benefit + timeframe + objection removal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_004
+    tier: C
+    text: "Sleep Through the Night Again — Starting Tonight"
+    autor: null
+    origem: "Template health — Sleep supplement/program"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: saude
+    produto: "suplemento / programa de sono"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "benefit + imediatismo + restauração"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_005
+    tier: C
+    text: "Get Your First 100 Customers Without Spending a Dollar on Ads"
+    autor: null
+    origem: "Template SaaS/startup — Growth hacking content"
+    campanha: null
+    ano: 2019
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo / curso de growth"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "benefit + specificity + objection removal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_006
+    tier: C
+    text: "Eliminate Back Pain in 7 Minutes a Day — No Drugs, No Surgery, No Equipment"
+    autor: null
+    origem: "Template health/fitness — Back pain program"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: saude
+    produto: "programa de dor nas costas"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "benefit + timeframe + tripla remoção de objeção"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_007
+    tier: C
+    text: "Double Your Email Open Rates With One Simple Change to Your Subject Lines"
+    autor: null
+    origem: "Template de email marketing — Digital marketing"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: negocios
+    produto: "curso de email marketing"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "benefit + specificity + simplicidade"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_benefit_008
+    tier: C
+    text: "Make Your First $1,000 Online This Weekend"
+    autor: null
+    origem: "Template de internet marketing — Make money online niche"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: info-produto
+    produto: "info-produto de renda online"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "benefit + specificity + urgência"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_001
+    tier: C
+    text: "Is Your Savings Account Slowly Bleeding You Dry?"
+    autor: null
+    origem: "Template Agora Financial — Financial newsletter"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: financas
+    produto: "newsletter financeira"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "fear + question + hidden threat"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_002
+    tier: C
+    text: "5 Signs Your Business Will Fail in the Next 12 Months"
+    autor: null
+    origem: "Template B2B — Business consulting"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: alto
+    canal: landing
+    idioma: en
+    tecnica: "fear + listicle + autodiagnóstico"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_003
+    tier: C
+    text: "The Silent Killer in Your Kitchen That Doctors Can't Detect"
+    autor: null
+    origem: "Template health newsletter — Agora/Boardroom style"
+    campanha: null
+    ano: 2005
+    resultado: null
+    mercado: saude
+    produto: "newsletter de saúde"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "fear + curiosity + authority gap"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_004
+    tier: C
+    text: "What Your Accountant Doesn't Know Could Get You Audited"
+    autor: null
+    origem: "Template financial/tax — Tax advisory services"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: financas
+    produto: "assessoria fiscal"
+    ticket: alto
+    canal: desconhecido
+    idioma: en
+    tecnica: "fear + authority gap + consequência"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_005
+    tier: C
+    text: "Your Employees Are Stealing From You Right Now — And You Don't Even Know It"
+    autor: null
+    origem: "Template B2B security — Business security/fraud prevention"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: negocios
+    produto: "serviço de segurança"
+    ticket: alto
+    canal: desconhecido
+    idioma: en
+    tecnica: "fear + imediatismo + traição"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_006
+    tier: C
+    text: "The Retirement Crisis No One Is Talking About"
+    autor: null
+    origem: "Template financial newsletter — Agora Financial style"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: financas
+    produto: "newsletter financeira"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "fear + conspiração + news"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_007
+    tier: C
+    text: "This Common Morning Habit Is Destroying Your Metabolism"
+    autor: null
+    origem: "Template health — Weight loss/health products"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: saude
+    produto: "produto de emagrecimento"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "fear + hábito comum + dano oculto"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_fear_008
+    tier: C
+    text: "Warning: Your Website Is Invisible to 73% of Potential Customers"
+    autor: null
+    origem: "Template SEO/marketing — Digital marketing services"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: negocios
+    produto: "serviço de marketing digital"
+    ticket: medio
+    canal: anuncio
+    idioma: en
+    tecnica: "fear + specificity + warning"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_001
+    tier: C
+    text: "783 Entrepreneurs Used This System Last Year. 94% Hit Their Revenue Goal."
+    autor: null
+    origem: "Template de curso online — Info-product launch"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: info-produto
+    produto: "curso online"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "proof + social proof + specificity"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_002
+    tier: C
+    text: "How a 58-Year-Old Grandmother Built a $3 Million Business From Her Kitchen Table"
+    autor: null
+    origem: "Template rags-to-riches — Business course marketing"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "curso de negócios"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "proof + herói improvável + specificity"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_003
+    tier: C
+    text: "I Tested 47 Productivity Apps. Only 3 Were Worth Keeping."
+    autor: null
+    origem: "Template de review/test — Tech content marketing"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo de tecnologia"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "proof + pesquisa + curadoria"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_004
+    tier: C
+    text: "After 10,000 Sales Calls, Here Are the 5 Questions That Close Deals"
+    autor: null
+    origem: "Template de vendas — Sales training"
+    campanha: null
+    ano: 2019
+    resultado: null
+    mercado: negocios
+    produto: "treinamento de vendas"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "proof + autoridade por experiência + listicle"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_006
+    tier: C
+    text: "This Email Template Has Generated $14.7 Million for My Clients"
+    autor: null
+    origem: "Template de copywriting service — Email marketing services"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: negocios
+    produto: "serviço de copywriting"
+    ticket: alto
+    canal: landing
+    idioma: en
+    tecnica: "proof + specificity + simplicidade"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_proof_007
+    tier: C
+    text: "How I Went From Sleeping in My Car to a $10M Exit in 4 Years"
+    autor: null
+    origem: "Template de founder story — Startup/business marketing"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: negocios
+    produto: "info-produto de negócios"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "proof + transformação + specificity"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_001
+    tier: C
+    text: "Could You Live on $500 a Month in Retirement?"
+    autor: null
+    origem: "Template financial — Retirement planning"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: financas
+    produto: "planejamento de aposentadoria"
+    ticket: desconhecido
+    canal: desconhecido
+    idioma: en
+    tecnica: "question + fear + autoexame"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_002
+    tier: C
+    text: "Is Your Website Losing You Money While You Sleep?"
+    autor: null
+    origem: "Template de web design — Web services marketing"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "serviço de web design"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "question + fear + perda passiva"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_003
+    tier: C
+    text: "What Would You Do If You Lost Your Job Tomorrow?"
+    autor: null
+    origem: "Template de side hustle/freelancing — Income diversification"
+    campanha: null
+    ano: 2019
+    resultado: null
+    mercado: educacao
+    produto: "curso de renda extra"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "question + fear + cenário"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_004
+    tier: C
+    text: "Are You Too Old to Start a Business?"
+    autor: null
+    origem: "Template de entrepreneurship — Business coaching"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "coaching de negócios"
+    ticket: alto
+    canal: landing
+    idioma: en
+    tecnica: "question + desafio ao ego"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_005
+    tier: C
+    text: "Which of These 7 Money Mistakes Are You Making Right Now?"
+    autor: null
+    origem: "Adaptado de Sherwin Cody — Financial advisory"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: financas
+    produto: "assessoria financeira"
+    ticket: desconhecido
+    canal: desconhecido
+    idioma: en
+    tecnica: "question + listicle + autodiagnóstico"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_006
+    tier: C
+    text: "Do You Recognize the 7 Early Warning Signs of a Heart Attack?"
+    autor: null
+    origem: "Template health/Boardroom — Health newsletter"
+    campanha: null
+    ano: 1995
+    resultado: null
+    mercado: saude
+    produto: "newsletter de saúde"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "question + fear + autopreservação"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_question_007
+    tier: C
+    text: "If You're So Smart, Why Aren't You Rich?"
+    autor: null
+    origem: "Template de wealth building — Investment/business courses"
+    campanha: null
+    ano: 1985
+    resultado: null
+    mercado: financas
+    produto: "curso de investimentos"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "question + desafio ao ego + provocação"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_002
+    tier: C
+    text: "How to Read a 300-Page Book in 45 Minutes and Remember Everything"
+    autor: null
+    origem: "Template speed reading — Speed reading/learning courses"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: educacao
+    produto: "curso de leitura dinâmica"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "how to + specificity + contraste"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_003
+    tier: C
+    text: "How to Fire a Client Without Burning the Bridge"
+    autor: null
+    origem: "Template B2B/consulting — Business coaching"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "coaching de negócios"
+    ticket: alto
+    canal: landing
+    idioma: en
+    tecnica: "how to + conversa difícil + nuance"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_004
+    tier: C
+    text: "How to Write Headlines That Make People Stop Scrolling"
+    autor: null
+    origem: "Template de copywriting — Copywriting courses"
+    campanha: null
+    ano: 2020
+    resultado: null
+    mercado: educacao
+    produto: "curso de copywriting"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "how to + meta + era digital"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_005
+    tier: C
+    text: "How to Sell Anything to Anyone in 60 Seconds or Less"
+    autor: null
+    origem: "Template de elevator pitch — Sales training"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: negocios
+    produto: "treinamento de vendas"
+    ticket: medio
+    canal: landing
+    idioma: en
+    tecnica: "how to + universalidade + timeframe"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_006
+    tier: C
+    text: "How to Turn a $5 Facebook Ad Into a $500 Sale"
+    autor: null
+    origem: "Template de paid traffic — Facebook ads marketing"
+    campanha: null
+    ano: 2019
+    resultado: null
+    mercado: negocios
+    produto: "curso de tráfego pago"
+    ticket: medio
+    canal: anuncio
+    idioma: en
+    tecnica: "how to + ROI + contraste"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_007
+    tier: C
+    text: "How to Get Your Kids to Listen Without Yelling, Bribing, or Repeating Yourself"
+    autor: null
+    origem: "Template de parenting — Parenting courses/books"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: educacao
+    produto: "curso de parentalidade"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "how to + tripla remoção de objeção"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_howto_008
+    tier: C
+    text: "How to Look 10 Years Younger in 14 Days — Without Surgery or Injections"
+    autor: null
+    origem: "Template beauty/anti-aging — Skincare products"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: consumo
+    produto: "produto de skincare"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "how to + specificity + timeframe + objection removal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_001
+    tier: C
+    text: "Why I Stopped Setting Goals (And Made More Money Than Ever)"
+    autor: null
+    origem: "Template anti-conventional — Productivity/business content"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo de produtividade"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "contrarian + confissão + paradoxo"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_002
+    tier: C
+    text: "The More You Exercise, the Fatter You Get (Here's Why)"
+    autor: null
+    origem: "Template health contrarian — Fitness marketing"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: saude
+    produto: "produto fitness"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "contrarian + paradoxo + mecanismo"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_003
+    tier: C
+    text: "Why Your Biggest Strength Is Holding You Back"
+    autor: null
+    origem: "Template de desenvolvimento pessoal — Leadership coaching"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: educacao
+    produto: "coaching de liderança"
+    ticket: alto
+    canal: landing
+    idioma: en
+    tecnica: "contrarian + autoexame + paradoxo"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_004
+    tier: C
+    text: "Stop Listening to Your Customers (They Don't Know What They Want)"
+    autor: null
+    origem: "Inspirado em Steve Jobs — Innovation/business marketing"
+    campanha: null
+    ano: 2015
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo de inovação"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "contrarian + autoridade + provocação"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_005
+    tier: C
+    text: "The Dangerous Myth of 'Following Your Passion'"
+    autor: null
+    origem: "Cal Newport influence — So Good They Can't Ignore You (conceito)"
+    campanha: null
+    ano: 2012
+    resultado: null
+    mercado: educacao
+    produto: "livro / conteúdo de carreira"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "contrarian + myth busting"
+    awareness: unaware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_006
+    tier: C
+    text: "Why the Best CEOs Are the Laziest People in the Room"
+    autor: null
+    origem: "Template de lideranca — Executive coaching"
+    campanha: null
+    ano: 2019
+    resultado: null
+    mercado: negocios
+    produto: "coaching executivo"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "contrarian + paradoxo + liderança"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_b2_contrarian_007
+    tier: C
+    text: "Why Perfectionists Make the Worst Entrepreneurs"
+    autor: null
+    origem: "Template de startup culture — Entrepreneurship content"
+    campanha: null
+    ano: 2018
+    resultado: null
+    mercado: negocios
+    produto: "conteúdo de empreendedorismo"
+    ticket: desconhecido
+    canal: landing
+    idioma: en
+    tecnica: "contrarian + desafio de identidade"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_2.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_001
+    tier: C
+    text: "How I Built a $10M Business in 3 Years — And How I'll Help You Do It in Half the Time"
+    autor: null
+    origem: "Template de mentoria high-ticket — Coaching/mentoring programs"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "authority + proof + promessa + timeframe"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_002
+    tier: C
+    text: "The Strategy That Took My Client From R$50k/Month to R$500k/Month in 90 Days"
+    autor: null
+    origem: "Template de case study high-ticket — Business consulting"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "proof + specificity + transformação"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_003
+    tier: C
+    text: "I Only Accept 8 Clients Per Year. Here's Why."
+    autor: null
+    origem: "Dan Kennedy influence — High-ticket positioning"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "escassez + autoridade + exclusividade"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_004
+    tier: C
+    text: "What I Learned Advising 300+ Companies That No MBA Will Ever Teach You"
+    autor: null
+    origem: "Template de consulting — Management consulting positioning"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "authority + anti-academic + experiência"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_005
+    tier: C
+    text: "Eu Faturei R$20 Milhoes Nos Ultimos 3 Anos. Agora Vou Te Mostrar Exatamente Como."
+    autor: null
+    origem: "Template de mentoria BR — Mentoria de negocios digitais"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "proof + specificity + oferta direta"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_006
+    tier: C
+    text: "The $100,000 Strategy Session I Give to My Private Clients — Available to 12 People This Month"
+    autor: null
+    origem: "Dan Kennedy / Jay Abraham influence — High-ticket consulting"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "value framing + escassez + price anchor"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_007
+    tier: C
+    text: "Depois de 15 Anos e 400 Alunos, Descobri Que Apenas 3 Coisas Separam Quem Fatura R$100k de Quem Fatura R$1M"
+    autor: null
+    origem: "Template de mentoria BR — Mentoria de escala"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "authority + specificity + simplicidade"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_008
+    tier: C
+    text: "Why Fortune 500 CEOs Pay $50,000 for Advice You Can Get Here for $5,000"
+    autor: null
+    origem: "Template de consulting democratization — Consulting programs"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "value framing + price anchor + acessibilidade"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_009
+    tier: C
+    text: "O Metodo Que Uso Para Gerar R$2M+ Por Ano Trabalhando 4 Horas Por Dia"
+    autor: null
+    origem: "Template de lifestyle business BR — Mentoria de lifestyle business"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "proof + lifestyle + método"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_auth_010
+    tier: C
+    text: "I've Spent $2.3 Million on My Own Education. Here's the $5,000 Shortcut."
+    autor: null
+    origem: "Template de info-product premium — High-ticket course marketing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso premium"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "value framing + investment proof + atalho"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_002
+    tier: C
+    text: "Vagas Abertas Para a Mentoria [Nome]: 6 Vagas. 47 Aplicacoes Recebidas."
+    autor: null
+    origem: "Template de mentoria BR — Mentoria seletiva"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "escassez + social proof + competição"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_003
+    tier: C
+    text: "If You're Not Doing At Least $500k/Year, This Page Isn't For You"
+    autor: null
+    origem: "Template de mastermind — High-level mastermind"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mastermind"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "qualificação + exclusividade + desafio ao ego"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_004
+    tier: C
+    text: "We Interview Every Applicant. Most Don't Get In. Here's Why That's Good for You."
+    autor: null
+    origem: "Template de programa seletivo — Certification/mastermind"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mastermind / certificação"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "exclusividade + garantia de qualidade"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_005
+    tier: C
+    text: "Uma Sala Com 12 Empresarios Faturando R$1M+. Voce Quer Estar Nela?"
+    autor: null
+    origem: "Template de mastermind BR — Mastermind de alto nivel"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mastermind"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "exclusividade + aspiração + peer pressure"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_006
+    tier: C
+    text: "Apply Now — or Wait 6 Months for the Next Cohort"
+    autor: null
+<!-- Dependência externa de contexto/identidade excluída: aplicar contrato CoreAI. -->
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+<!-- Dependência externa de contexto/identidade excluída: aplicar contrato CoreAI. -->
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "urgência + escassez + escolha binária"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_007
+    tier: C
+    text: "This Mastermind Has a 97% Renewal Rate. That Should Tell You Everything."
+    autor: null
+    origem: "Template de retention proof — Mastermind marketing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mastermind"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "proof + retenção + qualidade implícita"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_excl_008
+    tier: C
+    text: "Nao Vendemos Vagas. Selecionamos Membros."
+    autor: null
+    origem: "Template de posicionamento premium BR — High-ticket positioning"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mastermind / mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "posicionamento + exclusividade + reframe linguístico"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_001
+    tier: C
+    text: "From Solo Consultant to 7-Figure Agency in 12 Months — The Exact Roadmap"
+    autor: null
+    origem: "Template de agency coaching — Agency growth programs"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "coaching de agência"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "transformação + specificity + blueprint"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_002
+    tier: C
+    text: "De Profissional Liberal a Empresario: O Programa Para Quem Quer Parar de Vender Horas"
+    autor: null
+    origem: "Template de mentoria BR — Mentoria para profissionais liberais"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "transformação + mudança de identidade + dor específica"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_003
+    tier: C
+    text: "In 90 Days, You'll Either Have a Business That Runs Without You — Or Your Money Back"
+    autor: null
+    origem: "Template de garantia high-ticket — Business coaching"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "coaching de negócios"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "garantia + transformação + risk reversal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_004
+    tier: C
+    text: "O Programa Que Transformou 200+ Donos de Clinica Em Empresarios Com Faturamento Acima de R$200k/Mes"
+    autor: null
+    origem: "Template de nicho especifico BR — Mentoria para clinicas"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria de nicho"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "proof + nicho específico + social proof"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_005
+    tier: C
+    text: "How to Build a Team That Makes You Unnecessary — And a Business Worth Selling"
+    autor: null
+    origem: "Template de exit strategy — Business scaling coaching"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "coaching de escala"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "transformação + sistematização + duplo benefício"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_006
+    tier: C
+    text: "Your Next 12 Months Can Look Exactly Like Your Last 12 — Or Completely Different. You Choose."
+    autor: null
+    origem: "Tony Robbins influence — Coaching program marketing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "programa de coaching"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "future pacing + escolha + contraste"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_007
+    tier: C
+    text: "Pare de Ser o Gargalo do Seu Proprio Negocio"
+    autor: null
+    origem: "Template de mentoria operacional BR — Mentoria de escala"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "identificação do problema + autodiagnóstico + comando"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_008
+    tier: C
+    text: "The 3-Day Intensive That Replaces 3 Years of Trial and Error"
+    autor: null
+    origem: "Template de imersao — Immersive workshop marketing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "imersão"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "value framing + compressão de tempo + contraste"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_trans_009
+    tier: C
+    text: "Saia da Imersao Com Seu Funil Pronto, Validado e Gerando Leads"
+    autor: null
+    origem: "Template de imersao pratica BR — Imersao de marketing digital"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "imersão"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "resultado tangível + done for you + imediatismo"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_001
+    tier: C
+    text: "Yes, It's Expensive. Here's Why It's Worth Every Penny."
+    autor: null
+    origem: "Template de premium positioning — High-ticket marketing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "objection handling + honestidade + justificativa de valor"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_002
+    tier: C
+    text: "You Can't Afford This Program. That's Exactly Why You Need It."
+    autor: null
+    origem: "Dan Kennedy influence — Mindset-based selling"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "paradoxo + desafio ao ego + reframe"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_003
+    tier: C
+    text: "O Preco Nao E o Problema. O Problema E Continuar Fazendo o Que Voce Ja Faz."
+    autor: null
+    origem: "Template de mentoria BR — High-ticket objection handling"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "reframe + custo da inação"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_004
+    tier: C
+    text: "If You're Hesitating Because of the Investment, Calculate What One More Year of Status Quo Costs You"
+    autor: null
+    origem: "Jay Abraham influence — Cost of inaction framing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "reframe + custo da inação + matemática"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_005
+    tier: C
+    text: "This Program Isn't Cheap — But Neither Are the Results"
+    autor: null
+    origem: "Template de premium positioning — High-ticket marketing"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "justificativa de preço + estrutura paralela"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_006
+    tier: C
+    text: "Nao E Um Curso. E Um Investimento Com ROI Documentado de 847%."
+    autor: null
+    origem: "Template de mentoria BR — ROI-based positioning"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "reframe + ROI + specificity"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_007
+    tier: C
+    text: "What's the Cost of Not Knowing What You Don't Know?"
+    autor: null
+    origem: "Template filosofico de high-ticket — Consulting/coaching positioning"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria / coaching"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "pergunta filosófica + pontos cegos"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_obj_008
+    tier: C
+    text: "Seus Concorrentes Ja Estao Investindo Nisso. A Pergunta E: Voce Vai Esperar Ate Quando?"
+    autor: null
+    origem: "Template competitivo BR — B2B high-ticket"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "serviço B2B"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "pressão competitiva + FOMO + urgência"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_001
+    tier: C
+    text: "Free Training: The 3-Step Framework for Scaling Past $1M Without Burning Out"
+    autor: null
+    origem: "Template de webinar high-ticket — Webinar → application funnel"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "webinar / programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "valor grátis + framework + remoção de dor"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_002
+    tier: C
+    text: "Masterclass Gratuita: Como Estruturar Uma Oferta High-Ticket Que Vende a R$10k+ Com Naturalidade"
+    autor: null
+    origem: "Template de masterclass BR — Webinar para mentores/coaches"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "masterclass"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "valor grátis + how to + specificity"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_003
+    tier: C
+    text: "Watch This 47-Minute Presentation Before You Invest in Any Coaching Program"
+    autor: null
+    origem: "Template de VSL high-ticket — Pre-application VSL"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "programa de coaching"
+    ticket: high-ticket
+    canal: vsl
+    idioma: en
+    tecnica: "pre-emptive + time commitment + educação"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_004
+    tier: C
+    text: "Agende Sua Sessao Estrategica Gratuita (Vagas Limitadas a 10 Por Semana)"
+    autor: null
+    origem: "Template de call booking BR — Application → call funnel"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "CTA + valor grátis + escassez"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_005
+    tier: C
+    text: "Discover the Exact System Behind $47M in Coaching Revenue (Free Case Study)"
+    autor: null
+    origem: "Template de case study funnel — Case study → application"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "programa de coaching"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "proof + specificity + valor grátis"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_006
+    tier: C
+    text: "A Verdade Sobre Mentorias de Alto Valor (O Que Ninguem Te Conta Antes de Voce Pagar)"
+    autor: null
+    origem: "Template contrarian BR — Contrarian webinar positioning"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "contrarian + insider + confiança"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_007
+    tier: C
+    text: "Before You Apply: 5 Questions to Ask Any High-Ticket Program (Including Ours)"
+    autor: null
+    origem: "Template de pre-qualification — Trust-building content"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "educação + transparência + qualificação"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_funnel_008
+    tier: C
+    text: "Se Voce Fatura Mais de R$50k/Mes e Quer Chegar a R$500k, Essa Conversa E Para Voce"
+    autor: null
+    origem: "Template de qualificacao BR — Call booking page"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria / mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "qualificação + aspiração + specificity"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_001
+    tier: C
+    text: "If You Don't 10x Your Investment in 12 Months, I'll Refund Every Dollar and Buy You Dinner"
+    autor: null
+    origem: "Template de garantia audaciosa — High-ticket coaching"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "coaching high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "garantia + humor + specificity"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_002
+    tier: C
+    text: "Garantia de Resultado: Se Voce Nao Atingir R$100k/Mes em 6 Meses, Eu Trabalho Com Voce De Graca Ate Atingir"
+    autor: null
+    origem: "Template de garantia de trabalho BR — Mentoria de resultado"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "garantia de resultado + suporte ilimitado"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_003
+    tier: C
+    text: "Zero Risk: Pay Only When You See Results"
+    autor: null
+    origem: "Template de pay-for-performance — Results-based consulting"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "risk reversal + performance"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_004
+    tier: C
+    text: "Se Em 30 Dias Voce Nao Sentir Que Esse Foi o Melhor Investimento da Sua Carreira, Devolvemos 100%"
+    autor: null
+    origem: "Template de garantia emocional BR — Mentoria/imersao"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "mentoria / imersão"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "garantia + enquadramento emocional + incondicional"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_005
+    tier: C
+    text: "ROI Guarantee: Generate 5x Your Investment Within 6 Months — Or We Continue Working Together For Free"
+    autor: null
+    origem: "Template de ROI guarantee — Consulting programs"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "consultoria"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "garantia + ROI + suporte contínuo"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_006
+    tier: C
+    text: "I've Never Had a Client Ask for a Refund. But the Guarantee Is There If You Need It."
+    autor: null
+    origem: "Template de social proof + garantia — High-ticket coaching"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "coaching high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: en
+    tecnica: "proof + garantia + confiança"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  - id: hl_ht_guarantee_007
+    tier: C
+    text: "Satisfacao Garantida ou Seu Dinheiro de Volta + R$1.000 Pelo Incomodo"
+    autor: null
+    origem: "Template better-than-money-back BR — Super garantia high-ticket"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "programa high-ticket"
+    ticket: high-ticket
+    canal: landing
+    idioma: pt-br
+    tecnica: "garantia better-than-money-back + ousadia"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/headlines/headlines_batch_3.yaml"
+    clonavel_como_campea: false
+
+  # ── Clássicas sem autor identificado (data/swipe-file-headlines.md) ──
+
+  - id: hl_sf_howto_002
+    tier: C
+    text: "How to Make Money in Your Spare Time"
+    autor: null
+    origem: "Anúncio clássico (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "curso / oportunidade"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "benefit + baixo sacrifício"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_howto_003
+    tier: C
+    text: "How I Improved My Memory in One Evening"
+    autor: null
+    origem: "Anúncio clássico anos 1920 (sem autor identificado na fonte)"
+    campanha: null
+    ano: 1925
+    resultado: null
+    mercado: educacao
+    produto: "curso de memória"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "pessoal + specificity + resultado tangível"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_howto_004
+    tier: C
+    text: "How a 'Fool Stunt' Made Me a Star Salesman"
+    autor: null
+    origem: "Anúncio de curso de vendas (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de vendas"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "curiosidade + história implícita + resultado"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_howto_005
+    tier: C
+    text: "How to Write a Personal Letter That Sounds Natural"
+    autor: null
+    origem: "Anúncio de curso (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de escrita"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "how to + specificity + medo comum"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_num_011
+    tier: C
+    text: "67 Ways to Increase Your Direct Mail Response"
+    autor: null
+    origem: "Marketing direto (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "info-produto de marketing"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "número ímpar específico + variedade"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_num_012
+    tier: C
+    text: "7 Deadly Mistakes That Can Cost You Your Home"
+    autor: null
+    origem: "Anúncio imobiliário (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: imobiliario
+    produto: "serviço imobiliário"
+    ticket: desconhecido
+    canal: impresso
+    idioma: en
+    tecnica: "número + emoção forte + perda concreta"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_num_013
+    tier: C
+    text: "101 Ways to Save Money on Your Income Tax"
+    autor: null
+    origem: "Anúncio fiscal (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "guia fiscal"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "número grande + relevância universal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_num_014
+    tier: C
+    text: "The 30-Day System to Double Your Energy"
+    autor: null
+    origem: "Suplementos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "suplemento"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "tempo específico + benefício dobrado"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_num_015
+    tier: C
+    text: "5 Foods You Must Never Eat If You Want a Flat Belly"
+    autor: null
+    origem: "Marketing digital moderno (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de emagrecimento"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "número pequeno + 'never' + curiosidade"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_quest_022
+    tier: C
+    text: "Who Else Wants a Whiter Wash?"
+    autor: null
+    origem: "Anúncio de sabão (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: consumo
+    produto: "sabão em pó"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "'who else' + FOMO"
+    awareness: product-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_quest_023
+    tier: C
+    text: "What Makes a Woman Unforgettable?"
+    autor: null
+    origem: "Cosméticos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: consumo
+    produto: "cosmético"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "promessa de segredo + desejo universal"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_quest_024
+    tier: C
+    text: "Is Your Home Slowly Killing You?"
+    autor: null
+    origem: "Purificador de ar (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: consumo
+    produto: "purificador de ar"
+    ticket: medio
+    canal: anuncio
+    idioma: en
+    tecnica: "choque + ameaça invisível em local seguro"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_quest_025
+    tier: C
+    text: "Can You Pass This Money-Making Test?"
+    autor: null
+    origem: "Curso de negócios (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "curso de negócios"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "desafio + curiosidade + prova de competência"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_secret_031
+    tier: C
+    text: "The Secret of Making People Like You"
+    autor: null
+    origem: "Anúncio de livro (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "livro"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "segredo + desejo universal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_secret_033
+    tier: C
+    text: "The Secret Formula That Makes Millionaires"
+    autor: null
+    origem: "Anúncio de oportunidade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "info-produto de oportunidade"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "fórmula replicável + aspiração"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_secret_034
+    tier: C
+    text: "Exposed: The Weight Loss Industry's Dirty Secret"
+    autor: null
+    origem: "Marketing moderno (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de emagrecimento"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "revelação exclusiva + conspiração"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_secret_035
+    tier: C
+    text: "What Doctors Don't Tell You About Back Pain"
+    autor: null
+    origem: "Marketing de saúde (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de dor nas costas"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "authority gap + curiosidade + indignação"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_warn_041
+    tier: C
+    text: "Warning: Don't Buy Any Insurance Until You Read This"
+    autor: null
+    origem: "Anúncio de seguros (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "seguro"
+    ticket: medio
+    canal: impresso
+    idioma: en
+    tecnica: "comando direto + warning"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_warn_042
+    tier: C
+    text: "The Shocking Truth About Your Drinking Water"
+    autor: null
+    origem: "Marketing de filtros (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: consumo
+    produto: "filtro de água"
+    ticket: medio
+    canal: anuncio
+    idioma: en
+    tecnica: "choque + ameaça ao consumo diário"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_warn_043
+    tier: C
+    text: "Don't Even Think About Buying a Car Until..."
+    autor: null
+    origem: "Anúncio automotivo (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: consumo
+    produto: "automóvel"
+    ticket: alto
+    canal: impresso
+    idioma: en
+    tecnica: "comando forte + informação crucial implícita"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_warn_044
+    tier: C
+    text: "STOP! Don't Pay Another Electric Bill Until You Read This"
+    autor: null
+    origem: "Marketing de energia (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: consumo
+    produto: "solução de energia"
+    ticket: medio
+    canal: anuncio
+    idioma: en
+    tecnica: "pattern interrupt + despesa universal"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_warn_045
+    tier: C
+    text: "If You're Over 40, Read This Warning"
+    autor: null
+    origem: "Marketing de saúde (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de saúde"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "segmentação direta + warning"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_story_052
+    tier: C
+    text: "I Was Broke at 40. Now I'm a Millionaire."
+    autor: null
+    origem: "Marketing de oportunidade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "info-produto de oportunidade"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "contraste dramático + identificação por idade"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_story_053
+    tier: C
+    text: "How I Made $47,000 in One Week From Home"
+    autor: null
+    origem: "Marketing digital (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "info-produto de renda online"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "valor específico + tempo curto + aspiração"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_story_054
+    tier: C
+    text: "The Day I Discovered the Secret to Never Being Tired Again"
+    autor: null
+    origem: "Suplementos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "suplemento"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "momento de descoberta + solução permanente"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_story_055
+    tier: C
+    text: "I Used to Be Fat. Here's What Changed Everything."
+    autor: null
+    origem: "Marketing fitness (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "programa fitness"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "vulnerabilidade + transformação total"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_promise_061
+    tier: C
+    text: "Lose 20 Pounds in 20 Days"
+    autor: null
+    origem: "Marketing fitness (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "programa de emagrecimento"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "simetria + specificity + resultado/tempo"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_promise_062
+    tier: C
+    text: "Speak Spanish in 30 Days or Your Money Back"
+    autor: null
+    origem: "Pimsleur (marca citada, sem copywriter identificado)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de idiomas"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "promessa clara + garantia"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_promise_063
+    tier: C
+    text: "Double Your Money in 90 Days"
+    autor: null
+    origem: "Marketing financeiro (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "info-produto financeiro"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "resultado concreto + tempo definido + ganância"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_promise_064
+    tier: C
+    text: "Get Rid of Your Belly Fat Once and For All"
+    autor: null
+    origem: "Marketing fitness (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "programa de emagrecimento"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "solução permanente para problema persistente"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_promise_065
+    tier: C
+    text: "Never Worry About Money Again"
+    autor: null
+    origem: "Marketing financeiro (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "info-produto financeiro"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "ansiedade universal + 'never again'"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_comp_071
+    tier: C
+    text: "Why Some People Almost Always Make Money in the Stock Market"
+    autor: null
+    origem: "Marketing financeiro (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "newsletter / curso de investimentos"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "grupo seleto implícito + credibilidade calibrada"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_comp_073
+    tier: C
+    text: "The Difference Between a $50,000 Job and a $500,000 Job"
+    autor: null
+    origem: "Executive coaching (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "coaching executivo"
+    ticket: alto
+    canal: landing
+    idioma: en
+    tecnica: "contraste dramático + curiosidade"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_comp_074
+    tier: C
+    text: "Why Some Foods 'Explode' in Your Stomach"
+    autor: null
+    origem: "Marketing de digestão (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "suplemento digestivo"
+    ticket: baixo
+    canal: vsl
+    idioma: en
+    tecnica: "imagem visceral + curiosidade sobre 'quais'"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_comp_075
+    tier: C
+    text: "Two Types of Investors: Which One Are You?"
+    autor: null
+    origem: "Marketing financeiro (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "curso de investimentos"
+    ticket: baixo
+    canal: landing
+    idioma: en
+    tecnica: "autocategorização forçada + engajamento"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_offer_082
+    tier: C
+    text: "At Last! A Diet That Really Works"
+    autor: null
+    origem: "Marketing de dietas (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "programa de dieta"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "validação de frustrações + diferenciação"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_cur_093
+    tier: C
+    text: "Read This or Die"
+    autor: null
+    origem: "Anúncio polêmico de vitaminas (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "vitaminas"
+    ticket: baixo
+    canal: impresso
+    idioma: en
+    tecnica: "choque absoluto"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_cur_094
+    tier: C
+    text: "What Your Doctor Won't Tell You (And Why)"
+    autor: null
+    origem: "Marketing de saúde alternativa (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de saúde alternativa"
+    ticket: baixo
+    canal: mala-direta
+    idioma: en
+    tecnica: "conspiração de autoridade + camada extra ('and why')"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_cur_095
+    tier: C
+    text: "This Weird Trick Made Me $10,000 Richer"
+    autor: null
+    origem: "Marketing digital (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "info-produto de renda online"
+    ticket: baixo
+    canal: anuncio
+    idioma: en
+    tecnica: "'weird trick' + valor específico"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  # ── Nichos pt-br (data/swipe-file-headlines.md, seção 11) ──
+
+  - id: hl_sf_nicho_101
+    tier: C
+    text: "O Alimento Que Está Destruindo Seu Intestino (E Você Come Todo Dia)"
+    autor: null
+    origem: "Headline de nicho saúde e bem-estar (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de saúde"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "fear + hábito diário + dano oculto"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_102
+    tier: C
+    text: "Médico Revela: 'Pare de Tomar Este Remédio Imediatamente'"
+    autor: null
+    origem: "Headline de nicho saúde e bem-estar (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "produto de saúde"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "authority borrow + comando + urgência"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_103
+    tier: C
+    text: "O Exercício de 4 Segundos Que Elimina Dor nas Costas"
+    autor: null
+    origem: "Headline de nicho saúde e bem-estar (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "programa de dor nas costas"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "specificity extrema + esforço mínimo"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_104
+    tier: C
+    text: "Por Que Você Acorda Cansado (Não É Falta de Sono)"
+    autor: null
+    origem: "Headline de nicho saúde e bem-estar (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "suplemento / programa de energia"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "negação da causa óbvia + curiosidade"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_105
+    tier: C
+    text: "A Bebida Matinal Que Desinflamou Meu Corpo em 7 Dias"
+    autor: null
+    origem: "Headline de nicho saúde e bem-estar (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: saude
+    produto: "suplemento"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "resultado pessoal + timeframe curto"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_106
+    tier: C
+    text: "O Investimento 'Proibido' Que Rende 3x Mais Que Poupança"
+    autor: null
+    origem: "Headline de nicho dinheiro e negócios (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "curso de investimentos"
+    ticket: baixo
+    canal: landing
+    idioma: pt-br
+    tecnica: "proibição implícita + contraste de rendimento"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_107
+    tier: C
+    text: "Como Cobrar 10x Mais e Ter Fila de Clientes"
+    autor: null
+    origem: "Headline de nicho dinheiro e negócios (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria / curso"
+    ticket: alto
+    canal: landing
+    idioma: pt-br
+    tecnica: "how to + duplo benefício paradoxal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_108
+    tier: C
+    text: "O Erro de R$100.000 Que Quase Quebrou Minha Empresa"
+    autor: null
+    origem: "Headline de nicho dinheiro e negócios (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: negocios
+    produto: "mentoria / conteúdo"
+    ticket: alto
+    canal: landing
+    idioma: pt-br
+    tecnica: "confissão + valor específico + stakes"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_109
+    tier: C
+    text: "3 Ativos Que Milionários Compram (E Você Ignora)"
+    autor: null
+    origem: "Headline de nicho dinheiro e negócios (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: financas
+    produto: "curso de investimentos"
+    ticket: baixo
+    canal: landing
+    idioma: pt-br
+    tecnica: "listicle + grupo aspiracional + gap"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_110
+    tier: C
+    text: "A Profissão de 6 Dígitos Que Ninguém Está Falando"
+    autor: null
+    origem: "Headline de nicho dinheiro e negócios (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso profissionalizante"
+    ticket: medio
+    canal: landing
+    idioma: pt-br
+    tecnica: "oportunidade oculta + curiosidade"
+    awareness: unaware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_111
+    tier: C
+    text: "As 3 Palavras Que Salvam Qualquer Relacionamento"
+    autor: null
+    origem: "Headline de nicho relacionamentos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de relacionamento"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "simplicidade extrema + universalidade"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_112
+    tier: C
+    text: "Por Que Ele Se Afasta Quando Você Demonstra Interesse"
+    autor: null
+    origem: "Headline de nicho relacionamentos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de relacionamento"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "paradoxo + dor específica"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_113
+    tier: C
+    text: "O Segredo Para Fazer Qualquer Pessoa Gostar de Você em 5 Minutos"
+    autor: null
+    origem: "Headline de nicho relacionamentos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de relacionamento"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "segredo + universalidade + timeframe curto"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_114
+    tier: C
+    text: "O Erro Fatal Que Mata a Atração (E Todas Cometem)"
+    autor: null
+    origem: "Headline de nicho relacionamentos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de relacionamento"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "fear + autodiagnóstico universal"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_115
+    tier: C
+    text: "Como Ser Irresistível Sem Mudar Sua Aparência"
+    autor: null
+    origem: "Headline de nicho relacionamentos (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de relacionamento"
+    ticket: baixo
+    canal: vsl
+    idioma: pt-br
+    tecnica: "how to + remoção da objeção principal"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_116
+    tier: C
+    text: "Como Trabalhar 4 Horas e Produzir Mais Que em 8"
+    autor: null
+    origem: "Headline de nicho carreira e produtividade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de produtividade"
+    ticket: baixo
+    canal: landing
+    idioma: pt-br
+    tecnica: "paradoxo + contraste numérico"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_117
+    tier: C
+    text: "O Hábito de 5 Minutos de CEOs Bilionários"
+    autor: null
+    origem: "Headline de nicho carreira e produtividade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de produtividade"
+    ticket: baixo
+    canal: landing
+    idioma: pt-br
+    tecnica: "authority borrow + esforço mínimo"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_118
+    tier: C
+    text: "Por Que Você Não É Promovido (Não É Seu Trabalho)"
+    autor: null
+    origem: "Headline de nicho carreira e produtividade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "coaching de carreira"
+    ticket: medio
+    canal: landing
+    idioma: pt-br
+    tecnica: "negação da causa óbvia + dor de carreira"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_119
+    tier: C
+    text: "A Técnica de Memorização de Recordistas Mundiais"
+    autor: null
+    origem: "Headline de nicho carreira e produtividade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de memorização"
+    ticket: baixo
+    canal: landing
+    idioma: pt-br
+    tecnica: "authority borrow + técnica exclusiva"
+    awareness: solution-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  - id: hl_sf_nicho_120
+    tier: C
+    text: "Como Eliminar Procrastinação em 72 Horas"
+    autor: null
+    origem: "Headline de nicho carreira e produtividade (sem autor identificado na fonte)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: educacao
+    produto: "curso de produtividade"
+    ticket: baixo
+    canal: landing
+    idioma: pt-br
+    tecnica: "how to + timeframe específico"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "data/swipe-file-headlines.md"
+    clonavel_como_campea: false
+
+  # ── Subject lines sem autor real (swipe/emails/subject-lines-collection.md) ──
+
+  - id: hl_sl_cur_007
+    tier: C
+    text: "the piano player's secret"
+    autor: null
+    origem: "Adaptado de John Caples"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: desconhecido
+    canal: email
+    idioma: en
+    tecnica: "referência a clássico + 'secret'"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_sl_cur_012
+    tier: C
+    text: "the email I deleted (then recovered)"
+    autor: null
+    origem: "Ben Settle style (imitação de estilo, não peça atribuída)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: desconhecido
+    canal: email
+    idioma: en
+    tecnica: "narrativa em miniatura na subject line"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_sl_contra_004
+    tier: C
+    text: "the case against hard work"
+    autor: null
+    origem: "Joe Karbo influence (Lazy Man's Way)"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: desconhecido
+    canal: email
+    idioma: en
+    tecnica: "anti-hustle + contrarian"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_sl_contra_012
+    tier: C
+    text: "the lazier you are, the more money you'll make"
+    autor: null
+    origem: "Template Joe Karbo style"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: desconhecido
+    canal: email
+    idioma: en
+    tecnica: "correlação inversa ao senso comum"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_sl_quest_002
+    tier: C
+    text: "are you making this mistake?"
+    autor: null
+    origem: "Variação de Sherwin Cody's classic headline"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: desconhecido
+    canal: email
+    idioma: en
+    tecnica: "self-examination trigger"
+    awareness: problem-aware
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false
+
+  - id: hl_sl_num_004
+    tier: C
+    text: "the 47-word email that generated $100,000"
+    autor: null
+    origem: "Variação do Ben Settle"
+    campanha: null
+    ano: null
+    resultado: null
+    mercado: info-produto
+    produto: "email marketing"
+    ticket: desconhecido
+    canal: email
+    idioma: en
+    tecnica: "dois números com contraste extremo"
+    awareness: product-aware
+    fonte_arquivo:
+      - "swipe/emails/subject-lines-collection.md"
+    clonavel_como_campea: false

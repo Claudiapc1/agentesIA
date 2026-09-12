@@ -1,0 +1,34 @@
+# ContextOS - Authority Story (Narrativa de Autoridade)
+# AUTO-GENERATED durante: *setup-context Fase 6
+# Sintetizado a partir de: founder-dna + credentials + brand + company-profile
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+headline: null       # Titulo impactante da narrativa
+hook: null           # Gancho inicial (1-2 frases)
+
+narrative_structure:
+  before: null       # O mundo antes (do founder-dna act_1)
+  turning_point: null  # A virada (do founder-dna act_2)
+  breakthrough: null   # A conquista (do founder-dna act_3)
+  present: null        # O presente e legado (do founder-dna act_4)
+
+proof_points:
+  - proof: null       # De credentials
+  - proof: null
+  - proof: null
+
+brand_alignment:
+  promise_connection: null  # Como a historia conecta com a promessa da marca
+  value_reinforcement: null # Quais valores a historia reforça
+
+metadata:
+  source_files:
+    - context/founder-dna.yaml
+    - context/credentials.yaml
+    - context/brand.yaml
+    - context/company-profile.yaml
+  generated: false
+  status: INCOMPLETE

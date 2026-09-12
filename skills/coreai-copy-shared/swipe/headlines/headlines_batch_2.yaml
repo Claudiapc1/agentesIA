@@ -1,0 +1,866 @@
+# Headlines & Subject Lines - Batch 2
+# 55 headlines organizadas por tipo (curiosity, benefit, fear, proof, question, how-to, contrarian)
+# Diferentes do batch_1. Conteudo original ou de fontes documentadas.
+# Created: 2026-03-09
+# Category: headlines
+
+batch_info:
+  batch_number: 2
+  extraction_date: "2026-03-09"
+  source_type: "swipe_file_expansion"
+  iteration: 2
+  total_entries: 55
+
+entries:
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # CURIOSITY HEADLINES (10)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_curiosity_001"
+    text: "What Never to Eat on an Airplane"
+    source:
+      author: "Gary Bencivenga"
+      work: "Boardroom fascination"
+      year: ~1990s
+    technique:
+      primary: "curiosity"
+      secondary: ["specificity", "self_preservation"]
+    awareness_level: "unaware"
+    score: 5
+    tags: ["curiosity", "health", "travel", "fascination"]
+    analysis:
+      why_it_works: "Todos viajam de aviao. 'Never' cria urgencia. O leitor precisa saber o que esta fazendo errado."
+
+  - id: "hl_b2_curiosity_002"
+    text: "The Two-Word Phrase That Doubles Tips for Waiters"
+    source:
+      author: "Robert Cialdini"
+      work: "Influence (referencia em palestras)"
+      year: ~2000s
+    technique:
+      primary: "curiosity"
+      secondary: ["specificity", "social_proof"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["curiosity", "psychology", "specificity"]
+    analysis:
+      why_it_works: "Duas palavras = simplicidade. 'Doubles' = resultado especifico. Aplicavel a qualquer contexto de persuasao."
+
+  - id: "hl_b2_curiosity_003"
+    text: "The Strange Reason Why Millionaires Drive Used Cars"
+    source:
+      author: "Adaptado de Thomas Stanley"
+      work: "The Millionaire Next Door (conceito)"
+      year: ~1996
+    technique:
+      primary: "curiosity"
+      secondary: ["contrarian", "wealth_insight"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["curiosity", "financial", "contrarian"]
+    analysis:
+      why_it_works: "Contradiz estereotipo de milionarios. 'Strange reason' intensifica curiosidade."
+
+  - id: "hl_b2_curiosity_004"
+    text: "What Your Handwriting Reveals About Your Personality"
+    source:
+      author: "Template classico de fascination"
+      work: "Boardroom/Bottom Line style"
+      year: ~1980s
+    technique:
+      primary: "curiosity"
+      secondary: ["self_examination", "identity"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["curiosity", "psychology", "self_examination"]
+    analysis:
+      why_it_works: "Auto-referencial. O leitor imediatamente pensa na propria letra."
+
+  - id: "hl_b2_curiosity_005"
+    text: "The Hidden Tax You Pay Every Time You Use a Credit Card"
+    source:
+      author: "Template Agora Financial"
+      work: "Financial newsletter promotion"
+      year: ~2010s
+    technique:
+      primary: "curiosity"
+      secondary: ["fear", "financial_loss", "hidden_enemy"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["curiosity", "financial", "fear", "hidden"]
+    analysis:
+      why_it_works: "'Hidden tax' + 'every time' = perda constante que o leitor nao sabia que existia."
+
+  - id: "hl_b2_curiosity_006"
+    text: "Why Your Doctor Checks Your Fingernails (And What He's Really Looking For)"
+    source:
+      author: "Parris Lampropoulos"
+      work: "Health newsletter fascination"
+      year: ~2000s
+    technique:
+      primary: "curiosity"
+      secondary: ["authority_borrow", "insider_knowledge"]
+    awareness_level: "unaware"
+    score: 5
+    tags: ["curiosity", "health", "authority", "insider"]
+    analysis:
+      why_it_works: "Observacao comum + explicacao secreta. 'What he's really looking for' ativa paranoia saudavel."
+
+  - id: "hl_b2_curiosity_007"
+    text: "The Color of Your Front Door May Be Costing You $20,000 in Home Value"
+    source:
+      author: "Template imobiliario"
+      work: "Real estate marketing"
+      year: ~2015
+    technique:
+      primary: "curiosity"
+      secondary: ["specificity", "financial_loss"]
+    awareness_level: "unaware"
+    score: 3
+    tags: ["curiosity", "real_estate", "specificity"]
+    analysis:
+      why_it_works: "Detalhe trivial (cor da porta) com impacto financeiro enorme ($20K). Contraste gera curiosidade."
+
+  - id: "hl_b2_curiosity_008"
+    text: "The One Negotiation Mistake That Cost Me a $2 Million Deal"
+    source:
+      author: "Template de business storytelling"
+      work: "B2B content marketing"
+      year: ~2018
+    technique:
+      primary: "curiosity"
+      secondary: ["confession", "specificity", "lesson_learned"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["curiosity", "business", "negotiation", "confession"]
+    analysis:
+      why_it_works: "Confissao de erro caro. 'One mistake' = simples de evitar. '$2M' = stakes altos."
+
+  - id: "hl_b2_curiosity_009"
+    text: "The Ingredient in Your Shampoo That's Banned in 14 Countries"
+    source:
+      author: "Template health/beauty"
+      work: "Natural products marketing"
+      year: ~2015
+    technique:
+      primary: "curiosity"
+      secondary: ["fear", "authority_gap", "specificity"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["curiosity", "health", "fear", "consumer_protection"]
+    analysis:
+      why_it_works: "'14 countries' = especifico. 'Banned' = perigoso. Produto que o leitor USA diariamente."
+
+  - id: "hl_b2_curiosity_010"
+    text: "What I Found Inside a $50,000-a-Year Mastermind (That You Can Get for Free)"
+    source:
+      author: "Template de info-product"
+      work: "Digital marketing"
+      year: ~2020
+    technique:
+      primary: "curiosity"
+      secondary: ["price_contrast", "insider_access"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["curiosity", "business", "insider", "value_proposition"]
+    analysis:
+      why_it_works: "Contraste $50K vs. free. Insider access a algo exclusivo."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # BENEFIT HEADLINES (8)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_benefit_001"
+    text: "Retire 10 Years Early — Without Saving More Money"
+    source:
+      author: "Template financial"
+      work: "Retirement planning offers"
+      year: ~2015
+    technique:
+      primary: "benefit"
+      secondary: ["timeframe", "objection_removal"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["benefit", "financial", "retirement", "objection_removal"]
+    analysis:
+      why_it_works: "Resultado aspiracional + remoção da objeção principal (economizar mais)."
+
+  - id: "hl_b2_benefit_002"
+    text: "Speak Fluent Spanish in 30 Days — Using Only 15 Minutes a Day"
+    source:
+      author: "Pimsleur/language course template"
+      work: "Language learning direct response"
+      year: ~2000s
+    technique:
+      primary: "benefit"
+      secondary: ["timeframe", "low_effort"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["benefit", "education", "languages", "timeframe"]
+    analysis:
+      why_it_works: "Resultado claro (fluente) + timeframe (30 dias) + baixo esforço (15 min/dia)."
+
+  - id: "hl_b2_benefit_003"
+    text: "Write a Complete Book in 90 Days — Even If You've Never Written a Chapter"
+    source:
+      author: "Template de info-product"
+      work: "Self-publishing courses"
+      year: ~2018
+    technique:
+      primary: "benefit"
+      secondary: ["timeframe", "objection_removal"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["benefit", "writing", "self_publishing", "objection_removal"]
+    analysis:
+      why_it_works: "Resultado tangivel (livro completo) + timeframe + zero prerequisito."
+
+  - id: "hl_b2_benefit_004"
+    text: "Sleep Through the Night Again — Starting Tonight"
+    source:
+      author: "Template health"
+      work: "Sleep supplement/program"
+      year: ~2015
+    technique:
+      primary: "benefit"
+      secondary: ["immediacy", "restoration"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["benefit", "health", "sleep", "immediacy"]
+    analysis:
+      why_it_works: "'Again' implica que o leitor ja perdeu isso. 'Starting tonight' = resultado imediato."
+
+  - id: "hl_b2_benefit_005"
+    text: "Get Your First 100 Customers Without Spending a Dollar on Ads"
+    source:
+      author: "Template SaaS/startup"
+      work: "Growth hacking content"
+      year: ~2019
+    technique:
+      primary: "benefit"
+      secondary: ["specificity", "objection_removal"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["benefit", "business", "growth", "bootstrap"]
+    analysis:
+      why_it_works: "Numero especifico (100) + remoção de barreira principal (custo de ads)."
+
+  - id: "hl_b2_benefit_006"
+    text: "Eliminate Back Pain in 7 Minutes a Day — No Drugs, No Surgery, No Equipment"
+    source:
+      author: "Template health/fitness"
+      work: "Back pain program"
+      year: ~2010s
+    technique:
+      primary: "benefit"
+      secondary: ["timeframe", "triple_objection_removal"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["benefit", "health", "pain", "objection_removal"]
+    analysis:
+      why_it_works: "Tripla remocao de objecao (drogas, cirurgia, equipamento). 7 min = esforco minimo."
+
+  - id: "hl_b2_benefit_007"
+    text: "Double Your Email Open Rates With One Simple Change to Your Subject Lines"
+    source:
+      author: "Template de email marketing"
+      work: "Digital marketing"
+      year: ~2020
+    technique:
+      primary: "benefit"
+      secondary: ["specificity", "simplicity"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["benefit", "marketing", "email", "simplicity"]
+    analysis:
+      why_it_works: "'One simple change' = facil de implementar. 'Double' = resultado dramatico."
+
+  - id: "hl_b2_benefit_008"
+    text: "Make Your First $1,000 Online This Weekend"
+    source:
+      author: "Template de internet marketing"
+      work: "Make money online niche"
+      year: ~2015
+    technique:
+      primary: "benefit"
+      secondary: ["specificity", "urgency", "accessibility"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["benefit", "online_business", "income", "urgency"]
+    analysis:
+      why_it_works: "'First $1,000' = milestone especifico. 'This weekend' = timeframe ultra-curto."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # FEAR HEADLINES (8)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_fear_001"
+    text: "Is Your Savings Account Slowly Bleeding You Dry?"
+    source:
+      author: "Template Agora Financial"
+      work: "Financial newsletter"
+      year: ~2010s
+    technique:
+      primary: "fear"
+      secondary: ["question", "hidden_threat"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["fear", "financial", "savings", "hidden_threat"]
+    analysis:
+      why_it_works: "Inversao: o lugar 'seguro' (poupanca) e na verdade perigoso. 'Slowly' amplifica."
+
+  - id: "hl_b2_fear_002"
+    text: "5 Signs Your Business Will Fail in the Next 12 Months"
+    source:
+      author: "Template B2B"
+      work: "Business consulting"
+      year: ~2015
+    technique:
+      primary: "fear"
+      secondary: ["listicle", "prediction", "self_diagnosis"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["fear", "business", "prediction", "listicle"]
+    analysis:
+      why_it_works: "Auto-diagnostico compulsorio. O leitor verifica cada sinal contra seu proprio negocio."
+
+  - id: "hl_b2_fear_003"
+    text: "The Silent Killer in Your Kitchen That Doctors Can't Detect"
+    source:
+      author: "Template health newsletter"
+      work: "Agora/Boardroom style"
+      year: ~2005
+    technique:
+      primary: "fear"
+      secondary: ["curiosity", "authority_gap", "proximity"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["fear", "health", "hidden_danger", "kitchen"]
+    analysis:
+      why_it_works: "'Silent killer' + 'your kitchen' = perigo proximo e invisivel. 'Doctors can't detect' = sem safety net."
+
+  - id: "hl_b2_fear_004"
+    text: "What Your Accountant Doesn't Know Could Get You Audited"
+    source:
+      author: "Template financial/tax"
+      work: "Tax advisory services"
+      year: ~2010s
+    technique:
+      primary: "fear"
+      secondary: ["authority_gap", "consequence"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["fear", "financial", "tax", "authority_gap"]
+    analysis:
+      why_it_works: "'Doesn't know' questiona o expert que voce contratou. 'Audited' = consequencia real."
+
+  - id: "hl_b2_fear_005"
+    text: "Your Employees Are Stealing From You Right Now — And You Don't Even Know It"
+    source:
+      author: "Template B2B security"
+      work: "Business security/fraud prevention"
+      year: ~2015
+    technique:
+      primary: "fear"
+      secondary: ["immediacy", "betrayal", "hidden_threat"]
+    awareness_level: "unaware"
+    score: 3
+    tags: ["fear", "business", "theft", "security"]
+    analysis:
+      why_it_works: "'Right now' = urgencia. 'You don't even know' = ameaca invisivel."
+
+  - id: "hl_b2_fear_006"
+    text: "The Retirement Crisis No One Is Talking About"
+    source:
+      author: "Template financial newsletter"
+      work: "Agora Financial style"
+      year: ~2018
+    technique:
+      primary: "fear"
+      secondary: ["conspiracy", "news", "urgency"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["fear", "financial", "retirement", "crisis"]
+    analysis:
+      why_it_works: "'No one is talking about' = voce esta sendo mantido no escuro. 'Crisis' = stakes altos."
+
+  - id: "hl_b2_fear_007"
+    text: "This Common Morning Habit Is Destroying Your Metabolism"
+    source:
+      author: "Template health"
+      work: "Weight loss/health products"
+      year: ~2015
+    technique:
+      primary: "fear"
+      secondary: ["common_habit", "hidden_damage"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["fear", "health", "metabolism", "daily_habit"]
+    analysis:
+      why_it_works: "'Common morning habit' = algo que o leitor FAZ. 'Destroying' = dano progressivo."
+
+  - id: "hl_b2_fear_008"
+    text: "Warning: Your Website Is Invisible to 73% of Potential Customers"
+    source:
+      author: "Template SEO/marketing"
+      work: "Digital marketing services"
+      year: ~2020
+    technique:
+      primary: "fear"
+      secondary: ["specificity", "financial_loss", "warning"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["fear", "marketing", "seo", "warning"]
+    analysis:
+      why_it_works: "73% = perda quantificada. 'Invisible' = problema que o dono nao enxerga."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # PROOF HEADLINES (7)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_proof_001"
+    text: "783 Entrepreneurs Used This System Last Year. 94% Hit Their Revenue Goal."
+    source:
+      author: "Template de curso online"
+      work: "Info-product launch"
+      year: ~2020
+    technique:
+      primary: "proof"
+      secondary: ["social_proof", "specificity"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["proof", "social_proof", "specificity", "business"]
+    analysis:
+      why_it_works: "Numeros impares/especificos (783, 94%) = credibilidade. Resultado mensuravel."
+
+  - id: "hl_b2_proof_002"
+    text: "How a 58-Year-Old Grandmother Built a $3 Million Business From Her Kitchen Table"
+    source:
+      author: "Template rags-to-riches"
+      work: "Business course marketing"
+      year: ~2018
+    technique:
+      primary: "proof"
+      secondary: ["unlikely_hero", "specificity", "aspiration"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["proof", "unlikely_hero", "business", "inspiration"]
+    analysis:
+      why_it_works: "Fonte improvavel (avo de 58 anos) + local humilde (mesa de cozinha) + resultado enorme ($3M)."
+
+  - id: "hl_b2_proof_003"
+    text: "I Tested 47 Productivity Apps. Only 3 Were Worth Keeping."
+    source:
+      author: "Template de review/test"
+      work: "Tech content marketing"
+      year: ~2020
+    technique:
+      primary: "proof"
+      secondary: ["research", "curation", "specificity"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["proof", "technology", "productivity", "curation"]
+    analysis:
+      why_it_works: "Teste exaustivo (47) com resultado filtrado (3). O leitor economiza tempo."
+
+  - id: "hl_b2_proof_004"
+    text: "After 10,000 Sales Calls, Here Are the 5 Questions That Close Deals"
+    source:
+      author: "Template de vendas"
+      work: "Sales training"
+      year: ~2019
+    technique:
+      primary: "proof"
+      secondary: ["authority_from_experience", "listicle", "specificity"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["proof", "sales", "experience", "listicle"]
+    analysis:
+      why_it_works: "10,000 calls = autoridade por volume. 5 perguntas = destilacao do essencial."
+
+  - id: "hl_b2_proof_005"
+    text: "We Analyzed 11.8 Million Google Search Results. Here's What We Learned About SEO."
+    source:
+      author: "Brian Dean"
+      work: "Backlinko research"
+      year: 2020
+    technique:
+      primary: "proof"
+      secondary: ["data_driven", "authority", "scale"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["proof", "data", "seo", "research"]
+    analysis:
+      why_it_works: "11.8 milhoes = escala massiva. Dados > opiniao."
+
+  - id: "hl_b2_proof_006"
+    text: "This Email Template Has Generated $14.7 Million for My Clients"
+    source:
+      author: "Template de copywriting service"
+      work: "Email marketing services"
+      year: ~2020
+    technique:
+      primary: "proof"
+      secondary: ["specificity", "social_proof", "simplicity"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["proof", "email", "revenue", "template"]
+    analysis:
+      why_it_works: "'$14.7 million' = especifico. 'Template' = singular e replicavel."
+
+  - id: "hl_b2_proof_007"
+    text: "How I Went From Sleeping in My Car to a $10M Exit in 4 Years"
+    source:
+      author: "Template de founder story"
+      work: "Startup/business marketing"
+      year: ~2020
+    technique:
+      primary: "proof"
+      secondary: ["transformation", "specificity", "aspiration"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["proof", "transformation", "startup", "rags_to_riches"]
+    analysis:
+      why_it_works: "Contraste maximo (carro vs. $10M). Timeframe comprimido (4 anos)."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # QUESTION HEADLINES (7)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_question_001"
+    text: "Could You Live on $500 a Month in Retirement?"
+    source:
+      author: "Template financial"
+      work: "Retirement planning"
+      year: ~2015
+    technique:
+      primary: "question"
+      secondary: ["fear", "self_examination"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["question", "financial", "retirement", "fear"]
+    analysis:
+      why_it_works: "Forca calculo mental. A maioria conclui 'nao' e sente necessidade de agir."
+
+  - id: "hl_b2_question_002"
+    text: "Is Your Website Losing You Money While You Sleep?"
+    source:
+      author: "Template de web design"
+      work: "Web services marketing"
+      year: ~2018
+    technique:
+      primary: "question"
+      secondary: ["fear", "passive_loss", "24/7"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["question", "business", "website", "loss"]
+    analysis:
+      why_it_works: "'While you sleep' = perda continua mesmo inativo. Urgencia 24/7."
+
+  - id: "hl_b2_question_003"
+    text: "What Would You Do If You Lost Your Job Tomorrow?"
+    source:
+      author: "Template de side hustle/freelancing"
+      work: "Income diversification"
+      year: ~2019
+    technique:
+      primary: "question"
+      secondary: ["fear", "scenario", "preparation"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["question", "career", "fear", "preparation"]
+    analysis:
+      why_it_works: "Cenario que todos temem. Forca o leitor a confrontar vulnerabilidade."
+
+  - id: "hl_b2_question_004"
+    text: "Are You Too Old to Start a Business?"
+    source:
+      author: "Template de entrepreneurship"
+      work: "Business coaching"
+      year: ~2018
+    technique:
+      primary: "question"
+      secondary: ["ego_challenge", "age_objection"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["question", "business", "age", "objection"]
+    analysis:
+      why_it_works: "Quem se identifica quer provar que NAO e velho demais. Ego activation."
+
+  - id: "hl_b2_question_005"
+    text: "Which of These 7 Money Mistakes Are You Making Right Now?"
+    source:
+      author: "Adaptado de Sherwin Cody"
+      work: "Financial advisory"
+      year: ~2015
+    technique:
+      primary: "question"
+      secondary: ["listicle", "self_diagnosis", "specificity"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["question", "financial", "self_diagnosis", "listicle"]
+    analysis:
+      why_it_works: "'Which of these' assume que o leitor ESTA cometendo pelo menos um."
+
+  - id: "hl_b2_question_006"
+    text: "Do You Recognize the 7 Early Warning Signs of a Heart Attack?"
+    source:
+      author: "Template health/Boardroom"
+      work: "Health newsletter"
+      year: ~1990s
+    technique:
+      primary: "question"
+      secondary: ["fear", "self_preservation", "listicle"]
+    awareness_level: "problem_aware"
+    score: 5
+    tags: ["question", "health", "fear", "self_preservation"]
+    analysis:
+      why_it_works: "Stakes maximo (vida/morte). O leitor nao pode arriscar NAO saber."
+
+  - id: "hl_b2_question_007"
+    text: "If You're So Smart, Why Aren't You Rich?"
+    source:
+      author: "Template de wealth building"
+      work: "Investment/business courses"
+      year: ~1980s
+    technique:
+      primary: "question"
+      secondary: ["ego_challenge", "provocative"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["question", "financial", "ego", "provocative"]
+    analysis:
+      why_it_works: "Desafio direto ao ego. Cria dissonancia cognitiva que so se resolve lendo."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # HOW-TO HEADLINES (8)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_howto_001"
+    text: "How to Negotiate a Raise Without Feeling Awkward"
+    source:
+      author: "Ramit Sethi"
+      work: "I Will Teach You to Be Rich"
+      year: ~2015
+    technique:
+      primary: "how_to"
+      secondary: ["emotion_removal", "career"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["how_to", "career", "negotiation", "emotion"]
+    analysis:
+      why_it_works: "Remove a barreira emocional (constrangimento), nao a logistica."
+
+  - id: "hl_b2_howto_002"
+    text: "How to Read a 300-Page Book in 45 Minutes and Remember Everything"
+    source:
+      author: "Template speed reading"
+      work: "Speed reading/learning courses"
+      year: ~2010s
+    technique:
+      primary: "how_to"
+      secondary: ["specificity", "contrast", "comprehension"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["how_to", "reading", "productivity", "learning"]
+    analysis:
+      why_it_works: "Contraste 300 paginas vs. 45 min. 'Remember everything' remove objecao."
+
+  - id: "hl_b2_howto_003"
+    text: "How to Fire a Client Without Burning the Bridge"
+    source:
+      author: "Template B2B/consulting"
+      work: "Business coaching"
+      year: ~2018
+    technique:
+      primary: "how_to"
+      secondary: ["difficult_conversation", "nuance"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["how_to", "business", "relationships", "conflict"]
+    analysis:
+      why_it_works: "Situacao que todo empresario enfrenta. A nuance ('without burning') e o valor."
+
+  - id: "hl_b2_howto_004"
+    text: "How to Write Headlines That Make People Stop Scrolling"
+    source:
+      author: "Template de copywriting"
+      work: "Copywriting courses"
+      year: ~2020
+    technique:
+      primary: "how_to"
+      secondary: ["meta", "digital_age"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["how_to", "copywriting", "headlines", "digital"]
+    analysis:
+      why_it_works: "Meta-headline: uma headline sobre headlines. 'Stop scrolling' = resultado visual."
+
+  - id: "hl_b2_howto_005"
+    text: "How to Sell Anything to Anyone in 60 Seconds or Less"
+    source:
+      author: "Template de elevator pitch"
+      work: "Sales training"
+      year: ~2015
+    technique:
+      primary: "how_to"
+      secondary: ["universality", "timeframe", "simplicity"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["how_to", "sales", "speed", "universal"]
+    analysis:
+      why_it_works: "'Anything to anyone' = universal. '60 seconds' = brevidade extrema."
+
+  - id: "hl_b2_howto_006"
+    text: "How to Turn a $5 Facebook Ad Into a $500 Sale"
+    source:
+      author: "Template de paid traffic"
+      work: "Facebook ads marketing"
+      year: ~2019
+    technique:
+      primary: "how_to"
+      secondary: ["roi", "specificity", "contrast"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["how_to", "advertising", "facebook", "roi"]
+    analysis:
+      why_it_works: "ROI de 100x implicito. Numeros especificos ($5 → $500)."
+
+  - id: "hl_b2_howto_007"
+    text: "How to Get Your Kids to Listen Without Yelling, Bribing, or Repeating Yourself"
+    source:
+      author: "Template de parenting"
+      work: "Parenting courses/books"
+      year: ~2018
+    technique:
+      primary: "how_to"
+      secondary: ["triple_objection_removal", "parenting"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["how_to", "parenting", "behavior", "objection_removal"]
+    analysis:
+      why_it_works: "Dor universal de pais. Remove as 3 solucoes que ja nao funcionam."
+
+  - id: "hl_b2_howto_008"
+    text: "How to Look 10 Years Younger in 14 Days — Without Surgery or Injections"
+    source:
+      author: "Template beauty/anti-aging"
+      work: "Skincare products"
+      year: ~2015
+    technique:
+      primary: "how_to"
+      secondary: ["specificity", "timeframe", "objection_removal"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["how_to", "beauty", "anti_aging", "objection_removal"]
+    analysis:
+      why_it_works: "Resultado visual (10 anos) + timeframe (14 dias) + sem opcoes extremas."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # CONTRARIAN HEADLINES (7)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_b2_contrarian_001"
+    text: "Why I Stopped Setting Goals (And Made More Money Than Ever)"
+    source:
+      author: "Template anti-conventional"
+      work: "Productivity/business content"
+      year: ~2018
+    technique:
+      primary: "contrarian"
+      secondary: ["confession", "paradox"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["contrarian", "goals", "productivity", "paradox"]
+    analysis:
+      why_it_works: "Atacar goal-setting = heresia produtiva. 'Made more money' prova que funciona."
+
+  - id: "hl_b2_contrarian_002"
+    text: "The More You Exercise, the Fatter You Get (Here's Why)"
+    source:
+      author: "Template health contrarian"
+      work: "Fitness marketing"
+      year: ~2015
+    technique:
+      primary: "contrarian"
+      secondary: ["paradox", "mechanism", "health"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["contrarian", "health", "exercise", "paradox"]
+    analysis:
+      why_it_works: "Inversao total da crenca popular. 'Here's why' promete explicacao."
+
+  - id: "hl_b2_contrarian_003"
+    text: "Why Your Biggest Strength Is Holding You Back"
+    source:
+      author: "Template de desenvolvimento pessoal"
+      work: "Leadership coaching"
+      year: ~2018
+    technique:
+      primary: "contrarian"
+      secondary: ["self_examination", "paradox"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["contrarian", "personal_development", "paradox"]
+    analysis:
+      why_it_works: "Inversao: forca como fraqueza. O leitor imediatamente pensa na propria forca."
+
+  - id: "hl_b2_contrarian_004"
+    text: "Stop Listening to Your Customers (They Don't Know What They Want)"
+    source:
+      author: "Inspirado em Steve Jobs"
+      work: "Innovation/business marketing"
+      year: ~2015
+    technique:
+      primary: "contrarian"
+      secondary: ["authority", "provocative"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["contrarian", "business", "innovation", "customer"]
+    analysis:
+      why_it_works: "Contradiz mantra #1 dos negocios. Jobs provou que funciona."
+
+  - id: "hl_b2_contrarian_005"
+    text: "The Dangerous Myth of 'Following Your Passion'"
+    source:
+      author: "Cal Newport influence"
+      work: "So Good They Can't Ignore You (conceito)"
+      year: ~2012
+    technique:
+      primary: "contrarian"
+      secondary: ["myth_busting", "career"]
+    awareness_level: "unaware"
+    score: 4
+    tags: ["contrarian", "career", "passion", "myth"]
+    analysis:
+      why_it_works: "'Dangerous myth' = o conselho mais popular do mundo e PERIGOSO."
+
+  - id: "hl_b2_contrarian_006"
+    text: "Why the Best CEOs Are the Laziest People in the Room"
+    source:
+      author: "Template de lideranca"
+      work: "Executive coaching"
+      year: ~2019
+    technique:
+      primary: "contrarian"
+      secondary: ["paradox", "leadership"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["contrarian", "leadership", "paradox", "delegation"]
+    analysis:
+      why_it_works: "'Laziest' + 'CEO' = contradição que exige explicação. O segredo é delegação."
+
+  - id: "hl_b2_contrarian_007"
+    text: "Why Perfectionists Make the Worst Entrepreneurs"
+    source:
+      author: "Template de startup culture"
+      work: "Entrepreneurship content"
+      year: ~2018
+    technique:
+      primary: "contrarian"
+      secondary: ["identity_challenge", "paradox"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["contrarian", "entrepreneurship", "perfectionism"]
+    analysis:
+      why_it_works: "Perfeccionistas se orgulham disso. Dizer que e ruim ativa defensividade produtiva."

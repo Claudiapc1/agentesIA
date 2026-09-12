@@ -1,0 +1,41 @@
+# ContextOS - Design Guidelines
+# Regras de uso do design system
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+principles:
+  - name: null        # Ex: Consistencia, Clareza, Eficiencia
+    description: null
+    do: []
+    dont: []
+
+naming_conventions:
+  components: null    # PascalCase | kebab-case
+  tokens: null        # camelCase | kebab-case
+  files: null         # kebab-case | snake_case
+
+spacing_rules:
+  section_gap: null
+  component_gap: null
+  element_gap: null
+
+icon_system:
+  library: null       # Lucide | Heroicons | Phosphor | custom
+  size_default: null
+  stroke_width: null
+  usage_rules: null
+
+image_guidelines:
+  aspect_ratios: []
+  formats: []         # webp | png | svg
+  max_size: null
+  optimization: null
+
+responsive_strategy:
+  approach: null      # mobile-first | desktop-first
+  breakpoint_strategy: null
+
+metadata:
+  status: INCOMPLETE

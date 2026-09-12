@@ -1,0 +1,44 @@
+# Marketing Strategy Sentence - Dan Koe
+# Source: Modern Mastery Newsletter
+# Category: marketing_strategy
+
+name: "Marketing Strategy Sentence"
+version: "1.0"
+source: "Dan Koe - Modern Mastery Newsletter"
+category: "marketing_strategy"
+command: "*marketing-sentence"
+
+description: |
+  Framework que destila toda sua estratégia de marketing em UMA frase.
+  Quando essa frase é verdadeira na mente do prospect, todas as
+  objeções se tornam irrelevantes.
+
+principle: "Se você faz eles acreditarem que seu sistema único é o único caminho para o resultado desejado, e sua oferta é o único caminho para esse sistema, eles DEVEM investir."
+
+components:
+  ideal_customer:
+    description: "A pessoa específica que você adoraria trabalhar"
+
+  unique_system:
+    description: "SEU método/caminho/jeito específico para resultados"
+    rule: "Nomeie. Faça soar proprietário."
+
+  quantifiable_end_result:
+    description: "Transformação específica e mensurável que entrega"
+    rule: "Tangível, com números"
+
+  your_offer:
+    description: "Produto/serviço específico que entrega a transformação"
+
+assembly_formula: |
+  "Se eu consigo fazer [cliente ideal] acreditar que [sistema único]
+  é o único caminho para [QER], e a única forma de ter isso é
+  através de [minha oferta], então todas as objeções se tornam irrelevantes."
+
+example: |
+  "Se eu consigo fazer criadores solos acreditarem que o Digital Economics
+  Framework é o único caminho para $10K/mês com 4h de trabalho/dia,
+  e a única forma de ter isso é através do Modern Mastery HQ,
+  então todas as objeções se tornam irrelevantes."
+
+when_to_use: "Antes de criar qualquer conteúdo de marketing, oferta ou sales page."

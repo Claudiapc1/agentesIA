@@ -1,0 +1,77 @@
+name: "Ben Settle - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Email Players"
+    - "The Persuasion Playbook"
+  author: "Ben Settle"
+description: >
+  Frases icônicas do Ben Settle organizadas por categoria, com fonte e contexto de uso.
+
+daily_email_related:
+  - phrase: "I'm like a bum, but who gets paid."
+    source: "Email Players"
+    context: "Descrevendo seu estilo de vida"
+  - phrase: "A bum rattling a paper cup works harder than you will if you know these principles."
+    source: "Email Players"
+    context: "Poder do email marketing"
+  - phrase: "Daily emails build relationship faster than anything else."
+    source: "Email Players"
+    context: "Defesa da frequência diária"
+  - phrase: "Every email should sell something."
+    source: "Email Players"
+    context: "Sem emails apenas de valor"
+  - phrase: "Every email is a mini-sales letter that starts with a story."
+    source: "Email Players"
+    context: "Filosofia de email"
+
+polarization_related:
+  - phrase: "The most polarizing brands attract the most wealth."
+    source: "The Persuasion Playbook (Peter Montoya)"
+    context: "Filosofia de polarização"
+  - phrase: "If people are indifferent to you, you're dead in the water."
+    source: "Email Players"
+    context: "Importância da polarização"
+  - phrase: "If everyone likes you, no one is passionate about you."
+    source: "Email Players"
+    context: "Benefício da polarização"
+
+personality_related:
+  - phrase: "Amplify your personality by 3x in writing."
+    source: "Email Players"
+    context: "Princípio 3X Personality"
+  - phrase: "Write like you talk, but 3x more."
+    source: "Email Players"
+    context: "Desenvolvimento de voz"
+  - phrase: "Corporate-speak is the kiss of death."
+    source: "Email Players"
+    context: "Filosofia anti-profissional"
+
+list_related:
+  - phrase: "Unsubscribes are your list cleaning itself."
+    source: "Email Players"
+    context: "Visão positiva de unsubscribes"
+  - phrase: "A small list of buyers beats a huge list of freebie-seekers."
+    source: "Email Players"
+    context: "Qualidade sobre quantidade"
+  - phrase: "The money is in the relationship, not the list."
+    source: "Email Players"
+    context: "Abordagem relationship-first"
+
+infotainment_related:
+  - phrase: "Infotainment is the key to email that gets read AND makes sales."
+    source: "Email Players"
+    context: "Filosofia central de conteúdo"
+
+structure_related:
+  - phrase: "Hook, Story, Lesson, Bridge, Pitch."
+    source: "Email Players"
+    context: "Estrutura de email diário"
+  - phrase: "Start mid-action, not mid-setup."
+    source: "Email Players"
+    context: "Técnica de abertura de história"
+  - phrase: "Your subject line has one job: get the email opened."
+    source: "Email Players"
+    context: "Propósito da linha de assunto"
+
+throne_phrase: "Infotainment is the key to email that gets read AND makes sales."

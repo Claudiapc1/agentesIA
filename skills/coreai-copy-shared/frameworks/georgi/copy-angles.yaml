@@ -1,0 +1,69 @@
+name: "Copy Angles"
+version: "1.0"
+source: "Stefan Georgi - RMBC Method, Copy Phase"
+description: "Técnicas para encontrar ângulos de copy e executar a fase de escrita do RMBC."
+
+content:
+  philosophy: |
+    If you've done R, M, and B correctly, the Copy phase is easy.
+    You're not staring at a blank page. You're looking at a complete
+    brief that tells you exactly what to write. You're filling in
+    the skeleton with compelling flesh.
+
+    This is where copywriting "talent" comes in - but it's only 20%
+    of the equation. A mediocre writer with a great brief will
+    beat a great writer with no brief every time.
+
+  copy_techniques:
+    conversational_tone:
+      rule: "Write like you talk"
+      example_bad: "One should consider the various factors..."
+      example_good: "Here's the thing nobody tells you..."
+
+    specificity:
+      rule: "Specific beats vague"
+      example_bad: "Lose weight fast"
+      example_good: "Lose 11 pounds in 21 days"
+
+    proof_stacking:
+      rule: "Never make a claim without proof nearby"
+      structure: "Claim -> Proof -> Implication"
+
+    future_pacing:
+      rule: "Help them visualize success"
+      example: "Imagine waking up tomorrow, stepping on the scale, and seeing..."
+
+    objection_handling:
+      rule: "Address objections before they arise"
+      structure: "Now you might be thinking... But here's the truth..."
+
+  angle_finding_process:
+    step_1: "Review research document - what pain point is most intense?"
+    step_2: "Review mechanism - what angle makes the mechanism most compelling?"
+    step_3: "Review competitive landscape - what angle differentiates?"
+    step_4: "Test multiple angles by writing different headlines"
+    step_5: "Select the angle that combines strongest pain + best mechanism + clearest differentiation"
+
+  angle_types:
+    problem_agitation: "Lead with the pain and make it worse before offering relief"
+    discovery: "Lead with a breakthrough or new finding"
+    story: "Lead with a compelling narrative"
+    contrarian: "Lead with a surprising reversal of conventional wisdom"
+    news: "Lead with timely, relevant news or events"
+    question: "Lead with a question they're already asking themselves"
+
+  mechanism_as_angle: |
+    The mechanism itself is often the strongest angle.
+    Instead of leading with the benefit, lead with the mechanism.
+
+    Instead of: "Lose 20 lbs in 30 days"
+    Try: "The 'dormant enzyme' that controls whether you burn or store fat"
+
+    The mechanism creates curiosity AND believability simultaneously.
+
+  anti_patterns:
+    - "Never use mechanisms genéricos ('our unique formula')"
+    - "Never start writing copy without completing Brief first"
+    - "Never trust 'talent' or 'inspiration' - trust the process"
+    - "Never edit during Speed Draft - just write"
+    - "Never deliver copy without running the 5-point mechanism test"

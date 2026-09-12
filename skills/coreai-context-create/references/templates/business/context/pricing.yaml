@@ -1,0 +1,58 @@
+# ContextOS - Pricing Strategy
+# Preenchido durante: *setup-context Fase 5
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+pricing_foundation:
+  current_price: null
+  pricing_model: null  # one-time | assinatura | usage-based | tiered | freemium
+  pricing_philosophy: null  # cost-plus | market-based | value-based
+  value_delivered: null     # Quantia monetaria, tempo, transformacao
+  price_to_value_ratio: null  # % do valor total
+
+pricing_psychology:
+  charm_pricing: null     # R$997 vs R$1.000
+  round_pricing: null     # Posicionamento premium
+  anchoring_strategy: null  # Preco grande revelado primeiro
+  pain_of_paying: null    # Parcelamento, trial, garantia
+  price_framing: null     # Custo/dia, comparacao, ROI
+
+competitive_position:
+  market_price_range:
+    lowest_competitor: null
+    average_market_price: null
+    premium_competitor: null
+  your_position: null  # Budget | Mid | Premium | Ultra-premium
+  position_rationale: null
+
+pricing_tiers:
+  - tier_name: null
+    price: null
+    includes: []
+    target_archetype: null
+  - tier_name: null
+    price: null
+    includes: []
+    target_archetype: null
+
+pricing_experiments:
+  - hypothesis: null
+    method: null
+    duration: null
+    success_metric: null
+  past_tests: null
+  flexibility: null  # fixo | negotiable | customized
+
+pricing_diagnostic:
+  pricing_confidence: null       # 1-10
+  value_perception: null         # 1-10
+  price_objection_frequency: null  # raramente | as_vezes | frequentemente | sempre
+  margin_health: null            # %
+  pricing_risk: null             # Principal risco do preco atual
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

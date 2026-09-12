@@ -1,0 +1,57 @@
+# Snap Suggestion Technique - Jon Benson
+# Source: Jon Benson - NLP-based copywriting
+# Category: attention_capture
+
+name: "Snap Suggestion Technique"
+version: "1.0"
+source: "Jon Benson - NLP-based copywriting"
+category: "attention_capture"
+command: "*snap-suggestion"
+
+description: |
+  Técnica de pattern interrupt baseada em NLP que "quebra" o padrão
+  mental normal do leitor/espectador nos primeiros segundos.
+  Cria um "erro de padrão" que força atenção.
+
+philosophy: |
+  O cérebro opera em piloto automático. Para capturar atenção,
+  você precisa QUEBRAR esse piloto automático com algo que
+  não computa normalmente. Isso cria um micro-momento de
+  confusão que o cérebro PRECISA resolver - e então você tem a atenção.
+
+types:
+  question_interrupt:
+    description: "Pergunta que desafia uma crença estabelecida"
+    examples:
+      - "E se tudo que te disseram sobre [tópico] estiver errado?"
+      - "O que seus médicos NÃO te contam sobre [assunto]?"
+      - "Por que 97% das dietas fracassam - e o que funciona?"
+
+  contradiction_interrupt:
+    description: "Declaração que contradiz o senso comum"
+    examples:
+      - "Comer mais gordura me fez perder 30 quilos"
+      - "Trabalhando MENOS horas, tripliquei minha receita"
+      - "O exercício que você faz todo dia está CAUSANDO dor nas costas"
+
+  story_interrupt:
+    description: "Início de história que cria curiosidade imediata"
+    examples:
+      - "Eu estava a 3 minutos de morrer quando..."
+      - "O email que recebi às 2 da manhã mudou tudo..."
+      - "Meu médico disse que eu tinha 6 meses. Isso foi há 10 anos."
+
+  number_interrupt:
+    description: "Número específico e surpreendente"
+    examples:
+      - "Em exatamente 17 segundos, você vai entender por que..."
+      - "847 pessoas já descobriram isso. Você é a 848."
+      - "R$47.382 em 23 dias - e eu quase não fiz nada"
+
+rules:
+  - "Deve estar nos primeiros 10 slides/3 linhas"
+  - "Deve ser VERDADEIRO (não clickbait vazio)"
+  - "Deve conectar ao USP do produto"
+  - "Deve criar curiosidade que DEMANDA resolução"
+
+when_to_use: "Abertura de qualquer VSL, email, sales page, ou anúncio."

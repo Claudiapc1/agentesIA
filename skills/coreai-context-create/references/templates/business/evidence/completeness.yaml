@@ -1,0 +1,44 @@
+# ContextOS - Completeness Metrics
+# Atualizado automaticamente durante *setup-context e *health-check
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+overall_completeness: 0  # % global
+
+by_file:
+  company_profile: 0
+  founder_dna: 0
+  credentials: 0
+  icp: 0
+  brand: 0
+  pricing: 0
+  team: 0
+  diagnosis: 0
+  brand_dna_voice: 0
+  brand_dna_visual: 0
+  brand_dna_archetype: 0
+  brand_dna_positioning: 0
+  design_system_tokens: 0
+  design_system_components: 0
+  culture_values: 0
+  operations_kpis: 0
+  operations_tech_stack: 0
+
+by_area:
+  context: 0           # Media dos 7 YAMLs core
+  brand_dna: 0
+  design_system: 0
+  culture: 0
+  operations: 0
+
+gates_passed:
+  phase_1: false
+  phase_2: false
+  phase_3: false
+  phase_4: false
+  phase_5: false
+  phase_6: false
+
+last_audit: null

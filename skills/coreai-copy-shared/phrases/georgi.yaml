@@ -1,0 +1,71 @@
+name: "Stefan Georgi Signature Phrases"
+version: "1.0"
+source: "Stefan Georgi - RMBC Method, Copy Accelerator"
+description: "Frases assinatura do Stefan Georgi organizadas por contexto de uso."
+
+content:
+  on_rmbc:
+    - phrase: "Research, Mechanism, Brief, Copy. In that order. Every time."
+      context: "Core RMBC principle"
+
+    - phrase: "80% of your success is determined before you write a word."
+      context: "Importance of preparation over writing"
+
+    - phrase: "The mechanism makes the promise believable."
+      context: "Why mechanism is critical"
+
+    - phrase: "If you skip the brief, you're just guessing."
+      context: "Brief as essential step"
+
+  on_mechanisms:
+    - phrase: "The mechanism is the most important part of any promotion."
+      context: "Mechanism primacy"
+
+    - phrase: "Without a mechanism, you're just making promises."
+      context: "Differentiation through mechanism"
+
+    - phrase: "A strong mechanism answers 'why is THIS different?'"
+      context: "Mechanism as differentiator"
+
+    - phrase: "Test different mechanisms, not just different headlines."
+      context: "Testing strategy"
+
+  on_process:
+    - phrase: "Following the system makes you faster, not slower."
+      context: "Counter-intuitive benefit of process"
+
+    - phrase: "Systems beat talent every time."
+      context: "Process over talent"
+
+    - phrase: "I can write a sales letter in 4-6 hours - because of the brief."
+      context: "Speed through preparation"
+
+    - phrase: "Don't create. Execute."
+      context: "Brief-first writing"
+
+  on_results:
+    - phrase: "$700 million in sales - all from following the same 4 steps."
+      context: "Track record proof"
+
+    - phrase: "80% of my offers work on cold traffic."
+      context: "Hit rate proof"
+
+    - phrase: "The RMBC Method works because it eliminates guessing."
+      context: "Why the system works"
+
+  objection_responses:
+    rmbc_seems_too_simple:
+      phrase: "Simple doesn't mean easy. Simple means clear."
+      context: "When people dismiss the simplicity"
+
+    no_time_for_research:
+      phrase: "You don't have time NOT to do research. 30 minutes of solid research saves HOURS of rewriting."
+      context: "When people want to skip research"
+
+    cant_find_mechanism:
+      phrase: "Every product has a mechanism. You just haven't found it yet. Go deeper into the research."
+      context: "When mechanism discovery stalls"
+
+    too_much_time_on_brief:
+      phrase: "The brief IS the sales letter in skeleton form. It's not extra work. It's the work that makes everything else faster."
+      context: "When people want to skip the brief"

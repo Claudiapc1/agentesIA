@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual da Skill /copy: Fábrica de Copy High Ticket</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212b; --line:#2a2f3a;
+    --ink:#e8eaf0; --muted:#9aa3b2; --accent:#c8a24a; --accent2:#e0c074;
+    --good:#3fb37f; --bad:#d8584f; --chip:#222734;
+    --radius:14px; --mw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  a{color:var(--accent2); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--mw); margin:0 auto; padding:0 22px}
+  header.hero{
+    background:linear-gradient(160deg,#13161d 0%,#0f1115 60%);
+    border-bottom:1px solid var(--line); padding:54px 0 40px;
+  }
+  .kicker{color:var(--accent); letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700}
+  h1{font-size:40px; line-height:1.15; margin:10px 0 12px; font-weight:800}
+  .lead{color:var(--muted); font-size:18px; max-width:760px}
+  .meta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
+  .pill{background:var(--chip); border:1px solid var(--line); color:var(--ink); padding:6px 12px; border-radius:999px; font-size:13px}
+  .pill b{color:var(--accent2)}
+
+  nav.toc{
+    position:sticky; top:0; z-index:20; background:rgba(15,17,21,.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  }
+  nav.toc .wrap{display:flex; gap:6px; flex-wrap:wrap; padding:12px 22px}
+  nav.toc a{color:var(--muted); font-size:13px; padding:6px 11px; border-radius:8px; border:1px solid transparent}
+  nav.toc a:hover{color:var(--ink); background:var(--panel2); text-decoration:none; border-color:var(--line)}
+
+  section{padding:42px 0; border-bottom:1px solid var(--line)}
+  h2{font-size:27px; margin:0 0 6px; font-weight:800}
+  h2 .num{color:var(--accent); font-size:16px; vertical-align:middle; margin-right:10px; font-weight:700}
+  .sub{color:var(--muted); margin:0 0 22px; max-width:780px}
+  h3{font-size:19px; margin:28px 0 12px; color:var(--accent2)}
+
+  .grid{display:grid; gap:14px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr 1fr 1fr}
+  @media(max-width:780px){.g2,.g3{grid-template-columns:1fr}}
+
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px}
+  .card h4{margin:0 0 6px; font-size:16px}
+  .card p{margin:0; color:var(--muted); font-size:14px}
+  .cmd{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace; color:var(--accent2); font-weight:700; font-size:14px}
+  .tag{display:inline-block; background:var(--chip); border:1px solid var(--line); color:var(--muted); font-size:12px; padding:2px 9px; border-radius:6px; margin-top:10px}
+  .tag b{color:var(--accent2)}
+
+  table{width:100%; border-collapse:collapse; margin:10px 0; font-size:14px}
+  th,td{text-align:left; padding:11px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:.06em}
+  tr:hover td{background:var(--panel2)}
+  code{font-family:"SFMono-Regular",Consolas,monospace; background:var(--panel2); border:1px solid var(--line); padding:2px 7px; border-radius:6px; font-size:13px; color:var(--accent2)}
+
+  .steps{counter-reset:s; list-style:none; padding:0; margin:0}
+  .steps li{position:relative; padding:14px 16px 14px 56px; background:var(--panel); border:1px solid var(--line); border-radius:12px; margin-bottom:10px}
+  .steps li::before{counter-increment:s; content:counter(s); position:absolute; left:14px; top:14px; width:28px; height:28px; background:var(--accent); color:#10131a; font-weight:800; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:14px}
+  .steps li b{color:var(--ink)}
+  .steps li span{color:var(--muted)}
+
+  .flow{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:14px 0}
+  .flow .node{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:10px 14px; font-size:14px}
+  .flow .arr{color:var(--accent); font-weight:800}
+
+  .callout{border-left:3px solid var(--accent); background:var(--panel); border-radius:0 12px 12px 0; padding:14px 18px; margin:16px 0; color:var(--muted)}
+  .callout b{color:var(--ink)}
+  .good{color:var(--good); font-weight:700}
+  .bad{color:var(--bad); font-weight:700}
+
+  .stat-row{display:flex; gap:12px; flex-wrap:wrap}
+  .stat{flex:1; min-width:120px; background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px; text-align:center}
+  .stat .n{font-size:30px; font-weight:800; color:var(--accent2)}
+  .stat .l{color:var(--muted); font-size:13px; margin-top:4px}
+
+  footer{padding:40px 0; color:var(--muted); font-size:13px; text-align:center}
+  .badge-good{display:inline-block; background:rgba(63,179,127,.12); border:1px solid var(--good); color:var(--good); padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Mentoria CoreAI · Manual do Aluno</div>
+    <h1>Skill <span style="color:var(--accent2)">/copy</span><br>A Fábrica de Copy High Ticket</h1>
+    <p class="lead">Um diretor de copy que faz a triagem do seu projeto, despacha o copywriter de elite certo, escreve no estilo dele e valida tudo em duas camadas antes de entregar. Tudo conectado ao contexto do seu cliente.</p>
+    <div class="meta-row">
+      <span class="pill"><b>1</b> skill mãe</span>
+      <span class="pill"><b>20</b> atalhos</span>
+      <span class="pill"><b>12</b> copywriters</span>
+      <span class="pill"><b>320</b> arquivos de apoio</span>
+      <span class="pill"><b>2</b> validadores</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#oque">O que é</a>
+    <a href="#comofunciona">Como funciona</a>
+    <a href="#comecar">Como começar</a>
+    <a href="#pecas">Atalhos: Peças</a>
+    <a href="#funis">Atalhos: Funis</a>
+    <a href="#escritores">Os copywriters</a>
+    <a href="#arsenal">O arsenal</a>
+    <a href="#validacao">Validação</a>
+    <a href="#exemplos">Exemplos</a>
+  </div>
+</nav>
+
+<!-- O QUE É -->
+<section id="oque">
+  <div class="wrap">
+    <h2><span class="num">01</span>O que é a skill /copy</h2>
+    <p class="sub">A <code>/copy</code> não é um gerador de texto qualquer. É um time de copywriters de elite orquestrado por um diretor criativo (Logan, o copy-chief). Você fala o que precisa, ele escolhe quem escreve, e nada sai sem passar pela validação.</p>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4>Um diretor, não um robô</h4>
+        <p>A skill mãe é o copy-chief. Ele faz triagem (preço, temperatura do público, tipo de peça) antes de qualquer palavra ser escrita.</p>
+      </div>
+      <div class="card">
+        <h4>Copywriters de verdade</h4>
+        <p>Halbert, Ogilvy, Jon Benson, Bencivenga e outros. Cada um escreve no estilo real dele, com os frameworks dele.</p>
+      </div>
+      <div class="card">
+        <h4>Validação inegociável</h4>
+        <p>Toda copy passa pelo Filtro Anti-IA e pelo Oráculo Torriani. Nota 10 ou refaz. Sem exceção.</p>
+      </div>
+      <div class="card">
+        <h4>Conectada ao cliente</h4>
+        <p>No começo ela pergunta para qual cliente é, carrega o contexto dele (ICP, voz, posicionamento) e escreve sob medida.</p>
+      </div>
+      <div class="card">
+        <h4>Atalhos para tudo</h4>
+        <p>20 comandos prontos: da carta de venda ao funil de lançamento. Você vai direto quando já sabe o que quer.</p>
+      </div>
+      <div class="card">
+        <h4>Arsenal completo</h4>
+        <p>Frameworks, templates, swipe files e checklists de cada copywriter. O escritor não trabalha no vácuo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="comofunciona">
+  <div class="wrap">
+    <h2><span class="num">02</span>Como funciona por dentro</h2>
+    <p class="sub">O fluxo é sempre o mesmo, não importa a peça. Isso garante consistência e qualidade.</p>
+
+    <div class="flow">
+      <span class="node">Você pede</span>
+      <span class="arr">&rarr;</span>
+      <span class="node">Carrega o cliente (ContextOS)</span>
+      <span class="arr">&rarr;</span>
+      <span class="node">Triagem</span>
+      <span class="arr">&rarr;</span>
+      <span class="node">Despacha o copywriter</span>
+      <span class="arr">&rarr;</span>
+      <span class="node">Escreve</span>
+      <span class="arr">&rarr;</span>
+      <span class="node">Valida (2 camadas)</span>
+      <span class="arr">&rarr;</span>
+      <span class="node">Entrega</span>
+    </div>
+
+    <ol class="steps">
+      <li><b>Carrega o contexto do cliente.</b> <span>A skill pergunta para qual cliente é e lê o ContextOS dele: perfil, ICP, dores, tom de voz, posicionamento e produtos.</span></li>
+      <li><b>Carrega o DNA permanente.</b> <span>Antes de escrever, lê a premissa de posicionamento premium e o manual de craft (as regras invioláveis de escrita).</span></li>
+      <li><b>Faz a triagem.</b> <span>Pergunta a faixa de preço do produto, a temperatura do público (frio, morno, quente) e exatamente o que você quer criar.</span></li>
+      <li><b>Despacha o copywriter certo.</b> <span>Conforme a triagem, escolhe o especialista (ex: Halbert para carta, Jon Benson para VSL) e o aciona com o contexto e os frameworks dele.</span></li>
+      <li><b>Valida em duas camadas.</b> <span>Filtro Anti-IA primeiro, Oráculo Torriani depois. Se reprovar, refaz. Loop até passar.</span></li>
+    </ol>
+
+    <div class="callout"><b>Por que isso importa.</b> A maioria das ferramentas de IA cospe texto genérico. Aqui, a copy nasce de uma estratégia, é escrita no estilo de um mestre, ancorada no contexto do seu cliente, e só chega até você depois de passar por um controle de qualidade que reprova o que tem cara de IA.</div>
+  </div>
+</section>
+
+<!-- COMO COMEÇAR -->
+<section id="comecar">
+  <div class="wrap">
+    <h2><span class="num">03</span>Como começar</h2>
+    <p class="sub">Duas formas de usar: deixar o diretor decidir, ou ir direto no atalho.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>Forma 1: deixe o diretor decidir</h4>
+        <p>Digite <code>/copy</code> e descreva o que precisa em linguagem natural. O copy-chief faz a triagem, escolhe o copywriter e conduz tudo.</p>
+        <div class="tag"><b>Exemplo:</b> /copy "preciso de uma carta de venda pro meu curso de R$497"</div>
+      </div>
+      <div class="card">
+        <h4>Forma 2: vá direto no atalho</h4>
+        <p>Quando você já sabe o que quer, chame o atalho específico. Ele já sabe qual copywriter usar.</p>
+        <div class="tag"><b>Exemplo:</b> /copy:vsl &nbsp;ou&nbsp; /copy:carta-vendas</div>
+      </div>
+    </div>
+
+    <div class="callout"><b>Antes de tudo:</b> ter o cliente cadastrado no ContextOS deixa a copy muito melhor (ela usa o ICP, a voz e o posicionamento reais). Se o cliente ainda não tem contexto montado, a skill avisa e você pode rodar <code>/context-create</code> primeiro.</div>
+  </div>
+</section>
+
+<!-- ATALHOS: PEÇAS -->
+<section id="pecas">
+  <div class="wrap">
+    <h2><span class="num">04</span>Atalhos: peças de copy</h2>
+    <p class="sub">Onze comandos para as peças do dia a dia. Cada um já despacha o copywriter especialista naquele formato.</p>
+    <table>
+      <thead><tr><th>Comando</th><th>O que faz</th><th>Especialista</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cmd">/copy:operacao-completa</span></td><td>Pipeline completo em 9 etapas: da ideia bruta ao arsenal de peças prontas pra campanha.</td><td>Halbert / Georgi</td></tr>
+        <tr><td><span class="cmd">/copy:operacao-tatica</span></td><td>Modo rápido para público quente e base existente: pula a estratégia e vai direto pra peça.</td><td>conforme a peça</td></tr>
+        <tr><td><span class="cmd">/copy:carta-vendas</span></td><td>Carta de venda com estratégia obrigatória e validação Oráculo desde a escrita.</td><td>Gary Halbert</td></tr>
+        <tr><td><span class="cmd">/copy:sales-page</span></td><td>Página de vendas de resposta direta pelo método RMBC.</td><td>Stefan Georgi</td></tr>
+        <tr><td><span class="cmd">/copy:vsl</span></td><td>Script de VSL (video sales letter) que prende e converte.</td><td>Jon Benson</td></tr>
+        <tr><td><span class="cmd">/copy:email-sequence</span></td><td>Sequência de e-mail de relacionamento e venda (infotainment diário).</td><td>Ben Settle</td></tr>
+        <tr><td><span class="cmd">/copy:ads</span></td><td>Anúncios de resposta direta com variações conceituais (framework P.D.A.).</td><td>John Carlton</td></tr>
+        <tr><td><span class="cmd">/copy:headlines</span></td><td>Headlines e bullets de alta conversão (fascinations).</td><td>Gary Bencivenga</td></tr>
+        <tr><td><span class="cmd">/copy:capture-page</span></td><td>Página de captura/opt-in que maximiza leads.</td><td>Stefan Georgi</td></tr>
+        <tr><td><span class="cmd">/copy:organic-content</span></td><td>Conteúdo orgânico de autoridade e alcance (posts, threads).</td><td>Dan Koe</td></tr>
+        <tr><td><span class="cmd">/copy:oraculo</span></td><td>Valida uma copy já escrita nas 2 camadas (Anti-IA + Oráculo).</td><td>Validador</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ATALHOS: FUNIS -->
+<section id="funis">
+  <div class="wrap">
+    <h2><span class="num">05</span>Atalhos: lançamento e Funis</h2>
+    <p class="sub">Nove comandos para campanhas completas. Cada um segue um workflow de referência e despacha o estrategista certo.</p>
+    <table>
+      <thead><tr><th>Comando</th><th>O que faz</th><th>Especialista</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cmd">/copy:lancamento-completo</span></td><td>Lançamento completo (PLF): pré-lançamento, conteúdo de pré-venda, carrinho e e-mails.</td><td>Jeff Walker</td></tr>
+        <tr><td><span class="cmd">/copy:funil-sala-secreta</span></td><td>Funil Sala Secreta: aquecimento, convite e conversão por relacionamento.</td><td>Frank Kern</td></tr>
+        <tr><td><span class="cmd">/copy:funil-fli</span></td><td>Funil de Lucro Imediato: oferta direta com upsell para caixa rápido.</td><td>Russell Brunson</td></tr>
+        <tr><td><span class="cmd">/copy:funil-social-selling</span></td><td>Social Selling 2.0: conteúdo orgânico que converte em DM/conversa.</td><td>Dan Koe</td></tr>
+        <tr><td><span class="cmd">/copy:funil-story-unico</span></td><td>Estratégia Story Único: uma sequência de stories que conduz à oferta.</td><td>André Chaperon</td></tr>
+        <tr><td><span class="cmd">/copy:otimizacao-funil</span></td><td>Otimização de funil (CRO): diagnostica gargalos e reescreve as peças fracas.</td><td>Claude Hopkins</td></tr>
+        <tr><td><span class="cmd">/copy:webinar</span></td><td>Script de webinar de vendas: abertura, conteúdo, pitch e fechamento.</td><td>Frank Kern</td></tr>
+        <tr><td><span class="cmd">/copy:vsl-perpetual</span></td><td>Funil de VSL perpétuo: VSL + e-mails + retargeting para venda contínua.</td><td>Jon Benson</td></tr>
+        <tr><td><span class="cmd">/copy:book-launch</span></td><td>Funil de lançamento de livro (book funnel): isca de livro + upsells.</td><td>Russell Brunson</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ESCRITORES -->
+<section id="escritores">
+  <div class="wrap">
+    <h2><span class="num">06</span>Os 12 copywriters do time</h2>
+    <p class="sub">Cada um é um mestre real do copywriting, com sua persona, frameworks e voz. O copy-chief escolhe quem escreve cada peça.</p>
+
+    <div class="grid g2">
+      <div class="card"><h4>Logan, o Copy Chief</h4><p>O diretor criativo. Faz a triagem e despacha o copywriter certo. Aciona-se sempre que você não diz qual especialista usar ou quando o projeto tem várias peças.</p></div>
+      <div class="card"><h4>Oráculo Torriani</h4><p>O validador imperial. Aprova 10/10 ou manda refazer. É o último portão antes de qualquer copy sair. Detecta clichê, generalidade e cara de IA.</p></div>
+      <div class="card"><h4>Gary Halbert</h4><p>O maior de direct mail da história. Cartas de venda longas, storytelling visceral, abertura magnética. Quando a copy precisa parecer carta pessoal de um amigo.</p></div>
+      <div class="card"><h4>Stefan Georgi</h4><p>Mais de 700 milhões em vendas com o método RMBC. Processo sistemático e repetível para sales letters e VSLs de alta conversão em cold traffic.</p></div>
+      <div class="card"><h4>Jon Benson</h4><p>Criador da VSL. Transforma produto e avatar em roteiro de vídeo que conecta pela emoção. Produtos de transformação (saúde, dinheiro, relacionamento).</p></div>
+      <div class="card"><h4>David Ogilvy</h4><p>O Pai da Publicidade. Copy premium, sofisticada, baseada em pesquisa e fato, construída sobre uma Big Idea. Para branding e alto ticket.</p></div>
+      <div class="card"><h4>Ben Settle</h4><p>O rei do e-mail diário. Infotainment: informa, entretém e vende ao mesmo tempo. Sequências que soam como e-mail pessoal diário.</p></div>
+      <div class="card"><h4>John Carlton</h4><p>O copywriter mais copiado da web. Escrita simples, direta e agressiva. Anúncios que vendem por clareza brutal, sem rodeio.</p></div>
+      <div class="card"><h4>Gary Bencivenga</h4><p>O copywriter que outros copywriters estudam. Mestre de bullets, fascinations e prova empilhada. Para público cético que precisa de prova.</p></div>
+      <div class="card"><h4>Dan Koe</h4><p>Arquiteto do negócio de uma pessoa só. Conteúdo orgânico, marca pessoal e autoridade como mecanismo de geração de leads.</p></div>
+      <div class="card"><h4>Eugene Schwartz</h4><p>O maior teórico do copywriting. Diagnostica o nível de consciência e o estágio de sofisticação do mercado antes de qualquer palavra. É a Fase 0.</p></div>
+      <div class="card"><h4>Dan Kennedy</h4><p>O Millionaire Maker do direct response. Copy agressiva, urgência real e oferta irresistível. Vendas high-ticket que exigem justificativa de preço.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARSENAL -->
+<section id="arsenal">
+  <div class="wrap">
+    <h2><span class="num">07</span>O arsenal (material de apoio)</h2>
+    <p class="sub">Os copywriters não escrevem no vácuo. A skill carrega um arsenal completo que eles consultam ao escrever.</p>
+
+    <div class="stat-row" style="margin-bottom:18px">
+      <div class="stat"><div class="n">82</div><div class="l">frameworks</div></div>
+      <div class="stat"><div class="n">58</div><div class="l">templates</div></div>
+      <div class="stat"><div class="n">38</div><div class="l">checklists</div></div>
+      <div class="stat"><div class="n">15</div><div class="l">swipe files</div></div>
+      <div class="stat"><div class="n">27</div><div class="l">voice profiles</div></div>
+      <div class="stat"><div class="n">27</div><div class="l">bancos de frases</div></div>
+      <div class="stat"><div class="n">12</div><div class="l">workflows</div></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card"><h4>Frameworks</h4><p>Os métodos de cada copywriter: RMBC (Georgi), 5-Step VSL (Benson), Big Idea (Ogilvy), Email Diário (Settle), 5 Níveis de Consciência (Schwartz), 3 Ms (Kennedy) e mais.</p></div>
+      <div class="card"><h4>Templates</h4><p>Moldes de cada peça: bullets, FAQ crusher, video hook, ads, página de comparação, sequência de carrinho abandonado, pedido de depoimento e outros.</p></div>
+      <div class="card"><h4>Checklists</h4><p>Listas de qualidade por tipo: RMBC, 30 triggers de Sugarman, copy quality, e-mail infotainment, auditoria Hopkins, pré-escrita e mais.</p></div>
+      <div class="card"><h4>Swipe files</h4><p>Exemplos reais que converteram: copy vencedora, anúncios de referência, sales letters aprovadas, headlines que funcionaram no mercado.</p></div>
+      <div class="card"><h4>Voice e frases</h4><p>Perfis de voz e bancos de hooks por copywriter: vocabulário, tom, ritmo, swipes de abertura, fechamento e transição.</p></div>
+      <div class="card"><h4>Workflows e referências</h4><p>Os workflows de funil/lançamento como referência, mais a premissa de posicionamento premium e o manual de craft (regras invioláveis de escrita).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALIDAÇÃO -->
+<section id="validacao">
+  <div class="wrap">
+    <h2><span class="num">08</span>A validação em 2 camadas</h2>
+    <p class="sub">Aqui está o que separa esta skill de um gerador de texto comum. Nenhuma copy sai sem passar pelas duas camadas, nesta ordem.</p>
+
+    <div class="grid g2">
+      <div class="card" style="border-color:var(--bad)">
+        <h4>Camada 0: Filtro Anti-IA (v3.7)</h4>
+        <p>Validação universal, em 5 dimensões: naturalidade (25%), fechamento (25%), tom (20%), estrutura (15%) e ritmo (15%). Caça vocabulário pomposo, hooks de IA, paralelismo repetido e frases uniformes.</p>
+        <div class="tag"><b>Passa com:</b> 100/100 (nota 10 em todas as 5 dimensões). Qualquer nota menor reprova.</div>
+        <p style="margin-top:10px"><span class="bad">Se reprova:</span> nem chega no Oráculo. Volta com a lista de violações.</p>
+      </div>
+      <div class="card" style="border-color:var(--accent)">
+        <h4>Camada 1: Oráculo Torriani</h4>
+        <p>Só recebe copy que já passou no Anti-IA. Verifica: 38 clichês proibidos (veto), 10 regras de craft, 5 critérios master (mecanismo único, narrativa, diferencial, pressão emocional, encaixe) e os 30 triggers de Sugarman.</p>
+        <div class="tag"><b>Passa com:</b> 10/10 nos critérios master e mínimo 15 dos 30 triggers Sugarman.</div>
+        <p style="margin-top:10px"><span class="bad">Se reprova 3x</span> pelo mesmo problema: escala pro copy-chief trocar de copywriter.</p>
+      </div>
+    </div>
+
+    <div class="callout"><b>A regra de ouro:</b> nota 10 ou refaz. Não existe "tá bom o suficiente". Se a copy tem cara de IA, é genérica, ou usa clichê, ela volta pra mesa. É esse padrão que protege a sua entrega e a do seu aluno.</div>
+
+    <h3>Palavras e padrões que reprovam na hora</h3>
+    <table>
+      <thead><tr><th>Regra</th><th>O que é vetado</th></tr></thead>
+      <tbody>
+        <tr><td>RU-01</td><td>Nunca usar "descubra"</td></tr>
+        <tr><td>RU-02</td><td>Nunca usar "aprenda"</td></tr>
+        <tr><td>RU-03</td><td>Nunca usar "transforme sua vida"</td></tr>
+        <tr><td>RA-01</td><td>Anúncio nunca começa com pergunta</td></tr>
+        <tr><td>RA-02</td><td>Curiosidade obrigatória nos 3 primeiros segundos</td></tr>
+        <tr><td>RA-03 / RA-04</td><td>Nunca pitch explícito; nunca ensinar conteúdo técnico no anúncio</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- EXEMPLOS -->
+<section id="exemplos">
+  <div class="wrap">
+    <h2><span class="num">09</span>Exemplos práticos</h2>
+    <p class="sub">Como você usaria a skill no dia a dia.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>Carta de venda</h4>
+        <p><code>/copy:carta-vendas</code></p>
+        <p style="margin-top:8px">A skill pergunta o cliente, carrega o contexto, faz a triagem, despacha o Halbert para escrever no estilo dele, e roda os dois validadores antes de entregar.</p>
+      </div>
+      <div class="card">
+        <h4>VSL para um lançamento</h4>
+        <p><code>/copy:vsl</code></p>
+        <p style="margin-top:8px">Jon Benson assume o roteiro, do hook ao fechamento, com timing por etapa. Tudo ancorado no avatar e na oferta do cliente.</p>
+      </div>
+      <div class="card">
+        <h4>Campanha completa do zero</h4>
+        <p><code>/copy:operacao-completa</code></p>
+        <p style="margin-top:8px">As 9 etapas: ideia, mapa do domínio, big idea, narrativa, oferta, carta-mãe, arsenais e derivados. Nada avança sem o input da etapa anterior.</p>
+      </div>
+      <div class="card">
+        <h4>Validar uma copy que já existe</h4>
+        <p><code>/copy:oraculo</code></p>
+        <p style="margin-top:8px">Cola a copy. A skill roda o Anti-IA e o Oráculo, e devolve o veredito com cada violação e como corrigir.</p>
+      </div>
+      <div class="card">
+        <h4>Lançamento estilo PLF</h4>
+        <p><code>/copy:lancamento-completo</code></p>
+        <p style="margin-top:8px">Jeff Walker conduz: pré-lançamento, conteúdo de pré-venda, abertura e fechamento de carrinho, com a sequência de e-mails.</p>
+      </div>
+      <div class="card">
+        <h4>Não sei qual usar</h4>
+        <p><code>/copy</code></p>
+        <p style="margin-top:8px">Descreve em linguagem natural. O copy-chief decide o tipo de peça, o copywriter e o caminho. É o jeito mais simples de começar.</p>
+      </div>
+    </div>
+
+    <div class="callout"><span class="badge-good">Lembre sempre</span> &nbsp; Carregue o contexto do cliente, deixe a triagem acontecer, e confie na validação. É esse processo, e não a pressa, que produz copy que vende.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Manual da Skill <b style="color:var(--accent2)">/copy</b> · Mentoria CoreAI · Material do aluno<br>
+    Conteúdo gerado a partir da estrutura real da skill. Português brasileiro.
+  </div>
+</footer>
+
+</body>
+</html>

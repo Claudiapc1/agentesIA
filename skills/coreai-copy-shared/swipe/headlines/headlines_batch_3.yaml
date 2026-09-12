@@ -1,0 +1,771 @@
+# Headlines & Subject Lines - Batch 3
+# 52 headlines especificamente para HIGH TICKET (mentoring, consulting, coaching, cursos R$5k+)
+# Created: 2026-03-09
+# Category: headlines / high_ticket
+
+batch_info:
+  batch_number: 3
+  extraction_date: "2026-03-09"
+  source_type: "high_ticket_specialization"
+  iteration: 3
+  total_entries: 52
+  context: "Headlines para ofertas de alto valor (R$5k-R$100k+): mentorias, masterminds, consultorias, imersoes, certificacoes"
+
+entries:
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # AUTHORITY / POSITIONING (10)
+  # Posicionam o expert como unico qualificado para entregar o resultado
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_ht_auth_001"
+    text: "How I Built a $10M Business in 3 Years — And How I'll Help You Do It in Half the Time"
+    source:
+      author: "Template de mentoria high-ticket"
+      work: "Coaching/mentoring programs"
+    technique:
+      primary: "authority"
+      secondary: ["proof", "promise", "timeframe"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "mentoring", "authority", "proof"]
+    analysis:
+      why_it_works: "Resultado proprio como credencial + promessa de aceleracao para o prospect."
+
+  - id: "hl_ht_auth_002"
+    text: "The Strategy That Took My Client From R$50k/Month to R$500k/Month in 90 Days"
+    source:
+      author: "Template de case study high-ticket"
+      work: "Business consulting"
+    technique:
+      primary: "proof"
+      secondary: ["specificity", "transformation", "timeframe"]
+    awareness_level: "product_aware"
+    score: 5
+    tags: ["high_ticket", "consulting", "case_study", "specificity"]
+    analysis:
+      why_it_works: "10x em 90 dias. Numeros reais em reais (BRL) = contexto local. Resultado de CLIENTE, nao proprio."
+
+  - id: "hl_ht_auth_003"
+    text: "I Only Accept 8 Clients Per Year. Here's Why."
+    source:
+      author: "Dan Kennedy influence"
+      work: "High-ticket positioning"
+    technique:
+      primary: "scarcity"
+      secondary: ["authority", "exclusivity", "curiosity"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "scarcity", "exclusivity", "positioning"]
+    analysis:
+      why_it_works: "Numero baixo e especifico (8) = exclusividade extrema. 'Here's why' explica a logica."
+
+  - id: "hl_ht_auth_004"
+    text: "What I Learned Advising 300+ Companies That No MBA Will Ever Teach You"
+    source:
+      author: "Template de consulting"
+      work: "Management consulting positioning"
+    technique:
+      primary: "authority"
+      secondary: ["anti_academic", "experience", "insider"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "consulting", "authority", "anti_academic"]
+    analysis:
+      why_it_works: "300+ empresas = volume. 'No MBA will teach' = diferenciacao do ensino formal."
+
+  - id: "hl_ht_auth_005"
+    text: "Eu Faturei R$20 Milhoes Nos Ultimos 3 Anos. Agora Vou Te Mostrar Exatamente Como."
+    source:
+      author: "Template de mentoria BR"
+      work: "Mentoria de negocios digitais"
+    technique:
+      primary: "proof"
+      secondary: ["specificity", "direct_offer", "transparency"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "mentoria", "proof", "portuguese", "digital"]
+    analysis:
+      why_it_works: "Em portugues para mercado BR. Numero real + 'exatamente como' = blueprint."
+
+  - id: "hl_ht_auth_006"
+    text: "The $100,000 Strategy Session I Give to My Private Clients — Available to 12 People This Month"
+    source:
+      author: "Dan Kennedy / Jay Abraham influence"
+      work: "High-ticket consulting"
+    technique:
+      primary: "value_framing"
+      secondary: ["scarcity", "exclusivity", "price_anchor"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "consulting", "price_anchor", "scarcity"]
+    analysis:
+      why_it_works: "Price anchor ($100K) + disponibilidade limitada (12 pessoas). O preco real parece barato em comparacao."
+
+  - id: "hl_ht_auth_007"
+    text: "Depois de 15 Anos e 400 Alunos, Descobri Que Apenas 3 Coisas Separam Quem Fatura R$100k de Quem Fatura R$1M"
+    source:
+      author: "Template de mentoria BR"
+      work: "Mentoria de escala"
+    technique:
+      primary: "authority"
+      secondary: ["specificity", "simplicity", "curiosity"]
+    awareness_level: "problem_aware"
+    score: 5
+    tags: ["high_ticket", "mentoria", "portuguese", "simplicity"]
+    analysis:
+      why_it_works: "Experiencia (15 anos, 400 alunos) + destilacao (3 coisas) + gap claro (100k vs 1M)."
+
+  - id: "hl_ht_auth_008"
+    text: "Why Fortune 500 CEOs Pay $50,000 for Advice You Can Get Here for $5,000"
+    source:
+      author: "Template de consulting democratization"
+      work: "Consulting programs"
+    technique:
+      primary: "value_framing"
+      secondary: ["price_anchor", "accessibility"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["high_ticket", "consulting", "price_anchor", "democratization"]
+    analysis:
+      why_it_works: "Fortune 500 como validacao + contraste de preco 10:1."
+
+  - id: "hl_ht_auth_009"
+    text: "O Metodo Que Uso Para Gerar R$2M+ Por Ano Trabalhando 4 Horas Por Dia"
+    source:
+      author: "Template de lifestyle business BR"
+      work: "Mentoria de lifestyle business"
+    technique:
+      primary: "proof"
+      secondary: ["lifestyle", "method", "contrast"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["high_ticket", "mentoria", "portuguese", "lifestyle"]
+    analysis:
+      why_it_works: "Resultado financeiro + lifestyle desejavel. 'Metodo' = sistematizavel."
+
+  - id: "hl_ht_auth_010"
+    text: "I've Spent $2.3 Million on My Own Education. Here's the $5,000 Shortcut."
+    source:
+      author: "Template de info-product premium"
+      work: "High-ticket course marketing"
+    technique:
+      primary: "value_framing"
+      secondary: ["investment_proof", "shortcut", "contrast"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "education", "shortcut", "value_framing"]
+    analysis:
+      why_it_works: "$2.3M gasto → $5K para voce. O prospect compra anos de pesquisa condensada."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # EXCLUSIVITY / APPLICATION (8)
+  # Headlines que posicionam a oferta como exclusiva e seletiva
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_ht_excl_001"
+    text: "This Isn't For Everyone. Read the Requirements Before You Apply."
+    source:
+      author: "Dan Kennedy"
+      work: "Mastermind positioning"
+    technique:
+      primary: "exclusivity"
+      secondary: ["qualification", "reverse_selling"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "exclusivity", "application", "qualification"]
+    analysis:
+      why_it_works: "Inversao: o prospect precisa se QUALIFICAR. 'Requirements' filtra e atrai simultaneamente."
+
+  - id: "hl_ht_excl_002"
+    text: "Vagas Abertas Para a Mentoria [Nome]: 6 Vagas. 47 Aplicacoes Recebidas."
+    source:
+      author: "Template de mentoria BR"
+      work: "Mentoria seletiva"
+    technique:
+      primary: "scarcity"
+      secondary: ["social_proof", "competition"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "mentoria", "portuguese", "scarcity", "social_proof"]
+    analysis:
+      why_it_works: "Ratio 47:6 = competicao visivel. O prospect sente urgencia de se candidatar."
+
+  - id: "hl_ht_excl_003"
+    text: "If You're Not Doing At Least $500k/Year, This Page Isn't For You"
+    source:
+      author: "Template de mastermind"
+      work: "High-level mastermind"
+    technique:
+      primary: "qualification"
+      secondary: ["exclusivity", "ego_challenge"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "mastermind", "qualification", "ego"]
+    analysis:
+      why_it_works: "Filtro explicito = apenas prospects qualificados. Quem esta perto de $500k quer provar que merece."
+
+  - id: "hl_ht_excl_004"
+    text: "We Interview Every Applicant. Most Don't Get In. Here's Why That's Good for You."
+    source:
+      author: "Template de programa seletivo"
+      work: "Certification/mastermind"
+    technique:
+      primary: "exclusivity"
+      secondary: ["quality_assurance", "value_protection"]
+    awareness_level: "product_aware"
+    score: 3
+    tags: ["high_ticket", "application", "quality", "exclusivity"]
+    analysis:
+      why_it_works: "Rejeicao como feature. 'Good for you' = a seletividade protege SEU investimento."
+
+  - id: "hl_ht_excl_005"
+    text: "Uma Sala Com 12 Empresarios Faturando R$1M+. Voce Quer Estar Nela?"
+    source:
+      author: "Template de mastermind BR"
+      work: "Mastermind de alto nivel"
+    technique:
+      primary: "exclusivity"
+      secondary: ["aspiration", "peer_pressure", "scarcity"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "mastermind", "portuguese", "exclusivity"]
+    analysis:
+      why_it_works: "Visao concreta (sala com 12 pessoas). Peer level definido (R$1M+). Convite desafiador."
+
+  - id: "hl_ht_excl_006"
+    text: "Apply Now — or Wait 6 Months for the Next Cohort"
+    source:
+<!-- Dependência externa de contexto/identidade excluída: aplicar contrato CoreAI. -->
+      work: "Cohort-based programs"
+    technique:
+      primary: "urgency"
+      secondary: ["scarcity", "binary_choice"]
+    awareness_level: "product_aware"
+    score: 3
+    tags: ["high_ticket", "cohort", "urgency", "application"]
+    analysis:
+      why_it_works: "Escolha binaria: agora ou 6 meses. Custo de espera = 6 meses de resultados perdidos."
+
+  - id: "hl_ht_excl_007"
+    text: "This Mastermind Has a 97% Renewal Rate. That Should Tell You Everything."
+    source:
+      author: "Template de retention proof"
+      work: "Mastermind marketing"
+    technique:
+      primary: "proof"
+      secondary: ["retention", "implied_quality"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "mastermind", "retention", "proof"]
+    analysis:
+      why_it_works: "97% de renovacao = os membros pagam de novo. Melhor prova que qualquer testimonial."
+
+  - id: "hl_ht_excl_008"
+    text: "Nao Vendemos Vagas. Selecionamos Membros."
+    source:
+      author: "Template de posicionamento premium BR"
+      work: "High-ticket positioning"
+    technique:
+      primary: "positioning"
+      secondary: ["exclusivity", "language_reframe"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "positioning", "reframe"]
+    analysis:
+      why_it_works: "Reframe linguistico: 'vender vagas' vs 'selecionar membros'. Muda toda a dinamica de poder."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # TRANSFORMATION / RESULT (10)
+  # Headlines focadas na transformacao que o high-ticket entrega
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_ht_trans_001"
+    text: "From Solo Consultant to 7-Figure Agency in 12 Months — The Exact Roadmap"
+    source:
+      author: "Template de agency coaching"
+      work: "Agency growth programs"
+    technique:
+      primary: "transformation"
+      secondary: ["specificity", "timeframe", "blueprint"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "agency", "transformation", "roadmap"]
+    analysis:
+      why_it_works: "Ponto A (solo) → Ponto B (7 figures) claro. '12 months' = timeline crivel."
+
+  - id: "hl_ht_trans_002"
+    text: "De Profissional Liberal a Empresario: O Programa Para Quem Quer Parar de Vender Horas"
+    source:
+      author: "Template de mentoria BR"
+      work: "Mentoria para profissionais liberais"
+    technique:
+      primary: "transformation"
+      secondary: ["identity_shift", "pain_point"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["high_ticket", "mentoria", "portuguese", "identity", "liberal"]
+    analysis:
+      why_it_works: "Dor exata de profissionais liberais (vender horas). Transformacao de identidade (profissional → empresario)."
+
+  - id: "hl_ht_trans_003"
+    text: "In 90 Days, You'll Either Have a Business That Runs Without You — Or Your Money Back"
+    source:
+      author: "Template de garantia high-ticket"
+      work: "Business coaching"
+    technique:
+      primary: "guarantee"
+      secondary: ["transformation", "timeframe", "risk_reversal"]
+    awareness_level: "solution_aware"
+    score: 5
+    tags: ["high_ticket", "guarantee", "transformation", "systemization"]
+    analysis:
+      why_it_works: "Resultado ultra-desejavel (negocio sem voce) + garantia + timeframe. Tripla seguranca."
+
+  - id: "hl_ht_trans_004"
+    text: "O Programa Que Transformou 200+ Donos de Clinica Em Empresarios Com Faturamento Acima de R$200k/Mes"
+    source:
+      author: "Template de nicho especifico BR"
+      work: "Mentoria para clinicas"
+    technique:
+      primary: "proof"
+      secondary: ["niche_specific", "social_proof", "specificity"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "mentoria", "portuguese", "niche", "clinicas"]
+    analysis:
+      why_it_works: "Nicho especifico (clinicas) + volume (200+) + resultado (R$200k/mes). Ultra-relevante para o target."
+
+  - id: "hl_ht_trans_005"
+    text: "How to Build a Team That Makes You Unnecessary — And a Business Worth Selling"
+    source:
+      author: "Template de exit strategy"
+      work: "Business scaling coaching"
+    technique:
+      primary: "transformation"
+      secondary: ["systemization", "exit", "dual_benefit"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "team", "systemization", "exit"]
+    analysis:
+      why_it_works: "Dois resultados aspiracionais: liberdade operacional + asset valioso."
+
+  - id: "hl_ht_trans_006"
+    text: "Your Next 12 Months Can Look Exactly Like Your Last 12 — Or Completely Different. You Choose."
+    source:
+      author: "Tony Robbins influence"
+      work: "Coaching program marketing"
+    technique:
+      primary: "future_pacing"
+      secondary: ["choice", "contrast", "accountability"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["high_ticket", "coaching", "future_pacing", "choice"]
+    analysis:
+      why_it_works: "Espelho temporal. 'You choose' coloca responsabilidade no prospect."
+
+  - id: "hl_ht_trans_007"
+    text: "Pare de Ser o Gargalo do Seu Proprio Negocio"
+    source:
+      author: "Template de mentoria operacional BR"
+      work: "Mentoria de escala"
+    technique:
+      primary: "problem_identification"
+      secondary: ["self_diagnosis", "command"]
+    awareness_level: "problem_aware"
+    score: 4
+    tags: ["high_ticket", "mentoria", "portuguese", "bottleneck"]
+    analysis:
+      why_it_works: "Dor #1 de donos de negocio que faturam R$500k-R$2M. Direto e verdadeiro."
+
+  - id: "hl_ht_trans_008"
+    text: "The 3-Day Intensive That Replaces 3 Years of Trial and Error"
+    source:
+      author: "Template de imersao"
+      work: "Immersive workshop marketing"
+    technique:
+      primary: "value_framing"
+      secondary: ["time_compression", "contrast", "intensive"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "immersive", "time_compression", "intensive"]
+    analysis:
+      why_it_works: "3 dias vs 3 anos = compressao dramatica. Justifica preco alto."
+
+  - id: "hl_ht_trans_009"
+    text: "Saia da Imersao Com Seu Funil Pronto, Validado e Gerando Leads"
+    source:
+      author: "Template de imersao pratica BR"
+      work: "Imersao de marketing digital"
+    technique:
+      primary: "tangible_outcome"
+      secondary: ["done_for_you", "immediacy"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "imersao", "portuguese", "tangible", "funil"]
+    analysis:
+      why_it_works: "Resultado tangivel (funil pronto). 'Validado e gerando leads' = ja funcionando ao sair."
+
+  - id: "hl_ht_trans_010"
+    text: "What Would It Be Worth to You to Add $500,000 to Your Annual Revenue This Year?"
+    source:
+      author: "Jay Abraham"
+      work: "Consulting positioning"
+    technique:
+      primary: "value_question"
+      secondary: ["roi_framing", "aspiration"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "consulting", "value_question", "roi"]
+    analysis:
+      why_it_works: "Forca calculo de ROI mental. Qualquer investimento de $5K-$50K se justifica contra $500K."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # OBJECTION HANDLING (8)
+  # Headlines que antecipam e neutralizam objecoes de high-ticket
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_ht_obj_001"
+    text: "Yes, It's Expensive. Here's Why It's Worth Every Penny."
+    source:
+      author: "Template de premium positioning"
+      work: "High-ticket marketing"
+    technique:
+      primary: "objection_handling"
+      secondary: ["honesty", "value_justification"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "price_objection", "honesty", "value"]
+    analysis:
+      why_it_works: "Reconhece a objecao de frente. 'Yes' desarma. 'Every penny' promete justificativa."
+
+  - id: "hl_ht_obj_002"
+    text: "You Can't Afford This Program. That's Exactly Why You Need It."
+    source:
+      author: "Dan Kennedy influence"
+      work: "Mindset-based selling"
+    technique:
+      primary: "paradox"
+      secondary: ["ego_challenge", "reframe"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "price_objection", "paradox", "mindset"]
+    analysis:
+      why_it_works: "Inversao: a incapacidade de pagar E a razao para precisar. Reframe poderoso."
+
+  - id: "hl_ht_obj_003"
+    text: "O Preco Nao E o Problema. O Problema E Continuar Fazendo o Que Voce Ja Faz."
+    source:
+      author: "Template de mentoria BR"
+      work: "High-ticket objection handling"
+    technique:
+      primary: "reframe"
+      secondary: ["cost_of_inaction", "direct"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "reframe", "inaction_cost"]
+    analysis:
+      why_it_works: "Desloca o foco do preco para o custo de NAO agir."
+
+  - id: "hl_ht_obj_004"
+    text: "If You're Hesitating Because of the Investment, Calculate What One More Year of Status Quo Costs You"
+    source:
+      author: "Jay Abraham influence"
+      work: "Cost of inaction framing"
+    technique:
+      primary: "reframe"
+      secondary: ["cost_of_inaction", "math", "accountability"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "price_objection", "cost_of_inaction", "math"]
+    analysis:
+      why_it_works: "Forca o prospect a calcular o custo de mais um ano sem mudanca."
+
+  - id: "hl_ht_obj_005"
+    text: "This Program Isn't Cheap — But Neither Are the Results"
+    source:
+      author: "Template de premium positioning"
+      work: "High-ticket marketing"
+    technique:
+      primary: "price_justification"
+      secondary: ["parallel_structure", "result_focus"]
+    awareness_level: "product_aware"
+    score: 3
+    tags: ["high_ticket", "price", "results", "parallel"]
+    analysis:
+      why_it_works: "Estrutura paralela cria logica: preco alto = resultado alto."
+
+  - id: "hl_ht_obj_006"
+    text: "Nao E Um Curso. E Um Investimento Com ROI Documentado de 847%."
+    source:
+      author: "Template de mentoria BR"
+      work: "ROI-based positioning"
+    technique:
+      primary: "reframe"
+      secondary: ["roi", "specificity", "differentiation"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "roi", "reframe"]
+    analysis:
+      why_it_works: "Reframe de 'curso' (custo) para 'investimento' (retorno). ROI especifico (847%)."
+
+  - id: "hl_ht_obj_007"
+    text: "What's the Cost of Not Knowing What You Don't Know?"
+    source:
+      author: "Template filosofico de high-ticket"
+      work: "Consulting/coaching positioning"
+    technique:
+      primary: "philosophical_question"
+      secondary: ["blind_spots", "cost_of_ignorance"]
+    awareness_level: "problem_aware"
+    score: 3
+    tags: ["high_ticket", "consulting", "blind_spots", "philosophy"]
+    analysis:
+      why_it_works: "Meta-ignorancia. O prospect nao sabe o que nao sabe — e isso custa dinheiro."
+
+  - id: "hl_ht_obj_008"
+    text: "Seus Concorrentes Ja Estao Investindo Nisso. A Pergunta E: Voce Vai Esperar Ate Quando?"
+    source:
+      author: "Template competitivo BR"
+      work: "B2B high-ticket"
+    technique:
+      primary: "competitive_pressure"
+      secondary: ["fomo", "urgency"]
+    awareness_level: "product_aware"
+    score: 3
+    tags: ["high_ticket", "portuguese", "competition", "fomo"]
+    analysis:
+      why_it_works: "FOMO competitivo. Se os concorrentes ja estao fazendo, atrasar = perder mercado."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # WEBINAR / VSL / APLICACAO (8)
+  # Headlines especificas para funis de high-ticket
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_ht_funnel_001"
+    text: "Free Training: The 3-Step Framework for Scaling Past $1M Without Burning Out"
+    source:
+      author: "Template de webinar high-ticket"
+      work: "Webinar → application funnel"
+    technique:
+      primary: "free_value"
+      secondary: ["framework", "aspiration", "pain_removal"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "webinar", "framework", "scaling"]
+    analysis:
+      why_it_works: "'Free training' = barreira zero. '3-step' = simples. '$1M without burnout' = o sonho."
+
+  - id: "hl_ht_funnel_002"
+    text: "Masterclass Gratuita: Como Estruturar Uma Oferta High-Ticket Que Vende a R$10k+ Com Naturalidade"
+    source:
+      author: "Template de masterclass BR"
+      work: "Webinar para mentores/coaches"
+    technique:
+      primary: "free_value"
+      secondary: ["how_to", "specificity", "naturalidade"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "masterclass", "webinar"]
+    analysis:
+      why_it_works: "Gratuita + R$10k+ = contraste. 'Com naturalidade' remove a objecao de 'nao sei vender caro'."
+
+  - id: "hl_ht_funnel_003"
+    text: "Watch This 47-Minute Presentation Before You Invest in Any Coaching Program"
+    source:
+      author: "Template de VSL high-ticket"
+      work: "Pre-application VSL"
+    technique:
+      primary: "pre_emptive"
+      secondary: ["time_commitment", "education", "positioning"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["high_ticket", "vsl", "pre_emptive", "education"]
+    analysis:
+      why_it_works: "Posiciona como educacao ANTES da venda. '47 minutes' = especifico e gerenciavel."
+
+  - id: "hl_ht_funnel_004"
+    text: "Agende Sua Sessao Estrategica Gratuita (Vagas Limitadas a 10 Por Semana)"
+    source:
+      author: "Template de call booking BR"
+      work: "Application → call funnel"
+    technique:
+      primary: "call_to_action"
+      secondary: ["free_value", "scarcity", "strategy"]
+    awareness_level: "product_aware"
+    score: 3
+    tags: ["high_ticket", "portuguese", "booking", "strategy_session"]
+    analysis:
+      why_it_works: "'Estrategica' = valor. 'Gratuita' = barreira zero. '10 por semana' = escassez real."
+
+  - id: "hl_ht_funnel_005"
+    text: "Discover the Exact System Behind $47M in Coaching Revenue (Free Case Study)"
+    source:
+      author: "Template de case study funnel"
+      work: "Case study → application"
+    technique:
+      primary: "proof"
+      secondary: ["specificity", "system", "free_value"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "case_study", "system", "proof"]
+    analysis:
+      why_it_works: "$47M = credibilidade massiva. 'Free case study' = valor sem custo."
+
+  - id: "hl_ht_funnel_006"
+    text: "A Verdade Sobre Mentorias de Alto Valor (O Que Ninguem Te Conta Antes de Voce Pagar)"
+    source:
+      author: "Template contrarian BR"
+      work: "Contrarian webinar positioning"
+    technique:
+      primary: "contrarian"
+      secondary: ["insider", "consumer_protection", "trust"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "contrarian", "trust"]
+    analysis:
+      why_it_works: "Posiciona como 'insider honesto'. Constroi confianca ao expor o mercado. Vende por contraste."
+
+  - id: "hl_ht_funnel_007"
+    text: "Before You Apply: 5 Questions to Ask Any High-Ticket Program (Including Ours)"
+    source:
+      author: "Template de pre-qualification"
+      work: "Trust-building content"
+    technique:
+      primary: "education"
+      secondary: ["trust", "transparency", "qualification"]
+    awareness_level: "solution_aware"
+    score: 3
+    tags: ["high_ticket", "education", "trust", "transparency"]
+    analysis:
+      why_it_works: "'Including ours' = transparencia radical. Educa o comprador e ganha confianca."
+
+  - id: "hl_ht_funnel_008"
+    text: "Se Voce Fatura Mais de R$50k/Mes e Quer Chegar a R$500k, Essa Conversa E Para Voce"
+    source:
+      author: "Template de qualificacao BR"
+      work: "Call booking page"
+    technique:
+      primary: "qualification"
+      secondary: ["aspiration", "specificity", "direct"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "qualification", "specificity"]
+    analysis:
+      why_it_works: "Filtro numerico claro (R$50k → R$500k). Quem se qualifica sente que E para ele."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # GUARANTEE / RISK REVERSAL (8)
+  # Headlines com garantia como elemento central para high-ticket
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "hl_ht_guarantee_001"
+    text: "If You Don't 10x Your Investment in 12 Months, I'll Refund Every Dollar and Buy You Dinner"
+    source:
+      author: "Template de garantia audaciosa"
+      work: "High-ticket coaching"
+    technique:
+      primary: "guarantee"
+      secondary: ["humor", "specificity", "confidence"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "guarantee", "humor", "bold"]
+    analysis:
+      why_it_works: "'Buy you dinner' = humor que humaniza. '10x' = resultado concreto. Confianca total."
+
+  - id: "hl_ht_guarantee_002"
+    text: "Garantia de Resultado: Se Voce Nao Atingir R$100k/Mes em 6 Meses, Eu Trabalho Com Voce De Graca Ate Atingir"
+    source:
+      author: "Template de garantia de trabalho BR"
+      work: "Mentoria de resultado"
+    technique:
+      primary: "guarantee"
+      secondary: ["result_guarantee", "unlimited_support"]
+    awareness_level: "product_aware"
+    score: 5
+    tags: ["high_ticket", "portuguese", "guarantee", "result"]
+    analysis:
+      why_it_works: "Garantia de RESULTADO, nao de devolucao. Demonstra confianca absoluta no processo."
+
+  - id: "hl_ht_guarantee_003"
+    text: "Zero Risk: Pay Only When You See Results"
+    source:
+      author: "Template de pay-for-performance"
+      work: "Results-based consulting"
+    technique:
+      primary: "risk_reversal"
+      secondary: ["performance", "trust"]
+    awareness_level: "solution_aware"
+    score: 4
+    tags: ["high_ticket", "risk_reversal", "performance", "trust"]
+    analysis:
+      why_it_works: "Inversao total de risco. O vendedor assume TODO o risco."
+
+  - id: "hl_ht_guarantee_004"
+    text: "Se Em 30 Dias Voce Nao Sentir Que Esse Foi o Melhor Investimento da Sua Carreira, Devolvemos 100%"
+    source:
+      author: "Template de garantia emocional BR"
+      work: "Mentoria/imersao"
+    technique:
+      primary: "guarantee"
+      secondary: ["emotional_framing", "unconditional"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "guarantee", "emotional"]
+    analysis:
+      why_it_works: "'Melhor investimento da carreira' = standard alto. 100% incondicional = zero risco."
+
+  - id: "hl_ht_guarantee_005"
+    text: "ROI Guarantee: Generate 5x Your Investment Within 6 Months — Or We Continue Working Together For Free"
+    source:
+      author: "Template de ROI guarantee"
+      work: "Consulting programs"
+    technique:
+      primary: "guarantee"
+      secondary: ["roi", "specificity", "ongoing_support"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "guarantee", "roi", "ongoing"]
+    analysis:
+      why_it_works: "'5x in 6 months' = meta clara. 'Continue for free' = comprometimento sem limite."
+
+  - id: "hl_ht_guarantee_006"
+    text: "I've Never Had a Client Ask for a Refund. But the Guarantee Is There If You Need It."
+    source:
+      author: "Template de social proof + garantia"
+      work: "High-ticket coaching"
+    technique:
+      primary: "proof"
+      secondary: ["guarantee", "confidence", "social_proof"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "guarantee", "social_proof", "confidence"]
+    analysis:
+      why_it_works: "Track record (zero refunds) + garantia como backup. Confianca + seguranca."
+
+  - id: "hl_ht_guarantee_007"
+    text: "Satisfacao Garantida ou Seu Dinheiro de Volta + R$1.000 Pelo Incomodo"
+    source:
+      author: "Template better-than-money-back BR"
+      work: "Super garantia high-ticket"
+    technique:
+      primary: "guarantee"
+      secondary: ["better_than_money_back", "boldness"]
+    awareness_level: "product_aware"
+    score: 4
+    tags: ["high_ticket", "portuguese", "guarantee", "super_guarantee"]
+    analysis:
+      why_it_works: "Better-than-money-back: o prospect LUCRA se nao funcionar. Risco totalmente invertido."
+
+  - id: "hl_ht_guarantee_008"
+    text: "Try It For 30 Days. If It's Not Everything I Promised, Keep the Bonuses and Get a Full Refund."
+    source:
+      author: "Gary Halbert influence"
+      work: "High-ticket with bonus retention"
+    technique:
+      primary: "guarantee"
+      secondary: ["generosity", "trial", "bonus_retention"]
+    awareness_level: "product_aware"
+    score: 3
+    tags: ["high_ticket", "guarantee", "trial", "generosity"]
+    analysis:
+      why_it_works: "Manter bonuses + refund = generosidade que gera reciprocidade."

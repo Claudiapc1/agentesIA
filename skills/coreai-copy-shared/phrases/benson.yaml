@@ -1,0 +1,93 @@
+name: "Jon Benson - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Fit Over 40"
+    - "Sellerator"
+    - "3x VSL"
+  author: "Jon Benson"
+description: >
+  Frases icônicas do Jon Benson organizadas por categoria, com fonte e contexto de uso.
+
+ethical_persuasion:
+  - phrase: "People buy with emotion and justify with logic"
+    source: "Jon Benson"
+    context: "Princípio guia para toda copy emocional"
+  - phrase: "Ethical Persuasion is the polar opposite of manipulation"
+    source: "Jon Benson"
+    context: "Filosofia central"
+  - phrase: "If you're half-assing copy, you're actually being UNETHICAL"
+    source: "Jon Benson"
+    context: "Responsabilidade do copywriter"
+  - phrase: "It's about uncovering a truth so profound that your offer becomes the only thing that makes sense"
+    source: "Jon Benson"
+    context: "Definição de persuasão ética"
+  - phrase: "The goal is to SERVE, not just to sell"
+    source: "Jon Benson"
+    context: "Propósito do copywriting"
+
+vsl_related:
+  - phrase: "The Video Sales Letter changed everything"
+    source: "Jon Benson"
+    context: "Criação do formato VSL"
+  - phrase: "VSLs are easier because the brain wraps around sentence fragments better"
+    source: "Jon Benson"
+    context: "Por que VSL funciona"
+  - phrase: "Within the first 10 slides, mention the USP"
+    source: "3x VSL"
+    context: "Estrutura de VSL"
+  - phrase: "Hook them in 10 seconds or lose them forever"
+    source: "Jon Benson"
+    context: "Urgência do hook"
+  - phrase: "I bombed miserably with the first, second, and third versions of my sales letter"
+    source: "Jon Benson"
+    context: "História de origem do VSL"
+  - phrase: "I made an UGLY video with no pictures - only black letters with red words"
+    source: "Jon Benson"
+    context: "O primeiro VSL da história"
+
+copywriting_philosophy:
+  - phrase: "Writing and copywriting are not remotely the same"
+    source: "Jon Benson"
+    context: "Diferença entre escrita e copywriting"
+  - phrase: "Tolstoy and Shakespeare would suck as copywriters"
+    source: "Jon Benson"
+    context: "Copy não é literatura"
+  - phrase: "Even pros write bombs - the secret is testing and tweaking"
+    source: "Jon Benson"
+    context: "Importância de testes"
+
+nlp_related:
+  - phrase: "Use 'remember' rather than 'don't forget'"
+    source: "Jon Benson - NLP Copywriting"
+    context: "Linguagem positiva NLP"
+  - phrase: "Use the persuasion quadrant: wants, needs, fears, actions"
+    source: "Jon Benson - NLP Copywriting"
+    context: "Framework de persuasão"
+  - phrase: "When you agree with somebody, you immediately connect"
+    source: "Jon Benson - NLP Copywriting"
+    context: "Princípio de concordância"
+
+life_philosophy:
+  - phrase: "Leave nothing on the table"
+    source: "Jon Benson"
+    context: "Filosofia de segunda chance"
+  - phrase: "Lying in that helicopter, I realized: I didn't do enough. I didn't LOVE enough."
+    source: "Jon Benson"
+    context: "História do ataque cardíaco"
+  - phrase: "A massive heart attack became my catalyst for transformation"
+    source: "Jon Benson"
+    context: "Ponto de virada pessoal"
+
+formulas:
+  - phrase: "What if everything you've been told about [topic] is wrong?"
+    source: "Jon Benson - Snap Suggestion"
+    context: "Abertura de VSL ou sales page"
+  - phrase: "In a moment, I'll reveal [thing], but first..."
+    source: "Jon Benson - Curiosity Loop"
+    context: "Hook de engajamento"
+  - phrase: "I wasn't looking for this. I was just like you - [struggle]. Until..."
+    source: "Jon Benson - Reluctant Hero"
+    context: "Início de origin story"
+
+throne_phrase: "People buy with emotion and justify with logic"

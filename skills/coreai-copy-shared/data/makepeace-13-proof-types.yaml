@@ -1,0 +1,125 @@
+# Clayton Makepeace — Proof Stacking Protocol
+# Framework: 13 Tipos de Prova (6 obrigatorios + 7 avancados)
+# Fonte: Clayton Makepeace (The Profit Center, copy legend)
+
+framework:
+  name: "Proof Stacking Protocol"
+  author: "Clayton Makepeace"
+  source: "The Profit Center — lifetime $1.5B+ in sales copy"
+  core_principle: "Claims without proof are just noise. Stack 40+ proof elements per promotion."
+  three_sales:
+    - sale: 1
+      name: "Readership"
+      objective: "Make them READ — headline, lead, curiosity"
+    - sale: 2
+      name: "Belief"
+      objective: "Make them BELIEVE — proof stacking happens here"
+    - sale: 3
+      name: "Action"
+      objective: "Make them ACT — CTA, urgency, risk reversal"
+
+# note: "All 6 MUST be present in any serious promotion"
+mandatory_proof_types:
+
+  - numero: 1
+    tipo: "Reasons Why"
+    definicao: "Explain WHY the claim is true — logical justification"
+    exemplo: "This works because the algorithm prioritizes X over Y..."
+    regra: "Every bold claim needs at least one Reason Why immediately after"
+
+  - numero: 2
+    tipo: "Specificity"
+    definicao: "Specific numbers are more believable than round ones"
+    exemplo: "R$4.327 in 17 days (not 'thousands in weeks')"
+    regra: "Replace every vague claim with a specific number, date, or measurement"
+
+  - numero: 3
+    tipo: "Logic"
+    definicao: "If-then reasoning the reader can follow step by step"
+    exemplo: "If 1 client pays R$2K/month, and you get 5 clients, that is R$10K/month"
+    regra: "Walk the reader through the math — make the conclusion inevitable"
+
+  - numero: 4
+    tipo: "Documentation"
+    definicao: "Screenshots, reports, bank statements, published studies"
+    exemplo: "Here is my Stripe dashboard from last Tuesday showing..."
+    regra: "Physical or visual evidence trumps verbal claims every time"
+
+  - numero: 5
+    tipo: "Guarantee"
+    definicao: "Risk reversal as proof of confidence — you believe in it enough to guarantee"
+    exemplo: "Try it for 60 days. If you do not see results, I will refund every cent."
+    regra: "The stronger the guarantee, the stronger the implied proof"
+
+  - numero: 6
+    tipo: "Testimonials"
+    definicao: "Third-party validation from real users with real results"
+    exemplo: "'I went from 0 to R$8K/month in 90 days' — Maria, Sao Paulo"
+    regra: "Specific results + name + location. Generic praise is worthless."
+
+# note: "Use these to stack beyond the 6 mandatory types"
+advanced_proof_types:
+
+  - numero: 7
+    tipo: "Mechanism"
+    definicao: "Explain the HOW — the unique process that makes the claim possible"
+    exemplo: "The 3-layer algorithm cross-references 47 data points to find..."
+    regra: "Name the mechanism. Unnamed mechanisms feel generic."
+
+  - numero: 8
+    tipo: "Vivid Pictures"
+    definicao: "Paint sensory-rich scenarios the reader can see and feel"
+    exemplo: "Imagine opening your laptop at the beach, checking your dashboard..."
+    regra: "Engage at least 2 senses. Visual + emotional is the minimum."
+
+  - numero: 9
+    tipo: "Demonstrations"
+    definicao: "Show it working in real time — live proof"
+    exemplo: "Watch me build a campaign in 7 minutes (video embedded)"
+    regra: "Demonstrations eliminate the 'sounds too good' objection"
+
+  - numero: 10
+    tipo: "Authority"
+    definicao: "Expert endorsements, media mentions, institutional backing"
+    exemplo: "Featured in Forbes, recommended by Dr. X of Harvard..."
+    regra: "Borrowed credibility — the authority must be relevant to the audience"
+
+  - numero: 11
+    tipo: "Personality/Character"
+    definicao: "Author credibility through vulnerability and authenticity"
+    exemplo: "I failed 3 times before finding what works. Here is what I learned..."
+    regra: "Vulnerability builds trust. Perfection builds suspicion."
+
+  - numero: 12
+    tipo: "Track Record"
+    definicao: "Historical pattern of results over time"
+    exemplo: "In the last 5 years, 847 students have completed the program..."
+    regra: "Longevity and consistency prove it is not a fluke"
+
+  - numero: 13
+    tipo: "Case Histories"
+    definicao: "Detailed before/after narratives with context and timeline"
+    exemplo: "Carlos was a teacher earning R$3K. In 6 months he built a R$15K/month business..."
+    regra: "Full story arc: situation, struggle, discovery, transformation, result"
+
+edge_of_believability:
+  principle: "Claims must be barely possible — credible yet powerful"
+  too_weak: "'You might see some improvement' — no one cares"
+  too_strong: "'Make R$1M in 30 days with no work' — no one believes"
+  sweet_spot: "'R$4.327 in 17 days following this exact system' — specific, bold, plausible"
+  rule: "If the reader thinks 'that sounds amazing but I guess it could work' — you nailed it"
+
+audit:
+  target: "40+ proof elements per promotion"
+  method: "Count proof instances per section. Tag each with its type."
+  minimum: "All 6 mandatory types must appear at least once"
+  distribution: "NEVER cluster proofs in one section. Intercalate throughout the entire copy."
+  checklist:
+    - "Reasons Why present? (minimum 5 instances)"
+    - "Specific numbers used? (no vague claims remaining)"
+    - "Logic chain clear? (reader can follow the math)"
+    - "Documentation included? (visual evidence)"
+    - "Guarantee stated? (risk reversal)"
+    - "Testimonials placed? (real people, real results)"
+    - "Total proof count >= 40?"
+    - "Proofs distributed across all sections? (not clustered)"

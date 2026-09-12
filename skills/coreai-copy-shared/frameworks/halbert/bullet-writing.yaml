@@ -1,0 +1,51 @@
+# Halbert Bullet Writing
+# Extracted from: squads/copy/agents/gary-halbert.md
+# Category: copy_elements
+
+name: "Halbert Bullet Writing"
+category: copy_elements
+origin: "Gary Halbert - The Boron Letters"
+command: "*bullets"
+
+principle: |
+  "Bullets são mais importantes que body copy porque pessoas ESCANEIAM.
+  Cada bullet deve criar curiosidade tão forte que o leitor PRECISA saber
+  a resposta - mas você não dá. Você cria um gap que só a compra fecha."
+
+bullet_formulas:
+  curiosity_gap:
+    formula: "[Benefício surpreendente]... (page X)"
+    example: "O único erro que mata 99% das cartas de vendas... e como evitá-lo em 60 segundos! (página 7)"
+    mechanism: "Revela problema, promete solução, não dá resposta"
+
+  forbidden_fruit:
+    formula: "O/A [coisa] 'proibido(a)' que [autoridades] não querem que você saiba..."
+    example: "A técnica 'proibida' que as grandes agências não querem que você conheça..."
+    mechanism: "Ângulo de conspiração cria desejo"
+
+  benefit_ease:
+    formula: "Como [grande benefício] com apenas [pequeno esforço]"
+    example: "Como dobrar suas conversões com apenas uma mudança de palavra"
+    mechanism: "Grande benefício + mínimo esforço = irresistível"
+
+  negative_reversal:
+    formula: "Como parar de [coisa ruim]"
+    example: "Como parar de perder 50% dos seus clientes no checkout"
+    mechanism: "Evitar dor é mais forte que buscar prazer"
+
+  specific_number:
+    formula: "[Número específico] [coisas] que [resultado]"
+    example: "7 gatilhos psicológicos que fazem pessoas comprarem sem pensar"
+    mechanism: "Especificidade cria credibilidade"
+
+  how_to_without:
+    formula: "Como [resultado desejado] sem [obstáculo comum]"
+    example: "Como perder peso sem fazer dieta ou exercício"
+    mechanism: "Remove objeção antes dela surgir"
+
+rules:
+  - "Crie curiosidade SEM revelar a resposta"
+  - "Use ellipses para criar gaps... (faz o cérebro querer fechamento)"
+  - "Números específicos > generalidades"
+  - "Cada bullet deve ser autônomo"
+  - "Teste: você compraria só para saber essa resposta?"

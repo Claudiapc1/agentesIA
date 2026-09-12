@@ -1,0 +1,456 @@
+# Copy Swipes Knowledge Base - Product Launch Formula
+# Source: Launch (Jeff Walker) + PLF Community Patterns
+# Version: 1.0
+
+metadata:
+  source: "Launch by Jeff Walker + Proven Launch Copy Patterns"
+  validated: true
+  created: "2026-01-27"
+
+overview:
+  description: |
+    Colecao de swipes de copy para lançamentos PLF,
+    incluindo subject lines, headlines, CTAs e scripts.
+  usage_note: |
+    Estes são TEMPLATES para adaptar, não para copiar literalmente.
+    Personalize com sua voz, seu produto e seu avatar.
+
+subject_lines:
+  pre_prelaunch:
+    survey_requests:
+      - "Preciso da sua ajuda com algo"
+      - "Uma pergunta rápida"
+      - "Posso te perguntar uma coisa?"
+      - "[Nome], tenho uma pergunta para você"
+      - "Isso vai levar 30 segundos"
+
+    teaser_subjects:
+      - "Algo grande esta chegando..."
+      - "Não conte pra ninguém ainda, mas..."
+      - "Em breve vou revelar..."
+      - "Marque na agenda: [data]"
+      - "Você esta pronto para [resultado]?"
+
+  prelaunch_plc:
+    plc1_announcement:
+      - "[VIDEO] Isso muda tudo sobre [tópico]"
+      - "O video que [X] pessoas esperavam"
+      - "Por que [resultado] é mais fácil do que você pensa"
+      - "A descoberta que transformou [nicho]"
+      - "[Nome], este video é para você"
+      - "Finalmente revelado: [promessa]"
+
+    plc1_reminder:
+      - "Você viu isso?"
+      - "Não perca isso..."
+      - "Lembrete: [título do PLC1]"
+      - "Você é uma das [X] pessoas que..."
+      - "Último lembrete sobre [PLC1]"
+
+    plc2_announcement:
+      - "A prova de que funciona"
+      - "Como [Nome] conseguiu [resultado]"
+      - "[X] pessoas já fizeram isso..."
+      - "O segundo video esta no ar"
+      - "A transformação de [caso]"
+
+    plc3_announcement:
+      - "O último video antes de..."
+      - "Amanha tudo muda"
+      - "Seu próximo passo revelado"
+      - "A peça final do quebra-cabeca"
+      - "Isso é para você?"
+
+  open_cart:
+    day1_launch:
+      - "E AGORA. Acesso liberado."
+      - "As portas estão abertas"
+      - "[Produto] esta disponível"
+      - "Seu acesso esta pronto"
+      - "Comeca agora"
+
+    day1_followup:
+      - "Uau, voces vieram com tudo"
+      - "[X] pessoas já garantiram acesso"
+      - "As primeiras reacoes..."
+      - "Você viu a resposta?"
+
+    mid_launch:
+      - "Como [Nome] conseguiu [resultado]"
+      - "Suas perguntas, respondidas"
+      - "[X] dias restantes para [Produto]"
+      - "Uma história que preciso compartilhar"
+      - "O que acontece depois de entrar"
+
+    urgency_building:
+      - "2 dias restantes"
+      - "Amanha é o último dia"
+      - "Você ainda esta pensando?"
+      - "Antes de você decidir..."
+
+  close_cart:
+    last_day:
+      - "ÚLTIMO DIA - Fecha as 23:59"
+      - "[URGENTE] Horas finais"
+      - "Isso não vai durar"
+      - "Estou preocupado com você"
+      - "Última chamada para [Produto]"
+
+    final_hours:
+      - "[3 horas] E agora ou nunca"
+      - "Se você esta na cerca..."
+      - "Antes de você decidir não entrar..."
+      - "Fechando em [X] horas"
+      - "Última chance real"
+
+    final_email:
+      - "60 minutos"
+      - "É isso."
+      - "Decidiu?"
+      - "Nos vemos do outro lado?"
+      - "Fechando..."
+
+headlines:
+  plc_headlines:
+    opportunity_headlines:
+      - "A [Adjetivo] Verdade Sobre [Tópico] Que Ninguém Te Contou"
+      - "Como [Avatar] Estão Conseguindo [Resultado] Em [Tempo]"
+      - "O [Framework/Método] Que Mudou Tudo Para [X] Pessoas"
+      - "Por Que [Crenca Comum] Esta Errada (E O Que Fazer)"
+      - "Descoberta: [Resultado] Sem [Obstáculo Comum]"
+
+    transformation_headlines:
+      - "De [Situacao Antes] Para [Situacao Depois]: A História de [Nome]"
+      - "[X] Pessoas Já Fizeram Isso. Você E O Próximo?"
+      - "A Prova De Que [Resultado] E Possivel Para Você"
+      - "Veja Como [Avatar Similar] Conseguiu [Resultado Especifico]"
+
+    ownership_headlines:
+      - "Seu [Resultado] Comeca Aqui"
+      - "Imagina [Futuro Transformado]..."
+      - "O Que Muda Quando Você [Ação Principal]"
+      - "Seu Próximo Passo Para [Resultado]"
+
+  sales_page_headlines:
+    main_headlines:
+      - "Como [Resultado] Em [Tempo] Mesmo Se [Objeção]"
+      - "O [Método/Sistema] Para [Avatar] Que Querem [Resultado]"
+      - "Finalmente: [Resultado] Sem [Dor]"
+      - "De [Situacao Ruim] Para [Situacao Boa] Em [Tempo]"
+      - "O Único [Tipo de Produto] Que Garante [Resultado]"
+
+    sub_headlines:
+      - "Descubra o método exato que [X] pessoas usaram para [resultado]"
+      - "Sem [obstáculo], sem [obstáculo], sem [obstáculo]"
+      - "Funciona mesmo se você [limitação comum]"
+
+ctas:
+  prelaunch_ctas:
+    engagement:
+      - "Deixe um comentario dizendo [pergunta específica]"
+      - "Responda este email com sua maior duvida sobre [tópico]"
+      - "Compartilhe com alguém que precisa ouvir isso"
+      - "Clique aqui para assistir o video"
+      - "Acesse agora antes que saia do ar"
+
+    anticipation:
+      - "Fique de olho na sua caixa de entrada [dia]"
+      - "O próximo video sai em [X] dias"
+      - "Não perca o próximo conteúdo"
+
+  open_cart_ctas:
+    primary:
+      - "Clique aqui para garantir sua vaga"
+      - "Sim, quero acesso ao [Produto]"
+      - "Quero começar agora"
+      - "Entrar no [Produto]"
+      - "Garantir meu acesso"
+
+    secondary:
+      - "Ver tudo que esta incluido"
+      - "Conhecer o [Produto]"
+      - "Saiba mais sobre como funciona"
+
+  urgency_ctas:
+    - "Garantir minha vaga antes de fechar"
+    - "Entrar agora (fecha em [X] horas)"
+    - "Última chance - garantir acesso"
+    - "Não quero ficar de fora"
+
+email_openings:
+  personal_connection:
+    - "Eu preciso te contar uma coisa..."
+    - "Lembra quando eu disse que [referência anterior]?"
+    - "Recebi uma mensagem hoje que me fez pensar em você..."
+    - "Vou ser honesto com você..."
+    - "Isso pode parecer estranho, mas..."
+
+  direct_announcement:
+    - "O momento chegou."
+    - "Finalmente posso te contar."
+    - "Tenho uma noticia importante."
+    - "Isso é urgente."
+    - "[Nome], e agora."
+
+  story_start:
+    - "Estava conversando com [nome] outro dia..."
+    - "Deixa eu te contar o que aconteceu..."
+    - "Em [ano], quando eu estava [situacao]..."
+    - "Nunca vou esquecer o dia em que..."
+
+  question_hooks:
+    - "Posso te fazer uma pergunta?"
+    - "Você já sentiu que..."
+    - "O que você faria se..."
+    - "Quantas vezes você já..."
+
+email_closings:
+  anticipation_closers:
+    - "No próximo email vou revelar [teaser]..."
+    - "Amanha você vai descobrir..."
+    - "Fique de olho na sua inbox..."
+    - "O melhor ainda esta por vir."
+
+  action_closers:
+    - "Agora e com você."
+    - "A decisão e sua."
+    - "Nos vemos do outro lado?"
+    - "O link esta aqui. Você decide."
+    - "Espero te ver lá dentro."
+
+  urgency_closers:
+    - "Lembre-se: isso fecha em [tempo]."
+    - "Depois de [deadline], não tem volta."
+    - "A porta fecha as [horario]. É isso."
+    - "Última chance real. Decida."
+
+plc_scripts:
+  plc1_template:
+    hook:
+      duration: "30 segundos"
+      structure: |
+        "E se eu te dissesse que existe uma forma de [resultado desejado]...
+        sem [obstáculo comum], sem [obstáculo 2], e sem [obstáculo 3]?
+
+        Nos próximos [X] minutos, vou te mostrar exatamente [promessa].
+        E no final, vou te dar [bonus/ferramenta] que você pode usar hoje."
+
+    authority:
+      duration: "2-3 minutos"
+      structure: |
+        "Deixa eu te contar como descobri isso...
+
+        Em [ano/situacao], eu estava [situacao ruim].
+        Eu tinha tentado [tentativas anteriores] e nada funcionava.
+        Então eu descobri [breakthrough].
+
+        Desde então, [resultados seus].
+        E mais importante, ajudei [X] pessoas a [resultado]."
+
+    opportunity:
+      duration: "5-7 minutos"
+      structure: |
+        "Aqui esta a verdade sobre [tópico]:
+        [Crenca comum] esta errada.
+
+        O que realmente importa e [insight principal].
+
+        [Case rápido ou dado que prova]
+
+        Isso significa que você pode [possibilidade]..."
+
+    first_teaching:
+      duration: "7-10 minutos"
+      structure: |
+        "Deixa eu te dar algo prático agora.
+
+        [Framework/Conceito ensinavel]
+
+        Passo 1: [...]
+        Passo 2: [...]
+        Passo 3: [...]
+
+        [Exemplo de aplicação]"
+
+    anticipation_close:
+      duration: "2-3 minutos"
+      structure: |
+        "Isso é só o começo.
+
+        No próximo video (que sai [dia]), vou te mostrar
+        [teaser específico que cria curiosidade].
+
+        Você vai ver exatamente como [resultado tangivel].
+
+        Enquanto isso, quero que você [CTA de engajamento]."
+
+  plc2_template:
+    recap_and_bridge:
+      structure: |
+        "No último video, você aprendeu [recap PLC1].
+
+        Hoje eu vou te provar que isso funciona.
+        Não com teoria - com resultados reais."
+
+    social_proof_stack:
+      structure: |
+        "Conheca [Nome 1].
+        [Situacao antes] → [Resultado depois]
+        [Quote ou detalhe específico]
+
+        E [Nome 2]...
+        [Similar structure]
+
+        E [Nome 3]..."
+
+    deeper_teaching:
+      structure: |
+        "Agora deixa eu te mostrar COMO eles fizeram.
+
+        [Framework mais detalhado]
+
+        A chave esta em [insight principal]."
+
+    objection_handling:
+      structure: |
+        "Eu sei o que você pode estar pensando:
+        '[Objeção comum]'
+
+        [Nome do case] pensava a mesma coisa.
+        Veja o que aconteceu quando [ação]..."
+
+  plc3_template:
+    ownership_vision:
+      structure: |
+        "Imagina acordar daqui [tempo] sabendo que [resultado].
+
+        Em vez de [frustração atual], você [nova realidade].
+
+        Isso não é fantasia.
+        E exatamente o que acontece quando..."
+
+    final_teaching:
+      structure: |
+        "Nos dois últimos videos, você aprendeu [recap].
+
+        Hoje vou te dar a peça final: [último ensino].
+
+        Com isso, você tem tudo que precisa para começar."
+
+    bridge_to_offer:
+      structure: |
+        "Agora, se você quiser acelerar esse processo...
+        Se quiser ter [benefício extra]...
+        Se quiser [outro benefício]...
+
+        Amanha as [hora] vou te mostrar como.
+
+        Vou abrir as portas do [Produto].
+        E você vai ter a oportunidade de..."
+
+urgency_copy:
+  last_day_email:
+    template: |
+      "[Nome],
+
+      Hoje é o último dia.
+
+      As 23:59, o acesso ao [Produto] fecha.
+
+      Não é uma tática. E realidade.
+      Depois de meia-noite, o link para de funcionar.
+
+      Se você esta pensando 'vou entrar na próxima vez'...
+      Não tenho previsão de quando será.
+      Pode ser meses. Pode ser nunca.
+
+      A única coisa certa e: HOJE e seu último dia para decidir.
+
+      [CTA]
+
+      A decisão e sua.
+
+      [Assinatura]"
+
+  final_hours_email:
+    template: |
+      "[Nome],
+
+      [X] horas restantes.
+
+      Eu não vou te pressionar.
+      Você sabe se [Produto] é para você ou não.
+
+      Se você chegou até aqui, provavelmente e.
+
+      A pergunta e: você vai agir ou vai deixar passar?
+
+      [CTA]
+
+      Depois de [horario], a porta fecha.
+
+      [Assinatura]"
+
+social_proof_templates:
+  case_study_format:
+    template: |
+      "Conheca [Nome], [breve descrição].
+
+      ANTES:
+      - [Situacao 1]
+      - [Situacao 2]
+      - [Frustração principal]
+
+      O QUE FEZ:
+      - [Ação 1]
+      - [Ação 2]
+
+      DEPOIS:
+      - [Resultado 1 com numero]
+      - [Resultado 2]
+      - [Transformação emocional]
+
+      Nas palavras de [Nome]:
+      '[Quote poderoso]'"
+
+  quick_testimonial:
+    template: |
+      "'[Quote impactante]' - [Nome], [credencial breve]"
+
+  result_highlight:
+    template: |
+      "[Nome]: [Situacao antes] → [Resultado em X tempo]"
+
+guarantee_copy:
+  templates:
+    standard_money_back:
+      copy: |
+        "GARANTIA DE 30 DIAS SEM RISCO
+
+        Experimente [Produto] por 30 dias completos.
+        Se por qualquer motivo você sentir que não é para você,
+        basta enviar um email e devolvo 100% do seu investimento.
+
+        Sem perguntas. Sem burocracia. Sem ressentimentos.
+
+        O risco é todo meu. A transformação e sua."
+
+    conditional_guarantee:
+      copy: |
+        "GARANTIA DE RESULTADO
+
+        Aplique o [método/framework] por [tempo].
+        Se você não conseguir [resultado específico],
+        devolvo seu dinheiro E você fica com o acesso.
+
+        Eu só ganho quando você ganha."
+
+    confidence_frame:
+      copy: |
+        "Por que oferecer essa garantia?
+
+        Porque eu sei que funciona.
+        [X] pessoas já passaram por aqui.
+        O [Produto] foi refinado por [tempo/iterações].
+
+        Se eu não tivesse 100% de confiança, não arriscaria assim."

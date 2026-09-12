@@ -1,0 +1,42 @@
+# ContextOS - Tech Stack
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+website:
+  platform: null      # WordPress | Webflow | Next.js | custom
+  hosting: null
+  domain: null
+  ssl: null
+
+marketing_tools:
+  email: null         # ActiveCampaign | Mailchimp | ConvertKit
+  crm: null           # HubSpot | Pipedrive | custom
+  analytics: null     # GA4 | Plausible | Mixpanel
+  ads: null           # Google Ads | Meta Ads | ambos
+  social: null        # Buffer | Hootsuite | manual
+
+payment:
+  gateway: null       # Stripe | Hotmart | Kiwify | PagSeguro
+  checkout: null
+  subscription: null
+
+content:
+  cms: null
+  video: null         # YouTube | Vimeo | Wistia
+  podcast: null
+  design: null        # Canva | Figma | Adobe
+
+communication:
+  internal: null      # Slack | Discord | Teams
+  external: null      # WhatsApp | Intercom | Zendesk
+
+development:
+  frontend: null
+  backend: null
+  database: null
+  hosting: null       # Vercel | AWS | Railway | Supabase
+  ci_cd: null
+
+metadata:
+  status: INCOMPLETE

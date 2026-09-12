@@ -1,0 +1,1691 @@
+# Catálogo canônico de tipos de copy do squad copy
+# FONTE ÚNICA DE VERDADE. Substitui os 4 catálogos desalinhados anteriores.
+# O squad tem prioridade P0 sobre skills.
+#
+# Se um pedido NÃO bate com nenhuma entrada aqui, o Copy Chief PARA e pergunta.
+# Nunca improvisa.
+
+meta:
+  version: '1.0'
+  updated: '2026-07-31'
+  total: 83
+  completos: 83
+  sem_copywriter: 0
+  sem_template: 45
+  fontes_consolidadas:
+  - data/routing-matrix.yaml
+  - data/artifact-capability-map.yaml
+  - agents/copy-chief.md (task_path_map + commands + triagem_preco)
+  - config.yaml
+faixas_preco:
+  ate_97:
+    nome: Low Ticket
+    ate: 97
+    acao: Copy de oferta direta, VSL curta
+    copywriters:
+    - jon-benson
+    - gary-halbert
+    - john-carlton
+    workflow: null
+    processo_comercial: false
+  de_97_a_497:
+    nome: Curso
+    de: 97
+    ate: 497
+    acao: Carta de vendas ou VSL, email sequence
+    copywriters:
+    - gary-halbert
+    - jon-benson
+    - andre-chaperon
+    workflow: null
+    processo_comercial: false
+  de_497_a_997:
+    nome: Curso premium
+    de: 497
+    ate: 997
+    acao: Carta de vendas ou VSL, email sequence
+    copywriters:
+    - gary-halbert
+    - jon-benson
+    - andre-chaperon
+    workflow: null
+    processo_comercial: false
+    origem: faixa adicionada 2026-07-30 para fechar gap 497-997
+  de_997_a_2000:
+    nome: Produto medio
+    de: 997
+    ate: 2000
+    acao: Webinar / Sala Secreta
+    copywriters:
+    - frank-kern
+    - russell-brunson
+    workflow: workflows/funil-sala-secreta.md
+    processo_comercial: false
+  acima_2000:
+    nome: High Ticket
+    de: 2000
+    ate: null
+    acao: OBRIGATORIO processo comercial + relacionamento 1a1
+    copywriters:
+    - juliano-torriani
+    - dan-kennedy
+    - alex-hormozi
+    workflow: workflows/funil-fli.md
+    processo_comercial: true
+    regra: Pessoa precisa passar tempo contigo. Levantada de mao, relacionamento, conversao.
+tipos:
+- id: sales-page
+  nome: Página de vendas (long-form)
+  comando: '*sales-page'
+  task: tasks/criacao/create-sales-page.md
+  template: templates/sales-page-tmpl.md
+  padrao: data/section-contract.md
+  copywriter_primario: gary-halbert
+  copywriter_alternativo: clayton-makepeace
+  revisores:
+  - claude-hopkins
+  - eugene-schwartz
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/workflow-carta-vendas-obrigatorio.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  - high-ticket
+  temperatura:
+  - frio
+  - morno
+  - quente
+  canal: pagina
+  status: completo
+- id: sales-page-plf
+  nome: Página de vendas para lançamento PLF
+  comando: '*sideways-letter'
+  task: tasks/plf/create-sales-page-plf.md
+  template: templates/sales-page-tmpl.md
+  padrao: data/section-contract.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: russell-brunson
+  revisores:
+  - robert-collier
+  - alex-hormozi
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - morno
+  - quente
+  canal: pagina
+  status: completo
+- id: capture-page
+  nome: Página de captura / opt-in
+  comando: '*capture-page'
+  task: tasks/criacao/create-capture-page.md
+  template: templates/capture-page-tmpl.md
+  padrao: data/section-contract.md
+  copywriter_primario: stefan-georgi
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: pagina
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: landing-page
+  nome: Landing page
+  comando: '*landing'
+  task: tasks/criacao/create-landing-page.md
+  template: templates/capture-page-tmpl.md
+  padrao: data/section-contract.md
+  copywriter_primario: stefan-georgi
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/landing-page-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: pagina
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: thank-you-page
+  nome: Página de obrigado
+  comando: null
+  task: tasks/criacao/create-thank-you-page.md
+  template: templates/thank-you-page-tmpl.md
+  padrao: data/section-contract.md
+  copywriter_primario: russell-brunson
+  copywriter_alternativo: frank-kern
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - morno
+  - quente
+  canal: pagina
+  status: completo
+  origem_designacao: 'OTO pos-compra: mesmo dono de upsell-page, downsell-page e order-bump'
+- id: upsell-page
+  nome: Página de upsell
+  comando: '*upsell'
+  task: tasks/criacao/create-upsell-page.md
+  template: null
+  padrao: data/section-contract.md
+  copywriter_primario: russell-brunson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - quente
+  canal: pagina
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: downsell-page
+  nome: Página de downsell
+  comando: '*upsell'
+  task: tasks/criacao/create-downsell-page.md
+  template: null
+  padrao: data/section-contract.md
+  copywriter_primario: russell-brunson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - quente
+  canal: pagina
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: order-bump
+  nome: Order bump (checkout)
+  comando: null
+  task: tasks/criacao/create-order-bump.md
+  template: templates/checkout-microcopy-tmpl.md
+  padrao: data/section-contract.md
+  copywriter_primario: russell-brunson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - quente
+  canal: pagina
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: lead-magnet
+  nome: Lead magnet (isca digital)
+  comando: '*lead-magnet'
+  task: tasks/criacao/create-lead-magnet.md
+  template: null
+  padrao: null
+  copywriter_primario: michael-masterson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  canal: pagina
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: vsl
+  nome: VSL script
+  comando: '*vsl'
+  task: tasks/criacao/create-vsl.md
+  template: templates/vsl-script-tmpl.md
+  padrao: null
+  copywriter_primario: jon-benson
+  copywriter_alternativo: stefan-georgi
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: workflows/wf-vsl-perpetual.yaml
+  checklist: checklists/vsl-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: video
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: video-hook
+  nome: Hook de vídeo
+  comando: null
+  task: tasks/criacao/create-video-hook.md
+  template: templates/video-hook-tmpl.md
+  padrao: null
+  copywriter_primario: frank-kern
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  canal: video
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: ad-script
+  nome: Roteiro de anúncio em vídeo
+  comando: null
+  task: tasks/criacao/create-ad-script.md
+  template: templates/ad-copy-tmpl.md
+  padrao: null
+  copywriter_primario: frank-kern
+  copywriter_alternativo: dan-kennedy
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: workflows/trafego-pago-rapido.md
+  checklist: checklists/ad-copy-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: anuncio
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: ads
+  nome: Anúncios (Facebook / Google / Instagram)
+  comando: '*ads'
+  task: tasks/criacao/create-ad-copy.md
+  template: templates/ad-copy-tmpl.md
+  padrao: null
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: gary-halbert
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: workflows/trafego-pago-rapido.md
+  checklist: checklists/ad-copy-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: anuncio
+  status: completo
+- id: anuncio-estatico
+  nome: Anúncio estático (feed / story)
+  comando: '*anuncio-estatico'
+  task: tasks/criacao/create-anuncio-estatico.md
+  template: templates/anuncio-estatico.md
+  padrao: data/anuncios-estaticos/INSTRUCAO-LLM-anuncio-estatico.md
+  copywriter_primario: john-carlton
+  copywriter_alternativo: gary-halbert
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: anuncio
+  status: completo
+- id: mentorship-ads
+  nome: Anúncios para mentoria / consultoria (high-ticket)
+  comando: '*mentorship-ads'
+  task: tasks/criacao/create-mentorship-ads.md
+  template: templates/ads-tmpl.md
+  padrao: data/high-ticket-ads-framework.md
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: alex-hormozi
+  revisores:
+  - eugene-schwartz
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/high-ticket-sales.md
+  checklist: checklists/ad-copy-quality.md
+  faixa_preco:
+  - high-ticket
+  temperatura:
+  - frio
+  - morno
+  canal: anuncio
+  status: completo
+- id: native-ads
+  nome: Native ads / advertorial
+  comando: null
+  task: tasks/criacao/create-native-ads.md
+  template: templates/advertorial-tmpl.md
+  padrao: null
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: david-ogilvy
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/ad-copy-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  canal: anuncio
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: youtube-ads
+  nome: Anúncios de YouTube
+  comando: null
+  task: tasks/criacao/create-youtube-ads.md
+  template: templates/ad-copy-tmpl.md
+  padrao: null
+  copywriter_primario: frank-kern
+  copywriter_alternativo: jon-benson
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/ad-copy-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  canal: anuncio
+  status: completo
+  origem_designacao: 'video/hook: mesmo dono de video-hook (frank-kern), VSL por jon-benson'
+- id: email-sequence
+  nome: Sequência de e-mails (nurture)
+  comando: '*email-sequence'
+  task: tasks/criacao/create-email-sequence.md
+  template: templates/email-sequence-tmpl.md
+  padrao: null
+  copywriter_primario: andre-chaperon
+  copywriter_alternativo: ben-settle
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/email-marketing-continuo.md
+  checklist: checklists/email-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  - quente
+  canal: email
+  status: completo
+- id: daily-email
+  nome: E-mail diário (infotainment)
+  comando: null
+  task: tasks/criacao/create-daily-email.md
+  template: templates/daily-email-tmpl.yaml
+  padrao: null
+  copywriter_primario: ben-settle
+  copywriter_alternativo: andre-chaperon
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/email-marketing-continuo.md
+  checklist: checklists/daily-email-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - morno
+  - quente
+  canal: email
+  status: completo
+- id: soap-opera-sequence
+  nome: Soap Opera Sequence
+  comando: null
+  task: tasks/criacao/create-soap-opera-sequence.md
+  template: templates/soap-opera-tmpl.yaml
+  padrao: null
+  copywriter_primario: andre-chaperon
+  copywriter_alternativo: ben-settle
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/email-marketing-continuo.md
+  checklist: checklists/soap-opera-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: email
+  status: completo
+- id: cold-email
+  nome: Cold e-mail (prospecção)
+  comando: null
+  task: tasks/criacao/create-cold-email.md
+  template: null
+  padrao: null
+  copywriter_primario: ben-settle
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/cold-email-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  canal: email
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: newsletter
+  nome: Newsletter
+  comando: null
+  task: tasks/criacao/create-newsletter.md
+  template: null
+  padrao: null
+  copywriter_primario: ben-settle
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: workflows/email-marketing-continuo.md
+  checklist: checklists/email-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - morno
+  - quente
+  canal: email
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: abandoned-cart
+  nome: Sequência de carrinho abandonado
+  comando: null
+  task: tasks/criacao/create-abandoned-cart.md
+  template: templates/cart-abandonment-sequence-tmpl.md
+  padrao: null
+  copywriter_primario: andre-chaperon
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/email-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - quente
+  canal: email
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: ghosted-lead-recovery
+  nome: Recuperação de lead que sumiu
+  comando: null
+  task: tasks/criacao/create-ghosted-lead-recovery.md
+  template: null
+  padrao: null
+  copywriter_primario: ben-settle
+  copywriter_alternativo: andre-chaperon
+  revisores:
+  - joe-sugarman
+  workflow: workflows/wf-11-ghosted-recovery.yaml
+  checklist: checklists/email-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - morno
+  - quente
+  canal: email
+  status: completo
+  origem_designacao: 'email de reativacao: mesmo dono de cold-email/newsletter'
+- id: pre-call-hammer-sequence
+  nome: Sequência pré-call (hammer)
+  comando: null
+  task: tasks/criacao/create-pre-call-hammer-sequence.md
+  template: templates/hammer-email-sequence-tmpl.yaml
+  padrao: null
+  copywriter_primario: andre-chaperon
+  copywriter_alternativo: ben-settle
+  revisores:
+  - joe-sugarman
+  workflow: workflows/wf-9-call-funnel-complete.yaml
+  checklist: checklists/pre-call-email-validation.md
+  faixa_preco:
+  - high-ticket
+  temperatura:
+  - morno
+  - quente
+  canal: email
+  status: completo
+  origem_designacao: executor declarado na task (cadencia de 6 emails/dia e territorio Chaperon)
+- id: launch-emails
+  nome: E-mails de lançamento
+  comando: '*launch-emails'
+  task: tasks/plf/create-launch-emails.md
+  template: templates/email-sequence-tmpl.yaml
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: frank-kern
+  revisores:
+  - robert-collier
+  - alex-hormozi
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/email-quality-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - morno
+  - quente
+  canal: email
+  status: completo
+- id: open-cart-sequence
+  nome: Sequência de Open Cart
+  comando: '*open-cart'
+  task: tasks/plf/create-open-cart-sequence.md
+  template: templates/email-sequence-tmpl.yaml
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: russell-brunson
+  revisores:
+  - robert-collier
+  - alex-hormozi
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/email-quality-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - quente
+  canal: email
+  status: completo
+- id: plc-sequence
+  nome: Sequência de PLC (Pre-Launch Content)
+  comando: '*plc-sequence'
+  task: tasks/plf/create-plc-sequence.md
+  template: null
+  padrao: data/jeff-walker-plf-extraction.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: frank-kern
+  revisores:
+  - robert-collier
+  - alex-hormozi
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - frio
+  - morno
+  canal: lancamento
+  status: completo
+- id: launch-stack
+  nome: Launch Stack (oferta + bônus + garantia)
+  comando: '*launch-stack'
+  task: tasks/plf/create-launch-stack.md
+  template: null
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: alex-hormozi
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/offer-quality-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - morno
+  - quente
+  canal: lancamento
+  status: completo
+- id: seed-launch
+  nome: Seed Launch
+  comando: '*seed-launch'
+  task: tasks/plf/create-seed-launch.md
+  template: null
+  padrao: data/jeff-walker-plf-extraction.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: frank-kern
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - quente
+  canal: lancamento
+  status: completo
+- id: jv-launch
+  nome: JV Launch (com parceiros)
+  comando: '*jv-launch'
+  task: tasks/plf/create-jv-launch.md
+  template: null
+  padrao: data/jeff-walker-plf-extraction.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: russell-brunson
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - frio
+  - morno
+  canal: lancamento
+  status: completo
+- id: live-launch
+  nome: Live Launch
+  comando: '*live-launch'
+  task: tasks/plf/create-live-launch.md
+  template: null
+  padrao: data/jeff-walker-plf-extraction.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: frank-kern
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - morno
+  - quente
+  canal: lancamento
+  status: completo
+- id: evergreen-launch
+  nome: Evergreen Launch
+  comando: '*evergreen-launch'
+  task: tasks/plf/create-evergreen-launch.md
+  template: null
+  padrao: data/jeff-walker-plf-extraction.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: frank-kern
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/wf-vsl-perpetual.yaml
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - frio
+  - morno
+  canal: lancamento
+  status: completo
+- id: preprelaunch
+  nome: Pré-pré-lançamento
+  comando: null
+  task: tasks/plf/create-preprelaunch.md
+  template: null
+  padrao: data/jeff-walker-plf-extraction.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: frank-kern
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - frio
+  canal: lancamento
+  status: completo
+- id: case-study
+  nome: Estudo de caso
+  comando: null
+  task: tasks/plf/create-case-study.md
+  template: null
+  padrao: null
+  copywriter_primario: michael-masterson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/proof-stack-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - morno
+  - quente
+  canal: lancamento
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: mental-triggers
+  nome: Mapa dos 9 gatilhos mentais da campanha
+  comando: '*mental-triggers'
+  task: tasks/plf/map-mental-triggers.md
+  template: null
+  padrao: data/mental-trigger-reference.md
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: workflows/lancamento-completo.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: lancamento
+  status: completo
+- id: paid-traffic-plan
+  nome: Plano de tráfego pago para lançamento
+  comando: '*paid-traffic'
+  task: tasks/plf/plan-paid-traffic.md
+  template: null
+  padrao: null
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: jeff-walker
+  revisores:
+  - claude-hopkins
+  workflow: workflows/wf-2-paid-traffic.yaml
+  checklist: checklists/ad-copy-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  canal: lancamento
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: diagnose-failed-launch
+  nome: Diagnóstico de lançamento que falhou
+  comando: '*diagnose-launch'
+  task: tasks/plf/diagnose-failed-launch.md
+  template: null
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: claude-hopkins
+  revisores:
+  - eugene-schwartz
+  workflow: workflows/otimizacao-funil.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: lancamento
+  status: completo
+- id: evaluate-cpl
+  nome: Avaliação de CPLs
+  comando: '*evaluate-cpls'
+  task: tasks/plf/evaluate-cpl.md
+  template: null
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: null
+  revisores:
+  - claude-hopkins
+  workflow: workflows/wf-evaluate-cpls-batch.yaml
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: lancamento
+  status: completo
+- id: webinar-script
+  nome: Script de webinar
+  comando: '*webinar'
+  task: tasks/vendas/create-webinar-script.md
+  template: null
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: russell-brunson
+  revisores:
+  - eugene-schwartz
+  - todd-brown
+  - joe-sugarman
+  workflow: workflows/funil-sala-secreta.md
+  checklist: checklists/cold-vs-warm-webinar-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - morno
+  - quente
+  canal: webinar
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: cold-webinar-script
+  nome: Script de webinar para público frio
+  comando: null
+  task: tasks/vendas/create-cold-webinar-script.md
+  template: templates/cold-webinar-script-tmpl.yaml
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: russell-brunson
+  revisores:
+  - eugene-schwartz
+  - todd-brown
+  - joe-sugarman
+  workflow: workflows/wf-10-webinar-cold-weekly.yaml
+  checklist: checklists/cold-vs-warm-webinar-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - frio
+  canal: webinar
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: warm-webinar-script
+  nome: Script de webinar para público morno
+  comando: null
+  task: tasks/vendas/create-warm-webinar-script.md
+  template: templates/warm-webinar-script-tmpl.md
+  padrao: null
+  copywriter_primario: jeff-walker
+  copywriter_alternativo: russell-brunson
+  revisores:
+  - eugene-schwartz
+  - todd-brown
+  - joe-sugarman
+  workflow: workflows/funil-sala-secreta.md
+  checklist: checklists/cold-vs-warm-webinar-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - morno
+  - quente
+  canal: webinar
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: call-script
+  nome: Script de call de vendas
+  comando: null
+  task: tasks/vendas/create-call-script.md
+  template: templates/call-script-tmpl.md
+  padrao: null
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: alex-hormozi
+  revisores:
+  - eugene-schwartz
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/high-ticket-sales.md
+  checklist: checklists/call-script-quality.md
+  faixa_preco:
+  - high-ticket
+  temperatura:
+  - morno
+  - quente
+  canal: vendas
+  status: completo
+- id: close-script
+  nome: Script de fechamento
+  comando: null
+  task: tasks/vendas/create-close-script.md
+  template: templates/close-script-tmpl.md
+  padrao: data/future-regret-close-technique.md
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: alex-hormozi
+  revisores:
+  - eugene-schwartz
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/high-ticket-sales.md
+  checklist: checklists/close-script-quality.md
+  faixa_preco:
+  - high-ticket
+  temperatura:
+  - quente
+  canal: vendas
+  status: completo
+- id: organic-content
+  nome: Conteúdo orgânico (social / creator)
+  comando: null
+  task: tasks/criacao/create-organic-content.md
+  template: templates/organic-content-tmpl.md
+  padrao: null
+  copywriter_primario: dan-koe
+  copywriter_alternativo: gary-halbert
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/conteudo-organico-diario.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  - quente
+  canal: social
+  status: completo
+- id: magalog
+  nome: Magalog / direct mail
+  comando: null
+  task: tasks/criacao/create-magalog.md
+  template: templates/magalog-tmpl.yaml
+  padrao: null
+  copywriter_primario: jim-rutz
+  copywriter_alternativo: clayton-makepeace
+  revisores:
+  - claude-hopkins
+  - eugene-schwartz
+  - dan-kennedy
+  - joe-sugarman
+  workflow: workflows/wf-7-direct-mail.yaml
+  checklist: checklists/magalog-checklist.md
+  faixa_preco:
+  - medio
+  - alto
+  temperatura:
+  - frio
+  - morno
+  canal: direct-mail
+  status: completo
+- id: headlines
+  nome: Headlines e hooks
+  comando: '*headlines'
+  task: tasks/criacao/create-headlines.md
+  template: templates/headline-tmpl.md
+  padrao: data/swipe-file-headlines.md
+  copywriter_primario: gary-bencivenga
+  copywriter_alternativo: gary-halbert
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/headline-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: arsenal
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: bullets
+  nome: Bullets / fascinations
+  comando: '*bullets'
+  task: tasks/criacao/create-bullets.md
+  template: templates/bullets-tmpl.md
+  padrao: data/swipe-file-bullets.md
+  copywriter_primario: parris-lampropoulos
+  copywriter_alternativo: gary-bencivenga
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/bullet-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: arsenal
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: narrativa-evaldo
+  nome: Narrativa (Great Lead, método Evaldo)
+  comando: null
+  task: tasks/criacao/build-narrative-evaldo.md
+  template: null
+  padrao: data/evaldo-10-perguntas.yaml
+  copywriter_primario: evaldo-albuquerque
+  copywriter_alternativo: null
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - frio
+  - morno
+  canal: arsenal
+  status: completo
+- id: big-idea
+  nome: Big Idea
+  comando: null
+  task: tasks/estrategia/create-big-idea.md
+  template: null
+  padrao: null
+  copywriter_primario: gary-bencivenga
+  copywriter_alternativo: david-ogilvy
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: workflows/operacao-completa.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+- id: unique-mechanism
+  nome: Mecanismo único
+  comando: null
+  task: tasks/estrategia/create-unique-mechanism.md
+  template: null
+  padrao: null
+  copywriter_primario: todd-brown
+  copywriter_alternativo: null
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/operacao-completa.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+- id: offer
+  nome: Engenharia de oferta (Grand Slam Offer)
+  comando: null
+  task: tasks/estrategia/create-offer.md
+  template: null
+  padrao: null
+  copywriter_primario: alex-hormozi
+  copywriter_alternativo: todd-brown
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/operacao-completa.md
+  checklist: checklists/offer-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+- id: evaluate-offer
+  nome: Avaliação de oferta existente
+  comando: null
+  task: tasks/estrategia/evaluate-offer.md
+  template: null
+  padrao: null
+  copywriter_primario: alex-hormozi
+  copywriter_alternativo: todd-brown
+  revisores:
+  - eugene-schwartz
+  workflow: workflows/otimizacao-funil.md
+  checklist: checklists/offer-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+- id: proof-stack
+  nome: Proof stack (pilha de provas)
+  comando: null
+  task: tasks/estrategia/create-proof-stack.md
+  template: null
+  padrao: data/makepeace-13-proof-types.yaml
+  copywriter_primario: clayton-makepeace
+  copywriter_alternativo: null
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/proof-stack-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+- id: objection-algorithms
+  nome: Algoritmos de objeção
+  comando: null
+  task: tasks/estrategia/create-objection-algorithms.md
+  template: templates/objection-algorithms-tmpl.yaml
+  padrao: null
+  copywriter_primario: gary-bencivenga
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: decision-matrix
+  nome: Matriz de decisão
+  comando: null
+  task: tasks/estrategia/create-decision-matrix.md
+  template: null
+  padrao: data/arvore-decisao.md
+  copywriter_primario: copy-chief
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/decision-matrix-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: rmbc-method
+  nome: Brief RMBC (Research, Mechanism, Brief, Copy)
+  comando: null
+  task: tasks/estrategia/rmbc-method.md
+  template: templates/rmbc-brief-tmpl.yaml
+  padrao: null
+  copywriter_primario: stefan-georgi
+  copywriter_alternativo: null
+  revisores:
+  - claude-hopkins
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/rmbc-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: estrategia
+  status: completo
+- id: brand-dna
+  nome: Mapa do Domínio da marca (brand DNA)
+  comando: '*brand-dna'
+  task: tasks/diagnostico/create-brand-dna.md
+  template: templates/communication-dna-tmpl.yaml
+  padrao: null
+  copywriter_primario: david-ogilvy
+  copywriter_alternativo: gary-bencivenga
+  revisores:
+  - robert-collier
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: diagnose-awareness
+  nome: Diagnóstico de nível de consciência
+  comando: '*diagnose-awareness'
+  task: tasks/diagnostico/diagnose-awareness.md
+  template: null
+  padrao: null
+  copywriter_primario: eugene-schwartz
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/schwartz-diagnosis-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: diagnose-sophistication
+  nome: Diagnóstico de sofisticação de mercado
+  comando: '*diagnose-sophistication'
+  task: tasks/diagnostico/diagnose-sophistication.md
+  template: null
+  padrao: null
+  copywriter_primario: eugene-schwartz
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/schwartz-diagnosis-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: diagnose-avatar
+  nome: Diagnóstico de avatar
+  comando: null
+  task: tasks/diagnostico/diagnose-avatar.md
+  template: templates/avatar-research-template.md
+  padrao: null
+  copywriter_primario: dan-kennedy
+  copywriter_alternativo: null
+  revisores:
+  - eugene-schwartz
+  workflow: null
+  checklist: checklists/avatar-research-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: analyze-mental-conversation
+  nome: Análise da conversa mental do prospect
+  comando: null
+  task: tasks/diagnostico/analyze-mental-conversation.md
+  template: null
+  padrao: null
+  copywriter_primario: robert-collier
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/collier-letter-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: map-6-primary-motives
+  nome: Mapa dos 6 motivos primários
+  comando: null
+  task: tasks/diagnostico/map-6-primary-motives.md
+  template: null
+  padrao: data/masterson-core-emotional-complex.yaml
+  copywriter_primario: michael-masterson
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: select-lead-type
+  nome: Seleção do tipo de lead (6 lead types)
+  comando: null
+  task: tasks/diagnostico/select-lead-type.md
+  template: null
+  padrao: data/masterson-6-lead-types.yaml
+  copywriter_primario: michael-masterson
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: diagnostico
+  status: completo
+- id: audit-copy
+  nome: Auditoria científica de copy
+  comando: '*audit-copy'
+  task: tasks/otimizacao/audit-copy.md
+  template: null
+  padrao: null
+  copywriter_primario: claude-hopkins
+  copywriter_alternativo: null
+  revisores:
+  - eugene-schwartz
+  - alex-hormozi
+  - todd-brown
+  - gary-bencivenga
+  - joe-sugarman
+  workflow: workflows/otimizacao-funil.md
+  checklist: checklists/hopkins-audit-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: audit-landing-page
+  nome: Auditoria de landing page
+  comando: null
+  task: tasks/otimizacao/audit-landing-page.md
+  template: null
+  padrao: null
+  copywriter_primario: claude-hopkins
+  copywriter_alternativo: null
+  revisores:
+  - eugene-schwartz
+  - joe-sugarman
+  workflow: workflows/otimizacao-funil.md
+  checklist: checklists/landing-page-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: setup-split-test
+  nome: Setup de split test
+  comando: null
+  task: tasks/otimizacao/setup-split-test.md
+  template: null
+  padrao: null
+  copywriter_primario: claude-hopkins
+  copywriter_alternativo: null
+  revisores: []
+  workflow: workflows/wf-split-test-creation.md
+  checklist: checklists/hopkins-audit.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: edit-copy-halbert
+  nome: Edição de copy (fórmula Halbert)
+  comando: null
+  task: tasks/otimizacao/edit-copy-halbert.md
+  template: null
+  padrao: data/halbert-editing-formula.yaml
+  copywriter_primario: gary-halbert
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/copy-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: write-visceral-copy
+  nome: Reescrita visceral (emoção)
+  comando: null
+  task: tasks/otimizacao/write-visceral-copy.md
+  template: null
+  padrao: null
+  copywriter_primario: john-carlton
+  copywriter_alternativo: clayton-makepeace
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/visceral-copy-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: write-lampropoulos-bullets
+  nome: Bullets de control (método Lampropoulos)
+  comando: null
+  task: tasks/otimizacao/write-lampropoulos-bullets.md
+  template: templates/bullets-tmpl.md
+  padrao: data/swipe-file-bullets.md
+  copywriter_primario: parris-lampropoulos
+  copywriter_alternativo: gary-bencivenga
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/bullet-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: sugarman-check
+  nome: Checklist dos 30 gatilhos (Sugarman)
+  comando: '*sugarman-check'
+  task: tasks/otimizacao/sugarman-check.md
+  template: null
+  padrao: null
+  copywriter_primario: joe-sugarman
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/sugarman-30-triggers.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: validacao
+  status: completo
+- id: apply-sugarman-triggers
+  nome: Aplicação dos gatilhos de Sugarman na copy
+  comando: null
+  task: tasks/otimizacao/apply-sugarman-triggers.md
+  template: null
+  padrao: null
+  copywriter_primario: joe-sugarman
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/sugarman-30-triggers.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: simple-writing-audit
+  nome: Auditoria de simplicidade da escrita
+  comando: null
+  task: tasks/otimizacao/simple-writing-audit.md
+  template: null
+  padrao: null
+  copywriter_primario: john-carlton
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/carlton-simplicity-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+- id: copysearch
+  nome: Copysearch (busca em swipe)
+  comando: null
+  task: tasks/otimizacao/copysearch.md
+  template: templates/copysearch-template.md
+  padrao: data/swipe-file-headlines.md
+  copywriter_primario: copy-chief
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/copysearch-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: copy-debate
+  nome: Debate entre copywriters sobre uma peça
+  comando: null
+  task: tasks/otimizacao/copy-debate.md
+  template: templates/debate-tmpl.yaml
+  padrao: null
+  copywriter_primario: copy-chief
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/copy-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: blend
+  nome: Blend de versões de copy
+  comando: null
+  task: tasks/otimizacao/blend.md
+  template: templates/blend-tmpl.yaml
+  padrao: null
+  copywriter_primario: copy-chief
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/copy-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: otimizacao
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: validate-copy-oraculo
+  nome: Validação Oráculo Torriani (obrigatória)
+  comando: '*oraculo'
+  task: tasks/validacao/validate-copy-oraculo.md
+  template: null
+  padrao: null
+  copywriter_primario: oraculo-torriani
+  copywriter_alternativo: null
+  revisores: []
+  workflow: workflows/validacao-oraculo-torriani.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: validacao
+  status: completo
+- id: validate-copy-cub
+  nome: Validação CUB (método Masterson)
+  comando: null
+  task: tasks/validacao/validate-copy-cub.md
+  template: null
+  padrao: null
+  copywriter_primario: oraculo-torriani
+  copywriter_alternativo: michael-masterson
+  revisores: []
+  workflow: null
+  checklist: checklists/copy-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: validacao
+  status: completo
+  origem_designacao: executor declarado na task (catalogo alinhado 2026-07-31)
+- id: validate-cialdini-principles
+  nome: Validação dos 7 princípios de Cialdini
+  comando: null
+  task: tasks/validacao/validate-cialdini-principles.md
+  template: null
+  padrao: data/cialdini-7-principios.yaml
+  copywriter_primario: oraculo-torriani
+  copywriter_alternativo: null
+  revisores: []
+  workflow: null
+  checklist: checklists/copy-quality-checklist.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: validacao
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: book-funnel
+  nome: Funil de livro
+  comando: null
+  task: tasks/brunson/create-book-funnel.md
+  template: null
+  padrao: null
+  copywriter_primario: russell-brunson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: workflows/wf-book-launch.yaml
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - low
+  - medio
+  temperatura:
+  - frio
+  - morno
+  canal: funil
+  status: completo
+- id: authority-arsenal
+  nome: Arsenal de autoridade
+  comando: null
+  task: tasks/brunson/build-authority-arsenal.md
+  template: templates/authority-arsenal-tmpl.yaml
+  padrao: null
+  copywriter_primario: russell-brunson
+  copywriter_alternativo: null
+  revisores:
+  - joe-sugarman
+  workflow: null
+  checklist: checklists/proof-stack-quality.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: funil
+  status: completo
+- id: operacao-completa
+  nome: Operação completa (pipeline de 9 etapas)
+  comando: '*operacao-completa'
+  task: tasks/campaign-planning-pack.md
+  template: null
+  padrao: data/copy-operating-model.md
+  copywriter_primario: copy-chief
+  copywriter_alternativo: null
+  revisores: []
+  workflow: workflows/operacao-completa.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - qualquer
+  canal: operacao
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+- id: operacao-tatica
+  nome: Operação tática (modo rápido, público quente)
+  comando: '*operacao-tatica'
+  task: tasks/campaign-planning-pack.md
+  template: null
+  padrao: data/copy-operating-model.md
+  copywriter_primario: copy-chief
+  copywriter_alternativo: null
+  revisores: []
+  workflow: workflows/operacao-tatica.md
+  checklist: checklists/oraculo-torriani.md
+  faixa_preco:
+  - qualquer
+  temperatura:
+  - quente
+  canal: operacao
+  status: completo
+  origem_designacao: executor declarado na task (2026-07-31)
+aprendidos: []

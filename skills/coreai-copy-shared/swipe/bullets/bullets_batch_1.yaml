@@ -1,0 +1,640 @@
+# Fascination Bullets - Batch 1
+# 55 bullets categorizadas por tipo com fonte
+# Created: 2026-03-09
+# Category: bullets
+
+batch_info:
+  batch_number: 1
+  extraction_date: "2026-03-09"
+  source_type: "swipe_file_collection"
+  total_entries: 55
+
+entries:
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # BLIND BULLETS (12)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "bl_blind_001"
+    text: "The one food you should NEVER eat on an airplane"
+    type: "blind"
+    source:
+      author: "Gary Bencivenga"
+      work: "Boardroom Reports"
+    technique: ["curiosity_gap", "prohibition", "travel"]
+    score: 5
+    tags: ["health", "travel", "prohibition"]
+    analysis: "'Never' + viagem = algo que o leitor faz regularmente. Completamente oculto."
+
+  - id: "bl_blind_002"
+    text: "The one stock Warren Buffett says he'll never sell — no matter what happens to the market"
+    type: "blind"
+    source:
+      author: "Template Agora Financial"
+      work: "Financial newsletter"
+    technique: ["authority", "curiosity_gap", "absolute"]
+    score: 4
+    tags: ["financial", "investing", "authority"]
+    analysis: "Autoridade máxima (Buffett) + 'never' = convicção absoluta. Qual ação?"
+
+  - id: "bl_blind_003"
+    text: "A common household item that emergency room doctors keep in their own medicine cabinets"
+    type: "blind"
+    source:
+      author: "Mel Martin"
+      work: "Boardroom"
+    technique: ["authority_borrow", "insider", "accessibility"]
+    score: 4
+    tags: ["health", "insider", "authority"]
+    analysis: "Médicos como insiders + item comum = acessível e misterioso."
+
+  - id: "bl_blind_004"
+    text: "The 3-letter word that makes any headline 2x more clickable"
+    type: "blind"
+    source:
+      author: "Template de copywriting"
+      work: "Copywriting courses"
+    technique: ["specificity", "meta", "simplicity"]
+    score: 3
+    tags: ["copywriting", "meta", "specificity"]
+    analysis: "'3-letter word' = ultra-específico. Meta-bullet (bullet sobre bullets)."
+
+  - id: "bl_blind_005"
+    text: "The day of the week when houses sell for the most money"
+    type: "blind"
+    source:
+      author: "Template imobiliario"
+      work: "Real estate marketing"
+    technique: ["specificity", "timing", "financial"]
+    score: 3
+    tags: ["real_estate", "timing", "money"]
+    analysis: "Dado quantificável que qualquer vendedor quer saber."
+
+  - id: "bl_blind_006"
+    text: "The single worst piece of financial advice your parents gave you"
+    type: "blind"
+    source:
+      author: "Ramit Sethi influence"
+      work: "Personal finance"
+    technique: ["contrarian", "generational", "emotional"]
+    score: 4
+    tags: ["financial", "generational", "contrarian"]
+    analysis: "Toca em relação parental + questiona sabedoria herdada."
+
+  - id: "bl_blind_007"
+    text: "O país mais barato da América do Sul para se aposentar com qualidade de vida europeia"
+    type: "blind"
+    source:
+      author: "Template financeiro BR"
+      work: "Planejamento de aposentadoria"
+    technique: ["curiosity_gap", "aspiration", "geographic"]
+    score: 3
+    tags: ["financial", "retirement", "portuguese", "geographic"]
+    analysis: "Contexto latino-americano. Qualidade europeia como benchmark aspiracional."
+
+  - id: "bl_blind_008"
+    text: "The appliance in your kitchen that uses more electricity than your air conditioner"
+    type: "blind"
+    source:
+      author: "Template de economia doméstica"
+      work: "Home savings content"
+    technique: ["surprise", "proximity", "financial"]
+    score: 3
+    tags: ["home", "savings", "surprise"]
+    analysis: "Inversão: item menor usando mais que o maior. Verificável."
+
+  - id: "bl_blind_009"
+    text: "The hiring red flag that predicts an employee will quit within 90 days"
+    type: "blind"
+    source:
+      author: "Template HR/B2B"
+      work: "HR consulting"
+    technique: ["prediction", "specificity", "business"]
+    score: 4
+    tags: ["business", "HR", "prediction"]
+    analysis: "Especificidade (90 dias) + utilidade direta para gestores."
+
+  - id: "bl_blind_010"
+    text: "The breakfast habit of people who live past 100"
+    type: "blind"
+    source:
+      author: "Inspirado em Blue Zones"
+      work: "Longevity content"
+    technique: ["authority_from_results", "aspiration", "morning"]
+    score: 4
+    tags: ["health", "longevity", "habits"]
+    analysis: "Centenários como proof. Hábito matinal = acionável imediatamente."
+
+  - id: "bl_blind_011"
+    text: "The body language cue that tells you someone is about to lie"
+    type: "blind"
+    source:
+      author: "Template de psicologia"
+      work: "Communication/psychology"
+    technique: ["insider_knowledge", "social", "detection"]
+    score: 4
+    tags: ["psychology", "body_language", "social"]
+    analysis: "Poder de detecção de mentiras = universalmente desejado."
+
+  - id: "bl_blind_012"
+    text: "A técnica de 2 minutos que vendedores da Apple usam para fechar 3x mais"
+    type: "blind"
+    source:
+      author: "Template de vendas BR"
+      work: "Sales training"
+    technique: ["authority_borrow", "timeframe", "specificity"]
+    score: 3
+    tags: ["sales", "apple", "portuguese", "technique"]
+    analysis: "Apple como autoridade + 2 minutos = rápido + 3x = resultado específico."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # IF-THEN BULLETS (10)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "bl_ifthen_001"
+    text: "If you snore, you need to read page 23 before your next doctor's appointment"
+    type: "if_then"
+    source:
+      author: "Health newsletter template"
+      work: "Sleep health"
+    technique: ["qualification", "urgency", "page_reference"]
+    score: 4
+    tags: ["health", "sleep", "snoring"]
+    analysis: "Filtro (ronca?) + urgência (antes da próxima consulta) + página."
+
+  - id: "bl_ifthen_002"
+    text: "If you have a LinkedIn profile, this one change will generate 3x more inbound leads"
+    type: "if_then"
+    source:
+      author: "Template B2B"
+      work: "LinkedIn marketing"
+    technique: ["platform_specific", "simplicity", "result"]
+    score: 3
+    tags: ["marketing", "linkedin", "leads"]
+    analysis: "Quase todos têm LinkedIn. 'One change' = fácil. '3x' = significativo."
+
+  - id: "bl_ifthen_003"
+    text: "If you're taking statins, ask your doctor about this crucial supplement (most don't mention it)"
+    type: "if_then"
+    source:
+      author: "Health newsletter"
+      work: "Bottom Line Health style"
+    technique: ["medication_specific", "authority_gap", "supplement"]
+    score: 4
+    tags: ["health", "medication", "supplement"]
+    analysis: "Filtro (toma estatinas) + suplemento crucial + gap médico."
+
+  - id: "bl_ifthen_004"
+    text: "If you spend more than 2 hours/day on email, you're losing $38,000/year in productivity"
+    type: "if_then"
+    source:
+      author: "Template de produtividade"
+      work: "Productivity tools"
+    technique: ["quantified_loss", "daily_habit", "financial"]
+    score: 4
+    tags: ["productivity", "email", "financial_loss"]
+    analysis: "Tempo (2h) → dinheiro ($38K). Conversão que choca."
+
+  - id: "bl_ifthen_005"
+    text: "If your child uses a smartphone before age 12, you need to know about this brain development study"
+    type: "if_then"
+    source:
+      author: "Template de parenting"
+      work: "Digital wellness"
+    technique: ["parental_concern", "science", "age_specific"]
+    score: 4
+    tags: ["parenting", "technology", "brain", "children"]
+    analysis: "Preocupação universal de pais modernos + ciência como autoridade."
+
+  - id: "bl_ifthen_006"
+    text: "Se você faz anúncios no Meta Ads e gasta mais de R$5k/mês, está ignorando a métrica que mais importa"
+    type: "if_then"
+    source:
+      author: "Template de tráfego pago BR"
+      work: "Paid traffic courses"
+    technique: ["qualification", "platform", "hidden_metric"]
+    score: 3
+    tags: ["marketing", "meta_ads", "portuguese", "metric"]
+    analysis: "Filtro duplo (Meta + R$5k) + métrica secreta."
+
+  - id: "bl_ifthen_007"
+    text: "If you're over 40 and don't do this one exercise, you're accelerating muscle loss by 8% per decade"
+    type: "if_then"
+    source:
+      author: "Template fitness"
+      work: "Anti-aging fitness"
+    technique: ["age_filter", "consequence", "specificity"]
+    score: 4
+    tags: ["fitness", "aging", "muscle", "exercise"]
+    analysis: "Filtro etário + consequência quantificada (8%/década) + solução simples (1 exercício)."
+
+  - id: "bl_ifthen_008"
+    text: "If you own rental property, this IRS ruling from 2023 could save you $12,000 this year"
+    type: "if_then"
+    source:
+      author: "Template de tax/real estate"
+      work: "Real estate investing"
+    technique: ["qualification", "news", "financial_benefit"]
+    score: 3
+    tags: ["real_estate", "tax", "IRS", "savings"]
+    analysis: "Filtro (imóvel alugado) + ruling recente + economia específica."
+
+  - id: "bl_ifthen_009"
+    text: "If you drink more than 2 cups of coffee per day, your sleep quality is 40% worse than you think"
+    type: "if_then"
+    source:
+      author: "Template de saúde"
+      work: "Sleep optimization"
+    technique: ["common_habit", "hidden_damage", "percentage"]
+    score: 3
+    tags: ["health", "coffee", "sleep", "hidden_damage"]
+    analysis: "Hábito massivo (café) + dano oculto quantificado."
+
+  - id: "bl_ifthen_010"
+    text: "If you've been in business for more than 3 years without a will, your family could lose everything"
+    type: "if_then"
+    source:
+      author: "Template jurídico"
+      work: "Estate planning"
+    technique: ["qualification", "fear", "family"]
+    score: 4
+    tags: ["legal", "estate", "family", "business"]
+    analysis: "Stakes máximo (família perde tudo) + situação comum (sem testamento)."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # QUESTION BULLETS (8)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "bl_question_001"
+    text: "Do you know which of your daily medications should NEVER be taken together?"
+    type: "question"
+    source:
+      author: "Bottom Line Health"
+      work: "Health newsletter"
+    technique: ["self_preservation", "common_danger"]
+    score: 5
+    tags: ["health", "medication", "danger"]
+    analysis: "Medo + autodiagnóstico. Quem toma múltiplos remédios PRECISA saber."
+
+  - id: "bl_question_002"
+    text: "Are you one of the 43% of small business owners who are overpaying for payment processing?"
+    type: "question"
+    source:
+      author: "Template B2B"
+      work: "Payment processing"
+    technique: ["percentage", "financial_loss", "common_problem"]
+    score: 3
+    tags: ["business", "payments", "financial_loss"]
+    analysis: "43% = quase metade. O leitor se pergunta 'sou eu?'"
+
+  - id: "bl_question_003"
+    text: "Can you spot the fake smile? (Psychologists say 93% of people can't)"
+    type: "question"
+    source:
+      author: "Template de psicologia"
+      work: "Psychology content"
+    technique: ["challenge", "gamification", "social"]
+    score: 3
+    tags: ["psychology", "social", "challenge"]
+    analysis: "Desafio + dado (93% não consegue) = competição interna."
+
+  - id: "bl_question_004"
+    text: "What would you do differently if you knew you only had 10 working years left?"
+    type: "question"
+    source:
+      author: "Template filosófico"
+      work: "Career planning"
+    technique: ["existential", "perspective", "planning"]
+    score: 4
+    tags: ["career", "existential", "planning"]
+    analysis: "Reflexão existencial que força reavaliação de prioridades."
+
+  - id: "bl_question_005"
+    text: "Você sabe quanto do seu faturamento está sendo engolido por processos ineficientes?"
+    type: "question"
+    source:
+      author: "Template de consultoria BR"
+      work: "Business consulting"
+    technique: ["hidden_cost", "self_diagnosis"]
+    score: 3
+    tags: ["business", "portuguese", "efficiency"]
+    analysis: "'Engolido' = metáfora vívida. Custo invisível."
+
+  - id: "bl_question_006"
+    text: "Is your pillow giving you neck pain? Take this 10-second test tonight."
+    type: "question"
+    source:
+      author: "Template de saúde/sono"
+      work: "Sleep products"
+    technique: ["immediate_test", "common_item", "pain"]
+    score: 3
+    tags: ["health", "sleep", "pain", "test"]
+    analysis: "Teste imediato (10 seg) + item que todos usam (travesseiro)."
+
+  - id: "bl_question_007"
+    text: "How many of these 12 cancer warning signs can you identify?"
+    type: "question"
+    source:
+      author: "Template de saúde"
+      work: "Cancer awareness"
+    technique: ["self_test", "fear", "listicle"]
+    score: 4
+    tags: ["health", "cancer", "self_test"]
+    analysis: "Auto-teste com stakes máximo (câncer). 12 = abrangente."
+
+  - id: "bl_question_008"
+    text: "Are you accidentally teaching your children to be financially illiterate?"
+    type: "question"
+    source:
+      author: "Template de educação financeira"
+      work: "Family finance"
+    technique: ["parental_guilt", "accidental", "financial"]
+    score: 4
+    tags: ["parenting", "finance", "education"]
+    analysis: "'Accidentally' remove culpa direta mas cria urgência de correção."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # NAKED BULLETS (10)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "bl_naked_001"
+    text: "How to remove any stain from any fabric using 3 ingredients you already have"
+    type: "naked"
+    source:
+      author: "Template de utilidade doméstica"
+      work: "Home tips"
+    technique: ["universality", "accessibility", "how_to"]
+    score: 3
+    tags: ["home", "cleaning", "utility"]
+    analysis: "'Any stain, any fabric' = universal. '3 ingredients you have' = zero custo."
+
+  - id: "bl_naked_002"
+    text: "The exact words to say when someone asks for a discount"
+    type: "naked"
+    source:
+      author: "Template de vendas"
+      work: "Sales training"
+    technique: ["script", "common_situation", "specificity"]
+    score: 4
+    tags: ["sales", "pricing", "script"]
+    analysis: "'Exact words' = copiável palavra por palavra."
+
+  - id: "bl_naked_003"
+    text: "5 free apps that replace $200/month in business software"
+    type: "naked"
+    source:
+      author: "Template de produtividade"
+      work: "Business tools"
+    technique: ["savings", "free", "listicle"]
+    score: 3
+    tags: ["technology", "savings", "apps"]
+    analysis: "Free vs $200/mês = economia massiva e imediata."
+
+  - id: "bl_naked_004"
+    text: "Como escrever uma bio de Instagram que converte visitantes em seguidores (template incluso)"
+    type: "naked"
+    source:
+      author: "Template de social media BR"
+      work: "Instagram marketing"
+    technique: ["how_to", "template", "specific_platform"]
+    score: 3
+    tags: ["marketing", "instagram", "portuguese", "template"]
+    analysis: "'Template incluso' = valor tangível imediato."
+
+  - id: "bl_naked_005"
+    text: "The 3 stretches that prevent 90% of running injuries"
+    type: "naked"
+    source:
+      author: "Template de fitness"
+      work: "Running/fitness"
+    technique: ["prevention", "specificity", "simplicity"]
+    score: 3
+    tags: ["fitness", "running", "prevention"]
+    analysis: "3 alongamentos = simples. 90% = quase todas as lesões."
+
+  - id: "bl_naked_006"
+    text: "How to say 'no' to your boss without damaging the relationship"
+    type: "naked"
+    source:
+      author: "Template de carreira"
+      work: "Career development"
+    technique: ["difficult_situation", "relationship", "how_to"]
+    score: 3
+    tags: ["career", "communication", "relationships"]
+    analysis: "Situação que todos enfrentam. Resultado duplo (dizer não + manter relação)."
+
+  - id: "bl_naked_007"
+    text: "7 questions to ask a financial advisor before hiring one"
+    type: "naked"
+    source:
+      author: "Template financeiro"
+      work: "Financial planning"
+    technique: ["protection", "checklist", "hiring"]
+    score: 3
+    tags: ["financial", "checklist", "protection"]
+    analysis: "Proteção do consumidor. Útil e acionável."
+
+  - id: "bl_naked_008"
+    text: "How to get a doctor's appointment within 24 hours (even if they're 'fully booked')"
+    type: "naked"
+    source:
+      author: "Template de saúde"
+      work: "Healthcare tips"
+    technique: ["insider_trick", "timeframe", "common_frustration"]
+    score: 4
+    tags: ["health", "insider", "hack"]
+    analysis: "Frustração universal (agenda lotada) + solução secreta."
+
+  - id: "bl_naked_009"
+    text: "The 2-sentence email that re-engages cold leads"
+    type: "naked"
+    source:
+      author: "Template de vendas"
+      work: "Sales/email marketing"
+    technique: ["brevity", "template", "reactivation"]
+    score: 4
+    tags: ["sales", "email", "leads", "template"]
+    analysis: "'2-sentence' = extremamente curto. Resultado = leads reativados."
+
+  - id: "bl_naked_010"
+    text: "Como precificar seus serviços para faturar R$30k/mês trabalhando com apenas 5 clientes"
+    type: "naked"
+    source:
+      author: "Template de freelancing BR"
+      work: "Freelancing/consulting"
+    technique: ["specificity", "lifestyle", "pricing"]
+    score: 4
+    tags: ["business", "pricing", "portuguese", "freelancing"]
+    analysis: "R$30k com 5 clientes = R$6k/cliente. Modelo claro e aspiracional."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # CLOTHED BULLETS (8)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "bl_clothed_001"
+    text: "A Yale study found that people who read books live 23 months longer than non-readers — but only if they read THIS type of book"
+    type: "clothed"
+    source:
+      author: "Template de educação"
+      work: "Book/reading promotion"
+    technique: ["authority", "partial_reveal", "conditional"]
+    score: 4
+    tags: ["health", "reading", "longevity", "yale"]
+    analysis: "Revela o estudo (Yale, 23 meses) mas oculta o TIPO de livro."
+
+  - id: "bl_clothed_002"
+    text: "Jeff Bezos banned PowerPoint in Amazon meetings — the tool he replaced it with increased decision quality by 70%"
+    type: "clothed"
+    source:
+      author: "Template de business/produtividade"
+      work: "Business content"
+    technique: ["celebrity_authority", "partial_reveal", "specificity"]
+    score: 4
+    tags: ["business", "productivity", "amazon", "meetings"]
+    analysis: "Revela QUEM é o resultado (70%) mas oculta a ferramenta substituta."
+
+  - id: "bl_clothed_003"
+    text: "The exercise that Navy SEALs do every morning takes only 4 minutes — and it's NOT push-ups, sit-ups, or running"
+    type: "clothed"
+    source:
+      author: "Template de fitness"
+      work: "Military fitness"
+    technique: ["authority", "elimination", "timeframe"]
+    score: 4
+    tags: ["fitness", "military", "morning_routine"]
+    analysis: "Revela tempo (4 min) + quem faz (SEALs) + elimina 3 opções óbvias."
+
+  - id: "bl_clothed_004"
+    text: "Um estudo do IBGE revelou que 68% dos brasileiros cometem esse erro financeiro todo mês — que custa em média R$347 por família"
+    type: "clothed"
+    source:
+      author: "Template financeiro BR"
+      work: "Educação financeira"
+    technique: ["authority_local", "percentage", "financial_cost"]
+    score: 4
+    tags: ["financial", "portuguese", "IBGE", "error"]
+    analysis: "Autoridade BR (IBGE) + erro oculto + custo mensal específico."
+
+  - id: "bl_clothed_005"
+    text: "The CEO of Patagonia works 35 hours/week and surfs every afternoon. His 'lazy' management style grew revenue to $1.5 billion"
+    type: "clothed"
+    source:
+      author: "Template de lifestyle business"
+      work: "Leadership content"
+    technique: ["celebrity_proof", "paradox", "lifestyle"]
+    score: 4
+    tags: ["business", "leadership", "lifestyle", "patagonia"]
+    analysis: "Paradoxo: 'preguiçoso' + $1.5B. Revela resultado mas oculta o estilo de gestão."
+
+  - id: "bl_clothed_006"
+    text: "A Harvard Business School study tracked 1,000 graduates for 20 years — the ones who did THIS one thing earned 10x more than the rest"
+    type: "clothed"
+    source:
+      author: "Template de educação/negócios"
+      work: "Goal-setting content"
+    technique: ["longitudinal_study", "authority", "multiplicador"]
+    score: 4
+    tags: ["business", "education", "harvard", "success"]
+    analysis: "20 anos de tracking + Harvard + 10x. Oculta 'THIS one thing'."
+
+  - id: "bl_clothed_007"
+    text: "Japanese centenarians eat this vegetable 5x per week — it costs less than R$3 at any feira"
+    type: "clothed"
+    source:
+      author: "Template de longevidade"
+      work: "Health/longevity"
+    technique: ["geographic_proof", "accessibility", "frequency"]
+    score: 3
+    tags: ["health", "longevity", "japan", "portuguese"]
+    analysis: "Centenários japoneses como prova + acessível (R$3 na feira). Contextualizado BR."
+
+  - id: "bl_clothed_008"
+    text: "Apple charges $999 for its monitor stand. The alternative I found costs $12 and works better — it's not from Amazon"
+    type: "clothed"
+    source:
+      author: "Template de tech deals"
+      work: "Tech reviews"
+    technique: ["price_contrast", "insider", "elimination"]
+    score: 3
+    tags: ["technology", "savings", "insider"]
+    analysis: "$999 vs $12 = contraste absurdo. 'Not from Amazon' elimina busca óbvia."
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # CONTRARIAN BULLETS (7)
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  - id: "bl_contrarian_001"
+    text: "Why flossing may be a waste of time (what a former ADA president now recommends instead)"
+    type: "contrarian"
+    source:
+      author: "Template de saúde contrarian"
+      work: "Health content"
+    technique: ["sacred_cow", "authority_reversal"]
+    score: 4
+    tags: ["health", "dental", "contrarian"]
+    analysis: "Fio dental = conselho sagrado. 'Former ADA president' = insider que mudou de opinião."
+
+  - id: "bl_contrarian_002"
+    text: "The reason you should STOP paying extra on your mortgage (your banker won't tell you why)"
+    type: "contrarian"
+    source:
+      author: "Template financeiro"
+      work: "Personal finance"
+    technique: ["anti_conventional", "authority_gap"]
+    score: 4
+    tags: ["financial", "mortgage", "contrarian"]
+    analysis: "Pagar a mais no financiamento = virtude. Parar = heresia que exige explicação."
+
+  - id: "bl_contrarian_003"
+    text: "Why 'eating breakfast' might be the worst thing you do for your metabolism"
+    type: "contrarian"
+    source:
+      author: "Template de jejum intermitente"
+      work: "Health/fasting content"
+    technique: ["sacred_cow", "metabolism", "paradox"]
+    score: 4
+    tags: ["health", "breakfast", "fasting", "contrarian"]
+    analysis: "'Refeição mais importante do dia' = crença de décadas. Atacar = curiosidade máxima."
+
+  - id: "bl_contrarian_004"
+    text: "Por que fazer networking é a pior forma de conseguir clientes (e o que funciona 10x melhor)"
+    type: "contrarian"
+    source:
+      author: "Template de negócios BR"
+      work: "Business development"
+    technique: ["anti_conventional", "multiplier", "alternative"]
+    score: 3
+    tags: ["business", "networking", "portuguese", "contrarian"]
+    analysis: "Networking = atividade sagrada de negócios. 'Pior forma' + alternativa 10x."
+
+  - id: "bl_contrarian_005"
+    text: "Why the 10,000-step goal is based on a marketing campaign, not science"
+    type: "contrarian"
+    source:
+      author: "Template de saúde/ciência"
+      work: "Fitness content"
+    technique: ["myth_busting", "origin_reveal"]
+    score: 4
+    tags: ["health", "fitness", "myth", "science"]
+    analysis: "10,000 passos = benchmark universal. Revelar origem comercial = chocante."
+
+  - id: "bl_contrarian_006"
+    text: "The surprising reason introverts make better salespeople than extroverts"
+    type: "contrarian"
+    source:
+      author: "Inspirado em Daniel Pink (To Sell is Human)"
+      work: "Sales content"
+    technique: ["stereotype_reversal", "research"]
+    score: 4
+    tags: ["sales", "personality", "introvert", "contrarian"]
+    analysis: "Inversão de estereótipo fundamental em vendas."
+
+  - id: "bl_contrarian_007"
+    text: "Why raising your prices will actually get you MORE clients, not fewer"
+    type: "contrarian"
+    source:
+      author: "Template de pricing"
+      work: "Business coaching"
+    technique: ["pricing_paradox", "counterintuitive"]
+    score: 3
+    tags: ["business", "pricing", "contrarian"]
+    analysis: "Lógica invertida: mais caro = mais clientes. Funciona por posicionamento."

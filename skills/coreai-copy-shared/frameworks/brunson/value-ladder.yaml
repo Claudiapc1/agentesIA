@@ -1,0 +1,52 @@
+# Value Ladder - Russell Brunson
+# Source: DotCom Secrets
+# Category: business_architecture
+
+name: "Value Ladder"
+version: "1.0"
+source: "Russell Brunson - DotCom Secrets"
+category: "business_architecture"
+command: "*value-ladder"
+
+description: |
+  Estrutura que guia clientes de ofertas de baixo valor para alto valor.
+  O livro esta no FRONT-END - e a porta de entrada para toda a escada.
+  Break even no front-end, lucro no back-end.
+
+levels:
+  bait:
+    name: "Isca"
+    price: "Gratis"
+    purpose: "Capturar lead"
+    examples: ["Lead magnet", "PDF", "Video gratuito", "Quiz"]
+
+  front_end:
+    name: "Front-End"
+    price: "$7-$47 / R$29-R$147"
+    purpose: "Converter lead em cliente (break-even)"
+    examples: ["Livro + frete", "Mini-curso", "Template pack"]
+
+  middle:
+    name: "Produto Principal"
+    price: "$97-$497 / R$297-R$1497"
+    purpose: "Lucro inicial"
+    examples: ["Curso online", "Workshop", "Membership"]
+
+  back_end:
+    name: "Back-End"
+    price: "$997-$5000 / R$2997-R$15000"
+    purpose: "Lucro significativo"
+    examples: ["Coaching grupo", "Mastermind", "Programa avancado"]
+
+  peak:
+    name: "Topo"
+    price: "$10K+ / R$30K+"
+    purpose: "Maximo valor"
+    examples: ["Coaching 1:1", "Done-for-you", "Partnership"]
+
+key_principle: |
+  O objetivo do front-end NAO e lucrar.
+  E ADQUIRIR o cliente.
+  O lucro real vem dos upsells e do back-end.
+
+when_to_use: "Planejamento de qualquer negocio digital. Defina os niveis antes de criar produtos."

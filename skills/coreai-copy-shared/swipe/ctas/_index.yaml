@@ -1,0 +1,18 @@
+# Calls to Action (CTAs)
+# Target: 100-150 entries
+# CTAs organizados por contexto (botão, parágrafo, PS, email, anúncio)
+
+category: ctas
+target_count: "100-150"
+description: "CTAs por contexto: botões, parágrafos, PS lines, emails, anúncios"
+created: 2026-03-09T00:00:00-03:00
+entries: []
+tags: []
+
+# Quality distribution (target)
+quality_distribution:
+  5_star: "10%"
+  4_star: "30%"
+  3_star: "40%"
+  2_star: "15%"
+  1_star: "5%"

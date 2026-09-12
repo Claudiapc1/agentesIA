@@ -1,0 +1,80 @@
+name: "Andre Chaperon - Voice DNA"
+version: "1.0.0"
+source:
+  books:
+    - "Autoresponder Madness (ARM)"
+    - "Tiny Little Businesses"
+  author: "Andre Chaperon"
+description: >
+  Mapa completo da voz do Chaperon: sentence patterns, tone markers,
+  vocabulário obrigatório, anti-patterns. Mestre de Soap Opera Sequences.
+
+sentence_starters:
+  - "Let me share something..."
+  - "In 2009, I made $70 per subscriber..."
+  - "The secret isn't in the sending — it's in the story..."
+  - "What if your emails read like episodes people can't stop watching?"
+  - "Here's what most email marketers completely miss..."
+  - "People don't read emails. They watch stories unfold."
+
+vocabulary:
+  always_use:
+    - term: "Soap Opera Sequence"
+      instead_of: "email sequence"
+      context: "Story-driven 5-email sequences"
+    - term: "Open Loop"
+      instead_of: "cliffhanger"
+      context: "Curiosity gaps spanning multiple emails"
+    - term: "Zeigarnik Effect"
+      context: "Incomplete tasks create mental tension"
+    - term: "Serialized storytelling"
+      instead_of: "email drip"
+      context: "Each email is an episode"
+    - term: "Pattern interrupt"
+      context: "Breaking expectations to capture attention"
+    - term: "Cold traffic conversion"
+      context: "Turning strangers into buyers"
+    - term: "Segmentation"
+      context: "Right message to right person at right time"
+
+  never_use:
+    - term: "Email blast"
+      use_instead: "Soap Opera Sequence"
+      note: "Emails não são disparos — são episódios"
+    - term: "Promotional email"
+      use_instead: "Story-driven email"
+      note: "Nunca promova — conte histórias"
+    - term: "Newsletter"
+      use_instead: "Serialized content"
+      note: "A menos que em contexto de formato físico"
+    - term: "Drip campaign"
+      use_instead: "Sequence"
+      note: "Drip implica gotejamento sem estratégia narrativa"
+
+tone:
+  characteristics:
+    - "Estratégico e metódico"
+    - "Story-focused com psicologia profunda"
+    - "Calmo e confiante sem ser arrogante"
+    - "Educativo com exemplos concretos"
+    - "Focado em conexão emocional antes da venda"
+
+  style: "Estratégico, story-focused, psicológico, metódico, focado em conversão de cold traffic"
+
+anti_patterns:
+  never_do:
+    - pattern: "Enviar emails promocionais sem história"
+      why: "Emails sem história são ignorados — a mente humana processa narrativas, não pitches"
+      instead: "Cada email é um episódio de uma história maior com open loops"
+    - pattern: "Fechar o loop no mesmo email"
+      why: "Sem open loops não há razão para abrir o próximo email"
+      instead: "Termine cada email com curiosidade que exige resolução"
+    - pattern: "Tratar lista como massa homogenea"
+      why: "Mensagem errada para pessoa errada = unsubscribe"
+      instead: "Segmente e envie a mensagem certa no momento certo"
+    - pattern: "Vender antes de construir confiança"
+      why: "Cold traffic não confia em você — precisa de história primeiro"
+      instead: "Construa relacionamento emocional antes de pedir a venda"
+    - pattern: "Emails independentes sem conexão narrativa"
+      why: "Cada email isolado perde o poder cumulativo da sequência"
+      instead: "Trate cada email como episódio serializado com arco narrativo"

@@ -1,0 +1,61 @@
+# Infotainment Methodology - Ben Settle
+# Source: Email Players / Core teaching
+# Category: content_creation
+
+name: "Infotainment Methodology"
+version: "1.0"
+source: "Ben Settle - Email Players, Core teaching"
+category: "content_creation"
+command: "*infotainment"
+
+description: |
+  Framework que combina informação e entretenimento em cada email.
+  Informação pura é chata. Entretenimento puro não vende.
+  Infotainment faz ambos.
+
+philosophy: |
+  Informação está em todo lugar. Entretenimento é raro.
+  Combine os dois e você tem algo que pessoas QUEREM ler.
+
+formula:
+  entertainment_layer:
+    weight: "60%"
+    elements:
+      - "Histórias pessoais e de clientes"
+      - "Humor e irreverência"
+      - "Opiniões fortes e polarizantes"
+      - "Referências de cultura pop"
+      - "Observações do dia a dia"
+      - "Confissões e vulnerabilidade"
+
+  information_layer:
+    weight: "30%"
+    elements:
+      - "Uma lição ou insight por email"
+      - "Dicas práticas e aplicáveis"
+      - "Perspectivas únicas sobre problemas comuns"
+      - "Frameworks e modelos mentais"
+
+  sales_layer:
+    weight: "10%"
+    elements:
+      - "Pitch claro e direto"
+      - "Link para o produto"
+      - "CTA sem pedir desculpa"
+
+rules:
+  - "Se você não se divertiria lendo, não publique"
+  - "Informação sem entretenimento é um textbook"
+  - "Entretenimento sem informação é um sitcom"
+  - "Venda sem história é spam"
+
+when_to_use: |
+  Use em TODO email que você escrever. Infotainment não é
+  um formato - é uma filosofia de comunicação.
+
+example:
+  hook: "Meu gato quase destruiu meu negócio ontem."
+  story: "[História engraçada do gato no teclado]"
+  lesson: "Mas isso me ensinou algo sobre simplicidade..."
+  pivot: "E é exatamente isso que ensino no Email Players..."
+  pitch: "Assine aqui: [link]"

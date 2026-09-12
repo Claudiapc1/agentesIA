@@ -1,0 +1,75 @@
+name: "VSL Structure (RMBC for VSLs)"
+version: "1.0"
+source: "Stefan Georgi - VSL specialization"
+description: "Estrutura de Video Sales Letter usando o método RMBC. Cada segundo deve conquistar o próximo segundo."
+
+content:
+  philosophy: |
+    VSLs (Video Sales Letters) are the bread and butter of RMBC.
+    In a VSL, you have ONE SHOT. The viewer can't skim ahead like
+    in a sales letter. Every second must earn the next second.
+
+  structure:
+    hook_section:
+      duration: "0:00-0:30"
+      purpose: "Stop the scroll, create curiosity"
+      elements:
+        - "Pattern interrupt (surprising statement/question)"
+        - "Big promise preview"
+        - "Curiosity hook"
+
+    problem_section:
+      duration: "0:30-3:00"
+      purpose: "Establish the pain and why they're stuck"
+      elements:
+        - "Identify the problem they're experiencing"
+        - "Agitate the pain (consequences, frustrations)"
+        - "Why other solutions haven't worked"
+        - "The 'real' reason behind the problem"
+
+    mechanism_section:
+      duration: "3:00-8:00"
+      purpose: "Reveal the mechanism and build belief"
+      elements:
+        - "Introduce the mechanism (what it is)"
+        - "Explain how it works (science/logic)"
+        - "Why it's different (differentiation)"
+        - "Proof it works (studies, testimonials)"
+
+    solution_section:
+      duration: "8:00-15:00"
+      purpose: "Present the product as the delivery vehicle"
+      elements:
+        - "Introduce the product"
+        - "How it activates/uses the mechanism"
+        - "Main benefits (with proof for each)"
+        - "What's included"
+
+    credibility_section:
+      duration: "15:00-20:00"
+      purpose: "Build trust and authority"
+      elements:
+        - "Creator story/credentials"
+        - "Testimonials (video if possible)"
+        - "Results proof"
+        - "Why you can trust this"
+
+    offer_section:
+      duration: "20:00-25:00"
+      purpose: "Present irresistible offer"
+      elements:
+        - "Recap what they get"
+        - "Bonuses"
+        - "Value stack"
+        - "Price reveal"
+        - "Guarantee"
+
+    close_section:
+      duration: "25:00-30:00"
+      purpose: "Drive action NOW"
+      elements:
+        - "Urgency (deadline, scarcity)"
+        - "Risk reversal"
+        - "Final benefit reminder"
+        - "Clear CTA"
+        - "What happens next"

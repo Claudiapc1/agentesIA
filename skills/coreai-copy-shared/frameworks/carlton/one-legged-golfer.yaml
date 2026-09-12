@@ -1,0 +1,57 @@
+# One-Legged Golfer Hook-Mining System - John Carlton
+# Source: John Carlton's most famous ad
+# Category: hook_discovery
+
+name: "The One-Legged Golfer Hook-Mining System"
+version: "1.0"
+source: "John Carlton - Anúncio mais famoso da carreira"
+category: "hook_discovery"
+command: "*find-hook"
+
+description: |
+  O melhor hook quase NUNCA é o que o cliente acha importante.
+  Está escondido em algum comentário casual, algum detalhe trivial.
+  Seu trabalho é ser o OUTSIDER que reconhece o ouro.
+
+origin_story: |
+  Carlton estava escrevendo um anúncio de golfe. O cliente falava
+  sem parar sobre mecânica do swing, transferência de peso, etc.
+  Então, quase como um pensamento tardio, mencionou: "Ah sim,
+  desenvolvi esse swing depois de ver um homem COM UMA PERNA SÓ
+  dar a tacada mais perfeita que já vi." Carlton quase pulou da cadeira.
+  ESSE era o hook. O headline resultante se tornou lendário.
+
+famous_headline: |
+  "Amazing Secret Discovered By One-Legged Golfer Adds 50 Yards
+  To Your Drives, Eliminates Hooks and Slices... And Can Slash
+  Up To 10 Strokes From Your Game Almost Overnight!"
+
+mining_process:
+  step_1:
+    name: "Deep Interview"
+    instruction: "Converse com o expert/dono por pelo menos UMA HORA"
+    questions:
+      - "Como você descobriu isso?"
+      - "Qual foi o momento que soube que funcionava?"
+      - "Qual o resultado mais bizarro que já viu?"
+      - "Conte sobre seu cliente mais cético que virou fã"
+      - "O que te surpreende sobre isso até hoje?"
+      - "Que detalhe você normalmente não menciona porque parece óbvio?"
+
+  step_2:
+    name: "Listen for Throwaway Lines"
+    instruction: "Preste atenção quando dizem 'ah, a propósito' ou 'isso é engraçado mas...'"
+    principle: "O hook está no disclaimer, no comentário lateral, na piada."
+
+  step_3:
+    name: "The Outsider Test"
+    instruction: "O que faria um estranho numa festa inclinar e dizer 'Espera, como assim?'"
+    criteria:
+      - "Cria curiosidade instantânea?"
+      - "É inesperado ou contra-intuitivo?"
+      - "Tem elemento visual (uma perna, 180 quilos, 3 dias)?"
+      - "Promete resultado específico e desejável?"
+
+when_to_use: |
+  Use ANTES de escrever qualquer headline ou lead.
+  O hook certo faz o copy praticamente se escrever sozinho.

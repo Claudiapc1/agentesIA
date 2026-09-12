@@ -1,0 +1,58 @@
+# 3X Personality Framework - Ben Settle
+# Source: Email Players Newsletter
+# Category: voice_development
+
+name: "3X Personality Framework"
+version: "1.0"
+source: "Ben Settle - Email Players Newsletter"
+category: "voice_development"
+command: "*3x-personality"
+
+description: |
+  Framework para amplificar sua personalidade por 3x na escrita.
+  Pessoas compram de pessoas que gostam. E ninguém gosta de
+  personalidades genéricas e filtradas.
+
+philosophy: |
+  Sua personalidade real é muito "fraca" no papel.
+  Na conversa presencial, você tem tom de voz, expressões,
+  gestos. No email, você só tem palavras.
+  Multiplique sua personalidade por 3 para compensar.
+
+amplification_areas:
+  opinions:
+    normal: "Acho que talvez isso possa funcionar..."
+    3x: "Isso funciona. Ponto. Se você discorda, bom para você."
+    principle: "Tenha opinião forte. Sem meios-termos."
+
+  humor:
+    normal: "Engraçado como as coisas funcionam..."
+    3x: "Meu contador quase teve um infarto quando viu o quanto eu faturei escrevendo emails de cama."
+    principle: "Se você é naturalmente sarcástico, seja MUITO sarcástico."
+
+  stories:
+    normal: "Algo aconteceu outro dia..."
+    3x: "Estava no mercado ontem quando uma senhora de 80 anos me ensinou a maior lição de marketing da minha vida."
+    principle: "Transforme momentos banais em histórias fascinantes."
+
+  controversy:
+    normal: "Algumas pessoas podem discordar..."
+    3x: "Se isso te ofende, unsubscribe. Sério. Eu insisto."
+    principle: "Polarize de proposito. Repila os muitos para atrair os poucos que compram."
+
+  directness:
+    normal: "Talvez você devesse considerar..."
+    3x: "Faça isso. Agora. Sem desculpas."
+    principle: "Seja direto. Sem hedge. Sem talvez."
+
+polarization_strategy:
+  principle: "Atraia fãs repelindo não-compradores"
+  how_it_works:
+    - "Tome posições fortes sobre assuntos do seu nicho"
+    - "Não tente agradar a todos"
+    - "Diga o que você realmente pensa"
+    - "Unsubscribers são lista se limpando sozinha"
+
+when_to_use: |
+  Use ao desenvolver sua voz de escrita para emails, newsletters,
+  e qualquer conteúdo onde personalidade é o diferencial.

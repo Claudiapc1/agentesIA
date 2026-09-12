@@ -1,0 +1,84 @@
+name: "Alex Hormozi - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "$100M Offers"
+    - "$100M Leads"
+    - "$100M Money Models"
+  author: "Alex Hormozi"
+description: >
+  Frases icônicas do Hormozi organizadas por categoria, com fonte e contexto de uso.
+
+offer_related:
+  - phrase: "A melhor copy do mundo não salva uma oferta ruim."
+    source: "$100M Offers"
+    context: "Prioridade da oferta sobre copy"
+  - phrase: "Faça o cliente se sentir estúpido se disser não."
+    source: "$100M Offers"
+    context: "Mantra do Grand Slam Offer"
+  - phrase: "Se você não pode aumentar o preço, você não tem uma oferta - tem uma commodity."
+    source: "$100M Offers"
+    context: "Diferenciação de oferta"
+  - phrase: "Grand Slam Offers allow you to sell in a vacuum."
+    source: "$100M Offers"
+    context: "Oferta incomparável"
+  - phrase: "Make people an offer so good they feel stupid saying no."
+    source: "$100M Offers"
+    context: "Frase principal / mantra"
+
+pricing_related:
+  - phrase: "Competir em preço é uma corrida para o fundo."
+    source: "$100M Offers"
+    context: "Anti-commodity"
+  - phrase: "Those who pay the most, pay the most attention."
+    source: "$100M Offers"
+    context: "Ciclo virtuoso de pricing"
+  - phrase: "People want to buy expensive things. They just need a reason."
+    source: "$100M Offers"
+    context: "Justificativa de premium pricing"
+  - phrase: "Getting people to buy is NOT the objective. Making money is."
+    source: "$100M Offers"
+    context: "Foco em lucro, não volume"
+
+value_related:
+  - phrase: "Valor é uma equação, não uma opinião."
+    source: "$100M Offers"
+    context: "Value Equation"
+  - phrase: "As melhores empresas focam no denominador - tornando tudo imediato e sem esforço."
+    source: "$100M Offers"
+    context: "Reduzir time/effort"
+  - phrase: "The business that provides the most value wins. Period."
+    source: "$100M Offers"
+    context: "Princípio central"
+
+market_related:
+  - phrase: "Starving Crowd > Offer Strength > Persuasion Skills"
+    source: "$100M Offers"
+    context: "Hierarquia de prioridades"
+  - phrase: "The riches are in the niches."
+    source: "$100M Offers"
+    context: "Seleção de mercado"
+  - phrase: "The degree of pain will be proportional to the price you can charge."
+    source: "$100M Offers"
+    context: "Dor = preço"
+
+success_related:
+  - phrase: "You can either be right or you can be rich."
+    source: "Alex Hormozi"
+    context: "Pragmatismo"
+  - phrase: "If you can wait a decade, you can be the best."
+    source: "Alex Hormozi"
+    context: "Paciência"
+  - phrase: "The most successful say no to almost everything."
+    source: "Alex Hormozi"
+    context: "Foco"
+
+content_related:
+  - phrase: "There is no such thing as too long, only too boring."
+    source: "$100M Leads"
+    context: "Conteúdo"
+  - phrase: "Give until they ask to buy."
+    source: "$100M Leads"
+    context: "Give/Ask ratio"
+
+throne_phrase: "Make people an offer so good they feel stupid saying no."

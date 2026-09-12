@@ -1,0 +1,164 @@
+# Michael Masterson — Core Emotional Complex + Architecture of Persuasion
+# Frameworks: CEC, House of Persuasion, CUB Critique, Four-Legged Stool, Indirection
+# Fonte: "The Architecture of Persuasion" + "Copy Logic" (AWAI)
+
+framework:
+  name: "Masterson Persuasion Architecture"
+  author: "Michael Masterson (Mark Ford)"
+  sources:
+    - "The Architecture of Persuasion (AWAI)"
+    - "Copy Logic (AWAI newsletter)"
+    - "Ready Fire Aim (business strategy)"
+  core_principle: "Understand the prospect BEFORE writing a single word"
+
+# ============================================================
+# Core Emotional Complex (CEC)
+# ============================================================
+core_emotional_complex:
+  definicao: "The deepest combination of feelings, thoughts, and desires that dominate your prospect's inner life regarding your topic"
+  regra: "NEVER write copy without defining the CEC first. It is the foundation of everything."
+
+  discovery_questions:
+    - pergunta: "What emotion dominates when he thinks about this problem?"
+      objetivo: "Identify the PRIMARY feeling — fear, frustration, shame, hope, anger"
+      exemplo: "A business owner at 3am: FEAR of running out of money"
+
+    - pergunta: "What does he think about at 3am when he cannot sleep?"
+      objetivo: "Find the recurring worry that keeps him awake"
+      exemplo: "'What if I cannot make payroll next month?'"
+
+    - pergunta: "What does he secretly desire but would never say out loud?"
+      objetivo: "Uncover the hidden aspiration beneath the surface problem"
+      exemplo: "He does not just want revenue — he wants to feel like a provider again"
+
+  structure:
+    feelings: "The dominant emotion (fear, shame, excitement, frustration)"
+    thoughts: "The recurring mental narrative ('I should have done X', 'Why can I not figure this out')"
+    desires: "The secret aspiration ('I want to be seen as successful', 'I want freedom')"
+
+  validation: "If your copy does not touch all 3 layers (feelings + thoughts + desires), the CEC is not fully activated"
+
+  uso:
+    quando: "FIRST step before any copy project. Before research. Before outline."
+    como: "Write a 1-paragraph CEC statement combining all 3 layers for your specific prospect"
+    exemplo_cec: "He FEELS frustrated and secretly ashamed that his business is not growing. He THINKS 'I have tried everything and nothing works — maybe I am not cut out for this.' He DESIRES to finally crack the code and feel the pride of building something that actually works."
+
+# ============================================================
+# House of Persuasion
+# ============================================================
+house_of_persuasion:
+  metafora: "A sales letter is a house. Each room has a function. Skip a room and the prospect leaves."
+
+  rooms:
+    - room: "Foundation"
+      function: "Core Emotional Complex"
+      descricao: "The invisible base everything stands on. Without it, the house collapses."
+      regra: "Must be defined before construction begins"
+
+    - room: "Entry (Front Door)"
+      function: "Teaser / Headline / Lead"
+      descricao: "Gets the prospect to walk in. Curiosity, promise, or shock."
+      regra: "If the entry fails, nothing else matters. Spend 50% of creative time here."
+
+    - room: "Living Room"
+      function: "Sales Argument"
+      descricao: "The main body. Proof, benefits, mechanism, objection handling."
+      regra: "This is where belief is built. Stack proof throughout (see Makepeace)."
+
+    - room: "Bedroom"
+      function: "Close"
+      descricao: "The intimate ask. CTA, guarantee, urgency, final push."
+      regra: "Transition must feel natural — not abrupt. The close starts in the Living Room."
+
+  construction_order:
+    - "1. Lay Foundation (CEC)"
+    - "2. Design Entry (headline/lead — 50% of effort)"
+    - "3. Build Living Room (sales argument with proof)"
+    - "4. Furnish Bedroom (close with risk reversal)"
+
+# ============================================================
+# CUB Critique
+# ============================================================
+cub_critique:
+  definicao: "3 binary questions to evaluate any piece of copy. Fast, brutal, effective."
+  nome: "CUB = Confusing, Unbelievable, Boring"
+
+  questions:
+    - letra: "C"
+      pergunta: "Is any part CONFUSING?"
+      teste: "Can a stranger understand this on first read without re-reading?"
+      se_sim: "Rewrite for clarity. Simpler words, shorter sentences, clearer logic."
+
+    - letra: "U"
+      pergunta: "Is any claim UNBELIEVABLE?"
+      teste: "Would a skeptical friend roll their eyes at any statement?"
+      se_sim: "Add proof, reduce claim, or remove entirely. Edge of believability."
+
+    - letra: "B"
+      pergunta: "Is any section BORING?"
+      teste: "Would the reader skip this paragraph if given the choice?"
+      se_sim: "Cut it, compress it, or add a story/example to make it vivid."
+
+  regra: "If ANY answer is YES to any of the 3 questions for ANY section — that section must be rewritten"
+  uso: "Apply CUB after every draft, on every section. No exceptions."
+
+# ============================================================
+# Four-Legged Stool
+# ============================================================
+four_legged_stool:
+  definicao: "4 types of credibility that must ALL be present. Remove one leg and the stool falls."
+
+  legs:
+    - leg: 1
+      nome: "Authority"
+      definicao: "Direct expertise of the author or brand"
+      exemplo: "20 years of experience, published in X, built Y"
+      como: "State credentials early in the copy — before the main pitch"
+
+    - leg: 2
+      nome: "Third-Party Validation"
+      definicao: "External experts or institutions endorsing the claim"
+      exemplo: "Recommended by Dr. X, featured in Forbes, certified by Y"
+      como: "Borrow credibility from recognized sources"
+
+    - leg: 3
+      nome: "Social Proof"
+      definicao: "Evidence that other people (similar to the reader) have succeeded"
+      exemplo: "4,327 students enrolled, 89% completion rate, testimonials"
+      como: "Show quantity AND quality of social proof"
+
+    - leg: 4
+      nome: "Risk Reversal"
+      definicao: "Remove the prospect's risk of making a wrong decision"
+      exemplo: "60-day money-back guarantee, keep the bonuses even if you cancel"
+      como: "Make the guarantee so strong that saying NO feels riskier than saying YES"
+
+  regra: "All 4 legs must be present. If one is weak, the entire argument wobbles."
+  audit: "Check each leg explicitly. Score 1-5 per leg. Total must be >= 14/20."
+
+# ============================================================
+# Indirection Principle
+# ============================================================
+indirection_principle:
+  definicao: "Make the prospect think about something RELATED first, then lead them to the sale"
+  motivo: "Direct selling triggers resistance. Indirect approach bypasses defense mechanisms."
+
+  tecnicas:
+    - nome: "Story First"
+      descricao: "Tell a story that embodies the benefit. Let the reader draw the conclusion."
+      exemplo: "Instead of 'buy this investment course', tell the story of someone who retired early"
+
+    - nome: "Education First"
+      descricao: "Teach something valuable. The teaching naturally leads to the product."
+      exemplo: "Instead of 'buy this SEO tool', teach 3 SEO principles, then show how the tool automates them"
+
+    - nome: "Problem Agitation"
+      descricao: "Explore the problem deeply. The reader begs for the solution by the time you present it."
+      exemplo: "Spend 60% of copy on the problem. The solution sells itself."
+
+    - nome: "Fascination Stacking"
+      descricao: "List intriguing facts/benefits as bullet points. Curiosity builds until the reader must act."
+      exemplo: "The 3am trick that doubles response rates... (page 47)"
+
+  regra: "The more unaware the audience, the more indirection is required"
+  complemento: "Maps directly to Masterson's Great Leads framework — Indirect Lead for awareness level 1"

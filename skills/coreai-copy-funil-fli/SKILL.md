@@ -1,0 +1,45 @@
+---
+name: copy-funil-fli
+description: "Constrói o Funil de Lucro Imediato (FLI): oferta direta com upsell para caixa rápido."
+when-to-use: >
+  Quando o usuário quiser FLI, funil de lucro imediato, funil de caixa rápido, tripwire, ou disser "FLI", "funil de lucro imediato", "lucro imediato", ou /copy:funil-fli.
+argument-hint: "[produto / oferta / contexto]"
+allowed-tools: "Read, Write, Bash, Glob, Grep, Agent"
+user-invocable: true
+---
+
+# Copy: Funil de Lucro Imediato (FLI)
+
+Atalho de Funil de Lucro Imediato (FLI). Despacha o especialista certo e segue o workflow de referência.
+
+## PASSO 1 — Contexto do cliente (ContextOS)
+
+Leia `../coreai-shared/contextos-contract.md` antes de qualquer produção. Resolva o negócio ativo, rode o gate e só prossiga com READY. Sem contexto validado, bloqueie a redação e ofereça `coreai-contexto`.
+
+## PASSO 2 — DNA permanente + material de apoio
+Ler `copy-shared/references/premissa-core.md` e `manual-craft.md`.
+Workflow de referência: `copy-shared/workflows/funil-fli.md` (seguir as etapas dele).
+Apoio disponível: `copy-shared/templates/`, `copy-shared/frameworks/`,
+`copy-shared/swipe/`, `copy-shared/checklists/`.
+
+## PASSO 3 — Triagem
+Confirmar faixa de preço, temperatura do público e oferta/contexto. Verificar premissas
+(tese, big idea, mecanismo único). Sem isso, avisar que sai genérico.
+
+## PASSO 4 — Executar o workflow
+Seguir as etapas de `copy-shared/workflows/funil-fli.md`. Em cada peça, despachar o
+copywriter certo via Agent tool (especialista sugerido: **russell-brunson**), passando o
+contexto + a persona (`copy-shared/agents/{escritor}.md`) + os frameworks dele
+(`copy-shared/frameworks/{escritor}/`).
+
+## PASSO 5 — Validação obrigatória (cada peça)
+1. Filtro Anti-IA (`copy-shared/validators/filtro-anti-ia.md`) — nota 10 ou refaz.
+2. Oráculo Torriani (`copy-shared/validators/oraculo-torriani.md`) — regras, clichês, craft, Sugarman ≥15.
+
+## Output
+As peças do Funil de Lucro Imediato (FLI), validadas. Listar o que foi gerado e a ordem de uso no funil.
+
+## Regras
+1. Seguir as etapas do workflow de referência, sem pular input obrigatório.
+2. Toda peça passa pelos 2 validadores.
+3. Zero invenção fora do briefing/contexto. PT-BR, acentuação completa, sem emoji, sem travessão.

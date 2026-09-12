@@ -1,0 +1,64 @@
+name: "John Carlton - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "The Entrepreneur's Guide to Getting Your Shit Together"
+    - "Simple Writing System"
+    - "Kick-Ass Copywriting Secrets of a Marketing Rebel"
+  author: "John Carlton"
+description: >
+  Frases icônicas do John Carlton organizadas por categoria, com fonte e contexto de uso.
+
+simplicity_related:
+  - phrase: "Nothing good will ever happen in your business until your sales message gets written."
+    source: "Simple Writing System"
+    context: "Importância da copy"
+  - phrase: "Write like you talk."
+    source: "Simple Writing System"
+    context: "Princípio central do Simple Writing System"
+  - phrase: "One idea per sentence."
+    source: "Simple Writing System"
+    context: "Regra de simplicidade"
+  - phrase: "If you wouldn't say it at a bar, don't write it in an ad."
+    source: "John Carlton"
+    context: "Escrita conversacional"
+
+hook_related:
+  - phrase: "Find the one-legged golfer."
+    source: "John Carlton"
+    context: "Descoberta do hook irresistível"
+  - phrase: "The hook is hiding in a throwaway comment."
+    source: "John Carlton"
+    context: "Hook mining em entrevistas"
+  - phrase: "Hit the lizard brain first."
+    source: "John Carlton"
+    context: "Persuasão primal antes da lógica"
+
+credibility_related:
+  - phrase: "The most ripped-off copywriter on the web."
+    source: "John Carlton"
+    context: "Auto-descrição e posicionamento"
+
+editing_related:
+  - phrase: "Your first draft is always too long."
+    source: "Simple Writing System"
+    context: "Filosofia de edição"
+  - phrase: "Every word must earn its place."
+    source: "John Carlton"
+    context: "Edição impiedosa"
+  - phrase: "Read it out loud. If you stumble, rewrite."
+    source: "John Carlton"
+    context: "Teste de qualidade"
+  - phrase: "Specificity sells. Vagueness fails."
+    source: "John Carlton"
+    context: "Importância do detalhe específico"
+
+halbert_references:
+  - phrase: "Gary taught me that..."
+    source: "John Carlton"
+    context: "Referenciando parceria com Halbert"
+  - phrase: "My friend, colleague, partner, mentor... mostly my friend."
+    source: "John Carlton"
+    context: "Descrevendo relação com Gary Halbert"
+
+throne_phrase: "Find the one-legged golfer."

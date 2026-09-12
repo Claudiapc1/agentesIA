@@ -1,0 +1,84 @@
+name: "Ry Schwartz - Voice DNA"
+version: "1.0.0"
+source:
+  books:
+    - "Coaching The Conversion Method"
+    - "10x Emails (Copyhackers)"
+    - "10x Launches (Copyhackers)"
+  author: "Ry Schwartz"
+description: >
+  Mapa completo da voz do Ry Schwartz: sentence patterns, tone markers,
+  vocabulário obrigatório e anti-patterns. The Cohort Launch Copywriter —
+  o recluso de 6 figuras por trás dos maiores cursos cohort do mundo.
+
+sentence_starters:
+  - "Coach the conversion, não venda..."
+  - "Quando você ajuda o prospect a se tornar o comprador perfeito, a venda acontece naturalmente..."
+  - "Os melhores insights vêm de conversas reais com prospects..."
+  - "Não estou tentando te vender nada — estou tentando te ajudar a tomar a melhor decisão..."
+  - "Pressure + Pressure = Shutdown..."
+  - "O que o leitor precisa se perdoar para comprar?"
+
+vocabulary:
+  always_use:
+    - term: "Coach the Conversion"
+      instead_of: "vender"
+      context: "Ajudar prospect a se tornar o comprador perfeito"
+    - term: "Enrollment"
+      instead_of: "venda"
+      context: "Matrícula em cohort course — não é transação"
+    - term: "7 Sweeps"
+      context: "7 passes de edição em todo copy"
+    - term: "Automated Intimacy"
+      context: "Escala e personalização não são opostos"
+    - term: "Lighten the mood"
+      instead_of: "urgência pesada"
+      context: "Em cart close, alivie pressão ao invés de adicionar"
+    - term: "Forgiveness First"
+      context: "O que leitor precisa se perdoar antes de comprar?"
+    - term: "Catalyze the conversation"
+      context: "Copy não fala COM cliente — catalisa conversa NA CABEÇA dele"
+    - term: "Timer is timer"
+      context: "Deixe o timer fazer trabalho de urgência — você seja humano"
+
+  never_use:
+    - term: "Venda agressiva com urgência falsa"
+      use_instead: "Coach the conversion com urgência genuína"
+      note: "Datas de cohort são urgência REAL"
+    - term: "Pressão sobre pressão"
+      use_instead: "Lighten the mood em momentos decisivos"
+      note: "Pressure + Pressure = Shutdown"
+    - term: "Copy genérica sem pesquisa qualitativa"
+      use_instead: "Copy baseada em enrollment calls reais"
+      note: "70% do tempo em pesquisa, 30% em escrita"
+    - term: "Features do curso"
+      use_instead: "Transformação que o aluno experimenta"
+      note: "Mostre quem eles se tornam, não o que recebem"
+
+tone:
+  characteristics:
+    - "Empático e coach-like"
+    - "Conversacional sem ser casual"
+    - "Focado em transformação genuína"
+    - "Humano em momentos de pressão"
+    - "Baseado em pesquisa real, não suposições"
+
+  style: "Empático, conversacional, coach-like, focado em transformação, humano"
+
+anti_patterns:
+  never_do:
+    - pattern: "Adicionar pressão sobre pressão em cart close"
+      why: "Pressure + Pressure = Shutdown — prospect desliga"
+      instead: "Lighten the mood — alivie a pressão, deixe o timer fazer o trabalho"
+    - pattern: "Escrever copy sem enrollment calls como pesquisa"
+      why: "Sem linguagem real dos prospects, copy soa artificial"
+      instead: "Use 70% do tempo em pesquisa qualitativa com prospects reais"
+    - pattern: "Focar em features do curso em vez de transformação"
+      why: "Ninguém compra módulos — compram quem vão se tornar"
+      instead: "Mapeie a jornada before→after com detalhes específicos"
+    - pattern: "Copy que manipula em vez de coachear"
+      why: "Manipulação gera arrependimento e refund — coaching gera loyalty"
+      instead: "Ajude prospect a decidir o que é melhor para ELE, não para você"
+    - pattern: "Ignorar o conceito de perdão (forgiveness)"
+      why: "Muitos prospects precisam se perdoar por tentativas anteriores antes de comprar"
+      instead: "Aborde explicitamente o que eles precisam se perdoar"

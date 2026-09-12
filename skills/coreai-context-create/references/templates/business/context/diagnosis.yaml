@@ -1,0 +1,29 @@
+# ContextOS - Diagnosis (Diagnostico Estrategico)
+# Preenchido durante: *setup-context Fase 4 (ICP Gate)
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+market_awareness:
+  level: null  # 1-5 (1=inconsciente, 5=mais consciente)
+  description: null
+
+market_sophistication:
+  stage: null  # 1-5 (1=primeiro no mercado, 5=mercado saturado)
+  description: null
+
+competitive_landscape:
+  direct_competitors: []
+  indirect_competitors: []
+  differentiation: null
+
+strategic_gaps:
+  - area: null
+    severity: null  # baixa | media | alta | critica
+    recommendation: null
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

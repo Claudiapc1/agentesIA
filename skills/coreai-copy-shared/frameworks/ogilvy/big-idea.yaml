@@ -1,0 +1,73 @@
+name: "The Big Idea Framework"
+version: "1.0.0"
+source:
+  books:
+    - "Ogilvy on Advertising"
+    - "Confessions of an Advertising Man"
+  author: "David Ogilvy"
+  category: "Creative Strategy"
+description: >
+  O conceito central e poderoso que captura a imaginação e diferencia
+  sua campanha. Sem uma Big Idea, seu advertising passa como um navio
+  na noite. Big Ideas vêm do inconsciente, informado por pesquisa.
+
+principle: "Unless your advertising is built on a Big Idea, it will pass like a ship in the night."
+
+the_five_tests:
+  description: "5 parâmetros para reconhecer uma Big Idea"
+  tests:
+    - question: "Did it make you GASP when you first saw it?"
+      meaning: "A Big Idea deve causar impacto visceral instantâneo"
+    - question: "Do you wish YOU had thought of it yourself?"
+      meaning: "Inveja criativa = sinal de originalidade"
+    - question: "Is it UNIQUE?"
+      meaning: "Nunca foi feito antes - verdadeiramente original"
+    - question: "Does it fit the STRATEGY to perfection?"
+      meaning: "Não é criatividade solta - serve ao objetivo"
+    - question: "Could it be used for 30 YEARS?"
+      meaning: "Longevidade - não é moda, é fundação"
+
+how_big_ideas_come:
+  process: >
+    Big ideas come from the unconscious. This is true in art, in science and
+    in advertising. But your unconscious has to be well informed, or your
+    idea will be irrelevant.
+  steps:
+    - "STUFF your conscious mind with information"
+    - "Then UNHOOK your rational thought process"
+    - "Let the unconscious do its work"
+    - "The BEST ideas come as jokes - make your thinking as funny as possible"
+
+examples:
+  - idea: "The Man in the Hathaway Shirt (eyepatch)"
+    campaign: "Hathaway Shirts"
+    longevity: "Ran for decades"
+    why_it_worked: "Mystery, aristocracy, quality - all in one visual"
+  - idea: "At 60 mph the loudest noise... comes from the electric clock"
+    campaign: "Rolls-Royce"
+    longevity: "Timeless"
+    why_it_worked: "Specific fact that dramatizes quality"
+  - idea: "Only Dove is one-quarter moisturizing cream"
+    campaign: "Dove"
+    longevity: "50+ years and still running"
+    why_it_worked: "Product truth that differentiates"
+  - idea: "Commander Whitehead - the bearded Englishman"
+    campaign: "Schweppes"
+    longevity: "Decades"
+    why_it_worked: "British authenticity personified"
+
+application:
+  when: "Before ANY creative work begins - Big Idea comes FIRST"
+  process:
+    - "Research deeply - spend weeks understanding product"
+    - "Understand the positioning"
+    - "Let unconscious process the information"
+    - "Test against 5 parameters"
+    - "If it doesn't pass all 5, keep searching"
+
+common_mistakes:
+  - "Creating advertising without a Big Idea (most common)"
+  - "Confusing executional gimmick with Big Idea"
+  - "Changing Big Ideas too frequently"
+  - "Not testing Big Idea against 5 parameters"
+  - "Letting committees dilute the Big Idea"

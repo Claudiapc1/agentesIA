@@ -1,0 +1,71 @@
+# Robert Cialdini — As Armas da Persuasão
+# Framework: 7 Princípios de Influência
+# Fonte: "Influence: Science and Practice"
+
+framework:
+  name: "7 Princípios de Influência"
+  author: "Robert Cialdini"
+  tipo: "Base científica (psicologia comportamental)"
+  uso_no_squad: "Camada de VALIDAÇÃO — verificar se copy ativa mínimo 3 dos 7 princípios"
+
+principios:
+  - numero: 1
+    nome: "Reciprocidade"
+    definicao: "Pessoas se sentem obrigadas a retribuir favores"
+    gatilho_copy: "Dar algo de valor ANTES de pedir (lead magnet, conteúdo, amostra)"
+    tecnica: "Rejection-Then-Retreat — rejeitar pedido grande → aceitar menor"
+    exemplo: "Estou te dando este relatório gratuitamente porque..."
+    checklist: "A copy oferece algo antes de pedir?"
+
+  - numero: 2
+    nome: "Compromisso e Consistência"
+    definicao: "Uma vez comprometidas, pessoas alinham comportamento futuro"
+    gatilho_copy: "Foot-in-the-door — pequeno SIM → médio SIM → grande SIM"
+    tecnica: "Fazer leitor AGIR alinhado à mensagem antes do CTA"
+    exemplo: "Se você concorda que [premissa], então faz sentido que..."
+    checklist: "A copy escala compromissos progressivamente?"
+
+  - numero: 3
+    nome: "Prova Social"
+    definicao: "Pessoas copiam o que outros similares fazem (especialmente sob incerteza)"
+    gatilho_copy: "Testemunhos, números de clientes, cases, menções em mídia"
+    tecnica: "Mostrar o que PESSOAS SIMILARES ao leitor já fizeram"
+    exemplo: "4.327 empresários já usam o método..."
+    checklist: "A copy mostra que outros similares já fizeram/compraram?"
+
+  - numero: 4
+    nome: "Afinidade/Gostar"
+    definicao: "Pessoas dizem sim para quem gostam"
+<!-- Dependência externa de contexto/identidade excluída: aplicar contrato CoreAI. -->
+    tecnica: "Criar rapport — mostrar que você entende o mundo do leitor"
+    exemplo: "Eu também já estive onde você está agora..."
+    checklist: "O leitor sente que o autor é 'alguém como ele'?"
+
+  - numero: 5
+    nome: "Autoridade"
+    definicao: "Pessoas obedecem figuras de autoridade (expertise + símbolos)"
+    gatilho_copy: "Credenciais, títulos, aparições em mídia, endossos"
+    tecnica: "Colocar marcadores de autoridade ANTES do pitch principal"
+    exemplo: "Dr. João, com 23 anos de experiência e citado pela Forbes..."
+    checklist: "A copy estabelece autoridade antes de pedir ação?"
+
+  - numero: 6
+    nome: "Escassez"
+    definicao: "Pessoas querem o que é raro ou está ficando indisponível"
+    gatilho_copy: "Limitação de tempo, quantidade, acesso"
+    tecnica: "Loss aversion > gain motivation — perder é mais poderoso que ganhar"
+    exemplo: "Restam 12 vagas. Inscrições fecham sexta às 23:59."
+    checklist: "A copy cria senso real de escassez (sem mentir)?"
+
+  - numero: 7
+    nome: "Automaticidade (Click-Whirr)"
+    definicao: "Atalhos mentais que byppassam pensamento deliberado"
+    gatilho_copy: "Patterns que ativam respostas automáticas"
+    tecnica: "Design headlines/CTAs que ativam shortcuts inconscientes"
+    exemplo: "Usar 'porque' aumenta compliance (estudo da copiadora)"
+    checklist: "A copy usa triggers de resposta automática?"
+
+validacao:
+  regra: "Toda copy FINAL deve ativar no MÍNIMO 3 dos 7 princípios"
+  como_verificar: "Para cada princípio, marcar SIM/NÃO. Se < 3 SIM → reescrever."
+  nota: "Cialdini não é copywriter — é a BASE CIENTÍFICA. Usar como validação, não como criação."

@@ -1,0 +1,102 @@
+name: "Headline Mastery System"
+version: "1.0.0"
+source:
+  books:
+    - "Ogilvy on Advertising"
+    - "Confessions of an Advertising Man"
+  author: "David Ogilvy"
+  category: "Copywriting Technique"
+description: >
+  On the average, five times as many people read the headline as read the
+  body copy. When you have written your headline, you have spent eighty
+  cents out of your dollar.
+
+principle: "The headline is 80% of your advertising investment."
+
+headline_statistics:
+  readership_ratio: "5x more people read headline than body"
+  investment_analogy: "80 cents of your dollar is in the headline"
+  importance: "If you don't sell the product in your headline, you have wasted 80% of your money"
+
+what_works:
+  benefit_headlines:
+    rule: "Headlines which work best are those which promise the reader a benefit"
+    example: "A lighter cake with new Bisquick"
+  news_headlines:
+    rule: "News is always powerful"
+    words: ["Announcing", "New", "Now", "Introducing"]
+  specific_headlines:
+    rule: "Be specific with numbers"
+    example: "At 60 miles an hour..."
+  curiosity_headlines:
+    rule: "Promise useful information"
+    example: "How to win friends and influence people"
+  localized_headlines:
+    rule: "Localize when possible"
+    reason: "People are most interested in their own area"
+
+words_that_work:
+  high_performers:
+    - "Free"
+    - "New"
+    - "How to"
+    - "Suddenly"
+    - "Now"
+    - "Announcing"
+    - "Introducing"
+    - "Improvement"
+    - "Amazing"
+    - "Sensational"
+    - "Remarkable"
+    - "Revolutionary"
+    - "Startling"
+    - "Miracle"
+    - "Magic"
+    - "Offer"
+    - "Quick"
+    - "Easy"
+    - "Wanted"
+    - "Challenge"
+    - "Compare"
+    - "Bargain"
+    - "Hurry"
+    - "Last chance"
+
+ogilvy_headline_rules:
+  - "Include the brand name in the headline"
+  - "Include the promise in the headline"
+  - "Headlines between 6-12 words perform best"
+  - "Put the key benefit first"
+  - "Make headlines self-contained (many only read headline)"
+  - "Headlines should flag the right audience"
+  - "Never use a headline that requires reading body copy to understand"
+
+headline_formula:
+  template: "[Benefit] + [Brand] + [Specificity]"
+  example: "At 60 mph the loudest noise in this new Rolls-Royce comes from the electric clock"
+
+best_ogilvy_headlines:
+  - headline: "At 60 miles an hour the loudest noise in this new Rolls-Royce comes from the electric clock"
+    why: "Specific fact that dramatizes quality"
+  - headline: "The man in the Hathaway shirt"
+    why: "Intrigue + aspiration"
+  - headline: "Only Dove is one-quarter moisturizing cream"
+    why: "Product differentiation fact"
+  - headline: "How to create advertising that sells"
+    why: "How-to + benefit promise"
+
+application:
+  when: "Writing any headline"
+  process:
+    - "Write at least 16 headlines before choosing"
+    - "Include benefit AND brand name"
+    - "Test against high-performing words"
+    - "Check if it works without body copy"
+    - "Verify it flags right audience"
+
+common_mistakes:
+  - "Clever headlines that don't sell"
+  - "Headlines without benefit"
+  - "Headlines that need body copy to understand"
+  - "Too short or too long (sweet spot is 6-12 words)"
+  - "Obscure headlines that don't flag product category"

@@ -1,0 +1,135 @@
+name: "Brief Template"
+version: "1.0"
+source: "Stefan Georgi - RMBC Method, Brief Phase"
+description: "Estrutura completa do creative brief com 7 secoes. O brief e o esqueleto da carta de vendas."
+
+content:
+  philosophy: |
+    The brief is the skeleton of your sales letter.
+    Most copywriters skip this step and dive straight into writing.
+    That's why they stare at blank pages, waste hours, and produce
+    inconsistent results.
+
+    A complete brief makes writing FAST. You're not creating -
+    you're executing. You're not deciding - you're filling in.
+
+    When I have a solid brief, I can write a full sales letter
+    in 4-6 hours. Without one? It might take days.
+
+  structure:
+    section_1_headline:
+      name: "Headline & Sub-headline"
+      include:
+        - "Main headline (benefit + mechanism + curiosity)"
+        - "Sub-headline (expands on promise)"
+        - "2-3 backup headlines to test"
+
+    section_2_lead:
+      name: "Lead/Opening"
+      include:
+        - "Lead type (story, problem, news, question)"
+        - "Opening hook (first 3-5 sentences)"
+        - "Transition to mechanism reveal"
+
+    section_3_mechanism:
+      name: "Mechanism Reveal"
+      include:
+        - "What the mechanism is"
+        - "Why it works (science/logic)"
+        - "Why it's different (differentiation)"
+        - "Proof it works (studies, testimonials)"
+
+    section_4_body:
+      name: "Body/Benefits"
+      include:
+        - "Main benefits (5-7, ordered by importance)"
+        - "Each benefit connects to mechanism"
+        - "Proof for each major benefit"
+        - "Future pacing (what life looks like after)"
+
+    section_5_credibility:
+      name: "Credibility Section"
+      include:
+        - "Creator story/credentials"
+        - "Social proof (testimonials)"
+        - "Authority proof (media, experts)"
+        - "Results proof (statistics, case studies)"
+
+    section_6_offer:
+      name: "Offer"
+      include:
+        - "What they get (main product)"
+        - "Bonuses (each with value)"
+        - "Value stack (total value)"
+        - "Price reveal (with anchoring)"
+        - "Guarantee"
+
+    section_7_close:
+      name: "Close/CTA"
+      include:
+        - "Urgency (deadline, scarcity)"
+        - "Risk reversal reminder"
+        - "Final benefit recap"
+        - "Clear call to action"
+        - "P.S. (restate main benefit + urgency)"
+
+  bullet_writing:
+    philosophy: |
+      In the brief phase, you write the BULLETS for each section.
+      These become the foundation of your copy.
+
+    bullet_format:
+      - "One idea per bullet"
+      - "Specific, not vague"
+      - "Benefit-oriented"
+      - "Proof-supported when possible"
+
+    example_section_bullets: |
+      ## MECHANISM SECTION BULLETS
+
+      - What the "Metabolic Switch" is (scientific name, discovery story)
+      - How it controls whether you burn fat or store fat
+      - Why your switch is "stuck" in fat-storage mode
+      - The 3 things that flip the switch to fat-burning mode
+      - Why other diets fail (they ignore the switch)
+      - Study: Stanford research showing switch activation
+      - Testimonial: Sarah lost 23 lbs after activating her switch
+
+  output_example:
+    task: "Create sales letter brief for coaching program"
+    input: |
+      Product: 12-week business coaching program ($5,000)
+      Mechanism: "The Revenue Runway Method"
+      Avatar: Coaches/consultants stuck at $10K/month
+    output: |
+      ## BRIEF: Revenue Runway Coaching Program
+
+      ### SECTION 1: HEADLINE & SUB-HEADLINE
+
+      Main Headline:
+      "How Coaches Go From $10K/Month to $50K/Month
+      Using The 'Revenue Runway' That Top Consultants
+      Have Been Using For Years"
+
+      Sub-headline:
+      "The 3-phase system that eliminates feast-or-famine income
+      and creates predictable, scalable revenue - even if you hate selling"
+
+      Backup Headlines:
+      - "The $50K/Month Blueprint..."
+      - "Why 6-Figure Coaches Never Chase Clients..."
+
+      ### SECTION 2: LEAD/OPENING
+
+      Lead Type: Problem-Agitation
+
+      Opening Hook:
+      - You're stuck at $10K months despite being better than competitors
+      - Some months are great, next month you're scrambling for clients
+      - You've tried posting more, ads, networking - nothing sticks
+      - The problem isn't your skills - it's your SYSTEM
+
+      Transition to Mechanism:
+      "What if the difference between $10K and $50K months
+      isn't about working harder - but about building a 'Revenue Runway'
+      that brings clients to you automatically?"

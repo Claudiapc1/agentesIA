@@ -1,0 +1,52 @@
+# 3X VSL Formula - Jon Benson
+# Source: Jon Benson - 3X VSL Course
+# Category: vsl_structure
+
+name: "3X VSL Formula"
+version: "1.0"
+source: "Jon Benson - 3X VSL Course"
+category: "vsl_structure"
+command: "*3x-vsl"
+
+description: |
+  Os três atos de uma VSL que converte. Estrutura cinematográfica
+  aplicada a copy de vendas em vídeo.
+
+three_acts:
+  act_1:
+    name: "The Hook"
+    duration: "Primeiros 20% da VSL"
+    purpose: "Capturar atenção e criar desejo de assistir"
+    elements:
+      - "Snap suggestion (pattern interrupt)"
+      - "Big promise"
+      - "Curiosity loop opener"
+      - "Target qualification"
+    rule: "Prenda nos primeiros 10 segundos ou perca para sempre"
+
+  act_2:
+    name: "The Story"
+    duration: "60% do meio da VSL"
+    purpose: "Construir rapport, credibilidade e conexão emocional"
+    elements:
+      - "Reluctant hero journey"
+      - "Problem amplification"
+      - "Discovery moment"
+      - "Solution preview"
+      - "Social proof integration"
+    rule: "A história É a venda - não apresse"
+
+  act_3:
+    name: "The Close"
+    duration: "Últimos 20% da VSL"
+    purpose: "Apresentar oferta e converter"
+    elements:
+      - "Value stack"
+      - "Price reveal (anchored high)"
+      - "Guarantee"
+      - "Bonuses"
+      - "Clear CTA"
+      - "Ethical urgency"
+    rule: "O close deve parecer consequência natural da história"
+
+when_to_use: "Estruturar qualquer VSL - simplifica o 5-Step em três blocos claros."

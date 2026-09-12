@@ -1,0 +1,51 @@
+# Funnel Hacking - Russell Brunson
+# Source: DotCom Secrets
+# Category: competitive_intelligence
+
+name: "Funnel Hacking"
+version: "1.0"
+source: "Russell Brunson - DotCom Secrets"
+category: "competitive_intelligence"
+command: "*funnel-hack"
+
+description: |
+  O processo de estudar e modelar funis que ja funcionam.
+  NAO e copiar. E entender ESTRUTURAS e adaptar.
+
+philosophy: |
+  Antes de criar algo do zero, estude 10-50 funis
+  que ja funcionam no seu nicho. Identifique padroes.
+  Adapte para sua voz e produto.
+
+steps:
+  step_1:
+    action: "Encontre 10-50 funis no seu nicho"
+    how: "Compre produtos, entre em listas, siga o processo"
+
+  step_2:
+    action: "Documente cada elemento"
+    elements: ["Headlines", "Hooks", "Stories", "Offers", "Upsells", "Emails"]
+
+  step_3:
+    action: "Identifique padroes"
+    look_for: "O que TODOS os funis de sucesso tem em comum?"
+
+  step_4:
+    action: "Adapte para seu negocio"
+    rule: "Nao copie - entenda os principios e adapte para sua voz"
+
+documentation_template:
+  funnel_name: "[Nome do Concorrente]"
+  front_end: "[O que vendem na entrada?]"
+  price_points: "[Quanto cobram em cada nivel?]"
+  upsell_1: "[Qual e o primeiro upsell?]"
+  upsell_2: "[Qual e o segundo upsell?]"
+  email_sequence: "[Quantos emails? Que tom?]"
+  headline: "[Qual e o headline principal?]"
+  hook: "[Qual e o hook?]"
+  story: "[Qual historia contam?]"
+  guarantee: "[Qual garantia oferecem?]"
+
+warning: "Funnel hacking NAO e copiar. E entender ESTRUTURAS e adaptar."
+
+when_to_use: "ANTES de criar qualquer funil novo. Sempre hackear primeiro."

@@ -1,0 +1,71 @@
+# 5-Step VSL Process - Jon Benson
+# Source: Jon Benson - The VSL Creator (2006)
+# Category: vsl_creation
+
+name: "5-Step VSL Process"
+version: "1.0"
+source: "Jon Benson - Creator of the VSL (2006)"
+category: "vsl_creation"
+command: "*5-step"
+
+description: |
+  Framework de 5 passos para criar Video Sales Letters.
+  VSLs são escritas em segmentos de slides - fragmentos de frase,
+  uma sentença por vez. O cérebro processa isso mais facilmente.
+  Resultado: $12B+ em vendas para clientes.
+
+steps:
+  step_1:
+    name: "Snap Suggestion Opening"
+    timing: "0-30 segundos"
+    purpose: "Pattern interrupt que captura atenção imediatamente"
+    elements:
+      - "Pattern interrupt (declaração inesperada)"
+      - "Curiosity gap (o que acontece em seguida?)"
+      - "USP mencionada nos primeiros 10 slides"
+    example: |
+      "E se tudo que te disseram sobre [tópico] estiver errado?
+      E se existisse um jeito de [resultado] sem [método doloroso]?"
+
+  step_2:
+    name: "Problem Amplification"
+    timing: "30 segundos - 3 minutos"
+    purpose: "Aprofundar a dor com empatia, não manipulação"
+    elements:
+      - "Pontos de dor específicos"
+      - "Linguagem emocional"
+      - "Tom empático"
+      - "Declarações de concordância (rapport)"
+
+  step_3:
+    name: "Reluctant Hero Story"
+    timing: "3-8 minutos"
+    purpose: "Estabelecer rapport através de vulnerabilidade"
+    elements:
+      - "Começar do ponto de fracasso"
+      - "Mostrar vulnerabilidade"
+      - "Descoberta parece acidental"
+      - "Transformação é gradual mas real"
+
+  step_4:
+    name: "Solution Preview"
+    timing: "8-12 minutos"
+    purpose: "Mostrar o que é possível sem revelar tudo"
+    elements:
+      - "Social proof (testimonials)"
+      - "Preview de resultados"
+      - "Curiosidade sobre mecanismo"
+      - "Credibility builders"
+
+  step_5:
+    name: "Offer & Ethical Close"
+    timing: "12-20 minutos"
+    purpose: "Apresentar oferta irresistível com urgência ética"
+    elements:
+      - "Value stack"
+      - "Price anchoring"
+      - "Garantia (risk reversal)"
+      - "Urgência ética (limitações reais)"
+      - "CTA claro"
+
+when_to_use: "Qualquer VSL independente de nicho ou produto."

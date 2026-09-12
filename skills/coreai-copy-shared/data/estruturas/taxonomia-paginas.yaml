@@ -1,0 +1,523 @@
+# taxonomia-paginas.yaml
+#
+# INDICE CANONICO dos tipos de pagina do squad Copy.
+#
+# Este arquivo responde uma pergunta so: o founder pediu uma pagina, qual estrutura roda?
+# Quem consome: o quarto eixo do roteamento (formato de peca), o Copy Chief, e o
+# checklist checklists/estrutura-pagina.md no Gate 1.
+#
+# ORIGEM: pipeline SINKRA, processo estruturas-de-pagina-squad-copy.
+#   Fase 1 (Discovery)    docs/sinkra/01-discovery-estruturas-pagina.md
+#   Fase 2 (Architecture) docs/sinkra/02-architecture-estruturas-pagina.md, taxonomia dos 16 tipos
+#   Fase 3 (Executors)    docs/sinkra/03-executors-estruturas-pagina.md, matriz de executores corrigida
+#
+# REGRA DE EDICAO: nao editar a mao sem registrar em qual fase a mudanca foi decidida.
+# Tipo novo entra com status declarado e origem declarada, nunca solto.
+
+meta:
+  versao: "1.0.0"
+  criado_em: "2026-08-22"
+  fonte: "SINKRA Fases 1 a 3"
+  total_tipos: 17
+  familias: [pagina, carta, elemento]
+
+# ---------------------------------------------------------------------------
+# FAMILIAS: a familia governa o gate de formato
+# ---------------------------------------------------------------------------
+
+familias:
+  pagina:
+    o_que_e: "Peca de tela, leitura em scroll, blocos visuais, trafego frequentemente frio"
+    gate: "Trava formato=pagina. Teste dos 3 segundos obrigatorio no topo"
+  carta:
+    o_que_e: "Peca de leitura corrida, lead longo, curiosidade em loop"
+    gate: "Rota legitima, alcancavel SO por pedido explicito de carta"
+    workflow: "workflows/workflow-carta-vendas-obrigatorio.md"
+  elemento:
+    o_que_e: "Componente dentro de outra pagina, nao e pagina autonoma"
+    gate: "Sem gate proprio, herda o da pagina hospedeira"
+
+# ---------------------------------------------------------------------------
+# DESEMPATE: quando dois tipos disputam, vale a regra escrita
+# ---------------------------------------------------------------------------
+
+desempate:
+  - regra: "So e lancamento se existir sequencia de PLCs consumida antes. Sem PLC, e perpetuo"
+    entre: [pagina-vendas-lancamento, pagina-vendas-perpetuo]
+  - regra: "Se o objeto tem data e lugar, e evento. Se vende todo dia, e perpetuo"
+    entre: [pagina-vendas-evento, pagina-vendas-perpetuo]
+  - regra: "Preco baixo, decisao rapida, sem escada antes: tripwire"
+    entre: [pagina-vendas-tripwire, pagina-vendas-geral]
+  - regra: "Se o objeto vendido e o programa, e aplicacao. Se o objeto e a conversa, e diagnostico-sessao"
+    entre: [pagina-aplicacao, pagina-diagnostico-sessao]
+  - regra: "Se entrega material, e captura. Se inscreve em evento com data, e registro-evento"
+    entre: [pagina-captura, pagina-registro-evento]
+
+default_sem_qualificar: pagina-vendas-perpetuo
+
+# ---------------------------------------------------------------------------
+# OS 16 TIPOS
+# ---------------------------------------------------------------------------
+
+tipos:
+
+  - id: pagina-vendas-perpetuo
+    familia: pagina
+    nome: "Pagina de vendas perpetuo"
+    quando: "Produto que vende todo dia, trafego continuo. DEFAULT de pagina de vendas"
+    aliases: ["pagina de vendas", "sales page", "pagina de venda", "pagina do produto"]
+    executor: john-carlton
+    executor_path: "agents/tier-2-executores/john-carlton.md"
+    executor_razao: "Linhagem Halbert resolvida em forma direta. Simple Writing System. Socio do Halbert por 20 anos"
+    estrutura: "data/estruturas/pagina-vendas-perpetuo.md"
+    fonte_canonica: "data/estruturas/pagina-vendas-perpetuo-FONTE-FOUNDER.md"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: semi-deterministica
+    status: canonico
+    canonizado_em: "2026-08-22"
+    canonizado_por: "SINKRA Fase 6, correcao de divergencia de estado"
+    primeira_peca: "outputs/copys/torriani/core-ai/core-ia-mentoria/03-pagina-vendas/pagina-vendas-v4-sistema.md"
+    primeira_peca_em: "2026-08-23"
+    primeira_peca_gates: "G0 PASS, G1 PASS (21 blocos, ordem e contagem), G2 PASS, G3 PASS, G4 PASS (oraculo 6/6)"
+    nota: "Estrutura no disco (120 l., 21 blocos mapeados em section keys), com proveniencia declarada. Primeira peca real produzida pelo sistema em 2026-08-23, com os 5 gates aprovados. Pendente: aprovacao do founder e o critico LLM de 5 dimensoes"
+
+  - id: pagina-vendas-mentoria
+    familia: pagina
+    nome: "Pagina de vendas de mentoria high-ticket"
+    quando: "Mentoria, mastermind ou programa de acompanhamento com FILTRO DE ENTRADA. A pessoa se candidata, e aprovada, e so entao compra"
+    aliases: ["pagina de mentoria", "mentoria", "mastermind", "programa de acompanhamento", "high ticket com filtro", "pagina do programa"]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    executor_razao: "Dono dos tipos de funil no squad. Este tipo e funil com pagina na frente, nao peca isolada. Resolve o conflito com o template orfao, que atribuia a dan-kennedy e stefan-georgi"
+    estrutura: "data/estruturas/pagina-vendas-mentoria.md"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: semi-deterministica
+    status: canonico
+    canonizado_em: "2026-08-23"
+    canonizado_por: "Fusao de 3 fontes: templates/application-page-tmpl.md (PT, orfao), funnel/[DEPENDÊNCIA NÃO EMPACOTADA: design-application-page] (EN, fluxo), data/estruturas/pagina-vendas-perpetuo.md (ritmo e section keys)"
+    nota: "18 blocos. Troca garantia, stack de valor e botao de compra por desqualificacao intencional, processo de selecao, capacidade declarada e formulario de candidatura. O miolo sao os casos de uso em micro-copy, nao argumentacao"
+    teste_do_tipo: "Se a pagina termina em botao de compra, nao e este tipo. Se termina em formulario de candidatura, e"
+
+  - id: pagina-vendas-geral
+    familia: pagina
+    nome: "Pagina de vendas geral"
+    quando: "Venda direta sem contexto de lancamento nem evento"
+    aliases: ["pagina de vendas simples", "venda direta"]
+    executor: david-ogilvy
+    executor_path: "agents/tier-2-executores/david-ogilvy.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-vendas-geral]"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: deterministica
+    status: a-consolidar
+    nota: "4 fontes concorrentes. Consolidar a partir de templates/sales-page-tmpl.yaml, a unica que ja e pagina de verdade"
+
+  - id: pagina-vendas-lancamento
+    familia: pagina
+    nome: "Pagina de vendas de lancamento"
+    quando: "Fecha PLF, publico ja consumiu os PLCs"
+    aliases: ["pagina de lancamento", "sales page do lancamento", "fecha o PLF"]
+    executor: jeff-walker
+    executor_path: "agents/tier-2-executores/jeff-walker.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-vendas-lancamento]"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: deterministica
+    status: a-traduzir
+    nota: "templates/plf/sales-page-blueprint-tmpl.md existe com 401 linhas, em ingles dentro de squad PT-BR"
+
+  - id: pagina-vendas-evento
+    familia: pagina
+    nome: "Pagina de vendas de evento"
+    quando: "Vende vaga ou ingresso em evento com data"
+    aliases: ["pagina do evento", "vender ingresso", "vender vaga", "imersao", "presencial"]
+    executor: john-carlton
+    executor_path: "agents/tier-2-executores/john-carlton.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-vendas-evento]"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: semi-deterministica
+    status: a-criar
+    depende_de: pagina-vendas-perpetuo
+    nota: "Gap total. E o tipo exato da reprovacao do founder em 22/08/2026, origem do carta-vs-pagina.md"
+
+  - id: pagina-vendas-tripwire
+    familia: pagina
+    nome: "Pagina de vendas tripwire"
+    quando: "Produto de entrada, preco baixo, decisao rapida"
+    aliases: ["tripwire", "isca paga", "produto de entrada", "book landing"]
+    variantes: [book-landing-page]
+    executor: david-ogilvy
+    executor_path: "agents/tier-2-executores/david-ogilvy.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-vendas-tripwire]"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: deterministica
+    status: a-criar
+    depende_de: pagina-vendas-geral
+    nota: "Versao curta do tipo 2. Custo baixo de derivar"
+
+  - id: pagina-captura
+    familia: pagina
+    nome: "Pagina de captura"
+    quando: "Trocar contato por promessa de entrega"
+    aliases: ["captura", "squeeze", "opt-in", "lead magnet", "isca digital"]
+    variantes: [curta, longa]
+    executor: stefan-georgi
+    executor_path: "agents/tier-1-estrategistas/stefan-georgi.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-captura]"
+    checklists: [landing-page-quality, estrutura-pagina]
+    execucao: deterministica
+    status: quase-pronto
+    nota: "Melhor tipo do squad hoje. Task mais template em PT. Falta consolidar com funnel/design-squeeze-page.md"
+
+  - id: pagina-registro-evento
+    familia: pagina
+    nome: "Pagina de registro de evento"
+    quando: "Inscricao em webinar, desafio ou summit"
+    aliases: ["inscricao", "registro", "webinar", "desafio", "summit", "aula ao vivo"]
+    variantes: [webinar, desafio, summit]
+    executor: stefan-georgi
+    executor_path: "agents/tier-1-estrategistas/stefan-georgi.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-registro-evento]"
+    checklists: [landing-page-quality, estrutura-pagina]
+    execucao: deterministica
+    status: a-extrair
+    nota: "Existe escondida dentro de create-landing-page.md fase 2 tipo 2, com 7 secoes"
+
+  - id: pagina-lista-espera
+    familia: pagina
+    nome: "Pagina de lista de espera"
+    quando: "Capturar interesse antes de abrir carrinho"
+    aliases: ["lista de espera", "waitlist", "aviso de abertura"]
+    executor: stefan-georgi
+    executor_path: "agents/tier-1-estrategistas/stefan-georgi.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-lista-espera]"
+    checklists: [landing-page-quality, estrutura-pagina]
+    execucao: deterministica
+    status: a-extrair
+    depende_de: pagina-captura
+    nota: "Existe dentro de create-landing-page.md fase 2"
+
+  - id: pagina-aplicacao
+    familia: pagina
+    nome: "Pagina de aplicacao"
+    quando: "High-ticket com filtro. Fluxo: landing, formulario, confirmacao, call"
+    aliases: ["aplicacao", "candidatura", "application", "concorrer a vaga", "processo seletivo"]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-aplicacao]"
+    checklists: [estrutura-pagina]
+    execucao: semi-deterministica
+    status: a-plugar-e-traduzir
+    nota: "Duas metades existem separadas: templates/application-page-tmpl.md (361 l., PT, orfao) e funnel/design-application-page.md (312 l., EN, fluxo). Unir"
+
+  - id: pagina-diagnostico-sessao
+    familia: pagina
+    nome: "Pagina de diagnostico ou sessao estrategica"
+    quando: "Vender uma sessao de diagnostico, nao um produto"
+    aliases: ["diagnostico", "sessao estrategica", "call de valor", "consultoria gratuita", "analise do negocio"]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-diagnostico-sessao]"
+    checklists: [carta-vs-pagina, estrutura-pagina]
+    execucao: aberta
+    status: a-criar
+    prioridade: maxima
+    depende_de: pagina-aplicacao
+    nota: "Gap total, zero artefato. O founder citou nominalmente. Base de partida: pagina-aplicacao, com o objeto sendo a sessao e nao o programa"
+
+  - id: pagina-vsl
+    familia: pagina
+    nome: "Pagina de VSL"
+    quando: "Pagina cujo corpo e o video"
+    aliases: ["vsl", "video de vendas", "pagina do video"]
+    executor: jon-benson
+    executor_path: "agents/tier-2-executores/jon-benson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-vsl]"
+    checklists: [estrutura-pagina]
+    execucao: semi-deterministica
+    status: a-formalizar
+    nota: "section-contract.md ja reconhece o tipo vsl-page com 4 keys. Falta arquivo de estrutura"
+
+  - id: pagina-vendas-oto
+    familia: pagina
+    nome: "Pagina de OTO ou upsell"
+    quando: "Oferta unica pos-compra"
+    aliases: ["oto", "upsell", "oferta unica", "one time offer", "all-access pass"]
+    variantes: [all-access-pass]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-vendas-oto]"
+    checklists: [estrutura-pagina]
+    execucao: deterministica
+    status: a-consolidar
+    nota: "copy/create-upsell-page.md (PT, foco oferta) mais funnel/design-oto-page.md (EN, foco layout). Complementares"
+
+  - id: pagina-downsell
+    familia: pagina
+    nome: "Pagina de downsell"
+    quando: "Recuperar quem recusou o OTO"
+    aliases: ["downsell", "segunda chance", "oferta reduzida"]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-downsell]"
+    checklists: [estrutura-pagina]
+    execucao: deterministica
+    status: a-extrair
+    nota: "create-downsell-page.md Steps 4.1 e 4.2. E a estrutura mais completa e explicita do Copy hoje"
+
+  - id: pagina-obrigado
+    familia: pagina
+    nome: "Pagina de obrigado"
+    quando: "Receber e encaminhar apos conversao"
+    aliases: ["obrigado", "thank you", "confirmacao", "bridge", "replay"]
+    variantes: [bridge, replay, confirmacao]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-obrigado]"
+    checklists: [estrutura-pagina]
+    execucao: deterministica
+    status: a-extrair
+    nota: "create-thank-you-page.md Step 10 mais template. Existem e estao em PT"
+
+  - id: pagina-comparacao
+    familia: pagina
+    nome: "Pagina de comparacao"
+    quando: "Publico consciente de solucao comparando opcoes"
+    aliases: ["comparacao", "versus", "comparativo", "nos contra eles"]
+    executor: david-ogilvy
+    executor_path: "agents/tier-2-executores/david-ogilvy.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-comparacao]"
+    checklists: [estrutura-pagina]
+    execucao: deterministica
+    status: a-plugar
+    nota: "templates/comparison-page-tmpl.md (296 l.) orfao. E o Comparison Landing que create-sales-page.md promete no awareness 4 e nao entrega"
+
+  - id: pagina-garantia
+    familia: pagina
+    nome: "Pagina de garantia"
+    quando: "Pagina isolada de garantia, linkada da pagina de vendas"
+    aliases: ["garantia", "politica de garantia", "risco zero"]
+    executor: russell-brunson
+    executor_path: "agents/tier-2-executores/russell-brunson.md"
+    estrutura: "[DEPENDÊNCIA NÃO EMPACOTADA: pagina-garantia]"
+    checklists: [estrutura-pagina]
+    execucao: deterministica
+    status: a-plugar
+    nota: "templates/guarantee-page-tmpl.md (512 l.) orfao"
+
+# ---------------------------------------------------------------------------
+# HEADLINE POR TIPO
+#
+# ORIGEM: SINKRA Fase 2 secao 6.3 especificou o formato do bloco. A Fase 4
+# secao 3.3 (camada 2) o declarou como campo obrigatorio da taxonomia e o
+# criterio C5 do criterio de pronto. A Fase 5 verificou que ele nao existia no
+# disco e que a ausencia quebrava a pre-condition da task T04.
+# PREENCHIDO na Fase 6, em 2026-08-23, fechando o gap 3.
+#
+# FORMATO CANONICO, quatro campos por tipo, conforme Fase 4 secao 3.3:
+#   banco, familias_permitidas, familias_proibidas, teste_obrigatorio
+#
+# VOCABULARIO DE FAMILIAS: e o da Fase 2 secao 6.3, nao o dos 10 tipos AWAI.
+# As familias descrevem O QUE A HEADLINE FAZ COM A INFORMACAO, que e o eixo
+# que separa carta de pagina. Os 10 tipos AWAI de headlines-ganchos.md
+# descrevem o angulo retorico, que e outro eixo e nasceu de carta.
+#
+#   promessa-direta      diz o resultado sem rodeio
+#   promessa-com-produto nomeia o produto dentro da promessa
+#   resultado-especifico numero, prazo ou metrica no topo
+#   curiosidade-em-loop  esconde para obrigar a ler, fecha paragrafos depois
+#   negacao-conceitual   "a razao pela qual X nao tem nada a ver com X"
+#
+# FONTES, nada inventado:
+#   Fase 4 secao 3.3, o bloco de quatro campos e as duas familias proibidas
+#   Fase 4 criterio C5: "minimo_aceitavel: familias_proibidas contem
+#     curiosidade-em-loop e negacao-conceitual"
+#   frameworks/torriani/headlines-ganchos.md linhas 30 a 51: origem_de_peca
+#     carta, destino_ausente, familias_proibidas_em_pagina
+#   checklists/carta-vs-pagina.md: teste dos 3 segundos, nome do produto no topo
+#
+# A REGRA MINIMA, valida para os 16 tipos, sem excecao:
+#   curiosidade-em-loop e negacao-conceitual sao proibidas em TODA pagina.
+#   A headline reprovada pelo founder em 22/08/2026 era negacao-conceitual.
+#   A proibicao por declaracao mata a reprovacao na origem, sem depender de
+#   julgamento no gate.
+#
+# BANCO: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina] ainda NAO EXISTE (camada 3, Fase 6).
+#   Enquanto nao existir, o arsenal de carta atende pagina por emprestimo, e a
+#   familia da formula clonada precisa ser declarada na saida (V7). O campo
+#   banco ja aponta para o alvo, nao para o emprestimo, porque o alvo e o
+#   destino declarado e o emprestimo e degradacao temporaria.
+# ---------------------------------------------------------------------------
+
+headline_por_tipo:
+
+  regra_global:
+    familias_proibidas_em_toda_pagina: [curiosidade-em-loop, negacao-conceitual]
+    teste_obrigatorio: "checklists/carta-vs-pagina.md"
+    nome_do_produto: "entra na headline. Esconder o produto no topo funciona em carta, em pagina e so custo"
+    lastro: "clone de campea real, com a tabela de fidelidade estrutural fechada elemento a elemento"
+    banco_alvo: "[DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]"
+    banco_de_emprestimo: "frameworks/torriani/headlines-ganchos.md, sob origem_de_peca carta"
+    veto: "V7. Headline sem declaracao de qual campea real foi clonada e headline inventada"
+
+  tipos:
+
+    pagina-vendas-perpetuo:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, promessa-com-produto, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Trafego continuo e frio. As tres permitidas servem igualmente, a escolha e do executor"
+
+    pagina-vendas-geral:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Venda direta sem contexto de lancamento nem evento. O tipo mais nu da familia"
+
+    pagina-vendas-lancamento:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Publico ja consumiu os PLCs e conhece o produto pelo nome. A headline fecha, nao apresenta"
+
+    pagina-vendas-evento:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto, promessa-direta]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "E o tipo exato da reprovacao de 22/08/2026, e a headline reprovada era negacao-conceitual. O objeto tem nome, data e lugar, e os tres entram no topo"
+
+    pagina-vendas-tripwire:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Preco baixo e decisao rapida. Headline curta, com o objeto e o preco. Qualquer forma que peca leitura mata a conversao"
+
+    pagina-captura:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "A promessa e a entrega do material, nao a compra. promessa-com-produto fora: o produto nao esta em jogo aqui, a isca esta"
+
+    pagina-registro-evento:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, promessa-com-produto]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "A headline diz o evento, a data e o que a pessoa aprende. Data e lugar sao parte do objeto"
+
+    pagina-lista-espera:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "O objeto e o aviso de abertura de um produto nomeado. Sem o nome do produto a lista de espera nao tem do que esperar"
+
+    pagina-aplicacao:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "High-ticket com filtro. A headline nomeia o programa e qualifica. promessa-direta sozinha atrai volume errado"
+
+    pagina-diagnostico-sessao:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      status_da_regra: provisorio
+      nota: "O objeto vendido e a conversa, nao o programa, entao promessa-com-produto fora. Provisorio: o tipo nao tem estrutura no disco. Revisar quando a estrutura existir"
+
+    pagina-vsl:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta, resultado-especifico, curiosidade-em-loop]
+      familias_proibidas: [negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      excecao_declarada: "curiosidade-em-loop liberada, unica excecao dos 16"
+      razao_da_excecao: "O corpo da pagina e o video, e o video fecha o loop na propria pagina. Em todo outro tipo o loop fica aberto e a pessoa sai. Ainda assim passa pelo teste dos 3 segundos: a pessoa precisa saber por que apertar play"
+
+    pagina-vendas-oto:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Pos-compra, most-aware, atencao de segundos. A headline nomeia a oferta unica e o que ela adiciona ao que a pessoa acabou de comprar"
+
+    pagina-downsell:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Segunda chance depois de um nao. A headline reconhece a recusa e nomeia o objeto reduzido. Mesmo regime do OTO"
+
+    pagina-obrigado:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual, resultado-especifico]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Nao vende, recebe e encaminha. A headline confirma o que aconteceu e diz o proximo passo. resultado-especifico proibido aqui porque promete o que a pagina nao entrega"
+
+    pagina-comparacao:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-com-produto, resultado-especifico]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Publico solution-aware comparando opcoes. A headline nomeia os dois lados da comparacao. O risco proprio deste tipo e escorregar para negacao-conceitual ao marcar a diferenca, e por isso ela continua proibida"
+
+    pagina-garantia:
+      banco: [DEPENDÊNCIA NÃO EMPACOTADA: swipe-file-headlines-pagina]
+      familias_permitidas: [promessa-direta]
+      familias_proibidas: [curiosidade-em-loop, negacao-conceitual, resultado-especifico]
+      teste_obrigatorio: checklists/carta-vs-pagina.md
+      nota: "Pagina de um assunto so, linkada da pagina de vendas. A headline nomeia a garantia e o prazo. Nao ha o que descobrir"
+
+# ---------------------------------------------------------------------------
+# ELEMENTOS: nao sao pagina autonoma
+# ---------------------------------------------------------------------------
+
+elementos:
+  - id: order-bump
+    o_que_e: "Componente dentro do checkout"
+    task_existente: "tasks/criacao/create-order-bump.md"
+    nota: "A Fase 1 misturava bump com checkout. A Fase 2 separou: bump e elemento, nao pagina"
+
+# ---------------------------------------------------------------------------
+# EXECUTORES: 6 agentes para 16 tipos, um cada
+# ---------------------------------------------------------------------------
+
+executores:
+  russell-brunson: {tipos: 6, path: "agents/tier-2-executores/russell-brunson.md"}
+  stefan-georgi:   {tipos: 3, path: "agents/tier-1-estrategistas/stefan-georgi.md"}
+  david-ogilvy:    {tipos: 3, path: "agents/tier-2-executores/david-ogilvy.md"}
+  john-carlton:    {tipos: 2, path: "agents/tier-2-executores/john-carlton.md"}
+  jeff-walker:     {tipos: 1, path: "agents/tier-2-executores/jeff-walker.md"}
+  jon-benson:      {tipos: 1, path: "agents/tier-2-executores/jon-benson.md"}
+
+gate_de_formato:
+  executor: claude-hopkins
+  path: "agents/tier-3-otimizadores/claude-hopkins.md"
+  razao: "Ele mesmo se declara auditor final antes de publicar. Tier 3. Fecha o buraco que a Fase 1 nomeou: nao existe gate que pergunte, isso e uma pagina?"
+
+gary-halbert:
+  realocado_para: carta-vendas
+  razao: "agents/tier-2-executores/gary-halbert.md linha 69 descreve o comando *sales-page como 'Criar carta de vendas completa'. A causa raiz da reprovacao esta escrita dentro do proprio agente"
+  excecao: "Pode escrever pagina sob trava de formato mais gate do Hopkins, nunca por default"
+
+# ---------------------------------------------------------------------------
+# ORDEM DOS GATES: formato antes de voz (SINKRA Fase 3, inegociavel)
+# ---------------------------------------------------------------------------
+
+ordem_dos_gates:
+  - "0. carta-vs-pagina.md: e pagina mesmo?"
+  - "1. estrutura-pagina.md Gate 1: qual tipo?"
+  - "2. estrutura-pagina.md Gate 2: estrutura cumprida, section keys marcadas?"
+  - "3. estrutura-pagina.md Gates 3 a 5: topo, headline clonada, mecanismo com bloco proprio"
+  - "4. anti-IA: validate-anti-ia.sh, anti-ia-structural.mjs, critico LLM"
+  - "5. Oraculo Torriani: 10/10 ou refaz"
+
+razao_da_ordem: |
+  Uma carta perfeita na voz do Torriani passa 10/10 no Oraculo e continua sendo a
+  peca errada. Validar voz antes de validar formato e gastar rigor no lugar errado.

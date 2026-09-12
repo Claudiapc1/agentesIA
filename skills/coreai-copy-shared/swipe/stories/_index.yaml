@@ -1,0 +1,18 @@
+# Origin Stories & Case Studies
+# Target: 50-100 entries
+# Narrativas de fundacao e estudos de caso anotados
+
+category: stories
+target_count: "50-100"
+description: "Origin stories anotadas e templates de case study"
+created: 2026-03-09T00:00:00-03:00
+entries: []
+tags: []
+
+# Quality distribution (target)
+quality_distribution:
+  5_star: "10%"
+  4_star: "30%"
+  3_star: "40%"
+  2_star: "15%"
+  1_star: "5%"

@@ -1,0 +1,54 @@
+name: "Positioning First Principle"
+version: "1.0.0"
+source:
+  book: "How to Create Advertising That Sells (1972)"
+  author: "David Ogilvy"
+  category: "Strategic Foundation"
+description: >
+  O efeito do seu advertising nas vendas depende mais do posicionamento
+  do que de qualquer outra decisão. Posicionamento deve ser decidido
+  ANTES do advertising ser criado.
+
+principle: "Positioning is the most important decision in advertising."
+
+positioning_questions:
+  primary:
+    - "What position in the consumer's mind do you want to own?"
+    - "Who are the competitors?"
+    - "What is the meaningful difference?"
+  examples:
+    schweppes: "Should you position Schweppes as a soft drink or as a mixer?"
+    dove: "Should you position Dove as a product for dry skin or as a product which gets hands really clean?"
+
+psychological_segmentation:
+  insight: >
+    Good agencies position for demographic segments. Great agencies position
+    for PSYCHOLOGICAL segments of the market.
+  example:
+    brand: "Mercedes-Benz"
+    positioning: "For non-conformists who scoff at status symbols"
+    why: "Psychological segment, not demographic"
+
+positioning_process:
+  steps:
+    - "Research the product deeply"
+    - "Research competitors and their positions"
+    - "Identify psychological segment"
+    - "Find the meaningful difference"
+    - "Test positioning before creative"
+    - "THEN create the advertising"
+
+positioning_statement_template: >
+  For [psychological segment] who [behavior/belief],
+  [brand] is the [category] that [unique benefit]
+
+application:
+  when: "Before any creative work begins - positioning FIRST"
+  warning: "The results of your campaign depend less on how you write your advertising than on how your product is positioned"
+
+common_mistakes:
+  - "Writing copy before positioning is defined"
+  - "Positioning for demographics only, ignoring psychographics"
+  - "Changing positioning frequently"
+  - "Copying competitor's positioning"
+  - "Positioning that doesn't differentiate"

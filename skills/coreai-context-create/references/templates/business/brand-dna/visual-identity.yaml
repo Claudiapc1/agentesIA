@@ -1,0 +1,46 @@
+# ContextOS - Visual Identity
+# Preenchido manualmente ou via *setup-design-system
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+logo:
+  primary: null       # Path ou descricao
+  secondary: null
+  icon: null
+  usage_rules: null
+
+colors:
+  primary:
+    hex: null
+    name: null
+    usage: null       # Onde usar (CTAs, headers, etc)
+  secondary:
+    hex: null
+    name: null
+    usage: null
+  accent:
+    hex: null
+    name: null
+    usage: null
+  neutral:
+    light: null
+    dark: null
+  background:
+    primary: null
+    secondary: null
+
+typography:
+  heading_font: null
+  body_font: null
+  accent_font: null
+  scale: null         # Escala tipografica (ex: 1.25 major third)
+
+imagery:
+  style: null         # Ex: fotografia real, ilustracao, minimalista
+  mood: null          # Ex: vibrante, sereno, energetico
+  avoid: null         # O que evitar em imagens
+
+metadata:
+  status: INCOMPLETE

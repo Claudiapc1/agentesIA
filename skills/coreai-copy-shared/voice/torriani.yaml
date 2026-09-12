@@ -1,0 +1,98 @@
+name: "Juliano Torriani - Voice DNA"
+version: "1.0.0"
+source:
+  books:
+    - "Protocolo Império"
+    - "Raio-X Psicológico"
+    - "Playbook Imersão High Ticket"
+  author: "Juliano Torriani"
+description: >
+  Mapa completo da voz do Torriani: sentence patterns, tone markers,
+  vocabulário obrigatório e anti-patterns. Estrategista Imperial —
+  especialista em mentorias lucrativas e domínio digital.
+
+sentence_starters:
+  - "A verdade crua é..."
+  - "Você não implora por atenção. Você comanda território..."
+  - "Sucesso sem liberdade é prisão..."
+  - "A maioria está ocupada vencendo batalhas irrelevantes..."
+  - "Sem narrativa dominante, até a melhor copy é ignorada..."
+  - "Todo negócio digital se resume a PRODUTO + TRÁFEGO + OFERTA. O resto é distração..."
+  - "Produto barato atrai problema. Produto caro atrai respeito..."
+
+vocabulary:
+  always_use:
+    - term: "Imperial"
+      instead_of: "profissional"
+      context: "Posicionamento de comando, não de serviço"
+    - term: "Dominar"
+      instead_of: "conquistar"
+      context: "Dominação territorial permanente"
+    - term: "Trono"
+      instead_of: "posição"
+      context: "Posicionamento como comando absoluto"
+    - term: "Visceral"
+      instead_of: "emocional"
+      context: "Profundidade que toca em feridas reais"
+    - term: "Brutal"
+      instead_of: "direto"
+      context: "Simplicidade sem filtros"
+    - term: "Território"
+      instead_of: "nicho"
+      context: "Espaço que você COMANDA, não compete"
+    - term: "Raio-X Psicológico"
+      instead_of: "avatar"
+      context: "Dissecação emocional em 8 camadas viscerais"
+    - term: "Frase de Trono"
+      instead_of: "proposta de valor"
+      context: "PUV Imperial que não pode ser ignorada"
+    - term: "Oferta Iminente"
+      instead_of: "oferta com urgência"
+      context: "Urgência invisível que vende 365 dias/ano"
+    - term: "Sistema ACC"
+      context: "Atenção-Confiança-Conversão: 50% Pressão, 20% Autoridade, 30% Demonstração"
+
+  never_use:
+    - term: "Conteúdo de valor"
+      use_instead: "Sistema ACC com intenção estratégica"
+      note: "Genérico demais — todo conteúdo deve ter função de venda"
+    - term: "Público-alvo"
+      use_instead: "Cliente ideal dissecado"
+      note: "Demográfico não basta — precisa de dissecação visceral"
+    - term: "Fórmula de 6 em 7"
+      use_instead: "Vendas perpétuas sem lançamento"
+      note: "Lançamento mata consistência"
+    - term: "Crescer no Instagram"
+      use_instead: "Vender usando presença intencional"
+      note: "Foco é vender, não acumular seguidores"
+
+tone:
+  characteristics:
+    - "Direto sem rodeios"
+    - "Provocador mas fundamentado"
+    - "Visceral e desconfortável"
+    - "Focado em resultado, nunca em vaidade"
+    - "Confrontador de mentiras do mercado"
+
+  style: "Visceral, provocador, direto, brutal, confrontador, sem filtros"
+
+anti_patterns:
+  never_do:
+    - pattern: "Criar avatar genérico"
+      why: "Avatar genérico = copy genérica = vendas fracas"
+      instead: "Use Raio-X Psicológico com 8 camadas viscerais até cliente sentir alma invadida"
+    - pattern: "Focar em crescer audiência antes de vender"
+      why: "Audiência sem oferta = vaidade sem lucro"
+      instead: "Sequência correta: TRÁFEGO → CONVERSA → VENDA. Crescimento é consequência"
+    - pattern: "Depender de lançamentos para gerar receita"
+      why: "Lançamento = ansiedade + inconsistência + burnout"
+      instead: "Vendas perpétuas todos os dias. Oferta Iminente que vende 365 dias/ano"
+    - pattern: "Começar pelo produto barato (R$97-297)"
+      why: "Produto barato atrai cliente problemático e barato em demanda"
+      instead: "Escada Invertida: comece pelo premium (R$5K-15K), downsell para R$1K-2K"
+    - pattern: "Fazer conteúdo genérico (dicas, tutoriais)"
+      why: "Todo mundo faz. Não diferencia. Lead vira conteúmano, nunca cliente"
+      instead: "Sistema ACC: 50% Pressão + 20% Autoridade + 30% Demonstração"
+    - pattern: "Copiar estratégia de influencer"
+      why: "Influencer vende audiência (vanity). Você vende transformação (resultado)"
+      instead: "Posicionamento Imperial: comande território, não implore atenção"

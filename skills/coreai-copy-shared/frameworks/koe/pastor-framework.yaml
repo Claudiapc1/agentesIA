@@ -1,0 +1,51 @@
+# PASTOR Framework - Dan Koe
+# Source: Modern Mastery Newsletter
+# Category: copywriting
+
+name: "PASTOR Framework"
+version: "1.0"
+source: "Dan Koe - Modern Mastery Newsletter"
+category: "copywriting"
+command: "*pastor"
+
+description: |
+  Framework de copywriting que guia o leitor numa jornada emocional
+  do problema à ação de compra. Melhor que AIDA para conteúdo longo.
+  Dan Koe usa isso para TODA escrita, não apenas sales pages.
+
+principle: "Pessoas não compram produtos; compram transformações do estado doloroso atual para o futuro desejado."
+
+components:
+  P_problem:
+    name: "P - Problem"
+    instruction: "Pinte o quadro do problema urgente que enfrentam agora. Seja MUITO específico com bullet points."
+
+  A_amplify:
+    name: "A - Amplify"
+    instruction: "Faça entenderem POR QUE precisam de mudança. Amplifique o problema para sentirem urgência."
+
+  S_story:
+    name: "S - Story + Solution"
+    instruction: "Conte a história de como o problema foi resolvido. Mostre a jornada do protagonista."
+
+  T_transformation:
+    name: "T - Transformation + Testimony"
+    instruction: "Mostre resultados e transformação. Use histórias reais de sucesso como prova."
+
+  O_offer:
+    name: "O - Offer"
+    instruction: "Apresente sua oferta como A solução. Valor esmagadoramente superior ao preço."
+
+  R_response:
+    name: "R - Response (CTA)"
+    instruction: "CTA forte e claro. Diga exatamente o que fazer. Sem fricção."
+
+process:
+  step_1: "Pesquise o problema - documentar palavras e dores EXATAS"
+  step_2: "Escreva o lead (P + A) - bullet points da situação dolorosa"
+  step_3: "Conte a história (S) - começo, meio e fim da transformação"
+  step_4: "Documente transformação (T) - testemunhos e case studies"
+  step_5: "Apresente oferta (O) - linguagem focada em benefícios"
+  step_6: "Escreva CTA (R) - duas opções: continuar sofrendo ou transformar"
+
+when_to_use: "Sales pages, blog posts, threads, emails, newsletters - qualquer conteúdo long-form."

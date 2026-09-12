@@ -1,0 +1,69 @@
+name: "Russell Brunson - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "DotCom Secrets (2015)"
+    - "Expert Secrets (2017)"
+    - "Traffic Secrets (2020)"
+  author: "Russell Brunson"
+description: >
+  Frases icônicas do Russell Brunson organizadas por categoria, com fonte e contexto de uso.
+
+funnel_related:
+  - phrase: "You're one funnel away"
+    source: "DotCom Secrets"
+    context: "Motivacional - sempre existe possibilidade"
+  - phrase: "Funnel hack first"
+    source: "DotCom Secrets"
+    context: "Metodologia - estude antes de criar"
+  - phrase: "Entrepreneur by birth, Funnel Hacker by choice"
+    source: "Russell Brunson"
+    context: "Identidade da comunidade ClickFunnels"
+  - phrase: "The money is in the follow-up funnel"
+    source: "DotCom Secrets"
+    context: "Onde realmente se ganha dinheiro"
+
+offer_related:
+  - phrase: "Hook, Story, Offer"
+    source: "Expert Secrets"
+    context: "Estrutura fundamental de toda comunicação de vendas"
+  - phrase: "Stack the value"
+    source: "Expert Secrets"
+    context: "Construir ofertas irresistíveis com bônus empilhados"
+  - phrase: "Break even on the front-end, profit on the back-end"
+    source: "DotCom Secrets"
+    context: "Filosofia de aquisição de clientes"
+
+storytelling_related:
+  - phrase: "Your story is your superpower"
+    source: "Expert Secrets"
+    context: "Poder do Attractive Character"
+  - phrase: "Where's the Epiphany Bridge?"
+    source: "Expert Secrets"
+    context: "Verificar história de transformação"
+  - phrase: "What's the hook?"
+    source: "Expert Secrets"
+    context: "Primeira pergunta em qualquer review de copy"
+
+strategy_related:
+  - phrase: "Who's your Dream 100?"
+    source: "Traffic Secrets"
+    context: "Estratégia de tráfego e parcerias"
+  - phrase: "People don't want IMPROVEMENT offers - they want NEW OPPORTUNITIES."
+    source: "Expert Secrets"
+    context: "Nova oportunidade vs melhoria"
+
+value_ladder:
+  - phrase: "The book is the ENTRANCE, not the destination."
+    source: "DotCom Secrets"
+    context: "Book funnel como porta de entrada"
+  - phrase: "The objective is not to profit on the book, it's to ACQUIRE the customer."
+    source: "DotCom Secrets"
+    context: "Free + Shipping philosophy"
+
+origin_story:
+  - phrase: "When I started, I was selling a DVD about how to make the perfect potato gun from my college apartment."
+    source: "Russell Brunson"
+    context: "História de origem - começar com produto simples"
+
+throne_phrase: "You're one funnel away"

@@ -1,0 +1,43 @@
+# Framework: Copy Intensification
+# Author: Eugene Schwartz
+# Source: Breakthrough Advertising (1966), Chapter 7
+# Command: *intensify
+
+name: "Copy Intensification Framework"
+category: "copy_enhancement"
+origin: "Eugene Schwartz - Breakthrough Advertising"
+command: "*intensify"
+
+principle: |
+  "Intensificação é o processo de pegar um desejo ou benefício
+  existente e amplificá-lo até que o prospect SINTA a transformação
+  antes mesmo de comprar."
+
+seven_step_process:
+  step_1: "Present core satisfaction (benefício central)"
+  step_2: "Dramatize claim in action (mostre funcionando)"
+  step_3: "Add documentation/proof (credibilize)"
+  step_4: "Broaden benefits (expanda consequências)"
+  step_5: "Add universality (todos podem)"
+  step_6: "Escalate importance (aumente stakes)"
+  step_7: "Show immediacy (urgência temporal)"
+
+example:
+  original: "Este curso ensina inglês"
+  intensified: |
+    "Em 30 dias, você estará conversando com nativos sem medo.
+    Imagine a cara do seu chefe quando você fechar aquele contrato
+    internacional que ninguém mais conseguia. Seus filhos vão
+    orgulhar de você. E isso começa HOJE - a primeira aula é liberada
+    no momento da sua inscrição."
+
+application: |
+  PROCESSO DE INTENSIFICAÇÃO:
+
+  1. Identifique o benefício central
+  2. Dramatize em ação (mostre funcionando)
+  3. Adicione prova/documentação
+  4. Expanda consequências positivas
+  5. Adicione universalidade ("qualquer pessoa pode")
+  6. Aumente stakes ("o que está em jogo")
+  7. Crie urgência temporal

@@ -1,0 +1,68 @@
+# AIDA - Halbert Style
+# Extracted from: squads/copy/agents/gary-halbert.md
+# Category: copy_structure
+
+name: "AIDA - Halbert Style"
+category: copy_structure
+origin: "Gary Halbert's interpretation of classic AIDA"
+frequency: "Every piece of copy"
+
+principle: |
+  "AIDA funciona, mas a maioria das pessoas erra porque é tímida demais.
+  Atenção tem que PARAR o leitor. Interesse tem que PRENDER.
+  Desejo tem que criar DOR. Ação tem que ser IRRESISTÍVEL."
+
+stages:
+  attention:
+    name: "Attention (Atenção)"
+    goal: "PARAR o leitor no meio do que está fazendo"
+    halbert_approach:
+      - "Headline que faz leitor parar e dizer 'O QUE?!'"
+      - "Promessa tão específica que não pode ser ignorada"
+      - "Provocação que atinge no coração do problema"
+      - "Curiosidade que não deixa virar a página"
+    mistakes:
+      - "Headlines genéricos ('Economize dinheiro')"
+      - "Promessas vagas ('Melhore sua vida')"
+      - "Muito inteligente, pouco claro"
+
+  interest:
+    name: "Interest (Interesse)"
+    goal: "Fazer impossível parar de ler"
+    halbert_approach:
+      - "História que o leitor se identifica"
+      - "Detalhes específicos que criam vivacidade"
+      - "O 'greased slide' - escorregador de graxa"
+      - "Cada frase faz querer ler a próxima"
+    technique: |
+      "O segredo é fazer cada frase curta.
+      E fazer cada frase fluir para a próxima.
+      Como um escorregador de graxa.
+      Uma vez que você começa, não consegue parar."
+
+  desire:
+    name: "Desire (Desejo)"
+    goal: "Fazer o leitor SENTIR a transformação"
+    halbert_approach:
+      - "Pinte o futuro com detalhes vívidos"
+      - "Faça ele SENTIR a vida com o produto"
+      - "Mostre consequências de não ter"
+      - "Use prova social específica"
+    intensification:
+      - "Benefícios primários (resolve problema principal)"
+      - "Benefícios secundários (vantagens não óbvias)"
+      - "Benefícios terciários (status, admiração)"
+
+  action:
+    name: "Action (Ação)"
+    goal: "Fazer agir AGORA, não depois"
+    halbert_approach:
+      - "CTA específico e claro"
+      - "Urgência genuína (não falsa)"
+      - "Risco removido (garantias fortes)"
+      - "Próximo passo absurdamente fácil"
+    urgency_tactics:
+      - "Quantidade limitada (genuína)"
+      - "Preço subindo em data específica"
+      - "Bônus expirando"
+      - "Consequência de não agir"

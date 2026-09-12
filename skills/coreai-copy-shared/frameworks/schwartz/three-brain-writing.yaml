@@ -1,0 +1,43 @@
+# Framework: Three Brain Writing
+# Author: Eugene Schwartz
+# Source: Breakthrough Advertising - Applied Behavioral Psychology
+# Command: *brain
+
+name: "Three Brain Writing"
+category: "psychology"
+origin: "Eugene Schwartz - Applied Behavioral Psychology"
+
+principle: |
+  "Escreva para o cérebro chimpanzé, simples, diretamente.
+  A lógica vem depois para justificar a decisão emocional."
+
+three_brains:
+  reptilian:
+    description: "Sobrevivência, medo, desejo sexual"
+    triggers: ["Perigo", "Sexo", "Comida", "Autopreservação"]
+    copy_approach: "Urgência, escassez, medo de perder"
+
+  mammalian:
+    description: "Emoções, conexão social, status"
+    triggers: ["Pertencimento", "Admiração", "Amor", "Inveja"]
+    copy_approach: "Histórias emocionais, prova social, status"
+
+  neocortex:
+    description: "Lógica, racionalização"
+    triggers: ["Dados", "Comparações", "Justificativas"]
+    copy_approach: "Fornecer razões para justificar decisão já tomada"
+
+writing_rules:
+  - "Frases de máximo 20 palavras"
+  - "Palavras de máximo 3 sílabas (quando possível)"
+  - "Uma ideia por parágrafo"
+  - "Conectores simples: e, mas, porque, então"
+
+application: |
+  ESCRITA PARA OS 3 CÉREBROS:
+
+  1. REPTILIANO: Capte atenção com sobrevivência/perigo/sexo
+  2. MAMÍFERO: Conecte emocionalmente com histórias e status
+  3. NEOCÓRTEX: Forneça justificativas lógicas DEPOIS da decisão emocional
+
+  Lembre: Emoção decide, lógica justifica.

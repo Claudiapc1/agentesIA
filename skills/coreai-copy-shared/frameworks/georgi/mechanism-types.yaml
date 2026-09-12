@@ -1,0 +1,95 @@
+name: "Mechanism Types"
+version: "1.0"
+source: "Stefan Georgi - RMBC Method"
+description: "Tipos de mecanismos unicos e quando usar cada um. O mecanismo e o 'veiculo' que entrega o resultado e torna a promessa acreditavel."
+
+content:
+  definition: |
+    A mechanism is the "vehicle" that delivers the result.
+    It's not WHAT the product does (the benefit).
+    It's HOW the product does it (the method/system/process).
+    The mechanism makes the benefit BELIEVABLE.
+
+  types:
+    scientific_mechanism:
+      name: "Scientific/Biological"
+      description: "Based on a physiological or scientific process"
+      example: "The enzyme that breaks down visceral fat"
+      when_to_use: "Health, fitness, anti-aging products"
+
+    discovery_mechanism:
+      name: "Discovery/Breakthrough"
+      description: "Based on a new finding or research"
+      example: "The compound scientists accidentally discovered"
+      when_to_use: "When you have legitimate new research"
+
+    system_mechanism:
+      name: "System/Method"
+      description: "Based on a step-by-step process"
+      example: "The 3-step 'Wealth Trigger' system"
+      when_to_use: "Business, financial, educational products"
+
+    ingredient_mechanism:
+      name: "Ingredient/Component"
+      description: "Based on a specific ingredient or element"
+      example: "The 'miracle molecule' from a high-altitude plant"
+      when_to_use: "Supplements, skincare, health products"
+
+    story_mechanism:
+      name: "Origin Story"
+      description: "Based on where/how it was discovered"
+      example: "The secret Japanese villagers have used for 1,000 years"
+      when_to_use: "When you have a compelling discovery story"
+
+    contrarian_mechanism:
+      name: "Contrarian/Reversal"
+      description: "Based on doing the OPPOSITE of conventional wisdom"
+      example: "Why eating MORE fat burns MORE fat"
+      when_to_use: "When conventional approaches have failed your audience"
+
+  strength_test:
+    questions:
+      - "Is it UNIQUE? (Have they heard this before?)"
+      - "Is it BELIEVABLE? (Does it make scientific/logical sense?)"
+      - "Is it SIMPLE? (Can you explain it in one sentence?)"
+      - "Is it SPECIFIC? (Does it have a name, number, or specific detail?)"
+      - "Is it OWNABLE? (Can only YOUR product use this mechanism?)"
+    scoring:
+      5_yeses: "Strong mechanism - proceed with confidence"
+      3_4_yeses: "Decent mechanism - consider strengthening"
+      1_2_yeses: "Weak mechanism - go back to research"
+
+  naming_principles:
+    - "Give it a proprietary name (adds perceived value)"
+    - "Include a number if possible (adds specificity)"
+    - "Use sensory/active words (creates mental image)"
+    - "Keep it short (3-4 words ideal)"
+
+  naming_examples:
+    - "The 'Metabolic Reset' Protocol"
+    - "The '3-Second Stress Flush' Technique"
+    - "The 'Compound Effect' System"
+    - "The 'Neural Pathway Rewiring' Method"
+
+  output_example:
+    task: "Create mechanism for weight loss supplement"
+    input: |
+      Product: Natural weight loss supplement with green tea extract
+      Market: Women 35-55 who've tried multiple diets
+      Problem: Nothing has worked long-term
+    output: |
+      Mechanism Name: "The Metabolic Reset Protocol"
+
+      One-Sentence Explanation:
+      "The Metabolic Reset Protocol works by reactivating your body's dormant fat-burning
+      enzyme (AMPK) that gets 'switched off' after years of yo-yo dieting - which is why
+      nothing else has worked until now."
+
+      5-Point Strength Test:
+      UNIQUE: "AMPK reactivation" not commonly used in market
+      BELIEVABLE: Based on real enzyme, science-backed
+      SIMPLE: "Enzyme that got switched off, we switch it back on"
+      SPECIFIC: Named enzyme (AMPK), specific cause (yo-yo dieting)
+      OWNABLE: Proprietary "Reset Protocol" name
+
+      Score: 5/5 - Strong mechanism, proceed to Brief phase

@@ -1,0 +1,99 @@
+# ContextOS - Design Tokens
+# Preenchido manualmente ou extraido de codebase/Figma
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+colors:
+  primitives:
+    # Paleta base
+    - name: null
+      value: null  # hex
+  semantic:
+    primary: null
+    secondary: null
+    accent: null
+    success: null
+    warning: null
+    error: null
+    info: null
+    background:
+      default: null
+      surface: null
+      elevated: null
+    text:
+      primary: null
+      secondary: null
+      muted: null
+      inverse: null
+
+typography:
+  font_families:
+    heading: null
+    body: null
+    mono: null
+  scale:
+    xs: null     # Ex: 12px
+    sm: null     # Ex: 14px
+    base: null   # Ex: 16px
+    lg: null     # Ex: 18px
+    xl: null     # Ex: 24px
+    xxl: null    # Ex: 32px
+    display: null  # Ex: 48px
+  line_heights:
+    tight: null
+    normal: null
+    relaxed: null
+  font_weights:
+    regular: null
+    medium: null
+    semibold: null
+    bold: null
+
+spacing:
+  unit: null  # Ex: 4px, 8px
+  scale:
+    xs: null
+    sm: null
+    md: null
+    lg: null
+    xl: null
+    xxl: null
+
+borders:
+  radius:
+    none: null
+    sm: null
+    md: null
+    lg: null
+    full: null
+  width:
+    thin: null
+    medium: null
+    thick: null
+
+shadows:
+  sm: null
+  md: null
+  lg: null
+  xl: null
+
+breakpoints:
+  mobile: null
+  tablet: null
+  desktop: null
+  wide: null
+
+motion:
+  duration:
+    fast: null
+    normal: null
+    slow: null
+  easing:
+    default: null
+    entrance: null
+    exit: null
+
+metadata:
+  status: INCOMPLETE

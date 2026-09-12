@@ -1,0 +1,181 @@
+name: "Print Ad Structure - Editorial Layout & Long Copy"
+version: "1.0.0"
+source:
+  book: "Ogilvy on Advertising"
+  author: "David Ogilvy"
+  category: "Design & Copywriting"
+description: >
+  Combina o Editorial Layout Principle (ads que parecem conteúdo editorial
+  têm mais leitores) com a Long Copy Doctrine (quanto mais você conta,
+  mais você vende) e os 11 Commandments para campanhas eficazes.
+
+# EDITORIAL LAYOUT
+editorial_layout:
+  principle: "Editorial layouts outperform conventional advertisements."
+
+  why_editorial_works:
+    reader_behavior: "People read magazines for editorial content, not ads"
+    camouflage_effect: "Editorial-looking ads get past 'ad blindness'"
+    credibility: "Editorial layout implies information, not sales pitch"
+
+  layout_rules:
+    typography:
+      - "Use serif fonts (like editorial)"
+      - "Use same font as magazine editorial"
+      - "Avoid ALL CAPS"
+      - "Never set copy in reverse (white on black)"
+    photography:
+      - "Photos sell more than illustrations"
+      - "Captions under photos get 2x readership of body copy"
+      - "Use real-life situations"
+    structure:
+      - "Clean, simple layouts"
+      - "Plenty of white space"
+      - "Subheads to break up text"
+      - "Look like article, not advertisement"
+
+  ogilvy_design_rules:
+    - "Photograph is better than illustration"
+    - "People are attracted to faces of the same sex"
+    - "Captions are very well read"
+    - "Never set copy in reverse"
+    - "Editorial layout supera 'adsy' layout"
+    - "Simplicidade vence"
+
+# LONG COPY DOCTRINE
+long_copy:
+  principle: "The more you tell, the more you sell."
+
+  evidence:
+    - "Direct response tests consistently show long copy outperforms"
+    - "Mercedes-Benz ads with long copy sold more cars"
+    - "Rolls-Royce ad had 719 words and doubled sales"
+  amateur_myth: "Only amateurs use short copy - they think people don't read"
+  professional_truth: "People read what interests them - if interested, they'll read everything"
+
+  when_long_copy_works:
+    - "Product has genuine story to tell"
+    - "Audience is genuinely interested"
+    - "You have FACTS to share"
+    - "High-ticket items (more consideration)"
+    - "Technical products"
+
+  structure:
+    - "Open with benefit in headline"
+    - "First paragraph must hook"
+    - "Use subheads to break up"
+    - "Short paragraphs"
+    - "Include specifics and facts"
+    - "End with clear call to action"
+
+  writing_style:
+    - "Conversational tone"
+    - "Avoid jargon"
+    - "Use 'you' frequently"
+    - "Tell stories"
+    - "Be specific (numbers, names, places)"
+
+  long_copy_structure_template: "Headline -> Hook paragraph -> Subhead -> Facts -> Subhead -> Story -> Subhead -> Proof -> CTA"
+
+  rolls_royce_case:
+    word_count: 719
+    headline: "At 60 miles an hour the loudest noise in this new Rolls-Royce comes from the electric clock"
+    body_facts:
+      - "13 specific quality points"
+      - "Technical details from engineers"
+      - "Specific tests and results"
+    result: "Doubled American sales in one year"
+
+# 11 COMMANDMENTS
+eleven_commandments:
+  source: "Confessions of an Advertising Man, Chapter V"
+  principle: "Great campaigns drive product sales without drawing attention to themselves."
+  commandments:
+    - number: 1
+      commandment: "Start with Big Idea"
+      explanation: "There is no great campaign without a Big Idea"
+    - number: 2
+      commandment: "Demonstrate benefits specifically"
+      explanation: "Show don't tell, with specific facts"
+    - number: 3
+      commandment: "Make product the hero"
+      explanation: "The product should be the star, not the advertising"
+    - number: 4
+      commandment: "Build on research"
+      explanation: "Great campaigns come from mail-order advertisers, department stores, and direct market experience"
+    - number: 5
+      commandment: "No committees for creation"
+      explanation: "Committees can criticise advertisements, but they should never be allowed to create them"
+    - number: 6
+      commandment: "Don't be a bore"
+      explanation: "Nobody was ever bored into buying a product"
+    - number: 7
+      commandment: "Be factual"
+      explanation: "Factual benefits over emotional manipulation"
+    - number: 8
+      commandment: "Charm the customer"
+      explanation: "Involve the customer - talk to her like a human being"
+    - number: 9
+      commandment: "Stay consistent"
+      explanation: "Keep brand personality consistent over years"
+    - number: 10
+      commandment: "Innovate (but test)"
+      explanation: "Start trends instead of following them - but pre-test innovations"
+    - number: 11
+      commandment: "Pursue sales, not awards"
+      explanation: "The pursuit of creative awards seduces creative people from the pursuit of sales"
+
+# 38 PRINCIPLES
+thirty_eight_principles:
+  source: "How to Create Advertising That Sells (1972)"
+  basis: "Based on $1.48 billion worth of advertising and $4.9 million tracking results"
+
+  brand_foundation:
+    - { n: 1, rule: "Your brand image represents 95% of what you have to sell" }
+    - { n: 2, rule: "Maintain consistent messaging across all channels" }
+    - { n: 3, rule: "Define your brand image sharply and document it" }
+    - { n: 4, rule: "Take a long-term view rather than chasing short-term sales" }
+    - { n: 5, rule: "Product positioning is the most important decision" }
+    - { n: 6, rule: "Soft-sell approaches usually fail in the marketplace" }
+    - { n: 7, rule: "Research and positioning must precede creative work" }
+    - { n: 8, rule: "Manufacturers maintaining personality for 20 years gain largest market share" }
+    - { n: 9, rule: "Avoid copying competitors' advertising" }
+    - { n: 10, rule: "Make advertising contemporary but consistent" }
+
+  headlines:
+    - { n: 11, rule: "Headlines between 6-12 words perform best" }
+    - { n: 12, rule: "Include prices and brand names when relevant" }
+    - { n: 13, rule: "Localize headlines whenever possible" }
+    - { n: 14, rule: "Use simple language that promises clear benefits" }
+    - { n: 15, rule: "Headlines should contribute to complete sales story" }
+    - { n: 16, rule: "Headlines help people identify product category" }
+
+  visuals:
+    - { n: 17, rule: "Use real-life demos over artistic shots" }
+    - { n: 18, rule: "Captions under photos get twice as many readers as body copy" }
+    - { n: 19, rule: "Before-and-after demos outperform best" }
+    - { n: 20, rule: "Keep visuals simple and authentic" }
+    - { n: 21, rule: "Animation is less persuasive than live action" }
+    - { n: 22, rule: "Avoid originality gimmicks in commercials" }
+    - { n: 23, rule: "Salvage commercials can be reused effectively" }
+    - { n: 24, rule: "Stand-ups tend to be effective" }
+    - { n: 25, rule: "News is more powerful than slice-of-life" }
+    - { n: 26, rule: "Editorial layouts outperform conventional ads" }
+
+  television:
+    - { n: 27, rule: "Testimonials almost always succeed" }
+    - { n: 28, rule: "On-camera voice beats voice-over" }
+    - { n: 29, rule: "Avoid musical backgrounds - they reduce effectiveness" }
+    - { n: 30, rule: "Keep commercials simple" }
+    - { n: 31, rule: "Celebrity endorsements work if they're natural customers" }
+    - { n: 32, rule: "Avoid free elements that don't contribute to sales" }
+
+  psychology:
+    - { n: 33, rule: "Present factual benefits over emotional manipulation" }
+    - { n: 34, rule: "Make specific, measurable promises" }
+    - { n: 35, rule: "Promise, large promise, is the soul of an advertisement" }
+    - { n: 36, rule: "Deliver promises consistently - strong promises must be both bold and honest" }
+
+  testing:
+    - { n: 37, rule: "Research can help. Look before you leap" }
+    - { n: 38, rule: "Repeat your winners. Readership can increase with repetition - up to five repetitions" }

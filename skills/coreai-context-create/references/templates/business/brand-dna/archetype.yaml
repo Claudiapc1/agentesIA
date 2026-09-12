@@ -1,0 +1,32 @@
+# ContextOS - Brand Archetype
+# Propagado de: context/brand.yaml + context/founder-dna.yaml
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+primary_archetype:
+  name: null          # Ex: O Mentor, O Rebelde, O Heroi, O Criador
+  description: null
+  traits: []
+  shadow_side: null   # O lado negativo do arquetipo
+
+secondary_archetype:
+  name: null
+  blend_ratio: null   # Ex: 70% Mentor / 30% Rebelde
+
+brand_character:
+  if_brand_were_person: null  # Descricao como pessoa
+  speaks_like: null           # Referencia de comunicacao
+  dresses_like: null          # Referencia visual
+  inspires_like: null         # Quem inspira similarmente
+
+story_role:
+  brand_is: null      # O Guia | O Heroi | O Mentor | O Aliado
+  customer_is: null   # O Heroi | O Aprendiz | O Explorador
+
+metadata:
+  source_files:
+    - context/brand.yaml
+    - context/founder-dna.yaml
+  status: INCOMPLETE

@@ -1,0 +1,55 @@
+# One-Person Business System - Dan Koe
+# Source: Modern Mastery / Digital Economics
+# Category: business_model
+
+name: "One-Person Business System"
+version: "1.0"
+source: "Dan Koe - Digital Economics / Modern Mastery"
+category: "business_model"
+command: "*rules"
+
+description: |
+  Sistema para construir negócios de uma pessoa que geram
+  liberdade, realização e independência financeira monetizando
+  sua curiosidade e expertise única.
+
+core_philosophy:
+  - "VOCÊ É O NICHO: Sua interseção única de interesses É sua diferenciação"
+  - "DISTRIBUIÇÃO PRIMEIRO: Construa audiência, depois construa o que quiser"
+  - "SISTEMAS > ESFORÇO: Pessoas compram sistemas que geram resultados"
+  - "ITERAÇÃO É TUDO: Sua primeira versão será imperfeita - esse é o ponto"
+
+pillars:
+  build_distribution:
+    name: "Build Distribution First"
+    description: "Sua marca pessoal é um mecanismo de lead generation incomparável"
+    how:
+      - "Poste conteúdo consistentemente (mesmo imperfeito no início)"
+      - "Use Social Matrix: 60% original, 20% engajamento, 20% networking"
+      - "DMs são como você cresce - mostre interesse genuíno"
+
+  monetize_curiosity:
+    name: "Monetize Your Curiosity"
+    description: "Transforme o que você aprende em produtos digitais"
+    how:
+      - "Documente sua jornada de aprendizado"
+      - "Crie frameworks a partir de suas experiências"
+      - "Empacote conhecimento em produtos escaláveis"
+
+  create_leverage:
+    name: "Create Leverage"
+    description: "Sistemas que trabalham para você 24/7"
+    how:
+      - "Produtos digitais (vendem enquanto você dorme)"
+      - "Conteúdo evergreen (atrai enquanto você cria)"
+      - "Automações (nutrem sem sua presença)"
+
+offer_tiers:
+  premium: "$1K-5K+ (coaching/consulting 1:1)"
+  mid: "$200-500 (cursos e programas)"
+  entry: "$27-97 (ebooks, templates, workshops)"
+
+when_to_use: |
+  Use quando quer construir um negócio que não depende de clientes,
+  chefes ou funcionários. Ideal para especialistas, criadores de
+  conteúdo e consultores que querem monetizar expertise.

@@ -1,0 +1,65 @@
+# Michael Masterson & John Forde — Great Leads
+# Framework: 6 Tipos de Lead por Nível de Consciência
+# Fonte: "Great Leads" (2011, AWAI)
+
+framework:
+  name: "6 Lead Types"
+  authors: ["Michael Masterson", "John Forde"]
+  source: "Great Leads (AWAI, 2011)"
+  principio: "80% do impacto emocional vem dos primeiros 20% da copy (Pareto)"
+  regra_do_um: "1 core message por peça. Múltiplos leads diluem eficácia."
+
+lead_types:
+  - tipo: "Direct Lead"
+    quando_usar: "Audiência Most Aware — já sabe do produto, quer a oferta"
+    awareness: 5
+    descricao: "Vai direto ao ponto. Oferta, preço, benefício principal."
+    exemplo: "Assine agora por R$47/mês e receba acesso imediato a..."
+    copy_length: "100-500 palavras"
+
+  - tipo: "Offer Lead"
+    quando_usar: "Audiência Product Aware — conhece produto, precisa incentivo"
+    awareness: 4
+    descricao: "Lidera com deal especial, desconto, bônus, trial."
+    exemplo: "Nas próximas 48h: teste grátis por 30 dias + 3 bônus exclusivos"
+    copy_length: "500-1000 palavras"
+
+  - tipo: "Promise Lead"
+    quando_usar: "Audiência Solution Aware — sabe que existe solução, não conhece a sua"
+    awareness: 3
+    descricao: "Lidera com benefício principal. Reason-Why Advertising."
+    exemplo: "Descubra como aposentados estão gerando R$5.000/mês sem sair de casa"
+    copy_length: "800-1500 palavras"
+
+  - tipo: "Problem Lead"
+    quando_usar: "Audiência Problem Aware — sente a dor mas não conhece soluções"
+    awareness: 2
+    descricao: "Dramatiza o problema. Agita a dor antes de apresentar solução."
+    exemplo: "Se você acorda às 3h da manhã preocupado com dinheiro, leia isto..."
+    copy_length: "1500-3000 palavras"
+
+  - tipo: "Story Lead"
+    quando_usar: "Audiência parcialmente ciente — precisa de conexão emocional"
+    awareness: "2-3"
+    descricao: "Narrativa demonstra benefício. Leitor se vê na história."
+    exemplo: "João tinha 47 anos e R$327 na conta quando descobriu..."
+    copy_length: "1500-2500 palavras"
+
+  - tipo: "Curiosity/Indirect Lead"
+    quando_usar: "Audiência Unaware — não sabe que tem problema"
+    awareness: 1
+    descricao: "Cria intriga sem revelar o produto. Indireção total."
+    exemplo: "O que 3 senadores sabem sobre seu dinheiro que você não sabe"
+    copy_length: "2000-4000+ palavras"
+
+decision_tree:
+  step_1: "Identifique nível de consciência (Schwartz 1-5)"
+  step_2: "Consulte esta tabela → tipo de lead correspondente"
+  step_3: "Defina copy length pelo awareness level"
+  step_4: "Escreva lead do tipo selecionado"
+  step_5: "Valide: o lead serve a UMA mensagem central? (Rule of One)"
+
+complementos:
+  proclamation_lead: "Declaração bold sem promessa direta — 'Cash If You Die, Cash If You Don't'"
+  velvet_pouch: "Esconde informação → curiosidade. O que está oculto é mais atraente."
+  math_in_leads: "Traduzir valor em R$ — não 'mais rápido' mas '3 semanas em vez de 90 dias = R$X'"

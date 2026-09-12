@@ -1,0 +1,497 @@
+---
+# ============================================================================
+# BANCO DE ÂNGULOS — CONVITE PARA REUNIÃO (Diagnóstico)
+# ============================================================================
+# Dataset reutilizável dos ângulos de abertura, follow-up e remarketing para
+# convidar leads a uma reunião de diagnóstico via WhatsApp 1-a-1.
+# Fonte: engenharia reversa da sequência do time do Érico Rocha (2026),
+# reposicionada para diagnóstico operacional de negócio real (voz Imperial).
+# Usado pelo workflow: workflows/convite-reuniao-diagnostico.md
+# Template de saída: templates/mensagens-convite-reuniao-tmpl.md
+
+metadata:
+  schema: "copy.data.banco_angulos_convite_reuniao"
+  version: "1.0.0"
+  status: "COMPLETE"
+  autor: "Juliano Torriani"
+  last_updated: "2026-07-24"
+  categoria: "convite-reuniao"
+  primeira_aplicacao: "Torriani · Diagnóstico do Negócio (agentes de IA)"
+
+# ----------------------------------------------------------------------------
+# ANATOMIA DA MENSAGEM (3 blocos)
+# ----------------------------------------------------------------------------
+anatomia:
+  bloco_1_gancho: "Abre com o ângulo. Gancho forte que faz o lead parar e se reconhecer. Sem clichê, sem pressão fabricada."
+  bloco_2_contexto: "Contexto ou prova. Explica o problema, dá um número real ou uma prova, mostra que existe outro caminho."
+  bloco_3_cta: "CTA COM CONTEXTO. Nunca só 'agende'. Diz o que a pessoa leva da reunião (o mapa, o que dá pra automatizar com IA) antes de pedir o horário."
+
+# ----------------------------------------------------------------------------
+# REGRAS INVIOLÁVEIS
+# ----------------------------------------------------------------------------
+regras:
+  - "Voz Imperial: direto, sem desespero, posição de quem seleciona (não de quem implora)."
+  - "CTA sempre com contexto: a pessoa ainda não sabe o que é, então o CTA explica o valor."
+  - "PROIBIDO clichê de urgência fabricada: '6 em 7', 'vagas encerrando', 'última chance', 'vou passar pra outra pessoa'."
+  - "Zero travessão, zero emoji (regra de marca Torriani)."
+  - "Todo número vem do proof-bank do cliente. Nada inventado."
+  - "Substituir [Nome] antes de enviar. Uma mensagem por contato, espera resposta, avança."
+  - "Headline/gancho de frase única quando aplicável (sem ponto no meio da promessa)."
+
+# ----------------------------------------------------------------------------
+# GRUPO 1 — ABERTURAS (15 ângulos)
+# ----------------------------------------------------------------------------
+# Cada ângulo é reutilizável. Trocar o produto/oferta e a prova mantém o gancho.
+aberturas:
+  - id: A01
+    angulo: "Convite direto"
+    gatilho: "o que é + convite"
+    nota: "A base de tudo. Apresenta o diagnóstico e convida."
+    mensagem: |
+      Oi [Nome], aqui é o Juliano Torriani.
+
+      Você acompanhou meu conteúdo sobre tirar o dono do operacional e fazer o negócio render mais sem inchar a folha.
+
+      Separei alguns horários pra sentar com empresários e fazer um diagnóstico do negócio: olhar os números reais, onde tá vazando tempo e dinheiro, e o que dá pra destravar primeiro.
+
+      Posso te chamar pra esse diagnóstico e te mostrar o que dá pra fazer no seu caso?
+  - id: A02
+    angulo: "Seleção / exclusividade"
+    gatilho: "você foi escolhido"
+    nota: "Inverte a dinâmica de poder. Lista pequena, não é pra todo mundo."
+    mensagem: |
+      [Nome], separei um número pequeno de empresários pra fazer um diagnóstico da operação esse mês, e você entrou na lista.
+
+      Não é pra todo mundo: é pra quem já fatura, mas sente que carrega o negócio nas costas sozinho.
+
+      Nesse diagnóstico eu te mostro onde a IA já consegue assumir parte do operacional e tirar peso de cima de você.
+
+      Faz sentido eu reservar um horário pra você?
+  - id: A03
+    angulo: "Curiosidade (a notícia)"
+    gatilho: "tenho algo pra te mostrar"
+    nota: "Abre loop. Ancora numa prova própria (reduzi X, cortei Y)."
+    mensagem: |
+      [Nome], tenho uma coisa pra te mostrar que mudou a forma como eu toco meu próprio negócio.
+
+      Reduzi 5 pessoas do time, cortei 30 mil por ano em software, e a empresa ficou mais rápida em vez de mais fraca.
+
+      Montei um diagnóstico pra mostrar isso na prática pra outros empresários: onde dá pra colocar agentes de IA no lugar do trabalho repetitivo.
+
+      Quer que eu te explique como funciona?
+  - id: A04
+    angulo: "Empatia / dor"
+    gatilho: "eu sei como é"
+    nota: "Acolhe antes de convidar. Nomeia a sensação, não o defeito."
+    mensagem: |
+      [Nome], sei que às vezes parece que o negócio já tá no talo e não tem mais de onde tirar.
+
+      Você trabalha muito, fatura, mas a sensação é de estar correndo pra ficar no mesmo lugar.
+
+      Na maioria das vezes o problema não é esforço, é a operação inteira depender de você. E isso dá pra enxergar num diagnóstico honesto dos seus números.
+
+      Quer que eu te mostre onde isso trava seu lucro hoje?
+  - id: A05
+    angulo: "Pergunta do gargalo"
+    gatilho: "quanto do seu dia passa por você?"
+    nota: "Pergunta honesta que faz o dono se reconhecer."
+    mensagem: |
+      [Nome], uma pergunta honesta: quanto do seu dia ainda passa por você?
+
+      Se a resposta for "quase tudo", o problema não é falta de esforço, é que a operação depende de você pra andar.
+
+      No diagnóstico eu te mostro onde isso trava seu lucro e quais partes um agente de IA já consegue assumir pra tirar você do meio.
+
+      Topa 30 minutos pra eu te mostrar isso no seu negócio?
+  - id: A06
+    angulo: "Projeção futura (6 meses)"
+    gatilho: "onde você vai estar"
+    nota: "Contrasta os dois cenários possíveis."
+    mensagem: |
+      [Nome], pensa comigo por um segundo.
+
+      Daqui a 6 meses, você prefere estar exatamente onde está hoje, ou com a operação rodando mais leve e lucrando mais, com parte do trabalho já automatizada?
+
+      A diferença entre os dois cenários costuma começar num diagnóstico honesto do que trava o negócio agora.
+
+      Bora marcar o seu e ver esse mapa juntos?
+  - id: A07
+    angulo: "Verdade dos números"
+    gatilho: "você acha que sabe, mas não sabe"
+    nota: "Quando abre os números, é diferente do que imaginavam."
+    mensagem: |
+      [Nome], a maior parte dos empresários acha que sabe onde ganha e onde perde dinheiro.
+
+      Quando a gente abre os números, quase sempre é diferente do que imaginavam.
+
+      No diagnóstico eu te mostro a verdade da sua operação: o que produz, o que só custa, e o que dá pra escalar sem contratar, colocando agentes de IA no repetitivo.
+
+      Quer que eu reserve um horário pra te mostrar esse mapa essa semana?
+  - id: A08
+    angulo: "Inimigo (a folha/agência)"
+    gatilho: "você paga caro pelo que a IA já faz"
+    nota: "Não é sobre demitir, é sobre parar de carregar custo desnecessário."
+    mensagem: |
+      [Nome], deixa eu ser direto com você.
+
+      Você provavelmente paga folha ou agência caro pra fazer coisas que uma camada de IA bem montada já faz sozinha, 24 horas, sem faltar.
+
+      Não é sobre demitir ninguém, é sobre parar de carregar custo que não precisa mais existir.
+
+      Quer que eu te mostre num diagnóstico onde isso tá acontecendo no seu negócio?
+  - id: A09
+    angulo: "Prova de mercado"
+    gatilho: "o mundo já mudou (Vercel/Klarna)"
+    nota: "Autoridade externa. Não é futuro, é presente, e dá pro porte dele."
+    mensagem: |
+      [Nome], a Vercel trocou 10 vendedores por 1 agente de IA e performou melhor. A Klarna prototipa em 20 minutos o que levava semanas.
+
+      Isso não é futuro, é 2025. E não é só pra gigante, dá pra montar no seu porte.
+
+      Eu instalo esse tipo de operação em empresas como a sua, mas antes eu faço um diagnóstico pra ver o que faz sentido no seu caso.
+
+      Quer entender como seria pro seu negócio?
+  - id: A10
+    angulo: "O tempo do dono"
+    gatilho: "seu dia não cabe mais nada"
+    nota: "Não precisa virar técnico. Alguém instala por ele."
+    mensagem: |
+      [Nome], seu dia já tá cheio. Aprender IA do zero não vai caber nele, e nem precisa.
+
+      Você toca a empresa, apaga incêndio e fecha o dia sem tempo de estudar mais uma ferramenta.
+
+      Por isso o caminho não é você virar técnico, é alguém instalar a IA por você. E o primeiro passo é um diagnóstico pra ver o que dá pra tirar das suas costas.
+
+      Quer que eu te mostre isso na sua operação?
+  - id: A11
+    angulo: "Contraste (dois empresários)"
+    gatilho: "quem instala x quem estuda"
+    nota: "A diferença de resultado no mesmo prazo é gritante."
+    mensagem: |
+      [Nome], tem dois tipos de empresário agora.
+
+      Um passa meses estudando IA e tentando montar sozinho. O outro instala e usa, enquanto continua tocando o negócio.
+
+      A diferença de resultado entre os dois, no mesmo prazo, é gritante.
+
+      Quer fazer um diagnóstico comigo pra ver o que dá pra colocar rodando no seu negócio sem você virar programador?
+  - id: A12
+    angulo: "O lead que esfria"
+    gatilho: "dor comercial específica"
+    nota: "Venda escorrendo pelo ralo. Agente fecha o buraco."
+    mensagem: |
+      [Nome], quantos leads teus chegam quentes e esfriam esperando alguém responder?
+
+      Mensagem parada horas, reunião que ninguém agenda, follow-up que só acontece quando dá tempo. Isso é venda escorrendo pelo ralo todo mês.
+
+      Um agente de IA fecha esse buraco: responde na hora, qualifica e agenda sozinho.
+
+      Quer que eu te mostre num diagnóstico quanto você tá perdendo nisso hoje?
+  - id: A13
+    angulo: "Teste das férias"
+    gatilho: "a empresa roda sem você?"
+    nota: "Se parava, não é sucesso, é dependência."
+    mensagem: |
+      [Nome], se você tirasse 15 dias de férias agora, o negócio continuaria rodando ou pararia?
+
+      Pra maioria dos donos a resposta é "parava", e isso não é sinal de sucesso, é sinal de que a empresa depende de você pra tudo.
+
+      Dá pra mudar isso colocando agentes de IA no operacional. Mas primeiro a gente precisa ver seus números.
+
+      Topa um diagnóstico pra eu te mostrar por onde começar?
+  - id: A14
+    angulo: "Autoridade / bastidor"
+    gatilho: "mostro o que eu uso"
+    nota: "18 anos, 20M, 30k alunos. Mesmo sistema que instalo."
+    mensagem: |
+      [Nome], 18 anos de digital, mais de 20 milhões faturados e 30 mil alunos.
+
+      Hoje eu toco meu negócio com um time de agentes de IA fazendo copy, conteúdo, atendimento e funil. É o mesmo sistema que eu instalo em outras empresas.
+
+      Antes de instalar qualquer coisa, eu faço um diagnóstico pra ver o que cabe no seu momento.
+
+      Quer ver como isso ficaria na sua operação?
+  - id: A15
+    angulo: "Direto ao ponto"
+    gatilho: "curto, seco, pra quem é ocupado"
+    nota: "30 min, olho a operação, você sai com o mapa. Sem rodeio."
+    mensagem: |
+      [Nome], vou ser rápido.
+
+      Faço um diagnóstico de 30 minutos onde eu olho a sua operação e te mostro, com número, onde dá pra automatizar com IA, cortar custo e escalar.
+
+      Sem compromisso de contratar nada, você sai só com o mapa e o primeiro passo.
+
+      Faz sentido marcar?
+
+# ----------------------------------------------------------------------------
+# GRUPO 2 — FOLLOW-UPS (15 ângulos)
+# ----------------------------------------------------------------------------
+# Para quem abriu conversa mas não marcou.
+follow_ups:
+  - id: F01
+    angulo: "Retomada (não é venda)"
+    nota: "Tira o medo de ser papo de venda."
+    mensagem: |
+      [Nome], só retomando aqui.
+
+      Esse diagnóstico não é papo de venda. É eu olhando a sua operação e te mostrando, com número, onde você tá deixando dinheiro na mesa hoje.
+
+      Você sai sabendo o que dá pra automatizar com IA, o que dá pra cortar e o que dá pra escalar. Sem compromisso de contratar nada.
+
+      Quer que eu te explique como funciona e a gente vê se faz sentido marcar?
+  - id: F02
+    angulo: "Viu minha mensagem?"
+    nota: "Toque leve. Oferece resolver por horário."
+    mensagem: |
+      Opa [Nome], sei que deve estar corrido por aí.
+
+      Você chegou a ver minha mensagem sobre o diagnóstico da operação?
+
+      Se for uma questão de horário, me fala qual período funciona melhor pra você que eu me encaixo.
+  - id: F03
+    angulo: "O que te impediu?"
+    nota: "Confronto respeitoso, abre a objeção real."
+    mensagem: |
+      [Nome], deixa eu ser direto: você pode continuar tentando resolver isso sozinho, no tempo que sobra. Ou a gente senta 30 minutos e eu te mostro o caminho mais curto.
+
+      O diagnóstico existe pra isso: te dar clareza, o mapa da operação e onde a IA entra pra tirar peso de cima de você.
+
+      O que te impediu de marcar até agora?
+  - id: F04
+    angulo: "Prova + convite"
+    nota: "Depoimento real + encaixe na semana."
+    mensagem: |
+      [Nome], quem passa pelo diagnóstico costuma sair falando a mesma coisa: "eu não fazia ideia de quanto tempo e dinheiro tava indo embora sem eu ver".
+
+      É clareza, é um plano de ação, e é enxergar o que dá pra passar pra um agente de IA em vez de continuar carregando na mão.
+
+      Consigo te encaixar ainda essa semana. Qual dia funciona melhor pra você?
+  - id: F05
+    angulo: "Escolha simples (2 opções)"
+    nota: "Reduz atrito: só escolher A ou B."
+    mensagem: |
+      [Nome], pra eu não ficar te incomodando, me responde só uma coisa:
+
+      1. Faz sentido a gente marcar o diagnóstico e você quer que eu mande os horários
+      2. Não é prioridade agora e prefere que eu te procure mais pra frente
+
+      Qualquer uma das duas tá ótima, só me diz qual.
+  - id: F06
+    angulo: "Custo de continuar igual"
+    nota: "Preço da inação, sem pressão falsa."
+    mensagem: |
+      [Nome], enquanto a gente não marca, a operação continua rodando do mesmo jeito: você no meio de tudo, o custo alto e o tempo escorrendo.
+
+      Não tem problema esperar, mas cada mês igual é um mês que dava pra ter parte disso automatizada.
+
+      Quer que eu te mostre num diagnóstico rápido o que dá pra mudar já nas próximas semanas?
+  - id: F07
+    angulo: "O concorrente que automatizou"
+    nota: "Medo de ficar pra trás, com fato de mercado."
+    mensagem: |
+      [Nome], enquanto uns empresários seguem no operacional na mão, outros já colocaram IA respondendo lead, produzindo conteúdo e rodando o funil sozinho.
+
+      No mesmo mercado, pelo mesmo custo, um produz muito mais rápido que o outro.
+
+      O diagnóstico é onde eu te mostro de que lado dá pra te colocar. Bora marcar?
+  - id: F08
+    angulo: "Reforço da prova própria"
+    nota: "Números do próprio expert."
+    mensagem: |
+      [Nome], só pra você ver que não é teoria:
+
+      No meu negócio, o funil que levava 2 semanas hoje sai em 2 horas, os e-mails abrem 47% mais e a folha caiu 20 mil por mês. Tudo com o time de agentes que eu instalo.
+
+      No diagnóstico eu te mostro qual pedaço disso cabe no seu negócio primeiro.
+
+      Quer marcar 30 minutos pra ver?
+  - id: F09
+    angulo: "Sem enrolação, direto"
+    nota: "Curto, pra quem some por falta de tempo."
+    mensagem: |
+      [Nome], não quero tomar teu tempo com mensagem longa.
+
+      30 minutos, eu olho tua operação, te mostro onde a IA entra e você sai com um plano. Sem compromisso.
+
+      Me manda dois horários que funcionam essa semana que eu confirmo.
+  - id: F10
+    angulo: "Objeção 'não sei nada de IA'"
+    nota: "Reforça que não precisa aprender."
+    mensagem: |
+      [Nome], se o que te segura é achar que precisa entender de IA pra isso, pode relaxar.
+
+      Você não vai virar programador nem estudar nada. Quem monta e instala sou eu, você só usa, como se fossem novos funcionários da empresa.
+
+      No diagnóstico eu te mostro exatamente como isso funciona no teu caso. Topa marcar?
+  - id: F11
+    angulo: "Objeção 'minha empresa é diferente'"
+    nota: "Personalização é justamente o ponto do diagnóstico."
+    mensagem: |
+      [Nome], se você tá pensando "meu negócio é muito específico pra isso funcionar", é justamente por isso que existe o diagnóstico.
+
+      Eu não chego com solução de prateleira. Primeiro eu olho a tua operação real e só depois digo o que faz sentido automatizar.
+
+      Quer que eu te mostre isso aplicado ao teu negócio? Me diz um horário.
+  - id: F12
+    angulo: "Última tentativa (honesta)"
+    nota: "Encerra o ciclo sem pressão fabricada. Porta aberta."
+    mensagem: |
+      [Nome], vou parar de te mandar mensagem pra não virar chato.
+
+      Só me diz se ainda faz sentido a gente conversar sobre o diagnóstico da tua operação, ou se prefere que eu deixe pra mais pra frente.
+
+      Do meu lado, o convite continua de pé quando você quiser.
+  - id: F13
+    angulo: "Ancora no benefício concreto"
+    nota: "O que ele leva da reunião, tangível."
+    mensagem: |
+      [Nome], só pra ficar claro o que você leva desse diagnóstico:
+
+      O retrato real de onde teu tempo vai, onde o dinheiro vaza, e uma lista do que dá pra passar pra um agente de IA já nas primeiras semanas.
+
+      Você sai com isso na mão, tendo fechado comigo ou não. Vale os 30 minutos?
+  - id: F14
+    angulo: "Retoma a projeção futura"
+    nota: "Segunda passada no ângulo do futuro."
+    mensagem: |
+      [Nome], voltando naquela ideia:
+
+      O empresário que começa a instalar IA agora, daqui a alguns meses tá com metade do operacional rodando sozinho. O que adia, segue carregando tudo na mão.
+
+      Não é sobre pressa, é sobre direção. E a direção começa no diagnóstico.
+
+      Quer marcar o seu?
+  - id: F15
+    angulo: "Confirmação e agendamento"
+    nota: "Quando disse sim. Deixa claro + pede 2 horários."
+    mensagem: |
+      Fechado, [Nome].
+
+      No diagnóstico a gente vai olhar 3 coisas: onde seu tempo tá indo, onde o dinheiro vaza, e o que dá pra passar pra um agente de IA pra escalar sem aumentar custo.
+
+      Você sai com o retrato real da operação e o primeiro passo claro do que instalar primeiro.
+
+      Me manda dois horários que funcionam pra você que eu confirmo.
+
+# ----------------------------------------------------------------------------
+# GRUPO 3 — REMARKETING (10 ângulos)
+# ----------------------------------------------------------------------------
+# Lead frio, base antiga, ex-contato, ex-aluno.
+remarketing:
+  - id: R01
+    angulo: "Reabre lead antigo"
+    nota: "Quem demonstrou interesse e sumiu."
+    mensagem: |
+      Oi [Nome], tudo bem?
+
+      Um tempo atrás você demonstrou interesse em destravar o crescimento do seu negócio. Como ficou isso? Já resolveu ou ainda tá no aperto?
+
+      Se ainda faz sentido, tenho um horário pra fazer o diagnóstico da sua operação e te mostrar o que hoje já dá pra automatizar com IA.
+
+      Quer que eu te chame?
+  - id: R02
+    angulo: "Volta com novidade"
+    nota: "Dá um motivo novo pra reabrir (estrutura evoluiu)."
+    mensagem: |
+      [Nome], faz um tempo que a gente não fala.
+
+      De lá pra cá evoluí bastante a estrutura de agentes de IA que eu instalo, tá bem mais completa e rápida de colocar pra rodar.
+
+      Achei que valia te chamar pra um diagnóstico e te mostrar o que mudou e o que dá pra fazer no teu negócio agora.
+
+      Topa 30 minutos?
+  - id: R03
+    angulo: "Ex-aluno / quem já te conhece"
+    nota: "Puxa o vínculo anterior."
+    mensagem: |
+      E aí [Nome], espero que esteja bem.
+
+      Você já acompanha meu trabalho há um tempo, então vou direto: hoje eu instalo em empresas o mesmo sistema de agentes de IA que eu uso no meu negócio.
+
+      Queria te oferecer um diagnóstico pra olhar a tua operação e te mostrar onde isso encaixa.
+
+      Faz sentido pra ti nesse momento?
+  - id: R04
+    angulo: "Pergunta de reengajamento"
+    nota: "Uma pergunta simples pra reabrir."
+    mensagem: |
+      [Nome], me responde rapidinho uma coisa:
+
+      Você já colocou algum agente de IA pra trabalhar de verdade no teu negócio, ou ainda tá tudo na mão e na base do improviso?
+
+      Pergunto porque, se ainda não colocou, tenho um diagnóstico que te mostra por onde começar sem complicação.
+  - id: R05
+    angulo: "Prova social reativadora"
+    nota: "Outros como ele já estão fazendo."
+    mensagem: |
+      [Nome], voltei a te procurar por um motivo.
+
+      Nas últimas semanas fiz esse diagnóstico com vários empresários e a reação foi a mesma: "não imaginava o quanto dava pra automatizar sem contratar mais gente".
+
+      Queria te dar a mesma clareza sobre a tua operação. Topa marcar 30 minutos comigo?
+  - id: R06
+    angulo: "Reativa pela dor do tempo"
+    nota: "Assume que a dor continua a mesma."
+    mensagem: |
+      [Nome], deixa eu chutar uma coisa: você continua sendo o centro de tudo no negócio, resolvendo o que ninguém mais resolve.
+
+      Se ainda é assim, o convite que te fiz antes segue valendo, e hoje eu consigo te entregar ainda mais coisa automatizada.
+
+      Quer que a gente faça o diagnóstico e veja o que dá pra tirar das tuas costas de vez?
+  - id: R07
+    angulo: "O custo que continua correndo"
+    nota: "O preço de ter deixado pra depois."
+    mensagem: |
+      [Nome], da última vez a gente não conseguiu marcar, sem problema.
+
+      Mas cada mês que passa igual é mês de custo alto e tempo teu escorrendo no operacional. Isso não some sozinho.
+
+      Se você topar, faço o diagnóstico e te mostro o que dá pra mudar já, sem você precisar aprender nada de técnico. Bora?
+  - id: R08
+    angulo: "Reabre pelo concorrente"
+    nota: "Medo de ficar pra trás, reativando."
+    mensagem: |
+      [Nome], só um toque honesto.
+
+      O mercado tá se movendo rápido com IA. Quem instalou tá produzindo mais pelo mesmo custo, e essa diferença só aumenta com o tempo.
+
+      Não quero que você fique olhando isso de fora. Faço um diagnóstico e te mostro de que lado dá pra te colocar.
+
+      Quer marcar?
+  - id: R09
+    angulo: "Oferta de valor pura"
+    nota: "Só entrega clareza, tom generoso, sem pressão."
+    mensagem: |
+      [Nome], independente de fechar qualquer coisa comigo, acho que vale você ter clareza da tua operação.
+
+      Nesse diagnóstico eu te mostro onde teu tempo e teu dinheiro estão indo e o que a IA já resolve. Você leva esse mapa contigo de qualquer jeito.
+
+      Se topar, me diz um horário que eu reservo.
+  - id: R10
+    angulo: "Fecha o ciclo, porta aberta"
+    nota: "Encerra o remarketing sem queimar o contato."
+    mensagem: |
+      [Nome], não vou mais insistir pra não incomodar.
+
+      Só quero deixar claro que a porta continua aberta: quando você sentir que chegou a hora de tirar o operacional das costas e colocar a IA pra trabalhar, é só me chamar.
+
+      O diagnóstico tá aqui esperando quando fizer sentido pra ti.
+
+# ----------------------------------------------------------------------------
+# CADÊNCIA SUGERIDA (60 dias)
+# ----------------------------------------------------------------------------
+cadencia:
+  volume_total: 40
+  distribuicao: "15 aberturas + 15 follow-ups + 10 remarketing"
+  regra: >
+    Mistura as 15 aberturas com quem ainda não respondeu, uma por contato.
+    Quem abre conversa mas não marca entra nos follow-ups (1 a cada 2-3 dias).
+    Quem some ou já é base antiga entra no remarketing.
+    Nunca dispara a sequência inteira no mesmo contato de uma vez.
+
+referencias:
+  workflow: "workflows/convite-reuniao-diagnostico.md"
+  template: "templates/mensagens-convite-reuniao-tmpl.md"
+  output_exemplo: "[exemplo de cliente não empacotado] WhatsApp — Diagnóstico do Negócio.html"
+  validadores: "validators/filtro-anti-ia.md + validators/oraculo-torriani.md"

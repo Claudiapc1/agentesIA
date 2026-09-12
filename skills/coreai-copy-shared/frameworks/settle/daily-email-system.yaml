@@ -1,0 +1,81 @@
+# Daily Email System - Ben Settle
+# Source: Email Players Newsletter
+# Category: email_strategy
+
+name: "The Daily Email System"
+version: "1.0"
+source: "Ben Settle - Email Players Newsletter"
+category: "email_strategy"
+command: "*daily-email"
+
+description: |
+  Sistema de escrever um email por dia, todo dia, para sempre.
+  Cada email entretém, informa e vende simultaneamente.
+  Resultado: 6 figuras trabalhando menos de 1 hora por dia.
+
+philosophy: |
+  O dinheiro está no relacionamento, não na lista.
+  Emails diários constroem relacionamento mais rápido que qualquer coisa.
+  A maioria dos marketers tem medo de enviar email diário.
+  Exatamente por isso você deveria.
+
+daily_email_structure:
+  step_1_hook:
+    name: "The Hook"
+    purpose: "Parar o scroll, capturar atenção em 1-2 linhas"
+    instruction: "Comece com algo inesperado, controverso ou curioso"
+    examples:
+      - "Eu entrei em briga no supermercado ontem..."
+      - "Meu contador acha que sou maluco..."
+      - "Acabei de recusar $50.000..."
+    anti_patterns:
+      - "Espero que este email te encontre bem..."
+      - "Na newsletter de hoje..."
+      - "Eu queria compartilhar..."
+
+  step_2_story:
+    name: "The Story/Content"
+    purpose: "Entreter enquanto constrói para o pitch"
+    techniques:
+      - "Anedotas pessoais"
+      - "Referências de cultura pop"
+      - "Opiniões controversas"
+      - "Bastidores do negócio"
+      - "Lições de observações aleatórias"
+
+  step_3_pivot:
+    name: "The Pivot"
+    purpose: "Transição natural da história para o pitch"
+    transition_phrases:
+      - "O que me leva a..."
+      - "E exatamente por isso..."
+      - "Falando nisso..."
+      - "E é exatamente isso que [produto] faz..."
+
+  step_4_pitch:
+    name: "The Pitch"
+    purpose: "Vender algo - em CADA email"
+    elements:
+      - "O que é o produto"
+      - "Por que precisam (conectado à história)"
+      - "CTA claro"
+    anti_patterns:
+      - "Se você estiver interessado..."
+      - "Sem pressão..."
+      - "Fique à vontade para..."
+
+  step_5_signoff:
+    name: "The Sign-Off"
+    purpose: "Encerrar com personalidade"
+    instruction: "Assinatura que reforca sua marca"
+
+daily_cadence:
+  principle: "7 emails por semana, sem exceções"
+  rationale: |
+    1. Mantém você top of mind
+    2. Treina sua lista a esperar (e abrir) seus emails
+    3. Dá mais chances de vender
+
+when_to_use: |
+  Use quando quer construir uma audiência engajada que compra
+  consistentemente. Ideal para infoprodutores, coaches e consultores.

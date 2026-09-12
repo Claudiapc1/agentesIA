@@ -1,0 +1,126 @@
+# ContextOS - ICP (Ideal Customer Profile)
+# Preenchido durante: *setup-context Fase 4
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+core_icp:
+  one_sentence_definition: null
+  icp_name: null        # Nome do arquetipo (ex: "O Empreendedor Travado")
+  fit_percentage: null   # % de leads que se encaixam
+
+demographics:
+  age:
+    primary_range: null    # Ex: 25-40
+    secondary_range: null
+    median_age: null
+  experience:
+    years_in_field: null
+    background_type: null
+    career_progression: null
+  education:
+    minimum_level: null
+    percentage_with_postgrad: null
+    field_of_study_primary: null
+  life_stage: null
+  geography: null
+  income_range: null
+
+psychographics:
+  central_pain:
+    what_they_say: null    # O que verbalizam
+    what_they_mean: null   # O que realmente sentem
+    what_they_fear: null   # O medo mais profundo
+  beliefs:
+    - belief: null
+    - belief: null
+    - belief: null
+    - belief: null
+    - belief: null
+  mental_state:
+    dominant: null
+    secondary: null
+    limiting: null
+  consumption:
+    hours_per_week: null
+    consumption_vs_action: null  # % consumo vs acao
+    purchases_per_year: null
+  community_needs:
+    validation: null
+    accountability: null
+    belonging: null
+    permission: null
+
+pain_stack:
+  latent:  # Problemas nao percebidos como problemas
+    - pain: null
+    - pain: null
+    - pain: null
+    - pain: null
+  hidden:  # Frustracoes internas
+    - pain: null
+    - pain: null
+    - pain: null
+    - pain: null
+    - pain: null
+  existential:
+    - pain: null
+      percentage_who_feel: null
+    - pain: null
+      percentage_who_feel: null
+    - pain: null
+      percentage_who_feel: null
+  pain_hierarchy: null  # Ordem de prioridade
+
+archetypes:  # 5 sub-arquetipos que somam 100%
+  - name: null
+    percentage: null
+    central_problem: null
+  - name: null
+    percentage: null
+    central_problem: null
+  - name: null
+    percentage: null
+    central_problem: null
+  - name: null
+    percentage: null
+    central_problem: null
+  - name: null
+    percentage: null
+    central_problem: null
+  primary_archetype: null
+  hardest_archetype: null
+
+motivations:
+  action_triggers:
+    - trigger: null
+    - trigger: null
+    - trigger: null
+    - trigger: null
+    - trigger: null
+  paralysis_triggers:
+    - blocker: null
+    - blocker: null
+    - blocker: null
+    - blocker: null
+    - blocker: null
+
+red_flags:  # Sinais de mau cliente
+  - flag: null
+  - flag: null
+  - flag: null
+  - flag: null
+  - flag: null
+
+green_flags:  # Sinais de cliente ideal
+  - flag: null
+  - flag: null
+  - flag: null
+  - flag: null
+  - flag: null
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

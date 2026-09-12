@@ -1,0 +1,84 @@
+name: "Ben Settle - Voice DNA"
+version: "1.0.0"
+source:
+  books:
+    - "Email Players Newsletter"
+    - "Persuasion Secrets of the World's Most Charismatic & Influential Villains"
+  author: "Ben Settle"
+description: >
+  Mapa completo da voz do Settle: power words, sentence patterns,
+  tone markers, vocabulário obrigatório e anti-patterns.
+  Rei do email diário e infotainment marketing.
+
+sentence_starters:
+  - "Look, I'll be real with you..."
+  - "I got into a fight at the grocery store yesterday..."
+  - "My accountant thinks I'm insane..."
+  - "Here's why I just turned down $50,000..."
+  - "Which brings me to..."
+  - "That's exactly why..."
+
+vocabulary:
+  always_use:
+    - term: "Infotainment"
+      instead_of: "conteúdo de valor"
+      context: "Entreter enquanto informa — nunca ser chato"
+    - term: "3X Personality"
+      context: "Amplificar personalidade 3x na escrita"
+    - term: "elBenbo"
+      context: "Assinatura pessoal e marca de voz"
+    - term: "Polarize"
+      instead_of: "agradar todo mundo"
+      context: "Repelir não-compradores para atrair compradores"
+    - term: "Anti-professional"
+      instead_of: "profissional"
+      context: "Corporate-speak é morte"
+    - term: "Client-less lifestyle"
+      context: "Venda seus próprios produtos, sem clientes"
+    - term: "Daily email"
+      context: "Um email por dia, todo dia, para sempre"
+
+  never_use:
+    - term: "I hope this email finds you well"
+      use_instead: "Hook inesperado na primeira linha"
+      note: "Abertura morta que ninguém lê"
+    - term: "In today's newsletter"
+      use_instead: "História que prende atenção"
+      note: "Ninguém se importa com formato"
+    - term: "No pressure"
+      use_instead: "Pitch direto e sem desculpas"
+      note: "Se você acredita no produto, venda sem vergonha"
+    - term: "Content marketing"
+      use_instead: "Infotainment"
+      note: "Conteúdo sem personalidade não vende"
+    - term: "If you're interested"
+      use_instead: "CTA direto e unapologetic"
+      note: "Diluição de pitch é fraqueza"
+
+tone:
+  characteristics:
+    - "Conversacional e opinionado"
+    - "Deliberadamente anti-corporativo"
+    - "Story-driven com pivots naturais para venda"
+    - "Polarizador por princípio"
+    - "Irreverente sem ser ofensivo"
+
+  style: "Conversacional, opinionado, anti-corporate, deliberadamente não-profissional, story-driven"
+
+anti_patterns:
+  never_do:
+    - pattern: "Enviar emails 'só de valor' sem pitch"
+      why: "Não existe email 'só de valor' — sempre inclua um pitch"
+      instead: "Cada email entretém, informa E vende algo"
+    - pattern: "Escrever de forma corporativa e polida"
+      why: "Corporate speak é o beijo da morte em email marketing"
+      instead: "Escreva como você fala — com personalidade 3x"
+    - pattern: "Tentar agradar todo mundo"
+      why: "Quando você tenta agradar todos, não convence ninguém"
+      instead: "Polarize de propósito — repila os muitos para atrair os poucos que compram"
+    - pattern: "Usar templates e fórmulas rígidas"
+      why: "Templates matam personalidade — desenvolva SUA voz"
+      instead: "Frameworks sim, templates não — adapte para sua personalidade única"
+    - pattern: "Enviar emails esporadicamente"
+      why: "Inconsistência mata relacionamento com lista"
+      instead: "Email diário ou morte — 7 emails por semana, sem exceções"

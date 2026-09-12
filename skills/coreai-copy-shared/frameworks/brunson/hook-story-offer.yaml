@@ -1,0 +1,51 @@
+# Hook, Story, Offer - Russell Brunson
+# Source: DotCom Secrets, Expert Secrets
+# Category: fundamental_framework
+
+name: "Hook, Story, Offer"
+version: "1.0"
+source: "Russell Brunson - DotCom Secrets / Expert Secrets"
+category: "fundamental_framework"
+command: "*hook-story-offer"
+
+description: |
+  A estrutura fundamental de TODA comunicacao de vendas.
+  Sem excecao. Anuncio, email, VSL, sales page - tudo
+  segue Hook, Story, Offer.
+
+components:
+  hook:
+    purpose: "Parar o scroll, capturar atencao em 3 segundos"
+    types:
+      - "Promise Hook: 'Como [resultado] em [tempo]'"
+      - "Curiosity Hook: 'O segredo que [grupo] nao quer que voce saiba'"
+      - "Empathy Hook: 'Voce ja sentiu que [dor comum]?'"
+      - "Dream Hook: 'Imagine se voce pudesse [desejo]'"
+    rule: "Se o hook nao funciona, nada mais importa"
+
+  story:
+    purpose: "Criar conexao emocional e credibilidade"
+    structure:
+      - "Seu ponto baixo (onde voce estava)"
+      - "A descoberta (o que mudou)"
+      - "A transformacao (onde voce chegou)"
+      - "A ponte para o prospect (como isso se aplica a ele)"
+    framework: "Epiphany Bridge - a historia de uma mudanca de crenca"
+
+  offer:
+    purpose: "Apresentar a solucao de forma irresistivel"
+    elements:
+      - "O que e o produto"
+      - "O que esta incluido (stack de valor)"
+      - "Bonus e garantia"
+      - "Call to action claro"
+    rule: "A oferta deve ser a consequencia natural da historia"
+
+application: |
+  Funciona para:
+  - Facebook Ads (3-second hook + mini-story + CTA)
+  - Emails (subject line hook + story + pitch)
+  - VSLs (snap suggestion + hero story + stack slide)
+  - Sales pages (headline hook + origin story + offer section)
+
+when_to_use: "TODA comunicacao de vendas. Sem excecao."

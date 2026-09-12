@@ -1,0 +1,224 @@
+---
+# ============================================================================
+# BANCO DE TEMPLATES UTILITY — WhatsApp Business API (Meta)
+# ============================================================================
+# Engenharia reversa dos 169 templates pre-aprovados da Meta (categoria Utility).
+# Objetivo: extrair os PADROES ESTRUTURAIS que a Meta aprova como Utility,
+# para reescrever mensagens de convite de reuniao dentro desse formato.
+#
+# CONTEXTO ECONOMICO (fonte: usuario, 2026-07):
+#   Utility custa MAIS caro que Marketing por conversa iniciada pelo negocio.
+#   A escolha por Utility NAO e economia: e entregabilidade e enquadramento.
+#   Utility nao cai no filtro promocional, tem menos bloqueio e mais leitura.
+#
+# Usado por: workflows/convite-reuniao-diagnostico.md
+# Complementa: data/banco-angulos-convite-reuniao.yaml
+
+metadata:
+  schema: "copy.data.banco_templates_utility_whatsapp"
+  version: "1.0.0"
+  status: "COMPLETE"
+  autor: "Juliano Torriani"
+  last_updated: "2026-07-31"
+  categoria: "whatsapp-api-oficial"
+  fonte: "Catalogo de 169 templates pre-aprovados Meta (pt-BR), coletado 2026-07-31"
+  primeira_aplicacao: "Torriani · Convite para análise de IA de marketing e vendas"
+
+# ----------------------------------------------------------------------------
+# REGRA DE OURO (LEIA ANTES DE ESCREVER QUALQUER TEMPLATE)
+# ----------------------------------------------------------------------------
+regra_de_ouro: |
+  Utility so e aprovado quando a mensagem se refere a uma TRANSACAO QUE JA EXISTE.
+  Nao e um truque de redacao: o fato precisa ser verdadeiro no seu sistema.
+
+  Isso significa que, para usar Utility no convite de reuniao, o lead precisa ter
+  praticado UM ATO antes: preencher o formulário, mandar a palavra-chave, pedir a
+  análise, entrar na fila. Esse ato e a "transação" que Utility notifica.
+
+  Se o lead nunca fez nada, a mensagem e Marketing. Ponto. Tentar disfarcar
+  prospeccao fria de Utility derruba a conta.
+
+  O bom da estrategia Stories Recompensa e que ela CRIA a transação naturalmente:
+  quem manda "AGENTE" e preenche o formulário ja praticou o ato. A partir dai,
+  toda a regua de convite pode legitimamente ser Utility.
+
+# ----------------------------------------------------------------------------
+# OS 8 PADROES ESTRUTURAIS EXTRAIDOS DOS 169 TEMPLATES
+# ----------------------------------------------------------------------------
+padroes:
+
+  - id: P1
+    nome: "Confirmação de compromisso"
+    descricao: "Notifica que um agendamento existe, esta confirmado ou foi criado."
+    templates_meta: ["appointment_confirmation_1", "appointment_confirmed", "order_confirm_auto_schedule"]
+    anatomia:
+      titulo: "Frase de estado, nao de venda. Ex: 'Sua consulta esta marcada'"
+      corpo: "Saudacao + agradecimento pelo ato + os dados do compromisso (servico, data, hora)"
+      botao: "Ver detalhes / Confirmar / Reagendar"
+    marcadores_de_utility:
+      - "Referencia a um ato anterior do lead (reservar, pedir, solicitar)"
+      - "Dados concretos: data, hora, servico, número de confirmacao"
+      - "Zero adjetivo de venda no corpo"
+    potencial_criativo: "ALTO — 'Sua análise esta reservada' funciona porque a pessoa pediu"
+
+  - id: P2
+    nome: "Lembrete de compromisso"
+    descricao: "Avisa que um compromisso ja marcado esta chegando."
+    templates_meta: ["appointment_reminder", "appointment_reminder_2", "renewal_reminder"]
+    anatomia:
+      titulo: "'Voce tem um compromisso próximo'"
+      corpo: "Este e um lembrete sobre + o compromisso + data e hora + fechamento curto"
+      botao: "Ver detalhes"
+    marcadores_de_utility:
+      - "A palavra 'lembrete' declara a funcao da mensagem"
+      - "Pressupoe que o compromisso ja existe"
+    potencial_criativo: "ALTO — o lembrete cria compromisso psicologico mesmo sem data fechada"
+
+  - id: P3
+    nome: "Status pendente / ação necessária"
+    descricao: "Informa que algo esta parado esperando uma acao do cliente."
+    templates_meta: ["order_action_required_1", "payment_action_required_1", "account_creation_confirmation_3"]
+    anatomia:
+      titulo: "'Finalize a configuracao' / 'Verifique suas informacoes'"
+      corpo: "Antes de podermos processar X, precisamos de Y + o que fazer"
+      botao: "Verificar / Concluir"
+    marcadores_de_utility:
+      - "Existe um processo em andamento e ele esta travado"
+      - "A acao pedida destrava algo que o lead ja quis"
+    potencial_criativo: "MUITO ALTO — e o padrao mais forte pro convite de reuniao"
+
+  - id: P4
+    nome: "Reagendamento e ausência"
+    descricao: "Trata quem furou ou precisa remarcar."
+    templates_meta: ["missed_appointment", "appointment_reschedule_1", "followup_missed_calls", "rescheduling_request"]
+    anatomia:
+      titulo: "'Visita perdida' / 'Sua consulta foi reagendada'"
+      corpo: "Sentimos sua falta em + o compromisso + convite pra remarcar"
+      botao: "Reagendar"
+    marcadores_de_utility:
+      - "Referencia direta a um compromisso que existia"
+      - "Tom neutro, sem cobranca emocional"
+    potencial_criativo: "ALTO — resolve o problema de quem sumiu sem parecer perseguicao"
+
+  - id: P5
+    nome: "Encerramento e expiração"
+    descricao: "Avisa que algo vai expirar, encerrar ou ser liberado pra outro."
+    templates_meta: ["disbursement_balance_1", "recharge_reminder", "device_recovery", "phone_deactivation_reminder_01"]
+    anatomia:
+      titulo: "'Lembrete de validade' / 'Seu saldo expira'"
+      corpo: "Seu X expira em + data + o que acontece se nada for feito"
+      botao: "Renovar / Recarregar"
+    marcadores_de_utility:
+      - "Prazo real, vinculado a um recurso real que o lead tem"
+      - "Consequência declarada sem drama"
+    potencial_criativo: "ALTO — substitui a urgencia fabricada por prazo operacional real"
+
+  - id: P6
+    nome: "Solicitação registrada / em processamento"
+    descricao: "Confirma que um pedido entrou no sistema e esta andando."
+    templates_meta: ["support_ticket_acknowledgement", "order_management_5", "shifting_journey", "group_invite_link"]
+    anatomia:
+      titulo: "'Pedido recebido' / 'Solicitação registrada'"
+      corpo: "Recebemos seu X. Número: Y. Enviaremos atualização quando Z"
+      botao: "Ver detalhes / Acompanhar"
+    marcadores_de_utility:
+      - "Número de protocolo ou identificador"
+      - "Promessa de próximo update"
+    potencial_criativo: "MUITO ALTO — da peso institucional a um pedido informal"
+
+  - id: P7
+    nome: "Coleta de informação e feedback"
+    descricao: "Pede um dado ou uma avaliacao apos um evento real."
+    templates_meta: ["request_contact_info_1", "feedback_collection", "feedback_survey_1"]
+    anatomia:
+      titulo: "'Como foi sua experiencia?'"
+      corpo: "Apos seu X em + data + pedido curto + quanto tempo leva"
+      botao: "Compartilhar / Responder"
+    marcadores_de_utility:
+      - "Âncora num evento datado que aconteceu"
+      - "Declara o custo de tempo da acao"
+    potencial_criativo: "MEDIO — util na etapa pos-material, antes do convite"
+
+  - id: P8
+    nome: "Aviso operacional / mudança de serviço"
+    descricao: "Comunica manutencao, interrupcao, atualização de sistema."
+    templates_meta: ["service_disruption", "operation_disruption_1", "upgrade_confirmation", "installation_complete"]
+    anatomia:
+      titulo: "'Aviso de manutencao' / 'Instalacao concluida'"
+      corpo: "Fato operacional + janela de tempo + o que muda pro cliente"
+      botao: "Ver atualizacoes"
+    marcadores_de_utility:
+      - "Fato técnico verificável"
+      - "Zero pedido de compra"
+    potencial_criativo: "BAIXO pro convite, ALTO pra pos-venda"
+
+# ----------------------------------------------------------------------------
+# VOCABULARIO QUE A META LE COMO UTILITY
+# ----------------------------------------------------------------------------
+vocabulario:
+  usar:
+    - "confirmado, registrado, agendado, reservado, recebido"
+    - "lembrete, aviso, status, protocolo, referência"
+    - "pendente, em processamento, aguardando, em aberto"
+    - "expira em, válido até, prazo, janela"
+    - "atualização, detalhes, acompanhar, verificar"
+  evitar:
+    - "oferta, desconto, promoção, grátis, exclusivo"
+    - "aproveite, garanta, não perca, última chance, corra"
+    - "vagas limitadas, só hoje, imperdível"
+    - "adjetivo de venda no corpo (incrivel, revolucionario, transformador)"
+  observacao: |
+    Marketing nao e proibido: e outra categoria, mais barata e com filtro maior.
+    A escolha e estrategica, nao moral. Utility entrega melhor porque o usuario
+    ja espera aquele tipo de mensagem do negocio com quem interagiu.
+
+# ----------------------------------------------------------------------------
+# ESTRUTURA DE VARIAVEIS (como a Meta espera)
+# ----------------------------------------------------------------------------
+variaveis:
+  formato: "{{1}}, {{2}}, {{3}} na submissao. O catalogo exibe como {{texto}}, {{data}}, {{valor}}"
+  tipos_observados:
+    - "{{texto}} — nome, servico, referência livre"
+    - "{{data}} — data do compromisso"
+    - "{{valor}} — valores monetarios"
+    - "{{numero}} — quantidade, final de cartao, dias"
+    - "{{telefone}} — contato"
+    - "{{endereco}} — local"
+    - "{{url}} — link"
+    - "{{nome comercial}} — nome do negocio"
+  regras:
+    - "Nunca comecar nem terminar o corpo com variavel"
+    - "Nunca duas variaveis coladas"
+    - "Toda variavel precisa de exemplo real na submissao"
+    - "Titulo aceita no maximo 1 variavel"
+
+# ----------------------------------------------------------------------------
+# BOTOES OBSERVADOS NOS 169
+# ----------------------------------------------------------------------------
+botoes:
+  mais_frequentes:
+    - "Ver detalhes"
+    - "Confirmar"
+    - "Reagendar"
+    - "Ver pedido"
+    - "Acompanhar"
+    - "Verificar"
+  regra: |
+    Botao de Utility descreve uma ACAO OPERACIONAL, nunca uma decisao de compra.
+    'Ver detalhes' passa. 'Quero comprar' nao passa.
+    Dois botoes funcionam bem em par binario: Confirmar / Reagendar.
+
+# ----------------------------------------------------------------------------
+# A JANELA DE 24 HORAS (por que isso muda tudo)
+# ----------------------------------------------------------------------------
+janela_24h: |
+  Template so e obrigatório para ABRIR conversa. Assim que o lead responde,
+  abre uma janela de 24 horas em que voce fala livre, sem template e sem custo
+  por mensagem.
+
+  Consequência pratica para o funil:
+  o template de Utility nao precisa vender nada. Ele so precisa gerar UMA
+  resposta. Toda a venda acontece depois, dentro da janela, em mensagem livre.
+
+  Por isso o melhor template de convite e o que faz a pessoa responder
+  "sim", "qual horário" ou "o que e isso", nao o que explica a oferta inteira.

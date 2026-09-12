@@ -1,0 +1,55 @@
+# Ethical Persuasion Framework - Jon Benson
+# Source: Jon Benson - Core philosophy
+# Category: persuasion_philosophy
+
+name: "Ethical Persuasion Framework"
+version: "1.0"
+source: "Jon Benson - Core Philosophy"
+category: "persuasion_philosophy"
+command: "*ethical-persuasion"
+
+description: |
+  Framework de persuasão que conecta emocionalmente com integridade.
+  O oposto polar da manipulação. Persuadir com honestidade
+  é o caminho para vendas sustentáveis e repeat business.
+
+philosophy: |
+  Manipulação funciona uma vez. Persuasão ética funciona para sempre.
+  Quando você ajuda alguém a tomar a melhor decisão PARA ELES,
+  você ganha um cliente para a vida.
+
+principles:
+  emotion_first:
+    description: "Pessoas compram com emoção e justificam com lógica"
+    instruction: "Conecte emocionalmente ANTES de argumentar logicamente"
+
+  vulnerability:
+    description: "Histórias pessoais autênticas criam rapport"
+    instruction: "Compartilhe suas falhas e fracassos - não apenas sucessos"
+
+  transformation_focus:
+    description: "Mostre a mudança, não as features"
+    instruction: "O prospect não quer o produto - quer quem ele se torna"
+
+  honest_urgency:
+    description: "Urgência real, não fabricada"
+    instruction: "Se a escassez não é real, não use. Encontre urgência genuína."
+
+  second_chance_principle:
+    description: "Leave nothing on the table"
+    instruction: "Ame o suficiente seu prospect para persistir eticamente"
+
+persuasion_quadrant:
+  wants: "O que eles QUEREM (desejos declarados)"
+  needs: "O que eles PRECISAM (necessidades reais)"
+  fears: "O que eles TEMEM (pesadelos)"
+  actions: "O que estao dispostos a FAZER"
+
+application: |
+  1. Mapeie o Persuasion Quadrant do prospect
+  2. Conecte emocionalmente via história vulnerável
+  3. Mostre transformação (não features)
+  4. Use urgência genuína
+  5. Faça a oferta como ato de serviço, não venda
+
+when_to_use: "SEMPRE. Persuasão ética não é um estilo - é o único caminho sustentável."

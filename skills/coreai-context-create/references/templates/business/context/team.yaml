@@ -1,0 +1,63 @@
+# ContextOS - Team Structure
+# Preenchido durante: *setup-context Fase 3
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+current_team:
+  total_headcount: null
+  roles_filled:
+    - title: null
+      occupant: null
+      type: null  # FT | PT | contractor | freelancer
+      kpis: []
+  founder_wearing_hats: []  # Todos os papeis que o fundador acumula
+
+ideal_structure:
+  departments:
+    marketing:
+      leader: null
+      size: null
+      specific_roles: []
+      kpi: null
+    sales:
+      leader: null
+      size: null
+      specific_roles: []
+      kpi: null
+    delivery:
+      leader: null
+      size: null
+      specific_roles: []
+      kpi: null
+    support:
+      leader: null
+      size: null
+      specific_roles: []
+      kpi: null
+  org_chart: null  # Visao 2-3 anos
+
+hiring_plan:
+  next_hires:
+    - title: null
+      priority_reason: null
+      timeline: null
+    - title: null
+      priority_reason: null
+      timeline: null
+  criteria:
+    skills_vs_attitude: null
+    min_experience: null
+  budget_monthly: null
+
+diagnostic:
+  role_clarity: null       # 1-10
+  kpi_alignment: null      # 1-10
+  bottleneck: null         # Onde o time trava
+  scalability: null        # 1-10 prontidao para dobrar
+
+metadata:
+  completed_fields: 0
+  completeness_percentage: 0
+  status: INCOMPLETE

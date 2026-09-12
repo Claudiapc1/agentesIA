@@ -1,0 +1,127 @@
+# Bond Halbert — 12-Point Editing Formula
+# Framework: Post-Draft Editing Protocol
+# Fonte: Bond Halbert (son of Gary Halbert, "The Halbert Copywriting Method")
+
+framework:
+  name: "12-Point Editing Formula"
+  author: "Bond Halbert"
+  source: "The Halbert Copywriting Method — blind split-test validated"
+  result: "400% sales increase in blind split-test vs unedited copy"
+  when_to_use: "AFTER first draft is complete. Never during writing."
+  warning: "This formula does NOT substitute bad research. Polishing garbage produces polished garbage."
+
+steps:
+  - numero: 1
+    nome: "I-to-You Shift"
+    instrucao: "Replace every 'I/we/our' with 'you/your/yours' wherever possible"
+    motivo: "Reader cares about themselves, not about you"
+    exemplo:
+      antes: "I created this system to help entrepreneurs..."
+      depois: "You now have a system that helps you..."
+    meta: "Minimum 3:1 ratio of You vs I throughout the copy"
+
+  - numero: 2
+    nome: "Read Aloud"
+    instrucao: "Read the entire copy out loud. Mark every spot where you stumble or lose breath."
+    motivo: "If it does not flow when spoken, it will not flow when read"
+    regra: "Every stumble point must be rewritten until it sounds natural"
+
+  - numero: 3
+    nome: "That Hunt"
+    instrucao: "Search for every instance of 'that' and remove 90% of them"
+    motivo: "'That' is almost always unnecessary filler"
+    exemplo:
+      antes: "The system that I created that helps you..."
+      depois: "The system I created helps you..."
+    meta: "Remove 90% of all 'that' instances"
+
+  - numero: 4
+    nome: "Pronoun Hunt"
+    instrucao: "Replace generic pronouns (it, they, this, these) with powerful descriptors"
+    motivo: "Pronouns are vague. Specific nouns create vivid pictures."
+    exemplo:
+      antes: "It helps them get better results with this."
+      depois: "The 3-step system helps overwhelmed entrepreneurs double their revenue with the Profit Accelerator."
+    regra: "Every pronoun should earn its place. If a noun is stronger, use the noun."
+
+  - numero: 5
+    nome: "Big Word Hunt"
+    instrucao: "Replace any word above 6th grade reading level with a simpler alternative"
+    motivo: "Clarity sells. Complexity confuses. Confused people do not buy."
+    exemplo:
+      antes: "Utilize this methodology to facilitate your transformation..."
+      depois: "Use this method to speed up your change..."
+    regra: "If a 12-year-old would not understand it, rewrite it"
+
+  - numero: 6
+    nome: "Repeat Word Hunt"
+    instrucao: "Find words repeated within the same paragraph and replace with synonyms or restructure"
+    motivo: "Repetition feels lazy and breaks reading flow"
+    excecao: "Intentional repetition for emphasis is allowed (anaphora, power repetition)"
+    regra: "Same word within 3 sentences = must fix (unless intentional rhetorical device)"
+
+  - numero: 7
+    nome: "Cliffhangers"
+    instrucao: "Add a hook at the end of every section that compels reading the next"
+    motivo: "Every section break is a potential exit point. Cliffhangers prevent exits."
+    tecnicas:
+      - "But here is the surprising part..."
+      - "And that is when everything changed..."
+      - "What happened next shocked even me..."
+      - "But there is a catch..."
+    regra: "No section should end with a period that feels like a conclusion"
+
+  - numero: 8
+    nome: "Power Word Insertion"
+    instrucao: "Replace weak words with emotionally charged power words"
+    motivo: "Power words trigger emotional responses that drive action"
+    exemplos_power_words:
+      - "free, new, you, instantly, because, proven, secret, discover"
+      - "breakthrough, exclusive, limited, guaranteed, shocking, urgent"
+    regra: "Minimum 1 power word per paragraph"
+
+  - numero: 9
+    nome: "Qualifier Hunt"
+    instrucao: "Kill all weasel words — maybe, might, could, possibly, somewhat, rather, quite"
+    motivo: "Qualifiers destroy conviction. Conviction sells."
+    exemplo:
+      antes: "This might possibly help you somewhat improve your results..."
+      depois: "This improves your results."
+    regra: "If you are not confident enough to state it directly, cut the claim entirely"
+
+  - numero: 10
+    nome: "Eye Relief and Formatting"
+    instrucao: "Break up walls of text. Add subheads, bullets, bold, short paragraphs."
+    motivo: "Online readers scan before reading. Dense text gets skipped."
+    regras:
+      - "Max 3-4 lines per paragraph"
+      - "Subhead every 300-500 words"
+      - "Bullet lists for 3+ items"
+      - "Bold key phrases (not entire sentences)"
+      - "White space is not wasted space — it is breathing room"
+
+  - numero: 11
+    nome: "So What Test"
+    instrucao: "After every claim or statement, ask 'So what? Why should the reader care?'"
+    motivo: "Features do not sell. Benefits of benefits sell."
+    exemplo:
+      antes: "Our software has 256-bit encryption."
+      depois: "Your data is locked behind military-grade encryption — so hackers cannot touch your information, ever."
+    regra: "If you cannot answer 'so what' with a clear benefit, cut the statement"
+
+  - numero: 12
+    nome: "Punch at End"
+    instrucao: "Restructure sentences so the most powerful word or phrase lands at the end"
+    motivo: "The last word in a sentence carries the most weight in memory"
+    exemplo:
+      antes: "You will finally have freedom from your financial worries."
+      depois: "Your financial worries will finally give way to freedom."
+    regra: "Read the last 3 words of each sentence. They should be the strongest."
+
+execution_order:
+  note: "Follow steps 1-12 in exact order. Each pass builds on the previous."
+  passes:
+    - "Pass 1: Steps 1-6 (structural cleanup)"
+    - "Pass 2: Steps 7-9 (engagement and conviction)"
+    - "Pass 3: Steps 10-12 (polish and impact)"
+  total_time: "Budget 30-60 minutes per 1000 words of copy"

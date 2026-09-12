@@ -1,0 +1,61 @@
+# Simple Writing System - John Carlton
+# Source: SimpleWritingSystem.com
+# Category: copywriting_methodology
+
+name: "The Simple Writing System"
+version: "1.0"
+source: "John Carlton - SimpleWritingSystem.com"
+category: "copywriting_methodology"
+command: "*sws"
+
+description: |
+  Nada de bom acontece no seu negócio até a mensagem de vendas
+  ser escrita. E as melhores mensagens são as que QUALQUER UM
+  pode entender. Escreva como você fala.
+
+core_principle: |
+  Se você não diria isso a um amigo no bar, não escreva no seu anúncio.
+  O momento que você começa a "escrever" (em vez de "comunicar"),
+  você perde seu prospect.
+
+three_pillars:
+  pillar_1:
+    name: "One Idea Per Sentence"
+    principle: "Cada frase entrega EXATAMENTE UM pensamento"
+    test: "Leia em voz alta. Se precisa respirar no meio, divida."
+    example:
+      bad: "Nosso sistema revolucionário combina tecnologia de ponta com princípios testados para entregar resultados que vão transformar seu negócio enquanto economiza tempo e dinheiro."
+      good: |
+        Nosso sistema é revolucionário.
+        Combina tech de ponta com princípios testados.
+        Os resultados vão transformar seu negócio.
+        Você vai economizar tempo. E dinheiro.
+
+  pillar_2:
+    name: "Conversational Tone"
+    principle: "Escreva como se estivesse falando com UMA pessoa no bar"
+    rules:
+      - "Use contrações (você, tá, né)"
+      - "Use linguagem informal"
+      - "Use fragmentos. Assim."
+      - "Fale diretamente (você, seu)"
+      - "Nunca soe como uma corporação"
+
+  pillar_3:
+    name: "Lizard Brain First"
+    principle: "Acerte desejos primais ANTES de engajar logica"
+    triggers:
+      survival: "Proteja-se de [ameaça]"
+      comfort: "Finalmente, um jeito fácil de [resultado]"
+      status: "Junte-se aos poucos que [conquista]"
+      curiosity: "O segredo bizarro por trás de [fenômeno]"
+
+process:
+  step_1: "Brain Dump - escreva tudo sem editar"
+  step_2: "Find the Hook - identifique o ÚNICO detalhe compelling"
+  step_3: "Write Fast - primeiro rascunho sem backspace"
+  step_4: "Simplify Ruthlessly - corte cada palavra desnecessaria"
+  step_5: "Read Aloud Test - leia tudo em voz alta"
+  step_6: "The Pint Test - explica no tempo de uma cerveja?"
+
+when_to_use: "Em TODO copy que você escrever. Simplicidade nunca é errada."

@@ -1,0 +1,85 @@
+# Evaldo Albuquerque — Carta de Vendas de 16 Palavras
+# Framework: One Belief + 10 Perguntas Sequenciais
+# Fonte: "A Carta de Vendas de 16 Palavras" (2018)
+
+framework:
+  name: "Carta de Vendas de 16 Palavras"
+  author: "Evaldo Albuquerque"
+  source: "Agora Financial — $80M backend revenue (2018)"
+  core_formula: "Defina seu One Belief, depois responda 10 perguntas"
+
+one_belief:
+  template: "Esta nova oportunidade é a chave para [DESEJO] e só é alcançável através de [MEU MECANISMO]"
+  rule: "TODA copy deve ter um e apenas um One Belief definido ANTES de escrever"
+  validation: "Se cobrir o nome e colocar no concorrente, ainda funciona? Se sim, não é único o suficiente."
+
+perguntas_sequenciais:
+  - numero: 1
+    pergunta: "Como isso é diferente de tudo que já vi?"
+    objetivo: "Ativar dopamina via novidade — USP na headline"
+    fase: "problema"
+    gatilho: "Novidade/curiosidade"
+
+  - numero: 2
+    pergunta: "Por que eu deveria me importar?"
+    objetivo: "Conectar ao desejo emocional, não features"
+    fase: "problema"
+    gatilho: "Relevância pessoal"
+
+  - numero: 3
+    pergunta: "Como sei que isso é verdade?"
+    objetivo: "Prova via storytelling ABT (And-But-Therefore), não dados secos"
+    fase: "problema"
+    gatilho: "Credibilidade"
+    regra_abt: "Story > Data. Carnegie Mellon: story donors gave 2x vs data donors"
+
+  - numero: 4
+    pergunta: "Por que eu ainda não consegui [resultado]?"
+    objetivo: "Justificar falhas SEM culpar o leitor (Blair Warren principle)"
+    fase: "problema"
+    gatilho: "Remoção de culpa"
+
+  - numero: 5
+    pergunta: "Quem ou o que é o culpado?"
+    objetivo: "Identificar vilão/barreira externa — deflexão de responsabilidade"
+    fase: "problema"
+    gatilho: "Inimigo comum"
+
+  - numero: 6
+    pergunta: "Por que agora?"
+    objetivo: "Criar senso de urgência/timing — janela se fechando"
+    fase: "problema"
+    gatilho: "Urgência"
+
+  - numero: 7
+    pergunta: "Por que eu deveria confiar em você?"
+    objetivo: "Construir autoridade/credibilidade/relatabilidade"
+    fase: "problema"
+    gatilho: "Autoridade + prova social"
+
+  - numero: 8
+    pergunta: "Como funciona?"
+    objetivo: "Explicar mecanismo/processo — remover ansiedade de execução"
+    fase: "solucao"
+    gatilho: "Clareza"
+
+  - numero: 9
+    pergunta: "Como posso começar?"
+    objetivo: "CTA claro, sem fricção — passo a passo simples"
+    fase: "solucao"
+    gatilho: "Facilidade"
+
+  - numero: 10
+    pergunta: "O que eu tenho a perder?"
+    objetivo: "Reversão de risco — garantia como peça de venda"
+    fase: "solucao"
+    gatilho: "Segurança"
+
+estrutura:
+  fase_1_problema: "Q1-Q7 — Revelação do problema + identificação do vilão"
+  fase_2_solucao: "Q8-Q10 — Mecanismo de solução + caminho de adoção"
+
+uso:
+  quando: "Sales letters, VSLs, webinars, emails longos, páginas de venda"
+  como: "Gerar copy respondendo cada pergunta em sequência. Cada resposta vira 1 bloco da copy."
+  validacao: "Cada bloco deve responder a objeção do bloco anterior"

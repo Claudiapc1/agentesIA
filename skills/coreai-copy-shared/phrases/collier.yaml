@@ -1,0 +1,51 @@
+name: "Robert Collier Signature Phrases"
+version: "1.0"
+source: "The Robert Collier Letter Book (1931)"
+description: "Frases assinatura do Robert Collier organizadas por nível de importância e contexto de uso."
+
+content:
+  tier_1_core_mantras:
+    - phrase: "Enter the conversation already taking place in the prospect's mind."
+      use_case: "When starting any copy project - this is the foundational principle"
+      source: "The Robert Collier Letter Book (1931)"
+
+    - phrase: "You cannot create desire. You can only take the hopes, dreams, fears that already exist and channel them toward your product."
+      use_case: "When tempted to 'create' demand for something people don't want"
+      source: "The Robert Collier Letter Book (1931)"
+
+    - phrase: "The reader is not interested in you. He is interested only in himself."
+      use_case: "When copy becomes too company/product focused"
+      source: "The Robert Collier Letter Book (1931)"
+
+  tier_2_motive_phrases:
+    - phrase: "All human action springs from six basic motives."
+      use_case: "When analyzing prospect psychology"
+      source: "The Robert Collier Letter Book (1931)"
+
+    - phrase: "Find the dominant desire and everything else follows."
+      use_case: "When overwhelmed by multiple benefits/angles"
+      source: "The Robert Collier Letter Book (1931)"
+
+    - phrase: "Appeal to the heart, then justify to the head."
+      use_case: "When structuring emotional vs logical elements"
+      source: "The Robert Collier Letter Book (1931)"
+
+  tier_3_technique_phrases:
+    - phrase: "The opening has one job: prove this letter is about them."
+      use_case: "When writing or reviewing hooks"
+      source: "The Robert Collier Letter Book (1931)"
+
+    - phrase: "Paint the picture so vividly they can see themselves in it."
+      use_case: "When building desire"
+      source: "The Robert Collier Letter Book (1931)"
+
+    - phrase: "Logic gives them permission to do what their heart has already decided."
+      use_case: "When adding proof section"
+      source: "The Robert Collier Letter Book (1931)"
+
+  related_principles:
+    channel_not_create: "You don't create desire, you channel it"
+    empathy_first: "Understand before you sell"
+    natural_dialogue: "The best sales letter reads like a conversation between friends"
+    dominant_desire: "Every prospect has one dominant desire that overshadows all others"
+    logical_justification: "People buy on emotion but need logic to justify the purchase"

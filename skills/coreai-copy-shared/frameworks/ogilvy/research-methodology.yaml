@@ -1,0 +1,83 @@
+name: "Research-First Methodology"
+version: "1.0.0"
+source:
+  books:
+    - "Ogilvy on Advertising"
+    - "Confessions of an Advertising Man"
+  author: "David Ogilvy"
+  category: "Process"
+  training: "Gallup Audience Research Institute"
+description: >
+  Pesquisa e a fundacao de todo grande advertising. Ogilvy foi treinado no
+  Gallup e atribuiu seu sucesso a pesquisa meticulosa dos habitos do consumidor.
+  "Look before you leap."
+
+principle: "The more you know about the product, the more likely you are to come up with a Big Idea."
+
+research_philosophy:
+  gallup_influence: "Ogilvy cites Gallup as one of the significant influences on his thinking"
+  core_belief: "Advertising which follows research is seldom unsuccessful"
+  warning: "Innovation is risky unless you pre-test your innovation with consumers"
+
+what_to_research:
+  product_research:
+    - "What does it DO?"
+    - "What's UNIQUE about it?"
+    - "Who's the COMPETITION?"
+    - "What's the HISTORY?"
+    - "How is it MADE?"
+  consumer_research:
+    - "Who BUYS it?"
+    - "WHY do they buy?"
+    - "What PROBLEM does it solve?"
+    - "What do they THINK about the category?"
+    - "What LANGUAGE do they use?"
+  competitive_research:
+    - "What are competitors CLAIMING?"
+    - "What WORKS for them?"
+    - "What DOESN'T work?"
+    - "What's the OPPORTUNITY?"
+
+ogilvy_research_process:
+  step_1: "Spend weeks studying the product"
+  step_2: "Use the product yourself"
+  step_3: "Study all previous campaigns (yours and competitors)"
+  step_4: "Talk to customers"
+  step_5: "Find the key fact that will become the Big Idea"
+
+rolls_royce_example:
+  research_process: "Ogilvy spent weeks studying the car"
+  discovery: "Technical Editor's write-up in The Motor magazine mentioned electric clock"
+  headline_born: "At 60 miles an hour the loudest noise... comes from the electric clock"
+  result: "Doubled Rolls-Royce American sales in one year"
+
+testing_philosophy:
+  core_rule: "Never stop testing, and your advertising will never stop improving"
+  what_to_test:
+    - "Headlines (A/B test)"
+    - "Promises"
+    - "Layouts"
+    - "Media placements"
+    - "Frequency"
+  how_to_measure:
+    - "Sales (ultimate measure)"
+    - "Readership scores"
+    - "Recall"
+    - "Brand metrics"
+
+application:
+  when: "Before ANY creative work"
+  process:
+    - "Allocate weeks for research (not days)"
+    - "Use the product extensively"
+    - "Interview customers"
+    - "Study competition"
+    - "Find the key fact"
+    - "THEN write"
+
+common_mistakes:
+  - "Rushing to creative without research"
+  - "Relying on opinions instead of data"
+  - "Not using the product yourself"
+  - "Not studying what worked before"
+  - "Testing too little or not at all"

@@ -1,0 +1,60 @@
+name: "Jim Rutz - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Read This or Die (Boardroom)"
+    - "Magalog Promotions"
+  author: "Jim Rutz"
+description: >
+  Frases icônicas do Jim Rutz organizadas por categoria, com fonte e contexto de uso.
+
+editorial_related:
+  - phrase: "If they can put it down, it's not good enough."
+    source: "Jim Rutz"
+    context: "Padrão de qualidade de leitura"
+  - phrase: "The best advertising doesn't look like advertising."
+    source: "Jim Rutz"
+    context: "Filosofia de disfarce editorial"
+  - phrase: "Write like a journalist, sell like a master."
+    source: "Jim Rutz"
+    context: "Abordagem editorial-first"
+  - phrase: "Treat your reader as a friend who happens to be interested in this topic."
+    source: "Jim Rutz"
+    context: "Tom e voz certa"
+
+magalog_related:
+  - phrase: "The #1 sin in ad mail is being predictable."
+    source: "Jim Rutz"
+    context: "Padrão de criatividade"
+  - phrase: "Volume is value."
+    source: "Jim Rutz"
+    context: "Mais conteúdo = mais valor percebido"
+  - phrase: "The product reveal should feel like a natural conclusion."
+    source: "Jim Rutz"
+    context: "Transição natural para a oferta"
+
+headlines_related:
+  - phrase: "READ THIS OR DIE."
+    source: "Jim Rutz - Boardroom"
+    context: "Headline mais famosa do Rutz"
+
+fascinations_related:
+  - phrase: "Every bullet must open a loop that demands closure."
+    source: "Jim Rutz"
+    context: "Padrão de qualidade de fascinations"
+  - phrase: "Swipe file is furniture."
+    source: "Jim Rutz"
+    context: "Estudar vencedores obsessivamente"
+
+structure_related:
+  - phrase: "Hook. Story. Value. Proof. Offer."
+    source: "Jim Rutz"
+    context: "Estrutura de magalog"
+  - phrase: "Fascinate. Educate. Demonstrate. Invite."
+    source: "Jim Rutz"
+    context: "Fórmula alternativa de estrutura"
+  - phrase: "Specificity builds belief. Stories build trust. Volume builds value."
+    source: "Jim Rutz"
+    context: "Três pilares de copy editorial"
+
+throne_phrase: "READ THIS OR DIE."

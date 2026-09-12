@@ -1,0 +1,93 @@
+name: "Dan Koe - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "The Art of Focus"
+    - "Digital Economics"
+    - "Modern Mastery"
+  author: "Dan Koe"
+description: >
+  Frases icônicas do Dan Koe organizadas por categoria, com fonte e contexto de uso.
+
+content_related:
+  - phrase: "Content creation is 80% research, 20% creating content."
+    source: "The Creative Process Behind Big Ideas"
+    context: "Estratégia de criação de conteúdo"
+  - phrase: "Good headlines make for good tweets. If a blog post is doing very well, it will do very well on Twitter."
+    source: "The Content Pyramid For Unlimited Ideas"
+    context: "Reaproveitamento de conteúdo"
+  - phrase: "The only difference between a good joke and impactful content is the degree of seriousness."
+    source: "How To Tell A Joke"
+    context: "Escrita com impacto"
+  - phrase: "When you are just starting out, you must post some cheesy content at first. One must be cringe before they can become based."
+    source: "The Evolution Of Your Content, Ideas, & Brand"
+    context: "Superar perfeccionismo"
+  - phrase: "Consumers follow producers. So produce something deeper than surface level engageable content."
+    source: "The Evolution Of Your Content, Ideas, & Brand"
+    context: "Criar conteúdo substancial"
+
+distribution_related:
+  - phrase: "Build distribution, then build whatever you want."
+    source: "The Greatest Lead Generation & Leverage System"
+    context: "Estratégia audience-first"
+  - phrase: "Your personal brand is a lead generation mechanism like no other."
+    source: "The Greatest Lead Generation & Leverage System"
+    context: "Valor da marca pessoal"
+  - phrase: "Money loves speed, but socials love experience."
+    source: "The Greatest Lead Generation & Leverage System"
+    context: "Paciência com crescimento em redes sociais"
+  - phrase: "NOBODY CAN REPLICATE YOU. People do not choose to follow your cold emails or DMs."
+    source: "The Greatest Lead Generation & Leverage System"
+    context: "Marca pessoal sobre outreach frio"
+
+offer_related:
+  - phrase: "People buy systems that get results."
+    source: "The Creative Process Behind Big Ideas"
+    context: "Criação de produtos e ofertas"
+  - phrase: "Your offer is an exchange of value. Make it OVERWHELMINGLY valuable in exchange for the asking price."
+    source: "The Godfather Offer"
+    context: "Criação de oferta irresistível"
+  - phrase: "Do not lower your price. It decreases the value of your offer. Instead, offer a relevant bonus."
+    source: "The Godfather Offer"
+    context: "Tática de negociação"
+  - phrase: "If I can make [ideal customer] believe that [unique system] is the only way to get [quantifiable end result], all objections become irrelevant."
+    source: "Your Entire Marketing Strategy In One Sentence"
+    context: "Estratégia de marketing em uma frase"
+
+framework_related:
+  - phrase: "The frameworks and systems you create, name, and tie to yourself are what you will be remembered for."
+    source: "The Creative Process Behind Big Ideas"
+    context: "Construir autoridade com frameworks próprios"
+  - phrase: "Iteration is the key to success in all things, especially online business."
+    source: "The Greatest Lead Generation & Leverage System"
+    context: "Melhoria contínua"
+  - phrase: "Emulate what works at the funnel level, differentiate at the brand level."
+    source: "Digital Economics"
+    context: "Estratégia competitiva"
+
+mindset_related:
+  - phrase: "People don't remember what you say, they remember how you make them feel."
+    source: "How To Capture Attention & 10X Your Engagement"
+    context: "Engajamento emocional"
+  - phrase: "Everyone is on social media to be told what to do in a confident way. Nobody is secure in their actions."
+    source: "Digital Economics"
+    context: "Voz de conteúdo confiante"
+  - phrase: "Play the game until it becomes an art. Do what you have to do until you can do whatever you want."
+    source: "Evergreen VS Meta Growth Content"
+    context: "Paciência com algoritmo"
+  - phrase: "Personal development = business development. Your content, audience, and self will evolve the longer you are in the game."
+    source: "The Greatest Lead Generation & Leverage System"
+    context: "Pensamento de longo prazo"
+
+growth_related:
+  - phrase: "DMs are how you network, grow, and get eyes on your content as a beginner."
+    source: "How To Network, Grow, And Get Eyes On Your Content"
+    context: "Estratégia de crescimento para iniciantes"
+  - phrase: "Tell, don't show. Tell people what to do rather than showing them how."
+    source: "The Simplified Product Launch Guide"
+    context: "Conteúdo gratuito que leva a produtos pagos"
+  - phrase: "The real money is made in the follow-ups."
+    source: "The DM Seduction Method"
+    context: "Follow-up em vendas"
+
+throne_phrase: "Content creation is 80% research, 20% creating content."

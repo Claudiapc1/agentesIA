@@ -1,0 +1,34 @@
+---
+name: {{prefix}}-{{slug}}
+description: "{{description}}"
+when-to-use: >
+  {{when_to_use}}
+argument-hint: "[brief / tema]"
+allowed-tools: "Read, Write, Bash, Glob, Grep"
+user-invocable: true
+---
+
+# {{title}}
+
+## PASSO 1 — Cliente (ContextOS)
+Se não veio da skill mãe, perguntar o cliente e carregar `context-os/businesses/{slug}/`
+(ver o gancho na skill mãe). Se veio da mãe, reutilizar o contexto já carregado.
+
+## PASSO 2 — Carregar DNA permanente
+Ler `shared/references/`:
+{{references_list}}
+
+## PASSO 3 — Carregar motor (agente)
+Ler `shared/agents/`:
+{{agents_list}}
+
+## PASSO 4 — Executar o processo
+{{process_steps}}
+
+## PASSO 5 — Validar (obrigatório)
+Rodar `shared/validators/` na ordem:
+{{validators_list}}
+Loop de reescrita até passar. Só entregar quando aprovado.
+
+## PASSO 6 — Output
+{{output_format}}

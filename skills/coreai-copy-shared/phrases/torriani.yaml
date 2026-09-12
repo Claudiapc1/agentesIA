@@ -1,0 +1,84 @@
+name: "Juliano Torriani - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Protocolo Império"
+    - "Playbook Imersão High Ticket"
+  author: "Juliano Torriani"
+description: >
+  Frases icônicas do Juliano Torriani organizadas por categoria, com fonte e contexto de uso.
+
+posicionamento_related:
+  - phrase: "Sucesso sem liberdade é prisão. Liberdade exige posicionamento, oferta e vendas todos os dias."
+    source: "Protocolo Império"
+    context: "Filosofia central do Protocolo Império"
+  - phrase: "Você não disputa atenção. Você comanda território."
+    source: "Protocolo Império - Pilar 1"
+    context: "Sobre posicionamento dominante"
+  - phrase: "Sem narrativa dominante, até a melhor copy é ignorada. Com narrativa dominante, até um sussurro converte."
+    source: "Protocolo Império"
+    context: "Importância do posicionamento sobre execução"
+  - phrase: "Você não precisa de mais conteúdo, mais seguidores ou mais lançamentos. Você precisa de posicionamento dominante."
+    source: "Protocolo Império"
+    context: "Crítica ao modelo de crescimento genérico"
+
+simplicidade_brutal:
+  - phrase: "Todo negócio digital se resume a PRODUTO + TRÁFEGO + OFERTA. O resto é distração."
+    source: "Protocolo Império"
+    context: "Princípio de simplicidade brutal"
+  - phrase: "A maioria está ocupada vencendo batalhas irrelevantes enquanto perde a guerra."
+    source: "Protocolo Império"
+    context: "Sobre foco estratégico"
+
+monetizacao_related:
+  - phrase: "Produto barato atrai problema. Produto caro atrai respeito."
+    source: "Protocolo Império - Escada Invertida"
+    context: "Princípio da Escada de Valor Invertida"
+  - phrase: "Lançamento mata consistência. Vendas perpétuas geram liberdade."
+    source: "Protocolo Império"
+    context: "Sobre modelo de negócio sustentável"
+
+copy_related:
+  - phrase: "Copy genérica mata o negócio. Copy imperial gera império."
+    source: "Protocolo Império"
+    context: "Sobre qualidade de comunicação"
+  - phrase: "Avatar dissecado + Oferta premium + Escada clara = conversão sem grito."
+    source: "Protocolo Império"
+    context: "Fórmula simplificada do Protocolo"
+
+raio_x_related:
+  - phrase: "Conhecer o cliente melhor que ele se conhece = diferencial inegável"
+    source: "Protocolo Império - Raio-X Psicológico"
+    context: "Dissecação emocional como fundação"
+  - phrase: "Quando o cliente lê e sente que teve sua alma invadida, o Raio-X está pronto."
+    source: "Protocolo Império"
+    context: "Padrão de qualidade do Raio-X Psicológico"
+
+oferta_related:
+  - phrase: "Urgência invisível é mais poderosa que urgência artificial"
+    source: "Protocolo Império - Oferta Iminente"
+    context: "Sobre urgência real vs fabricada"
+  - phrase: "Você não se vende como opção. Se impõe como única resposta possível."
+    source: "Protocolo Império - Frase de Trono"
+    context: "Posicionamento Único de Valor Imperial"
+
+conteudo_related:
+  - phrase: "Você não precisa postar todo dia. Precisa postar com intenção."
+    source: "Protocolo Império - Sistema ACC"
+    context: "Presença intencional sobre volume"
+
+metaforas_imperiais:
+  - phrase: "Assumir o trono"
+    source: "Protocolo Império"
+    context: "Metáfora para posicionamento dominante"
+  - phrase: "Instalar câmera na mente"
+    source: "Protocolo Império"
+    context: "Metáfora para Raio-X Psicológico"
+  - phrase: "Usina de desejo"
+    source: "Protocolo Império"
+    context: "Metáfora para presença online estratégica"
+  - phrase: "Autópsia emocional"
+    source: "Protocolo Império"
+    context: "Metáfora para análise profunda de avatar"
+
+throne_phrase: "Sucesso sem liberdade é prisão. Liberdade exige posicionamento, oferta e vendas todos os dias."

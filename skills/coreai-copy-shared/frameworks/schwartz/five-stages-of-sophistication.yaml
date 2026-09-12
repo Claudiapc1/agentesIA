@@ -1,0 +1,81 @@
+# Framework: 5 Stages of Market Sophistication
+# Author: Eugene Schwartz
+# Source: Breakthrough Advertising (1966), Chapter 3
+# Command: *sophistication
+
+name: "The 5 Stages of Market Sophistication"
+category: "competitive_analysis"
+origin: "Eugene Schwartz - Breakthrough Advertising (1966)"
+frequency: "Core - usado para posicionamento competitivo"
+command: "*sophistication"
+
+principle: |
+  Mercados evoluem. A primeira pessoa a prometer um benefício
+  pode ser direta. Mas à medida que mais competidores entram,
+  você precisa de abordagens mais sofisticadas para se destacar.
+
+stages:
+  - stage: 1
+    name: "Virgin Market (Mercado Virgem)"
+    state: "Você é o primeiro. Ninguém prometeu isso antes."
+    approach: "Seja simples e direto. Estado o benefício claramente."
+    headline_strategy: "Promessa simples e direta"
+    example: "Emagreca!"
+
+  - stage: 2
+    name: "Second Level (Segundo Nível)"
+    state: "Competição inicial. Outros fazem promessas similares."
+    approach: "Amplie a promessa. Quantifique. Intensifique."
+    headline_strategy: "Promessa amplificada com especificidade"
+    example: "Perca 10 Quilos em 30 Dias!"
+
+  - stage: 3
+    name: "Third Level (Terceiro Nível)"
+    state: "Promessas saturadas. Mercado cético de claims."
+    approach: "Introduza MECANISMO ÚNICO. Mude de O QUE para COMO."
+    headline_strategy: "Novo mecanismo que explica COMO funciona"
+    example: "Pílula Que Bloqueia Absorção de Gordura"
+
+  - stage: 4
+    name: "Fourth Level (Quarto Nível)"
+    state: "Mecanismos também saturados."
+    approach: "Elabore o mecanismo. Torne mais específico, rápido, completo."
+    headline_strategy: "Mecanismo elaborado e credibilizado"
+    example: "Triplo Bloqueador de Gordura com Tecnologia de Ação 24 Horas"
+
+  - stage: 5
+    name: "Fifth Level (Quinto Nível)"
+    state: "Mercado exausto. Já ouviram tudo."
+    approach: "Mude para IDENTIFICAÇÃO. Venda o vendedor, não o produto."
+    headline_strategy: "Foco em QUEM usa, não o que faz"
+    example: "Para Pessoas Sérias Sobre Transformação de Verdade"
+
+application: |
+  1. Analise quantos competidores já fizeram promessas similares
+  2. Identifique em qual estágio seu mercado está
+  3. Use a estratégia apropriada para aquele estágio
+  4. Em mercados Estágio 5, identidade vence features
+
+diagnosis_template: |
+  DIAGNÓSTICO DE SOFISTICAÇÃO:
+
+  MERCADO: [Nome do mercado]
+
+  HISTÓRICO DE CLAIMS (do mais antigo ao mais recente):
+  1. "[Claim Stage 1]" (19XXs - Estágio 1)
+  2. "[Claim Stage 2]" (19XXs - Estágio 2)
+  3. "[Claim Stage 3]" (20XXs - Estágio 3)
+  4. "[Claim Stage 4]" (20XXs - Estágio 4)
+  5. "[Claim Stage 5?]" (Agora - Estágio 5?)
+
+  DIAGNÓSTICO: ESTÁGIO [X] ([Nome])
+  - [Observação sobre estado atual]
+  - [O que funciona vs saturado]
+
+  ABORDAGEM RECOMENDADA:
+  Opção A: [Estratégia 1]
+  Opção B: [Estratégia 2]
+  Opção C: [Estratégia 3]
+
+  NÃO FUNCIONA MAIS:
+  - [Lista do que está saturado]

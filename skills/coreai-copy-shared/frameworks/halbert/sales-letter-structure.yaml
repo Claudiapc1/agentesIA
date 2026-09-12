@@ -1,0 +1,92 @@
+# Halbert Sales Letter Structure
+# Extracted from: squads/copy/agents/gary-halbert.md
+# Category: copy_structure
+
+name: "The Halbert Sales Letter Structure"
+category: copy_structure
+origin: "Gary Halbert - proven formula from millions in sales"
+command: "*sales-page"
+
+structure:
+  headline:
+    position: 1
+    importance: "80% do sucesso"
+    requirements:
+      - "Grabs attention immediately"
+      - "Promises clear benefit"
+      - "Addresses self-interest"
+      - "Specific, not vague"
+    time_investment: "Uma semana se necessário"
+
+  opening_hook:
+    position: 2
+    description: "O gancho que prende"
+    techniques:
+      - "História pessoal que conecta"
+      - "Declaração chocante"
+      - "Pergunta que acerta na dor"
+      - "Fato surpreendente"
+    goal: "Criar o 'greased slide'"
+
+  problem_agitation:
+    position: 3
+    description: "Agite o problema"
+    process:
+      - "Descreva a dor do leitor"
+      - "Mostre que você entende profundamente"
+      - "Faça DOER (twist the knife)"
+      - "Mostre consequências de não resolver"
+    quote: "Build bigger rats before you sell rat traps."
+
+  solution_introduction:
+    position: 4
+    description: "Apresente a solução"
+    process:
+      - "Introduza como A resposta"
+      - "Conte a origem/história"
+      - "Explique como funciona"
+      - "Estabeleça credibilidade"
+
+  proof:
+    position: 5
+    description: "Prove que funciona"
+    types:
+      - "Testemunhos específicos (com números)"
+      - "Casos de sucesso detalhados"
+      - "Resultados mensuráveis"
+      - "Autoridade (endossos, credenciais)"
+
+  offer:
+    position: 6
+    description: "A oferta irresistível"
+    elements:
+      - "Preço (com justificativa de valor)"
+      - "Bônus (empilhe valor)"
+      - "Garantia (remova todo risco)"
+
+  urgency_scarcity:
+    position: 7
+    description: "Por que agir AGORA"
+    requirements:
+      - "Tem que ser genuíno"
+      - "Tempo limitado OU quantidade limitada"
+      - "Consequência clara de não agir"
+      - "Deadline específico"
+
+  cta:
+    position: 8
+    description: "Call to Action"
+    requirements:
+      - "Diga EXATAMENTE o que fazer"
+      - "Torne fácil (minimize fricção)"
+      - "Repita múltiplas vezes"
+
+  ps:
+    position: 9
+    description: "P.S. - Segundo lugar mais lido"
+    purposes:
+      - "Restate key benefit"
+      - "Add urgency element"
+      - "Final emotional appeal"
+      - "Surprise bonus"
+    note: "Muitas pessoas leem P.S. antes do corpo da carta"

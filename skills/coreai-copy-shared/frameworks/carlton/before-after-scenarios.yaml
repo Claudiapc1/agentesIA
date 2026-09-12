@@ -1,0 +1,54 @@
+# Before-After Scenarios - John Carlton
+# Source: John Carlton - Direct Response methodology
+# Category: persuasion_technique
+
+name: "Before-After Scenarios"
+version: "1.0"
+source: "John Carlton - Direct Response methodology"
+category: "persuasion_technique"
+command: "*before-after"
+
+description: |
+  Framework para criar cenários vívidos de antes/depois que
+  fazem o prospect se VER no resultado. O contraste entre
+  dor atual e resultado futuro cria urgência de ação.
+
+philosophy: |
+  Pessoas não compram produtos. Compram a versão futura
+  de si mesmas. Seu trabalho é pintar esse futuro tão
+  vividamente que eles SENTEM como se já estivessem lá.
+
+structure:
+  before:
+    instruction: "Descreva a situação atual com DETALHES SENSORIAIS"
+    elements:
+      - "O que sentem fisicamente?"
+      - "O que pensam às 3h da manhã?"
+      - "O que dizem para si mesmos?"
+      - "Como se sentem olhando no espelho?"
+      - "O que o cônjuge/amigos dizem?"
+    example: |
+      "Você acorda às 5h com as costas doendo. Arrasta até o banheiro.
+      Olha no espelho e mal reconhece quem vê. No trabalho, colegas
+      passam correndo enquanto você luta para subir escadas."
+
+  after:
+    instruction: "Descreva o resultado com ESPECIFICIDADE SENSORIAL"
+    elements:
+      - "O que sentem fisicamente de diferente?"
+      - "Como dormem agora?"
+      - "O que outros notam e comentam?"
+      - "O que conseguem fazer que antes não podiam?"
+      - "Como se sentem consigo mesmos?"
+    example: |
+      "Você pula da cama às 6h. Sem dor. Olha no espelho e sorri.
+      No trabalho, sobe 3 andares de escada sem nem pensar nisso.
+      Seu cônjuge pergunta: 'O que aconteceu com você?'"
+
+  bridge:
+    instruction: "Seu produto é a ponte entre Before e After"
+    rule: "A transição deve parecer natural e credível"
+
+when_to_use: |
+  Use em headlines, leads, VSLs, e em qualquer momento
+  que precisa criar desejo visceral pelo resultado.

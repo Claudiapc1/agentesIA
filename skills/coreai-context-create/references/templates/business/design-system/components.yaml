@@ -1,0 +1,57 @@
+# ContextOS - Design System Components
+# Catalogo de componentes do design system
+
+schema_version: "1.0"
+created_at: null
+updated_at: null
+
+component_library:
+  framework: null  # React | Vue | Svelte | HTML | Tailwind | shadcn/ui
+
+primitives:
+  - name: Button
+    variants: []    # primary, secondary, ghost, destructive
+    sizes: []       # sm, md, lg
+    states: []      # default, hover, active, disabled
+    notes: null
+
+  - name: Input
+    variants: []
+    sizes: []
+    states: []
+    notes: null
+
+  - name: Typography
+    variants: []    # h1-h6, body, caption, label
+    notes: null
+
+composites:
+  - name: Card
+    contains: []    # Quais primitivos usa
+    variants: []
+    notes: null
+
+  - name: Modal
+    contains: []
+    variants: []
+    notes: null
+
+  - name: Navigation
+    contains: []
+    variants: []    # sidebar, topbar, bottombar
+    notes: null
+
+patterns:
+  - name: Form
+    components_used: []
+    layout: null
+    validation_style: null
+
+  - name: Table
+    components_used: []
+    features: []    # sort, filter, pagination
+    notes: null
+
+metadata:
+  total_components: 0
+  status: INCOMPLETE

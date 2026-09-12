@@ -1,0 +1,336 @@
+# Objection Database - Product Launch Formula
+# Source: Launch (Jeff Walker) + Common Launch Objections
+# Version: 1.0
+
+metadata:
+  source: "Launch by Jeff Walker + PLF Community patterns"
+  validated: true
+  created: "2026-01-27"
+
+overview:
+  description: |
+    Database de objeções comuns em lançamentos e como responde-las
+    usando a abordagem PLF de antecipacao e resposta no conteúdo.
+  jeff_approach: |
+    "Don't wait for the sales page to handle objections.
+    Address them in your prelaunch content, especially PLC2.
+    By the time you open cart, the major objections should already be crushed."
+
+universal_objections:
+  price:
+    category: "Preço"
+    variations:
+      - "E muito caro"
+      - "Não tenho dinheiro agora"
+      - "Preciso consultar meu conjuge/socio"
+      - "Posso achar mais barato"
+      - "Não vale esse preço"
+
+    plf_response_framework:
+      pre_launch:
+        - "Mostrar valor através de ensino gratuito (reciprocidade)"
+        - "Compartilhar resultados que justificam investimento"
+        - "Usar analogias de custo/benefício"
+
+      in_plc2:
+        - "Case studies com ROI específico"
+        - "Comparação com custo de NÃO resolver"
+        - "Ancoragem de valor antes de revelar preço"
+
+      open_cart:
+        - "Payment plan como alternativa"
+        - "Garantia que remove risco"
+        - "Bonus que aumentam valor percebido"
+
+    response_scripts:
+      - script: |
+          "Eu entendo - [preço] parece muito quando você olha o numero isolado.
+          Mas deixa eu te mostrar por outro ângulo: quanto custa NÃO resolver isso?
+          Se você continuar [problema], em 12 meses você terá perdido [custo do inaction].
+          [Nome do case study] investiu [preço] e conseguiu [resultado] em [tempo].
+          O ROI foi de [X]x."
+
+      - script: |
+          "O [produto] custa menos que um cafezinho por dia durante [periodo].
+          A pergunta real não é 'posso pagar?' - e 'posso pagar NÃO fazer isso?'"
+
+  time:
+    category: "Tempo"
+    variations:
+      - "Não tenho tempo"
+      - "Estou muito ocupado agora"
+      - "Vou fazer depois"
+      - "Preciso esperar um momento melhor"
+
+    plf_response_framework:
+      pre_launch:
+        - "Mostrar que o método e eficiente"
+        - "Dar exemplo de tempo realista necessário"
+        - "Contar sobre pessoas ocupadas que conseguiram"
+
+      in_plc2:
+        - "Case study de pessoa muito ocupada"
+        - "Breakdown do tempo real necessário"
+        - "Sistema que economiza tempo vs metodos antigos"
+
+      open_cart:
+        - "Emphasize que o momento nunca será perfeito"
+        - "Custo de esperar mais"
+        - "Quick wins que podem implementar imediatamente"
+
+    response_scripts:
+      - script: |
+          "Deixa eu adivinhar - você esta esperando ter mais tempo livre
+          para finalmente resolver [problema]. Mas quando foi a última vez
+          que você teve semanas livres? A verdade e que pessoas ocupadas
+          conseguem resultados porque não tem tempo para procrastinar.
+          [Nome] trabalha 60h por semana e conseguiu [resultado] dedicando
+          apenas [X minutos/horas] por [frequência]."
+
+  trust:
+    category: "Confiança"
+    variations:
+      - "Como sei que funciona?"
+      - "Já vi isso antes e não funcionou"
+      - "Parece bom demais pra ser verdade"
+      - "Não te conheco"
+      - "E mais um curso/produto que vai ficar na prateleira?"
+
+    plf_response_framework:
+      pre_launch:
+        - "Construir autoridade gradualmente"
+        - "Entregar valor REAL que prove expertise"
+        - "Ser transparente sobre limitações"
+
+      in_plc2:
+        - "Empilhar social proof diversificado"
+        - "Mostrar pessoas similares ao prospect"
+        - "Explicar por que isso é diferente do que já tentaram"
+
+      open_cart:
+        - "Garantia solida que remove risco"
+        - "Testimonials específicos"
+        - "Behind the scenes / transparência"
+
+    response_scripts:
+      - script: |
+          "Eu sei que você já viu promessas antes. Eu também.
+          A diferença e que eu não vou te pedir para acreditar em mim -
+          vou te MOSTRAR. Nos últimos 3 videos, te entreguei [valor específico].
+          Se isso foi valioso, imagine o que esta do outro lado.
+          E se não for, você tem [X] dias de garantia total."
+
+  self_doubt:
+    category: "Auto-Duvida"
+    variations:
+      - "Isso funciona para outros, não para mim"
+      - "Já tentei de tudo"
+      - "Minha situacao é diferente"
+      - "Não sou bom em [habilidade necessária]"
+      - "Sou muito velho/novo/ocupado/sem experiência"
+
+    plf_response_framework:
+      pre_launch:
+        - "Compartilhar sua própria jornada de duvidas"
+        - "Normalizar o medo"
+        - "Mostrar diversidade de pessoas que conseguiram"
+
+      in_plc2:
+        - "Case study de alguém que pensava igual"
+        - "Explicar que o sistema compensa limitações"
+        - "Mostrar pessoas em situações similares"
+
+      open_cart:
+        - "Reforcar que o suporte existe"
+        - "Garantia como safety net"
+        - "Comunidade que ajuda"
+
+    response_scripts:
+      - script: |
+          "Quando [nome do case study] começou, ela pensava exatamente isso:
+          '[objeção exata]'. Ela tinha [limitação similar].
+          Mas ela descobriu que [insight que mudou tudo].
+          Se funcionou para ela, pode funcionar para você também."
+
+  timing:
+    category: "Timing"
+    variations:
+      - "Não é o momento certo"
+      - "Depois das ferias/fim do ano/projeto"
+      - "Preciso resolver outra coisa primeiro"
+      - "Vou esperar a próxima turma"
+
+    plf_response_framework:
+      in_plc3:
+        - "Custo de esperar"
+        - "O momento perfeito não existe"
+        - "Casos de pessoas que esperaram e se arrependeram"
+
+      open_cart:
+        - "Escassez real (cart close)"
+        - "Bonus time-limited"
+        - "Preço que vai aumentar"
+
+    response_scripts:
+      - script: |
+          "Sabe qual o momento perfeito para começar?
+          Ha 5 anos. O segundo melhor? Agora.
+          Cada mes que você espera e [custo de inacao].
+          [Nome] também achou que não era o momento.
+          Ela agiu mesmo assim. [resultado]."
+
+  legitimacy:
+    category: "Legitimidade"
+    variations:
+      - "Isso é golpe?"
+      - "Por que tão barato/caro?"
+      - "Por que você esta fazendo isso?"
+      - "Qual o catch?"
+
+    plf_response_framework:
+      throughout:
+        - "Transparencia total"
+        - "Explicar motivação genuina"
+        - "Mostrar história real"
+
+    response_scripts:
+      - script: |
+          "Deixa eu ser transparente sobre por que faco isso:
+          [sua verdadeira motivação - dinheiro E propósito].
+          Sim, eu ganho dinheiro com isso. E um negócio.
+          Mas também [propósito maior].
+          Se fosse golpe, teria [X] pessoas falando bem publicamente?"
+
+niche_specific_objections:
+  courses:
+    objections:
+      - objection: "Posso achar isso de graca no YouTube"
+        response: |
+          "Pode. Eu mesmo aprendi muito no YouTube.
+          A diferença e: quanto tempo você vai gastar juntando peças soltas?
+          O [produto] é o caminho organizado, passo a passo,
+          testado por [X] pessoas. E o atalho, não o conteúdo."
+
+      - objection: "Já comprei cursos que nunca terminei"
+        response: |
+          "Isso acontece quando o curso é um despejo de informação.
+          [Produto] é diferente porque [diferencial - accountability,
+          formato curto, implementação imediata, etc.]"
+
+  coaching:
+    objections:
+      - objection: "Coaching é muito caro"
+        response: |
+          "Coaching não é gasto, é investimento com ROI mensurável.
+          [Nome] investiu [X] e em [tempo] tinha [resultado com ROI].
+          A pergunta e: quanto custa continuar tentando sozinho?"
+
+      - objection: "Posso fazer sozinho"
+        response: |
+          "Pode. A questão e quanto tempo.
+          O que levaria [X meses/anos] sozinho, com orientacao certa
+          pode levar [Y semanas/meses]. Tempo e seu recurso mais escasso."
+
+  services:
+    objections:
+      - objection: "Vou fazer internamente"
+        response: |
+          "Fazer internamente tem custos ocultos: salario, treinamento,
+          erro de aprendizado, oportunidade. [Servico] entrega
+          [resultado] em [tempo] porque é o que fazemos o dia todo."
+
+      - objection: "Já trabalhei com outros e não deu certo"
+        response: |
+          "Entendo a frustração. Posso perguntar o que deu errado?
+          [Ouvir] Isso aconteceu porque [diagnóstico].
+          Nosso processo é diferente em [diferencial específico]."
+
+  software:
+    objections:
+      - objection: "Já tenho ferramenta similar"
+        response: |
+          "Quantas ferramentas você tem que não usa direito?
+          [Software] resolve [problema específico] de forma que
+          [diferencial]. [Nome] migrou de [competidor] e [resultado]."
+
+      - objection: "E mais uma assinatura"
+        response: |
+          "Se cada assinatura gerasse [X] de retorno, você teria quantas?
+          [Software] não é custo - é alavanca. [Case com ROI]."
+
+plc_objection_timing:
+  plc1:
+    focus: "Plantar sementes"
+    approach: |
+      Mencione que vai abordar duvidas comuns nos próximos conteúdos.
+      Não responda tudo ainda - crie antecipacao.
+    example: |
+      "Eu sei que você pode estar pensando '[objeção comum]'.
+      Vou falar sobre isso no próximo video."
+
+  plc2:
+    focus: "Destruir objeções principais"
+    approach: |
+      Este é o momento de empilhar social proof e responder
+      as 3-5 principais objeções diretamente.
+    techniques:
+      - "FAQ dentro do conteúdo"
+      - "Case studies que enderecam objeções"
+      - "Comparacoes diretas"
+
+  plc3:
+    focus: "Remover fricao final"
+    approach: |
+      Enderece objeções de timing e decisão.
+      Prepare o terreno para o Open Cart.
+    focus_objections:
+      - "Não é o momento certo"
+      - "Preciso pensar"
+      - "Como sei que é para mim?"
+
+  open_cart:
+    focus: "Garantia e urgência"
+    approach: |
+      A garantia é a resposta final para objeções de risco.
+      A escassez resolve objeções de timing.
+    elements:
+      - "Garantia solida explicada"
+      - "FAQ completo"
+      - "Último empurrao de social proof"
+
+objection_response_formula:
+  name: "Feel-Felt-Found + PLF Twist"
+  steps:
+    - step: 1
+      name: "Acknowledge"
+      action: "Valide a objeção como legitima"
+      example: "Eu entendo completamente essa preocupação..."
+
+    - step: 2
+      name: "Relate"
+      action: "Conecte com alguém similar (ou você mesmo)"
+      example: "[Nome] pensava exatamente isso quando..."
+
+    - step: 3
+      name: "Resolve"
+      action: "Mostre o que aconteceu quando agiram"
+      example: "E então ela descobriu que..."
+
+    - step: 4
+      name: "Bridge"
+      action: "Conecte de volta ao prospect"
+      example: "Você pode ter o mesmo resultado..."
+
+tracking_template:
+  per_launch:
+    columns:
+      - "Objeção"
+      - "Frequencia (vezes mencionada)"
+      - "Onde apareceu (survey, comentarios, emails)"
+      - "PLC onde foi endereada"
+      - "Resposta usada"
+      - "Efetividade (conversoes após)"
+
+    purpose: |
+      Cada lançamento gera dados sobre objeções.
+      Use para refinar respostas nos próximos lançamentos.

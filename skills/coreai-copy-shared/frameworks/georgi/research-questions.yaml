@@ -1,0 +1,66 @@
+name: "Research Questions"
+version: "1.0"
+source: "Stefan Georgi - RMBC Method, Research Phase"
+description: "Perguntas de descoberta para a fase de pesquisa do RMBC. Organizadas por area de pesquisa para entender profundamente o prospecto."
+
+content:
+  philosophy: |
+    Research isn't about gathering information. It's about understanding
+    your prospect so deeply that you know what they need to hear.
+
+    Bad research = generic copy that sounds like everyone else.
+    Great research = specific copy that speaks directly to one person.
+
+    The goal of research is to answer ONE question:
+    What does my prospect need to believe in order to buy?
+
+  avatar_research:
+    name: "Avatar Deep Dive"
+    questions:
+      - "Who is the ideal customer? (Demographics)"
+      - "What's their current situation? (Psychographics)"
+      - "What have they already tried that failed?"
+      - "What do they believe about their problem?"
+      - "What language do they use to describe their situation?"
+      - "What would they never admit to anyone?"
+      - "What's their dream outcome?"
+      - "What's their biggest fear?"
+
+  pain_research:
+    name: "Pain Point Mining"
+    questions:
+      - "What's the surface-level problem?"
+      - "What's the REAL underlying problem?"
+      - "What does this problem COST them? (time, money, relationships)"
+      - "How does this problem make them FEEL about themselves?"
+      - "What are the consequences of NOT solving this problem?"
+      - "When is the pain most acute? (time of day, situation)"
+
+  desire_research:
+    name: "Desire Mapping"
+    questions:
+      - "What's their stated desire?"
+      - "What's their SECRET desire? (status, validation, revenge)"
+      - "What would success LOOK like? (specific, visual)"
+      - "What would success FEEL like? (emotions)"
+      - "What's the first thing they'd do if problem was solved?"
+      - "Who would they tell? What would they say?"
+
+  proof_research:
+    name: "Proof Gathering"
+    questions:
+      - "What testimonials exist? (with specific results)"
+      - "What studies/research support the product?"
+      - "What credentials does the creator have?"
+      - "What media coverage exists?"
+      - "What is the track record/history?"
+      - "What objections need preemptive proof?"
+
+  competitor_research:
+    name: "Competitive Analysis"
+    questions:
+      - "What are competitors promising?"
+      - "What mechanisms are they using?"
+      - "What gaps exist in their messaging?"
+      - "What objections do their reviews reveal?"
+      - "What can we do DIFFERENTLY?"

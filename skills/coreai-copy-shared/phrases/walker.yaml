@@ -1,0 +1,65 @@
+name: "Jeff Walker - Signature Phrases"
+version: "1.0.0"
+source:
+  books:
+    - "Launch (2014)"
+    - "Product Launch Formula"
+  author: "Jeff Walker"
+description: >
+  Frases icônicas do Jeff Walker organizadas por categoria, com fonte e contexto de uso.
+
+launch_philosophy:
+  - phrase: "The launch is everything"
+    source: "Product Launch Formula"
+    context: "Importância fundamental do lançamento"
+  - phrase: "I started with an email to 19 people"
+    source: "Launch"
+    context: "Origem humilde - qualquer um pode fazer"
+  - phrase: "It's not a pitch, it's a conversation"
+    source: "Product Launch Formula"
+    context: "Abordagem de relacionamento"
+  - phrase: "Value before the ask"
+    source: "Product Launch Formula"
+    context: "Princípio de reciprocidade"
+  - phrase: "A seed launch can change your life"
+    source: "Launch"
+    context: "Começar pequeno com seed launch"
+
+methodology_related:
+  - phrase: "Your prelaunch content is where the magic happens"
+    source: "Product Launch Formula"
+    context: "Importância do PLC"
+  - phrase: "Turn it sideways"
+    source: "Product Launch Formula"
+    context: "Conceito da Sideways Sales Letter"
+  - phrase: "25% on day one, 50% on the last day"
+    source: "Product Launch Formula"
+    context: "Padrão de vendas em lançamentos"
+  - phrase: "Open cart, close cart - that's where the sales happen"
+    source: "Product Launch Formula"
+    context: "Estrutura de vendas"
+
+mental_triggers:
+  - phrase: "Anticipation is one of the most powerful triggers"
+    source: "Product Launch Formula"
+    context: "Gatilho de antecipação"
+  - phrase: "Scarcity has to be real or it destroys trust"
+    source: "Product Launch Formula"
+    context: "Integridade na escassez"
+
+community_related:
+  - phrase: "Don't just build a list, build a tribe"
+    source: "Launch"
+    context: "Comunidade acima de lista"
+
+  - phrase: "Stories sell, facts tell"
+    source: "Product Launch Formula"
+    context: "Poder do storytelling"
+  - phrase: "The riches are in the niches"
+    source: "Product Launch Formula"
+    context: "Foco em nicho específico"
+  - phrase: "Your origin story is your superpower"
+    source: "Launch"
+    context: "Usar sua história pessoal"
+
+throne_phrase: "The launch is everything"

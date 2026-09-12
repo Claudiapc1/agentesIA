@@ -1,0 +1,48 @@
+# The Godfather Offer - Dan Koe
+# Source: Modern Mastery Newsletter
+# Category: offer_creation
+
+name: "The Godfather Offer"
+version: "1.0"
+source: "Dan Koe - Modern Mastery Newsletter"
+category: "offer_creation"
+command: "*godfather-offer"
+
+description: |
+  Template plug-and-play para criar ofertas irresistíveis que
+  prospects não conseguem recusar. Combina pricing baseado em valor,
+  bônus estratégicos, risk reversal e contraste de preços.
+
+principle: "Sua oferta é uma troca de valor - apresente de forma ESMAGADORAMENTE valiosa em troca do preço pedido."
+
+components:
+  value_based_pricing:
+    description: "Preço baseado no valor dos resultados, não no tempo gasto"
+    rule: "Se pode quase garantir resultados e o PROBLEMA é grande o suficiente, eles pagam"
+
+  strategic_bonuses:
+    description: "Add-ons relevantes que justificam pricing"
+    rule: "Algumas pessoas compram SOMENTE pelos bônus"
+
+  risk_reversal:
+    description: "Elimine TODO risco percebido de comprar"
+    elements:
+      - "Opções de pagamento"
+      - "Garantia de devolução"
+      - "Prova social"
+      - "Garantia do QER (Quantifiable End Result)"
+
+  contrast_pricing:
+    description: "Compare valor real vs preço pedido vs concorrentes"
+    example: "Coaches cobram $2500 por 3 meses. Estou te dando tudo por $47."
+
+process:
+  step_1: "Defina a transformação - QER claro e mensurável"
+  step_2: "Pesquise preços concorrentes"
+  step_3: "Crie 3-5 bônus relevantes"
+  step_4: "Desenhe risk reversal que elimina hesitação"
+  step_5: "Empilhe o contraste (valor total vs preço)"
+  step_6: "Apresente com convicção"
+
+when_to_use: "Criando qualquer oferta - freelance, coaching, produtos digitais."
+

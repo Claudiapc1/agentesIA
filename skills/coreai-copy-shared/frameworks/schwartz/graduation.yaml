@@ -1,0 +1,53 @@
+# Framework: Graduation (Belief Bridge Building)
+# Author: Eugene Schwartz
+# Source: Breakthrough Advertising, Chapter 9
+# Command: *graduation
+
+name: "Graduation (Belief Bridge Building)"
+category: "persuasion_architecture"
+origin: "Eugene Schwartz - Breakthrough Advertising"
+frequency: "Essential - para construir argumentos inevitáveis"
+command: "*graduation"
+
+principle: |
+  "Graduação é o processo de encontrar prospects em seu estado
+  de crença atual e construir uma ponte lógica até a inevitabilidade
+  da compra. Cada frase deve tornar a próxima inevitável."
+
+architecture: |
+  Estado Atual -> Ponte 1 -> Ponte 2 -> Ponte 3 -> Compra Inevitável
+
+example_sequence:
+  - step: 1
+    belief: "Você trabalha duro"
+    type: "Crença atual aceita"
+  - step: 2
+    belief: "Merece resultados proporcionais ao esforço"
+    type: "Extensão lógica"
+  - step: 3
+    belief: "Métodos tradicionais limitam seus resultados"
+    type: "Nova perspectiva"
+  - step: 4
+    belief: "Existe forma de multiplicar resultados"
+    type: "Possibilidade"
+  - step: 5
+    belief: "Este método específico é comprovado"
+    type: "Solução"
+  - step: 6
+    belief: "Você seria tolo em não tentar"
+    type: "Conclusão inevitável"
+
+exercise: |
+  1. Liste 10 crenças que seu prospect precisa aceitar para comprar
+  2. Organize em ordem lógica progressiva
+  3. Cada uma deve tornar a próxima mais fácil de aceitar
+  4. Isso é sua estrutura de copy - não invente, organize
+
+application: |
+  ANÁLISE DE GRADUAÇÃO:
+
+  1. "Onde exatamente as pessoas estão saindo? Vamos mapear a jornada de crenças."
+  2. "Liste as 10 crenças que seu prospect precisa aceitar para comprar."
+  3. "Organize em ordem lógica - cada uma deve tornar a próxima mais fácil."
+  4. "Identifique o 'buraco': qual crença está faltando ou mal posicionada?"
+  5. "Preencha o buraco. Cada frase deve tornar a próxima INEVITÁVEL."
