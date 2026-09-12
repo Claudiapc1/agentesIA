@@ -1,0 +1,38 @@
+# Resultados da campanha
+# Preencha após o término. Use null para métricas não aplicáveis.
+
+campanha:
+  nome: ""
+  slug: ""           # YYYY-MM-slug
+  inicio: ""         # YYYY-MM-DD
+  fim: ""            # YYYY-MM-DD
+  canais: []         # ex: [meta-ads, google-ads, email, organico]
+
+investimento:
+  total_brl: null
+  por_canal:
+    meta_ads: null
+    google_ads: null
+    outros: null
+
+metricas:
+  impressoes: null
+  cliques: null
+  ctr: null            # %
+  leads: null
+  qualified_leads: null
+  meetings_agendadas: null
+  meetings_realizadas: null
+  vendas: null
+  receita_brl: null
+  cpa_brl: null        # custo por aquisição
+  cpl_brl: null        # custo por lead
+  roi: null            # múltiplo (ex: 3.2)
+  roas: null
+
+learnings:
+  o_que_funcionou: []
+  o_que_nao_funcionou: []
+  acoes_proxima_campanha: []
+
+notas: ""
