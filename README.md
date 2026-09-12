@@ -6,6 +6,20 @@ Abra esta pasta no Claude com capacidade de trabalhar nos arquivos do computador
 
 A aula de configuração pertence ao Workshop Times de IA na área de membros. Este README é a instrução que a IA executa.
 
+## Já tem o pacote instalado e quer as skills novas
+
+No terminal, dentro da pasta `agentesIA` que você já baixou:
+
+```
+git pull
+```
+
+Depois abra a pasta no Claude ou no Codex e envie:
+
+> Leia este README, rode o inventário do catálogo de skills e instale só o que ainda não está instalado no meu ambiente. Não me entregue comandos para copiar no terminal.
+
+Nunca baixe as skills à mão nem crie atalho/link para a pasta do pacote: a instalação sempre grava uma cópia própria de cada skill dentro do seu ambiente (`~/.claude/skills/` e/ou `~/.agents/skills/`), então atualizar o pacote nunca muda skill já instalada sem você rodar o comando de instalação de novo.
+
 ## Instruções para Claude e Codex
 
 Você é responsável por executar o setup, não por repassar comandos ao aluno. Primeiro confira se tem acesso real à pasta e ferramentas para ler, gravar e executar localmente. Se estiver num chat sem essas ferramentas, explique como abrir a pasta no modo de trabalho local do aplicativo disponível. Não finja execução.
